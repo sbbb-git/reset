@@ -326,7 +326,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <div class="filters">
       <span class="seg" id="metSeg">
         <button data-m="visiteurs" class="on">Visiteurs</button>
-        <button data-m="taux">Taux de remplissage</button>
         <button data-m="seances">Nb de séances</button>
       </span>
       <span class="seg" id="evSeg">
@@ -360,7 +359,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     </div>
     <div class="tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
   </div>
-  <div class="foot">Taux pondéré = total présents &divide; total places. Source : re-set.club (widget bsport).</div>
+  <div class="foot">Visiteurs = personnes présentes (réservations validées). Source : re-set.club (widget bsport).</div>
 </div>
 <script>
 const API="https://api.production.bsport.io", COMPANY=__COMPANY__, BUILD_TS="__BUILDTS__";
@@ -395,18 +394,18 @@ let evGran='mois',evMetric='visiteurs',caGran='mois',sortKey='date',sortDir=1,cu
 
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
 function renderKpis(){
-  const totP=DATA.reduce((s,r)=>s+r.presents,0), totC=DATA.reduce((s,r)=>s+r.capacite,0);
-  const nbJours=new Set(DATA.map(r=>r.date)).size||1;
-  const nbSem=new Set(DATA.map(r=>lundi(r.date))).size||1;
-  const nbMois=new Set(DATA.map(r=>r.date.slice(0,7))).size||1;
+  const totP=DATA.reduce((s,r)=>s+r.presents,0);
+  const byD={};DATA.forEach(r=>byD[r.date]=(byD[r.date]||0)+r.presents);
+  const bd=Object.entries(byD).sort((a,b)=>b[1]-a[1])[0]||['',0];
+  const byW={};DATA.forEach(r=>{const k=lundi(r.date);byW[k]=(byW[k]||0)+r.presents;});
+  const bw=Object.entries(byW).sort((a,b)=>b[1]-a[1])[0]||['',0];
   document.getElementById('kpis').innerHTML=[
-    ['Visiteurs (total)',nf(totP)],
-    ['Visiteurs / jour (moy.)',nf(totP/nbJours)],
-    ['Visiteurs / semaine (moy.)',nf(totP/nbSem)],
-    ['Visiteurs / mois (moy.)',nf(totP/nbMois)],
-    ['Séances',nf(DATA.length)],
-    ['Taux moyen pondéré',(totC?totP/totC*100:0).toFixed(1)+'%'],
-  ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
+    ['Visiteurs (total)',nf(totP),''],
+    ['Séances',nf(DATA.length),''],
+    ['Meilleure journée',nf(bd[1]),bd[0]?fmtJ(bd[0]):''],
+    ['Meilleure semaine',nf(bw[1]),bw[0]?('semaine du '+fmtJ(bw[0])):''],
+  ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div>`
+    +(k[2]?`<div class="delta" style="color:var(--muted)">${k[2]}</div>`:'')+`</div>`).join('');
 }
 
 function renderEv(){
@@ -501,7 +500,7 @@ function populateFilters(){
 }
 
 const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['activite','Activité'],
-  ['coach','Coach'],['remplissage','Remplissage'],['taux_%','Taux'],['complet','Complet']];
+  ['coach','Coach'],['remplissage','Visiteurs / places'],['complet','Complet']];
 document.querySelector('#tbl thead').innerHTML='<tr>'+cols.map((c,i)=>`<th data-i="${i}">${c[1]}</th>`).join('')+'</tr>';
 function renderTable(){
   const q=document.getElementById('q').value.toLowerCase();
@@ -509,14 +508,13 @@ function renderTable(){
   let rows=DATA.filter(r=>(!fa||r.activite===fa)&&(!fd||r.jour===fd)&&
     (!q||(r.activite+' '+r.coach+' '+r.date+' '+r.heure).toLowerCase().includes(q)));
   rows.sort((a,b)=>{let x=a[sortKey],y=b[sortKey];
-    if(sortKey==='taux_%'){x=+x||0;y=+y||0;} return x>y?sortDir:x<y?-sortDir:0;});
+    if(sortKey==='remplissage'){x=a.presents;y=b.presents;} return x>y?sortDir:x<y?-sortDir:0;});
   currentRows=rows;
   document.querySelector('#tbl tbody').innerHTML=rows.map(r=>{
-    const t=+r['taux_%']||0;
+    const w=r.capacite?Math.min(100*r.presents/r.capacite,100):0;
     return `<tr><td>${fmtJ(r.date)}</td><td>${r.jour}</td><td>${r.heure}</td><td>${r.activite}</td>
       <td>${r.coach}</td>
-      <td><span class="bar"><span style="width:${Math.min(t,100)}%;background:${col(t)}"></span></span>${r.remplissage}</td>
-      <td><span class="pill" style="background:${col(t)}33;color:${col(t)}">${t}%</span></td>
+      <td><span class="bar"><span style="width:${w}%;background:var(--accent)"></span></span>${r.remplissage}</td>
       <td>${r.complet}</td></tr>`;}).join('');
 }
 
@@ -530,19 +528,25 @@ function updateLabel(){
 
 function dayShift(iso,n){const d=new Date(iso+'T00:00:00');d.setDate(d.getDate()+n);return d.toISOString().slice(0,10);}
 function sumRange(a,b){return DATA.reduce((s,r)=>(r.date>=a&&r.date<=b)?s+r.presents:s,0);}
-function trendCard(label,cur,prev){
-  let delta='<div class="delta" style="color:var(--muted)">— (pas d\'historique)</div>';
-  if(prev>0){const pct=(cur-prev)/prev*100, up=pct>=0;
+function rng(a,b){return fmtJM(a)+' au '+fmtJM(b);}
+function trendCard(title,a,b,pa,pb,start){
+  const cur=sumRange(a,b);
+  const hasPrev = pa>=start;            // periode precedente entierement couverte par les donnees
+  const prev=hasPrev?sumRange(pa,pb):0;
+  let delta=`<div class="delta" style="color:var(--muted)">période de comparaison hors historique</div>`;
+  if(hasPrev && prev>0){const pct=(cur-prev)/prev*100, up=pct>=0;
     delta=`<div class="delta" style="color:${up?'var(--green)':'var(--red)'}">`
-      +`${up?'▲':'▼'} ${Math.abs(pct).toFixed(0)} % vs ${nf(prev)}</div>`;}
-  return `<div class="kpi"><div class="v">${nf(cur)}</div><div class="l">${label}</div>${delta}</div>`;
+      +`${up?'▲':'▼'} ${Math.abs(pct).toFixed(0)} % vs ${rng(pa,pb)} (${nf(prev)} visiteurs)</div>`;}
+  return `<div class="kpi"><div class="v">${nf(cur)} visiteurs</div>`
+    +`<div class="l">${title} &middot; du ${rng(a,b)}</div>${delta}</div>`;
 }
 function renderTrend(){
   const end=maxDate(); const box=document.getElementById('trend');
   if(!end){box.innerHTML='';return;}
-  const c7=sumRange(dayShift(end,-6),end), p7=sumRange(dayShift(end,-13),dayShift(end,-7));
-  const c30=sumRange(dayShift(end,-29),end), p30=sumRange(dayShift(end,-59),dayShift(end,-30));
-  box.innerHTML=trendCard('7 derniers jours',c7,p7)+trendCard('30 derniers jours',c30,p30);
+  const start=DATA.reduce((m,r)=>r.date<m?r.date:m,end);
+  box.innerHTML=
+    trendCard('7 derniers jours', dayShift(end,-6), end, dayShift(end,-13), dayShift(end,-7), start)+
+    trendCard('30 derniers jours', dayShift(end,-29), end, dayShift(end,-59), dayShift(end,-30), start);
 }
 function rankList(id,entries){
   const mx=entries.length?entries[0][1]:0;
@@ -585,7 +589,7 @@ if(sp)document.getElementById('prix').value=sp;
 // ---- Export Excel (CSV ; + BOM) ----
 document.getElementById('btnExport').addEventListener('click',()=>{
   const c2=[['date','Date'],['jour','Jour'],['heure','Heure'],['activite','Activité'],['coach','Coach'],
-    ['presents','Présents'],['capacite','Capacité'],['remplissage','Remplissage'],['taux_%','Taux %'],['complet','Complet']];
+    ['presents','Visiteurs'],['capacite','Places'],['complet','Complet']];
   const esc=v=>{v=(''+v).replace(/"/g,'""');return /[";\n]/.test(v)?`"${v}"`:v;};
   const lines=[c2.map(c=>c[1]).join(';')];
   currentRows.forEach(r=>lines.push(c2.map(c=>esc(c[0]==='date'?fmtJ(r.date):r[c[0]])).join(';')));
