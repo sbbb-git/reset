@@ -65,7 +65,7 @@
 <body>
 <header>
   <h1>Sense-Club &middot; Suivi des séances</h1>
-  <div class="sub">généré le 28/05/2026 18:15</div>
+  <div class="sub">généré le 28/05/2026 21:08</div>
 </header>
 <div class="wrap">
   <div class="note">ℹ️ Mindbody n'expose pas le nombre d'inscrits — seulement le statut. Le statut est <b>figé ~10 min avant chaque séance</b> (quasi définitif) : on sait si la séance a fini <b>complète</b>, <b>presque complète</b> (places restantes) ou avec de la place. L'historique se construit jour après jour.</div>
@@ -87,7 +87,7 @@
   <div class="foot">Source : sense-club.fr (widget Mindbody). Statut relevé près du début de chaque séance.</div>
 </div>
 <script>
-const ALL=[{"date": "2026-05-28", "jour": "Jeudi", "heure": "18:30", "cours": "Sense Flow Jessika", "statut": "disponible", "places_restantes": null, "locked": false, "releve": "2026-05-28 18:15"}, {"date": "2026-05-28", "jour": "Jeudi", "heure": "19:30", "cours": "Power Sense Jessika", "statut": "presque complet", "places_restantes": 1, "locked": false, "releve": "2026-05-28 18:15"}];
+const ALL=[{"cours": "Sense Flow Jessika", "date": "2026-05-28", "heure": "18:30", "jour": "Jeudi", "locked": true, "places_restantes": null, "releve": "2026-05-28 18:15", "statut": "disponible"}, {"cours": "Power Sense Jessika", "date": "2026-05-28", "heure": "19:30", "jour": "Jeudi", "locked": true, "places_restantes": 1, "releve": "2026-05-28 18:15", "statut": "presque complet"}];
 const DATA=ALL.filter(r=>r.locked);   // on n'affiche que les statuts figés (definitifs)
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
