@@ -231,6 +231,13 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   .tablewrap{max-height:560px;overflow:auto;border:1px solid var(--line);border-radius:14px;}
   .foot{color:var(--muted);font-size:12px;margin-top:18px;}
   a{color:var(--accent2);}
+  label.fld{color:var(--muted);font-size:13px;display:inline-flex;align-items:center;}
+  .seg button{background:var(--card2);color:var(--muted);border:1px solid var(--line);
+       padding:8px 16px;font-size:13px;cursor:pointer;}
+  .seg button:first-child{border-radius:9px 0 0 9px;}
+  .seg button:last-child{border-radius:0 9px 9px 0;}
+  .seg button:not(:last-child){border-right:none;}
+  .seg button.on{background:var(--accent);color:#241410;font-weight:700;}
 </style>
 </head>
 <body>
@@ -240,13 +247,37 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 </header>
 <div class="wrap">
   <div class="kpis" id="kpis"></div>
-  <div class="grid">
-    <div class="panel"><h2>Taux de remplissage moyen par jour</h2><canvas id="cDay"></canvas></div>
-    <div class="panel"><h2>Taux moyen par type de seance</h2><canvas id="cAct"></canvas></div>
+  <div class="panel" id="caPanel">
+    <h2>Chiffre d'affaires estime</h2>
+    <div class="filters">
+      <label class="fld">Prix moyen par seance (&euro;)
+        <input id="prix" type="number" min="0" step="0.5" value="25" style="width:90px;margin-left:8px">
+      </label>
+      <span class="seg" id="caSeg">
+        <button data-g="jour">Par jour</button>
+        <button data-g="semaine">Par semaine</button>
+        <button data-g="mois" class="on">Par mois</button>
+      </span>
+    </div>
+    <div class="kpis" id="caKpis" style="margin:6px 0 18px"></div>
+    <canvas id="cCA"></canvas>
+  </div>
+  <div class="panel">
+    <h2>Evolution du taux de remplissage depuis l'ouverture</h2>
+    <span class="seg" id="evSeg">
+      <button data-g="jour">Par jour</button>
+      <button data-g="semaine">Par semaine</button>
+      <button data-g="mois" class="on">Par mois</button>
+    </span>
+    <canvas id="cDay" style="margin-top:14px"></canvas>
   </div>
   <div class="grid">
-    <div class="panel"><h2>Taux moyen par jour de la semaine</h2><canvas id="cWeek"></canvas></div>
+    <div class="panel"><h2>Taux moyen par type de seance</h2><canvas id="cAct"></canvas></div>
     <div class="panel"><h2>Taux moyen par creneau horaire</h2><canvas id="cHour"></canvas></div>
+  </div>
+  <div class="panel">
+    <h2>Taux de remplissage moyen par coach (les stars)</h2>
+    <canvas id="cCoach" style="max-height:none"></canvas>
   </div>
   <div class="panel">
     <h2>Detail des seances</h2>
@@ -270,6 +301,8 @@ Chart.defaults.font.family = txtCss.fontFamily;
 
 function avg(arr){let p=0,c=0;arr.forEach(r=>{p+=r.presents;c+=r.capacite;});return c?p/c*100:0;}
 function group(key){const m={};DATA.forEach(r=>{(m[key(r)]=m[key(r)]||[]).push(r);});return m;}
+function lundi(s){const d=new Date(s+'T00:00:00');const j=(d.getDay()+6)%7;d.setDate(d.getDate()-j);return d.toISOString().slice(0,10);}
+function periodKey(r,g){return g==='jour'?r.date:g==='mois'?r.date.slice(0,7):lundi(r.date);}
 
 // KPIs
 const totP=DATA.reduce((s,r)=>s+r.presents,0), totC=DATA.reduce((s,r)=>s+r.capacite,0);
@@ -284,12 +317,23 @@ const kpis=[
 document.getElementById('kpis').innerHTML = kpis.map(k=>
   `<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
 
-// Chart par jour
-const byDay=group(r=>r.date); const days=Object.keys(byDay).sort();
-new Chart(cDay,{type:'line',data:{labels:days.map(d=>d.slice(5)),
-  datasets:[{data:days.map(d=>avg(byDay[d])),borderColor:'#d98b63',
-    backgroundColor:'rgba(217,139,99,.15)',fill:true,tension:.3,pointRadius:2}]},
-  options:{plugins:{legend:{display:false}},scales:{y:{max:100,ticks:{callback:v=>v+'%'}}}}});
+// Evolution du taux (toggle jour/semaine/mois)
+let evChart=null, evGran='mois';
+function renderEv(){
+  const m={};DATA.forEach(r=>{const k=periodKey(r,evGran);(m[k]=m[k]||[]).push(r);});
+  const keys=Object.keys(m).sort();
+  const labels=keys.map(k=>evGran==='mois'?k:k.slice(5));
+  if(evChart)evChart.destroy();
+  evChart=new Chart(cDay,{type:'line',data:{labels,
+    datasets:[{data:keys.map(k=>avg(m[k])),borderColor:'#d98b63',
+      backgroundColor:'rgba(217,139,99,.15)',fill:true,tension:.3,pointRadius:evGran==='jour'?1:3}]},
+    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y.toFixed(1)+'%'}}},
+      scales:{y:{max:100,ticks:{callback:v=>v+'%'}}}}});
+}
+document.querySelectorAll('#evSeg button').forEach(b=>b.onclick=()=>{
+  evGran=b.dataset.g;document.querySelectorAll('#evSeg button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');renderEv();});
+renderEv();
 
 // par activite
 const byAct=group(r=>r.activite); const acts=Object.keys(byAct).sort((a,b)=>avg(byAct[b])-avg(byAct[a]));
@@ -297,12 +341,19 @@ new Chart(cAct,{type:'bar',data:{labels:acts,
   datasets:[{data:acts.map(a=>avg(byAct[a])),backgroundColor:acts.map(a=>col(avg(byAct[a])))}]},
   options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{max:100,ticks:{callback:v=>v+'%'}}}}});
 
-// par jour de semaine
+// (jours de semaine encore calcules pour le filtre du tableau)
 const byW=group(r=>r.jour);
 const wlabels=JOURS.filter(j=>byW[j]);
-new Chart(cWeek,{type:'bar',data:{labels:wlabels,
-  datasets:[{data:wlabels.map(j=>avg(byW[j])),backgroundColor:wlabels.map(j=>col(avg(byW[j])))}]},
-  options:{plugins:{legend:{display:false}},scales:{y:{max:100,ticks:{callback:v=>v+'%'}}}}});
+
+// par coach (min. 3 seances pour eviter le bruit)
+const byCoach=group(r=>r.coach||'(sans coach)');
+const coachList=Object.keys(byCoach).filter(c=>byCoach[c].length>=3)
+  .sort((a,b)=>avg(byCoach[b])-avg(byCoach[a]));
+new Chart(cCoach,{type:'bar',data:{labels:coachList.map(c=>`${c} (${byCoach[c].length})`),
+  datasets:[{data:coachList.map(c=>avg(byCoach[c])),backgroundColor:coachList.map(c=>col(avg(byCoach[c])))}]},
+  options:{indexAxis:'y',plugins:{legend:{display:false},
+    tooltip:{callbacks:{label:c=>c.parsed.x.toFixed(1)+'%'}}},
+    scales:{x:{max:100,ticks:{callback:v=>v+'%'}}}}});
 
 // par heure
 const byH=group(r=>r.heure); const hours=Object.keys(byH).sort();
@@ -336,6 +387,39 @@ document.querySelectorAll('#tbl thead th').forEach(th=>th.onclick=()=>{
   const k=cols[+th.dataset.i][0]; sortDir=(sortKey===k)?-sortDir:1; sortKey=k; render();});
 ['q','fAct','fDay'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 render();
+
+// ---- Chiffre d'affaires estime ----
+let caChart=null, caGran='mois';
+const eur = v => v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
+function renderCA(){
+  const prix=parseFloat(document.getElementById('prix').value)||0;
+  try{localStorage.setItem('reset_prix',prix);}catch(e){}
+  const sumBy=g=>{const m={};DATA.forEach(r=>{const k=periodKey(r,g);m[k]=(m[k]||0)+r.presents;});return m;};
+  const nbMois=new Set(DATA.map(r=>r.date.slice(0,7))).size||1;
+  const nbSem=new Set(DATA.map(r=>lundi(r.date))).size||1;
+  const nbJours=new Set(DATA.map(r=>r.date)).size||1;
+  const totalCA=DATA.reduce((s,r)=>s+r.presents,0)*prix;
+  document.getElementById('caKpis').innerHTML=[
+    ['CA total estime',eur(totalCA)],
+    ['CA / mois (moy.)',eur(totalCA/nbMois)],
+    ['CA / semaine (moy.)',eur(totalCA/nbSem)],
+    ['CA / jour (moy.)',eur(totalCA/nbJours)],
+  ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
+  const m=sumBy(caGran), keys=Object.keys(m).sort();
+  const labels=keys.map(k=>caGran==='mois'?k:caGran==='jour'?k.slice(5):k.slice(5));
+  const vals=keys.map(k=>m[k]*prix);
+  if(caChart)caChart.destroy();
+  caChart=new Chart(cCA,{type:'bar',data:{labels,datasets:[{data:vals,backgroundColor:'#d98b63'}]},
+    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>eur(c.parsed.y)}}},
+      scales:{y:{ticks:{callback:v=>v.toLocaleString('fr-FR')+' €'}}}}});
+}
+document.getElementById('prix').addEventListener('input',renderCA);
+document.querySelectorAll('#caSeg button').forEach(b=>b.onclick=()=>{
+  caGran=b.dataset.g;document.querySelectorAll('#caSeg button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');renderCA();});
+const sp=(()=>{try{return localStorage.getItem('reset_prix');}catch(e){return null;}})();
+if(sp)document.getElementById('prix').value=sp;
+renderCA();
 </script>
 </body>
 </html>"""
@@ -343,7 +427,7 @@ render();
 
 def main():
     ap = argparse.ArgumentParser(description="Scrape taux de remplissage des seances Re-SET")
-    ap.add_argument("--start", default="2026-04-22", help="date de debut AAAA-MM-JJ (defaut 2026-04-22)")
+    ap.add_argument("--start", default="2026-02-01", help="date de debut AAAA-MM-JJ (defaut: depuis l'ouverture)")
     ap.add_argument("--end", default=None, help="date de fin AAAA-MM-JJ (defaut: aujourd'hui)")
     ap.add_argument("--csv", default="reset_seances.csv", help="fichier CSV de sortie")
     ap.add_argument("--xlsx", default="reset_seances.xlsx", help="fichier Excel de sortie")
