@@ -28,6 +28,16 @@ PARIS = ZoneInfo("Europe/Paris")
 STORE = "senseclub_data.json"
 JOURS_FR = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
 LOCK_MIN = 10  # verrouille a <= 10 min du debut
+CAPACITE = 5   # Sense-Club : 5 places max par seance -> complet = 5 personnes
+
+
+def presents(statut, places):
+    """Nombre d'inscrits deduit du statut (capacite 5)."""
+    if statut == "complet":
+        return CAPACITE
+    if statut == "presque complet" and places is not None:
+        return max(0, CAPACITE - places)
+    return None  # "disponible" : nombre exact inconnu
 
 
 def fetch_today():
@@ -112,7 +122,13 @@ def capture():
     return store
 
 
-FIELDS = ["date", "jour", "heure", "cours", "statut", "places_restantes", "locked", "releve"]
+FIELDS = ["date", "jour", "heure", "cours", "statut", "places_restantes", "presents", "locked", "releve"]
+
+
+def enrich(rows):
+    for r in rows:
+        r["presents"] = presents(r.get("statut"), r.get("places_restantes"))
+    return rows
 
 
 def write_csv(rows, path):
@@ -188,7 +204,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">généré le __GENERATED__</div>
 </header>
 <div class="wrap">
-  <div class="note">ℹ️ Mindbody n'expose pas le nombre d'inscrits — seulement le statut. Le statut est <b>figé ~10 min avant chaque séance</b> (quasi définitif) : on sait si la séance a fini <b>complète</b>, <b>presque complète</b> (places restantes) ou avec de la place. L'historique se construit jour après jour.</div>
+  <div class="note">ℹ️ Séances de <b>5 places max</b> : <b>complet = 5 personnes</b>, et « presque complet — reste X places » = <b>5 − X présents</b>. Mindbody n'affiche pas le compte exact quand il reste beaucoup de place (statut « disponible »). Le statut est <b>figé ~10 min avant chaque séance</b> (quasi définitif). L'historique se construit jour après jour.</div>
   <div class="kpis" id="kpis"></div>
   <div class="grid">
     <div class="panel"><h2>Séances complètes par jour</h2><canvas id="cDay"></canvas></div>
@@ -216,15 +232,19 @@ const STC={'complet':'#e07a6f','presque complet':'#e6c14d','disponible':'#6fcf97
 function fmtJ(iso){const p=iso.split('-');return `${p[2]}/${p[1]}/${p[0]}`;}
 Chart.defaults.color='#a89fc4';Chart.defaults.borderColor='#322a52';Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
 
+const CAP=5;
 const nComplet=DATA.filter(r=>r.statut==='complet').length;
 const nPresque=DATA.filter(r=>r.statut==='presque complet').length;
 const nDispo=DATA.filter(r=>r.statut==='disponible').length;
 const jours=new Set(DATA.map(r=>r.date)).size;
+const known=DATA.filter(r=>r.presents!=null);
+const totPres=known.reduce((s,r)=>s+r.presents,0);
+const avgPres=known.length?totPres/known.length:0;
 document.getElementById('kpis').innerHTML=[
   ['Séances suivies',nf(DATA.length)],
-  ['Complètes',nf(nComplet)+(DATA.length?` (${Math.round(100*nComplet/DATA.length)}%)`:'')],
-  ['Presque complètes',nf(nPresque)],
-  ['Jours couverts',nf(jours)],
+  ['Présents (total connu)',nf(totPres)],
+  ['Moy. présents / séance',known.length?avgPres.toFixed(1)+' / '+CAP:'—'],
+  ['Complètes (5/5)',nf(nComplet)+(DATA.length?` (${Math.round(100*nComplet/DATA.length)}%)`:'')],
 ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
 
 // séances complètes par jour
@@ -253,7 +273,7 @@ new Chart(cCours,{type:'bar',data:{labels:cours,datasets:[
   options:{indexAxis:'y',plugins:{legend:{display:true}},scales:{x:{stacked:true,beginAtZero:true,ticks:{callback:v=>nf(v)}},y:{stacked:true}}}});
 
 // table
-const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['cours','Cours'],['statut','Statut'],['places_restantes','Places restantes']];
+const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['cours','Cours'],['statut','Statut'],['presents','Présents'],['places_restantes','Places restantes']];
 document.querySelector('#tbl thead').innerHTML='<tr>'+cols.map(c=>`<th>${c[1]}</th>`).join('')+'</tr>';
 const sel=document.getElementById('fStatut');
 ['','complet','presque complet','disponible'].forEach(s=>sel.add(new Option(s||'Tous les statuts',s)));
@@ -266,12 +286,13 @@ function render(){
   document.querySelector('#tbl tbody').innerHTML=rows.map(r=>
     `<tr><td>${fmtJ(r.date)}</td><td>${r.jour}</td><td>${r.heure}</td><td>${r.cours}</td>`
     +`<td><span class="pill" style="background:${STC[r.statut]}33;color:${STC[r.statut]}">${r.statut}</span></td>`
+    +`<td>${r.presents==null?'—':r.presents+' / '+CAP}</td>`
     +`<td>${r.places_restantes==null?'—':r.places_restantes}</td></tr>`).join('');
 }
 ['q'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 sel.addEventListener('change',render);
 document.getElementById('btnExport').addEventListener('click',()=>{
-  const c2=[['date','Date'],['jour','Jour'],['heure','Heure'],['cours','Cours'],['statut','Statut'],['places_restantes','Places restantes']];
+  const c2=[['date','Date'],['jour','Jour'],['heure','Heure'],['cours','Cours'],['statut','Statut'],['presents','Présents'],['places_restantes','Places restantes']];
   const esc=v=>{v=(''+v).replace(/"/g,'""');return /[";\n]/.test(v)?`"${v}"`:v;};
   const lines=[c2.map(c=>c[1]).join(';')];
   currentRows.forEach(r=>lines.push(c2.map(c=>esc(c[0]==='date'?fmtJ(r.date):(r[c[0]]==null?'':r[c[0]]))).join(';')));
@@ -286,7 +307,7 @@ render();
 
 def main():
     store = capture()
-    rows = sorted(store.values(), key=lambda r: (r["date"], r["heure"]))
+    rows = enrich(sorted(store.values(), key=lambda r: (r["date"], r["heure"])))
     write_csv(rows, "senseclub_seances.csv")
     write_html(rows, "senseclub.html")
     locked = [r for r in rows if r.get("locked")]
