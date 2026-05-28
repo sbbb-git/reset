@@ -145,8 +145,17 @@ def write_xlsx(rows, path):
         c.fill = head_fill
         c.font = head_font
         c.alignment = Alignment(horizontal="center")
+    date_col = FIELDS.index("date") + 1
     for r in rows:
         ws.append([r[h] for h in FIELDS])
+    # date au format reel (JJ/MM/AAAA)
+    for row in ws.iter_rows(min_row=2, min_col=date_col, max_col=date_col):
+        cell = row[0]
+        try:
+            cell.value = dt.date.fromisoformat(cell.value)
+            cell.number_format = "DD/MM/YYYY"
+        except (ValueError, TypeError):
+            pass
     # couleur du taux selon remplissage
     taux_col = FIELDS.index("taux_%") + 1
     for row in ws.iter_rows(min_row=2, min_col=taux_col, max_col=taux_col):
@@ -182,7 +191,7 @@ def write_html(rows, path, start, end):
     html = HTML_TEMPLATE.replace("__CHARTJS__", chartjs) \
         .replace("__DATA__", payload) \
         .replace("__GENERATED__", generated) \
-        .replace("__PERIODE__", f"{start} au {end}")
+        .replace("__PERIODE__", f"{start.strftime('%d/%m/%Y')} au {end.strftime('%d/%m/%Y')}")
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"-> {path}")
@@ -238,6 +247,27 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   .seg button:last-child{border-radius:0 9px 9px 0;}
   .seg button:not(:last-child){border-right:none;}
   .seg button.on{background:var(--accent);color:#241410;font-weight:700;}
+  .btn{background:var(--accent);color:#241410;border:none;border-radius:9px;padding:9px 16px;
+       font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;}
+  .btn:hover{background:var(--accent2);}
+  @media(max-width:600px){
+    header{padding:18px 14px 6px;}
+    h1{font-size:18px;line-height:1.25;}
+    .sub{font-size:12px;}
+    .wrap{padding:0 12px 32px;}
+    .kpis{grid-template-columns:1fr 1fr;gap:10px;margin:14px 0;}
+    .kpi{padding:13px 14px;border-radius:12px;}
+    .kpi .v{font-size:21px;}
+    .kpi .l{font-size:10px;}
+    .panel{padding:14px 13px;}
+    .panel h2{font-size:13px;}
+    .seg{display:flex;width:100%;}
+    .seg button{flex:1;padding:10px 4px;}
+    .filters{gap:8px;}
+    .filters input,.filters select,.btn{font-size:15px;width:100%;}
+    .filters input{min-width:0;}
+    canvas{max-height:240px;}
+  }
 </style>
 </head>
 <body>
@@ -283,8 +313,9 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <h2>Détail des séances</h2>
     <div class="filters">
       <input id="q" placeholder="Rechercher (activité, coach, date...)">
-      <select id="fAct"><option value="">Toutes activites</option></select>
+      <select id="fAct"><option value="">Toutes activités</option></select>
       <select id="fDay"><option value="">Tous les jours</option></select>
+      <button id="btnExport" class="btn">Exporter en Excel</button>
     </div>
     <div class="tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
   </div>
@@ -303,6 +334,11 @@ function avg(arr){let p=0,c=0;arr.forEach(r=>{p+=r.presents;c+=r.capacite;});ret
 function group(key){const m={};DATA.forEach(r=>{(m[key(r)]=m[key(r)]||[]).push(r);});return m;}
 function lundi(s){const d=new Date(s+'T00:00:00');const j=(d.getDay()+6)%7;d.setDate(d.getDate()-j);return d.toISOString().slice(0,10);}
 function periodKey(r,g){return g==='jour'?r.date:g==='mois'?r.date.slice(0,7):lundi(r.date);}
+const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+function fmtJ(iso){const p=iso.split('-');return `${p[2]}/${p[1]}/${p[0]}`;}
+function fmtJM(iso){const p=iso.split('-');return `${p[2]}/${p[1]}`;}
+function fmtMois(ym){const p=ym.split('-');return `${MOIS[+p[1]-1]} ${p[0]}`;}
+function labelPeriode(k,g){return g==='mois'?fmtMois(k):g==='semaine'?'sem. '+fmtJM(k):fmtJM(k);}
 
 // KPIs
 const totP=DATA.reduce((s,r)=>s+r.presents,0), totC=DATA.reduce((s,r)=>s+r.capacite,0);
@@ -322,7 +358,7 @@ let evChart=null, evGran='mois';
 function renderEv(){
   const m={};DATA.forEach(r=>{const k=periodKey(r,evGran);(m[k]=m[k]||[]).push(r);});
   const keys=Object.keys(m).sort();
-  const labels=keys.map(k=>evGran==='mois'?k:k.slice(5));
+  const labels=keys.map(k=>labelPeriode(k,evGran));
   if(evChart)evChart.destroy();
   evChart=new Chart(cDay,{type:'line',data:{labels,
     datasets:[{data:keys.map(k=>avg(m[k])),borderColor:'#d98b63',
@@ -367,7 +403,7 @@ const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['activite','Activ
 document.querySelector('#tbl thead').innerHTML='<tr>'+cols.map((c,i)=>`<th data-i="${i}">${c[1]}</th>`).join('')+'</tr>';
 const selAct=document.getElementById('fAct'); acts.slice().sort().forEach(a=>selAct.add(new Option(a,a)));
 const selDay=document.getElementById('fDay'); wlabels.forEach(j=>selDay.add(new Option(j,j)));
-let sortKey='date',sortDir=1;
+let sortKey='date',sortDir=1,currentRows=[];
 function render(){
   const q=document.getElementById('q').value.toLowerCase();
   const fa=selAct.value, fd=selDay.value;
@@ -375,9 +411,10 @@ function render(){
     (!q||(r.activite+' '+r.coach+' '+r.date+' '+r.heure).toLowerCase().includes(q)));
   rows.sort((a,b)=>{let x=a[sortKey],y=b[sortKey];
     if(sortKey==='taux_%'){x=+x||0;y=+y||0;} return x>y?sortDir:x<y?-sortDir:0;});
+  currentRows=rows;
   document.querySelector('#tbl tbody').innerHTML=rows.map(r=>{
     const t=+r['taux_%']||0;
-    return `<tr><td>${r.date}</td><td>${r.jour}</td><td>${r.heure}</td><td>${r.activite}</td>
+    return `<tr><td>${fmtJ(r.date)}</td><td>${r.jour}</td><td>${r.heure}</td><td>${r.activite}</td>
       <td>${r.coach}</td>
       <td><span class="bar"><span style="width:${Math.min(t,100)}%;background:${col(t)}"></span></span>${r.remplissage}</td>
       <td><span class="pill" style="background:${col(t)}33;color:${col(t)}">${t}%</span></td>
@@ -387,6 +424,20 @@ document.querySelectorAll('#tbl thead th').forEach(th=>th.onclick=()=>{
   const k=cols[+th.dataset.i][0]; sortDir=(sortKey===k)?-sortDir:1; sortKey=k; render();});
 ['q','fAct','fDay'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 render();
+
+// Export Excel (CSV ; + BOM, s'ouvre direct dans Excel)
+function exportExcel(){
+  const cols2=[['date','Date'],['jour','Jour'],['heure','Heure'],['activite','Activité'],
+    ['coach','Coach'],['presents','Présents'],['capacite','Capacité'],
+    ['remplissage','Remplissage'],['taux_%','Taux %'],['complet','Complet']];
+  const esc=v=>{v=(''+v).replace(/"/g,'""');return /[";\n]/.test(v)?`"${v}"`:v;};
+  const lines=[cols2.map(c=>c[1]).join(';')];
+  currentRows.forEach(r=>lines.push(cols2.map(c=>esc(c[0]==='date'?fmtJ(r.date):r[c[0]])).join(';')));
+  const blob=new Blob(['﻿'+lines.join('\r\n')],{type:'text/csv;charset=utf-8;'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download='reset_seances.csv';document.body.appendChild(a);a.click();a.remove();
+}
+document.getElementById('btnExport').addEventListener('click',exportExcel);
 
 // ---- Chiffre d'affaires estime ----
 let caChart=null, caGran='mois';
@@ -406,7 +457,7 @@ function renderCA(){
     ['CA / jour (moy.)',eur(totalCA/nbJours)],
   ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
   const m=sumBy(caGran), keys=Object.keys(m).sort();
-  const labels=keys.map(k=>caGran==='mois'?k:caGran==='jour'?k.slice(5):k.slice(5));
+  const labels=keys.map(k=>labelPeriode(k,caGran));
   const vals=keys.map(k=>m[k]*prix);
   if(caChart)caChart.destroy();
   caChart=new Chart(cCA,{type:'bar',data:{labels,datasets:[{data:vals,backgroundColor:'#d98b63'}]},
@@ -427,15 +478,15 @@ renderCA();
 
 def main():
     ap = argparse.ArgumentParser(description="Scrape taux de remplissage des seances Re-SET")
-    ap.add_argument("--start", default="2026-02-01", help="date de debut AAAA-MM-JJ (defaut: depuis l'ouverture)")
-    ap.add_argument("--end", default=None, help="date de fin AAAA-MM-JJ (defaut: aujourd'hui)")
+    ap.add_argument("--start", default="2026-03-22", help="date de debut AAAA-MM-JJ (defaut: ouverture 22/03/2026)")
+    ap.add_argument("--end", default=None, help="date de fin AAAA-MM-JJ (defaut: hier)")
     ap.add_argument("--csv", default="reset_seances.csv", help="fichier CSV de sortie")
     ap.add_argument("--xlsx", default="reset_seances.xlsx", help="fichier Excel de sortie")
     ap.add_argument("--html", default="index.html", help="dashboard HTML de sortie")
     args = ap.parse_args()
 
     start = dt.date.fromisoformat(args.start)
-    end = dt.date.fromisoformat(args.end) if args.end else dt.date.today()
+    end = dt.date.fromisoformat(args.end) if args.end else dt.date.today() - dt.timedelta(days=1)
 
     print(f"Recuperation des seances du {start} au {end} ...")
     coaches = fetch_coaches()
