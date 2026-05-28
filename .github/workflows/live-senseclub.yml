@@ -2,8 +2,8 @@ name: Capture live Sense-Club
 
 on:
   schedule:
-    # toutes les 10 min entre 05:00 et 20:00 UTC (~07:00-22:00 Paris)
-    - cron: "*/10 5-20 * * *"
+    # toutes les 10 min entre 04:00 et 21:00 UTC (~06:00-23:00 Paris)
+    - cron: "*/10 4-21 * * *"
   workflow_dispatch: {}
 
 permissions:
