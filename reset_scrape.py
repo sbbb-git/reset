@@ -207,7 +207,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Re-SET - Taux de remplissage des séances</title>
+<title>Re-SET - Fréquentation des séances</title>
 <script>__CHARTJS__</script>
 <style>
   :root{--bg:#241410;--card:#33201a;--card2:#3d271f;--line:#4d342a;
@@ -285,7 +285,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 </head>
 <body>
 <header>
-  <h1>Re-SET &middot; Taux de remplissage des séances</h1>
+  <h1>Re-SET &middot; Fréquentation des séances</h1>
   <div class="sub">Période __PERIODE__ &middot; généré le __GENERATED__</div>
 </header>
 <div class="wrap">
@@ -311,20 +311,28 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <canvas id="cCA"></canvas>
   </div>
   <div class="panel">
-    <h2>Évolution du taux de remplissage depuis l'ouverture</h2>
-    <span class="seg" id="evSeg">
-      <button data-g="jour">Par jour</button>
-      <button data-g="semaine">Par semaine</button>
-      <button data-g="mois" class="on">Par mois</button>
-    </span>
-    <canvas id="cDay" style="margin-top:14px"></canvas>
+    <h2>Fréquentation depuis l'ouverture</h2>
+    <div class="filters">
+      <span class="seg" id="metSeg">
+        <button data-m="visiteurs" class="on">Visiteurs</button>
+        <button data-m="taux">Taux de remplissage</button>
+        <button data-m="seances">Nb de séances</button>
+      </span>
+      <span class="seg" id="evSeg">
+        <button data-g="jour">Jour</button>
+        <button data-g="semaine">Semaine</button>
+        <button data-g="mois" class="on">Mois</button>
+      </span>
+      <select id="evAct"></select>
+    </div>
+    <canvas id="cDay" style="margin-top:6px"></canvas>
   </div>
   <div class="grid">
-    <div class="panel"><h2>Taux moyen par type de séance</h2><canvas id="cAct"></canvas></div>
-    <div class="panel"><h2>Taux moyen par créneau horaire</h2><canvas id="cHour"></canvas></div>
+    <div class="panel"><h2>Visiteurs par type de séance</h2><canvas id="cAct"></canvas></div>
+    <div class="panel"><h2>Visiteurs par créneau horaire</h2><canvas id="cHour"></canvas></div>
   </div>
   <div class="panel">
-    <h2>Taux de remplissage moyen par coach (les stars)</h2>
+    <h2>Visiteurs moyens par séance &amp; par coach (les stars)</h2>
     <canvas id="cCoach" style="max-height:none"></canvas>
   </div>
   <div class="panel">
@@ -368,57 +376,79 @@ function fmtMois(ym){const p=ym.split('-');return `${MOIS[+p[1]-1]} ${p[0]}`;}
 function labelPeriode(k,g){return g==='mois'?fmtMois(k):g==='semaine'?'sem. '+fmtJM(k):fmtJM(k);}
 
 let evChart=null,caChart=null,actChart=null,hourChart=null,coachChart=null;
-let evGran='mois',caGran='mois',sortKey='date',sortDir=1,currentRows=[];
+let evGran='mois',evMetric='visiteurs',caGran='mois',sortKey='date',sortDir=1,currentRows=[];
 
+const nf=v=>Math.round(v).toLocaleString('fr-FR');
 function renderKpis(){
   const totP=DATA.reduce((s,r)=>s+r.presents,0), totC=DATA.reduce((s,r)=>s+r.capacite,0);
-  const complets=DATA.filter(r=>r.complet==='oui').length;
+  const nbJours=new Set(DATA.map(r=>r.date)).size||1;
+  const nbSem=new Set(DATA.map(r=>lundi(r.date))).size||1;
+  const nbMois=new Set(DATA.map(r=>r.date.slice(0,7))).size||1;
   document.getElementById('kpis').innerHTML=[
-    ['Séances',DATA.length],
-    ['Présents (total)',totP.toLocaleString('fr-FR')],
-    ['Places (total)',totC.toLocaleString('fr-FR')],
+    ['Visiteurs (total)',nf(totP)],
+    ['Visiteurs / jour (moy.)',nf(totP/nbJours)],
+    ['Visiteurs / semaine (moy.)',nf(totP/nbSem)],
+    ['Visiteurs / mois (moy.)',nf(totP/nbMois)],
+    ['Séances',nf(DATA.length)],
     ['Taux moyen pondéré',(totC?totP/totC*100:0).toFixed(1)+'%'],
-    ['Séances complètes',complets],
   ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
 }
 
 function renderEv(){
-  const m={};DATA.forEach(r=>{const k=periodKey(r,evGran);(m[k]=m[k]||[]).push(r);});
+  const af=document.getElementById('evAct').value;
+  const src=DATA.filter(r=>!af||r.activite===af);
+  const m={};src.forEach(r=>{const k=periodKey(r,evGran);(m[k]=m[k]||[]).push(r);});
   const keys=Object.keys(m).sort();
+  let vals, tip, ymax, line=false;
+  if(evMetric==='taux'){
+    vals=keys.map(k=>avg(m[k])); ymax=100; line=true;
+    tip=c=>c.parsed.y.toFixed(1)+'%';
+  }else if(evMetric==='seances'){
+    vals=keys.map(k=>m[k].length);
+    tip=c=>nf(c.parsed.y)+' séance(s)';
+  }else{
+    vals=keys.map(k=>m[k].reduce((s,r)=>s+r.presents,0));
+    tip=c=>nf(c.parsed.y)+' visiteurs';
+  }
   if(evChart)evChart.destroy();
-  evChart=new Chart(cDay,{type:'line',data:{labels:keys.map(k=>labelPeriode(k,evGran)),
-    datasets:[{data:keys.map(k=>avg(m[k])),borderColor:'#d98b63',
-      backgroundColor:'rgba(217,139,99,.15)',fill:true,tension:.3,pointRadius:evGran==='jour'?1:3}]},
-    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y.toFixed(1)+'%'}}},
-      scales:{y:{max:100,ticks:{callback:v=>v+'%'}}}}});
+  evChart=new Chart(cDay,{type:line?'line':'bar',data:{labels:keys.map(k=>labelPeriode(k,evGran)),
+    datasets:[{data:vals,borderColor:'#d98b63',backgroundColor:line?'rgba(217,139,99,.15)':'#d98b63',
+      fill:line,tension:.3,pointRadius:evGran==='jour'?1:3}]},
+    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:tip}}},
+      scales:{y:{beginAtZero:true,max:ymax,ticks:{callback:v=>evMetric==='taux'?v+'%':nf(v)}}}}});
 }
 
+const sumP=arr=>arr.reduce((s,r)=>s+r.presents,0);
+const moyP=arr=>arr.length?sumP(arr)/arr.length:0;
+
 function renderAct(){
-  const by=group(r=>r.activite); const labels=Object.keys(by).sort((a,b)=>avg(by[b])-avg(by[a]));
+  const by=group(r=>r.activite); const labels=Object.keys(by).sort((a,b)=>sumP(by[b])-sumP(by[a]));
   if(actChart)actChart.destroy();
   actChart=new Chart(cAct,{type:'bar',data:{labels,
-    datasets:[{data:labels.map(a=>avg(by[a])),backgroundColor:labels.map(a=>col(avg(by[a])))}]},
-    options:{indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x.toFixed(1)+'%'}}},
-      scales:{x:{max:100,ticks:{callback:v=>v+'%'}}}}});
+    datasets:[{data:labels.map(a=>sumP(by[a])),backgroundColor:'#d98b63'}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:c=>nf(c.parsed.x)+' visiteurs'}}},
+      scales:{x:{beginAtZero:true,ticks:{callback:v=>nf(v)}}}}});
 }
 
 function renderHour(){
   const by=group(r=>r.heure); const hours=Object.keys(by).sort();
   if(hourChart)hourChart.destroy();
   hourChart=new Chart(cHour,{type:'bar',data:{labels:hours,
-    datasets:[{data:hours.map(h=>avg(by[h])),backgroundColor:hours.map(h=>col(avg(by[h])))}]},
-    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y.toFixed(1)+'%'}}},
-      scales:{y:{max:100,ticks:{callback:v=>v+'%'}}}}});
+    datasets:[{data:hours.map(h=>sumP(by[h])),backgroundColor:'#d98b63'}]},
+    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>nf(c.parsed.y)+' visiteurs'}}},
+      scales:{y:{beginAtZero:true,ticks:{callback:v=>nf(v)}}}}});
 }
 
 function renderCoach(){
   const by=group(r=>r.coach||'(sans coach)');
-  const list=Object.keys(by).filter(c=>by[c].length>=3).sort((a,b)=>avg(by[b])-avg(by[a]));
+  const list=Object.keys(by).filter(c=>by[c].length>=3).sort((a,b)=>moyP(by[b])-moyP(by[a]));
   if(coachChart)coachChart.destroy();
-  coachChart=new Chart(cCoach,{type:'bar',data:{labels:list.map(c=>`${c} (${by[c].length})`),
-    datasets:[{data:list.map(c=>avg(by[c])),backgroundColor:list.map(c=>col(avg(by[c])))}]},
-    options:{indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x.toFixed(1)+'%'}}},
-      scales:{x:{max:100,ticks:{callback:v=>v+'%'}}}}});
+  coachChart=new Chart(cCoach,{type:'bar',data:{labels:list.map(c=>`${c} (${by[c].length} séances)`),
+    datasets:[{data:list.map(c=>moyP(by[c])),backgroundColor:'#d98b63'}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:c=>c.parsed.x.toFixed(1)+' visiteurs / séance'}}},
+      scales:{x:{beginAtZero:true,ticks:{callback:v=>nf(v)}}}}});
 }
 
 function renderCA(){
@@ -443,14 +473,16 @@ function renderCA(){
       scales:{y:{ticks:{callback:v=>v.toLocaleString('fr-FR')+' €'}}}}});
 }
 
-const selAct=document.getElementById('fAct'), selDay=document.getElementById('fDay');
+const selAct=document.getElementById('fAct'), selDay=document.getElementById('fDay'), selEvAct=document.getElementById('evAct');
 function populateFilters(){
-  const fa=selAct.value, fd=selDay.value;
+  const fa=selAct.value, fd=selDay.value, ea=selEvAct.value;
   const acts=[...new Set(DATA.map(r=>r.activite))].sort();
   const days=JOURS.filter(j=>DATA.some(r=>r.jour===j));
-  selAct.innerHTML='<option value="">Toutes activités</option>'+acts.map(a=>`<option>${a}</option>`).join('');
+  const optAll='<option value="">Toutes activités</option>'+acts.map(a=>`<option>${a}</option>`).join('');
+  selAct.innerHTML=optAll;
+  selEvAct.innerHTML=optAll;
   selDay.innerHTML='<option value="">Tous les jours</option>'+days.map(d=>`<option>${d}</option>`).join('');
-  selAct.value=fa; selDay.value=fd;
+  selAct.value=fa; selDay.value=fd; selEvAct.value=ea;
 }
 
 const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['activite','Activité'],
@@ -482,14 +514,19 @@ function updateLabel(){
 }
 
 function renderAll(){
+  populateFilters();
   renderKpis();renderEv();renderAct();renderHour();renderCoach();renderCA();
-  populateFilters();renderTable();updateLabel();
+  renderTable();updateLabel();
 }
 
 // ---- interactions ----
 document.querySelectorAll('#evSeg button').forEach(b=>b.onclick=()=>{
   evGran=b.dataset.g;document.querySelectorAll('#evSeg button').forEach(x=>x.classList.remove('on'));
   b.classList.add('on');renderEv();});
+document.querySelectorAll('#metSeg button').forEach(b=>b.onclick=()=>{
+  evMetric=b.dataset.m;document.querySelectorAll('#metSeg button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');renderEv();});
+selEvAct.addEventListener('change',renderEv);
 document.querySelectorAll('#caSeg button').forEach(b=>b.onclick=()=>{
   caGran=b.dataset.g;document.querySelectorAll('#caSeg button').forEach(x=>x.classList.remove('on'));
   b.classList.add('on');renderCA();});
