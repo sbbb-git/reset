@@ -2,15 +2,19 @@
 """Scrape le taux de remplissage des seances Re-SET (booking bsport).
 
 Recupere, jour par jour et seance par seance, le nombre de personnes
-presentes / la capacite de chaque seance, et ecrit le tout dans un CSV.
+presentes / la capacite de chaque seance, et genere :
+  - reset_seances.csv   (donnees brutes)
+  - reset_seances.xlsx  (Excel mis en forme)
+  - index.html          (dashboard autonome, avec bouton de mise a jour)
 
-Relancer le script reactualise les donnees (il reecrit le CSV).
+Relancer le script reactualise tout. Le dashboard publie peut aussi se
+mettre a jour tout seul (bouton "Mettre a jour") en appelant directement
+l'API bsport depuis le navigateur (de la derniere date connue jusqu'a hier).
 
 Usage:
-    python3 reset_scrape.py                         # depuis 2026-04-22 jusqu'a aujourd'hui
-    python3 reset_scrape.py --start 2026-04-22      # date de debut
-    python3 reset_scrape.py --start 2026-04-22 --end 2026-06-30
-    python3 reset_scrape.py --out mes_donnees.csv
+    python3 reset_scrape.py                          # 22/03/2026 -> hier
+    python3 reset_scrape.py --start 2026-03-22
+    python3 reset_scrape.py --start 2026-03-22 --end 2026-06-30
 
 Source: https://www.re-set.club/reservation  (widget bsport, company 5181)
 """
@@ -37,7 +41,7 @@ def _get(path, params, retries=4):
             req = urllib.request.Request(url, headers={"Accept": "application/json"})
             with urllib.request.urlopen(req, timeout=30) as r:
                 return json.loads(r.read().decode("utf-8"))
-        except Exception as e:  # noqa: BLE401
+        except Exception as e:  # noqa: BLE001
             last = e
             time.sleep(2 ** attempt)
     raise RuntimeError(f"echec requete {url}: {last}")
@@ -55,7 +59,7 @@ def fetch_coaches():
                     mapping[c[key]] = name
             for aid in c.get("associatedcoach_set", []) or []:
                 mapping.setdefault(aid, name)
-    except Exception as e:  # noqa: BLE401
+    except Exception as e:  # noqa: BLE001
         print(f"  (avertissement: noms des coachs indisponibles: {e})", file=sys.stderr)
     return mapping
 
@@ -82,35 +86,36 @@ def fetch_offers(start, end):
 
 
 def build_rows(offers, coaches):
-    rows = []
+    """Transforme les offres en lignes, dedupliquees par session_id."""
+    by_id = {}
     for o in offers:
-        ds = o.get("date_start", "")
+        sid = o.get("id")
+        ds = o.get("date_start", "") or ""
         local = ds[:16].replace("T", " ")  # 'AAAA-MM-JJ HH:MM' heure locale Paris
         date_part = local[:10]
         heure = local[11:16]
         try:
-            d = dt.date.fromisoformat(date_part)
-            jour = JOURS_FR[d.weekday()]
+            jour = JOURS_FR[dt.date.fromisoformat(date_part).weekday()]
         except ValueError:
             jour = ""
-        present = o.get("validated_booking_count", 0)
-        capacite = o.get("effectif", 0)
+        present = o.get("validated_booking_count") or 0
+        capacite = o.get("effectif") or 0
         taux = round(100 * present / capacite, 1) if capacite else ""
         coach_id = o.get("coach")
-        rows.append({
+        by_id[sid] = {
             "date": date_part,
             "jour": jour,
             "heure": heure,
-            "activite": o.get("activity_name", ""),
+            "activite": o.get("activity_name", "") or "",
             "coach": coaches.get(coach_id, coach_id if coach_id else ""),
             "presents": present,
             "capacite": capacite,
             "remplissage": f"{present}/{capacite}",
             "taux_%": taux,
             "complet": "oui" if o.get("full") else "non",
-            "session_id": o.get("id"),
-        })
-
+            "session_id": sid,
+        }
+    rows = list(by_id.values())
     rows.sort(key=lambda r: (r["date"], r["heure"]))
     return rows
 
@@ -148,7 +153,6 @@ def write_xlsx(rows, path):
     date_col = FIELDS.index("date") + 1
     for r in rows:
         ws.append([r[h] for h in FIELDS])
-    # date au format reel (JJ/MM/AAAA)
     for row in ws.iter_rows(min_row=2, min_col=date_col, max_col=date_col):
         cell = row[0]
         try:
@@ -156,7 +160,6 @@ def write_xlsx(rows, path):
             cell.number_format = "DD/MM/YYYY"
         except (ValueError, TypeError):
             pass
-    # couleur du taux selon remplissage
     taux_col = FIELDS.index("taux_%") + 1
     for row in ws.iter_rows(min_row=2, min_col=taux_col, max_col=taux_col):
         cell = row[0]
@@ -177,9 +180,7 @@ def write_xlsx(rows, path):
     print(f"-> {path}")
 
 
-def write_html(rows, path, start, end):
-    payload = json.dumps(rows, ensure_ascii=False)
-    generated = dt.datetime.now().strftime("%d/%m/%Y %H:%M")
+def write_html(rows, coaches, path, start, end):
     chartjs = ""
     vendor = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vendor_chartjs.min.js")
     if os.path.exists(vendor):
@@ -188,10 +189,14 @@ def write_html(rows, path, start, end):
     else:
         chartjs = ('document.write(\'<scr\'+\'ipt src="https://cdn.jsdelivr.net/npm/'
                    'chart.js@4.4.1/dist/chart.umd.min.js"><\\/scr\'+\'ipt>\');')
-    html = HTML_TEMPLATE.replace("__CHARTJS__", chartjs) \
-        .replace("__DATA__", payload) \
-        .replace("__GENERATED__", generated) \
-        .replace("__PERIODE__", f"{start.strftime('%d/%m/%Y')} au {end.strftime('%d/%m/%Y')}")
+    html = (HTML_TEMPLATE
+            .replace("__CHARTJS__", chartjs)
+            .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
+            .replace("__COACHES__", json.dumps(coaches, ensure_ascii=False))
+            .replace("__COMPANY__", str(COMPANY))
+            .replace("__BUILDTS__", dt.datetime.now().strftime("%Y%m%d%H%M%S"))
+            .replace("__GENERATED__", dt.datetime.now().strftime("%d/%m/%Y %H:%M"))
+            .replace("__PERIODE__", f"{start.strftime('%d/%m/%Y')} au {end.strftime('%d/%m/%Y')}"))
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"-> {path}")
@@ -215,6 +220,11 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   h1{margin:0;font-size:24px;letter-spacing:.5px;font-weight:700;}
   .sub{color:var(--muted);font-size:13px;margin-top:6px;}
   .wrap{padding:0 32px 48px;max-width:1280px;margin:0 auto;}
+  .updbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:20px 0 4px;
+          background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;}
+  .updbar .info{color:var(--muted);font-size:13px;}
+  .updbar .info b{color:var(--text);}
+  #updMsg{font-size:13px;color:var(--accent2);}
   .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin:24px 0;}
   .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;}
   .kpi .v{font-size:28px;font-weight:700;color:var(--accent2);}
@@ -250,11 +260,13 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   .btn{background:var(--accent);color:#241410;border:none;border-radius:9px;padding:9px 16px;
        font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;}
   .btn:hover{background:var(--accent2);}
+  .btn:disabled{opacity:.6;cursor:default;}
   @media(max-width:600px){
     header{padding:18px 14px 6px;}
     h1{font-size:18px;line-height:1.25;}
     .sub{font-size:12px;}
     .wrap{padding:0 12px 32px;}
+    .updbar{padding:12px 14px;}
     .kpis{grid-template-columns:1fr 1fr;gap:10px;margin:14px 0;}
     .kpi{padding:13px 14px;border-radius:12px;}
     .kpi .v{font-size:21px;}
@@ -266,6 +278,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     .filters{gap:8px;}
     .filters input,.filters select,.btn{font-size:15px;width:100%;}
     .filters input{min-width:0;}
+    .updbar .btn{width:100%;}
     canvas{max-height:240px;}
   }
 </style>
@@ -273,9 +286,14 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <body>
 <header>
   <h1>Re-SET &middot; Taux de remplissage des séances</h1>
-  <div class="sub">Période __PERIODE__ &middot; données actualisées le __GENERATED__</div>
+  <div class="sub">Période __PERIODE__ &middot; généré le __GENERATED__</div>
 </header>
 <div class="wrap">
+  <div class="updbar">
+    <span class="info" id="lastScrap"></span>
+    <button id="btnUpdate" class="btn">Mettre à jour</button>
+    <span id="updMsg"></span>
+  </div>
   <div class="kpis" id="kpis"></div>
   <div class="panel" id="caPanel">
     <h2>Chiffre d'affaires estimé</h2>
@@ -313,135 +331,96 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <h2>Détail des séances</h2>
     <div class="filters">
       <input id="q" placeholder="Rechercher (activité, coach, date...)">
-      <select id="fAct"><option value="">Toutes activités</option></select>
-      <select id="fDay"><option value="">Tous les jours</option></select>
+      <select id="fAct"></select>
+      <select id="fDay"></select>
       <button id="btnExport" class="btn">Exporter en Excel</button>
     </div>
     <div class="tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
   </div>
-  <div class="foot">Source : re-set.club (widget bsport). Généré par reset_scrape.py.</div>
+  <div class="foot">Taux pondéré = total présents &divide; total places. Source : re-set.club (widget bsport).</div>
 </div>
 <script>
-const DATA = __DATA__;
-const JOURS = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
-const col = t => t>=85?'#7bbf86':t>=50?'#e0c06a':'#d9776f';
-const txtCss = getComputedStyle(document.body);
-Chart.defaults.color = '#bda394';
-Chart.defaults.borderColor = '#4d342a';
-Chart.defaults.font.family = txtCss.fontFamily;
+const API="https://api.production.bsport.io", COMPANY=__COMPANY__, BUILD_TS="__BUILDTS__";
+const COACHES=__COACHES__;
+const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
+const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+
+let DATA=__DATA__;
+// Reprend les mises a jour incrementales locales tant que le build n'a pas change
+try{
+  const s=JSON.parse(localStorage.getItem('reset_dash')||'null');
+  if(s && s.buildTs===BUILD_TS && Array.isArray(s.data) && s.data.length>=DATA.length) DATA=s.data;
+}catch(e){}
+function persist(){try{localStorage.setItem('reset_dash',JSON.stringify({buildTs:BUILD_TS,data:DATA}));}catch(e){}}
+
+const col=t=>t>=85?'#7bbf86':t>=50?'#e0c06a':'#d9776f';
+const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
+Chart.defaults.color='#bda394';Chart.defaults.borderColor='#4d342a';
+Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
 
 function avg(arr){let p=0,c=0;arr.forEach(r=>{p+=r.presents;c+=r.capacite;});return c?p/c*100:0;}
 function group(key){const m={};DATA.forEach(r=>{(m[key(r)]=m[key(r)]||[]).push(r);});return m;}
 function lundi(s){const d=new Date(s+'T00:00:00');const j=(d.getDay()+6)%7;d.setDate(d.getDate()-j);return d.toISOString().slice(0,10);}
 function periodKey(r,g){return g==='jour'?r.date:g==='mois'?r.date.slice(0,7):lundi(r.date);}
-const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
 function fmtJ(iso){const p=iso.split('-');return `${p[2]}/${p[1]}/${p[0]}`;}
 function fmtJM(iso){const p=iso.split('-');return `${p[2]}/${p[1]}`;}
 function fmtMois(ym){const p=ym.split('-');return `${MOIS[+p[1]-1]} ${p[0]}`;}
 function labelPeriode(k,g){return g==='mois'?fmtMois(k):g==='semaine'?'sem. '+fmtJM(k):fmtJM(k);}
 
-// KPIs
-const totP=DATA.reduce((s,r)=>s+r.presents,0), totC=DATA.reduce((s,r)=>s+r.capacite,0);
-const complets=DATA.filter(r=>r.complet==='oui').length;
-const kpis=[
-  ['Séances', DATA.length],
-  ['Présents (total)', totP.toLocaleString('fr-FR')],
-  ['Places (total)', totC.toLocaleString('fr-FR')],
-  ['Taux moyen', (totC?totP/totC*100:0).toFixed(1)+'%'],
-  ['Séances complètes', complets],
-];
-document.getElementById('kpis').innerHTML = kpis.map(k=>
-  `<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
+let evChart=null,caChart=null,actChart=null,hourChart=null,coachChart=null;
+let evGran='mois',caGran='mois',sortKey='date',sortDir=1,currentRows=[];
 
-// Evolution du taux (toggle jour/semaine/mois)
-let evChart=null, evGran='mois';
+function renderKpis(){
+  const totP=DATA.reduce((s,r)=>s+r.presents,0), totC=DATA.reduce((s,r)=>s+r.capacite,0);
+  const complets=DATA.filter(r=>r.complet==='oui').length;
+  document.getElementById('kpis').innerHTML=[
+    ['Séances',DATA.length],
+    ['Présents (total)',totP.toLocaleString('fr-FR')],
+    ['Places (total)',totC.toLocaleString('fr-FR')],
+    ['Taux moyen pondéré',(totC?totP/totC*100:0).toFixed(1)+'%'],
+    ['Séances complètes',complets],
+  ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
+}
+
 function renderEv(){
   const m={};DATA.forEach(r=>{const k=periodKey(r,evGran);(m[k]=m[k]||[]).push(r);});
   const keys=Object.keys(m).sort();
-  const labels=keys.map(k=>labelPeriode(k,evGran));
   if(evChart)evChart.destroy();
-  evChart=new Chart(cDay,{type:'line',data:{labels,
+  evChart=new Chart(cDay,{type:'line',data:{labels:keys.map(k=>labelPeriode(k,evGran)),
     datasets:[{data:keys.map(k=>avg(m[k])),borderColor:'#d98b63',
       backgroundColor:'rgba(217,139,99,.15)',fill:true,tension:.3,pointRadius:evGran==='jour'?1:3}]},
     options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y.toFixed(1)+'%'}}},
       scales:{y:{max:100,ticks:{callback:v=>v+'%'}}}}});
 }
-document.querySelectorAll('#evSeg button').forEach(b=>b.onclick=()=>{
-  evGran=b.dataset.g;document.querySelectorAll('#evSeg button').forEach(x=>x.classList.remove('on'));
-  b.classList.add('on');renderEv();});
-renderEv();
 
-// par activite
-const byAct=group(r=>r.activite); const acts=Object.keys(byAct).sort((a,b)=>avg(byAct[b])-avg(byAct[a]));
-new Chart(cAct,{type:'bar',data:{labels:acts,
-  datasets:[{data:acts.map(a=>avg(byAct[a])),backgroundColor:acts.map(a=>col(avg(byAct[a])))}]},
-  options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{max:100,ticks:{callback:v=>v+'%'}}}}});
-
-// (jours de semaine encore calcules pour le filtre du tableau)
-const byW=group(r=>r.jour);
-const wlabels=JOURS.filter(j=>byW[j]);
-
-// par coach (min. 3 seances pour eviter le bruit)
-const byCoach=group(r=>r.coach||'(sans coach)');
-const coachList=Object.keys(byCoach).filter(c=>byCoach[c].length>=3)
-  .sort((a,b)=>avg(byCoach[b])-avg(byCoach[a]));
-new Chart(cCoach,{type:'bar',data:{labels:coachList.map(c=>`${c} (${byCoach[c].length})`),
-  datasets:[{data:coachList.map(c=>avg(byCoach[c])),backgroundColor:coachList.map(c=>col(avg(byCoach[c])))}]},
-  options:{indexAxis:'y',plugins:{legend:{display:false},
-    tooltip:{callbacks:{label:c=>c.parsed.x.toFixed(1)+'%'}}},
-    scales:{x:{max:100,ticks:{callback:v=>v+'%'}}}}});
-
-// par heure
-const byH=group(r=>r.heure); const hours=Object.keys(byH).sort();
-new Chart(cHour,{type:'bar',data:{labels:hours,
-  datasets:[{data:hours.map(h=>avg(byH[h])),backgroundColor:hours.map(h=>col(avg(byH[h])))}]},
-  options:{plugins:{legend:{display:false}},scales:{y:{max:100,ticks:{callback:v=>v+'%'}}}}});
-
-// Table
-const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['activite','Activité'],
-  ['coach','Coach'],['remplissage','Remplissage'],['taux_%','Taux'],['complet','Complet']];
-document.querySelector('#tbl thead').innerHTML='<tr>'+cols.map((c,i)=>`<th data-i="${i}">${c[1]}</th>`).join('')+'</tr>';
-const selAct=document.getElementById('fAct'); acts.slice().sort().forEach(a=>selAct.add(new Option(a,a)));
-const selDay=document.getElementById('fDay'); wlabels.forEach(j=>selDay.add(new Option(j,j)));
-let sortKey='date',sortDir=1,currentRows=[];
-function render(){
-  const q=document.getElementById('q').value.toLowerCase();
-  const fa=selAct.value, fd=selDay.value;
-  let rows=DATA.filter(r=>(!fa||r.activite===fa)&&(!fd||r.jour===fd)&&
-    (!q||(r.activite+' '+r.coach+' '+r.date+' '+r.heure).toLowerCase().includes(q)));
-  rows.sort((a,b)=>{let x=a[sortKey],y=b[sortKey];
-    if(sortKey==='taux_%'){x=+x||0;y=+y||0;} return x>y?sortDir:x<y?-sortDir:0;});
-  currentRows=rows;
-  document.querySelector('#tbl tbody').innerHTML=rows.map(r=>{
-    const t=+r['taux_%']||0;
-    return `<tr><td>${fmtJ(r.date)}</td><td>${r.jour}</td><td>${r.heure}</td><td>${r.activite}</td>
-      <td>${r.coach}</td>
-      <td><span class="bar"><span style="width:${Math.min(t,100)}%;background:${col(t)}"></span></span>${r.remplissage}</td>
-      <td><span class="pill" style="background:${col(t)}33;color:${col(t)}">${t}%</span></td>
-      <td>${r.complet}</td></tr>`;}).join('');
+function renderAct(){
+  const by=group(r=>r.activite); const labels=Object.keys(by).sort((a,b)=>avg(by[b])-avg(by[a]));
+  if(actChart)actChart.destroy();
+  actChart=new Chart(cAct,{type:'bar',data:{labels,
+    datasets:[{data:labels.map(a=>avg(by[a])),backgroundColor:labels.map(a=>col(avg(by[a])))}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x.toFixed(1)+'%'}}},
+      scales:{x:{max:100,ticks:{callback:v=>v+'%'}}}}});
 }
-document.querySelectorAll('#tbl thead th').forEach(th=>th.onclick=()=>{
-  const k=cols[+th.dataset.i][0]; sortDir=(sortKey===k)?-sortDir:1; sortKey=k; render();});
-['q','fAct','fDay'].forEach(id=>document.getElementById(id).addEventListener('input',render));
-render();
 
-// Export Excel (CSV ; + BOM, s'ouvre direct dans Excel)
-function exportExcel(){
-  const cols2=[['date','Date'],['jour','Jour'],['heure','Heure'],['activite','Activité'],
-    ['coach','Coach'],['presents','Présents'],['capacite','Capacité'],
-    ['remplissage','Remplissage'],['taux_%','Taux %'],['complet','Complet']];
-  const esc=v=>{v=(''+v).replace(/"/g,'""');return /[";\n]/.test(v)?`"${v}"`:v;};
-  const lines=[cols2.map(c=>c[1]).join(';')];
-  currentRows.forEach(r=>lines.push(cols2.map(c=>esc(c[0]==='date'?fmtJ(r.date):r[c[0]])).join(';')));
-  const blob=new Blob(['﻿'+lines.join('\r\n')],{type:'text/csv;charset=utf-8;'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
-  a.download='reset_seances.csv';document.body.appendChild(a);a.click();a.remove();
+function renderHour(){
+  const by=group(r=>r.heure); const hours=Object.keys(by).sort();
+  if(hourChart)hourChart.destroy();
+  hourChart=new Chart(cHour,{type:'bar',data:{labels:hours,
+    datasets:[{data:hours.map(h=>avg(by[h])),backgroundColor:hours.map(h=>col(avg(by[h])))}]},
+    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y.toFixed(1)+'%'}}},
+      scales:{y:{max:100,ticks:{callback:v=>v+'%'}}}}});
 }
-document.getElementById('btnExport').addEventListener('click',exportExcel);
 
-// ---- Chiffre d'affaires estime ----
-let caChart=null, caGran='mois';
-const eur = v => v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
+function renderCoach(){
+  const by=group(r=>r.coach||'(sans coach)');
+  const list=Object.keys(by).filter(c=>by[c].length>=3).sort((a,b)=>avg(by[b])-avg(by[a]));
+  if(coachChart)coachChart.destroy();
+  coachChart=new Chart(cCoach,{type:'bar',data:{labels:list.map(c=>`${c} (${by[c].length})`),
+    datasets:[{data:list.map(c=>avg(by[c])),backgroundColor:list.map(c=>col(avg(by[c])))}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x.toFixed(1)+'%'}}},
+      scales:{x:{max:100,ticks:{callback:v=>v+'%'}}}}});
+}
+
 function renderCA(){
   const prix=parseFloat(document.getElementById('prix').value)||0;
   try{localStorage.setItem('reset_prix',prix);}catch(e){}
@@ -457,20 +436,131 @@ function renderCA(){
     ['CA / jour (moy.)',eur(totalCA/nbJours)],
   ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
   const m=sumBy(caGran), keys=Object.keys(m).sort();
-  const labels=keys.map(k=>labelPeriode(k,caGran));
-  const vals=keys.map(k=>m[k]*prix);
   if(caChart)caChart.destroy();
-  caChart=new Chart(cCA,{type:'bar',data:{labels,datasets:[{data:vals,backgroundColor:'#d98b63'}]},
+  caChart=new Chart(cCA,{type:'bar',data:{labels:keys.map(k=>labelPeriode(k,caGran)),
+    datasets:[{data:keys.map(k=>m[k]*prix),backgroundColor:'#d98b63'}]},
     options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>eur(c.parsed.y)}}},
       scales:{y:{ticks:{callback:v=>v.toLocaleString('fr-FR')+' €'}}}}});
 }
-document.getElementById('prix').addEventListener('input',renderCA);
+
+const selAct=document.getElementById('fAct'), selDay=document.getElementById('fDay');
+function populateFilters(){
+  const fa=selAct.value, fd=selDay.value;
+  const acts=[...new Set(DATA.map(r=>r.activite))].sort();
+  const days=JOURS.filter(j=>DATA.some(r=>r.jour===j));
+  selAct.innerHTML='<option value="">Toutes activités</option>'+acts.map(a=>`<option>${a}</option>`).join('');
+  selDay.innerHTML='<option value="">Tous les jours</option>'+days.map(d=>`<option>${d}</option>`).join('');
+  selAct.value=fa; selDay.value=fd;
+}
+
+const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['activite','Activité'],
+  ['coach','Coach'],['remplissage','Remplissage'],['taux_%','Taux'],['complet','Complet']];
+document.querySelector('#tbl thead').innerHTML='<tr>'+cols.map((c,i)=>`<th data-i="${i}">${c[1]}</th>`).join('')+'</tr>';
+function renderTable(){
+  const q=document.getElementById('q').value.toLowerCase();
+  const fa=selAct.value, fd=selDay.value;
+  let rows=DATA.filter(r=>(!fa||r.activite===fa)&&(!fd||r.jour===fd)&&
+    (!q||(r.activite+' '+r.coach+' '+r.date+' '+r.heure).toLowerCase().includes(q)));
+  rows.sort((a,b)=>{let x=a[sortKey],y=b[sortKey];
+    if(sortKey==='taux_%'){x=+x||0;y=+y||0;} return x>y?sortDir:x<y?-sortDir:0;});
+  currentRows=rows;
+  document.querySelector('#tbl tbody').innerHTML=rows.map(r=>{
+    const t=+r['taux_%']||0;
+    return `<tr><td>${fmtJ(r.date)}</td><td>${r.jour}</td><td>${r.heure}</td><td>${r.activite}</td>
+      <td>${r.coach}</td>
+      <td><span class="bar"><span style="width:${Math.min(t,100)}%;background:${col(t)}"></span></span>${r.remplissage}</td>
+      <td><span class="pill" style="background:${col(t)}33;color:${col(t)}">${t}%</span></td>
+      <td>${r.complet}</td></tr>`;}).join('');
+}
+
+function maxDate(){return DATA.reduce((m,r)=>r.date>m?r.date:m,'');}
+function updateLabel(){
+  const last=maxDate();
+  document.getElementById('lastScrap').innerHTML = last
+    ? `Données jusqu'au <b>${fmtJ(last)}</b> &middot; ${DATA.length} séances`
+    : 'Aucune donnée';
+}
+
+function renderAll(){
+  renderKpis();renderEv();renderAct();renderHour();renderCoach();renderCA();
+  populateFilters();renderTable();updateLabel();
+}
+
+// ---- interactions ----
+document.querySelectorAll('#evSeg button').forEach(b=>b.onclick=()=>{
+  evGran=b.dataset.g;document.querySelectorAll('#evSeg button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');renderEv();});
 document.querySelectorAll('#caSeg button').forEach(b=>b.onclick=()=>{
   caGran=b.dataset.g;document.querySelectorAll('#caSeg button').forEach(x=>x.classList.remove('on'));
   b.classList.add('on');renderCA();});
+document.querySelectorAll('#tbl thead th').forEach(th=>th.onclick=()=>{
+  const k=cols[+th.dataset.i][0]; sortDir=(sortKey===k)?-sortDir:1; sortKey=k; renderTable();});
+['q','fAct','fDay'].forEach(id=>document.getElementById(id).addEventListener('input',renderTable));
+document.getElementById('prix').addEventListener('input',renderCA);
+
 const sp=(()=>{try{return localStorage.getItem('reset_prix');}catch(e){return null;}})();
 if(sp)document.getElementById('prix').value=sp;
-renderCA();
+
+// ---- Export Excel (CSV ; + BOM) ----
+document.getElementById('btnExport').addEventListener('click',()=>{
+  const c2=[['date','Date'],['jour','Jour'],['heure','Heure'],['activite','Activité'],['coach','Coach'],
+    ['presents','Présents'],['capacite','Capacité'],['remplissage','Remplissage'],['taux_%','Taux %'],['complet','Complet']];
+  const esc=v=>{v=(''+v).replace(/"/g,'""');return /[";\n]/.test(v)?`"${v}"`:v;};
+  const lines=[c2.map(c=>c[1]).join(';')];
+  currentRows.forEach(r=>lines.push(c2.map(c=>esc(c[0]==='date'?fmtJ(r.date):r[c[0]])).join(';')));
+  const blob=new Blob(['﻿'+lines.join('\r\n')],{type:'text/csv;charset=utf-8;'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download='reset_seances.csv';document.body.appendChild(a);a.click();a.remove();
+});
+
+// ---- Mise a jour incrementale (depuis le navigateur) ----
+function buildRow(o){
+  const ds=(o.date_start||'').slice(0,16).replace('T',' ');
+  const date=ds.slice(0,10), heure=ds.slice(11,16);
+  let jour=''; const d=new Date(date+'T00:00:00'); if(!isNaN(d.getTime())) jour=JOURS[(d.getDay()+6)%7];
+  const p=o.validated_booking_count||0, c=o.effectif||0;
+  return {date,jour,heure,activite:o.activity_name||'',coach:COACHES[o.coach]||(o.coach||''),
+    presents:p,capacite:c,remplissage:p+'/'+c,'taux_%':c?Math.round(1000*p/c)/10:'',
+    complet:o.full?'oui':'non',session_id:o.id};
+}
+async function fetchOffers(min,max){
+  let page=1, all=[];
+  while(true){
+    const u=`${API}/book/v1/offer/?company=${COMPANY}&only_future_strict=false`
+      +`&min_date=${min}&max_date=${max}&page_size=300&page=${page}`;
+    const res=await fetch(u);
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const j=await res.json();
+    all=all.concat(j.results||[]);
+    if(!j.next_page || !(j.results||[]).length) break;
+    page++;
+  }
+  return all;
+}
+const msg=document.getElementById('updMsg');
+document.getElementById('btnUpdate').addEventListener('click',async()=>{
+  const btn=document.getElementById('btnUpdate');
+  const y=new Date(); y.setDate(y.getDate()-1);
+  const yIso=`${y.getFullYear()}-${String(y.getMonth()+1).padStart(2,'0')}-${String(y.getDate()).padStart(2,'0')}`;
+  const from=maxDate()||yIso;
+  if(from>yIso){ msg.textContent='Déjà à jour ✓'; return; }
+  btn.disabled=true; btn.textContent='Mise à jour…'; msg.textContent='';
+  try{
+    const offers=await fetchOffers(from,yIso);
+    const map=new Map(DATA.map(r=>[r.session_id,r]));
+    let added=0;
+    offers.forEach(o=>{const r=buildRow(o); if(!map.has(r.session_id))added++; map.set(r.session_id,r);});
+    DATA=[...map.values()].sort((a,b)=>(a.date+a.heure)>(b.date+b.heure)?1:-1);
+    persist(); renderAll();
+    msg.textContent = added? `${added} nouvelle(s) séance(s) jusqu'au ${fmtJ(yIso)} ✓` : 'À jour, rien de nouveau ✓';
+  }catch(e){
+    msg.textContent='Erreur : '+e.message+' (réessaie plus tard)';
+  }finally{
+    btn.disabled=false; btn.textContent='Mettre à jour';
+  }
+});
+
+renderAll();
 </script>
 </body>
 </html>"""
@@ -491,12 +581,12 @@ def main():
     print(f"Recuperation des seances du {start} au {end} ...")
     coaches = fetch_coaches()
     offers = fetch_offers(start, end)
-    print(f"{len(offers)} seances recuperees.")
+    print(f"{len(offers)} offres recuperees.")
     rows = build_rows(offers, coaches)
 
     write_csv(rows, args.csv)
     write_xlsx(rows, args.xlsx)
-    write_html(rows, args.html, start, end)
+    write_html(rows, coaches, args.html, start, end)
 
     if rows:
         jours = sorted({r["date"] for r in rows})
@@ -505,7 +595,7 @@ def main():
         moy = round(100 * tot_p / tot_c, 1) if tot_c else 0
         print(f"OK: {len(rows)} seances sur {len(jours)} jours "
               f"({jours[0]} -> {jours[-1]}), {tot_p} presents / {tot_c} places, "
-              f"taux moyen {moy}%.")
+              f"taux pondere {moy}%.")
     else:
         print("Aucune seance trouvee sur cette periode.")
 
