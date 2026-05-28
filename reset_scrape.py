@@ -193,7 +193,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Re-SET - Taux de remplissage des seances</title>
+<title>Re-SET - Taux de remplissage des séances</title>
 <script>__CHARTJS__</script>
 <style>
   :root{--bg:#241410;--card:#33201a;--card2:#3d271f;--line:#4d342a;
@@ -242,15 +242,15 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 </head>
 <body>
 <header>
-  <h1>Re-SET &middot; Taux de remplissage des seances</h1>
-  <div class="sub">Periode __PERIODE__ &middot; donnees actualisees le __GENERATED__</div>
+  <h1>Re-SET &middot; Taux de remplissage des séances</h1>
+  <div class="sub">Période __PERIODE__ &middot; données actualisées le __GENERATED__</div>
 </header>
 <div class="wrap">
   <div class="kpis" id="kpis"></div>
   <div class="panel" id="caPanel">
-    <h2>Chiffre d'affaires estime</h2>
+    <h2>Chiffre d'affaires estimé</h2>
     <div class="filters">
-      <label class="fld">Prix moyen par seance (&euro;)
+      <label class="fld">Prix moyen par séance (&euro;)
         <input id="prix" type="number" min="0" step="0.5" value="25" style="width:90px;margin-left:8px">
       </label>
       <span class="seg" id="caSeg">
@@ -263,7 +263,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <canvas id="cCA"></canvas>
   </div>
   <div class="panel">
-    <h2>Evolution du taux de remplissage depuis l'ouverture</h2>
+    <h2>Évolution du taux de remplissage depuis l'ouverture</h2>
     <span class="seg" id="evSeg">
       <button data-g="jour">Par jour</button>
       <button data-g="semaine">Par semaine</button>
@@ -272,23 +272,23 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <canvas id="cDay" style="margin-top:14px"></canvas>
   </div>
   <div class="grid">
-    <div class="panel"><h2>Taux moyen par type de seance</h2><canvas id="cAct"></canvas></div>
-    <div class="panel"><h2>Taux moyen par creneau horaire</h2><canvas id="cHour"></canvas></div>
+    <div class="panel"><h2>Taux moyen par type de séance</h2><canvas id="cAct"></canvas></div>
+    <div class="panel"><h2>Taux moyen par créneau horaire</h2><canvas id="cHour"></canvas></div>
   </div>
   <div class="panel">
     <h2>Taux de remplissage moyen par coach (les stars)</h2>
     <canvas id="cCoach" style="max-height:none"></canvas>
   </div>
   <div class="panel">
-    <h2>Detail des seances</h2>
+    <h2>Détail des séances</h2>
     <div class="filters">
-      <input id="q" placeholder="Rechercher (activite, coach, date...)">
+      <input id="q" placeholder="Rechercher (activité, coach, date...)">
       <select id="fAct"><option value="">Toutes activites</option></select>
       <select id="fDay"><option value="">Tous les jours</option></select>
     </div>
     <div class="tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
   </div>
-  <div class="foot">Source : re-set.club (widget bsport). Genere par reset_scrape.py.</div>
+  <div class="foot">Source : re-set.club (widget bsport). Généré par reset_scrape.py.</div>
 </div>
 <script>
 const DATA = __DATA__;
@@ -308,11 +308,11 @@ function periodKey(r,g){return g==='jour'?r.date:g==='mois'?r.date.slice(0,7):lu
 const totP=DATA.reduce((s,r)=>s+r.presents,0), totC=DATA.reduce((s,r)=>s+r.capacite,0);
 const complets=DATA.filter(r=>r.complet==='oui').length;
 const kpis=[
-  ['Seances', DATA.length],
-  ['Presents (total)', totP.toLocaleString('fr-FR')],
+  ['Séances', DATA.length],
+  ['Présents (total)', totP.toLocaleString('fr-FR')],
   ['Places (total)', totC.toLocaleString('fr-FR')],
   ['Taux moyen', (totC?totP/totC*100:0).toFixed(1)+'%'],
-  ['Seances completes', complets],
+  ['Séances complètes', complets],
 ];
 document.getElementById('kpis').innerHTML = kpis.map(k=>
   `<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
@@ -362,7 +362,7 @@ new Chart(cHour,{type:'bar',data:{labels:hours,
   options:{plugins:{legend:{display:false}},scales:{y:{max:100,ticks:{callback:v=>v+'%'}}}}});
 
 // Table
-const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['activite','Activite'],
+const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['activite','Activité'],
   ['coach','Coach'],['remplissage','Remplissage'],['taux_%','Taux'],['complet','Complet']];
 document.querySelector('#tbl thead').innerHTML='<tr>'+cols.map((c,i)=>`<th data-i="${i}">${c[1]}</th>`).join('')+'</tr>';
 const selAct=document.getElementById('fAct'); acts.slice().sort().forEach(a=>selAct.add(new Option(a,a)));
@@ -400,7 +400,7 @@ function renderCA(){
   const nbJours=new Set(DATA.map(r=>r.date)).size||1;
   const totalCA=DATA.reduce((s,r)=>s+r.presents,0)*prix;
   document.getElementById('caKpis').innerHTML=[
-    ['CA total estime',eur(totalCA)],
+    ['CA total estimé',eur(totalCA)],
     ['CA / mois (moy.)',eur(totalCA/nbMois)],
     ['CA / semaine (moy.)',eur(totalCA/nbSem)],
     ['CA / jour (moy.)',eur(totalCA/nbJours)],
