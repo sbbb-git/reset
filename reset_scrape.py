@@ -511,10 +511,10 @@ function renderTable(){
     if(sortKey==='remplissage'){x=a.presents;y=b.presents;} return x>y?sortDir:x<y?-sortDir:0;});
   currentRows=rows;
   document.querySelector('#tbl tbody').innerHTML=rows.map(r=>{
-    const w=r.capacite?Math.min(100*r.presents/r.capacite,100):0;
+    const ratio=r.capacite?100*r.presents/r.capacite:0;
     return `<tr><td>${fmtJ(r.date)}</td><td>${r.jour}</td><td>${r.heure}</td><td>${r.activite}</td>
       <td>${r.coach}</td>
-      <td><span class="bar"><span style="width:${w}%;background:var(--accent)"></span></span>${r.remplissage}</td>
+      <td><span class="bar"><span style="width:${Math.min(ratio,100)}%;background:${col(ratio)}"></span></span>${r.remplissage}</td>
       <td>${r.complet}</td></tr>`;}).join('');
 }
 

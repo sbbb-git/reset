@@ -109,7 +109,7 @@
 <body>
 <header>
   <h1>Re-SET &middot; Fréquentation des séances</h1>
-  <div class="sub">Période 22/03/2026 au 27/05/2026 &middot; généré le 28/05/2026 11:07</div>
+  <div class="sub">Période 22/03/2026 au 27/05/2026 &middot; généré le 28/05/2026 15:34</div>
 </header>
 <div class="wrap">
   <div class="updbar">
@@ -178,7 +178,7 @@
   <div class="foot">Visiteurs = personnes présentes (réservations validées). Source : re-set.club (widget bsport).</div>
 </div>
 <script>
-const API="https://api.production.bsport.io", COMPANY=5181, BUILD_TS="20260528110737";
+const API="https://api.production.bsport.io", COMPANY=5181, BUILD_TS="20260528153422";
 const COACHES={"227547": "Agathe Delacour", "39572": "Agathe Delacour", "53037": "Agathe Delacour", "177812": "Agathe Delacour", "44065": "Agathe Delacour", "53324": "Agathe Delacour", "74267": "Agathe Delacour", "227556": "Alexis Boutot", "131652": "Alexis Boutot", "227552": "alice dunoyer", "41152": "alice dunoyer", "184815": "alice dunoyer", "225176": "alice dunoyer", "168414": "alice dunoyer", "185332": "alice dunoyer", "167642": "alice dunoyer", "190059": "alice dunoyer", "172798": "alice dunoyer", "169575": "alice dunoyer", "165099": "alice dunoyer", "168809": "alice dunoyer", "45728": "alice dunoyer", "227549": "Aymerick Saubion ", "131649": "Aymerick Saubion ", "227551": "Cécile Penager", "131651": "Cécile Penager", "227543": "Faustine CHOPIN", "23777": "Faustine CHOPIN", "239406": "Faustine CHOPIN", "185748": "Faustine CHOPIN", "233273": "Faustine CHOPIN", "53325": "Faustine CHOPIN", "155522": "Faustine CHOPIN", "215142": "Faustine CHOPIN", "212731": "Faustine CHOPIN", "158567": "Faustine CHOPIN", "48011": "Faustine CHOPIN", "179899": "Faustine CHOPIN", "58320": "Faustine CHOPIN", "53783": "Faustine CHOPIN", "53785": "Faustine CHOPIN", "24968": "Faustine CHOPIN", "231801": "Free Flow session", "134598": "Free Flow session", "227555": "Gautier Lacointa", "128960": "Gautier Lacointa", "236486": "Gautier Lacointa", "223640": "Gautier Lacointa", "227553": "Leonore Chapin", "80936": "Leonore Chapin", "211584": "Leonore Chapin", "218335": "Leonore Chapin", "217883": "Leonore Chapin", "214641": "Leonore Chapin", "202012": "Leonore Chapin", "208829": "Leonore Chapin", "204055": "Leonore Chapin", "165947": "Leonore Chapin", "179067": "Leonore Chapin", "185177": "Leonore Chapin", "187358": "Leonore Chapin", "180219": "Leonore Chapin", "179779": "Leonore Chapin", "178059": "Leonore Chapin", "160301": "Leonore Chapin", "158219": "Leonore Chapin", "226835": "Marie Vergne", "131164": "Marie Vergne", "227544": "Pauline RAMON @pilatesbypops", "116193": "Pauline RAMON @pilatesbypops", "213905": "Pauline RAMON @pilatesbypops", "217418": "Pauline RAMON @pilatesbypops", "217265": "Pauline RAMON @pilatesbypops", "213001": "Pauline RAMON @pilatesbypops", "206455": "Pauline RAMON @pilatesbypops", "227554": "Prosper MATUSSIERE", "24986": "Prosper MATUSSIERE", "184617": "Prosper MATUSSIERE", "188461": "Prosper MATUSSIERE", "209717": "Prosper MATUSSIERE", "217247": "Prosper MATUSSIERE", "43893": "Prosper MATUSSIERE", "50559": "Prosper MATUSSIERE", "49460": "Prosper MATUSSIERE", "158446": "Prosper MATUSSIERE", "36810": "Prosper MATUSSIERE", "51419": "Prosper MATUSSIERE", "26620": "Prosper MATUSSIERE", "36704": "Prosper MATUSSIERE", "29738": "Prosper MATUSSIERE", "227545": "Sacha Adda", "131647": "Sacha Adda", "227548": "Sarah Sirel", "108993": "Sarah Sirel", "196538": "Sarah Sirel", "233025": "Théodore Zacchée", "56209": "Théodore Zacchée", "222804": "Théodore Zacchée", "179754": "Théodore Zacchée", "222424": "Théodore Zacchée", "155435": "Théodore Zacchée", "210649": "Théodore Zacchée", "162862": "Théodore Zacchée", "64077": "Théodore Zacchée", "74630": "Théodore Zacchée", "64078": "Théodore Zacchée", "227550": "Théodore Zachée", "131650": "Théodore Zachée", "220745": "Thomas Verdier", "126891": "Thomas Verdier"};
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
@@ -327,10 +327,10 @@ function renderTable(){
     if(sortKey==='remplissage'){x=a.presents;y=b.presents;} return x>y?sortDir:x<y?-sortDir:0;});
   currentRows=rows;
   document.querySelector('#tbl tbody').innerHTML=rows.map(r=>{
-    const w=r.capacite?Math.min(100*r.presents/r.capacite,100):0;
+    const ratio=r.capacite?100*r.presents/r.capacite:0;
     return `<tr><td>${fmtJ(r.date)}</td><td>${r.jour}</td><td>${r.heure}</td><td>${r.activite}</td>
       <td>${r.coach}</td>
-      <td><span class="bar"><span style="width:${w}%;background:var(--accent)"></span></span>${r.remplissage}</td>
+      <td><span class="bar"><span style="width:${Math.min(ratio,100)}%;background:${col(ratio)}"></span></span>${r.remplissage}</td>
       <td>${r.complet}</td></tr>`;}).join('');
 }
 
