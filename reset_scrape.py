@@ -261,6 +261,13 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
        font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;}
   .btn:hover{background:var(--accent2);}
   .btn:disabled{opacity:.6;cursor:default;}
+  .kpi .delta{margin-top:6px;font-size:13px;font-weight:700;}
+  .ranklist{display:flex;flex-direction:column;gap:9px;}
+  .rk{display:grid;grid-template-columns:62px 1fr auto;align-items:center;gap:10px;font-size:13px;}
+  .rk .lbl{color:var(--text);font-weight:600;}
+  .rk .track{height:9px;background:var(--line);border-radius:5px;overflow:hidden;}
+  .rk .track>span{display:block;height:100%;background:var(--accent);border-radius:5px;}
+  .rk .val{color:var(--muted);font-variant-numeric:tabular-nums;}
   @media(max-width:600px){
     header{padding:18px 14px 6px;}
     h1{font-size:18px;line-height:1.25;}
@@ -295,6 +302,10 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <span id="updMsg"></span>
   </div>
   <div class="kpis" id="kpis"></div>
+  <div class="panel">
+    <h2>Tendance de la fréquentation</h2>
+    <div class="kpis" id="trend"></div>
+  </div>
   <div class="panel" id="caPanel">
     <h2>Chiffre d'affaires estimé</h2>
     <div class="filters">
@@ -326,6 +337,10 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
       <select id="evAct"></select>
     </div>
     <canvas id="cDay" style="margin-top:6px"></canvas>
+  </div>
+  <div class="grid">
+    <div class="panel"><h2>Top créneaux horaires (visiteurs)</h2><div id="topHour" class="ranklist"></div></div>
+    <div class="panel"><h2>Visiteurs par jour de la semaine</h2><div id="topDay" class="ranklist"></div></div>
   </div>
   <div class="grid">
     <div class="panel"><h2>Visiteurs par type de séance</h2><canvas id="cAct"></canvas></div>
@@ -513,9 +528,38 @@ function updateLabel(){
     : 'Aucune donnée';
 }
 
+function dayShift(iso,n){const d=new Date(iso+'T00:00:00');d.setDate(d.getDate()+n);return d.toISOString().slice(0,10);}
+function sumRange(a,b){return DATA.reduce((s,r)=>(r.date>=a&&r.date<=b)?s+r.presents:s,0);}
+function trendCard(label,cur,prev){
+  let delta='<div class="delta" style="color:var(--muted)">— (pas d\'historique)</div>';
+  if(prev>0){const pct=(cur-prev)/prev*100, up=pct>=0;
+    delta=`<div class="delta" style="color:${up?'var(--green)':'var(--red)'}">`
+      +`${up?'▲':'▼'} ${Math.abs(pct).toFixed(0)} % vs ${nf(prev)}</div>`;}
+  return `<div class="kpi"><div class="v">${nf(cur)}</div><div class="l">${label}</div>${delta}</div>`;
+}
+function renderTrend(){
+  const end=maxDate(); const box=document.getElementById('trend');
+  if(!end){box.innerHTML='';return;}
+  const c7=sumRange(dayShift(end,-6),end), p7=sumRange(dayShift(end,-13),dayShift(end,-7));
+  const c30=sumRange(dayShift(end,-29),end), p30=sumRange(dayShift(end,-59),dayShift(end,-30));
+  box.innerHTML=trendCard('7 derniers jours',c7,p7)+trendCard('30 derniers jours',c30,p30);
+}
+function rankList(id,entries){
+  const mx=entries.length?entries[0][1]:0;
+  document.getElementById(id).innerHTML=entries.map(([lbl,v])=>
+    `<div class="rk"><span class="lbl">${lbl}</span>`
+    +`<span class="track"><span style="width:${mx?Math.round(100*v/mx):0}%"></span></span>`
+    +`<span class="val">${nf(v)}</span></div>`).join('');
+}
+function renderTop(){
+  const byH={};DATA.forEach(r=>byH[r.heure]=(byH[r.heure]||0)+r.presents);
+  rankList('topHour',Object.entries(byH).sort((a,b)=>b[1]-a[1]).slice(0,8));
+  const byD={};DATA.forEach(r=>byD[r.jour]=(byD[r.jour]||0)+r.presents);
+  rankList('topDay',JOURS.filter(j=>byD[j]).map(j=>[j,byD[j]]).sort((a,b)=>b[1]-a[1]));
+}
 function renderAll(){
   populateFilters();
-  renderKpis();renderEv();renderAct();renderHour();renderCoach();renderCA();
+  renderKpis();renderTrend();renderEv();renderTop();renderAct();renderHour();renderCoach();renderCA();
   renderTable();updateLabel();
 }
 

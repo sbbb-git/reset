@@ -77,6 +77,13 @@
        font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;}
   .btn:hover{background:var(--accent2);}
   .btn:disabled{opacity:.6;cursor:default;}
+  .kpi .delta{margin-top:6px;font-size:13px;font-weight:700;}
+  .ranklist{display:flex;flex-direction:column;gap:9px;}
+  .rk{display:grid;grid-template-columns:62px 1fr auto;align-items:center;gap:10px;font-size:13px;}
+  .rk .lbl{color:var(--text);font-weight:600;}
+  .rk .track{height:9px;background:var(--line);border-radius:5px;overflow:hidden;}
+  .rk .track>span{display:block;height:100%;background:var(--accent);border-radius:5px;}
+  .rk .val{color:var(--muted);font-variant-numeric:tabular-nums;}
   @media(max-width:600px){
     header{padding:18px 14px 6px;}
     h1{font-size:18px;line-height:1.25;}
@@ -102,7 +109,7 @@
 <body>
 <header>
   <h1>Re-SET &middot; Fréquentation des séances</h1>
-  <div class="sub">Période 22/03/2026 au 27/05/2026 &middot; généré le 28/05/2026 10:57</div>
+  <div class="sub">Période 22/03/2026 au 27/05/2026 &middot; généré le 28/05/2026 11:00</div>
 </header>
 <div class="wrap">
   <div class="updbar">
@@ -111,6 +118,10 @@
     <span id="updMsg"></span>
   </div>
   <div class="kpis" id="kpis"></div>
+  <div class="panel">
+    <h2>Tendance de la fréquentation</h2>
+    <div class="kpis" id="trend"></div>
+  </div>
   <div class="panel" id="caPanel">
     <h2>Chiffre d'affaires estimé</h2>
     <div class="filters">
@@ -144,6 +155,10 @@
     <canvas id="cDay" style="margin-top:6px"></canvas>
   </div>
   <div class="grid">
+    <div class="panel"><h2>Top créneaux horaires (visiteurs)</h2><div id="topHour" class="ranklist"></div></div>
+    <div class="panel"><h2>Visiteurs par jour de la semaine</h2><div id="topDay" class="ranklist"></div></div>
+  </div>
+  <div class="grid">
     <div class="panel"><h2>Visiteurs par type de séance</h2><canvas id="cAct"></canvas></div>
     <div class="panel"><h2>Visiteurs par créneau horaire</h2><canvas id="cHour"></canvas></div>
   </div>
@@ -164,7 +179,7 @@
   <div class="foot">Taux pondéré = total présents &divide; total places. Source : re-set.club (widget bsport).</div>
 </div>
 <script>
-const API="https://api.production.bsport.io", COMPANY=5181, BUILD_TS="20260528105736";
+const API="https://api.production.bsport.io", COMPANY=5181, BUILD_TS="20260528110036";
 const COACHES={"227547": "Agathe Delacour", "39572": "Agathe Delacour", "53037": "Agathe Delacour", "177812": "Agathe Delacour", "44065": "Agathe Delacour", "53324": "Agathe Delacour", "74267": "Agathe Delacour", "227556": "Alexis Boutot", "131652": "Alexis Boutot", "227552": "alice dunoyer", "41152": "alice dunoyer", "184815": "alice dunoyer", "225176": "alice dunoyer", "168414": "alice dunoyer", "185332": "alice dunoyer", "167642": "alice dunoyer", "190059": "alice dunoyer", "172798": "alice dunoyer", "169575": "alice dunoyer", "165099": "alice dunoyer", "168809": "alice dunoyer", "45728": "alice dunoyer", "227549": "Aymerick Saubion ", "131649": "Aymerick Saubion ", "227551": "Cécile Penager", "131651": "Cécile Penager", "227543": "Faustine CHOPIN", "23777": "Faustine CHOPIN", "239406": "Faustine CHOPIN", "185748": "Faustine CHOPIN", "233273": "Faustine CHOPIN", "53325": "Faustine CHOPIN", "155522": "Faustine CHOPIN", "215142": "Faustine CHOPIN", "212731": "Faustine CHOPIN", "158567": "Faustine CHOPIN", "48011": "Faustine CHOPIN", "179899": "Faustine CHOPIN", "58320": "Faustine CHOPIN", "53783": "Faustine CHOPIN", "53785": "Faustine CHOPIN", "24968": "Faustine CHOPIN", "231801": "Free Flow session", "134598": "Free Flow session", "227555": "Gautier Lacointa", "128960": "Gautier Lacointa", "236486": "Gautier Lacointa", "223640": "Gautier Lacointa", "227553": "Leonore Chapin", "80936": "Leonore Chapin", "211584": "Leonore Chapin", "218335": "Leonore Chapin", "217883": "Leonore Chapin", "214641": "Leonore Chapin", "202012": "Leonore Chapin", "208829": "Leonore Chapin", "204055": "Leonore Chapin", "165947": "Leonore Chapin", "179067": "Leonore Chapin", "185177": "Leonore Chapin", "187358": "Leonore Chapin", "180219": "Leonore Chapin", "179779": "Leonore Chapin", "178059": "Leonore Chapin", "160301": "Leonore Chapin", "158219": "Leonore Chapin", "226835": "Marie Vergne", "131164": "Marie Vergne", "227544": "Pauline RAMON @pilatesbypops", "116193": "Pauline RAMON @pilatesbypops", "213905": "Pauline RAMON @pilatesbypops", "217418": "Pauline RAMON @pilatesbypops", "217265": "Pauline RAMON @pilatesbypops", "213001": "Pauline RAMON @pilatesbypops", "206455": "Pauline RAMON @pilatesbypops", "227554": "Prosper MATUSSIERE", "24986": "Prosper MATUSSIERE", "184617": "Prosper MATUSSIERE", "188461": "Prosper MATUSSIERE", "209717": "Prosper MATUSSIERE", "217247": "Prosper MATUSSIERE", "43893": "Prosper MATUSSIERE", "50559": "Prosper MATUSSIERE", "49460": "Prosper MATUSSIERE", "158446": "Prosper MATUSSIERE", "36810": "Prosper MATUSSIERE", "51419": "Prosper MATUSSIERE", "26620": "Prosper MATUSSIERE", "36704": "Prosper MATUSSIERE", "29738": "Prosper MATUSSIERE", "227545": "Sacha Adda", "131647": "Sacha Adda", "227548": "Sarah Sirel", "108993": "Sarah Sirel", "196538": "Sarah Sirel", "233025": "Théodore Zacchée", "56209": "Théodore Zacchée", "222804": "Théodore Zacchée", "179754": "Théodore Zacchée", "222424": "Théodore Zacchée", "155435": "Théodore Zacchée", "210649": "Théodore Zacchée", "162862": "Théodore Zacchée", "64077": "Théodore Zacchée", "74630": "Théodore Zacchée", "64078": "Théodore Zacchée", "227550": "Théodore Zachée", "131650": "Théodore Zachée", "220745": "Thomas Verdier", "126891": "Thomas Verdier"};
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
@@ -329,9 +344,38 @@ function updateLabel(){
     : 'Aucune donnée';
 }
 
+function dayShift(iso,n){const d=new Date(iso+'T00:00:00');d.setDate(d.getDate()+n);return d.toISOString().slice(0,10);}
+function sumRange(a,b){return DATA.reduce((s,r)=>(r.date>=a&&r.date<=b)?s+r.presents:s,0);}
+function trendCard(label,cur,prev){
+  let delta='<div class="delta" style="color:var(--muted)">— (pas d\'historique)</div>';
+  if(prev>0){const pct=(cur-prev)/prev*100, up=pct>=0;
+    delta=`<div class="delta" style="color:${up?'var(--green)':'var(--red)'}">`
+      +`${up?'▲':'▼'} ${Math.abs(pct).toFixed(0)} % vs ${nf(prev)}</div>`;}
+  return `<div class="kpi"><div class="v">${nf(cur)}</div><div class="l">${label}</div>${delta}</div>`;
+}
+function renderTrend(){
+  const end=maxDate(); const box=document.getElementById('trend');
+  if(!end){box.innerHTML='';return;}
+  const c7=sumRange(dayShift(end,-6),end), p7=sumRange(dayShift(end,-13),dayShift(end,-7));
+  const c30=sumRange(dayShift(end,-29),end), p30=sumRange(dayShift(end,-59),dayShift(end,-30));
+  box.innerHTML=trendCard('7 derniers jours',c7,p7)+trendCard('30 derniers jours',c30,p30);
+}
+function rankList(id,entries){
+  const mx=entries.length?entries[0][1]:0;
+  document.getElementById(id).innerHTML=entries.map(([lbl,v])=>
+    `<div class="rk"><span class="lbl">${lbl}</span>`
+    +`<span class="track"><span style="width:${mx?Math.round(100*v/mx):0}%"></span></span>`
+    +`<span class="val">${nf(v)}</span></div>`).join('');
+}
+function renderTop(){
+  const byH={};DATA.forEach(r=>byH[r.heure]=(byH[r.heure]||0)+r.presents);
+  rankList('topHour',Object.entries(byH).sort((a,b)=>b[1]-a[1]).slice(0,8));
+  const byD={};DATA.forEach(r=>byD[r.jour]=(byD[r.jour]||0)+r.presents);
+  rankList('topDay',JOURS.filter(j=>byD[j]).map(j=>[j,byD[j]]).sort((a,b)=>b[1]-a[1]));
+}
 function renderAll(){
   populateFilters();
-  renderKpis();renderEv();renderAct();renderHour();renderCoach();renderCA();
+  renderKpis();renderTrend();renderEv();renderTop();renderAct();renderHour();renderCoach();renderCA();
   renderTable();updateLabel();
 }
 
