@@ -103,7 +103,7 @@ def save_store(store):
 
 
 FIELDS = ["date", "jour", "heure", "fin", "lieu", "cours", "coach",
-          "capacite", "reserves", "presents", "finie", "releve"]
+          "capacite", "reserves", "presents", "noshow", "finie", "releve"]
 
 
 def write_csv(rows, path):
@@ -209,7 +209,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 const ALL=__DATA__;
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
-const fillColor=t=>t>=0.9?'#e07a6f':t>=0.6?'#e6c14d':'#5fcf8a';
+const fillColor=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
 function fmtJ(iso){const p=iso.split('-');return `${p[2]}/${p[1]}/${p[0]}`;}
 Chart.defaults.color='#97a1c8';Chart.defaults.borderColor='#2a3358';Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
 let charts={};
@@ -234,12 +234,15 @@ function render(){
   const D=current();
   const totPres=D.reduce((s,r)=>s+r.presents,0);
   const totCap=D.reduce((s,r)=>s+r.capacite,0);
+  const totRes=D.reduce((s,r)=>s+r.reserves,0);
+  const totNo=D.reduce((s,r)=>s+(r.noshow||0),0);
   const avg=D.length?totPres/D.length:0;
   document.getElementById('kpis').innerHTML=[
     ['Présents (total)',nf(totPres)],
     ['Séances terminées',nf(D.length)],
     ['Moyenne / séance',D.length?avg.toFixed(1):'—'],
     ['Taux de remplissage',totCap?Math.round(100*totPres/totCap)+'%':'—'],
+    ['No-shows (total)',nf(totNo)+(totRes?` (${Math.round(100*totNo/totRes)}%)`:'')],
   ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
 
   // présents par jour
@@ -281,7 +284,7 @@ function render(){
   renderTable(D);
 }
 
-const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['lieu','Studio'],['cours','Cours'],['coach','Coach'],['presents','Présents'],['reserves','Réservés'],['capacite','Capacité']];
+const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['lieu','Studio'],['cours','Cours'],['coach','Coach'],['presents','Présents'],['reserves','Réservés'],['noshow','No-show'],['capacite','Capacité']];
 document.querySelector('#tbl thead').innerHTML='<tr>'+cols.map(c=>`<th>${c[1]}</th>`).join('')+'</tr>';
 let currentRows=[];
 function renderTable(D){
@@ -289,9 +292,10 @@ function renderTable(D){
   currentRows=rows;
   document.querySelector('#tbl tbody').innerHTML=rows.map(r=>{
     const t=r.capacite?r.presents/r.capacite:0;
+    const ns=r.noshow||0;
     return `<tr><td>${fmtJ(r.date)}</td><td>${r.jour}</td><td>${r.heure}</td><td>${r.lieu}</td><td>${r.cours}</td><td>${r.coach||'—'}</td>`
       +`<td><b>${r.presents}</b> / ${r.capacite}<span class="bar" style="width:${Math.round(40*t)}px;background:${fillColor(t)}"></span></td>`
-      +`<td>${r.reserves}</td><td>${r.capacite}</td></tr>`;}).join('');
+      +`<td>${r.reserves}</td><td>${ns?'<b style="color:#e07a6f">'+ns+'</b>':'0'}</td><td>${r.capacite}</td></tr>`;}).join('');
 }
 ['q'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 [selLieu,selCours,selCoach].forEach(s=>s.addEventListener('change',render));
@@ -311,6 +315,8 @@ render();
 def main():
     store = capture()
     rows = sorted(store.values(), key=lambda r: (r["date"], r["heure"], r.get("lieu", "")))
+    for r in rows:
+        r["noshow"] = max(0, (r.get("reserves") or 0) - (r.get("presents") or 0))
     write_csv(rows, "punch_seances.csv")
     write_html(rows, "punch-c51992ff8b.html")
     fin = [r for r in rows if r.get("finie")]
