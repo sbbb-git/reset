@@ -312,7 +312,7 @@ def main():
     store = capture()
     rows = sorted(store.values(), key=lambda r: (r["date"], r["heure"], r.get("lieu", "")))
     write_csv(rows, "punch_seances.csv")
-    write_html(rows, "punch.html")
+    write_html(rows, "punch-c51992ff8b.html")
     fin = [r for r in rows if r.get("finie")]
     print(f"OK: {len(rows)} cours en base, {len(fin)} terminés (présence réelle).")
 

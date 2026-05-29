@@ -2,8 +2,8 @@ name: Scrap Punch Studios
 
 on:
   schedule:
-    # toutes les 2h : capture les présences finales + l'évolution des réservations
-    - cron: "0 */2 * * *"
+    # chaque soir ~23:00 Paris (21:00 UTC), après la dernière séance -> présences finales du jour
+    - cron: "0 21 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -32,7 +32,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add punch_data.json punch_seances.csv punch.html
+          git add punch_data.json punch_seances.csv punch-c51992ff8b.html
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
