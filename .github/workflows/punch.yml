@@ -1,0 +1,44 @@
+name: Scrap Punch Studios
+
+on:
+  schedule:
+    # toutes les 2h : capture les présences finales + l'évolution des réservations
+    - cron: "0 */2 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: punch-scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scrap Punch (présences réelles, 4 studios)
+        run: python3 punch_scrape.py
+
+      - name: Commit si changement
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add punch_data.json punch_seances.csv punch.html
+          if git diff --cached --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "Scrap Punch ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            for i in 1 2 3 4; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              echo "retry push $i"; sleep 5
+            done
+          fi
