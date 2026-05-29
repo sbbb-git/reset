@@ -22,6 +22,13 @@
   .panel h2{margin:0 0 14px;font-size:15px;color:var(--text);font-weight:700;}
   .ctrl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 0 16px;color:var(--muted);font-size:13px;}
   .ctrl input,.ctrl select{background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:8px 11px;font-size:13px;}
+  /* champs prix : propres, sans flèches */
+  input[type=number]{-moz-appearance:textfield;}
+  input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
+  .pinp{background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:13px;text-align:right;width:78px;transition:border-color .15s,box-shadow .15s;font-variant-numeric:tabular-nums;}
+  .pinp:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(111,130,255,.18);}
+  .pwrap{display:inline-flex;align-items:center;gap:5px;justify-content:flex-end;}
+  .pwrap .eu{color:var(--muted);font-size:12px;}
   table{width:100%;border-collapse:collapse;font-size:13px;}
   th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;}
   th:first-child,td:first-child{text-align:left;}
@@ -61,7 +68,7 @@
 
   <div class="ctrl">
     Prix moyen / séance pour le CA :
-    <input id="prix" type="number" min="0" step="0.5" value="20" style="width:90px"> &euro;
+    <span class="pwrap"><input id="prix" class="pinp" type="number" min="0" step="0.5" value="20"> <span class="eu">&euro;</span></span>
     &middot; Période : <select id="periode">
       <option value="0">Tout l'historique</option>
       <option value="7">7 derniers jours</option>
@@ -187,8 +194,7 @@ function renderBrandTable(brands){
     +`<td>${b.studios}</td><td>${b.seances}</td><td>${nf(b.pres)}</td>`
     +`<td>${b.moy.toFixed(1)}</td>`
     +`<td style="color:${fill(b.taux)};font-weight:700">${Math.round(100*b.taux)}%</td>`
-    +`<td><input type="number" min="0" step="0.5" value="${PRICES[b.key]!==undefined?PRICES[b.key]:''}" placeholder="${def}" data-bk="${b.key}" `
-    +`style="width:64px;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:5px 7px;font-size:12px;text-align:right"> &euro;</td>`
+    +`<td><span class="pwrap"><input class="pinp" type="number" min="0" step="0.5" value="${PRICES[b.key]!==undefined?PRICES[b.key]:''}" placeholder="${def}" data-bk="${b.key}"> <span class="eu">&euro;</span></span></td>`
     +`<td>${eur(b.ca)}</td></tr>`).join('');
   document.querySelectorAll('#tblBrand tbody input[data-bk]').forEach(inp=>{
     inp.addEventListener('click',e=>e.stopPropagation());
