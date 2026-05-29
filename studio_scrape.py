@@ -226,6 +226,9 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 const ALL=__DATA__;
 const API='__API__',PREFIX='__PREFIX__';
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
+// clé logique d'une séance (1 studio, 1 créneau, 1 cours, 1 coach) -> évite tout doublon
+const lkey=r=>r.date+'|'+r.heure+'|'+r.lieu+'|'+r.cours+'|'+(r.coach||'');
+(function(){const m={};ALL.forEach(r=>m[lkey(r)]=r);const u=Object.values(m);if(u.length!==ALL.length){ALL.length=0;u.forEach(r=>ALL.push(r));}})();
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
 const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
 const fillColor=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
@@ -362,19 +365,19 @@ async function majNow(){
     const r=await fetch(API,{headers:{'Accept':'application/json'}});
     if(!r.ok)throw new Error('HTTP '+r.status);
     const data=await r.json(),now=new Date();
-    const keep=ALL.filter(x=>!x.id),byId={};ALL.forEach(x=>{if(x.id)byId[x.id]=x;});
+    const byKey={};ALL.forEach(x=>byKey[lkey(x)]=x);   // fusion par séance (pas par id) -> zéro doublon
     let add=0;
     data.forEach(c=>{if(c.IsCanceled||!c.StartDateTime)return;
-      const s=c.StartDateTime,e=c.EndDateTime||s,id=String(c.Id),sd=new Date(s);
-      const row={id:id,date:s.slice(0,10),jour:JOURS[(sd.getDay()+6)%7],heure:s.slice(11,16),fin:e.slice(11,16),
+      const s=c.StartDateTime,e=c.EndDateTime||s,sd=new Date(s);
+      const row={id:String(c.Id),date:s.slice(0,10),jour:JOURS[(sd.getDay()+6)%7],heure:s.slice(11,16),fin:e.slice(11,16),
         lieu:shortLoc((c.Location||{}).Name),cours:((c.ClassDescription||{}).Name||'').trim(),
         coach:((c.Staff||{}).Name||'').trim(),capacite:c.MaxCapacity||0,reserves:c.TotalBooked||0,
         presents:c.TotalSignedIn||0,finie:now>=new Date(e)};
       row.noshow=Math.max(0,row.reserves-row.presents);
-      if(!byId[id])add++;byId[id]=row;});
-    ALL.length=0;keep.forEach(x=>ALL.push(x));Object.values(byId).forEach(x=>ALL.push(x));
+      const k=lkey(row);if(!(k in byKey))add++;byKey[k]=row;});
+    ALL.length=0;Object.values(byKey).forEach(x=>ALL.push(x));
     FINIES=ALL.filter(x=>x.finie);refreshFilters();render();
-    msg.textContent='À jour ✓ '+now.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})+(add?` (+${add})`:'');
+    msg.textContent='À jour ✓ '+now.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})+(add?` (+${add} séances)`:' (aucune nouvelle)');
   }catch(err){msg.textContent='Échec : '+err.message;}
   btn.disabled=false;btn.textContent=old;
 }
@@ -394,7 +397,15 @@ render();
 
 def run(cfg):
     store = capture(cfg)
-    rows = sorted(store.values(), key=lambda r: (r["date"], r["heure"], r.get("lieu", "")))
+    # dédoublonnage par séance logique (1 studio / créneau / cours / coach) :
+    # si un id a changé entre deux relevés, on garde le relevé le plus récent.
+    best = {}
+    for r in store.values():
+        k = (r["date"], r["heure"], r.get("lieu", ""), r.get("cours", ""), r.get("coach", ""))
+        cur = best.get(k)
+        if cur is None or (bool(r.get("finie")), r.get("releve", "")) > (bool(cur.get("finie")), cur.get("releve", "")):
+            best[k] = r
+    rows = sorted(best.values(), key=lambda r: (r["date"], r["heure"], r.get("lieu", "")))
     for r in rows:
         r["noshow"] = max(0, (r.get("reserves") or 0) - (r.get("presents") or 0))
     write_csv(rows, cfg["csv"])
