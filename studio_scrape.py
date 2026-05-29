@@ -185,6 +185,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 </header>
 <div class="wrap">
   <div class="note">ℹ️ Chiffres exacts issus de la billetterie : <b>présents</b> = personnes ayant assisté au cours (cours terminés), <b>réservés</b> = inscriptions (cours à venir). Les stats ci-dessous portent sur les <b>cours terminés</b>. L'historique s'accumule à chaque relevé (la plateforme n'expose qu'une fenêtre de ~7 jours).</div>
+  <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>
   <div class="filters">
     <input id="q" placeholder="Rechercher (cours, coach...)">
@@ -263,6 +264,11 @@ function render(){
   const totNo=D.reduce((s,r)=>s+(r.noshow||0),0);
   const avg=D.length?totPres/D.length:0;
   const nbStudios=new Set(D.map(r=>r.lieu)).size||1;
+  // bandeau période (toujours visible, se met à jour avec les filtres)
+  const dts=[...new Set(D.map(r=>r.date))].sort(),pj=dts.length;
+  document.getElementById('periode').textContent = pj
+    ? `📅 Période étudiée : du ${fmtJ(dts[0])} au ${fmtJ(dts[pj-1])} · ${pj} jour${pj>1?'s':''} · ${nbStudios} studio${nbStudios>1?'s':''} · ${nf(D.length)} séances terminées`
+    : 'Aucune séance terminée sur cette sélection.';
   document.getElementById('kpis').innerHTML=[
     ['Présents (total)',nf(totPres)],
     ['Studios',nf(nbStudios)],
