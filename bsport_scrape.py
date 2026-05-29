@@ -46,16 +46,20 @@ def _get(path, params, retries=4):
 
 
 def fetch_establishments(company):
-    out = {}
+    """Renvoie (noms {id:titre}, set d'ids 'XMBO' à ignorer car doublons)."""
+    names, xmbo = {}, set()
     try:
         d = _get("/book/v1/establishment/", {"company": company, "page_size": 200})
         for e in d.get("results", []):
-            nm = e.get("title") or e.get("name")
+            nm = (e.get("title") or e.get("name") or "").strip()
+            if nm.upper().startswith("XMBO"):   # système parallèle -> doublons
+                xmbo.add(e["id"])
+                continue
             if nm:
-                out[e["id"]] = nm.replace(" REFORMER STUDIO", "").replace(" REFORMER PILATES", "").strip().title() if nm.isupper() else nm
+                names[e["id"]] = nm   # nom brut, pas de nettoyage
     except Exception as e:  # noqa: BLE001
-        print(f"  (établissements indispo : {e})", file=sys.stderr)
-    return out
+        print(f"  (établissements indispo company {company} : {e})", file=sys.stderr)
+    return names, xmbo
 
 
 def fetch_coaches(company):
@@ -107,15 +111,18 @@ def save_store(store, path):
 def capture(cfg):
     now = dt.datetime.now(PARIS)
     store = load_store(cfg["store"])
-    est, coaches = cfg["_est"], cfg["_coaches"]
-    try:
-        offers = fetch_offers(cfg["company"], now.date() - dt.timedelta(days=3),
-                              now.date() + dt.timedelta(days=2))
-    except Exception as e:  # noqa: BLE001
-        print(f"  (fetch offers échoué : {e})", file=sys.stderr)
-        return store
+    est, coaches, skip = cfg["_est"], cfg["_coaches"], cfg["_skip"]
+    offers = []
+    for co in cfg["_companies"]:
+        try:
+            offers += fetch_offers(co, now.date() - dt.timedelta(days=3),
+                                   now.date() + dt.timedelta(days=2))
+        except Exception as e:  # noqa: BLE001
+            print(f"  (fetch offers company {co} échoué : {e})", file=sys.stderr)
     seen = 0
     for o in offers:
+        if o.get("establishment") in skip:
+            continue
         ds = o.get("date_start") or ""
         if not ds:
             continue
@@ -176,7 +183,7 @@ def write_html(rows, cfg):
             .replace("__CSVNAME__", cfg["key"] + "_seances.csv")
             .replace("__ACCENT__", cfg["accent"])
             .replace("__ACCENT2__", cfg["accent2"])
-            .replace("__COMPANY__", str(cfg["company"]))
+            .replace("__COMPANIES__", json.dumps(cfg["_companies"]))
             .replace("__HOST__", cfg["host"]))
     with open(cfg["html"], "w", encoding="utf-8") as f:
         f.write(html)
@@ -233,7 +240,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">généré le __GENERATED__ &middot; réservations validées (bsport)</div>
 </header>
 <div class="wrap">
-  <div class="note">ℹ️ Chiffres exacts de la billetterie : <b>présents</b> = réservations validées. Les stats portent sur les <b>séances terminées</b>. Le bouton « Mettre à jour » en bas rafraîchit en direct ; un robot capte aussi automatiquement le remplissage ~5 min avant chaque séance. L'historique s'accumule jour après jour.</div>
+  <div class="note">ℹ️ Chiffres exacts de la billetterie : <b>présents</b> = réservations confirmées. Le décompte <b>s'arrête à la première séance pas encore commencée</b> (les séances à venir, encore vides, sont exclues). Le bouton « Mettre à jour » en bas rafraîchit en direct ; un robot capte aussi le remplissage ~5 min avant chaque séance. L'historique s'accumule jour après jour.</div>
   <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>
   <div class="filters">
@@ -272,7 +279,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 </div>
 <script>
 const ALL=__DATA__;
-const API="https://api.production.bsport.io",COMPANY=__COMPANY__,EST=__EST__,COACHES=__COACHES__;
+const API="https://api.production.bsport.io",COMPANIES=__COMPANIES__,EST=__EST__,COACHES=__COACHES__;
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const lkey=r=>r.date+'|'+r.heure+'|'+r.lieu+'|'+r.cours+'|'+(r.coach||'');
 (function(){const m={};ALL.forEach(r=>m[lkey(r)]=r);const u=Object.values(m);if(u.length!==ALL.length){ALL.length=0;u.forEach(r=>ALL.push(r));}})();
@@ -286,7 +293,9 @@ const ACC=css('--accent')||'#263fff',ACC2=css('--accent2')||'#6f82ff';
 let charts={};
 const isNarrow=()=>matchMedia('(max-width:600px)').matches;
 
-let FINIES=ALL.filter(r=>r.finie);
+// on compte tout ce qui a DÉMARRÉ ; on s'arrête à la 1re séance à venir (calcul live)
+const started=r=>new Date(r.date+'T'+(r.heure||'00:00')+':00')<=new Date();
+let FINIES=ALL.filter(started);
 const selLieu=document.getElementById('fLieu'),selCours=document.getElementById('fCours'),selCoach=document.getElementById('fCoach');
 function fillSel(sel,vals,label){sel.innerHTML='';sel.add(new Option(label,''));[...new Set(vals)].filter(Boolean).sort().forEach(v=>sel.add(new Option(v,v)));}
 fillSel(selLieu,ALL.map(r=>r.lieu),'Tous les studios');
@@ -310,13 +319,13 @@ function render(){
   const nbStudios=new Set(D.map(r=>r.lieu)).size||1;
   const dts=[...new Set(D.map(r=>r.date))].sort(),pj=dts.length;
   document.getElementById('periode').textContent = pj
-    ? `📅 Période étudiée : du ${fmtJ(dts[0])} au ${fmtJ(dts[pj-1])} · ${pj} jour${pj>1?'s':''} · ${nbStudios} studio${nbStudios>1?'s':''} · ${nf(D.length)} séances terminées`
-    : 'Aucune séance terminée sur cette sélection.';
+    ? `📅 Période étudiée : du ${fmtJ(dts[0])} au ${fmtJ(dts[pj-1])} · ${pj} jour${pj>1?'s':''} · ${nbStudios} studio${nbStudios>1?'s':''} · ${nf(D.length)} séances comptées`
+    : 'Aucune séance commencée sur cette sélection.';
   document.getElementById('kpis').innerHTML=[
     ['Présents (total)',nf(totPres)],
     ['Studios',nf(nbStudios)],
     ['Présents / studio',nf(totPres/nbStudios)],
-    ['Séances terminées',nf(D.length)],
+    ['Séances comptées',nf(D.length)],
     ['Moyenne / séance',D.length?avg.toFixed(1):'—'],
     ['Taux de remplissage',totCap?Math.round(100*totPres/totCap)+'%':'—'],
   ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
@@ -409,13 +418,16 @@ async function majNow(){
     const now=new Date();
     const min=new Date(now);min.setDate(min.getDate()-3);
     const max=new Date(now);max.setDate(max.getDate()+2);
-    let page=1,offers=[];
-    while(page<=20){
-      const u=`${API}/book/v1/offer/?company=${COMPANY}&only_future_strict=false&min_date=${ymd(min)}&max_date=${ymd(max)}&page_size=300&page=${page}`;
-      const r=await fetch(u,{headers:{'Accept':'application/json'}});
-      if(!r.ok)throw new Error('HTTP '+r.status);
-      const d=await r.json();offers=offers.concat(d.results||[]);
-      if(!d.next_page||!(d.results||[]).length)break;page++;
+    let offers=[];
+    for(const co of COMPANIES){
+      let page=1;
+      while(page<=10){
+        const u=`${API}/book/v1/offer/?company=${co}&only_future_strict=false&min_date=${ymd(min)}&max_date=${ymd(max)}&page_size=300&page=${page}`;
+        const r=await fetch(u,{headers:{'Accept':'application/json'}});
+        if(!r.ok)break;
+        const d=await r.json();offers=offers.concat(d.results||[]);
+        if(!d.next_page||!(d.results||[]).length)break;page++;
+      }
     }
     const byKey={};ALL.forEach(x=>byKey[lkey(x)]=x);
     let add=0;
@@ -428,7 +440,7 @@ async function majNow(){
         capacite:o.effectif||0,presents:o.validated_booking_count||0,finie:now>=ed};
       const k=lkey(row);if(!(k in byKey))add++;byKey[k]=row;});
     ALL.length=0;Object.values(byKey).forEach(x=>ALL.push(x));
-    FINIES=ALL.filter(x=>x.finie);
+    FINIES=ALL.filter(started);
     const a=selLieu.value,b=selCours.value,c=selCoach.value;
     fillSel(selLieu,ALL.map(r=>r.lieu),'Tous les studios');fillSel(selCours,ALL.map(r=>r.cours),'Tous les cours');fillSel(selCoach,ALL.map(r=>r.coach),'Tous les coachs');
     selLieu.value=a;selCours.value=b;selCoach.value=c;
@@ -445,8 +457,14 @@ render();
 
 
 def run(cfg):
-    cfg["_est"] = fetch_establishments(cfg["company"])
-    cfg["_coaches"] = fetch_coaches(cfg["company"])
+    companies = cfg.get("companies") or [cfg["company"]]
+    est, coaches, skip = {}, {}, set()
+    for co in companies:
+        names, xmbo = fetch_establishments(co)
+        est.update(names)
+        skip |= xmbo
+        coaches.update(fetch_coaches(co))
+    cfg["_companies"], cfg["_est"], cfg["_coaches"], cfg["_skip"] = companies, est, coaches, skip
     store = capture(cfg)
     best = {}
     for r in store.values():
