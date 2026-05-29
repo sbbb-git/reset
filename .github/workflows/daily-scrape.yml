@@ -2,8 +2,8 @@ name: Scrap quotidien Re-SET
 
 on:
   schedule:
-    # 05:00 UTC = ~07:00 Paris, tous les matins
-    - cron: "0 5 * * *"
+    # 04:00 UTC = 06:00 Paris (CEST), tous les matins -> chiffres de la veille
+    - cron: "0 4 * * *"
   workflow_dispatch: {}   # permet aussi de lancer a la main
 
 permissions:
