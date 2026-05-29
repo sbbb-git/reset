@@ -2,9 +2,10 @@ name: Scrap bsport (The New Me / Sanctuary)
 
 on:
   schedule:
-    # 1x/heure (06:00-23:00 Paris). bsport conserve les chiffres définitifs du
-    # passé -> pas besoin de plus ; le bouton « Mettre à jour » couvre le live.
-    - cron: "0 4-21 * * *"
+    # 2x/jour (~13h et ~23h Paris). bsport renvoie les séances passées (J-3)
+    # avec leur compte DÉFINITIF -> 1 passage/jour suffit pour l'historique
+    # complet (3 jours de marge) ; le bouton « Mettre à jour » couvre le live.
+    - cron: "0 11,21 * * *"
   workflow_dispatch: {}
 
 permissions:
