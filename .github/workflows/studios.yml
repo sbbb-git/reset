@@ -1,4 +1,4 @@
-name: Scrap Punch Studios
+name: Scrap studios Monday (Punch / Dynamo / Riise)
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: punch-scrape
+  group: studios-scrape
   cancel-in-progress: false
 
 jobs:
@@ -25,18 +25,29 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Scrap Punch (présences réelles, 4 studios)
+      - name: Scrap Punch
         run: python3 punch_scrape.py
+        continue-on-error: true
+
+      - name: Scrap Dynamo
+        run: python3 dynamo_scrape.py
+        continue-on-error: true
+
+      - name: Scrap Riise
+        run: python3 riise_scrape.py
+        continue-on-error: true
 
       - name: Commit si changement
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add punch_data.json punch_seances.csv punch.html
+          git add punch_data.json punch_seances.csv punch.html \
+                  dynamo_data.json dynamo_seances.csv dynamo.html \
+                  riise_data.json riise_seances.csv riise.html
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
-            git commit -m "Scrap Punch ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            git commit -m "Scrap studios ($(date -u +%Y-%m-%dT%H:%M)Z)"
             for i in 1 2 3 4; do
               git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
               echo "retry push $i"; sleep 5
