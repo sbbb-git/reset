@@ -60,12 +60,30 @@
   .tablewrap{max-height:600px;overflow:auto;border:1px solid var(--line);border-radius:14px;}
   .foot{color:var(--muted);font-size:12px;margin-top:18px;}
   @media(max-width:600px){header{padding:18px 14px 6px;}h1{font-size:18px;}.wrap{padding:0 12px 32px;}.kpis{grid-template-columns:1fr 1fr;gap:10px;}.kpi .v{font-size:21px;}.filters input,.filters select,.btn{font-size:15px;width:100%;}}
+  #gate{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999;padding:20px;}
+  #gate .box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 26px;max-width:340px;width:100%;text-align:center;}
+  #gate h2{margin:0 0 6px;font-size:18px;color:var(--accent2);}
+  #gate p{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  #gate input{width:100%;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:16px;text-align:center;letter-spacing:2px;}
+  #gate button{margin-top:14px;width:100%;background:var(--accent);color:#13111c;border:none;border-radius:10px;padding:12px;font-size:15px;font-weight:700;cursor:pointer;}
+  #gate .err{color:var(--red);font-size:12px;margin-top:10px;min-height:14px;}
+  #app{display:none;}
 </style>
 </head>
 <body>
+<div id="gate" style="display:none">
+  <div class="box">
+    <h2>Accès protégé</h2>
+    <p>Entre le code d'accès pour afficher le suivi.</p>
+    <input id="gcode" type="password" inputmode="numeric" placeholder="code" autocomplete="off">
+    <button id="gbtn">Déverrouiller</button>
+    <div class="err" id="gerr"></div>
+  </div>
+</div>
+<div id="app">
 <header>
   <h1>Sense-Club &middot; Suivi des séances</h1>
-  <div class="sub">généré le 29/05/2026 00:54</div>
+  <div class="sub">généré le 29/05/2026 06:25</div>
 </header>
 <div class="wrap">
   <div class="note">ℹ️ Séances de <b>5 places max</b> : <b>complet = 5 personnes</b>, et « presque complet — reste X places » = <b>5 − X présents</b>. Mindbody n'affiche pas le compte exact quand il reste beaucoup de place (statut « disponible »). Le statut est <b>figé ~10 min avant chaque séance</b> (quasi définitif). L'historique se construit jour après jour.</div>
@@ -86,8 +104,31 @@
   </div>
   <div class="foot">Source : sense-club.fr (widget Mindbody). Statut relevé près du début de chaque séance.</div>
 </div>
+</div>
 <script>
-const ALL=[{"cours": "Sense Flow Jessika", "date": "2026-05-28", "heure": "18:30", "jour": "Jeudi", "locked": true, "places_restantes": null, "releve": "2026-05-28 18:15", "statut": "disponible", "presents": null}, {"cours": "Power Sense Jessika", "date": "2026-05-28", "heure": "19:30", "jour": "Jeudi", "locked": true, "places_restantes": 1, "releve": "2026-05-28 18:15", "statut": "presque complet", "presents": 4}, {"date": "2026-05-29", "jour": "Vendredi", "heure": "08:00", "cours": "Booty Sense Kelly", "statut": "disponible", "places_restantes": null, "locked": false, "releve": "2026-05-29 00:54", "presents": null}, {"date": "2026-05-29", "jour": "Vendredi", "heure": "09:00", "cours": "Power Sense Kelly", "statut": "disponible", "places_restantes": null, "locked": false, "releve": "2026-05-29 00:54", "presents": null}, {"date": "2026-05-29", "jour": "Vendredi", "heure": "11:00", "cours": "Power Sense Liz", "statut": "disponible", "places_restantes": null, "locked": false, "releve": "2026-05-29 00:54", "presents": null}, {"date": "2026-05-29", "jour": "Vendredi", "heure": "12:00", "cours": "Booty Sense Liz", "statut": "disponible", "places_restantes": null, "locked": false, "releve": "2026-05-29 00:54", "presents": null}, {"date": "2026-05-29", "jour": "Vendredi", "heure": "13:00", "cours": "Power Sense Liz", "statut": "disponible", "places_restantes": null, "locked": false, "releve": "2026-05-29 00:54", "presents": null}, {"date": "2026-05-29", "jour": "Vendredi", "heure": "15:00", "cours": "Power Sense Alexandre - Head Coach", "statut": "disponible", "places_restantes": null, "locked": false, "releve": "2026-05-29 00:54", "presents": null}, {"date": "2026-05-29", "jour": "Vendredi", "heure": "16:00", "cours": "Booty Sense Alexandre - Head Coach", "statut": "disponible", "places_restantes": null, "locked": false, "releve": "2026-05-29 00:54", "presents": null}, {"date": "2026-05-29", "jour": "Vendredi", "heure": "17:00", "cours": "Booty Sense Alexandre - Head Coach", "statut": "disponible", "places_restantes": null, "locked": false, "releve": "2026-05-29 00:54", "presents": null}, {"date": "2026-05-29", "jour": "Vendredi", "heure": "18:00", "cours": "Power Sense Alexandre - Head Coach Afficher les détails Sense Club Rejoindre la liste d'attente 19:00 50 min Booty Sense Alexandre - Head Coach", "statut": "disponible", "places_restantes": null, "locked": false, "releve": "2026-05-29 00:54", "presents": null}, {"date": "2026-05-29", "jour": "Vendredi", "heure": "20:00", "cours": "Power Sense Alexandre - Head Coach", "statut": "disponible", "places_restantes": null, "locked": false, "releve": "2026-05-29 00:54", "presents": null}];
+const PAYLOAD={"enc": true, "s": "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", "v": "09c54c399df8eb013a657ffd004e163aeeaf7d029caf401c48a6f92e8233b377"};
+const sha=async b=>new Uint8Array(await crypto.subtle.digest('SHA-256',b));
+const hexs=u=>[...u].map(b=>b.toString(16).padStart(2,'0')).join('');
+async function decryptPayload(p,code){
+  const key0=await sha(new TextEncoder().encode(code));
+  if(hexs(await sha(key0))!==p.v) return null;
+  const cipher=Uint8Array.from(atob(p.s),c=>c.charCodeAt(0));
+  const ks=new Uint8Array(cipher.length);
+  let off=0,i=0;
+  while(off<cipher.length){
+    const buf=new Uint8Array(36);buf.set(key0,0);
+    buf[32]=(i>>>24)&255;buf[33]=(i>>>16)&255;buf[34]=(i>>>8)&255;buf[35]=i&255;
+    const blk=await sha(buf);
+    for(let j=0;j<32&&off<cipher.length;j++,off++)ks[off]=blk[j];
+    i++;
+  }
+  const out=new Uint8Array(cipher.length);
+  for(let k=0;k<cipher.length;k++)out[k]=cipher[k]^ks[k];
+  return JSON.parse(new TextDecoder().decode(out));
+}
+function boot(ALL){
+document.getElementById('gate').style.display='none';
+document.getElementById('app').style.display='';
 const DATA=ALL.filter(r=>r.locked);   // on n'affiche que les statuts figés (definitifs)
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
@@ -164,6 +205,22 @@ document.getElementById('btnExport').addEventListener('click',()=>{
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='senseclub_seances.csv';document.body.appendChild(a);a.click();a.remove();
 });
 render();
+}
+// Demarrage : donnees en clair, ou deverrouillage par code
+if(!PAYLOAD.enc){
+  boot(PAYLOAD.data);
+}else{
+  const g=document.getElementById('gate'),inp=document.getElementById('gcode'),err=document.getElementById('gerr');
+  g.style.display='flex';
+  const tryUnlock=async()=>{
+    err.textContent='';
+    const rows=await decryptPayload(PAYLOAD,inp.value.trim());
+    if(rows) boot(rows); else {err.textContent='Code incorrect';inp.value='';inp.focus();}
+  };
+  document.getElementById('gbtn').addEventListener('click',tryUnlock);
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter')tryUnlock();});
+  inp.focus();
+}
 </script>
 </body>
 </html>

@@ -20,6 +20,9 @@ import datetime as dt
 import json
 import os
 import re
+import struct
+import base64
+import hashlib
 import subprocess
 import sys
 from zoneinfo import ZoneInfo
@@ -68,15 +71,28 @@ def load_store():
     if os.path.exists(STORE):
         try:
             with open(STORE, encoding="utf-8") as f:
-                return json.load(f)
+                raw = json.load(f)
+            if isinstance(raw, dict) and raw.get("enc"):
+                code = _code()
+                if not code:
+                    sys.exit("ERREUR: stockage chiffre mais SENSE_CODE absent. "
+                             "Arret pour ne pas ecraser l'historique. "
+                             "Definis le secret SENSE_CODE.")
+                return json.loads(decrypt_text(raw, code))
+            return raw  # ancien format en clair (migre au prochain save)
         except (ValueError, OSError):
             pass
     return {}
 
 
 def save_store(store):
+    text = json.dumps(store, ensure_ascii=False, sort_keys=True)
+    code = _code()
     with open(STORE, "w", encoding="utf-8") as f:
-        json.dump(store, f, ensure_ascii=False, indent=0, sort_keys=True)
+        if code:
+            json.dump(encrypt_text(text, code), f)
+        else:
+            f.write(text)
 
 
 def capture():
@@ -139,6 +155,46 @@ def write_csv(rows, path):
     print(f"-> {path}")
 
 
+def _code():
+    return os.environ.get("SENSE_CODE", "").strip()
+
+
+def _keystream(key0, n):
+    ks = bytearray()
+    i = 0
+    while len(ks) < n:
+        ks += hashlib.sha256(key0 + struct.pack(">I", i)).digest()
+        i += 1
+    return ks[:n]
+
+
+def encrypt_text(text, code):
+    """Chiffre keystream SHA-256 (XOR), cle derivee du code.
+    Compatible avec le dechiffrement WebCrypto cote navigateur."""
+    data = text.encode("utf-8")
+    key0 = hashlib.sha256(code.encode("utf-8")).digest()
+    cipher = bytes(a ^ b for a, b in zip(data, _keystream(key0, len(data))))
+    return {"enc": True, "s": base64.b64encode(cipher).decode(),
+            "v": hashlib.sha256(key0).hexdigest()}
+
+
+def decrypt_text(obj, code):
+    key0 = hashlib.sha256(code.encode("utf-8")).digest()
+    if hashlib.sha256(key0).hexdigest() != obj.get("v"):
+        raise ValueError("SENSE_CODE ne correspond pas au stockage chiffre")
+    cipher = base64.b64decode(obj["s"])
+    return bytes(a ^ b for a, b in zip(cipher, _keystream(key0, len(cipher)))).decode("utf-8")
+
+
+def build_payload(rows):
+    """Donnees en clair, ou chiffrees si SENSE_CODE est defini (secret CI)."""
+    code = _code()
+    if not code:
+        print("  (SENSE_CODE absent : page NON protegee)", file=sys.stderr)
+        return {"enc": False, "data": rows}
+    return encrypt_text(json.dumps(rows, ensure_ascii=False), code)
+
+
 def write_html(rows, path):
     chartjs = ""
     vendor = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vendor_chartjs.min.js")
@@ -147,7 +203,7 @@ def write_html(rows, path):
             chartjs = f.read()
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
-            .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
+            .replace("__DATA__", json.dumps(build_payload(rows), ensure_ascii=False))
             .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")))
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
@@ -196,9 +252,27 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   .tablewrap{max-height:600px;overflow:auto;border:1px solid var(--line);border-radius:14px;}
   .foot{color:var(--muted);font-size:12px;margin-top:18px;}
   @media(max-width:600px){header{padding:18px 14px 6px;}h1{font-size:18px;}.wrap{padding:0 12px 32px;}.kpis{grid-template-columns:1fr 1fr;gap:10px;}.kpi .v{font-size:21px;}.filters input,.filters select,.btn{font-size:15px;width:100%;}}
+  #gate{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999;padding:20px;}
+  #gate .box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 26px;max-width:340px;width:100%;text-align:center;}
+  #gate h2{margin:0 0 6px;font-size:18px;color:var(--accent2);}
+  #gate p{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  #gate input{width:100%;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:16px;text-align:center;letter-spacing:2px;}
+  #gate button{margin-top:14px;width:100%;background:var(--accent);color:#13111c;border:none;border-radius:10px;padding:12px;font-size:15px;font-weight:700;cursor:pointer;}
+  #gate .err{color:var(--red);font-size:12px;margin-top:10px;min-height:14px;}
+  #app{display:none;}
 </style>
 </head>
 <body>
+<div id="gate" style="display:none">
+  <div class="box">
+    <h2>Accès protégé</h2>
+    <p>Entre le code d'accès pour afficher le suivi.</p>
+    <input id="gcode" type="password" inputmode="numeric" placeholder="code" autocomplete="off">
+    <button id="gbtn">Déverrouiller</button>
+    <div class="err" id="gerr"></div>
+  </div>
+</div>
+<div id="app">
 <header>
   <h1>Sense-Club &middot; Suivi des séances</h1>
   <div class="sub">généré le __GENERATED__</div>
@@ -222,8 +296,31 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   </div>
   <div class="foot">Source : sense-club.fr (widget Mindbody). Statut relevé près du début de chaque séance.</div>
 </div>
+</div>
 <script>
-const ALL=__DATA__;
+const PAYLOAD=__DATA__;
+const sha=async b=>new Uint8Array(await crypto.subtle.digest('SHA-256',b));
+const hexs=u=>[...u].map(b=>b.toString(16).padStart(2,'0')).join('');
+async function decryptPayload(p,code){
+  const key0=await sha(new TextEncoder().encode(code));
+  if(hexs(await sha(key0))!==p.v) return null;
+  const cipher=Uint8Array.from(atob(p.s),c=>c.charCodeAt(0));
+  const ks=new Uint8Array(cipher.length);
+  let off=0,i=0;
+  while(off<cipher.length){
+    const buf=new Uint8Array(36);buf.set(key0,0);
+    buf[32]=(i>>>24)&255;buf[33]=(i>>>16)&255;buf[34]=(i>>>8)&255;buf[35]=i&255;
+    const blk=await sha(buf);
+    for(let j=0;j<32&&off<cipher.length;j++,off++)ks[off]=blk[j];
+    i++;
+  }
+  const out=new Uint8Array(cipher.length);
+  for(let k=0;k<cipher.length;k++)out[k]=cipher[k]^ks[k];
+  return JSON.parse(new TextDecoder().decode(out));
+}
+function boot(ALL){
+document.getElementById('gate').style.display='none';
+document.getElementById('app').style.display='';
 const DATA=ALL.filter(r=>r.locked);   // on n'affiche que les statuts figés (definitifs)
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
@@ -300,6 +397,22 @@ document.getElementById('btnExport').addEventListener('click',()=>{
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='senseclub_seances.csv';document.body.appendChild(a);a.click();a.remove();
 });
 render();
+}
+// Demarrage : donnees en clair, ou deverrouillage par code
+if(!PAYLOAD.enc){
+  boot(PAYLOAD.data);
+}else{
+  const g=document.getElementById('gate'),inp=document.getElementById('gcode'),err=document.getElementById('gerr');
+  g.style.display='flex';
+  const tryUnlock=async()=>{
+    err.textContent='';
+    const rows=await decryptPayload(PAYLOAD,inp.value.trim());
+    if(rows) boot(rows); else {err.textContent='Code incorrect';inp.value='';inp.focus();}
+  };
+  document.getElementById('gbtn').addEventListener('click',tryUnlock);
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter')tryUnlock();});
+  inp.focus();
+}
 </script>
 </body>
 </html>"""

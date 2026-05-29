@@ -43,12 +43,14 @@ jobs:
 
       - name: Capture (fige le statut ~10 min avant chaque séance)
         run: python3 senseclub_scrape.py
+        env:
+          SENSE_CODE: ${{ secrets.SENSE_CODE }}
 
       - name: Commit si changement
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add senseclub_data.json senseclub_seances.csv senseclub.html
+          git add senseclub_data.json senseclub.html
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
