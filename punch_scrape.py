@@ -199,7 +199,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="panel">
     <h2>Chiffre d'affaires estimé</h2>
     <div style="margin:0 0 12px;color:var(--muted);font-size:13px">Prix moyen par séance
-      <input id="prix" type="number" min="0" step="0.5" value="25" style="width:90px;margin-left:8px;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:14px"> &euro; &middot; <span style="font-size:12px">CA = présents &times; prix (séances terminées, filtres appliqués)</span></div>
+      <input id="prix" type="number" min="0" step="0.5" value="20" style="width:90px;margin-left:8px;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:14px"> &euro; &middot; <span style="font-size:12px">CA = présents &times; prix (séances terminées, filtres appliqués)</span></div>
     <div class="kpis" id="caKpis" style="margin:6px 0 18px"></div>
     <canvas id="cCA"></canvas>
   </div>
