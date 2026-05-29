@@ -1,4 +1,4 @@
-name: Scrap bsport (The New Me / Sanctuary)
+name: Scrap studios live (bsport + Mariana Tek)
 
 on:
   schedule:
@@ -38,6 +38,9 @@ jobs:
       - name: Poses Studio
         run: python3 poses_scrape.py
         continue-on-error: true
+      - name: Barry's Paris (Mariana Tek)
+        run: python3 barrys_scrape.py
+        continue-on-error: true
 
       - name: Commit si changement
         run: |
@@ -46,7 +49,8 @@ jobs:
           git add thenewme_data.json thenewme_seances.csv thenewme.html \
                   lecercle_data.json lecercle_seances.csv lecercle.html \
                   spacecycle_data.json spacecycle_seances.csv spacecycle.html \
-                  poses_data.json poses_seances.csv poses.html
+                  poses_data.json poses_seances.csv poses.html \
+                  barrys_data.json barrys_seances.csv barrys.html
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
