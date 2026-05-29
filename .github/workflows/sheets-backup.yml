@@ -25,11 +25,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Dépendances
-        run: pip install gspread google-auth
-
       - name: Sauvegarde vers Google Sheets
         env:
-          GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
-          SHEET_ID: ${{ secrets.SHEET_ID }}
+          SHEET_WEBHOOK_URL: ${{ secrets.SHEET_WEBHOOK_URL }}
         run: python3 sheets_sync.py
