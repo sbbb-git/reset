@@ -121,6 +121,7 @@ def write_html(rows, cfg):
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
             .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"))
             .replace("__BRAND__", cfg["brand"])
+            .replace("__METHODE__", cfg.get("methode", ""))
             .replace("__PRICE__", str(cfg["price"]))
             .replace("__PRIXKEY__", cfg["key"] + "_prix")
             .replace("__CSVNAME__", cfg["key"] + "_seances.csv")
@@ -184,7 +185,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">généré le __GENERATED__ &middot; présences réelles (Mindbody)</div>
 </header>
 <div class="wrap">
-  <div class="note">ℹ️ Chiffres exacts issus de la billetterie : <b>présents</b> = personnes ayant assisté au cours (cours terminés), <b>réservés</b> = inscriptions (cours à venir). Les stats ci-dessous portent sur les <b>cours terminés</b>. L'historique s'accumule à chaque relevé (la plateforme n'expose qu'une fenêtre de ~7 jours).</div>
+  <div class="note">ℹ️ __METHODE__</div>
   <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>
   <div class="filters">

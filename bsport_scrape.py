@@ -178,6 +178,7 @@ def write_html(rows, cfg):
             .replace("__COACHES__", json.dumps(coa_js, ensure_ascii=False))
             .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"))
             .replace("__BRAND__", cfg["brand"])
+            .replace("__METHODE__", cfg.get("methode", ""))
             .replace("__PRICE__", str(cfg["price"]))
             .replace("__PRIXKEY__", cfg["key"] + "_prix")
             .replace("__CSVNAME__", cfg["key"] + "_seances.csv")
@@ -240,7 +241,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">généré le __GENERATED__ &middot; réservations validées (bsport)</div>
 </header>
 <div class="wrap">
-  <div class="note">ℹ️ Chiffres exacts de la billetterie : <b>présents</b> = réservations confirmées. Le décompte <b>s'arrête à la première séance pas encore commencée</b> (les séances à venir, encore vides, sont exclues). Le bouton « Mettre à jour » en bas rafraîchit en direct ; un robot capte aussi le remplissage ~5 min avant chaque séance. L'historique s'accumule jour après jour.</div>
+  <div class="note">ℹ️ __METHODE__</div>
   <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>
   <div class="filters">

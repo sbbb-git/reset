@@ -11,7 +11,7 @@
 "jour": "Mardi",
 "lieu": "Boétie",
 "presents": 39,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 39
 },
 "29759": {
@@ -26,7 +26,7 @@
 "jour": "Mardi",
 "lieu": "Boétie",
 "presents": 16,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 19
 },
 "30074": {
@@ -41,7 +41,7 @@
 "jour": "Mercredi",
 "lieu": "Boétie",
 "presents": 43,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 43
 },
 "30179": {
@@ -56,7 +56,7 @@
 "jour": "Mardi",
 "lieu": "Boétie",
 "presents": 43,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 43
 },
 "30284": {
@@ -65,14 +65,14 @@
 "cours": "DYNAMO*",
 "date": "2026-05-29",
 "fin": "13:00",
-"finie": false,
+"finie": true,
 "heure": "12:15",
 "id": "30284",
 "jour": "Vendredi",
 "lieu": "Boétie",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 40
+"presents": 43,
+"releve": "2026-05-29 13:04",
+"reserves": 43
 },
 "30388": {
 "capacite": 45,
@@ -85,9 +85,9 @@
 "id": "30388",
 "jour": "Vendredi",
 "lieu": "Boétie",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 19
+"presents": 13,
+"releve": "2026-05-29 13:04",
+"reserves": 22
 },
 "31070": {
 "capacite": 45,
@@ -101,7 +101,7 @@
 "jour": "Mercredi",
 "lieu": "Boétie",
 "presents": 33,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 38
 },
 "31595": {
@@ -116,7 +116,7 @@
 "jour": "Jeudi",
 "lieu": "Boétie",
 "presents": 27,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 27
 },
 "32330": {
@@ -131,8 +131,8 @@
 "jour": "Samedi",
 "lieu": "Boétie",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 17
+"releve": "2026-05-29 13:04",
+"reserves": 21
 },
 "32435": {
 "capacite": 45,
@@ -146,8 +146,8 @@
 "jour": "Samedi",
 "lieu": "Boétie",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 16
+"releve": "2026-05-29 13:04",
+"reserves": 19
 },
 "37344": {
 "capacite": 45,
@@ -161,7 +161,7 @@
 "jour": "Mardi",
 "lieu": "Boétie",
 "presents": 11,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 11
 },
 "44033": {
@@ -176,7 +176,7 @@
 "jour": "Vendredi",
 "lieu": "Sèvres",
 "presents": 19,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 19
 },
 "44343": {
@@ -191,7 +191,7 @@
 "jour": "Mardi",
 "lieu": "Boétie",
 "presents": 42,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 42
 },
 "45194": {
@@ -206,7 +206,7 @@
 "jour": "Mercredi",
 "lieu": "Villiers",
 "presents": 39,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 39
 },
 "48088": {
@@ -221,7 +221,7 @@
 "jour": "Mercredi",
 "lieu": "Sèvres",
 "presents": 20,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 20
 },
 "48167": {
@@ -236,7 +236,7 @@
 "jour": "Lundi",
 "lieu": "Sèvres",
 "presents": 34,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 34
 },
 "52133": {
@@ -251,7 +251,7 @@
 "jour": "Mercredi",
 "lieu": "Villiers",
 "presents": 54,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 54
 },
 "52186": {
@@ -266,7 +266,7 @@
 "jour": "Mercredi",
 "lieu": "Villiers",
 "presents": 22,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 22
 },
 "52434": {
@@ -281,7 +281,7 @@
 "jour": "Mardi",
 "lieu": "Villiers",
 "presents": 24,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 24
 },
 "52487": {
@@ -296,7 +296,7 @@
 "jour": "Mardi",
 "lieu": "Villiers",
 "presents": 12,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 14
 },
 "54417": {
@@ -311,7 +311,7 @@
 "jour": "Mardi",
 "lieu": "Lafayette",
 "presents": 35,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 35
 },
 "54470": {
@@ -326,7 +326,7 @@
 "jour": "Mercredi",
 "lieu": "Lafayette",
 "presents": 53,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 54
 },
 "54576": {
@@ -341,7 +341,7 @@
 "jour": "Mercredi",
 "lieu": "Lafayette",
 "presents": 22,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 27
 },
 "54629": {
@@ -356,7 +356,7 @@
 "jour": "Mercredi",
 "lieu": "Lafayette",
 "presents": 32,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 33
 },
 "54736": {
@@ -371,7 +371,7 @@
 "jour": "Mercredi",
 "lieu": "Lafayette",
 "presents": 38,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 38
 },
 "55065": {
@@ -386,8 +386,8 @@
 "jour": "Dimanche",
 "lieu": "Boétie",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 34
+"releve": "2026-05-29 13:04",
+"reserves": 35
 },
 "55213": {
 "capacite": 45,
@@ -401,7 +401,7 @@
 "jour": "Dimanche",
 "lieu": "Boétie",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 39
 },
 "55373": {
@@ -416,7 +416,7 @@
 "jour": "Mercredi",
 "lieu": "Lafayette",
 "presents": 17,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 19
 },
 "55531": {
@@ -431,7 +431,7 @@
 "jour": "Dimanche",
 "lieu": "Lafayette",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 7
 },
 "55584": {
@@ -446,8 +446,8 @@
 "jour": "Dimanche",
 "lieu": "Lafayette",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 7
+"releve": "2026-05-29 13:04",
+"reserves": 8
 },
 "55637": {
 "capacite": 54,
@@ -461,8 +461,8 @@
 "jour": "Dimanche",
 "lieu": "Lafayette",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 17
+"releve": "2026-05-29 13:04",
+"reserves": 21
 },
 "55690": {
 "capacite": 54,
@@ -476,7 +476,7 @@
 "jour": "Dimanche",
 "lieu": "Lafayette",
 "presents": 1,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 11
 },
 "55743": {
@@ -491,7 +491,7 @@
 "jour": "Dimanche",
 "lieu": "Lafayette",
 "presents": 1,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 9
 },
 "55819": {
@@ -506,8 +506,8 @@
 "jour": "Dimanche",
 "lieu": "Lafayette",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 19
+"releve": "2026-05-29 13:04",
+"reserves": 20
 },
 "55895": {
 "capacite": 54,
@@ -521,7 +521,7 @@
 "jour": "Dimanche",
 "lieu": "Lafayette",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 42
 },
 "55971": {
@@ -536,7 +536,7 @@
 "jour": "Samedi",
 "lieu": "Lafayette",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 13
 },
 "56047": {
@@ -551,7 +551,7 @@
 "jour": "Samedi",
 "lieu": "Lafayette",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 11
 },
 "56252": {
@@ -566,7 +566,7 @@
 "jour": "Samedi",
 "lieu": "Lafayette",
 "presents": 1,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 7
 },
 "56556": {
@@ -581,23 +581,23 @@
 "jour": "Vendredi",
 "lieu": "Lafayette",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 11
+"releve": "2026-05-29 13:04",
+"reserves": 13
 },
 "56609": {
 "capacite": 54,
-"coach": "Paloma",
+"coach": "Sam",
 "cours": "DYNAMO*",
 "date": "2026-05-29",
 "fin": "13:00",
-"finie": false,
+"finie": true,
 "heure": "12:15",
 "id": "56609",
 "jour": "Vendredi",
 "lieu": "Lafayette",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 14
+"presents": 24,
+"releve": "2026-05-29 13:04",
+"reserves": 24
 },
 "56662": {
 "capacite": 54,
@@ -610,9 +610,9 @@
 "id": "56662",
 "jour": "Vendredi",
 "lieu": "Lafayette",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 17
+"presents": 7,
+"releve": "2026-05-29 13:04",
+"reserves": 24
 },
 "56715": {
 "capacite": 54,
@@ -626,8 +626,8 @@
 "jour": "Vendredi",
 "lieu": "Lafayette",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 34
+"releve": "2026-05-29 13:04",
+"reserves": 37
 },
 "56822": {
 "capacite": 54,
@@ -641,7 +641,7 @@
 "jour": "Jeudi",
 "lieu": "Lafayette",
 "presents": 51,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 51
 },
 "56928": {
@@ -656,7 +656,7 @@
 "jour": "Jeudi",
 "lieu": "Lafayette",
 "presents": 19,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 19
 },
 "57441": {
@@ -671,7 +671,7 @@
 "jour": "Lundi",
 "lieu": "Lafayette",
 "presents": 49,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 54
 },
 "57668": {
@@ -686,7 +686,7 @@
 "jour": "Lundi",
 "lieu": "Lafayette",
 "presents": 36,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 38
 },
 "57872": {
@@ -701,7 +701,7 @@
 "jour": "Mardi",
 "lieu": "Lafayette",
 "presents": 18,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 18
 },
 "57926": {
@@ -716,7 +716,7 @@
 "jour": "Mardi",
 "lieu": "Lafayette",
 "presents": 10,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 13
 },
 "58604": {
@@ -731,8 +731,8 @@
 "jour": "Dimanche",
 "lieu": "Sèvres",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 23
+"releve": "2026-05-29 13:04",
+"reserves": 25
 },
 "58883": {
 "capacite": 40,
@@ -746,7 +746,7 @@
 "jour": "Lundi",
 "lieu": "Sèvres",
 "presents": 37,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 37
 },
 "59050": {
@@ -761,7 +761,7 @@
 "jour": "Mardi",
 "lieu": "Sèvres",
 "presents": 17,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 17
 },
 "59126": {
@@ -776,7 +776,7 @@
 "jour": "Mercredi",
 "lieu": "Sèvres",
 "presents": 38,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 38
 },
 "59179": {
@@ -785,14 +785,14 @@
 "cours": "DYNAMO*",
 "date": "2026-05-29",
 "fin": "13:00",
-"finie": false,
+"finie": true,
 "heure": "12:15",
 "id": "59179",
 "jour": "Vendredi",
 "lieu": "Sèvres",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 22
+"presents": 27,
+"releve": "2026-05-29 13:04",
+"reserves": 27
 },
 "59480": {
 "capacite": 45,
@@ -806,8 +806,8 @@
 "jour": "Vendredi",
 "lieu": "Boétie",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 18
+"releve": "2026-05-29 13:04",
+"reserves": 19
 },
 "59589": {
 "capacite": 54,
@@ -821,7 +821,7 @@
 "jour": "Jeudi",
 "lieu": "Lafayette",
 "presents": 15,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 15
 },
 "60515": {
@@ -836,7 +836,7 @@
 "jour": "Mercredi",
 "lieu": "Villiers",
 "presents": 19,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 19
 },
 "60728": {
@@ -851,7 +851,7 @@
 "jour": "Dimanche",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 13
 },
 "62383": {
@@ -866,7 +866,7 @@
 "jour": "Mardi",
 "lieu": "Villiers",
 "presents": 23,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 23
 },
 "62515": {
@@ -881,8 +881,8 @@
 "jour": "Dimanche",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 17
+"releve": "2026-05-29 13:04",
+"reserves": 19
 },
 "63447": {
 "capacite": 46,
@@ -896,7 +896,7 @@
 "jour": "Mardi",
 "lieu": "Oberkampf",
 "presents": 12,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 12
 },
 "63612": {
@@ -911,7 +911,7 @@
 "jour": "Mercredi",
 "lieu": "La Défense",
 "presents": 27,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 27
 },
 "63905": {
@@ -925,9 +925,9 @@
 "id": "63905",
 "jour": "Vendredi",
 "lieu": "La Défense",
-"presents": 1,
-"releve": "2026-05-29 09:10",
-"reserves": 32
+"presents": 37,
+"releve": "2026-05-29 13:04",
+"reserves": 37
 },
 "64308": {
 "capacite": 57,
@@ -941,7 +941,7 @@
 "jour": "Lundi",
 "lieu": "La Défense",
 "presents": 21,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 21
 },
 "64619": {
@@ -956,7 +956,7 @@
 "jour": "Mardi",
 "lieu": "La Défense",
 "presents": 32,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 32
 },
 "64830": {
@@ -971,7 +971,7 @@
 "jour": "Jeudi",
 "lieu": "La Défense",
 "presents": 24,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 27
 },
 "65375": {
@@ -986,7 +986,7 @@
 "jour": "Mercredi",
 "lieu": "Sèvres",
 "presents": 17,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 17
 },
 "65632": {
@@ -1001,8 +1001,8 @@
 "jour": "Samedi",
 "lieu": "Sèvres",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 20
+"releve": "2026-05-29 13:04",
+"reserves": 21
 },
 "65719": {
 "capacite": 40,
@@ -1016,8 +1016,8 @@
 "jour": "Samedi",
 "lieu": "Sèvres",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 20
+"releve": "2026-05-29 13:04",
+"reserves": 23
 },
 "65815": {
 "capacite": 40,
@@ -1031,8 +1031,8 @@
 "jour": "Vendredi",
 "lieu": "Sèvres",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 34
+"releve": "2026-05-29 13:04",
+"reserves": 38
 },
 "66026": {
 "capacite": 40,
@@ -1046,8 +1046,8 @@
 "jour": "Dimanche",
 "lieu": "Sèvres",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 10
+"releve": "2026-05-29 13:04",
+"reserves": 12
 },
 "66131": {
 "capacite": 40,
@@ -1061,7 +1061,7 @@
 "jour": "Dimanche",
 "lieu": "Sèvres",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 40
 },
 "66590": {
@@ -1076,8 +1076,8 @@
 "jour": "Vendredi",
 "lieu": "Sèvres",
 "presents": 1,
-"releve": "2026-05-29 09:10",
-"reserves": 18
+"releve": "2026-05-29 13:04",
+"reserves": 22
 },
 "67005": {
 "capacite": 40,
@@ -1091,7 +1091,7 @@
 "jour": "Lundi",
 "lieu": "Sèvres",
 "presents": 39,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 39
 },
 "67438": {
@@ -1106,7 +1106,7 @@
 "jour": "Mercredi",
 "lieu": "Sèvres",
 "presents": 38,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 38
 },
 "67562": {
@@ -1121,8 +1121,8 @@
 "jour": "Samedi",
 "lieu": "Boétie",
 "presents": 1,
-"releve": "2026-05-29 09:10",
-"reserves": 15
+"releve": "2026-05-29 13:04",
+"reserves": 17
 },
 "67629": {
 "capacite": 57,
@@ -1136,7 +1136,7 @@
 "jour": "Mercredi",
 "lieu": "La Défense",
 "presents": 28,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 28
 },
 "67734": {
@@ -1151,7 +1151,7 @@
 "jour": "Mercredi",
 "lieu": "La Défense",
 "presents": 13,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 13
 },
 "67898": {
@@ -1166,8 +1166,8 @@
 "jour": "Dimanche",
 "lieu": "Boétie",
 "presents": 1,
-"releve": "2026-05-29 09:10",
-"reserves": 20
+"releve": "2026-05-29 13:04",
+"reserves": 21
 },
 "67969": {
 "capacite": 40,
@@ -1181,7 +1181,7 @@
 "jour": "Jeudi",
 "lieu": "Sèvres",
 "presents": 11,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 11
 },
 "68129": {
@@ -1196,7 +1196,7 @@
 "jour": "Jeudi",
 "lieu": "Sèvres",
 "presents": 21,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 21
 },
 "68232": {
@@ -1211,8 +1211,8 @@
 "jour": "Vendredi",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 39
+"releve": "2026-05-29 13:04",
+"reserves": 43
 },
 "68283": {
 "capacite": 55,
@@ -1226,7 +1226,7 @@
 "jour": "Jeudi",
 "lieu": "Villiers",
 "presents": 19,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 19
 },
 "68339": {
@@ -1241,7 +1241,7 @@
 "jour": "Mardi",
 "lieu": "La Défense",
 "presents": 37,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 37
 },
 "68390": {
@@ -1256,7 +1256,7 @@
 "jour": "Jeudi",
 "lieu": "Sèvres",
 "presents": 23,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 23
 },
 "68758": {
@@ -1271,7 +1271,7 @@
 "jour": "Lundi",
 "lieu": "La Défense",
 "presents": 11,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 11
 },
 "68968": {
@@ -1286,7 +1286,7 @@
 "jour": "Jeudi",
 "lieu": "La Défense",
 "presents": 27,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 27
 },
 "69073": {
@@ -1301,8 +1301,8 @@
 "jour": "Samedi",
 "lieu": "Sèvres",
 "presents": 1,
-"releve": "2026-05-29 09:10",
-"reserves": 9
+"releve": "2026-05-29 13:04",
+"reserves": 10
 },
 "69178": {
 "capacite": 57,
@@ -1316,7 +1316,7 @@
 "jour": "Samedi",
 "lieu": "La Défense",
 "presents": 1,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 17
 },
 "69449": {
@@ -1331,8 +1331,8 @@
 "jour": "Dimanche",
 "lieu": "Sèvres",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 25
+"releve": "2026-05-29 13:04",
+"reserves": 23
 },
 "69552": {
 "capacite": 40,
@@ -1346,7 +1346,7 @@
 "jour": "Dimanche",
 "lieu": "Sèvres",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 4
 },
 "69660": {
@@ -1361,7 +1361,7 @@
 "jour": "Lundi",
 "lieu": "Opéra",
 "presents": 10,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 11
 },
 "69713": {
@@ -1376,7 +1376,7 @@
 "jour": "Mardi",
 "lieu": "Opéra",
 "presents": 34,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 37
 },
 "69766": {
@@ -1391,7 +1391,7 @@
 "jour": "Mercredi",
 "lieu": "Opéra",
 "presents": 6,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 12
 },
 "69818": {
@@ -1406,7 +1406,7 @@
 "jour": "Jeudi",
 "lieu": "Opéra",
 "presents": 41,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 41
 },
 "69870": {
@@ -1421,7 +1421,7 @@
 "jour": "Samedi",
 "lieu": "Opéra",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 18
 },
 "69922": {
@@ -1436,8 +1436,8 @@
 "jour": "Samedi",
 "lieu": "Opéra",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 12
+"releve": "2026-05-29 13:04",
+"reserves": 13
 },
 "69974": {
 "capacite": 43,
@@ -1451,7 +1451,7 @@
 "jour": "Samedi",
 "lieu": "Opéra",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 7
 },
 "70026": {
@@ -1466,8 +1466,8 @@
 "jour": "Dimanche",
 "lieu": "Opéra",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 12
+"releve": "2026-05-29 13:04",
+"reserves": 13
 },
 "70078": {
 "capacite": 43,
@@ -1481,7 +1481,7 @@
 "jour": "Dimanche",
 "lieu": "Opéra",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 7
 },
 "70236": {
@@ -1496,7 +1496,7 @@
 "jour": "Lundi",
 "lieu": "Opéra",
 "presents": 41,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 41
 },
 "70289": {
@@ -1511,7 +1511,7 @@
 "jour": "Mardi",
 "lieu": "Opéra",
 "presents": 38,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 38
 },
 "70342": {
@@ -1526,7 +1526,7 @@
 "jour": "Mardi",
 "lieu": "Opéra",
 "presents": 38,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 38
 },
 "70552": {
@@ -1541,7 +1541,7 @@
 "jour": "Mercredi",
 "lieu": "Opéra",
 "presents": 1,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 18
 },
 "70604": {
@@ -1556,7 +1556,7 @@
 "jour": "Mercredi",
 "lieu": "Opéra",
 "presents": 27,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 27
 },
 "70656": {
@@ -1571,7 +1571,7 @@
 "jour": "Jeudi",
 "lieu": "Opéra",
 "presents": 21,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 21
 },
 "70708": {
@@ -1586,7 +1586,7 @@
 "jour": "Jeudi",
 "lieu": "Opéra",
 "presents": 41,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 42
 },
 "70760": {
@@ -1601,7 +1601,7 @@
 "jour": "Jeudi",
 "lieu": "Opéra",
 "presents": 26,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 31
 },
 "70812": {
@@ -1616,7 +1616,7 @@
 "jour": "Vendredi",
 "lieu": "Opéra",
 "presents": 18,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 19
 },
 "70864": {
@@ -1625,14 +1625,14 @@
 "cours": "DYNAMO*",
 "date": "2026-05-29",
 "fin": "13:00",
-"finie": false,
+"finie": true,
 "heure": "12:15",
 "id": "70864",
 "jour": "Vendredi",
 "lieu": "Opéra",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 24
+"presents": 30,
+"releve": "2026-05-29 13:04",
+"reserves": 30
 },
 "70968": {
 "capacite": 43,
@@ -1646,8 +1646,8 @@
 "jour": "Vendredi",
 "lieu": "Opéra",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 7
+"releve": "2026-05-29 13:04",
+"reserves": 9
 },
 "71073": {
 "capacite": 43,
@@ -1661,7 +1661,7 @@
 "jour": "Jeudi",
 "lieu": "Opéra",
 "presents": 16,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 17
 },
 "71126": {
@@ -1676,7 +1676,7 @@
 "jour": "Mardi",
 "lieu": "Opéra",
 "presents": 38,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 43
 },
 "71179": {
@@ -1691,8 +1691,8 @@
 "jour": "Vendredi",
 "lieu": "Opéra",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 40
+"releve": "2026-05-29 13:04",
+"reserves": 41
 },
 "71231": {
 "capacite": 43,
@@ -1706,8 +1706,8 @@
 "jour": "Samedi",
 "lieu": "Opéra",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 10
+"releve": "2026-05-29 13:04",
+"reserves": 11
 },
 "71335": {
 "capacite": 43,
@@ -1721,7 +1721,7 @@
 "jour": "Jeudi",
 "lieu": "Opéra",
 "presents": 27,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 27
 },
 "71858": {
@@ -1736,7 +1736,7 @@
 "jour": "Mardi",
 "lieu": "Boétie",
 "presents": 15,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 20
 },
 "71962": {
@@ -1751,7 +1751,7 @@
 "jour": "Mercredi",
 "lieu": "Boétie",
 "presents": 19,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 19
 },
 "72014": {
@@ -1766,7 +1766,7 @@
 "jour": "Lundi",
 "lieu": "Boétie",
 "presents": 28,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 28
 },
 "72066": {
@@ -1781,7 +1781,7 @@
 "jour": "Jeudi",
 "lieu": "Boétie",
 "presents": 25,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 25
 },
 "72160": {
@@ -1796,7 +1796,7 @@
 "jour": "Mercredi",
 "lieu": "Boétie",
 "presents": 17,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 17
 },
 "72200": {
@@ -1811,7 +1811,7 @@
 "jour": "Mercredi",
 "lieu": "Boétie",
 "presents": 20,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 21
 },
 "72240": {
@@ -1826,7 +1826,7 @@
 "jour": "Jeudi",
 "lieu": "Boétie",
 "presents": 29,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 29
 },
 "72276": {
@@ -1841,7 +1841,7 @@
 "jour": "Jeudi",
 "lieu": "Boétie",
 "presents": 32,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 32
 },
 "72913": {
@@ -1856,8 +1856,8 @@
 "jour": "Dimanche",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 8
+"releve": "2026-05-29 13:04",
+"reserves": 7
 },
 "73080": {
 "capacite": 54,
@@ -1871,7 +1871,7 @@
 "jour": "Mardi",
 "lieu": "Lafayette",
 "presents": 25,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 25
 },
 "73145": {
@@ -1885,9 +1885,9 @@
 "id": "73145",
 "jour": "Vendredi",
 "lieu": "Sèvres",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 11
+"presents": 9,
+"releve": "2026-05-29 13:04",
+"reserves": 21
 },
 "73370": {
 "capacite": 54,
@@ -1901,7 +1901,7 @@
 "jour": "Jeudi",
 "lieu": "Lafayette",
 "presents": 22,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 22
 },
 "73525": {
@@ -1916,7 +1916,7 @@
 "jour": "Dimanche",
 "lieu": "Sèvres",
 "presents": 1,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 7
 },
 "73845": {
@@ -1931,8 +1931,8 @@
 "jour": "Dimanche",
 "lieu": "Boulogne",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 8
+"releve": "2026-05-29 13:04",
+"reserves": 13
 },
 "73947": {
 "capacite": 55,
@@ -1946,7 +1946,7 @@
 "jour": "Dimanche",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 2
 },
 "73992": {
@@ -1961,7 +1961,7 @@
 "jour": "Mercredi",
 "lieu": "Villiers",
 "presents": 34,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 34
 },
 "74038": {
@@ -1976,8 +1976,8 @@
 "jour": "Dimanche",
 "lieu": "La Défense",
 "presents": 1,
-"releve": "2026-05-29 09:10",
-"reserves": 23
+"releve": "2026-05-29 13:04",
+"reserves": 24
 },
 "74143": {
 "capacite": 57,
@@ -1991,8 +1991,8 @@
 "jour": "Dimanche",
 "lieu": "La Défense",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 16
+"releve": "2026-05-29 13:04",
+"reserves": 17
 },
 "74248": {
 "capacite": 54,
@@ -2006,8 +2006,8 @@
 "jour": "Vendredi",
 "lieu": "Lafayette",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 17
+"releve": "2026-05-29 13:04",
+"reserves": 21
 },
 "74301": {
 "capacite": 54,
@@ -2021,7 +2021,7 @@
 "jour": "Vendredi",
 "lieu": "Lafayette",
 "presents": 13,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 14
 },
 "74355": {
@@ -2036,7 +2036,7 @@
 "jour": "Dimanche",
 "lieu": "Boétie",
 "presents": 1,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 8
 },
 "74482": {
@@ -2051,7 +2051,7 @@
 "jour": "Mercredi",
 "lieu": "Sèvres",
 "presents": 15,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 15
 },
 "74584": {
@@ -2066,7 +2066,7 @@
 "jour": "Mardi",
 "lieu": "Sèvres",
 "presents": 6,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 6
 },
 "74780": {
@@ -2081,7 +2081,7 @@
 "jour": "Jeudi",
 "lieu": "Villiers",
 "presents": 11,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 11
 },
 "74832": {
@@ -2095,9 +2095,9 @@
 "id": "74832",
 "jour": "Vendredi",
 "lieu": "Boulogne",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 14
+"presents": 18,
+"releve": "2026-05-29 13:04",
+"reserves": 21
 },
 "74886": {
 "capacite": 55,
@@ -2111,7 +2111,7 @@
 "jour": "Dimanche",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 2
 },
 "74944": {
@@ -2126,7 +2126,7 @@
 "jour": "Mardi",
 "lieu": "Oberkampf",
 "presents": 21,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 21
 },
 "74997": {
@@ -2141,8 +2141,8 @@
 "jour": "Dimanche",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 7
+"releve": "2026-05-29 13:04",
+"reserves": 6
 },
 "75272": {
 "capacite": 54,
@@ -2156,7 +2156,7 @@
 "jour": "Mardi",
 "lieu": "Boulogne",
 "presents": 30,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 30
 },
 "75340": {
@@ -2171,7 +2171,7 @@
 "jour": "Mercredi",
 "lieu": "Opéra",
 "presents": 28,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 29
 },
 "75448": {
@@ -2186,7 +2186,7 @@
 "jour": "Lundi",
 "lieu": "Villiers",
 "presents": 47,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 48
 },
 "75501": {
@@ -2201,7 +2201,7 @@
 "jour": "Lundi",
 "lieu": "Villiers",
 "presents": 53,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 53
 },
 "75554": {
@@ -2216,7 +2216,7 @@
 "jour": "Mardi",
 "lieu": "Villiers",
 "presents": 12,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 12
 },
 "75609": {
@@ -2231,7 +2231,7 @@
 "jour": "Mardi",
 "lieu": "Villiers",
 "presents": 54,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 56
 },
 "75660": {
@@ -2246,7 +2246,7 @@
 "jour": "Mardi",
 "lieu": "Villiers",
 "presents": 33,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 33
 },
 "75713": {
@@ -2261,7 +2261,7 @@
 "jour": "Mercredi",
 "lieu": "Villiers",
 "presents": 31,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 31
 },
 "75768": {
@@ -2276,7 +2276,7 @@
 "jour": "Jeudi",
 "lieu": "Villiers",
 "presents": 22,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 22
 },
 "75819": {
@@ -2291,7 +2291,7 @@
 "jour": "Jeudi",
 "lieu": "Villiers",
 "presents": 48,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 48
 },
 "75872": {
@@ -2306,7 +2306,7 @@
 "jour": "Jeudi",
 "lieu": "Villiers",
 "presents": 17,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 17
 },
 "75925": {
@@ -2321,7 +2321,7 @@
 "jour": "Jeudi",
 "lieu": "Villiers",
 "presents": 25,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 25
 },
 "76031": {
@@ -2330,14 +2330,14 @@
 "cours": "DYNAMO*",
 "date": "2026-05-29",
 "fin": "13:00",
-"finie": false,
+"finie": true,
 "heure": "12:15",
 "id": "76031",
 "jour": "Vendredi",
 "lieu": "Villiers",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 55
+"presents": 51,
+"releve": "2026-05-29 13:04",
+"reserves": 51
 },
 "76084": {
 "capacite": 55,
@@ -2350,9 +2350,9 @@
 "id": "76084",
 "jour": "Vendredi",
 "lieu": "Villiers",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 16
+"presents": 6,
+"releve": "2026-05-29 13:04",
+"reserves": 20
 },
 "76298": {
 "capacite": 55,
@@ -2366,7 +2366,7 @@
 "jour": "Samedi",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 55
 },
 "76351": {
@@ -2381,8 +2381,8 @@
 "jour": "Samedi",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 29
+"releve": "2026-05-29 13:04",
+"reserves": 30
 },
 "76404": {
 "capacite": 55,
@@ -2396,7 +2396,7 @@
 "jour": "Samedi",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 8
 },
 "76785": {
@@ -2411,7 +2411,7 @@
 "jour": "Mardi",
 "lieu": "Oberkampf",
 "presents": 17,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 17
 },
 "76824": {
@@ -2426,7 +2426,7 @@
 "jour": "Mardi",
 "lieu": "Oberkampf",
 "presents": 12,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 12
 },
 "76863": {
@@ -2441,7 +2441,7 @@
 "jour": "Mardi",
 "lieu": "Oberkampf",
 "presents": 10,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 10
 },
 "76902": {
@@ -2456,7 +2456,7 @@
 "jour": "Mardi",
 "lieu": "Oberkampf",
 "presents": 28,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 28
 },
 "77740": {
@@ -2471,7 +2471,7 @@
 "jour": "Mercredi",
 "lieu": "Oberkampf",
 "presents": 11,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 11
 },
 "77854": {
@@ -2486,7 +2486,7 @@
 "jour": "Mercredi",
 "lieu": "Oberkampf",
 "presents": 20,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 20
 },
 "77892": {
@@ -2501,7 +2501,7 @@
 "jour": "Mercredi",
 "lieu": "Oberkampf",
 "presents": 14,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 14
 },
 "77968": {
@@ -2516,7 +2516,7 @@
 "jour": "Mercredi",
 "lieu": "Oberkampf",
 "presents": 39,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 39
 },
 "78021": {
@@ -2531,7 +2531,7 @@
 "jour": "Jeudi",
 "lieu": "Oberkampf",
 "presents": 27,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 27
 },
 "78059": {
@@ -2546,7 +2546,7 @@
 "jour": "Jeudi",
 "lieu": "Oberkampf",
 "presents": 30,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 30
 },
 "78211": {
@@ -2561,7 +2561,7 @@
 "jour": "Jeudi",
 "lieu": "Oberkampf",
 "presents": 20,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 21
 },
 "78249": {
@@ -2576,7 +2576,7 @@
 "jour": "Vendredi",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 13
 },
 "78302": {
@@ -2591,7 +2591,7 @@
 "jour": "Vendredi",
 "lieu": "Oberkampf",
 "presents": 26,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 26
 },
 "78340": {
@@ -2600,14 +2600,14 @@
 "cours": "DYNAMO*",
 "date": "2026-05-29",
 "fin": "13:00",
-"finie": false,
+"finie": true,
 "heure": "12:15",
 "id": "78340",
 "jour": "Vendredi",
 "lieu": "Oberkampf",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 46
+"presents": 42,
+"releve": "2026-05-29 13:04",
+"reserves": 44
 },
 "78378": {
 "capacite": 46,
@@ -2620,9 +2620,9 @@
 "id": "78378",
 "jour": "Vendredi",
 "lieu": "Oberkampf",
-"presents": 1,
-"releve": "2026-05-29 09:10",
-"reserves": 12
+"presents": 4,
+"releve": "2026-05-29 13:04",
+"reserves": 15
 },
 "78416": {
 "capacite": 46,
@@ -2636,8 +2636,8 @@
 "jour": "Vendredi",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 9
+"releve": "2026-05-29 13:04",
+"reserves": 15
 },
 "78454": {
 "capacite": 46,
@@ -2651,8 +2651,8 @@
 "jour": "Samedi",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 11
+"releve": "2026-05-29 13:04",
+"reserves": 13
 },
 "78492": {
 "capacite": 46,
@@ -2666,8 +2666,8 @@
 "jour": "Samedi",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 24
+"releve": "2026-05-29 13:04",
+"reserves": 26
 },
 "78530": {
 "capacite": 46,
@@ -2681,7 +2681,7 @@
 "jour": "Samedi",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 22
 },
 "78568": {
@@ -2696,7 +2696,7 @@
 "jour": "Samedi",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 10
 },
 "78606": {
@@ -2711,8 +2711,8 @@
 "jour": "Samedi",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 8
+"releve": "2026-05-29 13:04",
+"reserves": 9
 },
 "78644": {
 "capacite": 46,
@@ -2726,8 +2726,8 @@
 "jour": "Dimanche",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 27
+"releve": "2026-05-29 13:04",
+"reserves": 28
 },
 "78682": {
 "capacite": 46,
@@ -2741,8 +2741,8 @@
 "jour": "Dimanche",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 11
+"releve": "2026-05-29 13:04",
+"reserves": 12
 },
 "78720": {
 "capacite": 46,
@@ -2756,8 +2756,8 @@
 "jour": "Dimanche",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 26
+"releve": "2026-05-29 13:04",
+"reserves": 25
 },
 "78758": {
 "capacite": 46,
@@ -2771,8 +2771,8 @@
 "jour": "Dimanche",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 13
+"releve": "2026-05-29 13:04",
+"reserves": 14
 },
 "78904": {
 "capacite": 55,
@@ -2786,7 +2786,7 @@
 "jour": "Vendredi",
 "lieu": "Villiers",
 "presents": 25,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 25
 },
 "78960": {
@@ -2801,7 +2801,7 @@
 "jour": "Mardi",
 "lieu": "Opéra",
 "presents": 11,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 11
 },
 "79089": {
@@ -2816,7 +2816,7 @@
 "jour": "Mercredi",
 "lieu": "Boétie",
 "presents": 23,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 24
 },
 "79144": {
@@ -2831,7 +2831,7 @@
 "jour": "Samedi",
 "lieu": "Boétie",
 "presents": 1,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 14
 },
 "79244": {
@@ -2846,8 +2846,8 @@
 "jour": "Dimanche",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 18
+"releve": "2026-05-29 13:04",
+"reserves": 19
 },
 "79342": {
 "capacite": 45,
@@ -2861,7 +2861,7 @@
 "jour": "Jeudi",
 "lieu": "Boétie",
 "presents": 19,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 19
 },
 "79390": {
@@ -2876,7 +2876,7 @@
 "jour": "Lundi",
 "lieu": "Oberkampf",
 "presents": 16,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 16
 },
 "79391": {
@@ -2891,7 +2891,7 @@
 "jour": "Lundi",
 "lieu": "Oberkampf",
 "presents": 31,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 31
 },
 "79400": {
@@ -2906,7 +2906,7 @@
 "jour": "Lundi",
 "lieu": "Oberkampf",
 "presents": 42,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 42
 },
 "79471": {
@@ -2921,7 +2921,7 @@
 "jour": "Dimanche",
 "lieu": "Opéra",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 14
 },
 "79507": {
@@ -2936,7 +2936,7 @@
 "jour": "Vendredi",
 "lieu": "Boétie",
 "presents": 28,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 28
 },
 "79563": {
@@ -2951,7 +2951,7 @@
 "jour": "Lundi",
 "lieu": "Opéra",
 "presents": 43,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 43
 },
 "79570": {
@@ -2966,8 +2966,8 @@
 "jour": "Samedi",
 "lieu": "Sèvres",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 40
+"releve": "2026-05-29 13:04",
+"reserves": 39
 },
 "79663": {
 "capacite": 40,
@@ -2981,8 +2981,8 @@
 "jour": "Samedi",
 "lieu": "Sèvres",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 15
+"releve": "2026-05-29 13:04",
+"reserves": 19
 },
 "79719": {
 "capacite": 55,
@@ -2996,8 +2996,8 @@
 "jour": "Dimanche",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 50
+"releve": "2026-05-29 13:04",
+"reserves": 52
 },
 "79772": {
 "capacite": 55,
@@ -3011,7 +3011,7 @@
 "jour": "Lundi",
 "lieu": "Villiers",
 "presents": 36,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 36
 },
 "79778": {
@@ -3026,7 +3026,7 @@
 "jour": "Mardi",
 "lieu": "Sèvres",
 "presents": 21,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 21
 },
 "79854": {
@@ -3041,7 +3041,7 @@
 "jour": "Mardi",
 "lieu": "Sèvres",
 "presents": 17,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 17
 },
 "80101": {
@@ -3056,7 +3056,7 @@
 "jour": "Lundi",
 "lieu": "Boulogne",
 "presents": 47,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 47
 },
 "80154": {
@@ -3071,7 +3071,7 @@
 "jour": "Lundi",
 "lieu": "Boulogne",
 "presents": 50,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 50
 },
 "80313": {
@@ -3086,7 +3086,7 @@
 "jour": "Mercredi",
 "lieu": "Boulogne",
 "presents": 34,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 34
 },
 "80366": {
@@ -3101,7 +3101,7 @@
 "jour": "Mercredi",
 "lieu": "Boulogne",
 "presents": 37,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 37
 },
 "80473": {
@@ -3116,7 +3116,7 @@
 "jour": "Jeudi",
 "lieu": "Boulogne",
 "presents": 33,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 33
 },
 "80526": {
@@ -3131,7 +3131,7 @@
 "jour": "Jeudi",
 "lieu": "Boulogne",
 "presents": 18,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 19
 },
 "80582": {
@@ -3146,7 +3146,7 @@
 "jour": "Vendredi",
 "lieu": "Boulogne",
 "presents": 32,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 32
 },
 "80689": {
@@ -3161,8 +3161,8 @@
 "jour": "Samedi",
 "lieu": "Boulogne",
 "presents": 2,
-"releve": "2026-05-29 09:10",
-"reserves": 18
+"releve": "2026-05-29 13:04",
+"reserves": 17
 },
 "80742": {
 "capacite": 54,
@@ -3176,7 +3176,7 @@
 "jour": "Samedi",
 "lieu": "Boulogne",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 19
 },
 "80848": {
@@ -3206,7 +3206,7 @@
 "jour": "Mardi",
 "lieu": "Boulogne",
 "presents": 35,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 36
 },
 "81119": {
@@ -3221,7 +3221,7 @@
 "jour": "Mercredi",
 "lieu": "Boulogne",
 "presents": 30,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 30
 },
 "81172": {
@@ -3236,8 +3236,8 @@
 "jour": "Vendredi",
 "lieu": "Boulogne",
 "presents": 1,
-"releve": "2026-05-29 09:10",
-"reserves": 14
+"releve": "2026-05-29 13:04",
+"reserves": 15
 },
 "81225": {
 "capacite": 54,
@@ -3251,8 +3251,8 @@
 "jour": "Dimanche",
 "lieu": "Boulogne",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 27
+"releve": "2026-05-29 13:04",
+"reserves": 26
 },
 "81479": {
 "capacite": 57,
@@ -3266,7 +3266,7 @@
 "jour": "Mardi",
 "lieu": "La Défense",
 "presents": 40,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 40
 },
 "81492": {
@@ -3281,7 +3281,7 @@
 "jour": "Lundi",
 "lieu": "Boétie",
 "presents": 44,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 44
 },
 "81497": {
@@ -3296,7 +3296,7 @@
 "jour": "Mardi",
 "lieu": "Sèvres",
 "presents": 39,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 39
 },
 "81584": {
@@ -3311,7 +3311,7 @@
 "jour": "Mardi",
 "lieu": "Sèvres",
 "presents": 21,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 21
 },
 "81670": {
@@ -3326,7 +3326,7 @@
 "jour": "Jeudi",
 "lieu": "Sèvres",
 "presents": 21,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 21
 },
 "81866": {
@@ -3341,7 +3341,7 @@
 "jour": "Jeudi",
 "lieu": "Oberkampf",
 "presents": 37,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 37
 },
 "81905": {
@@ -3356,7 +3356,7 @@
 "jour": "Mardi",
 "lieu": "Oberkampf",
 "presents": 38,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 38
 },
 "82012": {
@@ -3371,7 +3371,7 @@
 "jour": "Mercredi",
 "lieu": "Lafayette",
 "presents": 15,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 15
 },
 "82024": {
@@ -3386,7 +3386,7 @@
 "jour": "Jeudi",
 "lieu": "Oberkampf",
 "presents": 16,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 16
 },
 "82057": {
@@ -3401,8 +3401,8 @@
 "jour": "Samedi",
 "lieu": "Monday Event",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 14
+"releve": "2026-05-29 13:04",
+"reserves": 13
 },
 "82065": {
 "capacite": 54,
@@ -3416,7 +3416,7 @@
 "jour": "Lundi",
 "lieu": "Lafayette",
 "presents": 39,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 39
 },
 "82069": {
@@ -3431,7 +3431,7 @@
 "jour": "Mercredi",
 "lieu": "Oberkampf",
 "presents": 33,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 33
 },
 "82170": {
@@ -3446,7 +3446,7 @@
 "jour": "Dimanche",
 "lieu": "Oberkampf",
 "presents": 0,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 6
 },
 "82172": {
@@ -3461,7 +3461,7 @@
 "jour": "Mardi",
 "lieu": "Boulogne",
 "presents": 17,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 18
 },
 "82281": {
@@ -3475,9 +3475,9 @@
 "id": "82281",
 "jour": "Samedi",
 "lieu": "Lafayette",
-"presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 21
+"presents": 3,
+"releve": "2026-05-29 13:04",
+"reserves": 25
 },
 "82282": {
 "capacite": 54,
@@ -3491,7 +3491,7 @@
 "jour": "Mardi",
 "lieu": "Lafayette",
 "presents": 50,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 50
 },
 "82285": {
@@ -3506,7 +3506,7 @@
 "jour": "Mercredi",
 "lieu": "Sèvres",
 "presents": 14,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 14
 },
 "82361": {
@@ -3521,7 +3521,7 @@
 "jour": "Jeudi",
 "lieu": "La Défense",
 "presents": 29,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 29
 },
 "82368": {
@@ -3536,7 +3536,7 @@
 "jour": "Lundi",
 "lieu": "Villiers",
 "presents": 55,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 55
 },
 "82369": {
@@ -3551,7 +3551,7 @@
 "jour": "Mercredi",
 "lieu": "Oberkampf",
 "presents": 16,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 16
 },
 "82370": {
@@ -3566,7 +3566,7 @@
 "jour": "Lundi",
 "lieu": "Boétie",
 "presents": 15,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 15
 },
 "82371": {
@@ -3581,8 +3581,8 @@
 "jour": "Samedi",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 13
+"releve": "2026-05-29 13:04",
+"reserves": 18
 },
 "82424": {
 "capacite": 55,
@@ -3596,8 +3596,8 @@
 "jour": "Samedi",
 "lieu": "Villiers",
 "presents": 0,
-"releve": "2026-05-29 09:10",
-"reserves": 12
+"releve": "2026-05-29 13:04",
+"reserves": 14
 },
 "82635": {
 "capacite": 45,
@@ -3626,7 +3626,7 @@
 "jour": "Jeudi",
 "lieu": "Boétie",
 "presents": 18,
-"releve": "2026-05-29 09:10",
+"releve": "2026-05-29 13:04",
 "reserves": 22
 }
 }
