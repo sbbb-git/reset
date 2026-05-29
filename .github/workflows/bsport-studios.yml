@@ -1,0 +1,58 @@
+name: Scrap bsport (The New Me / Sanctuary)
+
+on:
+  schedule:
+    # toutes les 5 min de 04:00 à 21:00 UTC (~06:00-23:00 Paris) : fige le
+    # remplissage ~5 min avant chaque séance et accumule l'historique
+    - cron: "*/5 4-21 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bsport-studios
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: The New Me
+        run: python3 thenewme_scrape.py
+        continue-on-error: true
+      - name: Le Cercle Boxing
+        run: python3 lecercle_scrape.py
+        continue-on-error: true
+      - name: Space Cycle
+        run: python3 spacecycle_scrape.py
+        continue-on-error: true
+      - name: Poses Studio
+        run: python3 poses_scrape.py
+        continue-on-error: true
+
+      - name: Commit si changement
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add thenewme_data.json thenewme_seances.csv thenewme.html \
+                  lecercle_data.json lecercle_seances.csv lecercle.html \
+                  spacecycle_data.json spacecycle_seances.csv spacecycle.html \
+                  poses_data.json poses_seances.csv poses.html
+          if git diff --cached --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "Scrap bsport studios ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            for i in 1 2 3 4; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              echo "retry push $i"; sleep 5
+            done
+          fi
