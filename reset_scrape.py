@@ -5,7 +5,7 @@ Recupere, jour par jour et seance par seance, le nombre de personnes
 presentes / la capacite de chaque seance, et genere :
   - reset_seances.csv   (donnees brutes)
   - reset_seances.xlsx  (Excel mis en forme)
-  - index.html          (dashboard autonome, avec bouton de mise a jour)
+  - reset.html          (dashboard autonome, avec bouton de mise a jour)
 
 Relancer le script reactualise tout. Le dashboard publie peut aussi se
 mettre a jour tout seul (bouton "Mettre a jour") en appelant directement
@@ -657,7 +657,7 @@ def main():
     ap.add_argument("--end", default=None, help="date de fin AAAA-MM-JJ (defaut: hier)")
     ap.add_argument("--csv", default="reset_seances.csv", help="fichier CSV de sortie")
     ap.add_argument("--xlsx", default="reset_seances.xlsx", help="fichier Excel de sortie")
-    ap.add_argument("--html", default="index.html", help="dashboard HTML de sortie")
+    ap.add_argument("--html", default="reset.html", help="dashboard HTML de sortie")
     args = ap.parse_args()
 
     start = dt.date.fromisoformat(args.start)

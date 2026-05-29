@@ -213,6 +213,7 @@ const fillColor=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
 function fmtJ(iso){const p=iso.split('-');return `${p[2]}/${p[1]}/${p[0]}`;}
 Chart.defaults.color='#97a1c8';Chart.defaults.borderColor='#2a3358';Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
 let charts={};
+const isNarrow=()=>matchMedia('(max-width:600px)').matches;
 
 const FINIES=ALL.filter(r=>r.finie);   // stats sur les cours terminés (présence réelle)
 const selLieu=document.getElementById('fLieu'),selCours=document.getElementById('fCours'),selCoach=document.getElementById('fCoach');
@@ -257,7 +258,7 @@ function render(){
   const lieux=Object.keys(byL).sort((a,b)=>byL[b]-byL[a]);
   mkChart('cLieu',{type:'doughnut',data:{labels:lieux,datasets:[{data:lieux.map(l=>byL[l]),
     backgroundColor:['#263fff','#6f82ff','#5fcf8a','#e6c14d','#e07a6f']}]},
-    options:{plugins:{legend:{position:'right'}}}});
+    options:{plugins:{legend:{position:isNarrow()?'bottom':'right'}}}});
 
   // présents par type de cours
   const byC={};D.forEach(r=>byC[r.cours]=(byC[r.cours]||0)+r.presents);
@@ -318,7 +319,7 @@ def main():
     for r in rows:
         r["noshow"] = max(0, (r.get("reserves") or 0) - (r.get("presents") or 0))
     write_csv(rows, "punch_seances.csv")
-    write_html(rows, "punch-c51992ff8b.html")
+    write_html(rows, "punch.html")
     fin = [r for r in rows if r.get("finie")]
     print(f"OK: {len(rows)} cours en base, {len(fin)} terminés (présence réelle).")
 

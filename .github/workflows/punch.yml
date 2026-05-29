@@ -32,7 +32,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add punch_data.json punch_seances.csv punch-c51992ff8b.html
+          git add punch_data.json punch_seances.csv punch.html
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
