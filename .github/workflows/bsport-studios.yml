@@ -1,10 +1,10 @@
-name: Scrap studios live (bsport + Mariana Tek)
+name: Scrap bsport (The New Me / Sanctuary)
 
 on:
   schedule:
-    # toutes les 5 min de 04:00 à 21:00 UTC (~06:00-23:00 Paris) : fige le
-    # remplissage ~5 min avant chaque séance et accumule l'historique
-    - cron: "*/5 4-21 * * *"
+    # 1x/heure (06:00-23:00 Paris). bsport conserve les chiffres définitifs du
+    # passé -> pas besoin de plus ; le bouton « Mettre à jour » couvre le live.
+    - cron: "0 4-21 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: bsport-studios
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   scrape:
@@ -38,15 +38,6 @@ jobs:
       - name: Poses Studio
         run: python3 poses_scrape.py
         continue-on-error: true
-      - name: Barry's Paris (Mariana Tek)
-        run: python3 barrys_scrape.py
-        continue-on-error: true
-      - name: Episod (resamania / plan de salle)
-        run: python3 episod_scrape.py
-        continue-on-error: true
-      - name: Anybuddy Trinquet Village (occupation terrains)
-        run: python3 anybuddy_scrape.py
-        continue-on-error: true
 
       - name: Commit si changement
         run: |
@@ -55,14 +46,11 @@ jobs:
           git add thenewme_data.json thenewme_seances.csv thenewme.html \
                   lecercle_data.json lecercle_seances.csv lecercle.html \
                   spacecycle_data.json spacecycle_seances.csv spacecycle.html \
-                  poses_data.json poses_seances.csv poses.html \
-                  barrys_data.json barrys_seances.csv barrys.html \
-                  episod_data.json episod_seances.csv episod.html \
-                  anybuddy_data.json anybuddy_creneaux.csv anybuddy.html
+                  poses_data.json poses_seances.csv poses.html
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
-            git commit -m "Scrap bsport studios ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            git commit -m "Scrap bsport ($(date -u +%Y-%m-%dT%H:%M)Z)"
             for i in 1 2 3 4; do
               git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
               echo "retry push $i"; sleep 5

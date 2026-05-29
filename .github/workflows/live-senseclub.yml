@@ -2,8 +2,8 @@ name: Capture live (Sense-Club + Burning Bar)
 
 on:
   schedule:
-    # toutes les 10 min entre 04:00 et 21:00 UTC (~06:00-23:00 Paris)
-    - cron: "*/10 4-21 * * *"
+    # toutes les 15 min entre 04:00 et 21:00 UTC (~06:00-23:00 Paris)
+    - cron: "*/15 4-21 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
 
 concurrency:
   group: live-senseclub
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   capture:
