@@ -14,6 +14,7 @@ import csv
 import datetime as dt
 import json
 import os
+import safestore
 import sys
 import urllib.request
 from zoneinfo import ZoneInfo
@@ -42,18 +43,11 @@ def short_loc(name, prefix):
 
 
 def load_store(path):
-    if os.path.exists(path):
-        try:
-            with open(path, encoding="utf-8") as f:
-                return json.load(f)
-        except (ValueError, OSError):
-            pass
-    return {}
+    return safestore.load(path)
 
 
 def save_store(store, path):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(store, f, ensure_ascii=False, indent=0, sort_keys=True)
+    safestore.save(store, path)
 
 
 def capture(cfg):

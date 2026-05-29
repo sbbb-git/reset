@@ -684,8 +684,8 @@ def main():
         "cours": r.get("activite", ""), "coach": r.get("coach", ""),
         "capacite": r.get("capacite") or 0, "presents": r.get("presents") or 0,
         "finie": True} for i, r in enumerate(rows)}
-    with open("reset_data.json", "w", encoding="utf-8") as f:
-        json.dump(store, f, ensure_ascii=False)
+    import safestore
+    safestore.save(store, "reset_data.json")
     print(f"-> reset_data.json ({len(store)})")
 
     if rows:

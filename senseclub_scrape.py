@@ -19,6 +19,7 @@ import csv
 import datetime as dt
 import json
 import os
+import safestore
 import re
 import subprocess
 import sys
@@ -65,18 +66,11 @@ def normalize(brut):
 
 
 def load_store():
-    if os.path.exists(STORE):
-        try:
-            with open(STORE, encoding="utf-8") as f:
-                return json.load(f)
-        except (ValueError, OSError):
-            pass
-    return {}
+    return safestore.load(STORE)
 
 
 def save_store(store):
-    with open(STORE, "w", encoding="utf-8") as f:
-        json.dump(store, f, ensure_ascii=False, indent=0, sort_keys=True)
+    safestore.save(store, STORE)
 
 
 def capture():
