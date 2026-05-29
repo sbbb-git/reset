@@ -74,6 +74,7 @@
       <option value="7">7 derniers jours</option>
       <option value="30">30 derniers jours</option>
     </select>
+    &middot; Catégorie : <select id="cat"><option value="">Toutes</option></select>
     &middot; Classer les studios par : <select id="metric">
       <option value="taux">Taux de remplissage</option>
       <option value="moy">Présents / séance</option>
@@ -97,17 +98,17 @@
 </div>
 <script>
 const BRANDS=[
-  {key:"reset",label:"Re-SET",color:"#d98b63"},
-  {key:"punch",label:"Punch",color:"#263fff"},
-  {key:"dynamo",label:"Dynamo",color:"#faa619"},
-  {key:"riise",label:"Riise",color:"#c25a3f"},
-  {key:"thenewme",label:"The New Me",color:"#b8895e"},
-  {key:"lecercle",label:"Le Cercle",color:"#d4453a"},
-  {key:"spacecycle",label:"Space Cycle",color:"#16b3c6"},
-  {key:"poses",label:"Poses",color:"#b06a8f"},
-  {key:"barrys",label:"Barry's",color:"#e2231a"},
-  {key:"episod",label:"Episod",color:"#e8c14d"},
-  {key:"belly",label:"Belly",color:"#e0699b"},
+  {key:"reset",label:"Re-SET",color:"#d98b63",cat:"Bootcamp"},
+  {key:"punch",label:"Punch",color:"#263fff",cat:"Boxe"},
+  {key:"dynamo",label:"Dynamo",color:"#faa619",cat:"Cycling"},
+  {key:"riise",label:"Riise",color:"#c25a3f",cat:"Yoga / Wellness"},
+  {key:"thenewme",label:"The New Me",color:"#b8895e",cat:"Pilates"},
+  {key:"lecercle",label:"Le Cercle",color:"#d4453a",cat:"Boxe"},
+  {key:"spacecycle",label:"Space Cycle",color:"#16b3c6",cat:"Cycling"},
+  {key:"poses",label:"Poses",color:"#b06a8f",cat:"Pilates"},
+  {key:"barrys",label:"Barry's",color:"#e2231a",cat:"Bootcamp"},
+  {key:"episod",label:"Episod",color:"#e8c14d",cat:"Bootcamp"},
+  {key:"belly",label:"Belly",color:"#e0699b",cat:"Pilates"},
 ];
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
 const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
@@ -126,12 +127,14 @@ async function load(){
       const d=await r.json();
       const arr=Array.isArray(d)?d:Object.values(d);
       return arr.filter(x=>x.finie && (x.capacite||0)>0).map(x=>({
-        brand:b.key,label:b.label,color:b.color,
+        brand:b.key,label:b.label,color:b.color,cat:b.cat,
         lieu:(x.lieu||b.label),date:x.date||'',
         presents:x.presents||0,capacite:x.capacite||0}));
     }catch(e){return [];}
   }));
   ROWS=res.flat();
+  const sel=document.getElementById('cat');
+  [...new Set(ROWS.map(r=>r.cat))].sort().forEach(c=>sel.add(new Option(c,c)));
   document.getElementById('loadnote').style.display='none';
   document.getElementById('gen').textContent='généré le '+new Date().toLocaleString('fr-FR');
   render();
@@ -139,15 +142,15 @@ async function load(){
 
 function filtered(){
   const days=+document.getElementById('periode').value;
-  if(!days) return ROWS;
-  const lim=new Date();lim.setDate(lim.getDate()-days);
-  const s=lim.toISOString().slice(0,10);
-  return ROWS.filter(r=>r.date>=s);
+  const cat=document.getElementById('cat').value;
+  let rows=cat?ROWS.filter(r=>r.cat===cat):ROWS;
+  if(days){const lim=new Date();lim.setDate(lim.getDate()-days);const s=lim.toISOString().slice(0,10);rows=rows.filter(r=>r.date>=s);}
+  return rows;
 }
 
 function agg(rows,keyFn){
   const m={};
-  rows.forEach(r=>{const k=keyFn(r);(m[k]=m[k]||{p:0,c:0,n:0,lieux:new Set(),color:r.color,label:r.label,brand:r.label})
+  rows.forEach(r=>{const k=keyFn(r);(m[k]=m[k]||{p:0,c:0,n:0,lieux:new Set(),color:r.color,label:r.label,brand:r.label,cat:r.cat})
     ;m[k].p+=r.presents;m[k].c+=r.capacite;m[k].n++;m[k].lieux.add(r.lieu);});
   return m;
 }
@@ -156,7 +159,7 @@ function render(){
   const D=filtered();
   // classement marques (avec prix PAR MARQUE)
   const bm=agg(D,r=>r.brand);
-  let brands=Object.entries(bm).map(([k,o])=>({key:k,label:o.label,color:o.color,
+  let brands=Object.entries(bm).map(([k,o])=>({key:k,label:o.label,color:o.color,cat:o.cat||'—',
     studios:o.lieux.size,seances:o.n,pres:o.p,
     moy:o.n?o.p/o.n:0,taux:o.c?o.p/o.c:0,ca:o.p*priceOf(k)}));
   // inventaire seulement (agréger présents/taux/CA de marques différentes n'a pas de sens)
@@ -183,7 +186,7 @@ function render(){
 
 let sortKey='taux',sortDir=-1;
 function renderBrandTable(brands){
-  const cols=[['label','Marque'],['studios','Studios'],['seances','Séances'],
+  const cols=[['label','Marque'],['cat','Catégorie'],['studios','Studios'],['seances','Séances'],
     ['pres','Présents'],['moy','Moy/séance'],['taux','Remplissage'],['prix','Prix/séance'],['ca','CA estimé']];
   brands.sort((a,b)=>(a[sortKey]<b[sortKey]?1:-1)*sortDir);
   document.querySelector('#tblBrand thead').innerHTML='<tr>'+cols.map(c=>
@@ -191,6 +194,7 @@ function renderBrandTable(brands){
   const def=parseFloat(document.getElementById('prix').value)||0;
   document.querySelector('#tblBrand tbody').innerHTML=brands.map(b=>
     `<tr><td><span class="dot" style="background:${b.color}"></span>${b.label}</td>`
+    +`<td style="text-align:left;color:var(--muted)">${b.cat}</td>`
     +`<td>${b.studios}</td><td>${b.seances}</td><td>${nf(b.pres)}</td>`
     +`<td>${b.moy.toFixed(1)}</td>`
     +`<td style="color:${fill(b.taux)};font-weight:700">${Math.round(100*b.taux)}%</td>`
@@ -215,8 +219,8 @@ function renderStudios(id,list,metric){
     :'<div style="color:var(--muted)">Pas de données.</div>';
 }
 
-['prix','periode','metric'].forEach(id=>document.getElementById(id).addEventListener('input',render));
-document.getElementById('metric').addEventListener('change',render);
+['prix','periode','metric','cat'].forEach(id=>document.getElementById(id).addEventListener('input',render));
+['metric','cat','periode'].forEach(id=>document.getElementById(id).addEventListener('change',render));
 load();
 </script>
 </body>
