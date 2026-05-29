@@ -81,6 +81,7 @@ def capture(cfg):
         cd = c.get("ClassDescription") or {}
         staff = c.get("Staff") or {}
         store[cid] = {
+            "id": cid,
             "date": start[:10],
             "jour": JOURS_FR[sdt.weekday()],
             "heure": start[11:16],
@@ -103,7 +104,7 @@ def capture(cfg):
 
 def write_csv(rows, path):
     with open(path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=FIELDS)
+        w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
         w.writeheader()
         w.writerows(rows)
     print(f"-> {path}")
@@ -125,6 +126,8 @@ def write_html(rows, cfg):
             .replace("__CSVNAME__", cfg["key"] + "_seances.csv")
             .replace("__ACCENT__", cfg["accent"])
             .replace("__ACCENT2__", cfg["accent2"])
+            .replace("__PREFIX__", cfg["prefix"])
+            .replace("__API__", cfg["api"])
             .replace("__HOST__", cfg["host"]))
     with open(cfg["html"], "w", encoding="utf-8") as f:
         f.write(html)
@@ -197,6 +200,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <div class="panel"><h2>Présents par type de cours</h2><canvas id="cCours"></canvas></div>
     <div class="panel"><h2>Créneaux horaires les plus fréquentés</h2><div id="topHour" class="ranklist"></div></div>
   </div>
+  <div class="panel"><h2>Comparatif des studios &mdash; qui performe (remplissage moyen)</h2><div id="cmpStudios" class="ranklist"></div></div>
   <div class="panel"><h2>Coachs &laquo; stars &raquo; (moyenne de présents / cours)</h2><div id="topCoach" class="ranklist"></div></div>
   <div class="panel">
     <h2>Chiffre d'affaires estimé</h2>
@@ -212,10 +216,15 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     </div>
     <div class="tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
   </div>
-  <div class="foot">Source : __HOST__ (Mindbody) &middot; présences réelles.</div>
+  <div style="text-align:center;margin:24px 0 6px">
+    <button id="btnMaj" class="btn">Mettre à jour (données du jour)</button>
+    <span id="majMsg" style="color:var(--muted);font-size:12px;margin-left:10px"></span>
+  </div>
+  <div class="foot">Source : __HOST__ (Mindbody) &middot; présences réelles &middot; mise à jour auto chaque soir.</div>
 </div>
 <script>
 const ALL=__DATA__;
+const API='__API__',PREFIX='__PREFIX__';
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
 const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
@@ -227,7 +236,7 @@ const ACC=css('--accent')||'#263fff',ACC2=css('--accent2')||'#6f82ff';
 let charts={};
 const isNarrow=()=>matchMedia('(max-width:600px)').matches;
 
-const FINIES=ALL.filter(r=>r.finie);   // stats sur les cours terminés (présence réelle)
+let FINIES=ALL.filter(r=>r.finie);   // stats sur les cours terminés (présence réelle)
 const selLieu=document.getElementById('fLieu'),selCours=document.getElementById('fCours'),selCoach=document.getElementById('fCoach');
 function fillSel(sel,vals,label){sel.innerHTML='';sel.add(new Option(label,''));[...new Set(vals)].filter(Boolean).sort().forEach(v=>sel.add(new Option(v,v)));}
 fillSel(selLieu,ALL.map(r=>r.lieu),'Tous les studios');
@@ -250,8 +259,11 @@ function render(){
   const totRes=D.reduce((s,r)=>s+r.reserves,0);
   const totNo=D.reduce((s,r)=>s+(r.noshow||0),0);
   const avg=D.length?totPres/D.length:0;
+  const nbStudios=new Set(D.map(r=>r.lieu)).size||1;
   document.getElementById('kpis').innerHTML=[
     ['Présents (total)',nf(totPres)],
+    ['Studios',nf(nbStudios)],
+    ['Présents / studio',nf(totPres/nbStudios)],
     ['Séances terminées',nf(D.length)],
     ['Moyenne / séance',D.length?avg.toFixed(1):'—'],
     ['Taux de remplissage',totCap?Math.round(100*totPres/totCap)+'%':'—'],
@@ -272,6 +284,7 @@ function render(){
   const totalCA=totPres*prix;
   document.getElementById('caKpis').innerHTML=[
     ['CA total estimé',eur(totalCA)],
+    ['CA / studio (moy.)',eur(totalCA/nbStudios)],
     ['CA / jour (moy.)',eur(totalCA/nbJours)],
     ['CA / séance (moy.)',eur(D.length?totalCA/D.length:0)],
   ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
@@ -299,6 +312,13 @@ function render(){
   const mxH=hrs.length?hrs[0][1].p:0;
   document.getElementById('topHour').innerHTML=hrs.length?hrs.map(([h,o])=>
     `<div class="rk"><span class="lbl">${h}</span><span class="track"><span style="width:${mxH?Math.round(100*o.p/mxH):0}%"></span></span><span class="val">${nf(o.p)} (${nf(o.p/o.n)}/séance)</span></div>`).join('')
+    :'<div style="color:var(--muted)">Pas encore de données.</div>';
+
+  // comparatif des studios : taux de remplissage moyen + présents/séance (vert = performe, rouge = faible)
+  const byS={};D.forEach(r=>{byS[r.lieu]=byS[r.lieu]||{p:0,c:0,n:0};byS[r.lieu].p+=r.presents;byS[r.lieu].c+=r.capacite;byS[r.lieu].n++;});
+  const studios=Object.entries(byS).map(([k,o])=>[k,o.c?o.p/o.c:0,o.p/o.n,o.n]).sort((a,b)=>b[1]-a[1]);
+  document.getElementById('cmpStudios').innerHTML=studios.length?studios.map(([k,taux,moy,n])=>
+    `<div class="rk"><span class="lbl">${k}</span><span class="track"><span style="width:${Math.round(100*taux)}%;background:${fillColor(taux)}"></span></span><span class="val">${Math.round(100*taux)}% &middot; ${moy.toFixed(1)}/séance &middot; ${n} cours</span></div>`).join('')
     :'<div style="color:var(--muted)">Pas encore de données.</div>';
 
   // coachs stars (moyenne présents/cours)
@@ -329,6 +349,36 @@ function renderTable(D){
 [selLieu,selCours,selCoach].forEach(s=>s.addEventListener('change',render));
 const _sp=(()=>{try{return localStorage.getItem('__PRIXKEY__');}catch(e){return null;}})();
 if(_sp)document.getElementById('prix').value=_sp;
+
+// mise à jour live depuis l'API (CORS autorisé) : fusionne les cours du jour
+function shortLoc(n){n=(n||'').trim();if(PREFIX&&n.toLowerCase().startsWith(PREFIX.toLowerCase()))n=n.slice(PREFIX.length).trim();return n.replace(/^-+/,'').trim()||n;}
+function refreshFilters(){const a=selLieu.value,b=selCours.value,c=selCoach.value;
+  fillSel(selLieu,ALL.map(r=>r.lieu),'Tous les studios');fillSel(selCours,ALL.map(r=>r.cours),'Tous les cours');fillSel(selCoach,ALL.map(r=>r.coach),'Tous les coachs');
+  selLieu.value=a;selCours.value=b;selCoach.value=c;}
+async function majNow(){
+  const btn=document.getElementById('btnMaj'),msg=document.getElementById('majMsg'),old=btn.textContent;
+  btn.disabled=true;btn.textContent='Mise à jour…';msg.textContent='';
+  try{
+    const r=await fetch(API,{headers:{'Accept':'application/json'}});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const data=await r.json(),now=new Date();
+    const keep=ALL.filter(x=>!x.id),byId={};ALL.forEach(x=>{if(x.id)byId[x.id]=x;});
+    let add=0;
+    data.forEach(c=>{if(c.IsCanceled||!c.StartDateTime)return;
+      const s=c.StartDateTime,e=c.EndDateTime||s,id=String(c.Id),sd=new Date(s);
+      const row={id:id,date:s.slice(0,10),jour:JOURS[(sd.getDay()+6)%7],heure:s.slice(11,16),fin:e.slice(11,16),
+        lieu:shortLoc((c.Location||{}).Name),cours:((c.ClassDescription||{}).Name||'').trim(),
+        coach:((c.Staff||{}).Name||'').trim(),capacite:c.MaxCapacity||0,reserves:c.TotalBooked||0,
+        presents:c.TotalSignedIn||0,finie:now>=new Date(e)};
+      row.noshow=Math.max(0,row.reserves-row.presents);
+      if(!byId[id])add++;byId[id]=row;});
+    ALL.length=0;keep.forEach(x=>ALL.push(x));Object.values(byId).forEach(x=>ALL.push(x));
+    FINIES=ALL.filter(x=>x.finie);refreshFilters();render();
+    msg.textContent='À jour ✓ '+now.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})+(add?` (+${add})`:'');
+  }catch(err){msg.textContent='Échec : '+err.message;}
+  btn.disabled=false;btn.textContent=old;
+}
+document.getElementById('btnMaj').addEventListener('click',majNow);
 document.getElementById('btnExport').addEventListener('click',()=>{
   const esc=v=>{v=(''+v).replace(/"/g,'""');return /[";\n]/.test(v)?`"${v}"`:v;};
   const lines=[cols.map(c=>c[1]).join(';')];

@@ -296,11 +296,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">Période __PERIODE__ &middot; généré le __GENERATED__</div>
 </header>
 <div class="wrap">
-  <div class="updbar">
-    <span class="info" id="lastScrap"></span>
-    <button id="btnUpdate" class="btn">Mettre à jour</button>
-    <span id="updMsg"></span>
-  </div>
   <div class="kpis" id="kpis"></div>
   <div class="panel">
     <h2>Tendance de la fréquentation</h2>
@@ -358,6 +353,11 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
       <button id="btnExport" class="btn">Exporter en Excel</button>
     </div>
     <div class="tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
+  </div>
+  <div class="updbar" style="justify-content:center;margin:24px 0 6px">
+    <span class="info" id="lastScrap"></span>
+    <button id="btnUpdate" class="btn">Mettre à jour</button>
+    <span id="updMsg"></span>
   </div>
   <div class="foot">Visiteurs = personnes présentes (réservations validées). Source : re-set.club (widget bsport).</div>
 </div>
