@@ -197,6 +197,13 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   </div>
   <div class="panel"><h2>Coachs &laquo; stars &raquo; (moyenne de présents / cours)</h2><div id="topCoach" class="ranklist"></div></div>
   <div class="panel">
+    <h2>Chiffre d'affaires estimé</h2>
+    <div style="margin:0 0 12px;color:var(--muted);font-size:13px">Prix moyen par séance
+      <input id="prix" type="number" min="0" step="0.5" value="25" style="width:90px;margin-left:8px;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:14px"> &euro; &middot; <span style="font-size:12px">CA = présents &times; prix (séances terminées, filtres appliqués)</span></div>
+    <div class="kpis" id="caKpis" style="margin:6px 0 18px"></div>
+    <canvas id="cCA"></canvas>
+  </div>
+  <div class="panel">
     <h2>Détail des séances</h2>
     <div class="filters">
       <button id="btnExport" class="btn">Exporter en Excel</button>
@@ -209,6 +216,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 const ALL=__DATA__;
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
+const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
 const fillColor=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
 function fmtJ(iso){const p=iso.split('-');return `${p[2]}/${p[1]}/${p[0]}`;}
 Chart.defaults.color='#97a1c8';Chart.defaults.borderColor='#2a3358';Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
@@ -252,6 +260,21 @@ function render(){
   mkChart('cDay',{type:'bar',data:{labels:days.map(d=>d.slice(8)+'/'+d.slice(5,7)),
     datasets:[{label:'présents',data:days.map(d=>byDay[d]),backgroundColor:'#263fff'}]},
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>nf(v)}}}}});
+
+  // chiffre d'affaires estimé
+  const prix=parseFloat(document.getElementById('prix').value)||0;
+  try{localStorage.setItem('punch_prix',prix);}catch(e){}
+  const nbJours=days.length||1;
+  const totalCA=totPres*prix;
+  document.getElementById('caKpis').innerHTML=[
+    ['CA total estimé',eur(totalCA)],
+    ['CA / jour (moy.)',eur(totalCA/nbJours)],
+    ['CA / séance (moy.)',eur(D.length?totalCA/D.length:0)],
+  ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
+  mkChart('cCA',{type:'bar',data:{labels:days.map(d=>d.slice(8)+'/'+d.slice(5,7)),
+    datasets:[{data:days.map(d=>byDay[d]*prix),backgroundColor:'#5fcf8a'}]},
+    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>eur(c.parsed.y)}}},
+      scales:{y:{beginAtZero:true,ticks:{callback:v=>v.toLocaleString('fr-FR')+' €'}}}}});
 
   // présents par studio
   const byL={};D.forEach(r=>byL[r.lieu]=(byL[r.lieu]||0)+r.presents);
@@ -298,8 +321,10 @@ function renderTable(D){
       +`<td><b>${r.presents}</b> / ${r.capacite}<span class="bar" style="width:${Math.round(40*t)}px;background:${fillColor(t)}"></span></td>`
       +`<td>${r.reserves}</td><td>${ns?'<b style="color:#e07a6f">'+ns+'</b>':'0'}</td><td>${r.capacite}</td></tr>`;}).join('');
 }
-['q'].forEach(id=>document.getElementById(id).addEventListener('input',render));
+['q','prix'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 [selLieu,selCours,selCoach].forEach(s=>s.addEventListener('change',render));
+const _sp=(()=>{try{return localStorage.getItem('punch_prix');}catch(e){return null;}})();
+if(_sp)document.getElementById('prix').value=_sp;
 document.getElementById('btnExport').addEventListener('click',()=>{
   const esc=v=>{v=(''+v).replace(/"/g,'""');return /[";\n]/.test(v)?`"${v}"`:v;};
   const lines=[cols.map(c=>c[1]).join(';')];
