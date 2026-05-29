@@ -41,6 +41,9 @@ jobs:
       - name: Barry's Paris (Mariana Tek)
         run: python3 barrys_scrape.py
         continue-on-error: true
+      - name: Burning Bar (Mindbody/Healcode)
+        run: python3 burningbar_scrape.py
+        continue-on-error: true
 
       - name: Commit si changement
         run: |
@@ -50,7 +53,8 @@ jobs:
                   lecercle_data.json lecercle_seances.csv lecercle.html \
                   spacecycle_data.json spacecycle_seances.csv spacecycle.html \
                   poses_data.json poses_seances.csv poses.html \
-                  barrys_data.json barrys_seances.csv barrys.html
+                  barrys_data.json barrys_seances.csv barrys.html \
+                  burningbar_data.json burningbar_seances.csv burningbar.html
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
