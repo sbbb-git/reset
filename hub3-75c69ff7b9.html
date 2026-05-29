@@ -24,14 +24,16 @@
 <body>
   <nav class="tabs">
     <button data-t="barrys" class="active" style="--accent:#e2231a">Barry's</button>
+    <button data-t="episod" style="--accent:#e8c14d">Episod</button>
     <button data-t="burningbar" style="--accent:#ff5a1f">Burning Bar</button>
   </nav>
   <div class="frames">
     <iframe id="f-barrys" src="barrys.html" title="Barry's"></iframe>
+    <iframe id="f-episod" data-src="episod.html" title="Episod" hidden></iframe>
     <iframe id="f-burningbar" data-src="burningbar.html" title="Burning Bar" hidden></iframe>
   </div>
 <script>
-  const order=['barrys','burningbar'];
+  const order=['barrys','episod','burningbar'];
   const btns=document.querySelectorAll('.tabs button');
   const frames={};order.forEach(t=>frames[t]=document.getElementById('f-'+t));
   function show(t){
