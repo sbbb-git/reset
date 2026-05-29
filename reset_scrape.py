@@ -296,6 +296,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">Période __PERIODE__ &middot; généré le __GENERATED__</div>
 </header>
 <div class="wrap">
+  <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:18px 0 14px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>
   <div class="panel">
     <h2>Tendance de la fréquentation</h2>
@@ -394,6 +395,10 @@ let evGran='mois',evMetric='visiteurs',caGran='mois',sortKey='date',sortDir=1,cu
 
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
 function renderKpis(){
+  const dts=[...new Set(DATA.map(r=>r.date))].sort(),pj=dts.length;
+  document.getElementById('periode').textContent = pj
+    ? `📅 Période étudiée : du ${fmtJ(dts[0])} au ${fmtJ(dts[pj-1])} · ${pj} jour${pj>1?'s':''} · ${nf(DATA.length)} séances`
+    : 'Aucune séance.';
   const totP=DATA.reduce((s,r)=>s+r.presents,0);
   const byD={};DATA.forEach(r=>byD[r.date]=(byD[r.date]||0)+r.presents);
   const bd=Object.entries(byD).sort((a,b)=>b[1]-a[1])[0]||['',0];
