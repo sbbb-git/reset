@@ -166,6 +166,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   .tablewrap{max-height:600px;overflow:auto;border:1px solid var(--line);border-radius:14px;}
   .empty{background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:24px;text-align:center;color:var(--muted);margin:22px 0;}
   @media(max-width:600px){header{padding:18px 14px 6px;}h1{font-size:18px;}.wrap{padding:0 12px 32px;}.kpis{grid-template-columns:1fr 1fr;}.filters input,.filters select,.btn{font-size:15px;width:100%;}}
+  @media(max-width:600px){canvas{max-height:200px!important}th,td{padding:7px 6px;font-size:12px}.panel{padding:15px 14px}.kpi .v{font-size:20px}.note{font-size:12px}.ctrl{font-size:12px;gap:7px}.pinp{width:64px}}
 </style>
 </head>
 <body>
