@@ -304,7 +304,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="panel">
     <h2>Chiffre d'affaires estimé (réservations détectées)</h2>
     <div style="margin:0 0 12px;color:var(--muted);font-size:13px">Prix moyen par créneau
-      <input id="prix" type="number" min="0" step="0.5" value="__PRICE__" style="width:90px;margin-left:8px;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:14px"> &euro; &middot; <span style="font-size:12px">CA = créneaux réservés &times; prix (par défaut le prix affiché par Anybuddy)</span></div>
+      <input id="prix" type="number" min="0" step="0.5" value="__PRICE__" style="width:90px;margin-left:8px;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:14px"> &euro; &middot; <span style="font-size:12px">CA = somme des <b>prix réels</b> Anybuddy de chaque créneau réservé (ce champ = repli si un prix manque)</span></div>
     <div class="kpis" id="caKpis" style="margin:6px 0 18px"></div>
     <canvas id="cCA"></canvas>
   </div>
@@ -403,14 +403,16 @@ function render(){
   // CA estimé
   const prix=parseFloat(document.getElementById('prix').value)||0;
   try{localStorage.setItem('__PRIXKEY__',prix);}catch(e){}
-  const nbJours=days.length||1,totalCA=resa*prix;
+  // CA = somme des PRIX RÉELS Anybuddy des créneaux réservés (fallback = prix saisi)
+  const resaRows=D.filter(isResa);
+  const nbJours=days.length||1,totalCA=resaRows.reduce((s,r)=>s+(r.prix||prix),0);
   document.getElementById('caKpis').innerHTML=[
     ['CA total estimé',eur(totalCA)],
     ['CA / jour (moy.)',eur(totalCA/nbJours)],
     ['CA / terrain (moy.)',eur(totalCA/nbCourts)],
     ['CA / créneau réservé',eur(resa?totalCA/resa:0)],
   ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
-  const caDay={};D.filter(isResa).forEach(r=>caDay[r.date]=(caDay[r.date]||0)+prix);
+  const caDay={};resaRows.forEach(r=>caDay[r.date]=(caDay[r.date]||0)+(r.prix||prix));
   const cdays=Object.keys(caDay).sort();
   mkChart('cCA',{type:'bar',data:{labels:cdays.map(d=>d.slice(8)+'/'+d.slice(5,7)),
     datasets:[{data:cdays.map(d=>caDay[d]),backgroundColor:'#5fcf8a'}]},

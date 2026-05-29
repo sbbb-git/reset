@@ -678,6 +678,15 @@ def main():
     write_csv(rows, args.csv)
     write_xlsx(rows, args.xlsx)
     write_html(rows, coaches, args.html, start, end)
+    # export JSON pour le comparateur inter-marques (schéma commun)
+    store = {str(r.get("session_id") or i): {
+        "date": r["date"], "heure": r.get("heure", ""), "lieu": "Re-SET",
+        "cours": r.get("activite", ""), "coach": r.get("coach", ""),
+        "capacite": r.get("capacite") or 0, "presents": r.get("presents") or 0,
+        "finie": True} for i, r in enumerate(rows)}
+    with open("reset_data.json", "w", encoding="utf-8") as f:
+        json.dump(store, f, ensure_ascii=False)
+    print(f"-> reset_data.json ({len(store)})")
 
     if rows:
         jours = sorted({r["date"] for r in rows})

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comparateur des studios · Fréquentation</title>
+<style>
+  :root{--bg:#0b0f1c;--card:#141a2e;--card2:#1c2640;--line:#2a3354;--text:#eef1fb;
+        --muted:#94a0c4;--accent:#6f82ff;--green:#5fcf8a;--yellow:#e6c14d;--red:#e07a6f;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);}
+  header{padding:26px 30px 8px;} h1{margin:0;font-size:23px;font-weight:800;}
+  .sub{color:var(--muted);font-size:13px;margin-top:6px;}
+  .wrap{padding:0 30px 48px;max-width:1150px;margin:0 auto;}
+  .note{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:16px 0;color:var(--muted);font-size:12.5px;line-height:1.5;}
+  .note b{color:var(--text);}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:18px 0;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;}
+  .kpi .v{font-size:25px;font-weight:800;color:var(--accent);}
+  .kpi .l{color:var(--muted);font-size:11.5px;margin-top:4px;text-transform:uppercase;letter-spacing:.5px;}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:20px;}
+  .panel h2{margin:0 0 14px;font-size:15px;color:var(--text);font-weight:700;}
+  .ctrl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 0 16px;color:var(--muted);font-size:13px;}
+  .ctrl input,.ctrl select{background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:8px 11px;font-size:13px;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;}
+  th:first-child,td:first-child{text-align:left;}
+  th{color:var(--muted);font-weight:600;cursor:pointer;user-select:none;}
+  th.sorted{color:var(--accent);}
+  tbody tr:hover{background:var(--card2);}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:middle;}
+  .rk{display:grid;grid-template-columns:1fr auto;gap:6px;align-items:center;font-size:13px;margin-bottom:9px;}
+  .rk .top{display:flex;justify-content:space-between;gap:8px;}
+  .rk .lbl{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .rk .brand{color:var(--muted);font-weight:500;font-size:11px;}
+  .rk .track{grid-column:1/-1;height:8px;background:var(--line);border-radius:5px;overflow:hidden;}
+  .rk .track>span{display:block;height:100%;border-radius:5px;}
+  .val{color:var(--muted);}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(max-width:820px){.grid2{grid-template-columns:1fr;}}
+  @media(max-width:600px){header{padding:16px 14px 4px;}.wrap{padding:0 12px 30px;}.kpis{grid-template-columns:1fr 1fr;}th,td{padding:7px 6px;font-size:12px;}}
+</style>
+</head>
+<body>
+<header>
+  <h1>📊 Comparateur des studios</h1>
+  <div class="sub">analyse inter-marques &middot; <span id="gen"></span></div>
+</header>
+<div class="wrap">
+  <div class="note" id="loadnote">⏳ Chargement des données de toutes les marques…</div>
+
+  <div class="note">
+    <b>KPI utilisés</b> (sur les séances <b>déjà commencées</b> dont la capacité est connue) :
+    <br>• <b>Taux de remplissage</b> = présents ÷ capacité — <i>le juge de paix</i> (demande vs offre), comparable entre marques.
+    <br>• <b>Présents / séance</b> = pouvoir d'attraction absolu d'un studio.
+    <br>• <b>Présents total</b> & <b>Séances</b> = volume d'activité.
+    <br>• <b>CA estimé</b> = présents × prix moyen (réglable ci-dessous).
+    <br><b>Le classement « qui marche » est trié par taux de remplissage.</b>
+    <br>⚠️ Non inclus ici : <b>Sense-Club</b> & <b>Burning Bar</b> (Mindbody ne donne que le statut, pas le nombre exact) et <b>Trinquet/padel</b> (logique d'occupation de terrains, pas de « présents/capacité ») — ils ont leur propre onglet.
+  </div>
+
+  <div class="ctrl">
+    Prix moyen / séance pour le CA :
+    <input id="prix" type="number" min="0" step="0.5" value="20" style="width:90px"> &euro;
+    &middot; Période : <select id="periode">
+      <option value="0">Tout l'historique</option>
+      <option value="7">7 derniers jours</option>
+      <option value="30">30 derniers jours</option>
+    </select>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="panel">
+    <h2>Classement des marques</h2>
+    <div style="overflow-x:auto"><table id="tblBrand"><thead></thead><tbody></tbody></table></div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel"><h2>🏆 Top studios (remplissage)</h2><div id="topStudios"></div></div>
+    <div class="panel"><h2>🐌 Studios à la traîne</h2><div id="flopStudios"></div></div>
+  </div>
+
+  <div class="foot" style="color:var(--muted);font-size:12px">Données live des dashboards par marque. Taux coloré : vert ≥75%, jaune ≥50%, rouge &lt;50%.</div>
+</div>
+<script>
+const BRANDS=[
+  {key:"reset",label:"Re-SET",color:"#d98b63"},
+  {key:"punch",label:"Punch",color:"#263fff"},
+  {key:"dynamo",label:"Dynamo",color:"#faa619"},
+  {key:"riise",label:"Riise",color:"#c25a3f"},
+  {key:"thenewme",label:"The New Me",color:"#b8895e"},
+  {key:"lecercle",label:"Le Cercle",color:"#d4453a"},
+  {key:"spacecycle",label:"Space Cycle",color:"#16b3c6"},
+  {key:"poses",label:"Poses",color:"#b06a8f"},
+  {key:"barrys",label:"Barry's",color:"#e2231a"},
+  {key:"episod",label:"Episod",color:"#e8c14d"},
+];
+const nf=v=>Math.round(v).toLocaleString('fr-FR');
+const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
+const fill=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
+let ROWS=[]; // {brand,label,color,lieu,date,presents,capacite}
+
+async function load(){
+  const res=await Promise.all(BRANDS.map(async b=>{
+    try{
+      const r=await fetch(b.key+'_data.json',{cache:'no-store'});
+      if(!r.ok) return [];
+      const d=await r.json();
+      const arr=Array.isArray(d)?d:Object.values(d);
+      return arr.filter(x=>x.finie && (x.capacite||0)>0).map(x=>({
+        brand:b.key,label:b.label,color:b.color,
+        lieu:(x.lieu||b.label),date:x.date||'',
+        presents:x.presents||0,capacite:x.capacite||0}));
+    }catch(e){return [];}
+  }));
+  ROWS=res.flat();
+  document.getElementById('loadnote').style.display='none';
+  document.getElementById('gen').textContent='généré le '+new Date().toLocaleString('fr-FR');
+  render();
+}
+
+function filtered(){
+  const days=+document.getElementById('periode').value;
+  if(!days) return ROWS;
+  const lim=new Date();lim.setDate(lim.getDate()-days);
+  const s=lim.toISOString().slice(0,10);
+  return ROWS.filter(r=>r.date>=s);
+}
+
+function agg(rows,keyFn){
+  const m={};
+  rows.forEach(r=>{const k=keyFn(r);(m[k]=m[k]||{p:0,c:0,n:0,lieux:new Set(),color:r.color,label:r.label,brand:r.label})
+    ;m[k].p+=r.presents;m[k].c+=r.capacite;m[k].n++;m[k].lieux.add(r.lieu);});
+  return m;
+}
+
+function render(){
+  const prix=parseFloat(document.getElementById('prix').value)||0;
+  const D=filtered();
+  // KPIs globaux
+  const totP=D.reduce((s,r)=>s+r.presents,0),totC=D.reduce((s,r)=>s+r.capacite,0);
+  const studios=new Set(D.map(r=>r.label+' · '+r.lieu)).size;
+  const marques=new Set(D.map(r=>r.brand)).size;
+  document.getElementById('kpis').innerHTML=[
+    ['Marques',nf(marques)],['Studios',nf(studios)],['Séances',nf(D.length)],
+    ['Présents total',nf(totP)],['Taux moyen',totC?Math.round(100*totP/totC)+'%':'—'],
+    ['CA estimé',eur(totP*prix)],
+  ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
+
+  // classement marques
+  const bm=agg(D,r=>r.brand);
+  let brands=Object.entries(bm).map(([k,o])=>({label:o.label,color:o.color,
+    studios:o.lieux.size,seances:o.n,pres:o.p,
+    moy:o.n?o.p/o.n:0,taux:o.c?o.p/o.c:0,ca:o.p*prix}));
+  renderBrandTable(brands);
+
+  // studios (tous, toutes marques)
+  const sm=agg(D,r=>r.label+'||'+r.lieu);
+  let studs=Object.entries(sm).map(([k,o])=>({lieu:k.split('||')[1],label:o.label,color:o.color,
+    seances:o.n,pres:o.p,moy:o.p/o.n,taux:o.c?o.p/o.c:0}))
+    .filter(s=>s.seances>=3); // au moins 3 séances pour être significatif
+  studs.sort((a,b)=>b.taux-a.taux);
+  renderStudios('topStudios',studs.slice(0,15));
+  renderStudios('flopStudios',studs.slice(-15).reverse());
+}
+
+let sortKey='taux',sortDir=-1;
+function renderBrandTable(brands){
+  const cols=[['label','Marque'],['studios','Studios'],['seances','Séances'],
+    ['pres','Présents'],['moy','Moy/séance'],['taux','Remplissage'],['ca','CA estimé']];
+  brands.sort((a,b)=>(a[sortKey]<b[sortKey]?1:-1)*sortDir);
+  document.querySelector('#tblBrand thead').innerHTML='<tr>'+cols.map(c=>
+    `<th data-k="${c[0]}" class="${c[0]===sortKey?'sorted':''}">${c[1]}</th>`).join('')+'</tr>';
+  document.querySelector('#tblBrand tbody').innerHTML=brands.map(b=>
+    `<tr><td><span class="dot" style="background:${b.color}"></span>${b.label}</td>`
+    +`<td>${b.studios}</td><td>${b.seances}</td><td>${nf(b.pres)}</td>`
+    +`<td>${b.moy.toFixed(1)}</td>`
+    +`<td style="color:${fill(b.taux)};font-weight:700">${Math.round(100*b.taux)}%</td>`
+    +`<td>${eur(b.ca)}</td></tr>`).join('');
+  document.querySelectorAll('#tblBrand th').forEach(th=>th.onclick=()=>{
+    const k=th.dataset.k;sortDir=(k===sortKey)?-sortDir:-1;sortKey=k;render();});
+}
+
+function renderStudios(id,list){
+  const mx=Math.max(...list.map(s=>s.taux),0.01);
+  document.getElementById(id).innerHTML=list.length?list.map(s=>
+    `<div class="rk"><div class="top"><span class="lbl">${s.lieu} <span class="brand">${s.label}</span></span>`
+    +`<span class="val" style="color:${fill(s.taux)};font-weight:700">${Math.round(100*s.taux)}% &middot; ${s.moy.toFixed(1)}/séance</span></div>`
+    +`<span class="track"><span style="width:${Math.round(100*s.taux/mx)}%;background:${fill(s.taux)}"></span></span></div>`).join('')
+    :'<div style="color:var(--muted)">Pas de données.</div>';
+}
+
+['prix','periode'].forEach(id=>document.getElementById(id).addEventListener('input',render));
+load();
+</script>
+</body>
+</html>
