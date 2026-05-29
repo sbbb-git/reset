@@ -106,6 +106,10 @@ const nf=v=>Math.round(v).toLocaleString('fr-FR');
 const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
 const fill=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
 let ROWS=[]; // {brand,label,color,lieu,date,presents,capacite}
+// prix par marque (override) ; vide => prix par défaut global
+let PRICES=(()=>{try{return JSON.parse(localStorage.getItem('cmp_prices')||'{}');}catch(e){return {};}})();
+function priceOf(key){const v=PRICES[key];return (v!==undefined&&v!=='')?(+v||0):(parseFloat(document.getElementById('prix').value)||0);}
+function setPrice(key,val){if(val==='')delete PRICES[key];else PRICES[key]=val;try{localStorage.setItem('cmp_prices',JSON.stringify(PRICES));}catch(e){}render();}
 
 async function load(){
   const res=await Promise.all(BRANDS.map(async b=>{
@@ -142,23 +146,18 @@ function agg(rows,keyFn){
 }
 
 function render(){
-  const prix=parseFloat(document.getElementById('prix').value)||0;
   const D=filtered();
-  // KPIs globaux
-  const totP=D.reduce((s,r)=>s+r.presents,0),totC=D.reduce((s,r)=>s+r.capacite,0);
+  // classement marques (avec prix PAR MARQUE)
+  const bm=agg(D,r=>r.brand);
+  let brands=Object.entries(bm).map(([k,o])=>({key:k,label:o.label,color:o.color,
+    studios:o.lieux.size,seances:o.n,pres:o.p,
+    moy:o.n?o.p/o.n:0,taux:o.c?o.p/o.c:0,ca:o.p*priceOf(k)}));
+  // inventaire seulement (agréger présents/taux/CA de marques différentes n'a pas de sens)
   const studios=new Set(D.map(r=>r.label+' · '+r.lieu)).size;
-  const marques=new Set(D.map(r=>r.brand)).size;
   document.getElementById('kpis').innerHTML=[
-    ['Marques',nf(marques)],['Studios',nf(studios)],['Séances',nf(D.length)],
-    ['Présents total',nf(totP)],['Taux moyen',totC?Math.round(100*totP/totC)+'%':'—'],
-    ['CA estimé',eur(totP*prix)],
+    ['Marques',nf(brands.length)],['Studios',nf(studios)],['Séances suivies',nf(D.length)],
   ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
 
-  // classement marques
-  const bm=agg(D,r=>r.brand);
-  let brands=Object.entries(bm).map(([k,o])=>({label:o.label,color:o.color,
-    studios:o.lieux.size,seances:o.n,pres:o.p,
-    moy:o.n?o.p/o.n:0,taux:o.c?o.p/o.c:0,ca:o.p*prix}));
   renderBrandTable(brands);
 
   // studios (tous, toutes marques)
@@ -178,18 +177,25 @@ function render(){
 let sortKey='taux',sortDir=-1;
 function renderBrandTable(brands){
   const cols=[['label','Marque'],['studios','Studios'],['seances','Séances'],
-    ['pres','Présents'],['moy','Moy/séance'],['taux','Remplissage'],['ca','CA estimé']];
+    ['pres','Présents'],['moy','Moy/séance'],['taux','Remplissage'],['prix','Prix/séance'],['ca','CA estimé']];
   brands.sort((a,b)=>(a[sortKey]<b[sortKey]?1:-1)*sortDir);
   document.querySelector('#tblBrand thead').innerHTML='<tr>'+cols.map(c=>
     `<th data-k="${c[0]}" class="${c[0]===sortKey?'sorted':''}">${c[1]}</th>`).join('')+'</tr>';
+  const def=parseFloat(document.getElementById('prix').value)||0;
   document.querySelector('#tblBrand tbody').innerHTML=brands.map(b=>
     `<tr><td><span class="dot" style="background:${b.color}"></span>${b.label}</td>`
     +`<td>${b.studios}</td><td>${b.seances}</td><td>${nf(b.pres)}</td>`
     +`<td>${b.moy.toFixed(1)}</td>`
     +`<td style="color:${fill(b.taux)};font-weight:700">${Math.round(100*b.taux)}%</td>`
+    +`<td><input type="number" min="0" step="0.5" value="${PRICES[b.key]!==undefined?PRICES[b.key]:''}" placeholder="${def}" data-bk="${b.key}" `
+    +`style="width:64px;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:5px 7px;font-size:12px;text-align:right"> &euro;</td>`
     +`<td>${eur(b.ca)}</td></tr>`).join('');
+  document.querySelectorAll('#tblBrand tbody input[data-bk]').forEach(inp=>{
+    inp.addEventListener('click',e=>e.stopPropagation());
+    inp.addEventListener('input',e=>setPrice(e.target.dataset.bk,e.target.value));
+  });
   document.querySelectorAll('#tblBrand th').forEach(th=>th.onclick=()=>{
-    const k=th.dataset.k;sortDir=(k===sortKey)?-sortDir:-1;sortKey=k;render();});
+    const k=th.dataset.k;if(k==='prix')return;sortDir=(k===sortKey)?-sortDir:-1;sortKey=k;render();});
 }
 
 function renderStudios(id,list,metric){
