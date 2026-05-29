@@ -47,6 +47,9 @@ jobs:
       - name: Episod (resamania / plan de salle)
         run: python3 episod_scrape.py
         continue-on-error: true
+      - name: Anybuddy Trinquet Village (occupation terrains)
+        run: python3 anybuddy_scrape.py
+        continue-on-error: true
 
       - name: Commit si changement
         run: |
@@ -58,7 +61,8 @@ jobs:
                   poses_data.json poses_seances.csv poses.html \
                   barrys_data.json barrys_seances.csv barrys.html \
                   burningbar_data.json burningbar_seances.csv burningbar.html \
-                  episod_data.json episod_seances.csv episod.html
+                  episod_data.json episod_seances.csv episod.html \
+                  anybuddy_data.json anybuddy_creneaux.csv anybuddy.html
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
