@@ -67,6 +67,11 @@
       <option value="7">7 derniers jours</option>
       <option value="30">30 derniers jours</option>
     </select>
+    &middot; Classer les studios par : <select id="metric">
+      <option value="taux">Taux de remplissage</option>
+      <option value="moy">Présents / séance</option>
+      <option value="pres">Présents total</option>
+    </select>
   </div>
 
   <div class="kpis" id="kpis"></div>
@@ -77,8 +82,8 @@
   </div>
 
   <div class="grid2">
-    <div class="panel"><h2>🏆 Top studios (remplissage)</h2><div id="topStudios"></div></div>
-    <div class="panel"><h2>🐌 Studios à la traîne</h2><div id="flopStudios"></div></div>
+    <div class="panel"><h2 id="topTitle">🏆 Top studios</h2><div id="topStudios"></div></div>
+    <div class="panel"><h2 id="flopTitle">🐌 Studios à la traîne</h2><div id="flopStudios"></div></div>
   </div>
 
   <div class="foot" style="color:var(--muted);font-size:12px">Données live des dashboards par marque. Taux coloré : vert ≥75%, jaune ≥50%, rouge &lt;50%.</div>
@@ -157,13 +162,17 @@ function render(){
   renderBrandTable(brands);
 
   // studios (tous, toutes marques)
+  const metric=document.getElementById('metric').value;
   const sm=agg(D,r=>r.label+'||'+r.lieu);
   let studs=Object.entries(sm).map(([k,o])=>({lieu:k.split('||')[1],label:o.label,color:o.color,
     seances:o.n,pres:o.p,moy:o.p/o.n,taux:o.c?o.p/o.c:0}))
     .filter(s=>s.seances>=3); // au moins 3 séances pour être significatif
-  studs.sort((a,b)=>b.taux-a.taux);
-  renderStudios('topStudios',studs.slice(0,15));
-  renderStudios('flopStudios',studs.slice(-15).reverse());
+  studs.sort((a,b)=>b[metric]-a[metric]);
+  const noms={taux:'remplissage',moy:'présents / séance',pres:'présents total'};
+  document.getElementById('topTitle').textContent='🏆 Top studios · '+noms[metric];
+  document.getElementById('flopTitle').textContent='🐌 Studios à la traîne · '+noms[metric];
+  renderStudios('topStudios',studs.slice(0,15),metric);
+  renderStudios('flopStudios',studs.slice(-15).reverse(),metric);
 }
 
 let sortKey='taux',sortDir=-1;
@@ -183,16 +192,19 @@ function renderBrandTable(brands){
     const k=th.dataset.k;sortDir=(k===sortKey)?-sortDir:-1;sortKey=k;render();});
 }
 
-function renderStudios(id,list){
-  const mx=Math.max(...list.map(s=>s.taux),0.01);
+function renderStudios(id,list,metric){
+  const mx=Math.max(...list.map(s=>s[metric]),0.01);
+  const valTxt=s=>metric==='taux'?Math.round(100*s.taux)+'%'
+    :metric==='moy'?s.moy.toFixed(1)+'/séance':nf(s.pres)+' présents';
   document.getElementById(id).innerHTML=list.length?list.map(s=>
     `<div class="rk"><div class="top"><span class="lbl">${s.lieu} <span class="brand">${s.label}</span></span>`
-    +`<span class="val" style="color:${fill(s.taux)};font-weight:700">${Math.round(100*s.taux)}% &middot; ${s.moy.toFixed(1)}/séance</span></div>`
-    +`<span class="track"><span style="width:${Math.round(100*s.taux/mx)}%;background:${fill(s.taux)}"></span></span></div>`).join('')
+    +`<span class="val" style="color:${fill(s.taux)};font-weight:700">${valTxt(s)}<span style="color:var(--muted);font-weight:400"> &middot; ${Math.round(100*s.taux)}% &middot; ${s.moy.toFixed(1)}/séa</span></span></div>`
+    +`<span class="track"><span style="width:${Math.round(100*s[metric]/mx)}%;background:${fill(s.taux)}"></span></span></div>`).join('')
     :'<div style="color:var(--muted)">Pas de données.</div>';
 }
 
-['prix','periode'].forEach(id=>document.getElementById(id).addEventListener('input',render));
+['prix','periode','metric'].forEach(id=>document.getElementById(id).addEventListener('input',render));
+document.getElementById('metric').addEventListener('change',render);
 load();
 </script>
 </body>
