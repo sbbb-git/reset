@@ -41,9 +41,6 @@ jobs:
       - name: Barry's Paris (Mariana Tek)
         run: python3 barrys_scrape.py
         continue-on-error: true
-      - name: Burning Bar (Mindbody/Healcode)
-        run: python3 burningbar_scrape.py
-        continue-on-error: true
       - name: Episod (resamania / plan de salle)
         run: python3 episod_scrape.py
         continue-on-error: true
@@ -60,7 +57,6 @@ jobs:
                   spacecycle_data.json spacecycle_seances.csv spacecycle.html \
                   poses_data.json poses_seances.csv poses.html \
                   barrys_data.json barrys_seances.csv barrys.html \
-                  burningbar_data.json burningbar_seances.csv burningbar.html \
                   episod_data.json episod_seances.csv episod.html \
                   anybuddy_data.json anybuddy_creneaux.csv anybuddy.html
           if git diff --cached --quiet; then
