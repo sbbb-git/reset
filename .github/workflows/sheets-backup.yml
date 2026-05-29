@@ -1,0 +1,35 @@
+name: Sauvegarde Google Sheets
+
+on:
+  schedule:
+    # 1x/jour à 22:00 UTC (~00:00 Paris), après les scrapes du soir
+    - cron: "0 22 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sheets-backup
+  cancel-in-progress: true
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dépendances
+        run: pip install gspread google-auth
+
+      - name: Sauvegarde vers Google Sheets
+        env:
+          GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+        run: python3 sheets_sync.py
