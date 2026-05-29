@@ -542,8 +542,8 @@
 "id": "231574",
 "jour": "Vendredi",
 "lieu": "Louvre Studio heat",
-"presents": 7,
-"releve": "2026-05-29 12:22"
+"presents": 6,
+"releve": "2026-05-29 18:27"
 },
 "231575": {
 "capacite": 20,
@@ -1704,8 +1704,8 @@
 "id": "232263",
 "jour": "Vendredi",
 "lieu": "République Studio bootcamp",
-"presents": 16,
-"releve": "2026-05-29 12:22"
+"presents": 17,
+"releve": "2026-05-29 18:27"
 },
 "232264": {
 "capacite": 0,
@@ -1746,8 +1746,8 @@
 "id": "232277",
 "jour": "Vendredi",
 "lieu": "République Studio yoga",
-"presents": 5,
-"releve": "2026-05-29 12:22"
+"presents": 2,
+"releve": "2026-05-29 18:27"
 },
 "232278": {
 "capacite": 35,
@@ -1928,8 +1928,8 @@
 "id": "232315",
 "jour": "Vendredi",
 "lieu": "République Studio cycling",
-"presents": 14,
-"releve": "2026-05-29 12:22"
+"presents": 19,
+"releve": "2026-05-29 18:27"
 },
 "232316": {
 "capacite": 30,
@@ -2391,7 +2391,7 @@
 "jour": "Vendredi",
 "lieu": "République Studio reformer",
 "presents": 15,
-"releve": "2026-05-29 12:22"
+"releve": "2026-05-29 18:27"
 },
 "232404": {
 "capacite": 18,
@@ -2530,8 +2530,8 @@
 "id": "232444",
 "jour": "Vendredi",
 "lieu": "République Studio boxing",
-"presents": 8,
-"releve": "2026-05-29 12:22"
+"presents": 9,
+"releve": "2026-05-29 18:27"
 },
 "232445": {
 "capacite": 30,
@@ -2983,7 +2983,7 @@
 },
 "232552": {
 "capacite": 28,
-"coach": "Flora",
+"coach": "Abi",
 "cours": "Bootcamp",
 "date": "2026-05-29",
 "fin": "19:05",
@@ -2992,12 +2992,12 @@
 "id": "232552",
 "jour": "Vendredi",
 "lieu": "Bourse Studio bootcamp",
-"presents": 4,
-"releve": "2026-05-29 12:22"
+"presents": 6,
+"releve": "2026-05-29 18:27"
 },
 "232553": {
 "capacite": 28,
-"coach": "Flora",
+"coach": "Abi",
 "cours": "Bootcamp",
 "date": "2026-05-29",
 "fin": "20:05",
@@ -3188,8 +3188,8 @@
 "id": "232585",
 "jour": "Vendredi",
 "lieu": "Bourse Studio yoga",
-"presents": 11,
-"releve": "2026-05-29 12:22"
+"presents": 16,
+"releve": "2026-05-29 18:27"
 },
 "232588": {
 "capacite": 26,
@@ -3552,8 +3552,8 @@
 "id": "232692",
 "jour": "Vendredi",
 "lieu": "Nation Studio bootcamp",
-"presents": 13,
-"releve": "2026-05-29 12:22"
+"presents": 16,
+"releve": "2026-05-29 18:27"
 },
 "232694": {
 "capacite": 20,
@@ -3832,8 +3832,8 @@
 "id": "232743",
 "jour": "Vendredi",
 "lieu": "Nation Studio boxing",
-"presents": 8,
-"releve": "2026-05-29 12:22"
+"presents": 10,
+"releve": "2026-05-29 18:27"
 },
 "232744": {
 "capacite": 0,
@@ -4071,7 +4071,7 @@
 "jour": "Vendredi",
 "lieu": "Levallois Reformer Studio reformer",
 "presents": 18,
-"releve": "2026-05-29 12:22"
+"releve": "2026-05-29 18:27"
 },
 "232843": {
 "capacite": 20,
@@ -4420,8 +4420,8 @@
 "id": "232920",
 "jour": "Vendredi",
 "lieu": "Place de Clichy Studio cycling",
-"presents": 11,
-"releve": "2026-05-29 12:22"
+"presents": 16,
+"releve": "2026-05-29 18:27"
 },
 "232922": {
 "capacite": 34,
@@ -5666,8 +5666,8 @@
 "id": "233440",
 "jour": "Vendredi",
 "lieu": "Pigalle Studio reformer",
-"presents": 10,
-"releve": "2026-05-29 12:22"
+"presents": 12,
+"releve": "2026-05-29 18:27"
 },
 "233441": {
 "capacite": 18,
@@ -9731,7 +9731,7 @@
 },
 "233997": {
 "capacite": 27,
-"coach": "Clarisse",
+"coach": "Linda",
 "cours": "Pilates",
 "date": "2026-06-02",
 "fin": "12:50",
@@ -11910,8 +11910,8 @@
 "id": "234884",
 "jour": "Vendredi",
 "lieu": "Pigalle Studio bootcamp",
-"presents": 4,
-"releve": "2026-05-29 12:22"
+"presents": 8,
+"releve": "2026-05-29 18:27"
 },
 "234885": {
 "capacite": 32,
@@ -12402,5 +12402,89 @@
 "lieu": "Nation Studio athletic",
 "presents": 0,
 "releve": "2026-05-29 12:22"
+},
+"236088": {
+"capacite": 0,
+"coach": "Hélin frédéric",
+"cours": "Pilates reformer",
+"date": "2026-05-31",
+"fin": "10:50",
+"finie": false,
+"heure": "10:00",
+"id": "236088",
+"jour": "Dimanche",
+"lieu": "Levallois Reformer Studio reformer",
+"presents": 0,
+"releve": "2026-05-29 18:27"
+},
+"236089": {
+"capacite": 0,
+"coach": "Hélin frédéric",
+"cours": "Pilates reformer",
+"date": "2026-05-31",
+"fin": "11:50",
+"finie": false,
+"heure": "11:00",
+"id": "236089",
+"jour": "Dimanche",
+"lieu": "Levallois Reformer Studio reformer",
+"presents": 0,
+"releve": "2026-05-29 18:27"
+},
+"236090": {
+"capacite": 0,
+"coach": "Hélin frédéric",
+"cours": "Pilates reformer",
+"date": "2026-05-31",
+"fin": "12:50",
+"finie": false,
+"heure": "12:00",
+"id": "236090",
+"jour": "Dimanche",
+"lieu": "Levallois Reformer Studio reformer",
+"presents": 0,
+"releve": "2026-05-29 18:27"
+},
+"236091": {
+"capacite": 0,
+"coach": "Hélin frédéric",
+"cours": "Pilates reformer",
+"date": "2026-05-31",
+"fin": "13:50",
+"finie": false,
+"heure": "13:00",
+"id": "236091",
+"jour": "Dimanche",
+"lieu": "Levallois Reformer Studio reformer",
+"presents": 0,
+"releve": "2026-05-29 18:27"
+},
+"236097": {
+"capacite": 0,
+"coach": "Linda",
+"cours": "Pilates",
+"date": "2026-06-03",
+"fin": "18:50",
+"finie": false,
+"heure": "18:00",
+"id": "236097",
+"jour": "Mercredi",
+"lieu": "Nation Studio yoga",
+"presents": 0,
+"releve": "2026-05-29 18:27"
+},
+"236098": {
+"capacite": 0,
+"coach": "Linda",
+"cours": "Yin Yoga",
+"date": "2026-06-03",
+"fin": "19:50",
+"finie": false,
+"heure": "19:00",
+"id": "236098",
+"jour": "Mercredi",
+"lieu": "Nation Studio yoga",
+"presents": 0,
+"releve": "2026-05-29 18:27"
 }
 }
