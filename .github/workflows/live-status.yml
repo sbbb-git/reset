@@ -2,9 +2,9 @@ name: Scrap live statut (Barry's / Episod / Anybuddy)
 
 on:
   schedule:
-    # toutes les 30 min (06:00-23:00 Paris) : ces sources nécessitent de capter
+    # toutes les 30 min, décalé à :10/:40 (évite la collision de push avec live-senseclub) : ces sources nécessitent de capter
     # le remplissage proche du début de chaque séance (figé ensuite).
-    - cron: "*/30 4-21 * * *"
+    - cron: "10,40 4-21 * * *"
   workflow_dispatch: {}
 
 permissions:
