@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TEST — Studios candidats à intégrer</title>
+<style>
+  :root{--bg:#0b0f1c;--card:#141a2e;--card2:#1c2640;--line:#2a3354;--text:#eef1fb;
+        --muted:#94a0c4;--accent:#6f82ff;--green:#5fcf8a;--yellow:#e6c14d;--red:#e07a6f;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);}
+  header{padding:24px 28px 8px;} h1{margin:0;font-size:22px;font-weight:800;}
+  .sub{color:var(--muted);font-size:13px;margin-top:6px;}
+  .wrap{padding:0 28px 48px;max-width:1180px;margin:0 auto;}
+  .note{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 18px;margin:14px 0;color:var(--muted);font-size:13px;line-height:1.5;}
+  .note b{color:var(--text);}
+  .bar{position:sticky;top:0;background:var(--bg);padding:10px 0 12px;z-index:5;display:flex;flex-wrap:wrap;gap:10px;align-items:center;border-bottom:1px solid var(--line);margin-bottom:14px;}
+  .bar select,.bar input{background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:8px 11px;font-size:13px;}
+  .bar input[type=search]{flex:1;min-width:160px;}
+  .bar .count{color:var(--muted);font-size:12px;margin-left:auto;}
+  .btn{background:var(--accent);color:#fff;border:none;border-radius:9px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;}
+  .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent);}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:7px;transition:border-color .15s;}
+  .card.on{border-color:var(--green);box-shadow:0 0 0 2px rgba(95,207,138,.18);}
+  .card .top{display:flex;align-items:start;justify-content:space-between;gap:10px;}
+  .card .name{font-weight:800;font-size:15px;}
+  .card .badge{display:inline-block;font-size:10.5px;color:var(--muted);background:var(--card2);padding:2px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.4px;margin-right:4px;}
+  .plat{font-size:11px;color:var(--accent);}
+  .ids{font-size:11px;color:var(--muted);font-family:ui-monospace,monospace;}
+  .notes{font-size:12.5px;color:var(--muted);line-height:1.45;}
+  .actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto;padding-top:6px;border-top:1px dashed var(--line);}
+  .actions a{color:var(--accent);font-size:12px;text-decoration:none;}
+  .actions label{display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer;}
+  .actions input[type=checkbox]{accent-color:var(--green);width:16px;height:16px;cursor:pointer;}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:18px 0;}
+  pre{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:12px;font-size:12px;color:var(--text);overflow:auto;max-height:280px;}
+  @media(max-width:600px){header{padding:14px 14px 4px;}.wrap{padding:0 12px 28px;}.cards{grid-template-columns:1fr;}h1{font-size:18px;}}
+</style>
+</head>
+<body>
+<header>
+  <h1>🧪 Test — studios candidats à intégrer</h1>
+  <div class="sub">Studios parisiens trouvés sur nos plateformes scrappables (bsport, Mindbody widget, Mariana Tek)</div>
+</header>
+<div class="wrap">
+  <div class="note">
+    <b>Comment ça marche :</b> chaque carte = un studio détecté. <b>Coche</b> ceux que tu veux que j'intègre au comparateur. Clique <b>Voir le site</b> pour vérifier de ton côté. Puis utilise <b>« Copier ma sélection »</b> en bas — tu me colles le texte et je les ajoute (catégorie + couleur + workflow).
+    <br>⚠️ Mindbody widget = <b>statut seulement</b> (pas de chiffre exact, comme Sense-Club). bsport = <b>chiffres exacts</b>.
+  </div>
+
+  <div class="bar">
+    <select id="fPlat"><option value="">Toutes plateformes</option></select>
+    <select id="fCat"><option value="">Toutes catégories</option></select>
+    <input id="q" type="search" placeholder="Rechercher (nom, notes…)">
+    <span class="count" id="cnt"></span>
+  </div>
+
+  <div class="cards" id="cards"></div>
+
+  <div class="panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+      <b id="sel">0 studio sélectionné</b>
+      <div style="display:flex;gap:8px">
+        <button class="btn ghost" id="clr">Tout décocher</button>
+        <button class="btn" id="cp">📋 Copier ma sélection</button>
+      </div>
+    </div>
+    <pre id="out" style="margin-top:12px;display:none"></pre>
+  </div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const STORE_KEY='test_picked';
+let DATA=[], PICKED=new Set();
+try{ PICKED=new Set(JSON.parse(localStorage.getItem(STORE_KEY)||'[]')); }catch(e){}
+
+async function load(){
+  const r=await fetch('discovery.json',{cache:'no-store'});
+  DATA=await r.json();
+  // remplit les filtres
+  const plats=[...new Set(DATA.map(x=>x.platform))].sort();
+  const cats=[...new Set(DATA.map(x=>x.category))].sort();
+  plats.forEach(p=>$('fPlat').add(new Option(p,p)));
+  cats.forEach(c=>$('fCat').add(new Option(c,c)));
+  render();
+}
+
+function filtered(){
+  const p=$('fPlat').value, c=$('fCat').value, q=$('q').value.toLowerCase().trim();
+  return DATA.filter(x=>(!p||x.platform===p)&&(!c||x.category===c)
+    &&(!q||(x.name+' '+(x.notes||'')+' '+(x.url||'')).toLowerCase().includes(q)));
+}
+
+function badgeColor(plat){
+  if(plat==='bsport') return '#5fcf8a';
+  if(plat==='mindbody-plugin') return '#6f82ff';
+  if(plat==='mindbody-widget') return '#e6c14d';
+  if(plat==='mariana-tek') return '#e0699b';
+  return '#94a0c4';
+}
+
+function render(){
+  const f=filtered();
+  $('cnt').textContent=f.length+' / '+DATA.length;
+  $('cards').innerHTML=f.map(x=>{
+    const id=(x.name+'|'+x.url).replace(/\s+/g,'-');
+    const on=PICKED.has(id);
+    return `<div class="card${on?' on':''}" data-id="${id}">
+      <div class="top">
+        <div class="name">${x.name}</div>
+        <span class="badge" style="color:${badgeColor(x.platform)}">${x.platform}</span>
+      </div>
+      <div><span class="badge">${x.category||'—'}</span> ${x.studios_count?'<span class="badge">'+x.studios_count+' studio(s)</span>':''}</div>
+      <div class="ids">${JSON.stringify(x.ids||{})}</div>
+      <div class="notes">${x.notes||''}</div>
+      <div class="actions">
+        <a href="${x.url}" target="_blank" rel="noopener">🔗 Voir le site</a>
+        <label><input type="checkbox" ${on?'checked':''}> à intégrer</label>
+      </div>
+    </div>`;
+  }).join('');
+  document.querySelectorAll('.card input[type=checkbox]').forEach((inp,i)=>{
+    inp.addEventListener('change',e=>{
+      const card=e.target.closest('.card');
+      const id=card.dataset.id;
+      if(e.target.checked){PICKED.add(id);card.classList.add('on');}
+      else{PICKED.delete(id);card.classList.remove('on');}
+      try{localStorage.setItem(STORE_KEY,JSON.stringify([...PICKED]));}catch(e){}
+      $('sel').textContent=PICKED.size+' studio'+(PICKED.size>1?'s':'')+' sélectionné'+(PICKED.size>1?'s':'');
+    });
+  });
+  $('sel').textContent=PICKED.size+' studio'+(PICKED.size>1?'s':'')+' sélectionné'+(PICKED.size>1?'s':'');
+}
+
+['fPlat','fCat','q'].forEach(id=>$(id).addEventListener('input',render));
+$('clr').addEventListener('click',()=>{
+  PICKED.clear();try{localStorage.removeItem(STORE_KEY);}catch(e){}
+  render();$('out').style.display='none';
+});
+$('cp').addEventListener('click',()=>{
+  const picked=DATA.filter(x=>PICKED.has((x.name+'|'+x.url).replace(/\s+/g,'-')));
+  const txt=picked.map(x=>`- ${x.name}  [${x.platform}]  ${x.url}  ids=${JSON.stringify(x.ids)}  cat=${x.category}  notes=${x.notes||''}`).join('\n');
+  $('out').textContent=txt||'(rien de sélectionné)';
+  $('out').style.display='block';
+  if(txt){try{navigator.clipboard.writeText(txt);}catch(e){}}
+});
+load();
+</script>
+</body>
+</html>
