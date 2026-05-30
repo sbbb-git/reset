@@ -42,6 +42,9 @@ jobs:
       - name: Belly Studio
         run: python3 belly_scrape.py
         continue-on-error: true
+      - name: AthletX (Paris République + Neuilly)
+        run: python3 athletx_scrape.py
+        continue-on-error: true
 
       - name: Commit si changement
         run: |
@@ -51,7 +54,8 @@ jobs:
                   lecercle_data.json lecercle_seances.csv lecercle.html \
                   spacecycle_data.json spacecycle_seances.csv spacecycle.html \
                   poses_data.json poses_seances.csv poses.html \
-                  belly_data.json belly_seances.csv belly.html
+                  belly_data.json belly_seances.csv belly.html \
+                  athletx_data.json athletx_seances.csv athletx.html
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
