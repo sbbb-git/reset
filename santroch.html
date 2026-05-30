@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sense-Club - Suivi des séances</title>
+<title>SANT-ROCH PARIS - Fréquentation</title>
 <script>/**
  * Skipped minification because the original files appears to be already minified.
  * Original file: /npm/chart.js@4.4.1/dist/chart.umd.js
@@ -26,143 +26,210 @@
 //# sourceMappingURL=chart.umd.js.map
 </script>
 <style>
-  :root{--bg:#13111c;--card:#1c1930;--card2:#262040;--line:#322a52;
-        --text:#ece8ف7;--text:#ece8f7;--muted:#a89fc4;--accent:#9b7ff0;--accent2:#bda6ff;
-        --green:#6fcf97;--yellow:#e6c14d;--red:#e07a6f;}
+  :root{--bg:#0c0c0e;--card:#16161a;--card2:#212127;--line:#33333d;
+        --text:#f5f0f0;--muted:#a89d9d;--accent:#4a7c7e;--accent2:#7daeb1;
+        --green:#5fcf8a;--yellow:#e6c14d;--red:#e07a6f;}
   *{box-sizing:border-box;}
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);}
-  header{padding:28px 32px 12px;} h1{margin:0;font-size:24px;font-weight:700;}
+  header{padding:28px 32px 12px;} h1{margin:0;font-size:24px;font-weight:800;letter-spacing:.5px;}
   .sub{color:var(--muted);font-size:13px;margin-top:6px;}
   .wrap{padding:0 32px 48px;max-width:1180px;margin:0 auto;}
   .note{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 18px;margin:18px 0 4px;color:var(--muted);font-size:13px;}
-  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:22px 0;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin:22px 0;}
   .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;}
-  .kpi .v{font-size:28px;font-weight:700;color:var(--accent2);}
+  .kpi .v{font-size:28px;font-weight:800;color:var(--accent2);}
   .kpi .l{color:var(--muted);font-size:12px;margin-top:4px;text-transform:uppercase;letter-spacing:.6px;}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px;}
   @media(max-width:880px){.grid{grid-template-columns:1fr;}}
   .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;}
-  .panel h2{margin:0 0 14px;font-size:14px;color:var(--accent2);font-weight:600;}
+  .panel h2{margin:0 0 14px;font-size:14px;color:var(--accent2);font-weight:700;}
   canvas{max-height:280px;}
   .filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0 16px;}
   .filters input,.filters select{background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:13px;}
-  .filters input{flex:1;min-width:180px;}
+  .filters input{flex:1;min-width:160px;}
   table{width:100%;border-collapse:collapse;font-size:13px;}
   th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;}
   th{color:var(--muted);font-weight:600;cursor:pointer;position:sticky;top:0;background:var(--card);}
   tbody tr:hover{background:var(--card2);}
-  .pill{padding:2px 9px;border-radius:20px;font-size:11px;font-weight:700;}
+  .bar{display:inline-block;height:8px;border-radius:5px;vertical-align:middle;margin-left:6px;}
   .ranklist{display:flex;flex-direction:column;gap:9px;}
-  .rk{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:10px;font-size:13px;}
-  .rk .lbl{font-weight:600;} .rk .track{height:9px;background:var(--line);border-radius:5px;overflow:hidden;}
+  .rk{display:grid;grid-template-columns:150px 1fr auto;align-items:center;gap:10px;font-size:13px;}
+  .rk .lbl{font-weight:600;overflow:hidden;text-overflow:ellipsis;} .rk .track{height:9px;background:var(--line);border-radius:5px;overflow:hidden;}
   .rk .track>span{display:block;height:100%;background:var(--accent);border-radius:5px;} .rk .val{color:var(--muted);}
-  .btn{background:var(--accent);color:#13111c;border:none;border-radius:9px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;}
+  .btn{background:var(--accent);color:#fff;border:none;border-radius:9px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;}
   .tablewrap{max-height:600px;overflow:auto;border:1px solid var(--line);border-radius:14px;}
   .foot{color:var(--muted);font-size:12px;margin-top:18px;}
-  @media(max-width:600px){header{padding:18px 14px 6px;}h1{font-size:18px;}.wrap{padding:0 12px 32px;}.kpis{grid-template-columns:1fr 1fr;gap:10px;}.kpi .v{font-size:21px;}.filters input,.filters select,.btn{font-size:15px;width:100%;}}
+  @media(max-width:600px){header{padding:18px 14px 6px;}h1{font-size:18px;}.wrap{padding:0 12px 32px;}.kpis{grid-template-columns:1fr 1fr;gap:10px;}.kpi .v{font-size:21px;}.filters input,.filters select,.btn{font-size:15px;width:100%;}.rk{grid-template-columns:110px 1fr auto;}}
   @media(max-width:600px){canvas{max-height:200px!important}th,td{padding:7px 6px;font-size:12px}.panel{padding:15px 14px}.kpi .v{font-size:20px}.note{font-size:12px}.ctrl{font-size:12px;gap:7px}.pinp{width:64px}}
 </style>
 </head>
 <body>
 <header>
-  <h1>Sense-Club &middot; Suivi des séances</h1>
-  <div class="sub">généré le 31/05/2026 00:25</div>
+  <h1>SANT-ROCH PARIS &middot; Fréquentation</h1>
+  <div class="sub">généré le 31/05/2026 00:26 &middot; réservations (Mariana Tek)</div>
 </header>
 <div class="wrap">
-  <div class="note">ℹ️ Séances de <b>5 places max</b> : <b>complet = 5 personnes</b>, et « presque complet — reste X places » = <b>5 − X présents</b>. Mindbody n'affiche pas le compte exact quand il reste beaucoup de place (statut « disponible »). Le statut est <b>figé ~10 min avant chaque séance</b> (quasi définitif). L'historique se construit jour après jour.</div>
+  <div class="note">ℹ️ <b>Présents</b> = capacité &minus; places restantes, figé juste avant chaque séance. Le décompte <b>s'arrête à la première séance pas encore commencée</b> (les séances à venir, encore vides, sont exclues). Un robot capte le remplissage ~5 min avant chaque séance et l'historique s'accumule jour après jour.</div>
+  <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>
-  <div class="grid">
-    <div class="panel"><h2>Séances complètes par jour</h2><canvas id="cDay"></canvas></div>
-    <div class="panel"><h2>Créneaux qui affichent le plus « complet »</h2><div id="topHour" class="ranklist"></div></div>
+  <div class="filters">
+    <input id="q" placeholder="Rechercher (cours, coach...)">
+    <select id="fLieu"></select>
+    <select id="fCours"></select>
+    <select id="fCoach"></select>
   </div>
-  <div class="panel"><h2>Répartition des statuts par type de cours</h2><canvas id="cCours"></canvas></div>
+  <div class="grid">
+    <div class="panel"><h2>Présents par jour</h2><canvas id="cDay"></canvas></div>
+    <div class="panel"><h2>Présents par studio</h2><canvas id="cLieu"></canvas></div>
+  </div>
+  <div class="grid">
+    <div class="panel"><h2>Présents par type de cours</h2><canvas id="cCours"></canvas></div>
+    <div class="panel"><h2>Créneaux horaires les plus fréquentés</h2><div id="topHour" class="ranklist"></div></div>
+  </div>
+  <div class="panel"><h2>Comparatif des studios &mdash; qui performe (remplissage moyen)</h2><div id="cmpStudios" class="ranklist"></div></div>
+  <div class="panel"><h2>Coachs &laquo; stars &raquo; (moyenne de présents / cours)</h2><div id="topCoach" class="ranklist"></div></div>
   <div class="panel">
-    <h2>Détail des séances (statut figé)</h2>
-    <div class="filters">
-      <input id="q" placeholder="Rechercher (cours, date...)">
-      <select id="fStatut"></select>
-      <button id="btnExport" class="btn">Exporter en Excel</button>
-    </div>
+    <h2>Chiffre d'affaires estimé</h2>
+    <div style="margin:0 0 12px;color:var(--muted);font-size:13px">Prix moyen par séance
+      <input id="prix" type="number" min="0" step="0.5" value="20" style="width:90px;margin-left:8px;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:14px"> &euro; &middot; <span style="font-size:12px">CA = présents &times; prix (séances terminées, filtres appliqués)</span></div>
+    <div class="kpis" id="caKpis" style="margin:6px 0 18px"></div>
+    <canvas id="cCA"></canvas>
+  </div>
+  <div class="panel">
+    <h2>Détail des séances</h2>
+    <div class="filters"><button id="btnExport" class="btn">Exporter en Excel</button></div>
     <div class="tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
   </div>
-  <div class="foot">Source : sense-club.fr (widget Mindbody). Statut relevé près du début de chaque séance.</div>
+  <div class="foot">Source : santroch.marianatek.com (Mariana Tek) &middot; mise à jour auto ~5 min avant chaque séance.</div>
 </div>
 <script>
-const ALL=[{"capacite": 0, "coach": "Jessika", "cours": "Sense Flow", "date": "2026-05-28", "finie": true, "heure": "18:30", "jour": "Jeudi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-28 18:15", "statut": "disponible"}, {"capacite": 5, "coach": "Jessika", "cours": "Power Sense", "date": "2026-05-28", "finie": true, "heure": "19:30", "jour": "Jeudi", "lieu": "Sense-Club", "locked": true, "places_restantes": 1, "presents": 4, "releve": "2026-05-28 18:15", "statut": "presque complet"}, {"capacite": 0, "coach": "Kelly", "cours": "Booty Sense", "date": "2026-05-29", "finie": true, "heure": "08:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-29 06:31", "statut": "disponible"}, {"capacite": 5, "coach": "Kelly", "cours": "Power Sense", "date": "2026-05-29", "finie": true, "heure": "09:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": 1, "presents": 4, "releve": "2026-05-29 06:31", "statut": "presque complet"}, {"capacite": 0, "coach": "Liz", "cours": "Power Sense", "date": "2026-05-29", "finie": true, "heure": "11:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-29 10:04", "statut": "disponible"}, {"capacite": 0, "coach": "Liz", "cours": "Booty Sense", "date": "2026-05-29", "finie": true, "heure": "12:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-29 10:04", "statut": "disponible"}, {"capacite": 0, "coach": "Liz", "cours": "Power Sense", "date": "2026-05-29", "finie": true, "heure": "13:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-29 10:04", "statut": "disponible"}, {"capacite": 0, "coach": "Alexandre", "cours": "Power Sense", "date": "2026-05-29", "finie": true, "heure": "15:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-29 13:26", "statut": "disponible"}, {"capacite": 0, "coach": "Alexandre", "cours": "Booty Sense", "date": "2026-05-29", "finie": true, "heure": "16:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-29 13:26", "statut": "disponible"}, {"capacite": 0, "coach": "Alexandre", "cours": "Booty Sense", "date": "2026-05-29", "finie": true, "heure": "17:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-29 13:26", "statut": "disponible"}, {"capacite": 5, "coach": "Alexandre", "cours": "Power Sense", "date": "2026-05-29", "finie": true, "heure": "18:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": 1, "presents": 4, "releve": "2026-05-29 13:26", "statut": "presque complet"}, {"capacite": 0, "coach": "Alexandre - Head Coach Afficher les détails Sense Club Rejoindre la liste d'attente 19:00 50 min Booty Sense Alexandre", "cours": "Power Sense", "date": "2026-05-29", "finie": true, "heure": "18:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-29 00:54", "statut": "disponible"}, {"capacite": 0, "coach": "Alexandre", "cours": "Booty Sense", "date": "2026-05-29", "finie": true, "heure": "19:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-29 13:26", "statut": "disponible"}, {"capacite": 5, "coach": "Alexandre", "cours": "Power Sense", "date": "2026-05-29", "finie": true, "heure": "20:00", "jour": "Vendredi", "lieu": "Sense-Club", "locked": true, "places_restantes": 1, "presents": 4, "releve": "2026-05-29 18:26", "statut": "presque complet"}, {"capacite": 5, "coach": "Sarah D Afficher les détails Sense Club Rejoindre la liste d'attente 10:00 50 min Power Sense Sarah D Afficher les détails Sense Club Rejoindre la liste d'attente 11:00 50 min Power Sense Sarah D Afficher les détails Sense Club Rejoindre la liste d'attente 12:00 50 min Booty Sense Raphaëlle Afficher les détails Sense Club Rejoindre la liste d'attente 13:00 50 min Power Sense Raphaëlle", "cours": "Booty Sense", "date": "2026-05-30", "finie": true, "heure": "09:00", "jour": "Samedi", "lieu": "Sense-Club", "locked": true, "places_restantes": 1, "presents": 4, "releve": "2026-05-30 08:52", "statut": "presque complet"}, {"capacite": 5, "coach": "Raphaëlle Afficher les détails Sense Club Indisponible 13:00 50 min Power Sense Raphaëlle Afficher les détails Sense Club Indisponible 15:30 50 min Booty Sense Alexandre - Head Coach Afficher les détails Sense Club Rejoindre la liste d'attente 16:30 50 min Power Sense Alexandre", "cours": "Booty Sense", "date": "2026-05-30", "finie": true, "heure": "12:00", "jour": "Samedi", "lieu": "Sense-Club", "locked": true, "places_restantes": 1, "presents": 4, "releve": "2026-05-30 11:24", "statut": "presque complet"}, {"capacite": 5, "coach": "Alexandre - Head Coach Afficher les détails Sense Club Indisponible 16:30 50 min Power Sense Alexandre", "cours": "Booty Sense", "date": "2026-05-30", "finie": true, "heure": "15:30", "jour": "Samedi", "lieu": "Sense-Club", "locked": true, "places_restantes": 1, "presents": 4, "releve": "2026-05-30 14:47", "statut": "presque complet"}, {"capacite": 5, "coach": "Alexandre - Head Coach Afficher les détails Sense Club Rejoindre la liste d'attente 16:30 50 min Power Sense Alexandre", "cours": "Booty Sense", "date": "2026-05-30", "finie": true, "heure": "15:30", "jour": "Samedi", "lieu": "Sense-Club", "locked": true, "places_restantes": 1, "presents": 4, "releve": "2026-05-30 13:01", "statut": "presque complet"}, {"capacite": 0, "coach": "Alexandre", "cours": "Booty Sense", "date": "2026-05-30", "finie": true, "heure": "17:30", "jour": "Samedi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-30 16:44", "statut": "disponible"}, {"capacite": 0, "coach": "Alexandre", "cours": "Power Sense", "date": "2026-05-30", "finie": true, "heure": "18:30", "jour": "Samedi", "lieu": "Sense-Club", "locked": true, "places_restantes": null, "presents": null, "releve": "2026-05-30 18:11", "statut": "disponible"}, {"date": "2026-05-31", "jour": "Dimanche", "heure": "10:00", "lieu": "Sense-Club", "cours": "Power Sense", "coach": "Safia Afficher les détails Sense Club Rejoindre la liste d'attente 11:00 50 min Sense Flow Safia Afficher les détails Sense Club Rejoindre la liste d'attente 12:00 50 min Booty Sense Safia", "statut": "disponible", "places_restantes": null, "locked": false, "finie": false, "releve": "2026-05-31 00:25", "capacite": 0, "presents": null}, {"date": "2026-05-31", "jour": "Dimanche", "heure": "13:00", "lieu": "Sense-Club", "cours": "Sense Core Safia", "coach": "", "statut": "presque complet", "places_restantes": 1, "locked": false, "finie": false, "releve": "2026-05-31 00:25", "capacite": 5, "presents": 4}, {"date": "2026-05-31", "jour": "Dimanche", "heure": "15:30", "lieu": "Sense-Club", "cours": "Power Sense", "coach": "Hermione", "statut": "disponible", "places_restantes": null, "locked": false, "finie": false, "releve": "2026-05-31 00:25", "capacite": 0, "presents": null}, {"date": "2026-05-31", "jour": "Dimanche", "heure": "16:30", "lieu": "Sense-Club", "cours": "Booty Sense", "coach": "Hermione", "statut": "disponible", "places_restantes": null, "locked": false, "finie": false, "releve": "2026-05-31 00:25", "capacite": 0, "presents": null}, {"date": "2026-05-31", "jour": "Dimanche", "heure": "17:30", "lieu": "Sense-Club", "cours": "Power Sense", "coach": "Hermione", "statut": "disponible", "places_restantes": null, "locked": false, "finie": false, "releve": "2026-05-31 00:25", "capacite": 0, "presents": null}, {"date": "2026-05-31", "jour": "Dimanche", "heure": "18:30", "lieu": "Sense-Club", "cours": "Booty Sense", "coach": "Hermione", "statut": "disponible", "places_restantes": null, "locked": false, "finie": false, "releve": "2026-05-31 00:25", "capacite": 0, "presents": null}];
-const DATA=ALL.filter(r=>r.locked);   // on n'affiche que les statuts figés (definitifs)
+const ALL=[{"id": "8287", "date": "2026-05-28", "jour": "Jeudi", "heure": "07:45", "fin": "08:55", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Sound Healing", "coach": "Clo", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8297", "date": "2026-05-28", "jour": "Jeudi", "heure": "09:00", "fin": "10:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre : Silencieux", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8302", "date": "2026-05-28", "jour": "Jeudi", "heure": "09:15", "fin": "10:25", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre : Silencieux", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8307", "date": "2026-05-28", "jour": "Jeudi", "heure": "12:15", "fin": "13:15", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé 60 minutes", "coach": "Celine D’agostini", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8312", "date": "2026-05-28", "jour": "Jeudi", "heure": "13:30", "fin": "14:40", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8317", "date": "2026-05-28", "jour": "Jeudi", "heure": "13:45", "fin": "14:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8512", "date": "2026-05-28", "jour": "Jeudi", "heure": "16:45", "fin": "17:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8328", "date": "2026-05-28", "jour": "Jeudi", "heure": "17:00", "fin": "18:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8333", "date": "2026-05-28", "jour": "Jeudi", "heure": "18:30", "fin": "19:40", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Deborah", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8338", "date": "2026-05-28", "jour": "Jeudi", "heure": "19:45", "fin": "21:45", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre : Social", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8344", "date": "2026-05-28", "jour": "Jeudi", "heure": "20:00", "fin": "22:00", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre : Social", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8349", "date": "2026-05-28", "jour": "Jeudi", "heure": "20:30", "fin": "22:30", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre : Social", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8617", "date": "2026-05-29", "jour": "Vendredi", "heure": "10:30", "fin": "11:40", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre : Silencieux", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8621", "date": "2026-05-29", "jour": "Vendredi", "heure": "10:45", "fin": "11:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre : Silencieux", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8625", "date": "2026-05-29", "jour": "Vendredi", "heure": "12:15", "fin": "13:25", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Celine D’agostini", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8629", "date": "2026-05-29", "jour": "Vendredi", "heure": "13:30", "fin": "14:40", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8513", "date": "2026-05-29", "jour": "Vendredi", "heure": "16:45", "fin": "17:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8637", "date": "2026-05-29", "jour": "Vendredi", "heure": "17:00", "fin": "18:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "9114", "date": "2026-05-29", "jour": "Vendredi", "heure": "18:30", "fin": "19:40", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Celine D’agostini", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8642", "date": "2026-05-29", "jour": "Vendredi", "heure": "19:45", "fin": "20:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8646", "date": "2026-05-29", "jour": "Vendredi", "heure": "20:00", "fin": "21:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "9411", "date": "2026-05-30", "jour": "Samedi", "heure": "09:45", "fin": "10:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8382", "date": "2026-05-30", "jour": "Samedi", "heure": "10:00", "fin": "11:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "9412", "date": "2026-05-30", "jour": "Samedi", "heure": "10:15", "fin": "11:25", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8392", "date": "2026-05-30", "jour": "Samedi", "heure": "11:45", "fin": "12:55", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Adèle", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8402", "date": "2026-05-30", "jour": "Samedi", "heure": "13:00", "fin": "14:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8422", "date": "2026-05-30", "jour": "Samedi", "heure": "13:15", "fin": "14:25", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8432", "date": "2026-05-30", "jour": "Samedi", "heure": "13:30", "fin": "14:40", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8442", "date": "2026-05-30", "jour": "Samedi", "heure": "15:45", "fin": "16:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8452", "date": "2026-05-30", "jour": "Samedi", "heure": "16:00", "fin": "17:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8459", "date": "2026-05-30", "jour": "Samedi", "heure": "17:30", "fin": "18:40", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Deborah", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8467", "date": "2026-05-30", "jour": "Samedi", "heure": "18:45", "fin": "19:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8477", "date": "2026-05-30", "jour": "Samedi", "heure": "19:00", "fin": "20:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8561", "date": "2026-05-30", "jour": "Samedi", "heure": "19:15", "fin": "20:25", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8573", "date": "2026-05-30", "jour": "Samedi", "heure": "20:15", "fin": "21:25", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 0, "presents": 0, "finie": true, "releve": "2026-05-31 00:26"}, {"id": "8383", "date": "2026-05-31", "jour": "Dimanche", "heure": "10:00", "fin": "11:10", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Deborah", "capacite": 40, "presents": 18, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8393", "date": "2026-05-31", "jour": "Dimanche", "heure": "11:45", "fin": "12:55", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Deborah", "capacite": 38, "presents": 29, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8403", "date": "2026-05-31", "jour": "Dimanche", "heure": "13:00", "fin": "14:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 10, "presents": 10, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8423", "date": "2026-05-31", "jour": "Dimanche", "heure": "13:15", "fin": "14:25", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 10, "presents": 10, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8433", "date": "2026-05-31", "jour": "Dimanche", "heure": "13:30", "fin": "14:40", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 10, "presents": 2, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8443", "date": "2026-05-31", "jour": "Dimanche", "heure": "15:45", "fin": "16:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 20, "presents": 17, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8453", "date": "2026-05-31", "jour": "Dimanche", "heure": "16:00", "fin": "17:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 10, "presents": 10, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8484", "date": "2026-05-31", "jour": "Dimanche", "heure": "17:30", "fin": "18:40", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Clo", "capacite": 38, "presents": 38, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8468", "date": "2026-05-31", "jour": "Dimanche", "heure": "18:45", "fin": "19:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 10, "presents": 10, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8478", "date": "2026-05-31", "jour": "Dimanche", "heure": "19:00", "fin": "20:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 10, "presents": 9, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8562", "date": "2026-05-31", "jour": "Dimanche", "heure": "19:15", "fin": "20:25", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 10, "presents": 10, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8160", "date": "2026-06-01", "jour": "Lundi", "heure": "10:30", "fin": "11:40", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre : Silencieux", "coach": "Guide Rituel", "capacite": 20, "presents": 3, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8493", "date": "2026-06-01", "jour": "Lundi", "heure": "10:40", "fin": "11:50", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre : Silencieux", "coach": "Guide Rituel", "capacite": 15, "presents": 0, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8168", "date": "2026-06-01", "jour": "Lundi", "heure": "12:15", "fin": "13:15", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé 60 minutes", "coach": "Deborah", "capacite": 38, "presents": 7, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8514", "date": "2026-06-01", "jour": "Lundi", "heure": "16:45", "fin": "17:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 10, "presents": 4, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8180", "date": "2026-06-01", "jour": "Lundi", "heure": "17:00", "fin": "18:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "", "capacite": 20, "presents": 4, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8184", "date": "2026-06-01", "jour": "Lundi", "heure": "18:30", "fin": "19:40", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Seibel", "capacite": 38, "presents": 25, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8188", "date": "2026-06-01", "jour": "Lundi", "heure": "20:15", "fin": "21:25", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Celine D’agostini", "capacite": 38, "presents": 17, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8193", "date": "2026-06-02", "jour": "Mardi", "heure": "08:00", "fin": "09:10", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Adèle", "capacite": 38, "presents": 6, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8201", "date": "2026-06-02", "jour": "Mardi", "heure": "09:00", "fin": "10:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre : Silencieux", "coach": "Guide Rituel", "capacite": 10, "presents": 4, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "9144", "date": "2026-06-02", "jour": "Mardi", "heure": "09:15", "fin": "10:25", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre : Silencieux", "coach": "Guide Rituel", "capacite": 15, "presents": 2, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8212", "date": "2026-06-02", "jour": "Mardi", "heure": "12:15", "fin": "13:15", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé 60 minutes", "coach": "Lilie", "capacite": 38, "presents": 6, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8217", "date": "2026-06-02", "jour": "Mardi", "heure": "13:30", "fin": "14:40", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 10, "presents": 0, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8222", "date": "2026-06-02", "jour": "Mardi", "heure": "13:45", "fin": "14:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 20, "presents": 0, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8525", "date": "2026-06-02", "jour": "Mardi", "heure": "18:30", "fin": "19:40", "lieu": "Sant Roch Paris — Rituel Guidé", "cours": "Rituel Guidé : Signature", "coach": "Clo", "capacite": 38, "presents": 19, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8232", "date": "2026-06-02", "jour": "Mardi", "heure": "19:45", "fin": "20:55", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 10, "presents": 8, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8237", "date": "2026-06-02", "jour": "Mardi", "heure": "20:00", "fin": "21:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "", "capacite": 20, "presents": 4, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8536", "date": "2026-06-02", "jour": "Mardi", "heure": "21:00", "fin": "22:10", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 10, "presents": 1, "finie": false, "releve": "2026-05-31 00:26"}, {"id": "8541", "date": "2026-06-02", "jour": "Mardi", "heure": "21:15", "fin": "22:25", "lieu": "Sant Roch Paris — Sauna & Bath", "cours": "Rituel Libre 70'", "coach": "Guide Rituel", "capacite": 20, "presents": 1, "finie": false, "releve": "2026-05-31 00:26"}];
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
-const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+const lkey=r=>r.date+'|'+r.heure+'|'+r.lieu+'|'+r.cours+'|'+(r.coach||'');
+(function(){const m={};ALL.forEach(r=>m[lkey(r)]=r);const u=Object.values(m);if(u.length!==ALL.length){ALL.length=0;u.forEach(r=>ALL.push(r));}})();
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
-const STC={'complet':'#e07a6f','presque complet':'#e6c14d','disponible':'#6fcf97'};
+const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
+const fillColor=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
 function fmtJ(iso){const p=iso.split('-');return `${p[2]}/${p[1]}/${p[0]}`;}
-Chart.defaults.color='#a89fc4';Chart.defaults.borderColor='#322a52';Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
+Chart.defaults.color='#a89d9d';Chart.defaults.borderColor='#33333d';Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const ACC=css('--accent')||'#e2231a',ACC2=css('--accent2')||'#ff6b5e';
+let charts={};
+const isNarrow=()=>matchMedia('(max-width:600px)').matches;
 
-const CAP=5;
-const nComplet=DATA.filter(r=>r.statut==='complet').length;
-const nPresque=DATA.filter(r=>r.statut==='presque complet').length;
-const nDispo=DATA.filter(r=>r.statut==='disponible').length;
-const jours=new Set(DATA.map(r=>r.date)).size;
-const known=DATA.filter(r=>r.presents!=null);
-const totPres=known.reduce((s,r)=>s+r.presents,0);
-const avgPres=known.length?totPres/known.length:0;
-document.getElementById('kpis').innerHTML=[
-  ['Séances suivies',nf(DATA.length)],
-  ['Présents (total connu)',nf(totPres)],
-  ['Moy. présents / séance',known.length?avgPres.toFixed(1)+' / '+CAP:'—'],
-  ['Complètes (5/5)',nf(nComplet)+(DATA.length?` (${Math.round(100*nComplet/DATA.length)}%)`:'')],
-].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
+// on compte tout ce qui a DÉMARRÉ ; on s'arrête à la 1re séance à venir (calcul live)
+const started=r=>new Date(r.date+'T'+(r.heure||'00:00')+':00')<=new Date();
+let FINIES=ALL.filter(r=>started(r)&&(r.capacite||0)>0);
+const selLieu=document.getElementById('fLieu'),selCours=document.getElementById('fCours'),selCoach=document.getElementById('fCoach');
+function fillSel(sel,vals,label){sel.innerHTML='';sel.add(new Option(label,''));[...new Set(vals)].filter(Boolean).sort().forEach(v=>sel.add(new Option(v,v)));}
+fillSel(selLieu,ALL.map(r=>r.lieu),'Tous les studios');
+fillSel(selCours,ALL.map(r=>r.cours),'Tous les cours');
+fillSel(selCoach,ALL.map(r=>r.coach),'Tous les coachs');
 
-// séances complètes par jour
-const byDay={};DATA.forEach(r=>{byDay[r.date]=byDay[r.date]||{c:0,t:0};byDay[r.date].t++;if(r.statut==='complet')byDay[r.date].c++;});
-const days=Object.keys(byDay).sort();
-new Chart(cDay,{type:'bar',data:{labels:days.map(d=>d.slice(8)+'/'+d.slice(5,7)),
-  datasets:[{label:'complètes',data:days.map(d=>byDay[d].c),backgroundColor:'#e07a6f'},
-            {label:'autres',data:days.map(d=>byDay[d].t-byDay[d].c),backgroundColor:'#9b7ff0'}]},
-  options:{plugins:{legend:{display:true}},scales:{x:{stacked:true},y:{stacked:true,beginAtZero:true,ticks:{callback:v=>nf(v)}}}}});
-
-// créneaux les plus "complet"
-const byH={};DATA.forEach(r=>{if(r.statut==='complet'){byH[r.heure]=(byH[r.heure]||0)+1;}});
-const hrs=Object.entries(byH).sort((a,b)=>b[1]-a[1]).slice(0,8);
-const mx=hrs.length?hrs[0][1]:0;
-document.getElementById('topHour').innerHTML = hrs.length? hrs.map(([h,v])=>
-  `<div class="rk"><span class="lbl">${h}</span><span class="track"><span style="width:${mx?Math.round(100*v/mx):0}%"></span></span><span class="val">${v}×</span></div>`).join('')
-  : '<div style="color:var(--muted)">Pas encore de séance complète enregistrée.</div>';
-
-// statuts par type de cours
-const byC={};DATA.forEach(r=>{const k=r.cours||'?';byC[k]=byC[k]||{'complet':0,'presque complet':0,'disponible':0};byC[k][r.statut]++;});
-const cours=Object.keys(byC).sort((a,b)=>(byC[b].complet+byC[b]['presque complet'])-(byC[a].complet+byC[a]['presque complet']));
-new Chart(cCours,{type:'bar',data:{labels:cours,datasets:[
-  {label:'complet',data:cours.map(c=>byC[c].complet),backgroundColor:STC.complet},
-  {label:'presque complet',data:cours.map(c=>byC[c]['presque complet']),backgroundColor:STC['presque complet']},
-  {label:'disponible',data:cours.map(c=>byC[c].disponible),backgroundColor:STC.disponible}]},
-  options:{indexAxis:'y',plugins:{legend:{display:true}},scales:{x:{stacked:true,beginAtZero:true,ticks:{callback:v=>nf(v)}},y:{stacked:true}}}});
-
-// table
-const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['cours','Cours'],['statut','Statut'],['presents','Présents'],['places_restantes','Places restantes']];
-document.querySelector('#tbl thead').innerHTML='<tr>'+cols.map(c=>`<th>${c[1]}</th>`).join('')+'</tr>';
-const sel=document.getElementById('fStatut');
-['','complet','presque complet','disponible'].forEach(s=>sel.add(new Option(s||'Tous les statuts',s)));
-let currentRows=[];
-function render(){
-  const q=document.getElementById('q').value.toLowerCase(), fs=sel.value;
-  let rows=DATA.filter(r=>(!fs||r.statut===fs)&&(!q||(r.cours+' '+r.date).toLowerCase().includes(q)));
-  rows.sort((a,b)=>(a.date+a.heure)<(b.date+b.heure)?1:-1);
-  currentRows=rows;
-  document.querySelector('#tbl tbody').innerHTML=rows.map(r=>
-    `<tr><td>${fmtJ(r.date)}</td><td>${r.jour}</td><td>${r.heure}</td><td>${r.cours}</td>`
-    +`<td><span class="pill" style="background:${STC[r.statut]}33;color:${STC[r.statut]}">${r.statut}</span></td>`
-    +`<td>${r.presents==null?'—':r.presents+' / '+CAP}</td>`
-    +`<td>${r.places_restantes==null?'—':r.places_restantes}</td></tr>`).join('');
+function current(){
+  const q=document.getElementById('q').value.toLowerCase();
+  return FINIES.filter(r=>(!selLieu.value||r.lieu===selLieu.value)
+    &&(!selCours.value||r.cours===selCours.value)
+    &&(!selCoach.value||r.coach===selCoach.value)
+    &&(!q||((r.cours+' '+r.coach+' '+r.lieu).toLowerCase().includes(q))));
 }
-['q'].forEach(id=>document.getElementById(id).addEventListener('input',render));
-sel.addEventListener('change',render);
+function mkChart(id,cfg){if(charts[id])charts[id].destroy();charts[id]=new Chart(document.getElementById(id),cfg);}
+
+function render(){
+  const D=current();
+  const totPres=D.reduce((s,r)=>s+r.presents,0);
+  const totCap=D.reduce((s,r)=>s+r.capacite,0);
+  const avg=D.length?totPres/D.length:0;
+  const nbStudios=new Set(D.map(r=>r.lieu)).size||1;
+  const dts=[...new Set(D.map(r=>r.date))].sort(),pj=dts.length;
+  document.getElementById('periode').textContent = pj
+    ? `📅 Période étudiée : du ${fmtJ(dts[0])} au ${fmtJ(dts[pj-1])} · ${pj} jour${pj>1?'s':''} · ${nbStudios} studio${nbStudios>1?'s':''} · ${nf(D.length)} séances comptées`
+    : 'Aucune séance commencée sur cette sélection.';
+  document.getElementById('kpis').innerHTML=[
+    ['Présents (total)',nf(totPres)],
+    ['Studios',nf(nbStudios)],
+    ['Présents / studio',nf(totPres/nbStudios)],
+    ['Séances comptées',nf(D.length)],
+    ['Moyenne / séance',D.length?avg.toFixed(1):'—'],
+    ['Taux de remplissage',totCap?Math.round(100*totPres/totCap)+'%':'—'],
+  ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
+
+  const byDay={};D.forEach(r=>byDay[r.date]=(byDay[r.date]||0)+r.presents);
+  const days=Object.keys(byDay).sort();
+  mkChart('cDay',{type:'bar',data:{labels:days.map(d=>d.slice(8)+'/'+d.slice(5,7)),
+    datasets:[{label:'présents',data:days.map(d=>byDay[d]),backgroundColor:ACC}]},
+    options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>nf(v)}}}}});
+
+  const prix=parseFloat(document.getElementById('prix').value)||0;
+  try{localStorage.setItem('santroch_prix',prix);}catch(e){}
+  const nbJours=days.length||1,totalCA=totPres*prix;
+  document.getElementById('caKpis').innerHTML=[
+    ['CA total estimé',eur(totalCA)],
+    ['CA / studio (moy.)',eur(totalCA/nbStudios)],
+    ['CA / jour (moy.)',eur(totalCA/nbJours)],
+    ['CA / séance (moy.)',eur(D.length?totalCA/D.length:0)],
+  ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
+  mkChart('cCA',{type:'bar',data:{labels:days.map(d=>d.slice(8)+'/'+d.slice(5,7)),
+    datasets:[{data:days.map(d=>byDay[d]*prix),backgroundColor:'#5fcf8a'}]},
+    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>eur(c.parsed.y)}}},
+      scales:{y:{beginAtZero:true,ticks:{callback:v=>v.toLocaleString('fr-FR')+' €'}}}}});
+
+  const byL={};D.forEach(r=>byL[r.lieu]=(byL[r.lieu]||0)+r.presents);
+  const lieux=Object.keys(byL).sort((a,b)=>byL[b]-byL[a]);
+  mkChart('cLieu',{type:'doughnut',data:{labels:lieux,datasets:[{data:lieux.map(l=>byL[l]),
+    backgroundColor:[ACC,ACC2,'#5fcf8a','#e6c14d','#e07a6f','#b07ff0','#f0a26f','#6fd0e0','#e06f9c','#9ce06f','#6f9cff']}]},
+    options:{plugins:{legend:{position:isNarrow()?'bottom':'right'}}}});
+
+  const byC={};D.forEach(r=>byC[r.cours]=(byC[r.cours]||0)+r.presents);
+  const cours=Object.keys(byC).sort((a,b)=>byC[b]-byC[a]);
+  mkChart('cCours',{type:'bar',data:{labels:cours,datasets:[{label:'présents',data:cours.map(c=>byC[c]),backgroundColor:ACC2}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{callback:v=>nf(v)}}}}});
+
+  const byH={};D.forEach(r=>{byH[r.heure]=byH[r.heure]||{p:0,n:0};byH[r.heure].p+=r.presents;byH[r.heure].n++;});
+  const hrs=Object.entries(byH).sort((a,b)=>b[1].p-a[1].p).slice(0,8);
+  const mxH=hrs.length?hrs[0][1].p:0;
+  document.getElementById('topHour').innerHTML=hrs.length?hrs.map(([h,o])=>
+    `<div class="rk"><span class="lbl">${h}</span><span class="track"><span style="width:${mxH?Math.round(100*o.p/mxH):0}%"></span></span><span class="val">${nf(o.p)} (${nf(o.p/o.n)}/séance)</span></div>`).join('')
+    :'<div style="color:var(--muted)">Pas encore de données.</div>';
+
+  const byS={};D.forEach(r=>{byS[r.lieu]=byS[r.lieu]||{p:0,c:0,n:0};byS[r.lieu].p+=r.presents;byS[r.lieu].c+=r.capacite;byS[r.lieu].n++;});
+  const studios=Object.entries(byS).map(([k,o])=>[k,o.c?o.p/o.c:0,o.p/o.n,o.n]).sort((a,b)=>b[1]-a[1]);
+  document.getElementById('cmpStudios').innerHTML=studios.length?studios.map(([k,taux,moy,n])=>
+    `<div class="rk"><span class="lbl">${k}</span><span class="track"><span style="width:${Math.round(100*taux)}%;background:${fillColor(taux)}"></span></span><span class="val">${Math.round(100*taux)}% &middot; ${moy.toFixed(1)}/séance &middot; ${n} cours</span></div>`).join('')
+    :'<div style="color:var(--muted)">Pas encore de données.</div>';
+
+  const byCo={};D.forEach(r=>{if(!r.coach)return;byCo[r.coach]=byCo[r.coach]||{p:0,n:0};byCo[r.coach].p+=r.presents;byCo[r.coach].n++;});
+  const coachs=Object.entries(byCo).map(([k,o])=>[k,o.p/o.n,o.n]).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  const mxC=coachs.length?coachs[0][1]:0;
+  document.getElementById('topCoach').innerHTML=coachs.length?coachs.map(([k,m,n])=>
+    `<div class="rk"><span class="lbl">${k}</span><span class="track"><span style="width:${mxC?Math.round(100*m/mxC):0}%"></span></span><span class="val">${m.toFixed(1)}/séance &middot; ${n} cours</span></div>`).join('')
+    :'<div style="color:var(--muted)">Pas encore de données.</div>';
+
+  renderTable(D);
+}
+
+const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['lieu','Studio'],['cours','Cours'],['coach','Coach'],['presents','Présents'],['capacite','Capacité']];
+document.querySelector('#tbl thead').innerHTML='<tr>'+cols.map(c=>`<th>${c[1]}</th>`).join('')+'</tr>';
+let currentRows=[];
+function renderTable(D){
+  let rows=[...D].sort((a,b)=>(a.date+a.heure)<(b.date+b.heure)?1:-1);
+  currentRows=rows;
+  document.querySelector('#tbl tbody').innerHTML=rows.map(r=>{
+    const t=r.capacite?r.presents/r.capacite:0;
+    return `<tr><td>${fmtJ(r.date)}</td><td>${r.jour}</td><td>${r.heure}</td><td>${r.lieu}</td><td>${r.cours}</td><td>${r.coach||'—'}</td>`
+      +`<td><b>${r.presents}</b> / ${r.capacite}<span class="bar" style="width:${Math.round(40*t)}px;background:${fillColor(t)}"></span></td>`
+      +`<td>${r.capacite}</td></tr>`;}).join('');
+}
+['q','prix'].forEach(id=>document.getElementById(id).addEventListener('input',render));
+[selLieu,selCours,selCoach].forEach(s=>s.addEventListener('change',render));
+const _sp=(()=>{try{return localStorage.getItem('santroch_prix');}catch(e){return null;}})();
+if(_sp)document.getElementById('prix').value=_sp;
 document.getElementById('btnExport').addEventListener('click',()=>{
-  const c2=[['date','Date'],['jour','Jour'],['heure','Heure'],['cours','Cours'],['statut','Statut'],['presents','Présents'],['places_restantes','Places restantes']];
   const esc=v=>{v=(''+v).replace(/"/g,'""');return /[";\n]/.test(v)?`"${v}"`:v;};
-  const lines=[c2.map(c=>c[1]).join(';')];
-  currentRows.forEach(r=>lines.push(c2.map(c=>esc(c[0]==='date'?fmtJ(r.date):(r[c[0]]==null?'':r[c[0]]))).join(';')));
+  const lines=[cols.map(c=>c[1]).join(';')];
+  currentRows.forEach(r=>lines.push(cols.map(c=>esc(c[0]==='date'?fmtJ(r.date):(r[c[0]]==null?'':r[c[0]]))).join(';')));
   const blob=new Blob(['﻿'+lines.join('\r\n')],{type:'text/csv;charset=utf-8;'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='senseclub_seances.csv';document.body.appendChild(a);a.click();a.remove();
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='santroch_seances.csv';document.body.appendChild(a);a.click();a.remove();
 });
 render();
 </script>

@@ -51,6 +51,22 @@ def fetch_today():
     return json.loads(res.stdout)
 
 
+# Sense-Club : le widget colle "Cours Coach" dans une seule chaîne -> on sépare
+KNOWN_COURSES = ["Power Sense", "Booty Sense", "Sense Flow", "Sense Stretch",
+                 "Power Yoga", "Sense Yoga", "Sense Mat", "Sense Barre"]
+
+
+def split_cours_coach(text):
+    t = (text or "").strip()
+    for p in KNOWN_COURSES:
+        if t.lower().startswith(p.lower()):
+            coach = t[len(p):].strip(" -")
+            # nettoie "- Head Coach" et titres similaires
+            coach = re.sub(r"\s*-?\s*Head Coach\s*$", "", coach, flags=re.I).strip(" -")
+            return p, coach
+    return t, ""
+
+
 def normalize(brut):
     b = brut.lower()
     if "liste d'attente" in b or b.strip() == "complet":
@@ -94,12 +110,14 @@ def capture():
             continue
         lock = now >= start - dt.timedelta(minutes=LOCK_MIN)
         pres_est = presents(statut, places)  # None si "disponible" (inconnu)
+        cours_clean, coach_clean = split_cours_coach(s["cours"])
+        # clé : on garde le cours BRUT pour rester compatible avec l'historique
         store[key] = {
             "date": today.isoformat(), "jour": jour, "heure": heure,
             "lieu": "Sense-Club",
-            "cours": s["cours"], "statut": statut, "places_restantes": places,
+            "cours": cours_clean, "coach": coach_clean,
+            "statut": statut, "places_restantes": places,
             "locked": lock, "finie": lock, "releve": now.strftime("%Y-%m-%d %H:%M"),
-            # capacité = 5 quand on a un nombre dérivable, sinon 0 (exclu du comparateur)
             "capacite": CAPACITE if pres_est is not None else 0,
             "presents": pres_est if pres_est is not None else 0,
         }
@@ -122,7 +140,7 @@ def capture():
     return store
 
 
-FIELDS = ["date", "jour", "heure", "cours", "statut", "places_restantes", "presents", "locked", "releve"]
+FIELDS = ["date", "jour", "heure", "cours", "coach", "statut", "places_restantes", "presents", "locked", "releve"]
 
 
 def enrich(rows):

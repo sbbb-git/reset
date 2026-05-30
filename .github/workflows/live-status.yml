@@ -44,6 +44,9 @@ jobs:
       - name: Le 33 Foch (Mindbody, statut)
         run: python3 le33foch_scrape.py
         continue-on-error: true
+      - name: Sant-Roch (Mariana Tek)
+        run: python3 santroch_scrape.py
+        continue-on-error: true
 
       - name: Commit si changement
         run: |
@@ -54,7 +57,8 @@ jobs:
                   anybuddy_data.json anybuddy_creneaux.csv anybuddy.html \
                   banote_data.json banote_seances.csv banote.html \
                   dna_data.json dna_seances.csv dna.html \
-                  le33foch_data.json le33foch_seances.csv le33foch.html
+                  le33foch_data.json le33foch_seances.csv le33foch.html \
+                  santroch_data.json santroch_seances.csv santroch.html
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
