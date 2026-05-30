@@ -45,6 +45,15 @@
   .val{color:var(--muted);}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
   @media(max-width:820px){.grid2{grid-template-columns:1fr;}}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;}
+  .card{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;}
+  .card .ttl{display:flex;align-items:center;gap:8px;font-weight:800;font-size:15px;}
+  .card .badge{font-size:10.5px;color:var(--muted);background:var(--line);padding:2px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.4px;}
+  .card .plat{font-size:11px;color:var(--muted);}
+  .card .row{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);}
+  .card .row b{color:var(--text);font-weight:700;}
+  .card .taux{font-size:18px;font-weight:800;}
+  .card .upd{font-size:10.5px;color:var(--muted);margin-top:2px;}
   @media(max-width:600px){header{padding:16px 14px 4px;}.wrap{padding:0 12px 30px;}.kpis{grid-template-columns:1fr 1fr;}th,td{padding:7px 6px;font-size:12px;}}
   @media(max-width:600px){canvas{max-height:200px!important}th,td{padding:7px 6px;font-size:12px}.panel{padding:15px 14px}.kpi .v{font-size:20px}.note{font-size:12px}.ctrl{font-size:12px;gap:7px}.pinp{width:64px}}
 </style>
@@ -86,6 +95,11 @@
   <div class="kpis" id="kpis"></div>
 
   <div class="panel">
+    <h2>Annuaire des marques</h2>
+    <div class="cards" id="annuaire"></div>
+  </div>
+
+  <div class="panel">
     <h2>Classement des marques</h2>
     <div style="overflow-x:auto"><table id="tblBrand"><thead></thead><tbody></tbody></table></div>
   </div>
@@ -99,23 +113,23 @@
 </div>
 <script>
 const BRANDS=[
-  {key:"reset",label:"Re-SET",color:"#d98b63",cat:"Bootcamp"},
-  {key:"punch",label:"Punch",color:"#263fff",cat:"Boxe"},
-  {key:"dynamo",label:"Dynamo",color:"#faa619",cat:"Cycling"},
-  {key:"riise",label:"Riise",color:"#c25a3f",cat:"Yoga / Wellness"},
-  {key:"thenewme",label:"The New Me",color:"#b8895e",cat:"Pilates"},
-  {key:"lecercle",label:"Le Cercle",color:"#d4453a",cat:"Boxe"},
-  {key:"spacecycle",label:"Space Cycle",color:"#16b3c6",cat:"Cycling"},
-  {key:"poses",label:"Poses",color:"#b06a8f",cat:"Pilates"},
-  {key:"barrys",label:"Barry's",color:"#e2231a",cat:"Bootcamp"},
-  {key:"episod",label:"Episod",color:"#e8c14d",cat:"Bootcamp"},
-  {key:"belly",label:"Belly",color:"#e0699b",cat:"Pilates"},
-  {key:"athletx",label:"AthletX",color:"#e0322c",cat:"Bootcamp"},
-  {key:"senseclub",label:"Sense-Club",color:"#9b7ff0",cat:"Pilates"},
-  {key:"dna",label:"DNA Pilates",color:"#c9a24b",cat:"Pilates"},
-  {key:"le33foch",label:"Le 33 Foch",color:"#c4a361",cat:"Bootcamp"},
-  {key:"banote",label:"Banote",color:"#c9a24b",cat:"Pilates"},
-  {key:"santroch",label:"Sant-Roch",color:"#4a7c7e",cat:"Yoga / Wellness"},
+  {key:"reset",label:"Re-SET",color:"#d98b63",cat:"Bootcamp",plat:"bsport (chiffres exacts)"},
+  {key:"punch",label:"Punch",color:"#263fff",cat:"Boxe",plat:"Mindbody proxy (exact)"},
+  {key:"dynamo",label:"Dynamo",color:"#faa619",cat:"Cycling",plat:"Mindbody proxy (exact)"},
+  {key:"riise",label:"Riise",color:"#c25a3f",cat:"Yoga / Wellness",plat:"Mindbody proxy (exact)"},
+  {key:"thenewme",label:"The New Me",color:"#b8895e",cat:"Pilates",plat:"bsport ×27 (exact)"},
+  {key:"lecercle",label:"Le Cercle",color:"#d4453a",cat:"Boxe",plat:"bsport (exact)"},
+  {key:"spacecycle",label:"Space Cycle",color:"#16b3c6",cat:"Cycling",plat:"bsport (exact)"},
+  {key:"poses",label:"Poses",color:"#b06a8f",cat:"Pilates",plat:"bsport (exact)"},
+  {key:"barrys",label:"Barry's",color:"#e2231a",cat:"Bootcamp",plat:"Mariana Tek (exact)"},
+  {key:"episod",label:"Episod",color:"#e8c14d",cat:"Bootcamp",plat:"resamania (plan de salle)"},
+  {key:"belly",label:"Belly",color:"#e0699b",cat:"Pilates",plat:"bsport ×5 (exact)"},
+  {key:"athletx",label:"AthletX",color:"#e0322c",cat:"Bootcamp",plat:"bsport ×2 (exact)"},
+  {key:"senseclub",label:"Sense-Club",color:"#9b7ff0",cat:"Pilates",plat:"Mindbody widget (statut)"},
+  {key:"dna",label:"DNA Pilates",color:"#c9a24b",cat:"Pilates",plat:"Mindbody widget (statut)"},
+  {key:"le33foch",label:"Le 33 Foch",color:"#c4a361",cat:"Bootcamp",plat:"Mindbody widget (statut)"},
+  {key:"banote",label:"Banote",color:"#c9a24b",cat:"Pilates",plat:"Mindbody widget (statut)"},
+  {key:"santroch",label:"Sant-Roch",color:"#4a7c7e",cat:"Yoga / Wellness",plat:"Mariana Tek (exact)"},
 ];
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
 const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
@@ -134,8 +148,8 @@ async function load(){
       const d=await r.json();
       const arr=Array.isArray(d)?d:Object.values(d);
       return arr.filter(x=>x.finie && (x.capacite||0)>0).map(x=>({
-        brand:b.key,label:b.label,color:b.color,cat:b.cat,
-        lieu:(x.lieu||b.label),date:x.date||'',
+        brand:b.key,label:b.label,color:b.color,cat:b.cat,plat:b.plat,
+        lieu:(x.lieu||b.label),date:x.date||'',releve:x.releve||'',
         presents:x.presents||0,capacite:x.capacite||0}));
     }catch(e){return [];}
   }));
@@ -157,7 +171,8 @@ function filtered(){
 
 function agg(rows,keyFn){
   const m={};
-  rows.forEach(r=>{const k=keyFn(r);(m[k]=m[k]||{p:0,c:0,n:0,lieux:new Set(),color:r.color,label:r.label,brand:r.label,cat:r.cat})
+  rows.forEach(r=>{const k=keyFn(r);(m[k]=m[k]||{p:0,c:0,n:0,lieux:new Set(),color:r.color,label:r.label,brand:r.label,cat:r.cat,plat:r.plat,upd:''})
+    ;if((r.releve||'')>m[k].upd)m[k].upd=r.releve;
     ;m[k].p+=r.presents;m[k].c+=r.capacite;m[k].n++;m[k].lieux.add(r.lieu);});
   return m;
 }
@@ -166,8 +181,8 @@ function render(){
   const D=filtered();
   // classement marques (avec prix PAR MARQUE)
   const bm=agg(D,r=>r.brand);
-  let brands=Object.entries(bm).map(([k,o])=>({key:k,label:o.label,color:o.color,cat:o.cat||'—',
-    studios:o.lieux.size,seances:o.n,pres:o.p,
+  let brands=Object.entries(bm).map(([k,o])=>({key:k,label:o.label,color:o.color,cat:o.cat||'—',plat:o.plat||'',
+    upd:o.upd||'',studios:o.lieux.size,seances:o.n,pres:o.p,
     moy:o.n?o.p/o.n:0,taux:o.c?o.p/o.c:0,ca:o.p*priceOf(k)}));
   // inventaire seulement (agréger présents/taux/CA de marques différentes n'a pas de sens)
   const studios=new Set(D.map(r=>r.label+' · '+r.lieu)).size;
@@ -175,6 +190,7 @@ function render(){
     ['Marques',nf(brands.length)],['Studios',nf(studios)],['Séances suivies',nf(D.length)],
   ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
 
+  renderAnnuaire(brands);
   renderBrandTable(brands);
 
   // studios (tous, toutes marques)
@@ -189,6 +205,21 @@ function render(){
   document.getElementById('flopTitle').textContent='🐌 Studios à la traîne · '+noms[metric];
   renderStudios('topStudios',studs.slice(0,15),metric);
   renderStudios('flopStudios',studs.slice(-15).reverse(),metric);
+}
+
+function renderAnnuaire(brands){
+  const list=[...brands].sort((a,b)=>b.taux-a.taux);
+  document.getElementById('annuaire').innerHTML=list.map(b=>
+    `<div class="card" style="border-left-color:${b.color}">`
+    +`<div class="ttl"><span class="dot" style="background:${b.color}"></span>${b.label}<span class="badge">${b.cat}</span></div>`
+    +`<div class="plat">${b.plat||''}</div>`
+    +`<div class="taux" style="color:${fill(b.taux)}">${Math.round(100*b.taux)}% &middot; ${b.moy.toFixed(1)}/séance</div>`
+    +`<div class="row"><span>Studios</span><b>${b.studios}</b></div>`
+    +`<div class="row"><span>Séances</span><b>${nf(b.seances)}</b></div>`
+    +`<div class="row"><span>Présents total</span><b>${nf(b.pres)}</b></div>`
+    +`<div class="row"><span>CA estimé</span><b>${eur(b.ca)}</b></div>`
+    +(b.upd?`<div class="upd">Dernier relevé : ${b.upd}</div>`:'')
+    +`</div>`).join('');
 }
 
 let sortKey='taux',sortDir=-1;
