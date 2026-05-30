@@ -66,7 +66,7 @@
 <body>
 <header>
   <h1>EPISOD &middot; Fréquentation</h1>
-  <div class="sub">généré le 30/05/2026 23:37 &middot; remplissage des plans de salle (resamania)</div>
+  <div class="sub">généré le 31/05/2026 00:20 &middot; remplissage des plans de salle (resamania)</div>
 </header>
 <div class="wrap">
   <div class="note">ℹ️ Chiffres lus sur les plans de salle de chaque séance : <b>présents</b> = places prises, <b>capacité</b> = places totales. Le décompte <b>s'arrête à la première séance pas encore commencée</b> (les séances à venir, encore en remplissage, sont exclues). Un robot capte le remplissage ~5 min avant chaque séance ; l'historique s'accumule jour après jour. Les séances sans plan de salle (capacité 0) sont ignorées.</div>
@@ -121,7 +121,7 @@ const isNarrow=()=>matchMedia('(max-width:600px)').matches;
 const valid=r=>r.capacite>0;
 // on compte ce qui a DÉMARRÉ ; on s'arrête à la 1re séance à venir (calcul live)
 const started=r=>new Date(r.date+'T'+(r.heure||'00:00')+':00')<=new Date();
-let FINIES=ALL.filter(r=>valid(r)&&started(r));
+let FINIES=ALL.filter(r=>valid(r)&&started(r)&&(r.capacite||0)>0);
 const selLieu=document.getElementById('fLieu'),selCours=document.getElementById('fCours'),selCoach=document.getElementById('fCoach');
 function fillSel(sel,vals,label){sel.innerHTML='';sel.add(new Option(label,''));[...new Set(vals)].filter(Boolean).sort().forEach(v=>sel.add(new Option(v,v)));}
 fillSel(selLieu,ALL.filter(valid).map(r=>r.lieu),'Tous les studios');

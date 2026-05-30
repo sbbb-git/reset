@@ -1,38 +1,43 @@
 #!/usr/bin/env python3
-"""Banote (banoteclub.com) — fréquentation des 3 lieux (Mindbody healcode).
+"""Le 33 Foch (le33foch.fr) — fréquentation (Mindbody healcode).
 
-Plateforme : Mindbody (widgets healcode / brandedweb). Comme Sense-Club,
-Mindbody n'expose PAS le nombre exact d'inscrits ni la capacité chiffrée :
-on ne récupère qu'un STATUT par séance (« RESERVER »/« Book » = des places
-restent ; « Liste d'attente »/« Complet » = plein). On accumule les relevés
-dans banote_data.json et on fige (verrouille) le statut près du début.
+Plateforme : Mindbody (widget healcode `071882500180` intégré sur
+https://le33foch.fr/accueil/planning-et-reservations). Comme Banote /
+Sense-Club, Mindbody n'expose PAS le nombre exact d'inscrits ni la
+capacité chiffrée : on ne récupère qu'un STATUT par séance (« RÉSERVER »
+= places dispo ; « Liste d'attente »/« Join Waitlist » = plein). On
+accumule les relevés dans le33foch_data.json et on fige (verrouille) le
+statut près du début.
 
-Schéma banote_data.json (compatible comparateur) : dict {id: {date, jour,
-heure, fin, lieu, cours, coach, capacite, presents, finie, statut, releve}}.
+Schéma le33foch_data.json (compatible comparateur) :
+  dict {id: {date, jour, heure, fin, lieu, cours, coach, capacite,
+             presents, finie, statut, releve}}.
+
 Limite honnête : `presents` est une ESTIMATION dérivée du statut + d'une
-capacité par défaut Lagree (CAP_DEFAUT) — plein => capacité, sinon inconnu
-(0). Mindbody ne donne pas le compte réel.
+capacité par défaut (CAP_DEFAUT) — plein => capacité, sinon inconnu (0).
+Mindbody ne donne pas le compte réel.
 
-Génère : banote_data.json, banote_seances.csv, banote.html.
+Génère : le33foch_data.json, le33foch_seances.csv, le33foch.html.
 """
 import csv
 import datetime as dt
 import json
 import os
+import re
 import safestore
 import sys
 from zoneinfo import ZoneInfo
 
-import banote_fetch
+import le33foch_fetch
 
 PARIS = ZoneInfo("Europe/Paris")
-STORE = "banote_data.json"
-CSV = "banote_seances.csv"
-HTML = "banote.html"
+STORE = "le33foch_data.json"
+CSV = "le33foch_seances.csv"
+HTML = "le33foch.html"
 JOURS_FR = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
 LOCK_MIN = 15            # verrouille le statut <= 15 min avant le début
-CAP_DEFAUT = 12          # capacité Lagree/Megaformer par défaut (estimation)
-ACCENT = "#c9a24b"       # doré Banote
+CAP_DEFAUT = 12          # capacité par défaut (club privé, petits cours)
+ACCENT = "#c6a26f"       # doré (couleur du site / club privé)
 ACCENT2 = "#e3c879"
 
 FIELDS = ["id", "date", "jour", "heure", "fin", "lieu", "cours", "coach",
@@ -59,15 +64,34 @@ def estim_presents(statut, capacite):
     return 0  # dispo/inconnu : compte exact non exposé par Mindbody
 
 
-def lieu_court(nom):
+def lieu_court(nom, cours):
+    """Lieu lisible. Certains cours sont au 32 Tilsitt (sous-adresse du même
+    club) — on les attribue à cette annexe pour la lisibilité."""
+    if cours and re.match(r"^\s*32\s*TILSITT", cours, re.I):
+        return "Le 33 Foch — 32 Tilsitt"
     n = (nom or "").upper()
-    if "16E" in n or "PARIS 16" in n:
-        return "Banote Club Paris 16e"
-    if "94" in n or "CHARENTON" in n:
-        return "Banote Club Charenton"
-    if "MOORE" in n or "COLLECTIONNEUR" in n:
-        return "Banote x Collectionneur"
-    return (nom or "Banote").title()
+    if "33" in n or "FOCH" in n or "CERCLE" in n:
+        return "Le 33 Foch"
+    return (nom or "Le 33 Foch").title()
+
+
+def clean_cours(name):
+    """Le widget renvoie souvent 'CATEGORIE - NOM' ; on garde le nom.
+    Exemples : 'COURS CARDIO - BOOTCAMP' -> 'BOOTCAMP',
+    'PILATES REFORMER - PILATES REFORMER' -> 'PILATES REFORMER',
+    '32 TILSITT - HOUSE DANCE (au 32 Rue Tilsitt 75017 PARIS)' -> 'HOUSE DANCE'."""
+    n = (name or "").strip()
+    if not n:
+        return n
+    # retire un éventuel suffixe "(au ... PARIS)"
+    n = re.sub(r"\s*\(au [^)]+\)\s*$", "", n, flags=re.I).strip()
+    # CATEGORIE - NOM  (cat = lettres/chiffres/espaces/&/slash, au moins un mot)
+    m = re.match(r"^([A-Za-zÀ-ÿ0-9&/ ]{2,40})\s*[-–]\s*(.+)$", n)
+    if m:
+        tail = m.group(2).strip()
+        if tail:
+            return tail
+    return n
 
 
 def load_store():
@@ -81,7 +105,7 @@ def save_store(store):
 def capture():
     now = dt.datetime.now(PARIS)
     store = load_store()
-    sessions = banote_fetch.fetch_all()
+    sessions = le33foch_fetch.fetch_all()
     locked_now = 0
     for s in sessions:
         sid = str(s["id"])
@@ -97,21 +121,21 @@ def capture():
         if prev and prev.get("finie"):
             continue  # déjà figé/terminé -> on ne touche plus
         statut = normalize_statut(s.get("cart"), s.get("canceled"))
-        # garde le dernier statut "vivant" connu si le nouveau passe à inconnu
         if statut == "inconnu" and prev and prev.get("statut") in ("disponible", "complet"):
             statut = prev["statut"]
         cap = CAP_DEFAUT
         lock = now >= sdt - dt.timedelta(minutes=LOCK_MIN)
+        cours_raw = (s.get("cours") or "").strip()
         store[sid] = {
             "id": sid,
             "date": sdt.date().isoformat(),
             "jour": JOURS_FR[sdt.weekday()],
             "heure": sdt.strftime("%H:%M"),
             "fin": edt.strftime("%H:%M"),
-            "lieu": lieu_court(s.get("lieu")),
-            "cours": (s.get("cours") or "").strip(),
+            "lieu": lieu_court(s.get("lieu"), cours_raw),
+            "cours": clean_cours(cours_raw),
             "coach": (s.get("coach") or "").strip(),
-            "capacite": 0 if statut == "annule" else cap,
+            "capacite": cap if statut in ("complet", "presque complet") else 0,
             "presents": estim_presents(statut, cap),
             "finie": lock,
             "statut": statut,
@@ -129,6 +153,10 @@ def capture():
             continue
         if now >= sdt:
             v["finie"] = True
+    # garde-fou : jamais presents > capacite
+    for v in store.values():
+        if v.get("presents", 0) > v.get("capacite", 0):
+            v["presents"] = v["capacite"]
     save_store(store)
     fin = sum(1 for v in store.values() if v.get("finie"))
     print(f"{now:%Y-%m-%d %H:%M} : {len(sessions)} séances vues, "
@@ -167,15 +195,16 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BANOTE - Fréquentation</title>
+<title>LE 33 FOCH - Fréquentation</title>
 <script>__CHARTJS__</script>
 <style>
-  :root{--bg:#0d0b07;--card:#181410;--card2:#221c14;--line:#352c1d;
+  :root{--bg:#0a0a0a;--card:#141210;--card2:#1f1c17;--line:#2e2920;
         --text:#f5efe2;--muted:#b9ac8c;--accent:__ACCENT__;--accent2:__ACCENT2__;
         --green:#7bc98a;--yellow:#e6c14d;--red:#e07a6f;}
   *{box-sizing:border-box;}
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);}
-  header{padding:28px 32px 12px;} h1{margin:0;font-size:26px;font-weight:800;letter-spacing:3px;color:var(--accent2);}
+  header{padding:28px 32px 12px;border-bottom:1px solid var(--line);}
+  h1{margin:0;font-size:28px;font-weight:800;letter-spacing:4px;color:var(--accent2);text-transform:uppercase;}
   .sub{color:var(--muted);font-size:13px;margin-top:6px;}
   .wrap{padding:0 32px 48px;max-width:1180px;margin:0 auto;}
   .note{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 18px;margin:18px 0 4px;color:var(--muted);font-size:13px;}
@@ -186,7 +215,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px;}
   @media(max-width:880px){.grid{grid-template-columns:1fr;}}
   .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;}
-  .panel h2{margin:0 0 14px;font-size:14px;color:var(--accent2);font-weight:700;}
+  .panel h2{margin:0 0 14px;font-size:14px;color:var(--accent2);font-weight:700;letter-spacing:1px;text-transform:uppercase;}
   canvas{max-height:280px;}
   .filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0 16px;}
   .filters input,.filters select{background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:13px;}
@@ -200,20 +229,20 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   .rk{display:grid;grid-template-columns:170px 1fr auto;align-items:center;gap:10px;font-size:13px;}
   .rk .lbl{font-weight:600;overflow:hidden;text-overflow:ellipsis;} .rk .track{height:9px;background:var(--line);border-radius:5px;overflow:hidden;}
   .rk .track>span{display:block;height:100%;background:var(--accent);border-radius:5px;} .rk .val{color:var(--muted);}
-  .btn{background:var(--accent);color:#0d0b07;border:none;border-radius:9px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;}
+  .btn{background:var(--accent);color:#0a0a0a;border:none;border-radius:9px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;}
   .tablewrap{max-height:600px;overflow:auto;border:1px solid var(--line);border-radius:14px;}
   .foot{color:var(--muted);font-size:12px;margin-top:18px;}
   @media(max-width:600px){header{padding:18px 14px 6px;}h1{font-size:20px;}.wrap{padding:0 12px 32px;}.kpis{grid-template-columns:1fr 1fr;gap:10px;}.kpi .v{font-size:21px;}.filters input,.filters select,.btn{font-size:15px;width:100%;}.rk{grid-template-columns:120px 1fr auto;}}
-  @media(max-width:600px){canvas{max-height:200px!important}th,td{padding:7px 6px;font-size:12px}.panel{padding:15px 14px}.kpi .v{font-size:20px}.note{font-size:12px}.ctrl{font-size:12px;gap:7px}.pinp{width:64px}}
+  @media(max-width:600px){canvas{max-height:200px!important}th,td{padding:7px 6px;font-size:12px}.panel{padding:15px 14px}.kpi .v{font-size:20px}.note{font-size:12px}.ctrl{font-size:12px;gap:7px}}
 </style>
 </head>
 <body>
 <header>
-  <h1>BANOTE</h1>
-  <div class="sub">Fréquentation &middot; généré le __GENERATED__ &middot; 3 lieux (Mindbody)</div>
+  <h1>Le 33 Foch</h1>
+  <div class="sub">Fréquentation &middot; généré le __GENERATED__ &middot; Mindbody (statut seulement)</div>
 </header>
 <div class="wrap">
-  <div class="note">ℹ️ <b>Mindbody n'expose qu'un statut par séance</b> (pas le nombre exact d'inscrits ni la capacité). On déduit : <b>« complet » = __CAP__ présents</b> (capacité Lagree estimée), sinon le compte exact est inconnu. Le statut est <b>figé ~15 min avant chaque séance</b>. L'historique se construit au fil des relevés. Les présents sont donc une <b>borne basse / estimation</b>, pas une mesure exacte.</div>
+  <div class="note">ℹ️ <b>Mindbody n'expose qu'un statut par séance</b> (pas le nombre exact d'inscrits ni la capacité). On déduit : <b>« complet » = __CAP__ présents</b> (capacité par défaut), sinon le compte exact est inconnu. Le statut est <b>figé ~15 min avant chaque séance</b>. L'historique se construit au fil des relevés. Les présents sont donc une <b>borne basse / estimation</b>, pas une mesure exacte.</div>
   <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>
   <div class="filters">
@@ -235,7 +264,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <div class="filters"><button id="btnExport" class="btn">Exporter en Excel</button></div>
     <div class="tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
   </div>
-  <div class="foot">Source : banoteclub.com (widgets Mindbody). Statut relevé près du début de chaque séance.</div>
+  <div class="foot">Source : le33foch.fr (widget Mindbody). Statut relevé près du début de chaque séance.</div>
 </div>
 <script>
 const ALL=__DATA__;
@@ -245,7 +274,7 @@ const STC={'complet':'#e07a6f','disponible':'#7bc98a','inconnu':'#b9ac8c','annul
 const LBL={'complet':'complet','disponible':'des places','inconnu':'inconnu','annule':'annulé'};
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
 function fmtJ(iso){const p=iso.split('-');return `${p[2]}/${p[1]}/${p[0]}`;}
-Chart.defaults.color='#b9ac8c';Chart.defaults.borderColor='#352c1d';Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
+Chart.defaults.color='#b9ac8c';Chart.defaults.borderColor='#2e2920';Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
 const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 const ACC=css('--accent'),ACC2=css('--accent2');
 let charts={};
@@ -335,7 +364,7 @@ document.getElementById('btnExport').addEventListener('click',()=>{
   const lines=[cols.map(c=>c[1]).join(';')];
   currentRows.forEach(r=>lines.push(cols.map(c=>esc(c[0]==='date'?fmtJ(r.date):(r[c[0]]==null?'':r[c[0]]))).join(';')));
   const blob=new Blob(['﻿'+lines.join('\r\n')],{type:'text/csv;charset=utf-8;'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='banote_seances.csv';document.body.appendChild(a);a.click();a.remove();
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='le33foch_seances.csv';document.body.appendChild(a);a.click();a.remove();
 });
 render();
 </script>
@@ -350,7 +379,7 @@ def main():
     write_html(rows)
     fin = [r for r in rows if r.get("finie")]
     lieux = sorted({r["lieu"] for r in rows})
-    print(f"OK [banote]: {len(rows)} séances en base, {len(fin)} figées. Lieux: {lieux}",
+    print(f"OK [le33foch]: {len(rows)} séances en base, {len(fin)} figées. Lieux: {lieux}",
           file=sys.stderr)
 
 

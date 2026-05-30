@@ -64,7 +64,7 @@
     <br>• <b>Présents total</b> & <b>Séances</b> = volume d'activité.
     <br>• <b>CA estimé</b> = présents × prix moyen (réglable ci-dessous).
     <br><b>Le classement « qui marche » est trié par taux de remplissage.</b>
-    <br>⚠️ Non inclus ici : <b>Sense-Club</b>, <b>Burning Bar</b> & <b>Banote</b> (Mindbody ne donne que le statut, pas le nombre exact) et <b>Trinquet/padel</b> (logique d'occupation de terrains, pas de « présents/capacité ») — ils ont leur propre onglet.
+    <br>⚠️ Pour les marques en widget Mindbody (<b>Sense-Club, DNA, Le 33 Foch, Banote</b>), seules les séances <b>complet</b> ou <b>presque complet</b> comptent (Mindbody ne donne pas le nombre exact sinon) — on utilise une capacité par défaut pour estimer. <b>Burning Bar</b> et <b>Trinquet/padel</b> (occupation de terrains) restent à part dans leur onglet dédié.
   </div>
 
   <div class="ctrl">
@@ -111,6 +111,10 @@ const BRANDS=[
   {key:"episod",label:"Episod",color:"#e8c14d",cat:"Bootcamp"},
   {key:"belly",label:"Belly",color:"#e0699b",cat:"Pilates"},
   {key:"athletx",label:"AthletX",color:"#e0322c",cat:"Bootcamp"},
+  {key:"senseclub",label:"Sense-Club",color:"#9b7ff0",cat:"Pilates"},
+  {key:"dna",label:"DNA Pilates",color:"#c9a24b",cat:"Pilates"},
+  {key:"le33foch",label:"Le 33 Foch",color:"#c4a361",cat:"Bootcamp"},
+  {key:"banote",label:"Banote",color:"#c9a24b",cat:"Pilates"},
 ];
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
 const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';

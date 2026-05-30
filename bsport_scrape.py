@@ -291,7 +291,7 @@ const isNarrow=()=>matchMedia('(max-width:600px)').matches;
 
 // on compte tout ce qui a DÉMARRÉ ; on s'arrête à la 1re séance à venir (calcul live)
 const started=r=>new Date(r.date+'T'+(r.heure||'00:00')+':00')<=new Date();
-let FINIES=ALL.filter(started);
+let FINIES=ALL.filter(r=>started(r)&&(r.capacite||0)>0);
 const selLieu=document.getElementById('fLieu'),selCours=document.getElementById('fCours'),selCoach=document.getElementById('fCoach');
 function fillSel(sel,vals,label){sel.innerHTML='';sel.add(new Option(label,''));[...new Set(vals)].filter(Boolean).sort().forEach(v=>sel.add(new Option(v,v)));}
 fillSel(selLieu,ALL.map(r=>r.lieu),'Tous les studios');

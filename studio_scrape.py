@@ -236,7 +236,7 @@ const ACC=css('--accent')||'#263fff',ACC2=css('--accent2')||'#6f82ff';
 let charts={};
 const isNarrow=()=>matchMedia('(max-width:600px)').matches;
 
-let FINIES=ALL.filter(r=>r.finie);   // stats sur les cours terminés (présence réelle)
+let FINIES=ALL.filter(r=>r.finie&&(r.capacite||0)>0);   // stats sur les cours terminés (présence réelle)
 const selLieu=document.getElementById('fLieu'),selCours=document.getElementById('fCours'),selCoach=document.getElementById('fCoach');
 function fillSel(sel,vals,label){sel.innerHTML='';sel.add(new Option(label,''));[...new Set(vals)].filter(Boolean).sort().forEach(v=>sel.add(new Option(v,v)));}
 fillSel(selLieu,ALL.map(r=>r.lieu),'Tous les studios');

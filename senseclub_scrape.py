@@ -93,10 +93,15 @@ def capture():
         except ValueError:
             continue
         lock = now >= start - dt.timedelta(minutes=LOCK_MIN)
+        pres_est = presents(statut, places)  # None si "disponible" (inconnu)
         store[key] = {
             "date": today.isoformat(), "jour": jour, "heure": heure,
+            "lieu": "Sense-Club",
             "cours": s["cours"], "statut": statut, "places_restantes": places,
-            "locked": lock, "releve": now.strftime("%Y-%m-%d %H:%M"),
+            "locked": lock, "finie": lock, "releve": now.strftime("%Y-%m-%d %H:%M"),
+            # capacité = 5 quand on a un nombre dérivable, sinon 0 (exclu du comparateur)
+            "capacite": CAPACITE if pres_est is not None else 0,
+            "presents": pres_est if pres_est is not None else 0,
         }
         if lock:
             locked_now += 1
@@ -111,6 +116,7 @@ def capture():
             continue
         if now >= start:
             v["locked"] = True
+            v["finie"] = True
     save_store(store)
     print(f"{now:%Y-%m-%d %H:%M} : {len(sessions)} séances vues, {locked_now} verrouillées ce passage, {len(store)} au total.")
     return store
@@ -127,7 +133,7 @@ def enrich(rows):
 
 def write_csv(rows, path):
     with open(path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=FIELDS)
+        w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
         w.writeheader()
         w.writerows(rows)
     print(f"-> {path}")
