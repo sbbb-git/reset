@@ -1,13 +1,11 @@
 {
- "checked_at": "2026-05-31 08:00",
+ "checked_at": "2026-05-31 14:53",
  "brands": [
   {
    "brand": "anybuddy",
-   "status": "WARN",
-   "count": 327,
-   "issues": [
-    "dernier relevé il y a 7h (> 6h attendu)"
-   ]
+   "status": "OK",
+   "count": 328,
+   "issues": []
   },
   {
    "brand": "athletx",
@@ -17,19 +15,15 @@
   },
   {
    "brand": "banote",
-   "status": "WARN",
-   "count": 586,
-   "issues": [
-    "dernier relevé il y a 8h (> 6h attendu)"
-   ]
+   "status": "OK",
+   "count": 693,
+   "issues": []
   },
   {
    "brand": "barrys",
-   "status": "WARN",
+   "status": "OK",
    "count": 77,
-   "issues": [
-    "dernier relevé il y a 7h (> 6h attendu)"
-   ]
+   "issues": []
   },
   {
    "brand": "belly",
@@ -39,19 +33,15 @@
   },
   {
    "brand": "burningbar",
-   "status": "WARN",
+   "status": "OK",
    "count": 30,
-   "issues": [
-    "dernier relevé il y a 7h (> 6h attendu)"
-   ]
+   "issues": []
   },
   {
    "brand": "dna",
-   "status": "WARN",
-   "count": 246,
-   "issues": [
-    "dernier relevé il y a 7h (> 6h attendu)"
-   ]
+   "status": "OK",
+   "count": 522,
+   "issues": []
   },
   {
    "brand": "dynamo",
@@ -61,19 +51,15 @@
   },
   {
    "brand": "episod",
-   "status": "WARN",
-   "count": 1008,
-   "issues": [
-    "dernier relevé il y a 14h (> 6h attendu)"
-   ]
+   "status": "OK",
+   "count": 1119,
+   "issues": []
   },
   {
    "brand": "le33foch",
-   "status": "WARN",
+   "status": "OK",
    "count": 131,
-   "issues": [
-    "dernier relevé il y a 8h (> 6h attendu)"
-   ]
+   "issues": []
   },
   {
    "brand": "lecercle",
@@ -96,7 +82,7 @@
   {
    "brand": "reset",
    "status": "WARN",
-   "count": 419,
+   "count": 424,
    "issues": [
     "16 séances avec présents > capacité"
    ]
@@ -111,19 +97,15 @@
   },
   {
    "brand": "santroch",
-   "status": "WARN",
+   "status": "OK",
    "count": 64,
-   "issues": [
-    "dernier relevé il y a 7h (> 6h attendu)"
-   ]
+   "issues": []
   },
   {
    "brand": "senseclub",
-   "status": "WARN",
-   "count": 26,
-   "issues": [
-    "dernier relevé il y a 7h (> 6h attendu)"
-   ]
+   "status": "OK",
+   "count": 30,
+   "issues": []
   },
   {
    "brand": "snakeandtwist",

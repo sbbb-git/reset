@@ -24,7 +24,7 @@ BASELINE = "sanity_baseline.json"
 REPORT = "sanity_report.json"
 DROP_THRESHOLD = 0.5      # alerte si volume < 50 % du baseline
 CAP_MAX = 500             # capacité par séance plausible (au-delà = bug)
-STALE_HOURS_FAST = 6      # live-status / live-senseclub doivent bouger souvent
+STALE_HOURS_FAST = 16     # live-status / live-senseclub : tolère la nuit (studios fermés) + fenêtre de verrouillage
 STALE_HOURS_SLOW = 30     # bsport / daily peuvent attendre plus
 
 # rythme de MAJ attendu par marque (en heures)
@@ -85,6 +85,7 @@ def main():
             r["status"] = "ALERT"
             severe = True
         elif r["status"] == "WARN" and any("dernier relevé" in i for i in r["issues"]):
+            r["status"] = "ALERT"
             severe = True
         # met à jour le baseline seulement si la marque grossit ou reste stable
         if cur >= prev:
