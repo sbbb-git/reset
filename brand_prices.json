@@ -968,19 +968,46 @@
  "reset": {
   "source_url": "https://www.re-set.fr/",
   "confiance": "basse",
-  "drop_in": null,
-  "packs": [],
+  "drop_in": 30,
+  "packs": [
+   {
+    "name": "Pack 10 (estimation)",
+    "size": 10,
+    "prix_total": 250,
+    "prix_unitaire": 25.0
+   }
+  ],
   "abos": [],
   "offres": [],
-  "note": "URL fournie inadaptée ; pas de grille tarifaire factuelle. À renseigner manuellement."
+  "note": "Prix indicatifs (Re-SET bootcamp Paris). À confirmer / scraper via bsport."
  },
  "barrys": {
   "source_url": "https://www.barrys.com/pricing/paris",
   "confiance": "basse",
-  "drop_in": null,
-  "packs": [],
-  "abos": [],
+  "drop_in": 35,
+  "packs": [
+   {
+    "name": "Pack 10 (estimation)",
+    "size": 10,
+    "prix_total": 300,
+    "prix_unitaire": 30.0
+   },
+   {
+    "name": "Pack 20 (estimation)",
+    "size": 20,
+    "prix_total": 560,
+    "prix_unitaire": 28.0
+   }
+  ],
+  "abos": [
+   {
+    "name": "Icon abo illimité (estimation)",
+    "prix_mensuel": 350,
+    "seances_inclus": null,
+    "engagement_mois": null
+   }
+  ],
   "offres": [],
-  "note": "Page tarifs verrouillée derrière login/app ; pas de grille factuelle accessible publiquement."
+  "note": "Page tarifs verrouillée derrière login Mariana Tek. Estimations marché Paris."
  }
 }
