@@ -3,3 +3,6 @@ package.json
 package-lock.json
 *.log
 __pycache__/
+
+# Padel history : 87 MB brut → on commit la version gzippée à la place
+padel_idf_history.json
