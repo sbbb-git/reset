@@ -141,20 +141,31 @@ let PRICES=(()=>{try{return JSON.parse(localStorage.getItem('cmp_prices')||'{}')
 function priceOf(key){const v=PRICES[key];return (v!==undefined&&v!=='')?(+v||0):(parseFloat(document.getElementById('prix').value)||0);}
 function setPrice(key,val){if(val==='')delete PRICES[key];else PRICES[key]=val;try{localStorage.setItem('cmp_prices',JSON.stringify(PRICES));}catch(e){}render();}
 
+const SUPABASE_URL="https://gxqaanumilsmqmodtnbl.supabase.co";
+const SUPABASE_KEY="sb_publishable_pTcELCyyTItLSyyditPgbg_ZUl05heo";
+const BMAP=Object.fromEntries(BRANDS.map(b=>[b.key,b]));
+async function fetchAllSessions(){
+  const headers={apikey:SUPABASE_KEY,Authorization:`Bearer ${SUPABASE_KEY}`};
+  const keys=BRANDS.map(b=>b.key).join(',');
+  const base=`${SUPABASE_URL}/rest/v1/sessions?select=brand_key,date,lieu,presents,capacite,releve&finie=eq.true&capacite=gt.0&brand_key=in.(${keys})&order=date.desc`;
+  let rows=[],offset=0,step=1000;
+  while(true){
+    const r=await fetch(`${base}&limit=${step}&offset=${offset}`,{headers,cache:'no-store'});
+    if(!r.ok) break;
+    const batch=await r.json();
+    rows.push(...batch);
+    if(batch.length<step) break;
+    offset+=step;
+  }
+  return rows;
+}
 async function load(){
-  const res=await Promise.all(BRANDS.map(async b=>{
-    try{
-      const r=await fetch(b.key+'_data.json',{cache:'no-store'});
-      if(!r.ok) return [];
-      const d=await r.json();
-      const arr=Array.isArray(d)?d:Object.values(d);
-      return arr.filter(x=>x.finie && (x.capacite||0)>0).map(x=>({
-        brand:b.key,label:b.label,color:b.color,cat:b.cat,plat:b.plat,
-        lieu:(x.lieu||b.label),date:x.date||'',releve:x.releve||'',
-        presents:x.presents||0,capacite:x.capacite||0}));
-    }catch(e){return [];}
-  }));
-  ROWS=res.flat();
+  let raw=[];
+  try{ raw=await fetchAllSessions(); }catch(e){ raw=[]; }
+  ROWS=raw.map(x=>{const b=BMAP[x.brand_key]||{};return {
+    brand:x.brand_key,label:b.label||x.brand_key,color:b.color||'#888',cat:b.cat||'',plat:b.plat||'',
+    lieu:(x.lieu||b.label||x.brand_key),date:x.date||'',releve:x.releve||'',
+    presents:x.presents||0,capacite:x.capacite||0};});
   const sel=document.getElementById('cat');
   [...new Set(ROWS.map(r=>r.cat))].sort().forEach(c=>sel.add(new Option(c,c)));
   document.getElementById('loadnote').style.display='none';

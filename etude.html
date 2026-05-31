@@ -217,13 +217,24 @@ const PRICE=22;
   document.getElementById('chips').innerHTML=BRANDS.map(b=>
     `<span class="chip"><span class="dot" style="background:${b.color}"></span>${b.label} <span style="color:var(--muted);font-size:11px">· ${b.cat}</span></span>`).join('');
 
-  // charge toutes les données
+  // charge toutes les données via Supabase
+  const SUPABASE_URL="https://gxqaanumilsmqmodtnbl.supabase.co";
+  const SUPABASE_KEY="sb_publishable_pTcELCyyTItLSyyditPgbg_ZUl05heo";
+  const BMAP=Object.fromEntries(BRANDS.map(b=>[b.key,b]));
   const all=[];
-  for(const b of BRANDS){
-    try{const r=await fetch(b.key+'_data.json',{cache:'no-store'});if(!r.ok)continue;
-      const d=await r.json(); const arr=Array.isArray(d)?d:Object.values(d);
-      arr.filter(x=>x.finie&&(x.capacite||0)>0).forEach(x=>all.push({...x,_brand:b}));
-    }catch(e){}
+  {
+    const headers={apikey:SUPABASE_KEY,Authorization:`Bearer ${SUPABASE_KEY}`};
+    const keys=BRANDS.map(b=>b.key).join(',');
+    const base=`${SUPABASE_URL}/rest/v1/sessions?select=brand_key,date,lieu,presents,capacite,releve&finie=eq.true&capacite=gt.0&brand_key=in.(${keys})&order=date.desc`;
+    let offset=0,step=1000;
+    while(true){
+      let batch=[];
+      try{const r=await fetch(`${base}&limit=${step}&offset=${offset}`,{headers,cache:'no-store'});
+        if(!r.ok) break; batch=await r.json();}catch(e){break;}
+      batch.forEach(x=>{const b=BMAP[x.brand_key];if(b)all.push({...x,_brand:b});});
+      if(batch.length<step) break;
+      offset+=step;
+    }
   }
 
   // KPIs globaux
