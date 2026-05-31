@@ -1,0 +1,48 @@
+name: Padel · Anybuddy (3 clubs Paris)
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # toutes les 30 min
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sectors-padel
+  cancel-in-progress: true
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - name: Trinquet Village (padel)
+        run: python3 anybuddy_scrape.py
+        continue-on-error: true
+      - name: 4PADEL Paris 20 (padel)
+        run: python3 fourpadel_paris20_scrape.py
+        continue-on-error: true
+      - name: Aquaboulevard (padel + tennis + squash)
+        run: python3 aquaboulevard_scrape.py
+        continue-on-error: true
+
+      - name: Commit si changement
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add anybuddy_data.json anybuddy_creneaux.csv anybuddy.html \
+                  fourpadel_paris20_data.json fourpadel_paris20_creneaux.csv fourpadel_paris20.html \
+                  aquaboulevard_data.json aquaboulevard_creneaux.csv aquaboulevard.html
+          if git diff --cached --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "Sectors padel ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            for i in 1 2 3 4; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              echo "retry push $i"; sleep 5
+            done
+          fi
