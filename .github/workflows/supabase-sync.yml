@@ -1,0 +1,42 @@
+name: Sync Supabase (Postgres backup)
+
+on:
+  schedule:
+    # 2x/jour : ~14h et ~00h Paris (après les scrapes bsport et soir)
+    - cron: "0 13,22 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: supabase-sync
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync vers Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python3 supabase_sync.py
+
+      - name: Healthcheck ping (si HEALTHCHECK_URL défini)
+        if: always()
+        env:
+          HC_URL: ${{ secrets.HEALTHCHECK_URL }}
+          WF: supabase-sync
+        run: |
+          if [ -n "$HC_URL" ]; then
+            curl -fsSL --max-time 10 "$HC_URL/$WF?status=${{ job.status }}" || true
+          fi
