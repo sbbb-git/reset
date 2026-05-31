@@ -42,3 +42,13 @@ jobs:
             git commit -m "Scrap quotidien automatique ($(date -u +%Y-%m-%d))"
             git push
           fi
+
+      - name: Healthcheck ping (si HEALTHCHECK_URL défini)
+        if: always()
+        env:
+          HC_URL: ${{ secrets.HEALTHCHECK_URL }}
+          WF: daily-scrape
+        run: |
+          if [ -n "$HC_URL" ]; then
+            curl -fsSL --max-time 10 "$HC_URL/$WF?status=${{ job.status }}" || true
+          fi

@@ -1,40 +1,35 @@
-name: Sauvegarde Google Sheets
+name: Sanity checks (anomalies dans les données)
 
 on:
   schedule:
-    # 1x/jour à 22:00 UTC (~00:00 Paris), après les scrapes du soir
-    - cron: "0 22 * * *"
+    # toutes les 6h
+    - cron: "0 */6 * * *"
   workflow_dispatch: {}
 
 permissions:
   contents: read
 
 concurrency:
-  group: sheets-backup
+  group: sanity
   cancel-in-progress: true
 
 jobs:
-  backup:
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Sauvegarde vers Google Sheets
-        env:
-          SHEET_WEBHOOK_URL: ${{ secrets.SHEET_WEBHOOK_URL }}
-        run: python3 sheets_sync.py
-
+      - name: Run sanity check
+        run: python3 sanity_check.py
       - name: Healthcheck ping (si HEALTHCHECK_URL défini)
         if: always()
         env:
           HC_URL: ${{ secrets.HEALTHCHECK_URL }}
-          WF: sheets-backup
+          WF: sanity
         run: |
           if [ -n "$HC_URL" ]; then
             curl -fsSL --max-time 10 "$HC_URL/$WF?status=${{ job.status }}" || true
