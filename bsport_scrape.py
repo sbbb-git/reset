@@ -460,6 +460,12 @@ def run(cfg):
         est.update(names)
         skip |= xmbo
         coaches.update(fetch_coaches(co))
+    # skip par nom de studio (ex: "Studio Bastille" pour Le Cercle = établissement
+    # backoffice configuré mais pas ouvert au public : 0 réservation, capacité aberrante)
+    for skip_name in cfg.get("skip_lieux") or []:
+        for eid, nm in est.items():
+            if nm.strip().lower() == skip_name.strip().lower():
+                skip.add(eid)
     cfg["_companies"], cfg["_est"], cfg["_coaches"], cfg["_skip"] = companies, est, coaches, skip
     store = capture(cfg)
     best = {}

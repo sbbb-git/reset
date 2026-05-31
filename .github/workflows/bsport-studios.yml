@@ -48,6 +48,12 @@ jobs:
       - name: Snake & Twist (Arketa)
         run: python3 snakeandtwist_scrape.py
         continue-on-error: true
+      - name: DRIP HIIT (Sanctuary Group)
+        run: python3 driphiit_scrape.py
+        continue-on-error: true
+      - name: KORE Studio (Réaumur + Richard-Lenoir)
+        run: python3 kore_scrape.py
+        continue-on-error: true
 
       - name: Commit si changement
         run: |
@@ -59,7 +65,9 @@ jobs:
                   poses_data.json poses_seances.csv poses.html \
                   belly_data.json belly_seances.csv belly.html \
                   athletx_data.json athletx_seances.csv athletx.html \
-                  snakeandtwist_data.json snakeandtwist_seances.csv snakeandtwist.html
+                  snakeandtwist_data.json snakeandtwist_seances.csv snakeandtwist.html \
+                  driphiit_data.json driphiit_seances.csv driphiit.html \
+                  kore_data.json kore_seances.csv kore.html
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else

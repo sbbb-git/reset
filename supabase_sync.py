@@ -41,6 +41,8 @@ BRANDS = {
     "snakeandtwist": {"label": "Snake & Twist", "color": "#3a7d44", "category": "Pilates",         "platform": "Arketa",          "price_default": 28},
     "burningbar":    {"label": "Burning Bar",   "color": "#ff5a1f", "category": "Pilates",         "platform": "Mindbody widget", "price_default": 35},
     "anybuddy":      {"label": "Trinquet padel","color": "#3fa796", "category": "Padel",           "platform": "Anybuddy",        "price_default": 54},
+    "driphiit":      {"label": "DRIP HIIT",     "color": "#0bbfae", "category": "Bootcamp",        "platform": "bsport",          "price_default": 29},
+    "kore":          {"label": "KORE Studio",   "color": "#7a6f5c", "category": "Pilates",         "platform": "bsport",          "price_default": 28},
 }
 
 
