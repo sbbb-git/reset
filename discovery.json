@@ -244,5 +244,266 @@
     "category": "Yoga / Wellness",
     "studios_count": 1,
     "notes": "Hot Yoga Paris 14e (3 rue Campagne Première). Healcode pricing-link visibles, widget schedule à isoler côté front."
+  },
+  {
+    "name": "Modo Yoga Paris",
+    "url": "https://modoyoga.com/paris/",
+    "platform": "bsport",
+    "ids": { "company": 201 },
+    "category": "Yoga / Wellness",
+    "studios_count": 1,
+    "notes": "Studio Modo (Hot) Yoga Paris. companyId 201 confirmé via backoffice.bsport.io/m/Modo%20Yoga%20Paris/201/pass/ et package Play Store com.bsport_201. Salles chauffées 38-40°C, programmes Vinyasa/Hot/Yin."
+  },
+  {
+    "name": "Slowe Wellness House",
+    "url": "https://slowe-studio.com/",
+    "platform": "bsport",
+    "ids": { "company": 434 },
+    "category": "HIIT / Yoga / Pilates",
+    "studios_count": 2,
+    "notes": "Slowe Wellness House Paris 10 (Bonne Nouvelle + Jules Joffrin). HIIT, Yoga, Hyrox, Bootcamp, Pilates. membership 434 dans backoffice.bsport.io/login?membership=434."
+  },
+  {
+    "name": "Les Ailes du Canal",
+    "url": "https://lesailesducanal.com/",
+    "platform": "bsport",
+    "ids": { "company": 219 },
+    "category": "Pilates / Yoga",
+    "studios_count": 1,
+    "notes": "Studio Pilates/Yoga/Gyrotonic Métro République Paris 10e (42 rue Albert Thomas). membership 219."
+  },
+  {
+    "name": "L'Alchimie des Corps",
+    "url": "https://yoga-reiki.fr/",
+    "platform": "bsport",
+    "ids": { "company": 185 },
+    "category": "Yoga / Wellness",
+    "studios_count": 1,
+    "notes": "Studio Yoga/Reiki/Bien-être à Paris. membership 185 dans backoffice.bsport.io/login/customer?membership=185."
+  },
+  {
+    "name": "Yogama",
+    "url": "https://www.yogama.fr/",
+    "platform": "bsport",
+    "ids": { "company": 1187 },
+    "category": "Yoga / Wellness",
+    "studios_count": 1,
+    "notes": "Studio Yogama Paris. membership 1187 - URLs backoffice.bsport.io/m/Yogama/1187/pass/ et backoffice.bsport.io/customer/payment/offer/29672313?membership=1187."
+  },
+  {
+    "name": "DRIP HIIT",
+    "url": "https://www.drip-hiit.com/en/pricing/",
+    "platform": "bsport",
+    "ids": { "company": 2441 },
+    "category": "HIIT / Bootcamp",
+    "studios_count": 1,
+    "notes": "DRIP HIIT Grands Boulevards (29 rue des Petites Ecuries 75010). Membre du Sanctuary Group. companyId 2441/2442 dans checkout backoffice.bsport.io."
+  },
+  {
+    "name": "POSES Studio",
+    "url": "https://www.poses-studio.com/",
+    "platform": "bsport",
+    "ids": { "company": 2442 },
+    "category": "Yoga / Pilates / Barre",
+    "studios_count": 3,
+    "notes": "POSES Yoga/Barre/Pilates : Studio Marais (21 rue des Filles du Calvaire 75003) + Studio Bastille (75012) + autres. companyId 2442 via backoffice.bsport.io/checkout-s/2442. Membre Sanctuary Group."
+  },
+  {
+    "name": "The Gravity Studio",
+    "url": "https://thegravitystudioparis.com/",
+    "platform": "bsport",
+    "ids": { "company": 2858 },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "The Gravity Studio Paris (Reformer/Pilates). companyId 2858 via backoffice.bsport.io/m/THE%20GRAVITY%20STUDIO/2858/calendar."
+  },
+  {
+    "name": "DECIBEL Studio",
+    "url": "https://www.decibel-danse.com/",
+    "platform": "bsport",
+    "ids": { "company": 2073 },
+    "category": "Dance / Fitness",
+    "studios_count": 1,
+    "notes": "DECIBEL Studio danse + workout (membre Sanctuary Group). companyId 2073 via backoffice.bsport.io/checkout-s/2073."
+  },
+  {
+    "name": "Studio A Reformer Pilates",
+    "url": "https://studioa-reformerpilates.fr/",
+    "platform": "bsport",
+    "ids": { "company": 2211 },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "Studio A Reformer Pilates Paris. membership 2211 - URL backoffice.bsport.io/customer/payment/pass/520928/?membership=2211 et package com.bsport_2211."
+  },
+  {
+    "name": "Studio 3",
+    "url": "https://www.studio3.fr/reservations/",
+    "platform": "bsport",
+    "ids": { "company": 183 },
+    "category": "Coaching / Fitness",
+    "studios_count": 1,
+    "notes": "Studio 3 Coaching Sport Paris 16 (studio3c.fr). companyId 183 via backoffice.bsport.io/c/183/booking/."
+  },
+  {
+    "name": "Studio Fabrica",
+    "url": "https://www.studiofabricaparis.com/",
+    "platform": "bsport",
+    "ids": { "company": 3449 },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "Reformer Pilates haut de gamme Paris 16 (128 avenue Mozart, Auteuil). 4-6 personnes max. membership 3449 via backoffice.bsport.io/login?membership=3449."
+  },
+  {
+    "name": "Belly Studio",
+    "url": "https://studiobelly.com/",
+    "platform": "bsport",
+    "ids": { "company": 261 },
+    "category": "Pilates",
+    "studios_count": 3,
+    "notes": "Belly Studio Lagree/Pilates : Boulogne + Paris 8 (9 rue Clapeyron) + Paris 17. franchisor=261 via backoffice.bsport.io/login?franchisor=261&context=widget."
+  },
+  {
+    "name": "My Ginger",
+    "url": "https://www.myginger.fr/",
+    "platform": "bsport",
+    "ids": { "company": 637 },
+    "category": "Yoga / Pilates",
+    "studios_count": 1,
+    "notes": "Studio yoga/pilates immersif Paris 6 (13 rue du Vieux Colombier). Vinyasa, Yin, Pilates, sound baths. membership 637."
+  },
+  {
+    "name": "BRUME Studios",
+    "url": "https://www.brumestudios.fr/",
+    "platform": "bsport",
+    "ids": { "company": 4350 },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "BRUME Studios féminin Paris 12 (3 rue Fabre d'Eglantine) - Reformer + Hot Pilates + Ice Bath. membership 4350. 100+ créneaux/sem 8h-21h."
+  },
+  {
+    "name": "Studio Marga",
+    "url": "https://studiomarga.com/",
+    "platform": "bsport",
+    "ids": { "company": 1904 },
+    "category": "Yoga / Pilates / Dance",
+    "studios_count": 1,
+    "notes": "Studio Marga Paris 11 (12 rue Godefroy Cavaignac). 70+ cours/sem : Ashtanga, Mysore, Vinyasa, Yin, Pilates, danse, soins. companyId 1904 via backoffice.bsport.io/m/STUDIO%20MARGA/1904/calendar."
+  },
+  {
+    "name": "(q)ee Pilates & Yoga",
+    "url": "https://qee.fr/",
+    "platform": "bsport",
+    "ids": { "company": 1924 },
+    "category": "Pilates / Yoga",
+    "studios_count": 3,
+    "notes": "(q)ee 3 studios Paris : Notre-Dame-de-Lorette (9e), Palais Royal (2e), Batignolles (17e). Pilates mat/reformer + Yoga + barre. membership 1924. Aussi visible sur Mindbody (studioid=3978 - ancien)."
+  },
+  {
+    "name": "SILO Studio",
+    "url": "https://silostudio.fr/",
+    "platform": "bsport",
+    "ids": { "company": 2880 },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "Silo Lagree Paris 8 (33 boulevard Malesherbes). Premier studio premium 100% Lagree. membership 2880 + coffee shop."
+  },
+  {
+    "name": "KORE Studio",
+    "url": "https://www.kore-studio.com/",
+    "platform": "bsport",
+    "ids": { "company": 2021 },
+    "category": "Pilates",
+    "studios_count": 2,
+    "notes": "KORE Studio Reformer Paris 2 (103 rue Réaumur) + Paris 11 (15 bd Richard-Lenoir). 12 reformers hybrides, classe 50min. membership 2021. Ouverture 2023."
+  },
+  {
+    "name": "LUMYA",
+    "url": "https://mylumya.fr/",
+    "platform": "bsport",
+    "ids": { "company": 5215, "franchisor": 540 },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "LUMYA Pilates & Lagree studio Paris 17 (concept africain/caraïbéen). Identifiant dual bsport_540__5215 (package com.bsport_540__5215 - même schéma que Snake & Twist/Ashtanga)."
+  },
+  {
+    "name": "Pur Reformer",
+    "url": "https://pur-reformer.fr/",
+    "platform": "mindbody-widget",
+    "ids": { "site_id": "5740950", "mb_site_id": "5740950" },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "Pur Reformer Pilates Paris. Mindbody studioid 5740950 - URL clients.mindbodyonline.com/classic/ws?studioid=5740950 pour inscription/login/giftcard. widget_id à isoler côté front."
+  },
+  {
+    "name": "Now Reformer",
+    "url": "https://nowreformer.com/",
+    "platform": "mindbody-widget",
+    "ids": { "site_id": "5744674", "mb_site_id": "5744674" },
+    "category": "Pilates",
+    "studios_count": 2,
+    "notes": "Now Reformer Pilates Paris 2 (6 rue de la Michodière, Opéra) + Neuilly-sur-Seine. Mindbody studioid 5744674 - profil clients.mindbodyonline.com/consumermyinfo?studioid=5744674. Booking via app native."
+  },
+  {
+    "name": "L'Académie 34 Paris",
+    "url": "https://www.academie34paris.com/studio-pilates-reformer",
+    "platform": "mindbody-widget",
+    "ids": { "site_id": "5737792", "mb_site_id": "5737792" },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "L'Académie 34 Studio Pilates Reformer Paris. Mindbody studioid 5737792 (clients.mindbodyonline.com/consumermyinfo?studioid=5737792). widget_id à isoler côté front."
+  },
+  {
+    "name": "Flow Studio Lagree",
+    "url": "https://www.flowstudioparis.com/",
+    "platform": "mindbody-widget",
+    "ids": { "site_id": "5745571", "mb_site_id": "5745571" },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "Flow Studio Lagree Paris 11 (premier 100% Lagree Paris 11e). Microformer, 50min. Mindbody studioid 5745571. widget_id à isoler côté front."
+  },
+  {
+    "name": "Ashtanga Yoga Paris (Mindbody legacy)",
+    "url": "https://clients.mindbodyonline.com/classic/ws?studioid=75157",
+    "platform": "mindbody-widget",
+    "ids": { "site_id": "75157", "mb_site_id": "75157" },
+    "category": "Yoga / Wellness",
+    "studios_count": 1,
+    "notes": "Ashtanga Yoga Paris est référencé sur Mindbody (studioid 75157) en plus du bsport déjà capturé (company 3685). Permet la double capture mat/yoga via Mindbody widget legacy."
+  },
+  {
+    "name": "Yoga Bikram Paris (Mindbody legacy)",
+    "url": "https://clients.mindbodyonline.com/classic/ws?studioid=3561",
+    "platform": "mindbody-widget",
+    "ids": { "site_id": "3561", "mb_site_id": "3561" },
+    "category": "Yoga / Wellness",
+    "studios_count": 2,
+    "notes": "Identifiant Mindbody legacy 3561 (clients.mindbodyonline.com/classic/ws?studioid=3561) en complément du widget_id 2313509a405 déjà capturé. Lien direct studioid utile pour fallback."
+  },
+  {
+    "name": "Sense Club",
+    "url": "https://www.sense-club.fr/",
+    "platform": "mindbody-widget",
+    "ids": { "site_id": "40603" },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "Sense Club Paris 6 (13 rue Monsieur le Prince, Saint-Germain). 5 reformers haut de gamme + coffee shop. Présent sur Mindbody - app Android com.fitnessmobileapps.senseclub40603 indique site_id ~40603. widget_id à isoler côté front."
+  },
+  {
+    "name": "Studio by Holy",
+    "url": "https://studiobyholy.com/",
+    "platform": "mindbody-widget",
+    "ids": { "site_id": "38236" },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "Studio by Holy Reformer Pilates Paris 17 (19 rue Guersant). Femmes uniquement. App Android com.fitnessmobileapps.studiobyholi38236 = mb_site_id ~38236. widget_id à isoler côté front."
+  },
+  {
+    "name": "STRIPD",
+    "url": "https://www.stripdfitness.com/",
+    "platform": "mindbody-widget",
+    "ids": { "site_id": "stripd_tbd" },
+    "category": "Pilates",
+    "studios_count": 1,
+    "notes": "STRIPD Pilates/Lagree/Yoga Paris 8 (182 rue du Faubourg Saint-Honoré). Microformers. Listé sur Mindbody (mindbodyonline.com/explore/locations/stripd) - studioid à extraire via le widget Healcode embarqué."
   }
 ]
