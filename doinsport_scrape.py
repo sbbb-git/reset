@@ -98,21 +98,37 @@ def fetch_playgrounds(club_uuid):
     return out
 
 
-def fetch_bookings(playground_uuid, start, end):
-    """Renvoie les bookings d'un playground sur la fenêtre [start, end]."""
+def fetch_bookings(club_uuid, start, end, allowed_playground_ids=None):
+    """Renvoie les bookings d'un club Doinsport sur la fenêtre [start, end].
+
+    IMPORTANT : le filtre `playgrounds[]=<uuid>` est silencieusement ignoré
+    par l'API. Seul `club.id=<uuid>` filtre vraiment. On post-filtre ensuite
+    sur les playground IDs padel pour éliminer billard/snooker/etc.
+    """
     params = urllib.parse.urlencode({
-        "playgrounds[]": playground_uuid,
+        "club.id": club_uuid,
         "startAt[after]": start.isoformat(),
         "startAt[before]": end.isoformat(),
-        "itemsPerPage": "200",
+        "itemsPerPage": "1000",
     }, safe="[]")
     try:
         d = _get_json(f"{API}/clubs/bookings/plannings?{params}")
     except Exception as e:  # noqa: BLE001
-        print(f"  ❌ bookings {playground_uuid}: {e}", file=sys.stderr)
+        print(f"  ❌ bookings club {club_uuid}: {e}", file=sys.stderr)
         return []
     items = d.get("hydra:member") if isinstance(d, dict) else (d if isinstance(d, list) else [])
-    return items or []
+    if allowed_playground_ids is not None:
+        # Post-filtre : ne garder que les bookings dont au moins 1 playground est padel
+        out = []
+        for b in items:
+            pgs = b.get("playgrounds") or []
+            for pg in pgs:
+                pid = (pg.get("id") or "").split("/")[-1] if isinstance(pg, dict) else ""
+                if pid in allowed_playground_ids:
+                    out.append((b, pid))
+                    break
+        return out
+    return [(b, None) for b in (items or [])]
 
 
 def capture_club(club, store):
@@ -133,10 +149,16 @@ def capture_club(club, store):
         return 0, 0
     seen = booked = 0
     pg_names = {p["id"]: p["name"] for p in pg_padel}
-    for pg in pg_padel:
-        bks = fetch_bookings(pg["id"], dt.datetime.combine(today, dt.time(0, 0)),
-                             dt.datetime.combine(end, dt.time(23, 59)))
-        for b in bks:
+    allowed_pg_ids = set(pg_names.keys())
+    # 1 seul fetch par club (filtre club.id qui fonctionne), post-filtré sur playgrounds padel
+    bks_with_pg = fetch_bookings(club["id"],
+                                 dt.datetime.combine(today, dt.time(0, 0)),
+                                 dt.datetime.combine(end, dt.time(23, 59)),
+                                 allowed_playground_ids=allowed_pg_ids)
+    for b, matched_pg_id in bks_with_pg:
+        # On reconstruit pg.id pour les usages aval
+        pg = {"id": matched_pg_id} if matched_pg_id else {"id": "?"}
+        if True:
             start_raw = b.get("startAt")
             end_raw = b.get("endAt")
             if not start_raw: continue
