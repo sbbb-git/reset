@@ -37,6 +37,13 @@ jobs:
         run: python3 playtomic_scrape.py
         continue-on-error: true
 
+      - name: Sync vers Supabase (padel_clubs + padel_slots)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python3 padel_supabase_sync.py
+        continue-on-error: true
+
       - name: Commit si changement
         run: |
           git config user.name "github-actions[bot]"
