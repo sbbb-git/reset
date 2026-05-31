@@ -78,8 +78,9 @@
   </div>
 
   <div class="ctrl">
-    Prix moyen / séance pour le CA :
+    Prix de fallback global (si rien défini par marque) :
     <span class="pwrap"><input id="prix" class="pinp" type="number" min="0" step="0.5" value="20"> <span class="eu">&euro;</span></span>
+    &middot; <a href="prix.html" style="color:var(--accent2)">💶 Gérer la grille de prix par marque →</a>
     &middot; Période : <select id="periode">
       <option value="0">Tout l'historique</option>
       <option value="7">7 derniers jours</option>
@@ -142,11 +143,36 @@ const nf=v=>Math.round(v).toLocaleString('fr-FR');
 const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
 const fill=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
 let ROWS=[]; // {brand,label,color,lieu,date,presents,capacite}
-// prix par marque (override) ; vide => prix par défaut global
+// prix par marque (override manuel dans le tableau) ; vide => valeur calculée par prix.html
 let PRICES=(()=>{try{return JSON.parse(localStorage.getItem('cmp_prices')||'{}');}catch(e){return {};}})();
 const DEFAULT_PRICE=Object.fromEntries(BRANDS.map(b=>[b.key,b.price]));
 const IS_EXACT=Object.fromEntries(BRANDS.map(b=>[b.key,b.exact!==false]));
-function priceOf(key){const v=PRICES[key];return (v!==undefined&&v!=='')?(+v||0):(DEFAULT_PRICE[key]||parseFloat(document.getElementById('prix').value)||0);}
+// Lit la valeur calculée par prix.html (localStorage brand_prices_grid_v1)
+// selon la méthode choisie (drop_in / pack_10 / weighted). Si la page n'a
+// pas encore été ouverte ou si la marque y est absente, fallback sur b.price.
+function priceFromAnalysisPage(key){
+  try{
+    const s=JSON.parse(localStorage.getItem('brand_prices_grid_v1')||'null');
+    if(!s||!s.brands||!s.brands[key])return null;
+    const bs=s.brands[key];
+    if(bs.override!=null&&bs.override!=='')return +bs.override||0;
+    const g=bs.grille||{},sm=+bs.seances_mois||10;
+    const drop=+g.drop_in||0,pack=+g.pack_10||0,abo=+g.abo_mensuel||0,aboU=sm?abo/sm:0;
+    if(s.method==="drop_in")return drop||pack||aboU;
+    if(s.method==="pack_10")return pack||drop*.75||aboU;
+    // weighted (méthode par défaut si non précisée)
+    const parts=[];let w=0;
+    if(drop){parts.push(.10*drop);w+=.10;}
+    if(pack){parts.push(.50*pack);w+=.50;}
+    if(aboU){parts.push(.40*aboU);w+=.40;}
+    return w?parts.reduce((a,b)=>a+b,0)/w:0;
+  }catch(e){return null;}
+}
+function priceOf(key){
+  const v=PRICES[key];if(v!==undefined&&v!=='')return +v||0; // override manuel local
+  const a=priceFromAnalysisPage(key);if(a!=null&&a>0)return a;
+  return DEFAULT_PRICE[key]||parseFloat(document.getElementById('prix').value)||0;
+}
 function setPrice(key,val){if(val==='')delete PRICES[key];else PRICES[key]=val;try{localStorage.setItem('cmp_prices',JSON.stringify(PRICES));}catch(e){}render();}
 
 const SUPABASE_URL="https://gxqaanumilsmqmodtnbl.supabase.co";
