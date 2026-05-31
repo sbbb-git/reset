@@ -65,6 +65,14 @@ jobs:
             done
           fi
 
+      - name: Sync vers Supabase (graceful)
+        if: always()
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python3 supabase_sync.py
+        continue-on-error: true
+
       - name: Healthcheck ping (si HEALTHCHECK_URL défini)
         if: always()
         env:
