@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Padel IDF — carte interactive</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  :root{--bg:#0a0e1a;--card:#121828;--card2:#1a2238;--line:#2a3354;--text:#eef1fb;
+        --muted:#8a96b8;--accent:#2CDF62;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;}
+  header{padding:18px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  h1{margin:0;font-size:20px;font-weight:800;letter-spacing:-.3px;}
+  .sub{color:var(--muted);font-size:12px;margin-top:4px;}
+  .controls{display:flex;gap:8px;flex-wrap:wrap;}
+  .toggle{background:var(--card2);border:1.5px solid var(--line);color:var(--text);border-radius:8px;padding:7px 14px;font-size:12px;cursor:pointer;font-weight:600;}
+  .toggle.on{border-color:var(--accent);background:rgba(44,223,98,.12);color:var(--accent);}
+  .toggle .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle;}
+  #map{height:calc(100vh - 78px);width:100%;}
+  .info{position:absolute;top:90px;right:14px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:13px;z-index:1000;box-shadow:0 6px 20px rgba(0,0,0,.4);min-width:240px;max-width:340px;}
+  .info h3{margin:0 0 8px;font-size:14px;color:var(--accent);}
+  .info .row{display:flex;justify-content:space-between;gap:10px;margin:4px 0;color:var(--muted);}
+  .info .row b{color:var(--text);}
+  .stats{position:absolute;bottom:14px;left:14px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:11.5px;z-index:1000;display:flex;gap:14px;}
+  .stats .k{display:flex;flex-direction:column;}
+  .stats .v{font-size:18px;font-weight:800;color:var(--accent);line-height:1;}
+  .stats .l{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;}
+  .leaflet-popup-content-wrapper{background:var(--card)!important;color:var(--text)!important;border-radius:10px;}
+  .leaflet-popup-tip{background:var(--card)!important;}
+  .leaflet-popup-content{margin:14px 18px;font-size:13px;line-height:1.5;}
+  .leaflet-popup-content h4{margin:0 0 8px;font-size:14px;color:var(--accent);}
+  .leaflet-popup-content .platform{display:inline-block;font-size:10px;text-transform:uppercase;letter-spacing:.5px;background:var(--card2);border:1px solid var(--line);padding:2px 7px;border-radius:99px;margin:2px 3px 2px 0;}
+  .leaflet-popup-content .row{display:flex;justify-content:space-between;color:var(--muted);margin:3px 0;}
+  .leaflet-popup-content .row b{color:var(--text);}
+  .leaflet-popup-content a{color:var(--accent);}
+  .leaflet-control-attribution{background:var(--card)!important;color:var(--muted)!important;font-size:9px!important;}
+  .leaflet-control-attribution a{color:var(--accent)!important;}
+  @media(max-width:700px){
+    header{padding:14px 14px;}
+    h1{font-size:16px;}
+    .info{right:8px;top:80px;max-width:200px;font-size:11px;}
+    .stats{font-size:10px;left:8px;bottom:8px;gap:8px;padding:8px 10px;}
+    .stats .v{font-size:15px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>🎾 Padel Île-de-France — carte interactive</h1>
+    <div class="sub">~143 clubs sur 4 plateformes · refresh toutes les 30 min · clique un marker pour voir le détail</div>
+  </div>
+  <div class="controls">
+    <button class="toggle on" data-src="anybuddy"><span class="dot" style="background:#2CDF62"></span>Anybuddy</button>
+    <button class="toggle on" data-src="urbanpadel"><span class="dot" style="background:#ff6b35"></span>UrbanPadel</button>
+    <button class="toggle on" data-src="doinsport"><span class="dot" style="background:#9b7ff0"></span>Doinsport</button>
+    <button class="toggle on" data-src="playtomic"><span class="dot" style="background:#faa619"></span>Playtomic</button>
+    <a class="toggle" href="padel_idf.html" style="text-decoration:none">📊 Dashboard</a>
+  </div>
+</header>
+
+<div id="map"></div>
+
+<div class="stats" id="stats"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const COLORS = {anybuddy:'#2CDF62', urbanpadel:'#ff6b35', doinsport:'#9b7ff0', playtomic:'#faa619'};
+const ACTIVE = {anybuddy:true, urbanpadel:true, doinsport:true, playtomic:true};
+
+const map = L.map('map', {preferCanvas:true, zoomControl:true}).setView([48.85, 2.35], 10);
+// Tuiles dark theme via CartoDB
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/">OSM</a> · © <a href="https://carto.com/">CARTO</a>',
+  subdomains: 'abcd', maxZoom: 19,
+}).addTo(map);
+
+let MARKERS = {}; // par source : [Marker]
+let STORE = {}, CLUBS_AB = [], CLUBS_DO = [], CLUBS_PT = [], UNIFIED = [];
+
+function fmt(n){return (n||0).toLocaleString('fr-FR');}
+function eur(n){return n ? Math.round(n).toLocaleString('fr-FR')+' €' : '—';}
+
+function getClubMeta(slug){
+  // Cherche meta + coords prioritaire pour 1 club
+  const b = STORE[slug];
+  const m = (b && b.meta) || {};
+  let coords = null;
+  if(m.lat && m.lng) coords = [m.lat, m.lng];
+  else {
+    // chercher dans CLUBS_AB / DO / PT par slug ou tenant_id
+    const ab = CLUBS_AB.find(c => c.slug === slug);
+    if(ab && ab.lat && ab.lng) coords = [ab.lat, ab.lng];
+    if(!coords && slug.startsWith('doinsport-')){
+      const uuid = slug.replace('doinsport-','');
+      const c = CLUBS_DO.find(c => c.id === uuid);
+      if(c && c.lat && c.lng) coords = [c.lat, c.lng];
+    }
+    if(!coords && slug.startsWith('playtomic-')){
+      const prefix = slug.replace('playtomic-','');
+      const c = CLUBS_PT.find(c => (c.tenant_id||'').startsWith(prefix));
+      if(c && c.lat && c.lng) coords = [c.lat, c.lng];
+    }
+  }
+  return {meta:m, coords};
+}
+
+function getSource(slug, meta){
+  return meta.source || (
+    slug.startsWith('urbanpadel-') ? 'urbanpadel' :
+    slug.startsWith('doinsport-') ? 'doinsport' :
+    slug.startsWith('playtomic-') ? 'playtomic' : 'anybuddy');
+}
+
+function getClubStats(slug){
+  const b = STORE[slug]; if(!b) return null;
+  const sess = Object.values(b.sessions||{});
+  const today = new Date(); today.setHours(0,0,0,0);
+  const future = sess.filter(s => new Date(s.date+'T00:00') >= today && !s.finie);
+  const reserved = future.filter(s => s.statut === 'reserve').length;
+  const prices = future.map(s => s.prix).filter(p => p > 0);
+  const avg_price = prices.length ? prices.reduce((a,b)=>a+b,0)/prices.length : 0;
+  return {total:future.length, reserved, prices_n:prices.length, avg_price};
+}
+
+function findUnifiedFor(slug){
+  for(const cl of UNIFIED){
+    for(const m of cl.members){
+      if(m.slug === slug){
+        return {cluster:cl, others:cl.members.filter(x=>x.slug!==slug)};
+      }
+    }
+  }
+  return null;
+}
+
+function buildMarkers(){
+  // Supprime tous
+  Object.values(MARKERS).forEach(arr => arr.forEach(m => map.removeLayer(m)));
+  MARKERS = {anybuddy:[], urbanpadel:[], doinsport:[], playtomic:[]};
+  let displayed = 0, no_coords = 0;
+  for(const slug in STORE){
+    const {meta, coords} = getClubMeta(slug);
+    const src = getSource(slug, meta);
+    if(!coords){no_coords++; continue;}
+    const stats = getClubStats(slug);
+    const occ = stats && stats.total ? Math.round(100*stats.reserved/stats.total) : 0;
+    const u = findUnifiedFor(slug);
+    const color = COLORS[src] || '#888';
+    const marker = L.circleMarker(coords, {
+      radius: Math.min(8 + Math.log10((stats?.total||1)+1)*3, 18),
+      fillColor: color, color: '#fff', weight: 1.5, fillOpacity: .82,
+    });
+    const name = meta.name || slug;
+    let popup = `<h4>${name}</h4>`;
+    popup += `<div><span class="platform" style="border-color:${color};color:${color}">${src}</span>`;
+    if(u){
+      for(const o of u.others){
+        const c2 = COLORS[o.source] || '#888';
+        popup += `<span class="platform" style="border-color:${c2};color:${c2}">${o.source}</span>`;
+      }
+    }
+    popup += '</div>';
+    popup += `<div class="row"><span>CP</span><b>${meta.cp || '—'}</b></div>`;
+    popup += `<div class="row"><span>Ville</span><b>${meta.city || '—'}</b></div>`;
+    if(stats){
+      popup += `<div class="row"><span>Créneaux à venir</span><b>${fmt(stats.total)}</b></div>`;
+      if(stats.reserved > 0) popup += `<div class="row"><span>Réservés détectés</span><b>${fmt(stats.reserved)} (${occ}%)</b></div>`;
+      if(stats.avg_price > 0) popup += `<div class="row"><span>Prix moyen</span><b>${eur(stats.avg_price)}</b></div>`;
+    }
+    if(u){
+      popup += `<div class="row" style="margin-top:8px;padding-top:8px;border-top:1px dashed #2a3354"><span>Cluster cross-plateforme</span><b>${u.cluster.unified_id}</b></div>`;
+    }
+    marker.bindPopup(popup, {maxWidth: 320});
+    if(ACTIVE[src]) marker.addTo(map);
+    MARKERS[src].push(marker);
+    displayed++;
+  }
+  document.getElementById('stats').innerHTML = `
+    <div class="k"><div class="v">${displayed}</div><div class="l">Clubs sur carte</div></div>
+    <div class="k"><div class="v">${no_coords}</div><div class="l">Sans GPS</div></div>
+    <div class="k"><div class="v">${UNIFIED.length}</div><div class="l">Clusters multi-pl.</div></div>
+  `;
+}
+
+function refresh(){
+  for(const src in MARKERS){
+    for(const m of MARKERS[src]){
+      if(ACTIVE[src]) m.addTo(map);
+      else map.removeLayer(m);
+    }
+  }
+}
+
+document.querySelectorAll('.toggle[data-src]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const src = btn.dataset.src;
+    ACTIVE[src] = !ACTIVE[src];
+    btn.classList.toggle('on', ACTIVE[src]);
+    refresh();
+  });
+});
+
+async function load(){
+  const [a,b,c,d,e] = await Promise.all([
+    fetch('padel_idf_data.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({})),
+    fetch('padel_idf_clubs.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>[]),
+    fetch('doinsport_idf_clubs.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>[]),
+    fetch('playtomic_idf_clubs.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>[]),
+    fetch('padel_club_unified.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>[]),
+  ]);
+  STORE=a||{}; CLUBS_AB=b||[]; CLUBS_DO=c||[]; CLUBS_PT=d||[]; UNIFIED=e||[];
+  buildMarkers();
+}
+
+load();
+</script>
+</body>
+</html>
