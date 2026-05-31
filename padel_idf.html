@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Padel Île-de-France · 59 clubs · données live</title>
+<script src="vendor_chartjs.min.js"></script>
+<style>
+  :root{--bg:#0a0e1a;--card:#121828;--card2:#1a2238;--line:#2a3354;--text:#eef1fb;
+        --muted:#8a96b8;--accent:#2CDF62;--accent2:#7af0a0;--gold:#e6c14d;--green:#5fcf8a;--red:#e07a6f;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.5;}
+  a{color:var(--accent);}
+  header{padding:24px 28px 14px;border-bottom:1px solid var(--line);}
+  header h1{margin:0;font-size:26px;font-weight:800;letter-spacing:-.3px;}
+  header .sub{color:var(--muted);font-size:13px;margin-top:6px;}
+  .wrap{max-width:1300px;margin:0 auto;padding:0 24px 60px;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:22px 0;}
+  .k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;}
+  .k .v{font-size:30px;font-weight:800;color:var(--accent2);letter-spacing:-.5px;line-height:1;}
+  .k .l{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px;margin-top:6px;}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;}
+  .filters label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.4px;}
+  .filters select,.filters input{background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:7px 11px;font-size:13px;}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:14px 0;}
+  .panel h2{margin:0 0 14px;font-size:14px;color:var(--accent2);text-transform:uppercase;letter-spacing:1px;}
+  canvas{max-height:340px;}
+  .ranklist{display:flex;flex-direction:column;gap:7px;}
+  .rk{display:grid;grid-template-columns:32px 220px 1fr auto;align-items:center;gap:10px;font-size:13px;}
+  .rk .rank{color:var(--muted);font-weight:700;text-align:right;}
+  .rk .lbl{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .rk .cp{color:var(--muted);font-size:11px;margin-left:6px;}
+  .rk .track{height:8px;background:var(--line);border-radius:4px;overflow:hidden;}
+  .rk .track>span{display:block;height:100%;background:var(--accent2);border-radius:4px;}
+  .rk .val{color:var(--muted);min-width:90px;text-align:right;font-variant-numeric:tabular-nums;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:900px){.grid2{grid-template-columns:1fr;}}
+  table.detail{width:100%;border-collapse:collapse;font-size:13px;}
+  table.detail th,table.detail td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;}
+  table.detail th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.5px;background:var(--card);position:sticky;top:0;}
+  .tbl-wrap{max-height:540px;overflow:auto;border:1px solid var(--line);border-radius:10px;}
+  .pill{padding:2px 9px;border-radius:99px;font-size:11px;font-weight:700;}
+  .pill.dispo{background:rgba(95,207,138,.18);color:var(--green);}
+  .pill.reserve{background:rgba(224,122,111,.18);color:var(--red);}
+  .note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:12px 16px;color:var(--muted);font-size:12.5px;margin:14px 0;}
+  .note b{color:var(--text);}
+  .dept-chip{display:inline-block;background:var(--card2);border:1px solid var(--line);border-radius:6px;padding:2px 7px;font-size:11px;color:var(--muted);font-weight:600;margin-right:4px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎾 Padel Île-de-France <span style="font-weight:400;color:var(--muted);font-size:18px">— 59 clubs trackés</span></h1>
+  <div class="sub">Données live <span style="color:var(--accent2)">Anybuddy</span> · refresh toutes les 30 min · 7 jours glissants · taux d'occupation reconstruit à partir des créneaux qui disparaissent (= réservés)</div>
+</header>
+
+<div class="wrap">
+
+  <div class="note">
+    <b>Méthode</b> — Anybuddy n'expose que les créneaux <i>disponibles</i>. À chaque relevé on accumule, et un créneau qui DISPARAÎT alors qu'il n'est pas encore passé = réservé. Le taux d'occupation se construit donc au fil des passages (premier relevé : tout est marqué "disponible", à partir du 2e on commence à voir des disparitions). Idéalement attendre 24-48h pour que le signal soit complet.
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="filters">
+    <label>Département</label>
+    <select id="fDept"><option value="">Tous</option>
+      <option value="75">75 · Paris</option>
+      <option value="77">77 · Seine-et-Marne</option>
+      <option value="78">78 · Yvelines</option>
+      <option value="91">91 · Essonne</option>
+      <option value="92">92 · Hauts-de-Seine</option>
+      <option value="93">93 · Seine-Saint-Denis</option>
+      <option value="94">94 · Val-de-Marne</option>
+      <option value="95">95 · Val-d'Oise</option>
+    </select>
+    <label>Période</label>
+    <select id="fPeriode">
+      <option value="0">Tout</option>
+      <option value="1">Demain seulement</option>
+      <option value="3">3 prochains jours</option>
+      <option value="7" selected>7 prochains jours</option>
+    </select>
+    <label>Rechercher</label>
+    <input id="fQ" type="text" placeholder="nom de club...">
+  </div>
+
+  <div class="panel">
+    <h2>🏆 Classement des clubs (par activité observée)</h2>
+    <div class="ranklist" id="rkClubs"></div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h2>📊 Répartition par département</h2>
+      <canvas id="cDept"></canvas>
+    </div>
+    <div class="panel">
+      <h2>🕐 Activité par heure (créneaux totaux)</h2>
+      <canvas id="cHour"></canvas>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>📅 Heatmap occupation jour × heure</h2>
+    <canvas id="cHeat" style="max-height:280px"></canvas>
+  </div>
+
+  <div class="panel">
+    <h2>📋 Détail créneaux (clubs filtrés)</h2>
+    <div class="tbl-wrap">
+      <table class="detail" id="tbl">
+        <thead><tr><th>Date</th><th>Jour</th><th>Heure</th><th>Club</th><th>CP</th><th>Terrain</th><th>Durée</th><th>Prix</th><th>Statut</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:30px;color:var(--muted);font-size:12px">
+    🧪 <a href="secteurs.html">Retour à la page secteurs</a>
+    &middot; <a href="all-1cda8fabdb.html">Hub principal</a>
+  </div>
+</div>
+
+<script>
+const DEPT_NAME={'75':'Paris','77':'Seine-et-Marne','78':'Yvelines','91':'Essonne','92':'Hauts-de-Seine','93':'Seine-Saint-Denis','94':'Val-de-Marne','95':"Val-d'Oise"};
+const nf=v=>Math.round(v).toLocaleString('fr-FR');
+const eur=v=>v?v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €':'—';
+Chart.defaults.color='#8a96b8';Chart.defaults.borderColor='#2a3354';Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
+let STORE={}, CLUBS=[];
+
+async function load(){
+  const [a,b]=await Promise.all([
+    fetch('padel_idf_data.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({})),
+    fetch('padel_idf_clubs.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>[])
+  ]);
+  STORE=a||{}; CLUBS=b||[];
+  render();
+}
+
+function getAll(){
+  const out=[];
+  const dept=document.getElementById('fDept').value;
+  const per=+document.getElementById('fPeriode').value;
+  const q=document.getElementById('fQ').value.toLowerCase();
+  const today=new Date(); today.setHours(0,0,0,0);
+  const maxd=per?new Date(today.getTime()+per*86400000):null;
+  for(const slug in STORE){
+    const b=STORE[slug],meta=b.meta||{},cp=meta.cp||'';
+    if(dept&&cp.slice(0,2)!==dept)continue;
+    if(q&&!slug.toLowerCase().includes(q))continue;
+    for(const id in b.sessions){
+      const s=b.sessions[id];
+      const sd=new Date(s.date+'T00:00');
+      if(sd<today)continue;
+      if(maxd&&sd>maxd)continue;
+      out.push({...s,slug,nom:slug.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase()),cp,dept:cp.slice(0,2)});
+    }
+  }
+  return out;
+}
+
+let charts={};
+function mk(id,cfg){if(charts[id])charts[id].destroy();charts[id]=new Chart(document.getElementById(id),cfg);}
+
+function render(){
+  const D=getAll();
+  const slugsActifs=new Set(D.map(s=>s.slug));
+  const dispo=D.filter(s=>s.statut==='disponible'&&!s.finie).length;
+  const reserves=D.filter(s=>s.statut==='reserve').length;
+  const total_offered=dispo+reserves;
+  const occupation=total_offered?Math.round(100*reserves/total_offered):0;
+  const prix_moy=(()=>{const arr=D.filter(s=>s.prix).map(s=>s.prix);return arr.length?arr.reduce((a,b)=>a+b,0)/arr.length:0;})();
+
+  document.getElementById('kpis').innerHTML=[
+    ['Clubs actifs', nf(slugsActifs.size)+' / 59'],
+    ['Créneaux suivis', nf(D.length)],
+    ['Créneaux dispo', nf(dispo)],
+    ['Disparus / réservés', nf(reserves)],
+    ['Taux occupation', occupation+'%'],
+    ['Prix moyen / 60min', eur(prix_moy)],
+  ].map(([l,v])=>`<div class="k"><div class="v">${v}</div><div class="l">${l}</div></div>`).join('');
+
+  // Classement clubs
+  const byClub={};
+  D.forEach(s=>{const c=byClub[s.slug]=byClub[s.slug]||{nom:s.nom,cp:s.cp,n:0,res:0,prix:[]};
+    c.n++;if(s.statut==='reserve')c.res++;if(s.prix)c.prix.push(s.prix);});
+  const ranked=Object.entries(byClub).map(([k,c])=>({
+    slug:k,nom:c.nom,cp:c.cp,n:c.n,res:c.res,occ:c.n?c.res/c.n:0,
+    prix:c.prix.length?c.prix.reduce((a,b)=>a+b,0)/c.prix.length:0,
+  })).sort((a,b)=>b.n-a.n);
+  const max_n=ranked[0]?ranked[0].n:1;
+  document.getElementById('rkClubs').innerHTML=ranked.map((c,i)=>
+    `<div class="rk"><span class="rank">${i+1}.</span>
+      <span class="lbl">${c.nom}<span class="cp">CP ${c.cp}</span></span>
+      <span class="track"><span style="width:${Math.round(100*c.n/max_n)}%"></span></span>
+      <span class="val">${nf(c.n)} créneaux · ${eur(c.prix)} · ${Math.round(100*c.occ)}% occ.</span>
+    </div>`).join('');
+
+  // Distribution par département
+  const byDept={};
+  Object.keys(STORE).forEach(slug=>{
+    const cp=(STORE[slug].meta||{}).cp||'?';
+    const d=cp.slice(0,2);
+    byDept[d]=(byDept[d]||0)+1;
+  });
+  const depts=Object.keys(byDept).sort();
+  mk('cDept',{type:'bar',data:{labels:depts.map(d=>d+' '+(DEPT_NAME[d]||'')),datasets:[{
+    label:'Clubs',data:depts.map(d=>byDept[d]),backgroundColor:'#2CDF62'
+  }]},options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{stepSize:1}}}}});
+
+  // Activité par heure
+  const byH={};D.forEach(s=>{const h=parseInt(s.heure);byH[h]=(byH[h]||0)+1;});
+  const hrs=Object.keys(byH).map(Number).sort((a,b)=>a-b);
+  mk('cHour',{type:'bar',data:{labels:hrs.map(h=>h+'h'),datasets:[{
+    label:'Créneaux',data:hrs.map(h=>byH[h]),backgroundColor:'#7af0a0'
+  }]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
+
+  // Heatmap jour × heure (occupation rate)
+  const JOURS=['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+  const heat={};
+  for(const s of D){
+    const k=`${s.jour}|${parseInt(s.heure)}`;
+    heat[k]=heat[k]||{n:0,res:0};
+    heat[k].n++;
+    if(s.statut==='reserve')heat[k].res++;
+  }
+  const hrsAll=Array.from({length:18},(_,i)=>i+7);
+  const labels=hrsAll.map(h=>h+'h');
+  const datasets=JOURS.map((j,ji)=>({
+    label:j,
+    data:hrsAll.map(h=>{const c=heat[`${j}|${h}`];return c&&c.n?Math.round(100*c.res/c.n):0;}),
+    backgroundColor:`hsla(${ji*51},65%,60%,.85)`,
+  }));
+  mk('cHeat',{type:'bar',data:{labels,datasets},
+    options:{scales:{y:{beginAtZero:true,max:100,ticks:{callback:v=>v+'%'}}},
+      plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>`${c.dataset.label} ${c.label} : ${c.parsed.y}% occ.`}}}}});
+
+  // Détail tableau
+  const rows=D.sort((a,b)=>(a.date+a.heure)<(b.date+b.heure)?-1:1).slice(0,300);
+  document.querySelector('#tbl tbody').innerHTML=rows.map(s=>
+    `<tr><td>${s.date}</td><td>${s.jour}</td><td>${s.heure}–${s.fin}</td>
+      <td>${s.nom}</td><td>${s.cp}</td><td>${s.terrain||'—'}</td><td>${s.duree}min</td>
+      <td>${eur(s.prix)}</td>
+      <td><span class="pill ${s.statut}">${s.statut}</span></td></tr>`).join('');
+}
+
+['fDept','fPeriode','fQ'].forEach(id=>{
+  const el=document.getElementById(id);
+  el.addEventListener(el.tagName==='SELECT'?'change':'input',render);
+});
+
+load();
+</script>
+</body>
+</html>

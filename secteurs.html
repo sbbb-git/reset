@@ -57,37 +57,29 @@
 
   <!-- ========================= PADEL ========================= -->
   <section style="border-top:none;padding-top:0">
-    <h2>🎾 Padel / raquettes <span class="stage live">live · prototype</span></h2>
-    <p class="sub">Plateforme Anybuddy déjà maîtrisée. Extension à 3 clubs Paris pour valider la scalabilité.</p>
+    <h2>🎾 Padel Île-de-France <span class="stage live">live · 59 clubs trackés</span></h2>
+    <p class="sub">Couverture exhaustive Anybuddy IDF — un seul scraper parallèle, ~23 000 créneaux relevés sur 7 jours glissants à chaque passage. Mise à jour toutes les 30 minutes.</p>
 
-    <div class="cards" id="padelCards">
-      <div class="card" style="border-left-color:#2CDF62" data-key="anybuddy">
-        <div class="top"><div class="ttl">Trinquet Village Paris</div><div class="meta">Padel</div></div>
-        <div class="kpis"><div class="k"><div class="v" data-stat="creneaux">—</div><div class="l">Créneaux vus</div></div>
-          <div class="k"><div class="v" data-stat="reserves">—</div><div class="l">Réservés</div></div>
-          <div class="k"><div class="v" data-stat="taux">—</div><div class="l">Taux occup.</div></div></div>
-        <div class="actions"><a class="btn ghost" href="anybuddy.html">Voir dashboard</a></div>
-      </div>
-      <div class="card" style="border-left-color:#ff6b35" data-key="fourpadel_paris20">
-        <div class="top"><div class="ttl">4PADEL Paris 20</div><div class="meta">Padel · 4 terrains</div></div>
-        <div class="kpis"><div class="k"><div class="v" data-stat="creneaux">—</div><div class="l">Créneaux vus</div></div>
-          <div class="k"><div class="v" data-stat="reserves">—</div><div class="l">Réservés</div></div>
-          <div class="k"><div class="v" data-stat="taux">—</div><div class="l">Taux occup.</div></div></div>
-        <div class="actions"><a class="btn ghost" href="fourpadel_paris20.html">Voir dashboard</a></div>
-      </div>
-      <div class="card" style="border-left-color:#0099cc" data-key="aquaboulevard">
-        <div class="top"><div class="ttl">Aquaboulevard Paris</div><div class="meta">Padel + Tennis + Squash</div></div>
-        <div class="kpis"><div class="k"><div class="v" data-stat="creneaux">—</div><div class="l">Créneaux vus</div></div>
-          <div class="k"><div class="v" data-stat="reserves">—</div><div class="l">Réservés</div></div>
-          <div class="k"><div class="v" data-stat="taux">—</div><div class="l">Taux occup.</div></div></div>
-        <div class="actions"><a class="btn ghost" href="aquaboulevard.html">Voir dashboard</a></div>
+    <div class="cards">
+      <div class="card" style="border-left-color:#2CDF62">
+        <div class="top"><div class="ttl">📊 Dashboard agrégé</div><div class="meta">59 clubs · 8 départements</div></div>
+        <div class="kpis" id="padelKpis">
+          <div class="k"><div class="v" id="kpiClubs">—</div><div class="l">Clubs IDF</div></div>
+          <div class="k"><div class="v" id="kpiCreneaux">—</div><div class="l">Créneaux</div></div>
+          <div class="k"><div class="v" id="kpiOcc">—</div><div class="l">Occupation</div></div>
+        </div>
+        <p style="color:var(--muted);font-size:12px;margin:4px 0">75: 9 · 77: 10 · 78: 12 · 91: 4 · 92: 6 · 93: 4 · 94: 6 · 95: 8</p>
+        <div class="actions">
+          <a class="btn" href="padel_idf.html">Ouvrir le dashboard complet →</a>
+        </div>
       </div>
     </div>
 
     <div class="pipeline">
-      <div class="step ok"><span class="icon">✅</span><b>Anybuddy API</b> exposée — extensible aisément. Identification réelle des terrains par UUID.</div>
-      <div class="step ok"><span class="icon">✅</span><b>Multi-activités</b> validé sur Aquaboulevard (padel + tennis + squash dans le même scraper).</div>
-      <div class="step"><span class="icon">⏭️</span><b>Phase 2</b> : étendre à 20-30 clubs Paris/IDF, ajouter Playtomic + Doinsport pour cross-platform coverage.</div>
+      <div class="step ok"><span class="icon">✅</span><b>Sitemap exhaustif</b> Anybuddy filtré + vérifié par code postal (filtrage des faux positifs comme Saint-Maurice-l'Exil ou Saint-Denis-en-Val).</div>
+      <div class="step ok"><span class="icon">✅</span><b>Parallélisme x8</b> : les 59 clubs scrapés en ~20 secondes par passage. Workflow toutes les 30 min.</div>
+      <div class="step ok"><span class="icon">✅</span><b>Multi-activités</b> à venir : Aquaboulevard et autres complexes ont aussi tennis/squash sur la même infrastructure.</div>
+      <div class="step"><span class="icon">⏭️</span><b>Phase 2</b> : ajouter Playtomic + Doinsport pour couvrir les clubs hors Anybuddy + reconstituer le marché total padel IDF.</div>
     </div>
   </section>
 
@@ -160,34 +152,29 @@
 const SUPABASE_URL="https://gxqaanumilsmqmodtnbl.supabase.co";
 const SUPABASE_KEY="sb_publishable_pTcELCyyTItLSyyditPgbg_ZUl05heo";
 
-// Pour les clubs padel : fetch leur data.json directement (plus simple que Supabase
-// car ces nouveaux clubs ne sont pas encore branchés sur supabase_sync).
-const PADEL = [
-  {key:"anybuddy", path:"anybuddy_data.json"},
-  {key:"fourpadel_paris20", path:"fourpadel_paris20_data.json"},
-  {key:"aquaboulevard", path:"aquaboulevard_data.json"},
-];
-
-async function loadPadel(){
-  for(const c of PADEL){
-    try{
-      const r = await fetch(c.path, {cache:'no-store'});
-      if(!r.ok) continue;
-      const d = await r.json();
-      const items = Object.values(d);
-      const total = items.length;
-      const reserves = items.filter(x => x.statut === 'reserved' || x.statut === 'booked').length;
-      const taux = total ? Math.round(100 * reserves / total) : 0;
-      const card = document.querySelector(`[data-key="${c.key}"]`);
-      if(card){
-        card.querySelector('[data-stat="creneaux"]').textContent = total.toLocaleString('fr-FR');
-        card.querySelector('[data-stat="reserves"]').textContent = reserves.toLocaleString('fr-FR');
-        card.querySelector('[data-stat="taux"]').textContent = taux + '%';
+// Padel IDF agrégé : kpis dans la card
+async function loadPadelIdf(){
+  try{
+    const r = await fetch('padel_idf_data.json', {cache:'no-store'});
+    if(!r.ok) return;
+    const d = await r.json();
+    const slugs = Object.keys(d);
+    let total=0, reserves=0;
+    for(const slug of slugs){
+      const sess = (d[slug]||{}).sessions || {};
+      for(const id in sess){
+        const s = sess[id];
+        if(s.date < new Date().toISOString().slice(0,10)) continue;
+        total++;
+        if(s.statut === 'reserve') reserves++;
       }
-    }catch(e){}
-  }
+    }
+    document.getElementById('kpiClubs').textContent = slugs.length;
+    document.getElementById('kpiCreneaux').textContent = total.toLocaleString('fr-FR');
+    document.getElementById('kpiOcc').textContent = total ? Math.round(100*reserves/total) + '%' : '—';
+  }catch(e){}
 }
-loadPadel();
+loadPadelIdf();
 </script>
 </body>
 </html>
