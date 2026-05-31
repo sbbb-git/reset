@@ -46,7 +46,8 @@
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
   @media(max-width:820px){.grid2{grid-template-columns:1fr;}}
   .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;}
-  .card{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;}
+  .card{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;transition:transform .12s ease,border-color .12s ease;}
+  .card:hover{transform:translateY(-2px);border-color:var(--accent);}
   .card .ttl{display:flex;align-items:center;gap:8px;font-weight:800;font-size:15px;}
   .card .badge{font-size:10.5px;color:var(--muted);background:var(--line);padding:2px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.4px;}
   .card .plat{font-size:11px;color:var(--muted);}
@@ -222,7 +223,7 @@ function render(){
 function renderAnnuaire(brands){
   const list=[...brands].sort((a,b)=>b.taux-a.taux);
   document.getElementById('annuaire').innerHTML=list.map(b=>
-    `<div class="card" style="border-left-color:${b.color}">`
+    `<a class="card" href="${b.key}.html" style="border-left-color:${b.color}" title="Voir le détail ${b.label}">`
     +`<div class="ttl"><span class="dot" style="background:${b.color}"></span>${b.label}<span class="badge">${b.cat}</span></div>`
     +`<div class="plat">${b.plat||''}</div>`
     +`<div class="taux" style="color:${fill(b.taux)}">${Math.round(100*b.taux)}% &middot; ${b.moy.toFixed(1)}/séance</div>`
@@ -231,7 +232,7 @@ function renderAnnuaire(brands){
     +`<div class="row"><span>Présents total</span><b>${nf(b.pres)}</b></div>`
     +`<div class="row"><span>CA estimé</span><b>${eur(b.ca)}</b></div>`
     +(b.upd?`<div class="upd">Dernier relevé : ${b.upd}</div>`:'')
-    +`</div>`).join('');
+    +`</a>`).join('');
 }
 
 let sortKey='taux',sortDir=-1;
