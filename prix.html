@@ -3,269 +3,289 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Analyse des prix · marques boutique fitness</title>
+<title>Grille de prix factuelle · marques boutique fitness</title>
 <style>
   :root{--bg:#0c1020;--card:#141a30;--card2:#1a2138;--line:#2a3358;--text:#eef1fb;
         --muted:#9aa6cc;--accent:#6f82ff;--accent2:#a7b3ff;--gold:#e6c14d;--green:#5fcf8a;--red:#e07a6f;}
   *{box-sizing:border-box;}
   body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.5;}
+  a{color:var(--accent);}
   header{padding:24px 28px 14px;border-bottom:1px solid var(--line);}
   header h1{margin:0;font-size:24px;font-weight:800;letter-spacing:-.3px;}
   header .sub{color:var(--muted);font-size:13px;margin-top:6px;}
-  .wrap{max-width:1280px;margin:0 auto;padding:0 24px 60px;}
+  .wrap{max-width:1380px;margin:0 auto;padding:0 24px 60px;}
   .note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:13px 18px;margin:18px 0;color:var(--muted);font-size:13px;line-height:1.55;}
   .note b{color:var(--text);}
   .toolbar{display:flex;gap:14px;flex-wrap:wrap;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:18px 0;position:sticky;top:0;z-index:5;}
-  .toolbar .lbl{color:var(--muted);font-size:12px;letter-spacing:.4px;text-transform:uppercase;font-weight:700;}
+  .toolbar .lbl{color:var(--muted);font-size:12px;letter-spacing:.4px;text-transform:uppercase;font-weight:700;margin-bottom:6px;}
   .methods{display:flex;gap:8px;flex-wrap:wrap;}
   .methods label{display:inline-flex;align-items:center;gap:6px;background:var(--card2);border:1.5px solid var(--line);border-radius:9px;padding:8px 14px;font-size:13px;cursor:pointer;transition:all .12s;}
   .methods label.on{border-color:var(--accent);background:rgba(111,130,255,.15);color:#fff;}
   .methods input{appearance:none;width:0;}
-  .btn{background:var(--accent);color:#0c1020;border:none;border-radius:9px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;}
+  .btn{background:var(--accent);color:#0c1020;border:none;border-radius:9px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;}
   .btn.ghost{background:transparent;color:var(--text);border:1.5px solid var(--line);}
   .btn:hover{filter:brightness(1.1);}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;margin-top:14px;}
-  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:18px 20px;}
-  .card .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;gap:8px;}
-  .card .ttl{display:flex;align-items:center;gap:8px;font-weight:800;font-size:15px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:14px;margin-top:14px;}
+  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:10px;}
+  .card .top{display:flex;align-items:center;justify-content:space-between;gap:8px;}
+  .card .ttl{display:flex;align-items:center;gap:8px;font-weight:800;font-size:16px;}
   .card .dot{width:10px;height:10px;border-radius:50%;display:inline-block;}
   .card .cat{font-size:10.5px;color:var(--muted);background:var(--card2);padding:3px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.4px;}
-  .card .moy{margin:8px 0 12px;padding:10px 14px;background:var(--card2);border-radius:10px;display:flex;justify-content:space-between;align-items:baseline;}
-  .card .moy .vlbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;font-weight:700;}
-  .card .moy .vval{font-size:24px;font-weight:800;color:var(--accent2);letter-spacing:-.5px;}
-  .card .row{display:grid;grid-template-columns:120px 1fr;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin:5px 0;}
-  .card .row b{color:var(--text);font-weight:600;}
-  .pinp{background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:6px 9px;font-size:13px;width:100%;font-family:inherit;}
-  .pinp:focus{outline:none;border-color:var(--accent);}
-  .card .src{font-size:10.5px;color:var(--muted);margin-top:8px;}
-  .card .src a{color:var(--accent2);}
-  .conf{font-size:10px;padding:2px 7px;border-radius:99px;letter-spacing:.4px;font-weight:700;text-transform:uppercase;}
+  .conf{font-size:10px;padding:2px 8px;border-radius:99px;letter-spacing:.4px;font-weight:700;text-transform:uppercase;}
   .conf.haute{background:rgba(95,207,138,.18);color:var(--green);}
   .conf.moyenne{background:rgba(230,193,77,.18);color:var(--gold);}
   .conf.basse{background:rgba(224,122,111,.18);color:var(--red);}
-  .calc{font-size:11px;color:var(--muted);font-style:italic;margin-top:6px;line-height:1.4;}
-  .links{margin-top:18px;font-size:13px;color:var(--muted);}
-  .links a{color:var(--accent);margin-right:14px;}
-  @media(max-width:600px){.grid{grid-template-columns:1fr;}header{padding:18px 16px 12px}.wrap{padding:0 14px 40px}.toolbar{padding:14px}.card .row{grid-template-columns:110px 1fr}}
+  .moy{padding:11px 14px;background:linear-gradient(135deg,rgba(111,130,255,.15),rgba(167,179,255,.05));border:1px solid rgba(111,130,255,.3);border-radius:10px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+  .moy .vlbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;font-weight:700;}
+  .moy .vval{font-size:26px;font-weight:800;color:var(--accent2);letter-spacing:-.5px;}
+  .calc{font-size:11px;color:var(--muted);font-style:italic;line-height:1.4;margin-top:-4px;}
+  .grids{display:flex;flex-direction:column;gap:10px;}
+  .gtitle{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;font-weight:700;margin:6px 0 2px;}
+  table.gtbl{width:100%;border-collapse:collapse;font-size:13px;}
+  table.gtbl td,table.gtbl th{padding:6px 8px;text-align:left;border-bottom:1px solid var(--line);}
+  table.gtbl th{color:var(--muted);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;}
+  table.gtbl .num{text-align:right;font-variant-numeric:tabular-nums;}
+  table.gtbl .unit{color:var(--accent2);font-weight:700;}
+  .empty{font-size:12px;color:var(--muted);font-style:italic;padding:4px 0;}
+  .drop{padding:8px 12px;background:var(--card2);border-radius:8px;display:flex;justify-content:space-between;font-size:13px;}
+  .drop b{color:var(--accent2);font-weight:700;}
+  .src{font-size:11px;color:var(--muted);padding-top:8px;border-top:1px dashed var(--line);}
+  .src a{color:var(--accent2);}
+  .override{display:flex;gap:8px;align-items:center;padding:7px 10px;background:var(--card2);border:1px dashed var(--line);border-radius:8px;font-size:12px;color:var(--muted);}
+  .override input{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:5px;padding:4px 7px;font-size:12px;width:80px;}
+  .legend{font-size:11px;color:var(--muted);margin-top:6px;}
+  .legend .pill{display:inline-flex;align-items:center;gap:5px;background:var(--card2);border:1px solid var(--line);padding:3px 8px;border-radius:99px;margin-right:6px;}
+  .links{margin-top:24px;font-size:13px;color:var(--muted);text-align:center;}
+  .links a{margin:0 10px;}
+  @media(max-width:600px){.grid{grid-template-columns:1fr;}header{padding:18px 16px 12px}.wrap{padding:0 14px 40px}.toolbar{padding:14px}.card{padding:16px}}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>💶 Analyse des prix</h1>
-  <div class="sub">Source unique pour le prix moyen utilisé partout (comparateur, CA estimé, benchmarks). Modifié ici = répercuté instantanément.</div>
+  <h1>💶 Grille de prix factuelle</h1>
+  <div class="sub">Données scrapées directement sur les pages tarifs publiques. Read-only. Le prix moyen affiché est calculé selon la méthode choisie ci-dessous, et utilisé dans le comparateur.</div>
 </header>
 
 <div class="wrap">
 
   <div class="note">
-    <b>Comment ça marche</b> — Cette page contient la grille TTC publique de chaque marque (drop-in, packs, abos) et calcule un <b>prix moyen par séance</b> selon la méthode que tu choisis ci-dessous. Le prix moyen est ensuite utilisé automatiquement dans le comparateur pour le CA estimé. Tu peux aussi forcer une valeur manuelle par marque (champ « override »). Tout est stocké localement dans ton navigateur (<code>localStorage</code>).
+    <b>Source de vérité</b> — Chaque grille est extraite de la page tarifs officielle (lien <i>« voir la source »</i> sous chaque carte). Stockage côté serveur (Supabase) ; cette page est en lecture seule. La méthode de calcul du prix moyen est ton seul levier (override par marque possible en bas de chaque carte). Tu peux relancer le scraper via le workflow GitHub <code>prices-sync.yml</code> pour actualiser.
   </div>
 
   <div class="toolbar">
     <div>
-      <div class="lbl">Méthode de calcul</div>
+      <div class="lbl">Méthode de calcul du prix moyen</div>
       <div class="methods" id="methodSel">
         <label data-m="drop_in"><input type="radio" name="m" value="drop_in">📍 Drop-in publié</label>
         <label data-m="pack_10"><input type="radio" name="m" value="pack_10">📦 Pack de 10 (unitaire)</label>
-        <label data-m="weighted"><input type="radio" name="m" value="weighted">⚖️ Pondéré (10% drop / 50% pack / 40% abo)</label>
+        <label data-m="weighted"><input type="radio" name="m" value="weighted">⚖️ Pondéré 10/50/40</label>
+      </div>
+      <div class="legend">
+        <span class="pill conf haute">haute</span> grille complète sur page officielle
+        <span class="pill conf moyenne">moyenne</span> partielle ou source tierce
+        <span class="pill conf basse">basse</span> non vérifiable publiquement
       </div>
     </div>
-    <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap">
-      <button class="btn ghost" id="btnReset">↻ Réinitialiser aux défauts</button>
-      <button class="btn" id="btnExport">⇩ Exporter JSON</button>
-    </div>
+    <div style="margin-left:auto"><a class="btn ghost" href="comparateur.html">↗ Voir l'impact sur le comparateur</a></div>
   </div>
 
   <div class="note" id="methodHelp"></div>
 
-  <div class="grid" id="grid"></div>
+  <div id="loading" style="text-align:center;padding:60px 20px;color:var(--muted)">⏳ Chargement de la grille…</div>
+  <div class="grid" id="grid" style="display:none"></div>
 
   <div class="links">
-    📊 <a href="comparateur.html">Voir l'impact sur le comparateur</a>
-    &nbsp;·&nbsp; <a href="all-1cda8fabdb.html">Hub principal</a>
-    &nbsp;·&nbsp; <a href="etude.html">Étude B2B</a>
+    📊 <a href="comparateur.html">Comparateur</a> · <a href="all-1cda8fabdb.html">Hub principal</a> · <a href="etude.html">Étude B2B</a>
   </div>
 </div>
 
 <script>
-// Catalogue brut des marques (label, couleur, catégorie, prix défauts).
-// Les "grille" sont alimentés au mieux d'après les pages tarifs publiques ;
-// l'utilisateur peut tout éditer.
-const BRANDS=[
-  {key:"reset",label:"Re-SET",color:"#d98b63",cat:"Bootcamp",seances_mois:10,
-   grille:{drop_in:30,pack_10:25,abo_mensuel:189},source:"https://www.re-set.fr/",confiance:"moyenne"},
-  {key:"punch",label:"Punch",color:"#263fff",cat:"Boxe",seances_mois:10,
-   grille:{drop_in:19,pack_10:17,abo_mensuel:159},source:"https://punch-studios.com/",confiance:"moyenne"},
-  {key:"dynamo",label:"Dynamo",color:"#faa619",cat:"Cycling",seances_mois:10,
-   grille:{drop_in:30,pack_10:20,abo_mensuel:179},source:"https://dynamo-cycling.com/",confiance:"moyenne"},
-  {key:"riise",label:"Riise",color:"#c25a3f",cat:"Yoga",seances_mois:8,
-   grille:{drop_in:27,pack_10:18,abo_mensuel:149},source:"https://riise-studios.com/",confiance:"moyenne"},
-  {key:"thenewme",label:"The New Me",color:"#b8895e",cat:"Pilates",seances_mois:8,
-   grille:{drop_in:35,pack_10:25,abo_mensuel:189},source:"https://thenewme.fr/",confiance:"moyenne"},
-  {key:"lecercle",label:"Le Cercle",color:"#d4453a",cat:"Boxe",seances_mois:10,
-   grille:{drop_in:35,pack_10:28,abo_mensuel:229},source:"https://www.lecercle-boxing.com/",confiance:"moyenne"},
-  {key:"spacecycle",label:"Space Cycle",color:"#16b3c6",cat:"Cycling",seances_mois:10,
-   grille:{drop_in:35,pack_10:28,abo_mensuel:249},source:"https://www.space-cycle.com/",confiance:"moyenne"},
-  {key:"poses",label:"Poses",color:"#b06a8f",cat:"Pilates",seances_mois:8,
-   grille:{drop_in:40,pack_10:32,abo_mensuel:239},source:"https://www.poses-studio.com/",confiance:"moyenne"},
-  {key:"barrys",label:"Barry's",color:"#e2231a",cat:"Bootcamp",seances_mois:10,
-   grille:{drop_in:35,pack_10:30,abo_mensuel:249},source:"https://www.barrys.com/paris",confiance:"moyenne"},
-  {key:"episod",label:"Episod",color:"#e8c14d",cat:"Bootcamp",seances_mois:10,
-   grille:{drop_in:30,pack_10:24,abo_mensuel:179},source:"https://www.episod.com/nos-tarifs/",confiance:"moyenne"},
-  {key:"belly",label:"Belly",color:"#e0699b",cat:"Pilates",seances_mois:8,
-   grille:{drop_in:50,pack_10:30,abo_mensuel:249},source:"https://studiobelly.com/",confiance:"moyenne"},
-  {key:"athletx",label:"AthletX",color:"#e0322c",cat:"Bootcamp",seances_mois:10,
-   grille:{drop_in:30,pack_10:18,abo_mensuel:149},source:"https://athletxrebel.com/",confiance:"moyenne"},
-  {key:"senseclub",label:"Sense-Club",color:"#9b7ff0",cat:"Pilates",seances_mois:8,
-   grille:{drop_in:55,pack_10:45,abo_mensuel:379},source:"https://www.sense-club.fr/tarifs",confiance:"moyenne"},
-  {key:"dna",label:"DNA Pilates",color:"#c9a24b",cat:"Pilates",seances_mois:8,
-   grille:{drop_in:50,pack_10:40,abo_mensuel:289},source:"https://dnapilatesparis.com/",confiance:"moyenne"},
-  {key:"le33foch",label:"Le 33 Foch",color:"#c4a361",cat:"Bootcamp",seances_mois:10,
-   grille:{drop_in:35,pack_10:30,abo_mensuel:259},source:"https://le33foch.fr/",confiance:"basse"},
-  {key:"banote",label:"Banote",color:"#c9a24b",cat:"Pilates",seances_mois:8,
-   grille:{drop_in:60,pack_10:45,abo_mensuel:329},source:"https://www.banoteclub.com/",confiance:"moyenne"},
-  {key:"santroch",label:"Sant-Roch",color:"#4a7c7e",cat:"Yoga",seances_mois:8,
-   grille:{drop_in:45,pack_10:35,abo_mensuel:269},source:"https://sant-roch.com/",confiance:"basse"},
-  {key:"snakeandtwist",label:"Snake & Twist",color:"#3a7d44",cat:"Pilates",seances_mois:8,
-   grille:{drop_in:35,pack_10:28,abo_mensuel:209},source:"https://www.snakeandtwist.fr/",confiance:"moyenne"},
-  {key:"burningbar",label:"Burning Bar",color:"#ff5a1f",cat:"Pilates",seances_mois:8,
-   grille:{drop_in:40,pack_10:32,abo_mensuel:249},source:"https://burningbar.fr/",confiance:"moyenne"},
-  {key:"anybuddy",label:"Trinquet padel",color:"#3fa796",cat:"Padel",seances_mois:6,
-   grille:{drop_in:18,pack_10:15,abo_mensuel:79},source:"https://trinquetvillage.com",confiance:"basse",
-   note:"Padel = par joueur (terrain divisé par 4)"},
-  {key:"driphiit",label:"DRIP HIIT",color:"#0bbfae",cat:"HIIT",seances_mois:10,
-   grille:{drop_in:35,pack_10:29,abo_mensuel:219},source:"https://www.drip-hiit.com/",confiance:"moyenne"},
-  {key:"kore",label:"KORE Studio",color:"#7a6f5c",cat:"Pilates",seances_mois:8,
-   grille:{drop_in:35,pack_10:28,abo_mensuel:209},source:"https://www.kore-studio.com/",confiance:"moyenne"},
-];
+const BRAND_META={
+  reset:{label:"Re-SET",color:"#d98b63",cat:"Bootcamp",seances_mois:10},
+  punch:{label:"Punch",color:"#263fff",cat:"Boxe",seances_mois:10},
+  dynamo:{label:"Dynamo",color:"#faa619",cat:"Cycling",seances_mois:10},
+  riise:{label:"Riise",color:"#c25a3f",cat:"Yoga",seances_mois:8},
+  thenewme:{label:"The New Me",color:"#b8895e",cat:"Pilates",seances_mois:8},
+  lecercle:{label:"Le Cercle",color:"#d4453a",cat:"Boxe",seances_mois:10},
+  spacecycle:{label:"Space Cycle",color:"#16b3c6",cat:"Cycling",seances_mois:10},
+  poses:{label:"Poses",color:"#b06a8f",cat:"Pilates",seances_mois:8},
+  barrys:{label:"Barry's",color:"#e2231a",cat:"Bootcamp",seances_mois:10},
+  episod:{label:"Episod",color:"#e8c14d",cat:"Bootcamp",seances_mois:10},
+  belly:{label:"Belly",color:"#e0699b",cat:"Pilates",seances_mois:8},
+  athletx:{label:"AthletX",color:"#e0322c",cat:"Bootcamp",seances_mois:8},
+  senseclub:{label:"Sense-Club",color:"#9b7ff0",cat:"Pilates",seances_mois:8},
+  dna:{label:"DNA Pilates",color:"#c9a24b",cat:"Pilates",seances_mois:8},
+  le33foch:{label:"Le 33 Foch",color:"#c4a361",cat:"Bootcamp",seances_mois:10},
+  banote:{label:"Banote",color:"#c9a24b",cat:"Pilates",seances_mois:10},
+  santroch:{label:"Sant-Roch",color:"#4a7c7e",cat:"Yoga",seances_mois:8},
+  snakeandtwist:{label:"Snake & Twist",color:"#3a7d44",cat:"Pilates",seances_mois:8},
+  burningbar:{label:"Burning Bar",color:"#ff5a1f",cat:"Pilates",seances_mois:8},
+  anybuddy:{label:"Trinquet padel",color:"#3fa796",cat:"Padel",seances_mois:1},
+  driphiit:{label:"DRIP HIIT",color:"#0bbfae",cat:"HIIT",seances_mois:10},
+  kore:{label:"KORE Studio",color:"#7a6f5c",cat:"Pilates",seances_mois:8},
+};
+const SUPABASE_URL="https://gxqaanumilsmqmodtnbl.supabase.co";
+const SUPABASE_KEY="sb_publishable_pTcELCyyTItLSyyditPgbg_ZUl05heo";
 
-const STORAGE="brand_prices_grid_v1";
-const DEFAULTS={method:"pack_10",brands:{}};
-BRANDS.forEach(b=>{DEFAULTS.brands[b.key]={
-  grille:{...b.grille},seances_mois:b.seances_mois,override:null};});
-
-function load(){
-  try{const s=JSON.parse(localStorage.getItem(STORAGE)||'null');
-    if(s&&s.brands)return s;}catch(e){}
-  return JSON.parse(JSON.stringify(DEFAULTS));
-}
-function save(s){try{localStorage.setItem(STORAGE,JSON.stringify(s));}catch(e){}}
-let STATE=load();
+const METHOD_STORAGE="brand_prices_method_v1";
+const OVERRIDE_STORAGE="brand_prices_override_v1";
 
 const HELP={
-  drop_in:"<b>Méthode drop-in</b> — Utilise le prix d'une séance unitaire publique. Le plus simple à justifier mais <b>sur-estime le CA</b> car peu de clients paient ce tarif (la majorité utilise packs ou abos).",
-  pack_10:"<b>Méthode pack de 10</b> — Utilise le prix unitaire dans un pack de 10 séances. Représente le client régulier « moyen ». Hypothèse implicite : la majorité des revenus passe par les packs.",
-  weighted:"<b>Méthode pondérée</b> — Mix client typique : <b>10% drop-in + 50% pack de 10 + 40% abo mensuel</b> divisé par le nb de séances réellement consommées (renseigné par marque, par défaut 8 pour pilates/yoga, 10 pour boxe/cycling/HIIT/bootcamp, 6 pour padel). Le plus complet mais sensible aux hypothèses de mix client.",
+  drop_in:"<b>Méthode drop-in</b> — Prend strictement le prix de la séance unitaire publié. Le plus simple à justifier mais <b>sur-estime le CA</b> (la majorité des clients paie moins via packs ou abos).",
+  pack_10:"<b>Méthode pack de 10</b> — Prend le prix unitaire dans le pack de 10 (ou son équivalent le plus proche). Représente le client régulier « moyen ».",
+  weighted:"<b>Méthode pondérée</b> — Mix : <b>10% drop-in + 50% pack 10 + 40% abo mensuel divisé par séances/mois consommées</b> (8 pilates/yoga, 10 boxe/cycling/HIIT/bootcamp). Le plus réaliste mais sensible aux hypothèses de mix client.",
 };
 
-function computePrice(b){
-  const s=STATE.brands[b.key];if(!s)return 0;
-  if(s.override!=null&&s.override!=='')return +s.override||0;
-  const g=s.grille||{},sm=+s.seances_mois||b.seances_mois||10;
-  const drop=+g.drop_in||0,pack=+g.pack_10||0,abo=+g.abo_mensuel||0;
-  const aboUnit=sm?abo/sm:0;
-  if(STATE.method==="drop_in")return drop||pack||aboUnit;
-  if(STATE.method==="pack_10")return pack||drop*.75||aboUnit;
+let METHOD=localStorage.getItem(METHOD_STORAGE)||'pack_10';
+let OVERRIDES=(()=>{try{return JSON.parse(localStorage.getItem(OVERRIDE_STORAGE)||'{}');}catch(e){return {};}})();
+let DATA=null;
+
+function findPack(packs,size){
+  if(!packs||!packs.length)return null;
+  let best=null,diff=Infinity;
+  packs.forEach(p=>{const d=Math.abs((p.size||0)-size);if(d<diff){diff=d;best=p;}});
+  return best;
+}
+function findAboMensuel(abos){
+  if(!abos||!abos.length)return null;
+  // priorise un abo avec engagement et seances_inclus définis ; sinon le moins cher
+  const withSeances=abos.filter(a=>a.seances_inclus&&a.prix_mensuel);
+  if(withSeances.length)return withSeances.sort((a,b)=>a.prix_mensuel-b.prix_mensuel)[0];
+  return abos.filter(a=>a.prix_mensuel).sort((a,b)=>a.prix_mensuel-b.prix_mensuel)[0]||null;
+}
+function computePrice(key,d){
+  const ov=OVERRIDES[key];
+  if(ov!=null&&ov!=='')return {val:+ov||0,calc:`override : ${ov} €`};
+  const drop=+d.drop_in||0;
+  const pack10=findPack(d.packs,10);
+  const packU=pack10?pack10.prix_unitaire:0;
+  const abo=findAboMensuel(d.abos);
+  const sm=BRAND_META[key]?.seances_mois||10;
+  const aboSeances=abo?.seances_inclus||sm;
+  const aboU=abo?abo.prix_mensuel/aboSeances:0;
+  if(METHOD==='drop_in')return {val:drop||packU||aboU,calc:`drop-in = ${drop} €`};
+  if(METHOD==='pack_10'){
+    if(packU)return {val:packU,calc:`pack 10 (unitaire) = ${packU.toFixed(2)} €`};
+    if(drop)return {val:drop*.75,calc:`fallback : drop-in × 0.75 = ${(drop*.75).toFixed(1)} €`};
+    return {val:aboU,calc:`fallback : abo / ${aboSeances} = ${aboU.toFixed(1)} €`};
+  }
   // weighted
-  const parts=[];let weight=0;
-  if(drop){parts.push(.10*drop);weight+=.10;}
-  if(pack){parts.push(.50*pack);weight+=.50;}
-  if(aboUnit){parts.push(.40*aboUnit);weight+=.40;}
-  if(!weight)return 0;
-  return parts.reduce((a,b)=>a+b,0)/weight;
+  const parts=[];let w=0,calcparts=[];
+  if(drop){parts.push(.10*drop);w+=.10;calcparts.push(`10%×${drop}`);}
+  if(packU){parts.push(.50*packU);w+=.50;calcparts.push(`50%×${packU.toFixed(2)}`);}
+  if(aboU){parts.push(.40*aboU);w+=.40;calcparts.push(`40%×(${abo.prix_mensuel}/${aboSeances})`);}
+  if(!w)return {val:0,calc:'aucune donnée'};
+  const val=parts.reduce((a,b)=>a+b,0)/w;
+  return {val,calc:calcparts.join(' + ')+` = ${val.toFixed(1)} €`};
+}
+
+async function load(){
+  // Tente Supabase d'abord, fallback brand_prices.json local
+  try{
+    const h={apikey:SUPABASE_KEY,Authorization:`Bearer ${SUPABASE_KEY}`};
+    const r=await fetch(`${SUPABASE_URL}/rest/v1/brand_prices?select=*`,{headers:h,cache:'no-store'});
+    if(r.ok){
+      const arr=await r.json();
+      if(arr.length){
+        DATA={};
+        arr.forEach(row=>{DATA[row.brand_key]={
+          source_url:row.source_url,confiance:row.confiance,
+          drop_in:row.drop_in,packs:row.packs||[],abos:row.abos||[],
+          offres:row.offres||[],note:row.note,scraped_at:row.scraped_at};});
+        return;
+      }
+    }
+  }catch(e){}
+  // fallback local
+  try{
+    const r=await fetch('brand_prices.json',{cache:'no-store'});
+    if(r.ok)DATA=await r.json();
+  }catch(e){}
 }
 
 function render(){
   document.querySelectorAll('#methodSel label').forEach(l=>{
-    l.classList.toggle('on',l.dataset.m===STATE.method);
-    l.querySelector('input').checked=(l.dataset.m===STATE.method);
+    l.classList.toggle('on',l.dataset.m===METHOD);
+    l.querySelector('input').checked=(l.dataset.m===METHOD);
   });
-  document.getElementById('methodHelp').innerHTML=HELP[STATE.method]||'';
-  const g=document.getElementById('grid');
-  g.innerHTML=BRANDS.map(b=>{
-    const s=STATE.brands[b.key]||{};
-    const grille=s.grille||{};
-    const sm=s.seances_mois||b.seances_mois;
-    const moy=computePrice(b);
-    const calcTxt=(() => {
-      const drop=+grille.drop_in||0,pack=+grille.pack_10||0,abo=+grille.abo_mensuel||0,aboU=sm?abo/sm:0;
-      if(s.override!=null&&s.override!=='')return `override : ${s.override} €`;
-      if(STATE.method==='drop_in')return `drop-in = ${drop} €`;
-      if(STATE.method==='pack_10')return pack?`pack 10 = ${pack} €`:`fallback : drop-in×0,75 = ${(drop*.75).toFixed(1)} €`;
-      const parts=[];
-      if(drop)parts.push(`10%×${drop}`);
-      if(pack)parts.push(`50%×${pack}`);
-      if(abo)parts.push(`40%×(${abo}/${sm})`);
-      return parts.join(' + ')+' = '+moy.toFixed(1)+' €';
-    })();
-    return `<div class="card" style="border-left-color:${b.color}">
+  document.getElementById('methodHelp').innerHTML=HELP[METHOD]||'';
+  if(!DATA||!Object.keys(DATA).length){
+    document.getElementById('loading').textContent='⚠️ Aucune donnée de prix disponible. Lance `python3 prices_scrape.py` ou attends le prochain run du workflow prices-sync.';
+    return;
+  }
+  document.getElementById('loading').style.display='none';
+  const g=document.getElementById('grid');g.style.display='';
+  // tri : haute confiance d'abord, puis par catégorie/label
+  const keys=Object.keys(DATA).sort((a,b)=>{
+    const ca=DATA[a].confiance||'moyenne',cb=DATA[b].confiance||'moyenne';
+    const ord={haute:0,moyenne:1,basse:2};
+    if(ord[ca]!==ord[cb])return ord[ca]-ord[cb];
+    return (BRAND_META[a]?.label||a).localeCompare(BRAND_META[b]?.label||b);
+  });
+  g.innerHTML=keys.map(k=>{
+    const d=DATA[k],m=BRAND_META[k]||{label:k,color:'#888',cat:'?'};
+    const {val,calc}=computePrice(k,d);
+    const packsHtml=d.packs&&d.packs.length
+      ? `<table class="gtbl"><thead><tr><th>Pack</th><th class="num">Total</th><th class="num">Unit.</th></tr></thead><tbody>`
+        +d.packs.map(p=>`<tr><td>${p.name||('Pack '+p.size)}</td><td class="num">${p.prix_total??'—'} €</td><td class="num unit">${p.prix_unitaire?.toFixed(2)??'—'} €</td></tr>`).join('')
+        +`</tbody></table>`
+      : `<div class="empty">Pas de pack publié.</div>`;
+    const abosHtml=d.abos&&d.abos.length
+      ? `<table class="gtbl"><thead><tr><th>Abo</th><th class="num">Mensuel</th><th class="num">Séances</th><th class="num">Engag.</th></tr></thead><tbody>`
+        +d.abos.map(a=>`<tr><td>${a.name||'Abo'}</td><td class="num">${a.prix_mensuel??'—'} €</td><td class="num">${a.seances_inclus??'illim.'}</td><td class="num">${a.engagement_mois?a.engagement_mois+' m':'—'}</td></tr>`).join('')
+        +`</tbody></table>`
+      : `<div class="empty">Pas d'abo mensuel.</div>`;
+    const offresHtml=d.offres&&d.offres.length
+      ? `<div class="gtitle">Offres / autres</div>`
+        +`<table class="gtbl"><tbody>`
+        +d.offres.map(o=>`<tr><td>${o.name}</td><td class="num">${o.prix??'—'} €</td><td class="num">${o.seances?o.seances+' séances':''}</td></tr>`).join('')
+        +`</tbody></table>`
+      : '';
+    return `<div class="card" style="border-left-color:${m.color}">
       <div class="top">
-        <div class="ttl"><span class="dot" style="background:${b.color}"></span>${b.label}<span class="cat">${b.cat}</span></div>
-        <span class="conf ${b.confiance||'moyenne'}">${(b.confiance||'moyenne')}</span>
+        <div class="ttl"><span class="dot" style="background:${m.color}"></span>${m.label}<span class="cat">${m.cat}</span></div>
+        <span class="conf ${d.confiance||'moyenne'}">${(d.confiance||'moyenne')}</span>
       </div>
       <div class="moy">
-        <div class="vlbl">Prix moyen / séance</div>
-        <div class="vval">${Math.round(moy)} €</div>
+        <div><div class="vlbl">Prix moyen / séance</div><div style="font-size:11px;color:var(--muted)">méthode : ${METHOD}</div></div>
+        <div class="vval">${Math.round(val)} €</div>
       </div>
-      <div class="calc">${calcTxt}</div>
-      <div style="margin-top:14px">
-        <div class="row"><span>Drop-in (€)</span><input class="pinp" type="number" min="0" step="0.5" data-bk="${b.key}" data-f="drop_in" value="${grille.drop_in??''}"></div>
-        <div class="row"><span>Pack 10 unit. (€)</span><input class="pinp" type="number" min="0" step="0.5" data-bk="${b.key}" data-f="pack_10" value="${grille.pack_10??''}"></div>
-        <div class="row"><span>Abo mensuel (€)</span><input class="pinp" type="number" min="0" step="1" data-bk="${b.key}" data-f="abo_mensuel" value="${grille.abo_mensuel??''}"></div>
-        <div class="row"><span>Séances/mois</span><input class="pinp" type="number" min="1" step="1" data-bk="${b.key}" data-f="seances_mois" value="${sm}"></div>
-        <div class="row" style="margin-top:8px;border-top:1px dashed var(--line);padding-top:8px">
-          <span style="color:var(--accent2)">Override (€)</span>
-          <input class="pinp" type="number" min="0" step="0.5" data-bk="${b.key}" data-f="override" value="${s.override??''}" placeholder="forcer la valeur">
-        </div>
+      <div class="calc">${calc}</div>
+      <div class="grids">
+        ${d.drop_in?`<div class="drop"><span>Drop-in (séance unique)</span><b>${d.drop_in} €</b></div>`:''}
+        <div class="gtitle">Packs</div>${packsHtml}
+        <div class="gtitle">Abonnements mensuels</div>${abosHtml}
+        ${offresHtml}
       </div>
-      <div class="src">📎 <a href="${b.source}" target="_blank" rel="noopener">${b.source.replace(/^https?:\/\//,'').replace(/\/$/,'')}</a>${b.note?` · ${b.note}`:''}</div>
+      <div class="override">
+        Forcer un prix moyen :
+        <input type="number" min="0" step="0.5" placeholder="auto" value="${OVERRIDES[k]??''}" data-bk="${k}">
+        <span style="color:var(--muted)">€</span>
+      </div>
+      <div class="src">📎 <a href="${d.source_url}" target="_blank" rel="noopener">${(d.source_url||'').replace(/^https?:\/\//,'').replace(/\/$/,'')}</a>${d.note?` · ${d.note}`:''}</div>
     </div>`;
   }).join('');
-  // bind inputs
   g.querySelectorAll('input[data-bk]').forEach(inp=>{
     inp.addEventListener('input',e=>{
-      const bk=e.target.dataset.bk,f=e.target.dataset.f,v=e.target.value;
-      STATE.brands[bk]=STATE.brands[bk]||{grille:{},seances_mois:10,override:null};
-      if(f==='seances_mois')STATE.brands[bk].seances_mois=+v||0;
-      else if(f==='override')STATE.brands[bk].override=v===''?null:v;
-      else{STATE.brands[bk].grille=STATE.brands[bk].grille||{};STATE.brands[bk].grille[f]=v===''?null:+v;}
-      save(STATE);
-      // rerender just the average for this card (full rerender too costly on each keystroke)
+      const bk=e.target.dataset.bk;
+      if(e.target.value==='')delete OVERRIDES[bk];
+      else OVERRIDES[bk]=e.target.value;
+      localStorage.setItem(OVERRIDE_STORAGE,JSON.stringify(OVERRIDES));
+      // recompute uniquement la moyenne de cette carte
       const card=e.target.closest('.card');
-      const b=BRANDS.find(x=>x.key===bk);
-      const moy=computePrice(b);
-      card.querySelector('.vval').textContent=Math.round(moy)+' €';
-      // calc line
-      const sNow=STATE.brands[bk],grille=sNow.grille||{},sm=sNow.seances_mois||b.seances_mois;
-      const drop=+grille.drop_in||0,pack=+grille.pack_10||0,abo=+grille.abo_mensuel||0;
-      let calcTxt;
-      if(sNow.override!=null&&sNow.override!=='')calcTxt=`override : ${sNow.override} €`;
-      else if(STATE.method==='drop_in')calcTxt=`drop-in = ${drop} €`;
-      else if(STATE.method==='pack_10')calcTxt=pack?`pack 10 = ${pack} €`:`fallback : drop-in×0,75 = ${(drop*.75).toFixed(1)} €`;
-      else{const parts=[];if(drop)parts.push(`10%×${drop}`);if(pack)parts.push(`50%×${pack}`);if(abo)parts.push(`40%×(${abo}/${sm})`);calcTxt=parts.join(' + ')+' = '+moy.toFixed(1)+' €';}
-      card.querySelector('.calc').textContent=calcTxt;
+      const {val,calc}=computePrice(bk,DATA[bk]);
+      card.querySelector('.vval').textContent=Math.round(val)+' €';
+      card.querySelector('.calc').textContent=calc;
     });
   });
 }
 
 document.getElementById('methodSel').addEventListener('change',e=>{
-  STATE.method=e.target.value;save(STATE);render();
+  METHOD=e.target.value;localStorage.setItem(METHOD_STORAGE,METHOD);render();
 });
 
-document.getElementById('btnReset').addEventListener('click',()=>{
-  if(!confirm('Réinitialiser tous les prix aux défauts du catalogue ? (la méthode reste)'))return;
-  STATE.brands=JSON.parse(JSON.stringify(DEFAULTS.brands));save(STATE);render();
-});
-
-document.getElementById('btnExport').addEventListener('click',()=>{
-  const out={method:STATE.method,prix_moyens:{},details:STATE.brands};
-  BRANDS.forEach(b=>{out.prix_moyens[b.key]=Math.round(computePrice(b));});
-  const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='brand_prices.json';document.body.appendChild(a);a.click();a.remove();
-});
-
-render();
+(async()=>{await load();render();})();
 </script>
 </body>
 </html>

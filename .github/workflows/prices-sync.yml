@@ -1,0 +1,47 @@
+name: Sync grille de prix (Monday Group + manuel)
+
+on:
+  schedule:
+    # 1×/semaine (lundi 5h UTC = 7h Paris)
+    - cron: "0 5 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prices-sync
+  cancel-in-progress: true
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scrape & push prix
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python3 prices_scrape.py
+
+      - name: Commit brand_prices.json si changement
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add brand_prices.json
+          if git diff --cached --quiet; then
+            echo "Aucun changement de prix."
+          else
+            git commit -m "Sync prix ($(date -u +%Y-%m-%d))"
+            for i in 1 2 3 4; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              echo "retry push $i"; sleep 5
+            done
+          fi

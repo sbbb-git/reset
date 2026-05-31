@@ -142,41 +142,55 @@ const BRANDS=[
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
 const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
 const fill=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
+const SUPABASE_URL="https://gxqaanumilsmqmodtnbl.supabase.co";
+const SUPABASE_KEY="sb_publishable_pTcELCyyTItLSyyditPgbg_ZUl05heo";
 let ROWS=[]; // {brand,label,color,lieu,date,presents,capacite}
 // prix par marque (override manuel dans le tableau) ; vide => valeur calculée par prix.html
 let PRICES=(()=>{try{return JSON.parse(localStorage.getItem('cmp_prices')||'{}');}catch(e){return {};}})();
 const DEFAULT_PRICE=Object.fromEntries(BRANDS.map(b=>[b.key,b.price]));
 const IS_EXACT=Object.fromEntries(BRANDS.map(b=>[b.key,b.exact!==false]));
-// Lit la valeur calculée par prix.html (localStorage brand_prices_grid_v1)
-// selon la méthode choisie (drop_in / pack_10 / weighted). Si la page n'a
-// pas encore été ouverte ou si la marque y est absente, fallback sur b.price.
-function priceFromAnalysisPage(key){
+// Source de prix par marque : data factuelle Supabase/brand_prices.json + méthode
+// (drop_in / pack_10 / weighted) choisie dans prix.html, + overrides manuels par marque.
+// Fallback : DEFAULT_PRICE hardcodé du BRANDS array.
+let BRAND_PRICES_DATA=null;
+const SEANCES_MOIS={reset:10,punch:10,dynamo:10,riise:8,thenewme:8,lecercle:10,spacecycle:10,
+  poses:8,barrys:10,episod:10,belly:8,athletx:8,senseclub:8,dna:8,le33foch:10,banote:10,
+  santroch:8,snakeandtwist:8,burningbar:8,anybuddy:1,driphiit:10,kore:8};
+function _findPack10(packs){if(!packs||!packs.length)return null;let best=null,d=Infinity;packs.forEach(p=>{const x=Math.abs((p.size||0)-10);if(x<d){d=x;best=p;}});return best;}
+function _findAbo(abos){if(!abos||!abos.length)return null;const w=abos.filter(a=>a.seances_inclus&&a.prix_mensuel);if(w.length)return w.sort((a,b)=>a.prix_mensuel-b.prix_mensuel)[0];return abos.filter(a=>a.prix_mensuel).sort((a,b)=>a.prix_mensuel-b.prix_mensuel)[0]||null;}
+function priceFromFactual(key){
+  if(!BRAND_PRICES_DATA||!BRAND_PRICES_DATA[key])return null;
+  const overrides=(()=>{try{return JSON.parse(localStorage.getItem('brand_prices_override_v1')||'{}');}catch(e){return {};}})();
+  const ov=overrides[key];if(ov!=null&&ov!=='')return +ov||0;
+  const method=localStorage.getItem('brand_prices_method_v1')||'pack_10';
+  const d=BRAND_PRICES_DATA[key],drop=+d.drop_in||0;
+  const p10=_findPack10(d.packs),packU=p10?p10.prix_unitaire:0;
+  const abo=_findAbo(d.abos),sm=SEANCES_MOIS[key]||10,aboS=abo?.seances_inclus||sm;
+  const aboU=abo?abo.prix_mensuel/aboS:0;
+  if(method==='drop_in')return drop||packU||aboU;
+  if(method==='pack_10')return packU||drop*.75||aboU;
+  const parts=[];let w=0;
+  if(drop){parts.push(.10*drop);w+=.10;}
+  if(packU){parts.push(.50*packU);w+=.50;}
+  if(aboU){parts.push(.40*aboU);w+=.40;}
+  return w?parts.reduce((a,b)=>a+b,0)/w:0;
+}
+async function loadBrandPrices(){
+  // Supabase d'abord, fallback brand_prices.json local
   try{
-    const s=JSON.parse(localStorage.getItem('brand_prices_grid_v1')||'null');
-    if(!s||!s.brands||!s.brands[key])return null;
-    const bs=s.brands[key];
-    if(bs.override!=null&&bs.override!=='')return +bs.override||0;
-    const g=bs.grille||{},sm=+bs.seances_mois||10;
-    const drop=+g.drop_in||0,pack=+g.pack_10||0,abo=+g.abo_mensuel||0,aboU=sm?abo/sm:0;
-    if(s.method==="drop_in")return drop||pack||aboU;
-    if(s.method==="pack_10")return pack||drop*.75||aboU;
-    // weighted (méthode par défaut si non précisée)
-    const parts=[];let w=0;
-    if(drop){parts.push(.10*drop);w+=.10;}
-    if(pack){parts.push(.50*pack);w+=.50;}
-    if(aboU){parts.push(.40*aboU);w+=.40;}
-    return w?parts.reduce((a,b)=>a+b,0)/w:0;
-  }catch(e){return null;}
+    const h={apikey:SUPABASE_KEY,Authorization:`Bearer ${SUPABASE_KEY}`};
+    const r=await fetch(`${SUPABASE_URL}/rest/v1/brand_prices?select=*`,{headers:h,cache:'no-store'});
+    if(r.ok){const arr=await r.json();if(arr.length){BRAND_PRICES_DATA={};arr.forEach(row=>{BRAND_PRICES_DATA[row.brand_key]={drop_in:row.drop_in,packs:row.packs||[],abos:row.abos||[]};});return;}}
+  }catch(e){}
+  try{const r=await fetch('brand_prices.json',{cache:'no-store'});if(r.ok)BRAND_PRICES_DATA=await r.json();}catch(e){}
 }
 function priceOf(key){
-  const v=PRICES[key];if(v!==undefined&&v!=='')return +v||0; // override manuel local
-  const a=priceFromAnalysisPage(key);if(a!=null&&a>0)return a;
+  const v=PRICES[key];if(v!==undefined&&v!=='')return +v||0; // override local table
+  const a=priceFromFactual(key);if(a!=null&&a>0)return a;
   return DEFAULT_PRICE[key]||parseFloat(document.getElementById('prix').value)||0;
 }
 function setPrice(key,val){if(val==='')delete PRICES[key];else PRICES[key]=val;try{localStorage.setItem('cmp_prices',JSON.stringify(PRICES));}catch(e){}render();}
 
-const SUPABASE_URL="https://gxqaanumilsmqmodtnbl.supabase.co";
-const SUPABASE_KEY="sb_publishable_pTcELCyyTItLSyyditPgbg_ZUl05heo";
 const BMAP=Object.fromEntries(BRANDS.map(b=>[b.key,b]));
 async function fetchAllSessions(){
   const headers={apikey:SUPABASE_KEY,Authorization:`Bearer ${SUPABASE_KEY}`};
@@ -316,7 +330,7 @@ function renderStudios(id,list,metric){
 
 ['prix','periode','metric','cat'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 ['metric','cat','periode'].forEach(id=>document.getElementById(id).addEventListener('change',render));
-load();
+(async()=>{await loadBrandPrices();await load();})();
 </script>
 </body>
 </html>
