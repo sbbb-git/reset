@@ -114,6 +114,12 @@
   </div>
 
   <div class="panel">
+    <h2>🔗 Cross-validation inter-plateformes (clubs sur 2+ sources)</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-6px 0 12px">Détection automatique des doublons via fuzzy matching (CP + nom). Comparaison des prix médians par durée entre les plateformes : si écart {">"} 20% ou créneaux/jour divergents, signal de divergence d'inventory ou de pricing par canal.</p>
+    <div id="crossCheck"></div>
+  </div>
+
+  <div class="panel">
     <h2>📋 Détail créneaux (clubs filtrés)</h2>
     <div class="tbl-wrap">
       <table class="detail" id="tbl">
@@ -134,15 +140,89 @@ const DEPT_NAME={'75':'Paris','77':'Seine-et-Marne','78':'Yvelines','91':'Essonn
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
 const eur=v=>v?v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €':'—';
 Chart.defaults.color='#8a96b8';Chart.defaults.borderColor='#2a3354';Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
-let STORE={}, CLUBS=[];
+let STORE={}, CLUBS=[], UNIFIED=[];
 
 async function load(){
-  const [a,b]=await Promise.all([
+  const [a,b,c]=await Promise.all([
     fetch('padel_idf_data.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({})),
-    fetch('padel_idf_clubs.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>[])
+    fetch('padel_idf_clubs.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>[]),
+    fetch('padel_club_unified.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>[])
   ]);
-  STORE=a||{}; CLUBS=b||[];
+  STORE=a||{}; CLUBS=b||[]; UNIFIED=c||[];
   render();
+}
+
+function median(arr){
+  if(!arr.length)return 0;
+  const sorted=[...arr].sort((a,b)=>a-b);
+  const m=Math.floor(sorted.length/2);
+  return sorted.length%2?sorted[m]:(sorted[m-1]+sorted[m])/2;
+}
+
+function renderCrossCheck(){
+  const wrap=document.getElementById('crossCheck');
+  if(!UNIFIED.length){wrap.innerHTML='<div style="color:var(--muted)">Pas encore de mapping cross-plateforme chargé.</div>';return;}
+  // Calcul prix médians + sessions par cluster
+  const rows=UNIFIED.map(cl=>{
+    const perSrc={};
+    for(const m of cl.members){
+      const b=STORE[m.slug];if(!b)continue;
+      const sess=Object.values(b.sessions||{});
+      const byDur={};
+      for(const s of sess){
+        if(!s.prix||!s.duree)continue;
+        (byDur[s.duree]=byDur[s.duree]||[]).push(s.prix);
+      }
+      perSrc[m.source]={
+        n:sess.length,
+        prix60:median(byDur[60]||[]),
+        prix90:median(byDur[90]||[]),
+        prix120:median(byDur[120]||[]),
+        slug:m.slug,
+        name:m.name,
+      };
+    }
+    return {cl,perSrc};
+  }).sort((a,b)=>{
+    const totA=Object.values(a.perSrc).reduce((s,x)=>s+x.n,0);
+    const totB=Object.values(b.perSrc).reduce((s,x)=>s+x.n,0);
+    return totB-totA;
+  });
+
+  wrap.innerHTML=rows.map(({cl,perSrc})=>{
+    const srcs=Object.keys(perSrc);
+    if(srcs.length<2)return '';
+    // Détecter divergence prix 90min > 20%
+    const p90=srcs.map(s=>perSrc[s].prix90).filter(p=>p>0);
+    let warn='';
+    if(p90.length>=2){
+      const min=Math.min(...p90),max=Math.max(...p90);
+      if(max/min>1.2)warn=`<span style="background:rgba(230,193,77,.2);color:#e6c14d;padding:2px 8px;border-radius:99px;font-size:10px;margin-left:6px">⚠️ écart prix ${Math.round(100*(max-min)/min)}%</span>`;
+      else warn=`<span style="background:rgba(95,207,138,.2);color:#5fcf8a;padding:2px 8px;border-radius:99px;font-size:10px;margin-left:6px">✓ prix cohérent</span>`;
+    }
+    const rowsHtml=srcs.map(s=>{
+      const x=perSrc[s];
+      const fmt=p=>p?p.toFixed(0)+'€':'—';
+      return `<tr>
+        <td style="font-weight:600">${s}</td>
+        <td style="color:var(--muted);font-size:11.5px">${x.name.slice(0,38)}</td>
+        <td style="text-align:right">${x.n.toLocaleString('fr-FR')}</td>
+        <td style="text-align:right;color:#a7b3ff">${fmt(x.prix60)}</td>
+        <td style="text-align:right;color:#a7b3ff">${fmt(x.prix90)}</td>
+        <td style="text-align:right;color:#a7b3ff">${fmt(x.prix120)}</td>
+      </tr>`;
+    }).join('');
+    return `<div style="background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px">
+      <div style="font-weight:700;font-size:14px;margin-bottom:8px">
+        <span style="color:var(--accent2)">[${cl.unified_id}]</span>
+        CP ${cl.cp} · ${cl.canonical_name} ${warn}
+      </div>
+      <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+        <thead><tr style="color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.4px"><th style="text-align:left;padding:4px 8px;border-bottom:1px solid var(--line)">Plateforme</th><th style="text-align:left;padding:4px 8px;border-bottom:1px solid var(--line)">Nom local</th><th style="text-align:right;padding:4px 8px;border-bottom:1px solid var(--line)">Sessions</th><th style="text-align:right;padding:4px 8px;border-bottom:1px solid var(--line)">Médian 60min</th><th style="text-align:right;padding:4px 8px;border-bottom:1px solid var(--line)">Médian 90min</th><th style="text-align:right;padding:4px 8px;border-bottom:1px solid var(--line)">Médian 120min</th></tr></thead>
+        <tbody>${rowsHtml}</tbody>
+      </table>
+    </div>`;
+  }).join('');
 }
 
 function getAll(){
@@ -254,6 +334,7 @@ function render(){
       <td>${s.nom}</td><td>${s.cp}</td><td>${s.terrain||'—'}</td><td>${s.duree}min</td>
       <td>${eur(s.prix)}</td>
       <td><span class="pill ${s.statut}">${s.statut}</span></td></tr>`).join('');
+  renderCrossCheck();
 }
 
 ['fDept','fPeriode','fQ','fSource'].forEach(id=>{

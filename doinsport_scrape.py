@@ -71,7 +71,9 @@ def fetch_playgrounds(club_uuid):
     for p in items:
         if not isinstance(p, dict):
             continue
-        # Filtre padel : check activities pour le mot 'padel'
+        # Filtre padel STRICT : il faut explicitement 'padel' dans une activité.
+        # Si pas d'activités du tout → on skip (clubs multi-activités où la liste
+        # n'est pas remplie, on prend pas le risque de capturer du billard/snooker/etc.)
         activities = p.get("activities") or []
         names = []
         for a in activities:
@@ -79,12 +81,19 @@ def fetch_playgrounds(club_uuid):
                 names.append((a.get("name") or "").lower())
             else:
                 names.append(str(a).lower())
-        is_padel = any("padel" in n for n in names) if names else True
+        is_padel = any("padel" in n for n in names)
+        # Si pas d'activités définies, on vérifie aussi le nom du playground
+        # (souvent "Padel 1" / "Court padel intérieur" / etc.)
+        if not is_padel and not names:
+            pg_name = (p.get("name") or "").lower()
+            is_padel = "padel" in pg_name
+        if not is_padel:
+            continue
         out.append({
             "id": p.get("id"),
             "name": p.get("name") or f"Terrain {p.get('id','')[:8]}",
             "indoor": p.get("indoor"),
-            "is_padel": is_padel,
+            "is_padel": True,
         })
     return out
 
@@ -119,10 +128,8 @@ def capture_club(club, store):
         "sessions": {},
     })
     bucket["meta"]["source"] = "doinsport"
-    pgs = fetch_playgrounds(club["id"])
-    pg_padel = [p for p in pgs if p["is_padel"]]
+    pg_padel = fetch_playgrounds(club["id"])  # déjà filtré padel
     if not pg_padel:
-        # certains clubs déclarent padel sans avoir de playground padel actif
         return 0, 0
     seen = booked = 0
     pg_names = {p["id"]: p["name"] for p in pg_padel}
