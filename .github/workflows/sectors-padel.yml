@@ -33,12 +33,16 @@ jobs:
         run: python3 doinsport_scrape.py
         continue-on-error: true
 
+      - name: Playtomic (23 clubs IDF, parallèle x8)
+        run: python3 playtomic_scrape.py
+        continue-on-error: true
+
       - name: Commit si changement
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add padel_idf_data.json padel_idf_creneaux.csv \
-                  padel_idf_clubs.json doinsport_idf_clubs.json
+                  padel_idf_clubs.json doinsport_idf_clubs.json playtomic_idf_clubs.json
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else

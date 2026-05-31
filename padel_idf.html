@@ -79,6 +79,7 @@
       <option value="anybuddy">Anybuddy</option>
       <option value="urbanpadel">UrbanPadel</option>
       <option value="doinsport">Doinsport</option>
+      <option value="playtomic">Playtomic</option>
     </select>
     <label>Période</label>
     <select id="fPeriode">
@@ -154,7 +155,7 @@ function getAll(){
   const maxd=per?new Date(today.getTime()+per*86400000):null;
   for(const slug in STORE){
     const b=STORE[slug],meta=b.meta||{},cp=meta.cp||'';
-    const source=meta.source||(slug.startsWith('urbanpadel-')?'urbanpadel':slug.startsWith('doinsport-')?'doinsport':'anybuddy');
+    const source=meta.source||(slug.startsWith('urbanpadel-')?'urbanpadel':slug.startsWith('doinsport-')?'doinsport':slug.startsWith('playtomic-')?'playtomic':'anybuddy');
     if(src&&source!==src)continue;
     if(dept&&cp.slice(0,2)!==dept)continue;
     if(q&&!slug.toLowerCase().includes(q)&&!(meta.name||'').toLowerCase().includes(q))continue;

@@ -57,8 +57,8 @@
 
   <!-- ========================= PADEL ========================= -->
   <section style="border-top:none;padding-top:0">
-    <h2>🎾 Padel Île-de-France <span class="stage live">live · 111 clubs sur 3 plateformes</span></h2>
-    <p class="sub">Couverture exhaustive multi-plateformes — Anybuddy + UrbanPadel + Doinsport. 9 clubs présents sur 2 plateformes (cross-validation). Mise à jour toutes les 30 minutes.</p>
+    <h2>🎾 Padel Île-de-France <span class="stage live">live · ~130 clubs sur 4 plateformes</span></h2>
+    <p class="sub">Couverture exhaustive multi-plateformes — Anybuddy + UrbanPadel + Doinsport + Playtomic. Clubs croisés sur plusieurs plateformes = cross-validation des données. Mise à jour toutes les 30 minutes.</p>
 
     <div class="cards">
       <div class="card" style="border-left-color:#2CDF62">
@@ -79,8 +79,8 @@
       <div class="step ok"><span class="icon">✅</span><b>Anybuddy</b> — 62 clubs IDF, ~26 000 créneaux/passage. Disparitions = réservations détectées.</div>
       <div class="step ok"><span class="icon">✅</span><b>UrbanPadel / UrbanSoccer</b> — 4 centres IDF (Évry-Courcouronnes, Lognes, Porte d'Aubervilliers, Île de Puteaux). API <code>my.urbansoccer.fr</code> reverse-engineered via le bundle JS, endpoint POST <code>/api/read/reservation/availabilities/search</code> avec prix réels (32€/60min, 48€/90min, 64€/120min Évry).</div>
       <div class="step ok"><span class="icon">✅</span><b>Doinsport</b> — 54 clubs IDF (dont 45 inédits vs Anybuddy) ; ~29 000 réservations confirmées capturées par passage avec prix réel en euros. Endpoint <code>/clubs/bookings/plannings</code> sur <code>api-v3.doinsport.club</code> exposé sans auth.</div>
-      <div class="step ko"><span class="icon">❌</span><b>Playtomic</b> — 0 club en France (vérifié par 11 centres de scan IDF). Plateforme dominante en Espagne/Italie/Mexique uniquement.</div>
-      <div class="step"><span class="icon">⏭️</span><b>Sites propriétaires</b> — Casa Padel et padel-up sont devenus des domaines parking. À recroiser via FFT/Tenup pour la longue traîne.</div>
+      <div class="step ok"><span class="icon">✅</span><b>Playtomic</b> — 23 clubs IDF actifs (dont Casa Padel Asnières/Saint-Denis/Croissy-Beaubourg). Premier check ratait l'IDF car l'API ignorait le filtre <code>coordinates</code> ; redécouvert via <code>?country_code=FR&sport_id=PADEL</code> qui renvoie 125 clubs FR. Endpoint dispos <code>/v1/availability</code> avec <code>tenant_id</code>+<code>local_start_min/max</code> ; ~8 700 créneaux capturés par passage avec prix réel en €.</div>
+      <div class="step"><span class="icon">⏭️</span><b>FFT/Tenup + sites propriétaires</b> — pour les clubs encore hors couverture (notamment les clubs FFT non sur les 4 plateformes ci-dessus).</div>
     </div>
   </section>
 
