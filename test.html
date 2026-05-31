@@ -77,7 +77,10 @@ try{ PICKED=new Set(JSON.parse(localStorage.getItem(STORE_KEY)||'[]')); }catch(e
 
 async function load(){
   const r=await fetch('discovery.json',{cache:'no-store'});
-  DATA=await r.json();
+  const raw=await r.json();
+  // filtre les marques DÉJÀ intégrées
+  const INTEG=['poses','belly','re-set','reset','punch','dynamo','riise','the new me','thenewme','le cercle','space cycle','sense-club','sense club','burning bar','banote','dna pilates','dna','le 33 foch','barry','episod','athletx','trinquet','sant-roch','santroch','snake & twist','snake and twist'];
+  DATA=raw.filter(x=>!INTEG.some(n=>x.name.toLowerCase().includes(n)));
   // remplit les filtres
   const plats=[...new Set(DATA.map(x=>x.platform))].sort();
   const cats=[...new Set(DATA.map(x=>x.category))].sort();
