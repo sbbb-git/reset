@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Études de marché temps réel — Fitness boutique Paris</title>
+<style>
+  :root{--bg:#0a0e1a;--card:#121828;--card2:#1a2238;--line:#2a3354;--text:#eef1fb;
+        --muted:#8a96b8;--accent:#6f82ff;--accent2:#a7b3ff;--gold:#e6c14d;--green:#5fcf8a;--red:#e07a6f;}
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.55;}
+  a{color:var(--accent);}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  /* HERO */
+  .hero{padding:80px 0 60px;background:radial-gradient(800px 400px at 20% 0%,rgba(111,130,255,.15),transparent 60%),radial-gradient(700px 350px at 90% 30%,rgba(230,193,77,.1),transparent 60%);}
+  .pill{display:inline-block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent2);background:rgba(111,130,255,.1);border:1px solid rgba(111,130,255,.3);padding:5px 12px;border-radius:99px;margin-bottom:18px;}
+  h1{margin:0 0 18px;font-size:46px;font-weight:800;line-height:1.1;letter-spacing:-.5px;}
+  .lead{font-size:18px;color:var(--muted);max-width:780px;}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#0a0e1a;border:none;border-radius:10px;padding:13px 22px;font-size:15px;font-weight:700;cursor:pointer;text-decoration:none;}
+  .btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent);}
+  .btn:hover{filter:brightness(1.1);}
+  /* SECTIONS */
+  section{padding:50px 0;border-top:1px solid var(--line);}
+  h2{font-size:30px;margin:0 0 12px;font-weight:800;letter-spacing:-.3px;}
+  h2 .accent{color:var(--accent);}
+  .sub{color:var(--muted);font-size:16px;margin-bottom:32px;max-width:760px;}
+  /* KPIs live */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:24px 0;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;}
+  .kpi .v{font-size:34px;font-weight:800;color:var(--accent2);letter-spacing:-.5px;}
+  .kpi .l{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.6px;margin-top:6px;}
+  .kpi .delta{color:var(--green);font-size:12px;margin-top:4px;}
+  /* COVERAGE chips */
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-size:13px;display:flex;align-items:center;gap:7px;}
+  .chip .dot{width:8px;height:8px;border-radius:50%;}
+  /* INSIGHTS */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;}
+  .panel h3{margin:0 0 14px;font-size:16px;color:var(--accent2);font-weight:700;}
+  .rk{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px;}
+  .rk:last-child{border-bottom:none;}
+  .rk .v{color:var(--gold);font-weight:700;}
+  /* CAS D'USAGE */
+  .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
+  .case{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 22px;}
+  .case .ico{font-size:28px;}
+  .case h4{margin:8px 0 6px;font-size:16px;}
+  .case p{margin:0;color:var(--muted);font-size:13.5px;}
+  /* OFFRES */
+  .offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+  .offer{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px;display:flex;flex-direction:column;gap:10px;}
+  .offer.feat{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 12px 40px rgba(111,130,255,.18);}
+  .offer h3{margin:0;font-size:18px;}
+  .offer .price{font-size:32px;font-weight:800;color:var(--accent2);margin:6px 0 4px;letter-spacing:-.5px;}
+  .offer .price small{font-size:13px;color:var(--muted);font-weight:500;}
+  .offer ul{margin:14px 0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.7;}
+  .offer ul li{margin:2px 0;}
+  /* CONTACT */
+  .contact{background:linear-gradient(135deg,rgba(111,130,255,.15),rgba(230,193,77,.08));border:1px solid var(--line);border-radius:18px;padding:38px 32px;text-align:center;}
+  .contact h2{margin-top:0;}
+  /* foot */
+  footer{padding:30px 0;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--line);margin-top:30px;}
+  @media(max-width:820px){.grid2{grid-template-columns:1fr;}h1{font-size:32px;}.hero{padding:50px 0 36px;}.kpi .v{font-size:26px;}.wrap{padding:0 16px;}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="pill">📊 Données live · Marché parisien</span>
+    <h1>L'<span style="color:var(--accent)">étude de marché temps réel</span><br>du fitness boutique parisien.</h1>
+    <p class="lead">Pour la première fois, suivez en direct la fréquentation, le remplissage et le chiffre d'affaires de toutes les enseignes boutique pilates, boxe, cycling, yoga, bootcamp et padel de Paris. Une intelligence de marché qu'aucune autre source ne fournit — captée chaque jour, agrégée et comparée.</p>
+    <div class="cta">
+      <a class="btn" href="#contact">Demander une démo</a>
+      <a class="btn ghost" href="all-1cda8fabdb.html" target="_blank">Voir le dashboard live</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Le marché que <span class="accent">vous ne voyez pas</span> ailleurs</h2>
+    <p class="sub">Chiffres agrégés en direct sur toutes les enseignes captées. Mis à jour en continu.</p>
+    <div class="kpis" id="globalKpis">
+      <div class="kpi"><div class="v">—</div><div class="l">Enseignes suivies</div></div>
+      <div class="kpi"><div class="v">—</div><div class="l">Studios couverts</div></div>
+      <div class="kpi"><div class="v">—</div><div class="l">Séances captées</div></div>
+      <div class="kpi"><div class="v">—</div><div class="l">Présents (cumul)</div></div>
+      <div class="kpi"><div class="v">—</div><div class="l">CA cumulé estimé</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Couverture — <span class="accent">enseignes suivies</span></h2>
+    <p class="sub">Toutes les marques majeures du fitness boutique parisien, en chiffres exacts ou statuts figés selon ce que leur plateforme expose.</p>
+    <div class="chips" id="chips"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Aperçu des <span class="accent">insights disponibles</span></h2>
+    <p class="sub">Quelques indicateurs publics ; la version pro donne accès aux requêtes custom, à l'historique complet et aux exports.</p>
+    <div class="grid2">
+      <div class="panel"><h3>🏆 Studios les plus remplis (sur la période captée)</h3><div id="topStudios"></div></div>
+      <div class="panel"><h3>📈 Taux de remplissage moyen par catégorie</h3><div id="catFill"></div></div>
+      <div class="panel"><h3>👥 Volume d'activité (présents) par marque · Top 8</h3><div id="topBrandsVol"></div></div>
+      <div class="panel"><h3>🕒 Créneaux les plus fréquentés</h3><div id="topHours"></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Pour <span class="accent">qui</span> ?</h2>
+    <p class="sub">Tous les acteurs qui ont besoin de comprendre ce marché — sans pouvoir le mesurer autrement.</p>
+    <div class="cases">
+      <div class="case"><div class="ico">💼</div><h4>Investisseurs / M&A</h4><p>Évaluer la traction d'une enseigne avant un deal. Benchmarker un actif vs ses concurrents directs.</p></div>
+      <div class="case"><div class="ico">🏗️</div><h4>Opérateurs de studios</h4><p>Se comparer aux concurrents, repérer les créneaux peu exploités, ajuster prix et offre.</p></div>
+      <div class="case"><div class="ico">🏢</div><h4>Foncières / immobilier</h4><p>Identifier les enseignes en croissance pour pré-commercialiser des locaux ; estimer un loyer cible.</p></div>
+      <div class="case"><div class="ico">🧰</div><h4>Équipementiers / fournisseurs</h4><p>Cibler les studios qui scalent (volumes, présents/séance) pour les approcher en priorité.</p></div>
+      <div class="case"><div class="ico">📰</div><h4>Presse & études sectorielles</h4><p>Sourcer des chiffres à jour pour articles, baromètres, panels d'experts.</p></div>
+      <div class="case"><div class="ico">🤝</div><h4>Plateformes & assureurs</h4><p>ClassPass, Gymlib, MAIF, mutuelles : prioriser partenariats et offres selon les performances réelles.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Nos <span class="accent">offres</span></h2>
+    <p class="sub">Trois niveaux selon votre usage. Données mises à jour <b>plusieurs fois par jour</b>, garanties anti-perte (double sauvegarde).</p>
+    <div class="offers">
+      <div class="offer">
+        <h3>Veille</h3>
+        <div class="price">490€<small> / mois</small></div>
+        <ul>
+          <li>Accès lecture au dashboard live</li>
+          <li>Comparateur multi-marques</li>
+          <li>Filtres catégorie / période</li>
+          <li>Mise à jour quotidienne</li>
+          <li>Export CSV à la demande</li>
+        </ul>
+        <a class="btn ghost" href="#contact">Démarrer</a>
+      </div>
+      <div class="offer feat">
+        <h3>Intelligence ⭐</h3>
+        <div class="price">1 990€<small> / mois</small></div>
+        <ul>
+          <li>Tout l'offre Veille</li>
+          <li>+ <b>Historique complet</b> depuis l'ouverture</li>
+          <li>+ Rapport mensuel PDF (PDF + Excel)</li>
+          <li>+ Alertes (nouveau studio, anomalies)</li>
+          <li>+ Briefings trimestriels</li>
+          <li>+ Support prioritaire</li>
+        </ul>
+        <a class="btn" href="#contact">Demander une démo</a>
+      </div>
+      <div class="offer">
+        <h3>API & Custom</h3>
+        <div class="price">Sur devis</div>
+        <ul>
+          <li>Accès API live (JSON)</li>
+          <li>Données par studio / par cours / par coach</li>
+          <li>Requêtes custom + extractions</li>
+          <li>Intégration BI (Tableau, Power BI…)</li>
+          <li>Onboarding & SLA</li>
+        </ul>
+        <a class="btn ghost" href="#contact">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="contact" id="contact">
+      <h2>Prêt à <span class="accent">décoder</span> votre marché ?</h2>
+      <p class="sub" style="margin:0 auto 18px">15 min d'échange suffisent pour qualifier votre besoin et vous montrer la valeur sur vos cas concrets.</p>
+      <a class="btn" href="mailto:contact@example.com?subject=Demande de démo — études de marché fitness Paris">📩 Demander une démo</a>
+    </div>
+  </div>
+</section>
+
+<footer>Plateforme propriétaire. Sources : APIs publiques des plateformes de réservation (bsport, Mindbody, Mariana Tek, Arketa, resamania, Anybuddy). Données agrégées et anonymisées au niveau studio.</footer>
+
+<script>
+const BRANDS=[
+  {key:"reset",label:"Re-SET",color:"#d98b63",cat:"Bootcamp",plat:"bsport"},
+  {key:"punch",label:"Punch",color:"#263fff",cat:"Boxe",plat:"Mindbody"},
+  {key:"dynamo",label:"Dynamo",color:"#faa619",cat:"Cycling",plat:"Mindbody"},
+  {key:"riise",label:"Riise",color:"#c25a3f",cat:"Yoga/Wellness",plat:"Mindbody"},
+  {key:"thenewme",label:"The New Me",color:"#b8895e",cat:"Pilates",plat:"bsport"},
+  {key:"lecercle",label:"Le Cercle",color:"#d4453a",cat:"Boxe",plat:"bsport"},
+  {key:"spacecycle",label:"Space Cycle",color:"#16b3c6",cat:"Cycling",plat:"bsport"},
+  {key:"poses",label:"Poses",color:"#b06a8f",cat:"Pilates",plat:"bsport"},
+  {key:"barrys",label:"Barry's",color:"#e2231a",cat:"Bootcamp",plat:"Mariana Tek"},
+  {key:"episod",label:"Episod",color:"#e8c14d",cat:"Bootcamp",plat:"resamania"},
+  {key:"belly",label:"Belly",color:"#e0699b",cat:"Pilates",plat:"bsport"},
+  {key:"athletx",label:"AthletX",color:"#e0322c",cat:"Bootcamp",plat:"bsport"},
+  {key:"senseclub",label:"Sense-Club",color:"#9b7ff0",cat:"Pilates",plat:"Mindbody widget"},
+  {key:"dna",label:"DNA Pilates",color:"#c9a24b",cat:"Pilates",plat:"Mindbody widget"},
+  {key:"le33foch",label:"Le 33 Foch",color:"#c4a361",cat:"Bootcamp",plat:"Mindbody widget"},
+  {key:"banote",label:"Banote",color:"#c9a24b",cat:"Pilates",plat:"Mindbody widget"},
+  {key:"santroch",label:"Sant-Roch",color:"#4a7c7e",cat:"Yoga/Wellness",plat:"Mariana Tek"},
+  {key:"snakeandtwist",label:"Snake & Twist",color:"#3a7d44",cat:"Pilates",plat:"Arketa"},
+];
+const nf=v=>Math.round(v).toLocaleString('fr-FR');
+const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
+const PRICE=22;
+
+(async()=>{
+  // chips marques
+  document.getElementById('chips').innerHTML=BRANDS.map(b=>
+    `<span class="chip"><span class="dot" style="background:${b.color}"></span>${b.label} <span style="color:var(--muted);font-size:11px">· ${b.cat}</span></span>`).join('');
+
+  // charge toutes les données
+  const all=[];
+  for(const b of BRANDS){
+    try{const r=await fetch(b.key+'_data.json',{cache:'no-store'});if(!r.ok)continue;
+      const d=await r.json(); const arr=Array.isArray(d)?d:Object.values(d);
+      arr.filter(x=>x.finie&&(x.capacite||0)>0).forEach(x=>all.push({...x,_brand:b}));
+    }catch(e){}
+  }
+
+  // KPIs globaux
+  const studios=new Set(all.map(r=>r._brand.label+'·'+(r.lieu||r._brand.label))).size;
+  const tot=all.reduce((s,r)=>s+(r.presents||0),0);
+  const ca=all.reduce((s,r)=>s+(r.presents||0)*PRICE,0);
+  const k=document.getElementById('globalKpis').children;
+  k[0].children[0].textContent=nf(BRANDS.length);
+  k[1].children[0].textContent=nf(studios);
+  k[2].children[0].textContent=nf(all.length);
+  k[3].children[0].textContent=nf(tot);
+  k[4].children[0].textContent=eur(ca);
+
+  // top studios remplissage
+  const studAgg={};
+  all.forEach(r=>{const k=r._brand.label+'||'+(r.lieu||r._brand.label);
+    studAgg[k]=studAgg[k]||{p:0,c:0,n:0,b:r._brand.label,l:r.lieu||r._brand.label};
+    studAgg[k].p+=r.presents;studAgg[k].c+=r.capacite;studAgg[k].n++;});
+  const studs=Object.values(studAgg).filter(s=>s.n>=5).map(s=>({...s,taux:s.c?s.p/s.c:0,moy:s.p/s.n}))
+    .sort((a,b)=>b.taux-a.taux).slice(0,8);
+  document.getElementById('topStudios').innerHTML=studs.map((s,i)=>
+    `<div class="rk"><span>${i+1}. <b>${s.l}</b> <span style="color:var(--muted);font-size:11px">· ${s.b}</span></span><span class="v">${Math.round(100*s.taux)}%</span></div>`).join('')
+    || '<div style="color:var(--muted);font-size:13px">Chargement…</div>';
+
+  // taux par catégorie
+  const cats={};all.forEach(r=>{const c=r._brand.cat;cats[c]=cats[c]||{p:0,cc:0};cats[c].p+=r.presents;cats[c].cc+=r.capacite;});
+  document.getElementById('catFill').innerHTML=Object.entries(cats).map(([k,o])=>
+    `<div class="rk"><span>${k}</span><span class="v">${o.cc?Math.round(100*o.p/o.cc):0}%</span></div>`).join('');
+
+  // top marques volume
+  const bm={};all.forEach(r=>{bm[r._brand.label]=(bm[r._brand.label]||0)+r.presents;});
+  const tops=Object.entries(bm).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  document.getElementById('topBrandsVol').innerHTML=tops.map(([k,v],i)=>
+    `<div class="rk"><span>${i+1}. ${k}</span><span class="v">${nf(v)}</span></div>`).join('');
+
+  // top créneaux
+  const hrs={};all.forEach(r=>{const h=(r.heure||'').slice(0,2);if(h){hrs[h]=(hrs[h]||0)+r.presents;}});
+  const th=Object.entries(hrs).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  document.getElementById('topHours').innerHTML=th.map(([h,v])=>
+    `<div class="rk"><span>${h}h00 – ${parseInt(h)+1}h00</span><span class="v">${nf(v)}</span></div>`).join('');
+})();
+</script>
+</body>
+</html>
