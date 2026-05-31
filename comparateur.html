@@ -74,7 +74,7 @@
     <br>• <b>Présents total</b> & <b>Séances</b> = volume d'activité.
     <br>• <b>CA estimé</b> = présents × prix moyen (réglable ci-dessous).
     <br><b>Le classement « qui marche » est trié par taux de remplissage.</b>
-    <br>⚠️ Pour les marques en widget Mindbody (<b>Sense-Club, DNA, Le 33 Foch, Banote</b>), seules les séances <b>complet</b> ou <b>presque complet</b> comptent (Mindbody ne donne pas le nombre exact sinon) — on utilise une capacité par défaut pour estimer. <b>Burning Bar</b> et <b>Trinquet/padel</b> (occupation de terrains) restent à part dans leur onglet dédié.
+    <br>⚠️ Pour les marques en widget Mindbody (<b>Sense-Club, DNA, Le 33 Foch, Banote, Burning Bar</b>), on ne capte que le <b>statut</b> (complet / presque complet), pas la capacité réelle. <b>Le taux de remplissage n'est donc pas comparable</b> pour ces marques — elles sont taggées « statut only » et exclues du classement studios par taux. Le CA est un plancher (basé sur les séances vues complètes uniquement). <b>Trinquet/padel</b> reste à part dans son onglet dédié.
   </div>
 
   <div class="ctrl">
@@ -113,25 +113,28 @@
   <div class="foot" style="color:var(--muted);font-size:12px">Données live des dashboards par marque. Taux coloré : vert ≥75%, jaune ≥50%, rouge &lt;50%.</div>
 </div>
 <script>
+// exact:false = plateforme widget Mindbody : on n'a que le statut (complet / presque complet),
+// donc le "taux de remplissage" est fictif (capacité par défaut). À exclure des classements taux.
+// price = prix moyen pondéré TTC observé (drop-in + packs), utilisé pour le CA par défaut.
 const BRANDS=[
-  {key:"reset",label:"Re-SET",color:"#d98b63",cat:"Bootcamp",plat:"bsport (chiffres exacts)"},
-  {key:"punch",label:"Punch",color:"#263fff",cat:"Boxe",plat:"Mindbody proxy (exact)"},
-  {key:"dynamo",label:"Dynamo",color:"#faa619",cat:"Cycling",plat:"Mindbody proxy (exact)"},
-  {key:"riise",label:"Riise",color:"#c25a3f",cat:"Yoga / Wellness",plat:"Mindbody proxy (exact)"},
-  {key:"thenewme",label:"The New Me",color:"#b8895e",cat:"Pilates",plat:"bsport ×27 (exact)"},
-  {key:"lecercle",label:"Le Cercle",color:"#d4453a",cat:"Boxe",plat:"bsport (exact)"},
-  {key:"spacecycle",label:"Space Cycle",color:"#16b3c6",cat:"Cycling",plat:"bsport (exact)"},
-  {key:"poses",label:"Poses",color:"#b06a8f",cat:"Pilates",plat:"bsport (exact)"},
-  {key:"barrys",label:"Barry's",color:"#e2231a",cat:"Bootcamp",plat:"Mariana Tek (exact)"},
-  {key:"episod",label:"Episod",color:"#e8c14d",cat:"Bootcamp",plat:"resamania (plan de salle)"},
-  {key:"belly",label:"Belly",color:"#e0699b",cat:"Pilates",plat:"bsport ×5 (exact)"},
-  {key:"athletx",label:"AthletX",color:"#e0322c",cat:"Bootcamp",plat:"bsport ×2 (exact)"},
-  {key:"senseclub",label:"Sense-Club",color:"#9b7ff0",cat:"Pilates",plat:"Mindbody widget (statut)"},
-  {key:"dna",label:"DNA Pilates",color:"#c9a24b",cat:"Pilates",plat:"Mindbody widget (statut)"},
-  {key:"le33foch",label:"Le 33 Foch",color:"#c4a361",cat:"Bootcamp",plat:"Mindbody widget (statut)"},
-  {key:"banote",label:"Banote",color:"#c9a24b",cat:"Pilates",plat:"Mindbody widget (statut)"},
-  {key:"santroch",label:"Sant-Roch",color:"#4a7c7e",cat:"Yoga / Wellness",plat:"Mariana Tek (exact)"},
-  {key:"snakeandtwist",label:"Snake & Twist",color:"#3a7d44",cat:"Pilates",plat:"Arketa (exact)"},
+  {key:"reset",label:"Re-SET",color:"#d98b63",cat:"Bootcamp",plat:"bsport (exact)",exact:true,price:25},
+  {key:"punch",label:"Punch",color:"#263fff",cat:"Boxe",plat:"Mindbody proxy (exact)",exact:true,price:18},
+  {key:"dynamo",label:"Dynamo",color:"#faa619",cat:"Cycling",plat:"Mindbody proxy (exact)",exact:true,price:22},
+  {key:"riise",label:"Riise",color:"#c25a3f",cat:"Yoga / Wellness",plat:"Mindbody proxy (exact)",exact:true,price:21},
+  {key:"thenewme",label:"The New Me",color:"#b8895e",cat:"Pilates",plat:"bsport ×27 (exact)",exact:true,price:28},
+  {key:"lecercle",label:"Le Cercle",color:"#d4453a",cat:"Boxe",plat:"bsport (exact)",exact:true,price:27},
+  {key:"spacecycle",label:"Space Cycle",color:"#16b3c6",cat:"Cycling",plat:"bsport (exact)",exact:true,price:28},
+  {key:"poses",label:"Poses",color:"#b06a8f",cat:"Pilates",plat:"bsport (exact)",exact:true,price:30},
+  {key:"barrys",label:"Barry's",color:"#e2231a",cat:"Bootcamp",plat:"Mariana Tek (exact)",exact:true,price:30},
+  {key:"episod",label:"Episod",color:"#e8c14d",cat:"Bootcamp",plat:"resamania (plan de salle)",exact:true,price:21},
+  {key:"belly",label:"Belly",color:"#e0699b",cat:"Pilates",plat:"bsport ×5 (exact)",exact:true,price:30},
+  {key:"athletx",label:"AthletX",color:"#e0322c",cat:"Bootcamp",plat:"bsport ×2 (exact)",exact:true,price:19},
+  {key:"senseclub",label:"Sense-Club",color:"#9b7ff0",cat:"Pilates",plat:"Mindbody widget (statut)",exact:false,price:45},
+  {key:"dna",label:"DNA Pilates",color:"#c9a24b",cat:"Pilates",plat:"Mindbody widget (statut)",exact:false,price:38},
+  {key:"le33foch",label:"Le 33 Foch",color:"#c4a361",cat:"Bootcamp",plat:"Mindbody widget (statut)",exact:false,price:30},
+  {key:"banote",label:"Banote",color:"#c9a24b",cat:"Pilates",plat:"Mindbody widget (statut)",exact:false,price:38},
+  {key:"santroch",label:"Sant-Roch",color:"#4a7c7e",cat:"Yoga / Wellness",plat:"Mariana Tek (exact)",exact:true,price:40},
+  {key:"snakeandtwist",label:"Snake & Twist",color:"#3a7d44",cat:"Pilates",plat:"Arketa (exact)",exact:true,price:28},
 ];
 const nf=v=>Math.round(v).toLocaleString('fr-FR');
 const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
@@ -139,7 +142,9 @@ const fill=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
 let ROWS=[]; // {brand,label,color,lieu,date,presents,capacite}
 // prix par marque (override) ; vide => prix par défaut global
 let PRICES=(()=>{try{return JSON.parse(localStorage.getItem('cmp_prices')||'{}');}catch(e){return {};}})();
-function priceOf(key){const v=PRICES[key];return (v!==undefined&&v!=='')?(+v||0):(parseFloat(document.getElementById('prix').value)||0);}
+const DEFAULT_PRICE=Object.fromEntries(BRANDS.map(b=>[b.key,b.price]));
+const IS_EXACT=Object.fromEntries(BRANDS.map(b=>[b.key,b.exact!==false]));
+function priceOf(key){const v=PRICES[key];return (v!==undefined&&v!=='')?(+v||0):(DEFAULT_PRICE[key]||parseFloat(document.getElementById('prix').value)||0);}
 function setPrice(key,val){if(val==='')delete PRICES[key];else PRICES[key]=val;try{localStorage.setItem('cmp_prices',JSON.stringify(PRICES));}catch(e){}render();}
 
 const SUPABASE_URL="https://gxqaanumilsmqmodtnbl.supabase.co";
@@ -195,6 +200,7 @@ function render(){
   // classement marques (avec prix PAR MARQUE)
   const bm=agg(D,r=>r.brand);
   let brands=Object.entries(bm).map(([k,o])=>({key:k,label:o.label,color:o.color,cat:o.cat||'—',plat:o.plat||'',
+    exact:IS_EXACT[k]!==false,
     upd:o.upd||'',studios:o.lieux.size,seances:o.n,pres:o.p,
     moy:o.n?o.p/o.n:0,taux:o.c?o.p/o.c:0,ca:o.p*priceOf(k)}));
   // inventaire seulement (agréger présents/taux/CA de marques différentes n'a pas de sens)
@@ -208,7 +214,9 @@ function render(){
 
   // studios (tous, toutes marques)
   const metric=document.getElementById('metric').value;
-  const sm=agg(D,r=>r.label+'||'+r.lieu);
+  // pour le classement par taux on exclut les marques widget Mindbody (capacité fictive)
+  const Dranking=metric==='taux'?D.filter(r=>IS_EXACT[r.brand]!==false):D;
+  const sm=agg(Dranking,r=>r.label+'||'+r.lieu);
   let studs=Object.entries(sm).map(([k,o])=>({lieu:k.split('||')[1],label:o.label,color:o.color,
     seances:o.n,pres:o.p,moy:o.p/o.n,taux:o.c?o.p/o.c:0}))
     .filter(s=>s.seances>=3); // au moins 3 séances pour être significatif
@@ -221,16 +229,22 @@ function render(){
 }
 
 function renderAnnuaire(brands){
-  const list=[...brands].sort((a,b)=>b.taux-a.taux);
+  // exact d'abord triées par taux, puis non-exact (statut only) à la fin triées par séances
+  const list=[...brands].sort((a,b)=>{
+    if(a.exact!==b.exact) return a.exact?-1:1;
+    return a.exact?(b.taux-a.taux):(b.seances-a.seances);
+  });
   document.getElementById('annuaire').innerHTML=list.map(b=>
     `<a class="card" href="${b.key}.html" style="border-left-color:${b.color}" title="Voir le détail ${b.label}">`
     +`<div class="ttl"><span class="dot" style="background:${b.color}"></span>${b.label}<span class="badge">${b.cat}</span></div>`
     +`<div class="plat">${b.plat||''}</div>`
-    +`<div class="taux" style="color:${fill(b.taux)}">${Math.round(100*b.taux)}% &middot; ${b.moy.toFixed(1)}/séance</div>`
+    +(b.exact
+      ?`<div class="taux" style="color:${fill(b.taux)}">${Math.round(100*b.taux)}% &middot; ${b.moy.toFixed(1)}/séance</div>`
+      :`<div class="taux" style="color:var(--muted);font-size:13px;font-weight:600" title="Plateforme Mindbody widget : on ne capte que le statut (complet / presque complet), pas la capacité réelle">statut only · ${nf(b.seances)} séances vues complètes</div>`)
     +`<div class="row"><span>Studios</span><b>${b.studios}</b></div>`
     +`<div class="row"><span>Séances</span><b>${nf(b.seances)}</b></div>`
-    +`<div class="row"><span>Présents total</span><b>${nf(b.pres)}</b></div>`
-    +`<div class="row"><span>CA estimé</span><b>${eur(b.ca)}</b></div>`
+    +(b.exact?`<div class="row"><span>Présents total</span><b>${nf(b.pres)}</b></div>`:'')
+    +`<div class="row"><span>CA estimé${b.exact?'':' (plancher)'}</span><b>${eur(b.ca)}</b></div>`
     +(b.upd?`<div class="upd">Dernier relevé : ${b.upd}</div>`:'')
     +`</a>`).join('');
 }
@@ -247,8 +261,10 @@ function renderBrandTable(brands){
     `<tr><td><span class="dot" style="background:${b.color}"></span>${b.label}</td>`
     +`<td style="text-align:left;color:var(--muted)">${b.cat}</td>`
     +`<td>${b.studios}</td><td>${b.seances}</td><td>${nf(b.pres)}</td>`
-    +`<td>${b.moy.toFixed(1)}</td>`
-    +`<td style="color:${fill(b.taux)};font-weight:700">${Math.round(100*b.taux)}%</td>`
+    +`<td>${b.exact?b.moy.toFixed(1):'—'}</td>`
+    +(b.exact
+      ?`<td style="color:${fill(b.taux)};font-weight:700">${Math.round(100*b.taux)}%</td>`
+      :`<td style="color:var(--muted);font-size:11px" title="Mindbody widget : statut only">statut</td>`)
     +`<td><span class="pwrap"><input class="pinp" type="number" min="0" step="0.5" value="${PRICES[b.key]!==undefined?PRICES[b.key]:''}" placeholder="${def}" data-bk="${b.key}"> <span class="eu">&euro;</span></span></td>`
     +`<td>${eur(b.ca)}</td></tr>`).join('');
   document.querySelectorAll('#tblBrand tbody input[data-bk]').forEach(inp=>{
