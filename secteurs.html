@@ -57,29 +57,31 @@
 
   <!-- ========================= PADEL ========================= -->
   <section style="border-top:none;padding-top:0">
-    <h2>🎾 Padel Île-de-France <span class="stage live">live · 59 clubs trackés</span></h2>
-    <p class="sub">Couverture exhaustive Anybuddy IDF — un seul scraper parallèle, ~23 000 créneaux relevés sur 7 jours glissants à chaque passage. Mise à jour toutes les 30 minutes.</p>
+    <h2>🎾 Padel Île-de-France <span class="stage live">live · 62 clubs trackés</span></h2>
+    <p class="sub">Couverture exhaustive Anybuddy IDF — un seul scraper parallèle, ~26 000 créneaux relevés sur 7 jours glissants à chaque passage. Mise à jour toutes les 30 minutes.</p>
 
     <div class="cards">
       <div class="card" style="border-left-color:#2CDF62">
-        <div class="top"><div class="ttl">📊 Dashboard agrégé</div><div class="meta">59 clubs · 8 départements</div></div>
+        <div class="top"><div class="ttl">📊 Dashboard agrégé Anybuddy</div><div class="meta">62 clubs · 8 départements</div></div>
         <div class="kpis" id="padelKpis">
           <div class="k"><div class="v" id="kpiClubs">—</div><div class="l">Clubs IDF</div></div>
           <div class="k"><div class="v" id="kpiCreneaux">—</div><div class="l">Créneaux</div></div>
           <div class="k"><div class="v" id="kpiOcc">—</div><div class="l">Occupation</div></div>
         </div>
-        <p style="color:var(--muted);font-size:12px;margin:4px 0">75: 9 · 77: 10 · 78: 12 · 91: 4 · 92: 6 · 93: 4 · 94: 6 · 95: 8</p>
+        <p style="color:var(--muted);font-size:12px;margin:4px 0">75: 9 · 77: 10 · 78: 13 · 91: 5 · 92: 6 · 93: 5 · 94: 6 · 95: 8</p>
         <div class="actions">
           <a class="btn" href="padel_idf.html">Ouvrir le dashboard complet →</a>
         </div>
       </div>
     </div>
 
+    <h3 style="margin-top:24px;font-size:15px;color:var(--accent2);text-transform:uppercase;letter-spacing:.7px">Couverture par plateforme</h3>
     <div class="pipeline">
-      <div class="step ok"><span class="icon">✅</span><b>Sitemap exhaustif</b> Anybuddy filtré + vérifié par code postal (filtrage des faux positifs comme Saint-Maurice-l'Exil ou Saint-Denis-en-Val).</div>
-      <div class="step ok"><span class="icon">✅</span><b>Parallélisme x8</b> : les 59 clubs scrapés en ~20 secondes par passage. Workflow toutes les 30 min.</div>
-      <div class="step ok"><span class="icon">✅</span><b>Multi-activités</b> à venir : Aquaboulevard et autres complexes ont aussi tennis/squash sur la même infrastructure.</div>
-      <div class="step"><span class="icon">⏭️</span><b>Phase 2</b> : ajouter Playtomic + Doinsport pour couvrir les clubs hors Anybuddy + reconstituer le marché total padel IDF.</div>
+      <div class="step ok"><span class="icon">✅</span><b>Anybuddy</b> — 62/62 clubs IDF scrapés en parallèle (~24s par passage). Disparitions de créneaux détectées = réservations.</div>
+      <div class="step ko"><span class="icon">❌</span><b>Playtomic</b> — 0 club en France (vérifié par 11 centres de scan IDF). Plateforme dominante en Espagne/Italie/Mexique uniquement.</div>
+      <div class="step"><span class="icon">⏭️</span><b>UrbanPadel / UrbanSoccer</b> — 4 clubs IDF (Évry-Courcouronnes, Lognes, Porte d'Aubervilliers, Île de Puteaux) sur leur propre booking <code>my.urbansoccer.fr</code> — backend bloque les requêtes HTTP simples, nécessite Playwright.</div>
+      <div class="step"><span class="icon">⏭️</span><b>Doinsport</b> — API publique en 503. Page web inaccessible direct. À tenter via reverse engineering du widget de réservation.</div>
+      <div class="step"><span class="icon">⏭️</span><b>Sites propriétaires</b> — Casa Padel, sites FFT/Tenup. À explorer cas par cas.</div>
     </div>
   </section>
 
