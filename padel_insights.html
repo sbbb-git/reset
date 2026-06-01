@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Padel IDF · 7 insights stratégiques</title>
+<script src="vendor_chartjs.min.js"></script>
+<style>
+  :root{--bg:#0a0e1a;--card:#121828;--card2:#1a2238;--line:#2a3354;--text:#eef1fb;
+        --muted:#8a96b8;--accent:#2CDF62;--accent2:#7af0a0;--gold:#e6c14d;--red:#e07a6f;--blue:#6f82ff;--amber:#ffae42;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.55;}
+  a{color:var(--accent);}
+  header{padding:42px 24px 30px;border-bottom:1px solid var(--line);background:radial-gradient(800px 400px at 20% 0%,rgba(44,223,98,.12),transparent 60%);}
+  header h1{margin:0 0 10px;font-size:32px;font-weight:800;letter-spacing:-.5px;}
+  header h1 .accent{color:var(--accent);}
+  header .lead{color:var(--muted);font-size:14.5px;max-width:760px;margin:0;}
+  .wrap{max-width:1300px;margin:0 auto;padding:0 24px 80px;}
+  /* Maturity badges */
+  .maturity{display:inline-block;font-size:10px;font-weight:800;padding:3px 10px;border-radius:99px;letter-spacing:.5px;text-transform:uppercase;margin-left:8px;vertical-align:middle;}
+  .maturity.robust{background:rgba(95,207,138,.18);color:var(--accent);border:1px solid rgba(95,207,138,.4);}
+  .maturity.partial{background:rgba(255,174,66,.18);color:var(--amber);border:1px solid rgba(255,174,66,.4);}
+  .maturity.early{background:rgba(224,122,111,.18);color:var(--red);border:1px solid rgba(224,122,111,.4);}
+  /* SECTIONS */
+  section{padding:48px 0;border-top:1px solid var(--line);}
+  section:first-of-type{border-top:none}
+  h2{font-size:22px;margin:0 0 8px;font-weight:800;letter-spacing:-.3px;}
+  .sub{color:var(--muted);font-size:13.5px;margin:0 0 22px;max-width:820px;}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin:14px 0;}
+  .panel h3{margin:0 0 12px;font-size:13px;color:var(--accent2);text-transform:uppercase;letter-spacing:.6px;}
+  canvas{max-height:380px;}
+  .disclaimer{background:rgba(255,174,66,.08);border:1px solid rgba(255,174,66,.3);border-left:3px solid var(--amber);border-radius:8px;padding:12px 16px;font-size:13px;color:var(--muted);margin:14px 0;}
+  .disclaimer b{color:var(--amber);}
+  /* Heatmap CSS grid */
+  .heatmap{display:grid;grid-template-columns:48px repeat(17,1fr);gap:2px;font-size:10px;}
+  .heatmap .axis{color:var(--muted);text-align:right;padding:2px 6px;font-weight:600;}
+  .heatmap .head{color:var(--muted);text-align:center;font-weight:600;padding:4px 0;}
+  .heatmap .cell{aspect-ratio:1;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:700;color:#fff;cursor:default;transition:transform .1s;}
+  .heatmap .cell:hover{transform:scale(1.15);z-index:5;position:relative;}
+  /* Tables */
+  table.tbl{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums;}
+  table.tbl th,table.tbl td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line);}
+  table.tbl th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.4px;background:var(--card);font-weight:600;}
+  table.tbl td:first-child,table.tbl th:first-child{text-align:left;font-weight:600;}
+  table.tbl tr:hover{background:rgba(44,223,98,.04);}
+  /* Rocket badges */
+  .badge-growth{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;}
+  .badge-growth.up{background:rgba(95,207,138,.18);color:var(--accent);}
+  .badge-growth.down{background:rgba(224,122,111,.18);color:var(--red);}
+  .badge-growth.new{background:rgba(111,130,255,.18);color:var(--blue);}
+  /* KPIs row */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:14px;}
+  .kpi{background:var(--card2);padding:14px 16px;border-radius:10px;border-left:3px solid var(--accent);}
+  .kpi .v{font-size:24px;font-weight:800;color:var(--accent2);}
+  .kpi .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-top:4px;}
+  /* Insights summary */
+  .insight-box{background:var(--card);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 18px;margin:14px 0;font-size:13.5px;color:var(--muted);}
+  .insight-box b{color:var(--text);}
+  /* Nav links */
+  .quick-nav{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 22px;}
+  .quick-nav a{display:inline-block;background:var(--card2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--text);text-decoration:none;border:1px solid var(--line);}
+  .quick-nav a:hover{border-color:var(--accent);color:var(--accent);}
+  footer{padding:30px 24px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--line);}
+  @media(max-width:700px){
+    header{padding:28px 16px 22px;}
+    header h1{font-size:24px;}
+    .wrap{padding:0 14px 40px;}
+    section{padding:32px 0;}
+    .heatmap{grid-template-columns:38px repeat(17,1fr);gap:1px;font-size:8px;}
+    .heatmap .cell{font-size:7px;}
+    table.tbl{font-size:11px;}
+    table.tbl th,table.tbl td{padding:7px 5px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>7 insights stratégiques · <span class="accent">padel Île-de-France</span></h1>
+  <p class="lead">Calculés sur 146 856 bookings historiques Doinsport (2024-2026) + 38 846 sessions live (4 plateformes) + INSEE + GPS. <b>Pour chaque insight on précise sa maturité actuelle</b> — certains (Rocket, Vacances) sont déjà robustes, d'autres (Élasticité, Chaînes vs Indé) le seront pleinement dans 6 mois quand Anybuddy/Playtomic/UrbanPadel auront accumulé leur historique de captures.</p>
+  <div class="quick-nav" style="margin-top:18px">
+    <a href="#i1">1. Heatmap horaire</a>
+    <a href="#i3">3. Élasticité prix</a>
+    <a href="#i4">4. Déserts padel</a>
+    <a href="#i5">5. Rocket clubs</a>
+    <a href="#i6">6. Chaînes vs indé</a>
+    <a href="#i7">7. Vacances scolaires</a>
+    <a href="#i8">8. Multi-plateforme</a>
+    <a href="padel_etude.html">← retour étude</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ============================================================ #1 ============================================================ -->
+<section id="i1">
+  <h2>① Heatmap horaire de la demande <span class="maturity robust">robuste</span></h2>
+  <p class="sub">Pour chaque jour × heure, on cumule tous les bookings observés (Doinsport historique + sessions « reserve » live). Plus la case est foncée, plus la demande est forte. Permet de repérer instantanément les heures premium (jamais dispo) et les heures creuses (potentiel d'amplification ou idéal pour cours/formations).</p>
+
+  <div class="panel">
+    <div class="kpis" id="i1Kpis"></div>
+    <h3>Heatmap demande · jour × heure</h3>
+    <div class="heatmap" id="heatmap"></div>
+    <p style="color:var(--muted);font-size:11.5px;margin-top:14px">Échelle de couleur : nb cumulé de bookings observés sur la case. Survole pour le détail.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Top 15 créneaux les plus demandés</h3>
+    <table class="tbl" id="tTopCreneaux"><thead><tr><th>Rang</th><th>Jour</th><th>Heure</th><th>Bookings cumulés</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="insight-box">
+    💡 <b>Lecture pour un opérateur</b> : les heures les plus rentables sont concentrées sur ~10 cases (en soirée semaine + weekend journée). Hors de ces heures, il faut soit baisser le prix (off-peak), soit remplir avec des cours / écoles de padel / corporate.
+  </div>
+</section>
+
+<!-- ============================================================ #3 ============================================================ -->
+<section id="i3">
+  <h2>③ Élasticité prix × demande <span class="maturity early">préliminaire</span></h2>
+  <p class="sub">Pour chaque club avec ≥5 prix observés à 90min, on plotte (prix médian, volume de bookings). Une régression log-log donne l'élasticité estimée.</p>
+
+  <div class="disclaimer">
+    ⚠️ <b>Mesure préliminaire à confirmer dans 6 mois</b> : aujourd'hui le nombre de bookings observés par club dépend autant de sa date d'arrivée sur Doinsport que de sa demande réelle. Pour mesurer l'élasticité rigoureusement il faut suivre un même club à prix différents dans le temps (changements tarifaires) — donnée qu'on n'aura qu'en 2026-2027.
+  </div>
+
+  <div class="panel">
+    <div class="kpis" id="i3Kpis"></div>
+    <h3>Scatter : prix médian 90min vs volume bookings</h3>
+    <canvas id="cElast" style="max-height:380px"></canvas>
+  </div>
+
+  <div class="insight-box">
+    💡 <b>Hypothèse à valider</b> : si l'élasticité est faible (-0.3 ou moins en valeur absolue), le padel est un bien peu sensible au prix dans la fourchette 40-90€/h — les opérateurs ont du pricing power. Si elle est forte (-0.8+), monter le prix tue la demande.
+  </div>
+</section>
+
+<!-- ============================================================ #4 ============================================================ -->
+<section id="i4">
+  <h2>④ Déserts padel : où ouvrir le prochain club ? <span class="maturity robust">robuste</span></h2>
+  <p class="sub">Croisement population INSEE × nombre de clubs scrapés par département. Identifie les zones sous-équipées proportionnellement à leur population.</p>
+
+  <div class="panel">
+    <h3>Habitants par club, par département</h3>
+    <table class="tbl" id="tDeserts"><thead><tr><th>Dépt</th><th>Population</th><th>Clubs</th><th>Clubs/100k hab</th><th>Habitants/club</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="insight-box">
+    💡 <b>Top zones déficitaires</b> : Paris intra (75) = 233 k hab/club (versus médiane IDF ~85 k). L'opportunité d'implantation est <b>à Paris intra ou en proche couronne dense</b> (92/93/94) — pas en grande couronne où la densité de clubs est déjà bonne.
+  </div>
+</section>
+
+<!-- ============================================================ #5 ============================================================ -->
+<section id="i5">
+  <h2>⑤ Rocket clubs : qui décolle ? <span class="maturity robust">robuste sur Doinsport</span></h2>
+  <p class="sub">Croissance = (bookings 6 derniers mois) vs (bookings 6 mois précédents). Calcul sur les 54 clubs Doinsport ; les autres plateformes seront couvertes dans 6 mois.</p>
+
+  <div class="panel">
+    <h3>🆕 Clubs récemment ouverts (premier booking observé dans les 12 derniers mois)</h3>
+    <table class="tbl" id="tNewClubs"><thead><tr><th>Club</th><th>CP</th><th>Premier vu</th><th>Bookings depuis</th><th>Statut</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="panel">
+    <h3>🚀 Top 15 clubs en hyper-croissance (vs 6 mois avant)</h3>
+    <table class="tbl" id="tRocket"><thead><tr><th>Club</th><th>CP</th><th>6m précédents</th><th>6m récents</th><th>Croissance</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="panel">
+    <h3>📉 Top 10 clubs en stagnation / déclin</h3>
+    <table class="tbl" id="tStagnant"><thead><tr><th>Club</th><th>CP</th><th>6m précédents</th><th>6m récents</th><th>Évolution</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="insight-box">
+    💡 <b>Pour un investisseur</b> : les rocket clubs (croissance > +100%) sont soit des nouveaux entrants qui ramassent la demande locale, soit des opérateurs qui ont changé leur modèle (nouveaux terrains, partenariats). Les clubs en déclin signalent une saturation locale ou un problème opérationnel à investiguer.
+  </div>
+</section>
+
+<!-- ============================================================ #6 ============================================================ -->
+<section id="i6">
+  <h2>⑥ Chaînes vs indépendants <span class="maturity partial">snapshot · à confirmer 6m</span></h2>
+  <p class="sub">15 enseignes détectées par regex sur les noms de clubs (4PADEL, Casa Padel, Sportfield, Forest Hill, PadelShot, UrbanPadel, UCPA, Aldea, Trinquet, Le Five, Carre, Play, Big Five, Sénart, Padel Camp). Volume médian + prix médian par catégorie.</p>
+
+  <div class="disclaimer">
+    ⚠️ Le volume médian/club est calculé sur les sessions actuellement en base. Comme certaines plateformes (Anybuddy) construisent leur historique au fil des polls, ce chiffre <b>sous-estime les chaînes présentes principalement sur Anybuddy</b>. Sera plus juste dans 6 mois.
+  </div>
+
+  <div class="panel">
+    <table class="tbl" id="tChains"><thead><tr><th>Enseigne</th><th>Nb clubs IDF</th><th>Sessions médian/club</th><th>Prix médian 90min</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="insight-box">
+    💡 <b>À surveiller</b> : si les chaînes ont des prix plus élevés ET un volume supérieur, c'est un signe de premiumisation. Si les indés font plus de volume au même prix, le mass-market local résiste bien aux chaînes.
+  </div>
+</section>
+
+<!-- ============================================================ #7 ============================================================ -->
+<section id="i7">
+  <h2>⑦ Effet vacances scolaires (zone C) <span class="maturity robust">robuste</span></h2>
+  <p class="sub">L'IDF est en zone C (Paris/Versailles). On calcule le volume moyen de bookings/jour <b>pendant les vacances zone C</b> vs <b>jours d'école</b>, par département.</p>
+
+  <div class="panel">
+    <table class="tbl" id="tVacances"><thead><tr><th>Dépt</th><th>Bookings/jour vacances</th><th>Bookings/jour hors vacances</th><th>Delta</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="insight-box">
+    💡 <b>Pricing dynamique</b> : si un département est en <b>hausse</b> pendant les vacances (typiquement Paris intra : les Parisiens restent + ont du temps libre), c'est l'occasion d'appliquer un peak-pricing. À l'inverse, les départements qui baissent (les familles partent en vacances) doivent activer des promos.
+  </div>
+</section>
+
+<!-- ============================================================ #8 ============================================================ -->
+<section id="i8">
+  <h2>⑧ Multi-plateforme vs mono-plateforme <span class="maturity partial">snapshot · à confirmer 6m</span></h2>
+  <p class="sub">19 clubs distribuent sur 2-3 plateformes (cf. clusters cross-plateforme). Comparaison du volume agrégé vs clubs mono-plateforme.</p>
+
+  <div class="panel">
+    <div class="kpis" id="i8Kpis"></div>
+    <h3>Top 19 clubs multi-plateformes par volume agrégé</h3>
+    <table class="tbl" id="tMulti"><thead><tr><th>Cluster</th><th>Club</th><th>CP</th><th>Plateformes</th><th>Sessions cumulées</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="insight-box">
+    💡 <b>Stratégie de distribution</b> : si les multi-plateformes captent significativement plus que les mono, distribuer largement est nécessaire pour ne pas se priver d'audience. Le coût (commissions plateformes ~5-15%) est à arbitrer contre le gain en visibilité.
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Données : nos scrapers (Anybuddy, UrbanPadel, Doinsport, Playtomic) · INSEE recensement 2021 · clusters cross-plateforme via fuzzy matching CP+tokens
+  · <a href="padel_etude.html">étude marché complète</a> · <a href="padel_map.html">carte interactive</a> · <a href="padel_idf.html">dashboard live</a>
+</footer>
+
+<script>
+Chart.defaults.color = '#8a96b8'; Chart.defaults.borderColor = '#2a3354';
+const JOURS = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+const fmt = v => Math.round(v||0).toLocaleString('fr-FR');
+const eur = v => v ? fmt(v) + ' €' : '—';
+
+async function load(){
+  const D = await fetch('padel_insights_data.json',{cache:'no-store'}).then(r=>r.json());
+
+  // ============== #1 HEATMAP ==============
+  const hmData = D.heatmap.data;
+  const hours = Array.from({length:17}, (_,i)=>i+7);
+  // Trouve max value pour échelle
+  let maxV = 0;
+  for(const j of JOURS) for(const cell of hmData[j]) maxV = Math.max(maxV, cell.demand);
+
+  const hm = document.getElementById('heatmap');
+  let html = '<div class="head"></div>';
+  for(const h of hours) html += `<div class="head">${h}h</div>`;
+  for(const j of JOURS){
+    html += `<div class="axis">${j.slice(0,3)}</div>`;
+    for(const cell of hmData[j]){
+      const v = cell.demand;
+      const t = maxV ? v/maxV : 0;
+      // Gradient vert (cold) → jaune → rouge (hot)
+      const r = Math.round(44 + (255-44)*t);
+      const g = Math.round(223 - (223-100)*t);
+      const b = Math.round(98 - (98-50)*t);
+      const op = v > 0 ? 0.25 + 0.7*t : 0.05;
+      html += `<div class="cell" style="background:rgba(${r},${g},${b},${op})" title="${j} ${cell.heure}h: ${fmt(v)} bookings (${cell.offered} créneaux offerts, ${cell.occupation_pct}% occ.)">${v ? (v>=1000 ? Math.round(v/1000)+'k' : v) : ''}</div>`;
+    }
+  }
+  hm.innerHTML = html;
+
+  const total = D.heatmap.top_creneaux.reduce((s,x)=>s+x[2],0);
+  document.getElementById('i1Kpis').innerHTML = [
+    [fmt(D.heatmap.top_creneaux[0][2]), '1er créneau (volume)', `${D.heatmap.top_creneaux[0][0]} ${D.heatmap.top_creneaux[0][1]}h`],
+    [fmt(total), 'Top 20 cumulés', 'soit ~' + Math.round(100*total/Object.values(hmData).flat().reduce((s,c)=>s+c.demand,0)) + '% du total'],
+    [Object.values(hmData).flat().filter(c=>c.offered).length, 'Cases avec data', 'sur 7×17 = 119 max'],
+  ].map(([v,l,sub])=>`<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div><div style="color:var(--muted);font-size:11px;margin-top:4px">${sub}</div></div>`).join('');
+
+  const tbTC = document.querySelector('#tTopCreneaux tbody');
+  tbTC.innerHTML = D.heatmap.top_creneaux.slice(0,15).map(([j,h,n],i) =>
+    `<tr><td>${i+1}</td><td>${j}</td><td>${h}h</td><td><b>${fmt(n)}</b></td></tr>`
+  ).join('');
+
+  // ============== #3 ELASTICITY ==============
+  const el = D.elasticity.data;
+  document.getElementById('i3Kpis').innerHTML = [
+    [D.elasticity.slope.toFixed(3), 'Élasticité (log-log)', D.elasticity.slope < -0.3 ? 'plutôt élastique' : 'plutôt inélastique'],
+    [el.length, 'Clubs analysés', 'avec ≥5 prix observés'],
+    [Math.round(el.reduce((s,e)=>s+e.prix_median_90,0)/el.length), 'Prix médian moyen', '€/90min'],
+  ].map(([v,l,sub])=>`<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div><div style="color:var(--muted);font-size:11px;margin-top:4px">${sub}</div></div>`).join('');
+
+  new Chart(document.getElementById('cElast'), {
+    type:'scatter',
+    data:{datasets:[{
+      label:'Clubs', data:el.map(e=>({x:e.prix_median_90, y:e.n_bookings, name:e.name})),
+      backgroundColor:'rgba(44,223,98,0.5)', borderColor:'#2CDF62', pointRadius:5,
+    }]},
+    options:{
+      scales:{
+        x:{title:{display:true,text:'Prix médian 90min (€)'}, type:'linear'},
+        y:{title:{display:true,text:'Bookings observés'}, type:'logarithmic'},
+      },
+      plugins:{
+        legend:{display:false},
+        tooltip:{callbacks:{label:ctx => `${ctx.raw.name} · ${ctx.raw.x}€ · ${fmt(ctx.raw.y)} bookings`}},
+      }
+    }
+  });
+
+  // ============== #4 DÉSERTS ==============
+  const dep = D.deserts.dept_density;
+  const sortedDep = Object.entries(dep).sort((a,b)=>(b[1].hab_per_club||0)-(a[1].hab_per_club||0));
+  document.querySelector('#tDeserts tbody').innerHTML = sortedDep.map(([code,d]) =>
+    `<tr>
+      <td>${code} ${d.nom}</td>
+      <td>${fmt(d.pop)}</td>
+      <td><b>${d.n_clubs}</b></td>
+      <td>${d.clubs_per_100k}</td>
+      <td style="${d.hab_per_club>150000?'color:var(--red);font-weight:700':d.hab_per_club<80000?'color:var(--accent)':'color:var(--text)'}">${fmt(d.hab_per_club)}</td>
+    </tr>`
+  ).join('');
+
+  // ============== #5 ROCKET ==============
+  document.querySelector('#tNewClubs tbody').innerHTML = D.rocket.new_clubs.slice(0,10).map(c => {
+    return `<tr>
+      <td>${c.name}</td>
+      <td>${c.cp||'—'}</td>
+      <td>${c.first_seen||'—'}</td>
+      <td><b>${fmt(c.n_total)}</b></td>
+      <td><span class="badge-growth new">🆕 nouveau</span></td>
+    </tr>`;
+  }).join('');
+
+  document.querySelector('#tRocket tbody').innerHTML = D.rocket.rocket.map(c => {
+    return `<tr>
+      <td>${c.name}</td>
+      <td>${c.cp||'—'}</td>
+      <td>${fmt(c.n_prev_6m)}</td>
+      <td>${fmt(c.n_recent_6m)}</td>
+      <td><span class="badge-growth up">↑ ${c.growth_pct>0?'+':''}${c.growth_pct}%</span></td>
+    </tr>`;
+  }).join('');
+
+  document.querySelector('#tStagnant tbody').innerHTML = D.rocket.stagnant.map(c => {
+    return `<tr>
+      <td>${c.name}</td>
+      <td>${c.cp||'—'}</td>
+      <td>${fmt(c.n_prev_6m)}</td>
+      <td>${fmt(c.n_recent_6m)}</td>
+      <td><span class="badge-growth down">↓ ${c.growth_pct}%</span></td>
+    </tr>`;
+  }).join('');
+
+  // ============== #6 CHAINES ==============
+  document.querySelector('#tChains tbody').innerHTML = D.chains_vs_indep.chains.map(c =>
+    `<tr>
+      <td>${c.chain}</td>
+      <td><b>${c.n_clubs}</b></td>
+      <td>${fmt(c.median_sessions_per_club)}</td>
+      <td>${c.median_price_90 ? eur(c.median_price_90) : '—'}</td>
+    </tr>`
+  ).concat([`
+    <tr style="background:var(--card2)">
+      <td>📊 ${D.chains_vs_indep.indep.label}</td>
+      <td><b>${D.chains_vs_indep.indep.n_clubs}</b></td>
+      <td>${fmt(D.chains_vs_indep.indep.median_sessions_per_club)}</td>
+      <td>${D.chains_vs_indep.indep.median_price_90 ? eur(D.chains_vs_indep.indep.median_price_90) : '—'}</td>
+    </tr>`]).join('');
+
+  // ============== #7 VACANCES ==============
+  document.querySelector('#tVacances tbody').innerHTML = D.vacances.map(v => {
+    const cls = v.delta_pct > 0 ? 'up' : 'down';
+    return `<tr>
+      <td>${v.dept} ${v.nom}</td>
+      <td>${v.vac_bookings_per_day}</td>
+      <td>${v.non_vac_bookings_per_day}</td>
+      <td><span class="badge-growth ${cls}">${v.delta_pct>0?'+':''}${v.delta_pct}%</span></td>
+    </tr>`;
+  }).join('');
+
+  // ============== #8 MULTI vs MONO ==============
+  const m = D.multi_vs_mono;
+  document.getElementById('i8Kpis').innerHTML = [
+    [m.n_multi_platforms, 'Clubs multi-plateformes', `vs ${m.n_mono} mono`],
+    [fmt(m.median_sessions_multi), 'Médian multi', 'sessions cumulées/cluster'],
+    [fmt(m.median_sessions_mono), 'Médian mono', 'sessions/club'],
+    [`${Math.round(100*m.median_sessions_multi/m.median_sessions_mono - 100)}%`, 'Écart médian', 'multi vs mono'],
+  ].map(([v,l,sub])=>`<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div><div style="color:var(--muted);font-size:11px;margin-top:4px">${sub}</div></div>`).join('');
+
+  document.querySelector('#tMulti tbody').innerHTML = m.clusters.map(c =>
+    `<tr>
+      <td><b>${c.unified_id}</b></td>
+      <td>${c.canonical_name||'—'}</td>
+      <td>${c.cp||'—'}</td>
+      <td>${c.n_platforms} plateformes</td>
+      <td><b>${fmt(c.total_sessions)}</b></td>
+    </tr>`
+  ).join('');
+}
+
+load();
+</script>
+</body>
+</html>
