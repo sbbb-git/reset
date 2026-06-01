@@ -34,7 +34,7 @@ WIDGET_ID = "071882500180"
 LIEU_FALLBACK = "Le 33 Foch"
 
 
-def load_markup(widget_id, start_date, location=None, retries=3):
+def load_markup(widget_id, start_date, location=None, retries=5):
     params = {"options[start_date]": start_date, "preview": "false"}
     if location is not None:
         params["options[location]"] = location
@@ -50,7 +50,9 @@ def load_markup(widget_id, start_date, location=None, retries=3):
                 return json.loads(r.read().decode("utf-8"))
         except Exception as e:  # noqa: BLE001
             last = e
-            time.sleep(1.0 + 0.7 * attempt)
+            # Backoff exponentiel 3s,6s,12s,24s,48s. Mindbody throttle parfois
+            # sur l'IP runner GitHub quand on enchaîne plusieurs scrapers Mindbody.
+            time.sleep(3 * (2 ** attempt))
     raise last
 
 

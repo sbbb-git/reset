@@ -61,7 +61,7 @@ FIELDS = ["id", "date", "jour", "heure", "fin", "lieu", "cours", "coach",
           "capacite", "presents", "finie", "statut", "releve"]
 
 
-def load_markup(start_date, retries=3):
+def load_markup(start_date, retries=5):
     params = {"options[start_date]": start_date, "preview": "false"}
     url = f"{BASE}/{WIDGET_ID}/load_markup?" + urllib.parse.urlencode(params)
     last = None
@@ -75,7 +75,9 @@ def load_markup(start_date, retries=3):
                 return json.loads(r.read().decode("utf-8"))
         except Exception as e:  # noqa: BLE001
             last = e
-            time.sleep(1.0 + 0.7 * attempt)
+            # Backoff exponentiel 3s,6s,12s,24s,48s. Mindbody throttle parfois
+            # sur l'IP runner GitHub quand on enchaîne plusieurs scrapers Mindbody.
+            time.sleep(3 * (2 ** attempt))
     raise last
 
 

@@ -38,9 +38,13 @@ jobs:
       - name: Banote (Mindbody, statut)
         run: python3 banote_scrape.py
         continue-on-error: true
+      - name: Pause anti-throttle Mindbody
+        run: sleep 30
       - name: DNA Pilates (Mindbody, statut)
         run: python3 dna_scrape.py
         continue-on-error: true
+      - name: Pause anti-throttle Mindbody
+        run: sleep 30
       - name: Le 33 Foch (Mindbody, statut)
         run: python3 le33foch_scrape.py
         continue-on-error: true
