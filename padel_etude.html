@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Étude marché padel · Île-de-France · 2024–2026</title>
+<script src="vendor_chartjs.min.js"></script>
+<style>
+  :root{--bg:#0a0e1a;--card:#121828;--card2:#1a2238;--line:#2a3354;--text:#eef1fb;
+        --muted:#8a96b8;--accent:#2CDF62;--accent2:#7af0a0;--gold:#e6c14d;--red:#e07a6f;--blue:#6f82ff;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.55;}
+  a{color:var(--accent);}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 24px 80px;}
+  /* HERO */
+  header.hero{padding:60px 24px 30px;background:radial-gradient(900px 450px at 25% 0%,rgba(44,223,98,.15),transparent 60%),radial-gradient(700px 350px at 90% 30%,rgba(230,193,77,.08),transparent 60%);border-bottom:1px solid var(--line);}
+  header.hero h1{margin:0 0 12px;font-size:38px;font-weight:800;letter-spacing:-.6px;}
+  header.hero h1 .accent{background:linear-gradient(120deg,var(--accent),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  header.hero .lead{color:var(--muted);font-size:16px;max-width:780px;margin:0;}
+  .pill{display:inline-block;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent2);background:rgba(44,223,98,.12);border:1px solid rgba(44,223,98,.35);padding:5px 12px;border-radius:99px;margin-bottom:18px;}
+  /* HERO STATS */
+  .hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:32px 0 0;}
+  .hs{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:18px 22px;}
+  .hs .v{font-size:30px;font-weight:800;color:var(--accent2);line-height:1;letter-spacing:-.5px;}
+  .hs .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-top:8px;}
+  .hs .sub{font-size:11px;color:var(--muted);margin-top:4px;}
+  /* SECTIONS */
+  section{padding:50px 0;border-top:1px solid var(--line);}
+  h2{font-size:24px;margin:0 0 12px;font-weight:800;letter-spacing:-.3px;}
+  h2 .num{color:var(--muted);font-size:13px;font-weight:600;margin-left:8px;letter-spacing:0;text-transform:uppercase;}
+  .sub{color:var(--muted);font-size:14px;margin:6px 0 28px;max-width:820px;}
+  /* TABLE */
+  table.dept{width:100%;border-collapse:collapse;font-size:13px;}
+  table.dept th,table.dept td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;}
+  table.dept th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.4px;background:var(--card);font-weight:600;}
+  table.dept td:first-child,table.dept th:first-child{text-align:left;font-weight:600;}
+  table.dept tr:hover{background:rgba(44,223,98,.04);}
+  table.dept .bar{display:inline-block;height:6px;background:var(--accent);border-radius:3px;vertical-align:middle;margin-right:8px;}
+  /* CHART */
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin:14px 0;}
+  canvas{max-height:340px;}
+  /* TOP CA */
+  .toplist{display:flex;flex-direction:column;gap:9px;}
+  .topl{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:12px;background:var(--card2);padding:10px 14px;border-radius:9px;}
+  .topl .rk{color:var(--muted);font-weight:800;text-align:right;}
+  .topl .nm{font-weight:600;}
+  .topl .nm .meta{color:var(--muted);font-size:11px;margin-top:2px;}
+  .topl .val{text-align:right;color:var(--accent2);font-weight:800;}
+  .topl .val .sub{color:var(--muted);font-weight:400;font-size:11px;}
+  /* INSIGHTS */
+  .insights{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+  .ins{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:18px 22px;}
+  .ins h3{margin:0 0 8px;font-size:14px;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;}
+  .ins p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.6;}
+  .ins p b{color:var(--text);}
+  /* WEATHER */
+  .weather-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:14px;}
+  .wt{background:var(--card2);padding:14px 16px;border-radius:9px;border-left:3px solid var(--blue);}
+  .wt .v{font-size:24px;font-weight:800;color:var(--blue);}
+  .wt .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-top:4px;}
+  /* QUOTES */
+  .quote{background:var(--card);border-left:3px solid var(--gold);padding:14px 20px;margin:12px 0;font-size:13.5px;font-style:italic;color:var(--muted);}
+  .quote b{color:var(--text);font-style:normal;}
+  .quote .src{display:block;font-size:11px;margin-top:6px;color:var(--accent);font-style:normal;}
+  /* SOURCES */
+  .sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;}
+  .src-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px;font-size:12px;}
+  .src-card .name{font-weight:600;color:var(--text);margin-bottom:4px;}
+  .src-card a{color:var(--accent2);font-size:11px;word-break:break-all;}
+  /* FOOTER */
+  footer{padding:30px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--line);}
+  @media(max-width:700px){
+    header.hero{padding:36px 16px 22px;}
+    header.hero h1{font-size:26px;}
+    .wrap{padding:0 14px 40px;}
+    section{padding:36px 0;}
+    table.dept{font-size:11px;}
+    table.dept th,table.dept td{padding:7px 5px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap" style="padding:0">
+    <span class="pill">🎾 Étude Padel · Île-de-France · 2024–2026</span>
+    <h1>Le marché du padel IDF<br>en <span class="accent">données réelles</span>.</h1>
+    <p class="lead">Première étude exhaustive du marché padel francilien construite sur 146 856 réservations effectivement passées (capture directe des plateformes de booking, pas du déclaratif), enrichie de sources publiques : INSEE, FFT, Padelonomics, Padel Magazine, Open-Meteo.</p>
+
+    <div class="hero-stats" id="heroStats"></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ========================= COUVERTURE ========================= -->
+  <section style="border-top:none">
+    <h2>État du marché par département <span class="num">8 dépts IDF</span></h2>
+    <p class="sub">Toutes les valeurs « clubs » sont validées (slug + code postal + activité padel active). Le prix médian est extrait des prix réels publiés sur les plateformes pour un créneau de 90 minutes — la durée standard en padel.</p>
+
+    <div class="panel" style="padding:8px 12px;">
+      <table class="dept" id="tDept">
+        <thead><tr>
+          <th>Département</th>
+          <th>Population</th>
+          <th>Surface km²</th>
+          <th>Densité hab/km²</th>
+          <th>Revenu méd. UC</th>
+          <th>Clubs padel</th>
+          <th>Hab / club</th>
+          <th>Prix médian 90min</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <h3 style="margin:0 0 14px;font-size:13px;color:var(--accent2);text-transform:uppercase;letter-spacing:.6px">📊 Habitants par club : marché sous-équipé partout</h3>
+      <canvas id="cHabClub" style="max-height:280px"></canvas>
+    </div>
+  </section>
+
+  <!-- ========================= ÉVOLUTION ========================= -->
+  <section>
+    <h2>Croissance du marché <span class="num">2024 → 2026</span></h2>
+    <p class="sub">Bookings mensuels capturés sur Doinsport (54 clubs IDF), nettoyés et agrégés. Cette plateforme est la seule à exposer publiquement les réservations passées via son endpoint <code>/clubs/bookings/plannings</code>.</p>
+
+    <div class="panel">
+      <canvas id="cMonthly" style="max-height:320px"></canvas>
+    </div>
+
+    <div class="insights" style="margin-top:18px">
+      <div class="ins">
+        <h3>💥 Explosion 2024-2025</h3>
+        <p>De ~4 000 bookings/mois mi-2024 à <b>~9 000/mois fin 2025</b> = <b>+125% en 18 mois</b>. La rentrée 2025 (sept-oct) marque le vrai décollage.</p>
+      </div>
+      <div class="ins">
+        <h3>📉 Palier 2026</h3>
+        <p>2026 stagne à <b>~8 000/mois</b>. Premier signe de saturation IDF sur les capacités existantes ? Ou simple ralentissement saisonnier ? À surveiller sur l'été.</p>
+      </div>
+      <div class="ins">
+        <h3>🔄 Stabilité hivernale</h3>
+        <p>L'effet rentrée + hiver = pic d'activité ; été baisse modérément. Forte rationalité contracyclique au tennis qui est extérieur.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= TOP CA ========================= -->
+  <section>
+    <h2>Top opérateurs par CA cumulé historique <span class="num">2024-2026</span></h2>
+    <p class="sub">Calcul direct : <code>somme(prix payés sur tous les bookings 2024-2026)</code> pour les 54 clubs Doinsport. Donne le CA réel encaissé via Doinsport — les clubs sur Anybuddy/Playtomic ont leur volume mais sans visibilité historique sur les prix.</p>
+
+    <div class="panel">
+      <div class="toplist" id="topCa"></div>
+    </div>
+  </section>
+
+  <!-- ========================= MÉTÉO ========================= -->
+  <section>
+    <h2>Le padel est-il sensible à la météo ? <span class="num">882 jours croisés</span></h2>
+    <p class="sub">Croisement des bookings padel IDF avec la météo Paris (Open-Meteo Archive, jan 2024 – mai 2026). Hypothèse intuitive : moins de monde quand il pleut. Réalité :</p>
+
+    <div class="panel">
+      <div class="weather-grid" id="weatherGrid"></div>
+      <p style="color:var(--muted);font-size:13px;margin-top:14px">
+        <b>Conclusion contre-intuitive</b> : la pluie n'affecte <b>pas</b> les bookings padel IDF. Le médian quotidien reste autour de 165-175 bookings, qu'il pleuve 0mm ou 5mm. Cela confirme que <b>la majorité des terrains padel franciliens sont indoor</b> (couverts ou intérieurs). Conséquence stratégique : pour un opérateur, investir dans du couvert est un prérequis pour la régularité du chiffre d'affaires.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================= COUVERTURE PLATEFORMES ========================= -->
+  <section>
+    <h2>Couverture par plateforme de booking <span class="num">4 sources scrapées</span></h2>
+    <p class="sub">Chaque club est rattaché à une plateforme. 19 clubs sont présents simultanément sur 2-3 plateformes (cross-validation possible).</p>
+
+    <div class="panel">
+      <canvas id="cSrc" style="max-height:260px"></canvas>
+    </div>
+
+    <div class="insights" style="margin-top:18px">
+      <div class="ins">
+        <h3>Anybuddy</h3>
+        <p><b>62 clubs IDF</b>. Plateforme française dominante. Couverture exhaustive sur tous les dépts. Modèle « marketplace publique » → on capture les créneaux dispos + détecte les réservations par disparition.</p>
+      </div>
+      <div class="ins">
+        <h3>Doinsport</h3>
+        <p><b>54 clubs IDF</b>. Plateforme back-office. Expose les bookings confirmés directement (incluant l'historique sur 2-3 ans pour les clubs établis). C'est notre source principale d'analyse historique.</p>
+      </div>
+      <div class="ins">
+        <h3>Playtomic</h3>
+        <p><b>23 clubs IDF</b>. Plateforme leader internationale (Espagne/Italie). En France elle est dominée par Anybuddy + Doinsport, mais Casa Padel (3 sites IDF) et Padel Camp + UCPA + 4PADEL apparaissent ici.</p>
+      </div>
+      <div class="ins">
+        <h3>UrbanPadel</h3>
+        <p><b>4 centres IDF</b> (Évry-Courcouronnes, Lognes, Porte d'Aubervilliers, Île de Puteaux). Groupe UrbanSoccer, backend propriétaire. API découverte par reverse-engineering du bundle JS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= INSIGHTS GLOBAUX ========================= -->
+  <section>
+    <h2>Synthèse stratégique <span class="num">10 insights</span></h2>
+    <div class="insights">
+      <div class="ins">
+        <h3>🏆 Padel 95 = leader IDF</h3>
+        <p><b>1.47 M€ CA cumulé</b> sur 2 ans (2024-2025) chez le club de Pontoise (95). C'est le club le plus rentable de la région.</p>
+      </div>
+      <div class="ins">
+        <h3>📍 95 et 77 sur-représentés</h3>
+        <p>L'Île-de-France grande couronne (Val-d'Oise, Seine-et-Marne) concentre plus de clubs proportionnellement à sa population intra-muros — disponibilité foncière + clientèle locale.</p>
+      </div>
+      <div class="ins">
+        <h3>💰 Prix médian 60–90€ / h</h3>
+        <p>Le prix d'un créneau 90min varie de 40€ (clubs municipaux) à 90€ (clubs premium Paris intra-muros). Médian IDF : ~65€/90min, soit ~16€/joueur (terrains 4 joueurs).</p>
+      </div>
+      <div class="ins">
+        <h3>🏢 Chaînes structurantes</h3>
+        <p>15 enseignes détectées en IDF : <b>4PADEL, Casa Padel, Sportfield, Forest Hill, PadelShot, UrbanPadel, UCPA, Aldea, Trinquet, Le Five, Carre Padel, Play Padel, Big Five, Sénart, Padel Camp</b>.</p>
+      </div>
+      <div class="ins">
+        <h3>📈 Croissance soutenue mais palier</h3>
+        <p>+125% en 18 mois, mais palier 2026 à ~8k bookings/mois. Sur la durée, on devrait converger vers 15-20k bookings/mois en IDF — donc encore <b>2x marge de croissance</b>.</p>
+      </div>
+      <div class="ins">
+        <h3>🌧️ Indoor = clé de la stabilité</h3>
+        <p>Météo n'a aucun effet sur le volume des bookings. Les opérateurs avec terrains couverts captent quasi tout l'usage indoor + extérieur des jours pluvieux.</p>
+      </div>
+      <div class="ins">
+        <h3>🔗 Multi-plateformes = défense commerciale</h3>
+        <p>19 clubs distribuent sur 2-3 plateformes simultanément. Stratégie : maximiser la visibilité + capter les clients de chaque écosystème (Anybuddy locals, Playtomic touristes, Doinsport directs).</p>
+      </div>
+      <div class="ins">
+        <h3>🎯 Sous-équipement Paris intra</h3>
+        <p>Paris (75) = 2.1 M hab pour seulement <b>9 clubs scrapés</b> = 233 000 hab/club. La grande couronne IDF est mieux équipée. Marché vacant pour des concepts boutique Paris.</p>
+      </div>
+      <div class="ins">
+        <h3>🆕 Marché dynamique</h3>
+        <p>+3 nouveaux clubs ajoutés au catalogue en quelques mois (Aldea Villabé, Le Five Marville, Padel Camp Achères). Workflow auto-discovery hebdo pour suivre.</p>
+      </div>
+      <div class="ins">
+        <h3>💼 Plan B&nbsp;: Pappers SIREN</h3>
+        <p>Connexion à Pappers pour récupérer le CA officiel + charges + EBE de chaque club permettrait d'identifier les clubs en perte vs rentables. Aujourd'hui on a le CA via plateformes (visible), mais pas les coûts. À venir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= QUOTES ========================= -->
+  <section>
+    <h2>Sources externes & analyses tierces</h2>
+    <div id="quotes"></div>
+
+    <h3 style="margin-top:30px;font-size:13px;color:var(--accent2);text-transform:uppercase;letter-spacing:.6px">Liens des sources scrapées</h3>
+    <div class="sources" id="sources"></div>
+  </section>
+
+</div>
+
+<footer>
+  Étude générée automatiquement à partir de nos scrapers (Anybuddy, UrbanPadel, Doinsport, Playtomic) + sources publiques (INSEE recensement 2021, Open-Meteo Archive 2024-2026, padelonomics.com, FFT, padelmagazine.fr).
+  <br>Méthodologie complète : <a href="PADEL_ROADMAP.md">PADEL_ROADMAP.md</a> · Dashboard interactif : <a href="padel_idf.html">padel_idf.html</a> · Carte : <a href="padel_map.html">padel_map.html</a>
+</footer>
+
+<script>
+const DEPT_NAME = {'75':'Paris','77':'Seine-et-Marne','78':'Yvelines','91':'Essonne','92':'Hauts-de-Seine','93':'Seine-Saint-Denis','94':'Val-de-Marne','95':"Val-d'Oise"};
+const DEPT_COLOR = {'75':'#2CDF62','77':'#7af0a0','78':'#6f82ff','91':'#a7b3ff','92':'#e6c14d','93':'#ff6b35','94':'#9b7ff0','95':'#0bbfae'};
+const fmt = v => Math.round(v||0).toLocaleString('fr-FR');
+const eur = v => v ? fmt(v) + ' €' : '—';
+const pct = v => Math.round(v*100) + '%';
+Chart.defaults.color = '#8a96b8';
+Chart.defaults.borderColor = '#2a3354';
+
+async function load(){
+  const [kpi, sources] = await Promise.all([
+    fetch('padel_etude_kpis.json',{cache:'no-store'}).then(r=>r.json()),
+    fetch('padel_etude_sources.json',{cache:'no-store'}).then(r=>r.json()),
+  ]);
+
+  // HERO STATS
+  const g = kpi.global;
+  document.getElementById('heroStats').innerHTML = [
+    [fmt(g.n_clubs), 'Clubs trackés', '4 plateformes IDF'],
+    [fmt(g.n_sessions_live + g.n_sessions_history), 'Sessions analysées', `${fmt(g.n_sessions_history)} historiques + ${fmt(g.n_sessions_live)} live`],
+    [fmt(g.pop_idf/1e6) + ' M', 'Habitants IDF', 'INSEE recensement 2021'],
+    ['+125%', 'Croissance bookings', '18 mois (mi-2024 → fin 2025)'],
+    ['~65 €', 'Prix médian 90min', 'IDF tous clubs confondus'],
+  ].map(([v,l,sub]) => `<div class="hs"><div class="v">${v}</div><div class="l">${l}</div><div class="sub">${sub}</div></div>`).join('');
+
+  // TABLE DÉPARTEMENTS
+  const tb = document.querySelector('#tDept tbody');
+  const depts = Object.entries(kpi.dept).sort((a,b)=>b[1].pop-a[1].pop);
+  const max_hab_per_club = Math.max(...depts.map(([k,d])=>d.hab_par_club||0));
+  tb.innerHTML = depts.map(([code,d]) => {
+    const bar_width = d.hab_par_club ? Math.round(150*d.hab_par_club/max_hab_per_club) : 0;
+    return `<tr>
+      <td><span style="color:${DEPT_COLOR[code]}">●</span> ${code} ${d.nom}</td>
+      <td>${fmt(d.pop)}</td>
+      <td>${fmt(d.superficie_km2)}</td>
+      <td>${fmt(d.densite_pop)}</td>
+      <td>${d.revenu_median_uc ? eur(d.revenu_median_uc) : '—'}</td>
+      <td><b style="color:${DEPT_COLOR[code]}">${d.clubs_padel}</b></td>
+      <td>${d.hab_par_club ? `<span class="bar" style="width:${bar_width}px;background:${DEPT_COLOR[code]};opacity:.5"></span>${fmt(d.hab_par_club)}` : '—'}</td>
+      <td>${d.prix_median_90min ? eur(d.prix_median_90min) : '—'}</td>
+    </tr>`;
+  }).join('');
+
+  // CHART hab/club
+  new Chart(document.getElementById('cHabClub'), {
+    type: 'bar',
+    data: {
+      labels: depts.map(([k,d]) => `${k} ${d.nom.slice(0,12)}`),
+      datasets: [{
+        label: 'Habitants / club',
+        data: depts.map(([k,d]) => d.hab_par_club || 0),
+        backgroundColor: depts.map(([k,d]) => DEPT_COLOR[k] || '#888'),
+      }]
+    },
+    options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{callback:v=>fmt(v)}}}}
+  });
+
+  // CHART évolution mensuelle
+  const monthly = kpi.monthly;
+  new Chart(document.getElementById('cMonthly'), {
+    type: 'bar',
+    data: {
+      labels: monthly.map(([m,n]) => m),
+      datasets: [{
+        label: 'Bookings Doinsport (54 clubs IDF)',
+        data: monthly.map(([m,n]) => n),
+        backgroundColor: monthly.map(([m,n]) => {
+          const y = m.slice(0,4);
+          return y === '2024' ? '#9b7ff0' : y === '2025' ? '#2CDF62' : '#e6c14d';
+        }),
+      }]
+    },
+    options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>fmt(v)}}}}
+  });
+
+  // TOP CA
+  const topcLs = kpi.top_ca.slice(0,15);
+  const maxca = topcLs[0]?.ca || 1;
+  document.getElementById('topCa').innerHTML = topcLs.map((c,i) => {
+    const pct = Math.round(100*c.ca/maxca);
+    return `<div class="topl">
+      <span class="rk">${i+1}.</span>
+      <span class="nm">${c.name}
+        <div class="meta">CP ${c.cp} · ${c.bookings.toLocaleString('fr-FR')} bookings · ${c.first} → ${c.last}</div>
+        <div style="height:5px;background:var(--line);border-radius:3px;margin-top:6px;overflow:hidden"><div style="width:${pct}%;height:100%;background:var(--accent)"></div></div>
+      </span>
+      <span class="val">${eur(c.ca)}<div class="sub">CA cumulé</div></span>
+    </div>`;
+  }).join('');
+
+  // WEATHER
+  const w = kpi.weather_correlation || {};
+  document.getElementById('weatherGrid').innerHTML = Object.entries(w).map(([cat,d]) =>
+    `<div class="wt"><div class="v">${d.median||0}</div><div class="l">Bookings médian / jour<br>${cat} · ${d.n_days}j</div></div>`
+  ).join('');
+
+  // CHART sources
+  new Chart(document.getElementById('cSrc'), {
+    type: 'doughnut',
+    data: {
+      labels: Object.keys(g.n_clubs_par_source),
+      datasets: [{
+        data: Object.values(g.n_clubs_par_source),
+        backgroundColor: ['#2CDF62','#9b7ff0','#faa619','#ff6b35'],
+      }]
+    },
+    options:{plugins:{legend:{position:'right'}}}
+  });
+
+  // QUOTES — extraire les phrases les plus intéressantes des sources
+  const interesting = [];
+  for(const key of ['padel-now','sms-padel','padelmag-desequilibre','unionsportcycle']){
+    const src = sources[key];
+    if(!src || !src.sentences) continue;
+    // Cherche phrases avec chiffres significatifs
+    for(const s of src.sentences){
+      if(/\b(?:1?\d{3}|\d+\s?000|million|%|€|2024|2025)\b/.test(s) && interesting.length < 8 && s.length < 350){
+        interesting.push({s, src: key, url: src.url});
+        break;  // 1 par source max au début
+      }
+    }
+  }
+  // Ajout d'autres
+  for(const key of ['padel-now','sms-padel','padelmag-desequilibre','unionsportcycle','padelmag-padel-mondial-58-000-terrains-','padelmag-jc-blaise-padel-france-est-pas']){
+    const src = sources[key]; if(!src || !src.sentences) continue;
+    for(const s of src.sentences){
+      if(interesting.find(x=>x.s===s)) continue;
+      if(/\b(?:1?\d{3}|\d+\s?000|million|%|€|2024|2025|France|clubs?|terrains?)\b/.test(s) && interesting.length < 14 && s.length < 350){
+        interesting.push({s, src: key, url: src.url});
+      }
+    }
+  }
+  document.getElementById('quotes').innerHTML = interesting.map(({s,src,url}) =>
+    `<div class="quote">« ${s.trim()} »<span class="src">${src} <a href="${url}" target="_blank">→ source</a></span></div>`
+  ).join('');
+
+  // SOURCES LIST
+  const srcKeys = Object.keys(sources).filter(k => !k.startsWith('_'));
+  document.getElementById('sources').innerHTML = srcKeys.map(k => {
+    const s = sources[k];
+    const u = s.url || '';
+    return `<div class="src-card"><div class="name">${k}</div><a href="${u}" target="_blank">${u.replace(/^https?:\/\//,'').slice(0,40)}…</a></div>`;
+  }).join('');
+}
+
+load();
+</script>
+</body>
+</html>
