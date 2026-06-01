@@ -1,35 +1,19 @@
 [
  {
-  "slug": "4-padel-saint-ouen-saint-ouen-sur-seine",
+  "slug": "4padel-orleans-fleury-les-aubrais",
   "cp": "91142",
-  "name": "Padel - 4Padel Saint-Ouen à Saint-Ouen-sur-Seine",
+  "name": "Padel - 4PADEL Orléans-Fleury à Fleury-Les-Aubrais",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 7
+  "creneaux_test": 16
  },
  {
-  "slug": "3set-padel-chateaugiron",
+  "slug": "4padel-challans-sallertaine",
   "cp": "91142",
-  "name": "Padel - 3Set Padel à Châteaugiron",
+  "name": "Padel - 4PADEL Challans à Sallertaine",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 75
- },
- {
-  "slug": "4padel-le-five-dunkerque",
-  "cp": "91142",
-  "name": "Padel - 4PADEL / Le Five - Dunkerque à Dunkerque",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 57
- },
- {
-  "slug": "4padel-bordeaux",
-  "cp": "91142",
-  "name": "Padel - 4PADEL / Le Five - Bordeaux à Bordeaux",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 22
+  "creneaux_test": 12
  },
  {
   "slug": "4padel-antony-morangis",
@@ -37,7 +21,7 @@
   "name": "Padel - 4PADEL Antony à Antony",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 17
+  "creneaux_test": 34
  },
  {
   "slug": "4padel-cao-saint-denis",
@@ -45,12 +29,116 @@
   "name": "Padel - 4PADEL CAO Saint-Denis à Saint-Denis",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 15
+  "creneaux_test": 21
+ },
+ {
+  "slug": "4padel-epinay-sur-seine",
+  "cp": "91142",
+  "name": "Padel - 4PADEL Epinay à Épinay-sur-Seine",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 24
+ },
+ {
+  "slug": "4padel-argenteuil",
+  "cp": "91142",
+  "name": "Padel - 4PADEL Argenteuil à Argenteuil",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 33
+ },
+ {
+  "slug": "4padel-reims",
+  "cp": "91142",
+  "name": "Padel - 4PADEL Reims à Reims",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 13
+ },
+ {
+  "slug": "4padel-le-five-champigny-sur-marne",
+  "cp": "91142",
+  "name": "Padel - 4PADEL / Le Five - Champigny à Champigny-Sur-Marne",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 16
+ },
+ {
+  "slug": "4-padel-montreuil",
+  "cp": "91142",
+  "name": "Padel - 4PADEL Montreuil à Montreuil",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 5
  },
  {
   "slug": "4padel-paris-20",
   "cp": "91142",
   "name": "4PADEL Paris 20 à Paris",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 24
+ },
+ {
+  "slug": "4padel-creteil",
+  "cp": "91142",
+  "name": "Padel - 4PADEL / Le Five - Créteil à Créteil",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 9
+ },
+ {
+  "slug": "4-padel-le-five-mulhouse-wittenheim",
+  "cp": "91142",
+  "name": "Padel - 4PADEL / Le Five - Mulhouse à Wittenheim",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 37
+ },
+ {
+  "slug": "4padel-le-five-dunkerque",
+  "cp": "91142",
+  "name": "Padel - 4PADEL / Le Five - Dunkerque à Dunkerque",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 55
+ },
+ {
+  "slug": "4padel-ronchin-ronchin",
+  "cp": "91142",
+  "name": "Padel - 4PADEL Ronchin à Ronchin",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 27
+ },
+ {
+  "slug": "4padel-limoges",
+  "cp": "91142",
+  "name": "4PADEL Limoges à Limoges",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 66
+ },
+ {
+  "slug": "3set-padel-chateaugiron",
+  "cp": "91142",
+  "name": "Padel - 3Set Padel à Châteaugiron",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 72
+ },
+ {
+  "slug": "4-padel-saint-ouen-saint-ouen-sur-seine",
+  "cp": "91142",
+  "name": "Padel - 4Padel Saint-Ouen à Saint-Ouen-sur-Seine",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 13
+ },
+ {
+  "slug": "4padel-le-five-lens-lievin",
+  "cp": "91142",
+  "name": "Padel - 4PADEL / Le Five - Lens / Liévin à Liévin",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 12
@@ -64,36 +152,12 @@
   "creneaux_test": 43
  },
  {
-  "slug": "4padel-challans-sallertaine",
+  "slug": "4padel-bordeaux",
   "cp": "91142",
-  "name": "Padel - 4PADEL Challans à Sallertaine",
+  "name": "Padel - 4PADEL / Le Five - Bordeaux à Bordeaux",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 7
- },
- {
-  "slug": "4padel-creteil",
-  "cp": "91142",
-  "name": "Padel - 4PADEL / Le Five - Créteil à Créteil",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 4
- },
- {
-  "slug": "4padel-epinay-sur-seine",
-  "cp": "91142",
-  "name": "Padel - 4PADEL Epinay à Épinay-sur-Seine",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 3
- },
- {
-  "slug": "4padel-limoges",
-  "cp": "91142",
-  "name": "4PADEL Limoges à Limoges",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 63
+  "creneaux_test": 34
  },
  {
   "slug": "4padel-rouen",
@@ -101,79 +165,15 @@
   "name": "Padel - 4PADEL Rouen à Le Petit Quevilly",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 72
+  "creneaux_test": 65
  },
  {
-  "slug": "4-padel-montreuil",
+  "slug": "4padel-seclin",
   "cp": "91142",
-  "name": "Padel - 4PADEL Montreuil à Montreuil",
+  "name": "Padel - 4PADEL Seclin à Seclin",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 1
- },
- {
-  "slug": "4padel-le-five-lens-lievin",
-  "cp": "91142",
-  "name": "Padel - 4PADEL / Le Five - Lens / Liévin à Liévin",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 1
- },
- {
-  "slug": "4padel-argenteuil",
-  "cp": "91142",
-  "name": "Padel - 4PADEL Argenteuil à Argenteuil",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 14
- },
- {
-  "slug": "a-la-base-de-loisir-antignac",
-  "cp": "91142",
-  "name": "Padel - A la Base de Loisir à Antignac",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 52
- },
- {
-  "slug": "acacia-tennis-padel-squash-carcassonne",
-  "cp": "91142",
-  "name": "Acacia Tennis Academy à Carcassonne",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 63
- },
- {
-  "slug": "aquaboulevard-de-paris",
-  "cp": "91142",
-  "name": "Forest Hill Aquaboulevard De Paris à Paris",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 81
- },
- {
-  "slug": "4padel-reims",
-  "cp": "91142",
-  "name": "Padel - 4PADEL Reims à Reims",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 7
- },
- {
-  "slug": "4padel-torcy-vaires-sur-marne",
-  "cp": "91142",
-  "name": "4PADEL Torcy à Vaires-sur-Marne",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 11
- },
- {
-  "slug": "4padel-le-five-champigny-sur-marne",
-  "cp": "91142",
-  "name": "Padel - 4PADEL / Le Five - Champigny à Champigny-Sur-Marne",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 9
+  "creneaux_test": 19
  },
  {
   "slug": "4padel-valenciennes-petite-foret",
@@ -181,39 +181,7 @@
   "name": "Padel - 4PADEL Valenciennes à Petite-Forêt",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 6
- },
- {
-  "slug": "albert-tennis-stade",
-  "cp": "91142",
-  "name": "Albert Tennis Stade à Albert",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 43
- },
- {
-  "slug": "4-padel-le-five-mulhouse-wittenheim",
-  "cp": "91142",
-  "name": "Padel - 4PADEL / Le Five - Mulhouse à Wittenheim",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 17
- },
- {
-  "slug": "amicale-tennis-guadeloupe",
-  "cp": "91142",
-  "name": "Amicale Tennis Club Guadeloupe à Le Gosier",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 22
- },
- {
-  "slug": "4padel-orleans-fleury-les-aubrais",
-  "cp": "91142",
-  "name": "Padel - 4PADEL Orléans-Fleury à Fleury-Les-Aubrais",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 10
+  "creneaux_test": 11
  },
  {
   "slug": "ace-padel-evry-courcouronnes",
@@ -224,20 +192,44 @@
   "creneaux_test": 21
  },
  {
-  "slug": "4padel-ronchin-ronchin",
+  "slug": "4padel-strasbourg-eckbolsheim",
   "cp": "91142",
-  "name": "Padel - 4PADEL Ronchin à Ronchin",
+  "name": "Padel - 4PADEL / Soccer Park - Strasbourg à Eckbolsheim",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 16
+  "creneaux_test": 22
  },
  {
-  "slug": "arena-padel-lannion",
+  "slug": "4padel-saint-priest",
   "cp": "91142",
-  "name": "Padel - Arena Padel à Lannion",
+  "name": "Padel - 4PADEL Saint-Priest à Saint-Priest",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 16
+  "creneaux_test": 40
+ },
+ {
+  "slug": "aquaboulevard-de-paris",
+  "cp": "91142",
+  "name": "Forest Hill Aquaboulevard De Paris à Paris",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 77
+ },
+ {
+  "slug": "4padel-torcy-vaires-sur-marne",
+  "cp": "91142",
+  "name": "4PADEL Torcy à Vaires-sur-Marne",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 22
+ },
+ {
+  "slug": "acacia-tennis-padel-squash-carcassonne",
+  "cp": "91142",
+  "name": "Acacia Tennis Academy à Carcassonne",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 63
  },
  {
   "slug": "aldea-padel-villabe",
@@ -248,6 +240,46 @@
   "creneaux_test": 96
  },
  {
+  "slug": "albert-tennis-stade",
+  "cp": "91142",
+  "name": "Albert Tennis Stade à Albert",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 40
+ },
+ {
+  "slug": "area-padel-caen-verson",
+  "cp": "91142",
+  "name": "Padel - Area Padel Caen à Verson",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 71
+ },
+ {
+  "slug": "armoric-sports-plerin",
+  "cp": "91142",
+  "name": "Armoric Sports Plérin à Plérin",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 39
+ },
+ {
+  "slug": "arena-padel-lannion",
+  "cp": "91142",
+  "name": "Padel - Arena Padel à Lannion",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 16
+ },
+ {
+  "slug": "as-geispolsheim-gare",
+  "cp": "91142",
+  "name": "As Geispolsheim-Gare à Geispolsheim gare",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 48
+ },
+ {
   "slug": "ambert-livradois-tc",
   "cp": "91142",
   "name": "Ambert-Livradois Tc à Ambert",
@@ -256,84 +288,28 @@
   "creneaux_test": 50
  },
  {
+  "slug": "amicale-tennis-guadeloupe",
+  "cp": "91142",
+  "name": "Amicale Tennis Club Guadeloupe à Le Gosier",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 19
+ },
+ {
+  "slug": "a-la-base-de-loisir-antignac",
+  "cp": "91142",
+  "name": "Padel - A la Base de Loisir à Antignac",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 52
+ },
+ {
   "slug": "armoric-sports-brezillet-ploufragan",
   "cp": "91142",
   "name": "Padel - Armoric Sports Brézillet à Ploufragan",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 43
- },
- {
-  "slug": "armoric-sports-plerin",
-  "cp": "91142",
-  "name": "Armoric Sports Plérin à Plérin",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 41
- },
- {
-  "slug": "as-geispolsheim-gare",
-  "cp": "91142",
-  "name": "As Geispolsheim-Gare à Geispolsheim gare",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 50
- },
- {
-  "slug": "barbezieux-tc-barbezieux-saint-hilaire",
-  "cp": "91142",
-  "name": "Barbezieux Tennis Club à Barbezieux-Saint-Hilaire",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 31
- },
- {
-  "slug": "asptt-grand-lyon-saint-priest",
-  "cp": "91142",
-  "name": "Asptt Grand Lyon à Saint-Priest",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 45
- },
- {
-  "slug": "4padel-saint-priest",
-  "cp": "91142",
-  "name": "Padel - 4PADEL Saint-Priest à Saint-Priest",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 25
- },
- {
-  "slug": "area-padel-caen-verson",
-  "cp": "91142",
-  "name": "Padel - Area Padel Caen à Verson",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 76
- },
- {
-  "slug": "4padel-strasbourg-eckbolsheim",
-  "cp": "91142",
-  "name": "Padel - 4PADEL / Soccer Park - Strasbourg à Eckbolsheim",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 12
- },
- {
-  "slug": "big-five-padel-saint-brice-sous-foret",
-  "cp": "91142",
-  "name": "Padel - Big Five &amp; Padel à Saint-Brice-sous-Forêt",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 98
- },
- {
-  "slug": "big-padel-merignac",
-  "cp": "91142",
-  "name": "Padel - Big Padel à Mérignac",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 17
+  "creneaux_test": 42
  },
  {
   "slug": "arsenal-padel-tarbes",
@@ -344,6 +320,22 @@
   "creneaux_test": 21
  },
  {
+  "slug": "as-mantaise-mantes-la-jolie",
+  "cp": "91142",
+  "name": "As Mantaise Tennis à Mantes-la-Jolie",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 32
+ },
+ {
+  "slug": "asptt-grand-lyon-saint-priest",
+  "cp": "91142",
+  "name": "Asptt Grand Lyon à Saint-Priest",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 44
+ },
+ {
   "slug": "avenue-padel-fuveau-fuveau",
   "cp": "91142",
   "name": "Padel - Avenue Padel Fuveau à Fuveau",
@@ -352,44 +344,28 @@
   "creneaux_test": 29
  },
  {
-  "slug": "b14-bondoufle",
-  "cp": "91142",
-  "name": "B14 à Bondoufle",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 47
- },
- {
-  "slug": "bad-pad-morangis",
-  "cp": "91142",
-  "name": "BAD PAD à Morangis",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 40
- },
- {
-  "slug": "4padel-seclin",
-  "cp": "91142",
-  "name": "Padel - 4PADEL Seclin à Seclin",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 3
- },
- {
-  "slug": "beausoleil",
-  "cp": "91142",
-  "name": "Tennis Padel Soleil à Beausoleil",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 4
- },
- {
   "slug": "athletic-de-cambrai-cambrai",
   "cp": "91142",
   "name": "Tennis Athletic Club De Cambrai à Cambrai",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 35
+  "creneaux_test": 46
+ },
+ {
+  "slug": "at-grand-tours",
+  "cp": "91142",
+  "name": "Association Tennis Grand Tours à Tours",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 13
+ },
+ {
+  "slug": "auc-tennis-padel-aix-provence",
+  "cp": "91142",
+  "name": "Aix Université Club (Auc Tennis) à Aix-En-Provence",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 11
  },
  {
   "slug": "ax-les-termes-tennis-club-ax-les-thermes",
@@ -400,12 +376,20 @@
   "creneaux_test": 36
  },
  {
-  "slug": "bergerac-tennis-club-bergerac",
+  "slug": "bad-pad-morangis",
   "cp": "91142",
-  "name": "Bergerac Tennis Club à Bergerac",
+  "name": "BAD PAD à Morangis",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 2
+  "creneaux_test": 37
+ },
+ {
+  "slug": "b14-bondoufle",
+  "cp": "91142",
+  "name": "B14 à Bondoufle",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 55
  },
  {
   "slug": "ball-in-dor-dreux-dreux",
@@ -416,36 +400,68 @@
   "creneaux_test": 80
  },
  {
+  "slug": "beausoleil",
+  "cp": "91142",
+  "name": "Tennis Padel Soleil à Beausoleil",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 7
+ },
+ {
+  "slug": "bergerac-tennis-club-bergerac",
+  "cp": "91142",
+  "name": "Bergerac Tennis Club à Bergerac",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 6
+ },
+ {
+  "slug": "barbezieux-tc-barbezieux-saint-hilaire",
+  "cp": "91142",
+  "name": "Barbezieux Tennis Club à Barbezieux-Saint-Hilaire",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 44
+ },
+ {
   "slug": "beaumont-le-roger-tc",
   "cp": "91142",
   "name": "Beaumont Le Roger Tc à Beaumont le roger",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 26
+  "creneaux_test": 39
  },
  {
-  "slug": "cap-padel-coquelles",
+  "slug": "big-padel-merignac",
   "cp": "91142",
-  "name": "Padel - Cap Padel à Coquelles",
+  "name": "Padel - Big Padel à Mérignac",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 8
+  "creneaux_test": 14
  },
  {
-  "slug": "brigode-villeneuve-ascq",
+  "slug": "big-five-padel-saint-brice-sous-foret",
   "cp": "91142",
-  "name": "Cs Brigode-Villeneuve D&#x27;Ascq à Villeneuve D&#x27;Ascq",
+  "name": "Padel - Big Five &amp; Padel à Saint-Brice-sous-Forêt",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 37
+  "creneaux_test": 100
  },
  {
-  "slug": "carre-padel-moissy-cramayel",
+  "slug": "bourg-de-peage-tc",
   "cp": "91142",
-  "name": "Padel - Carré Padel à Moissy-Cramayel",
+  "name": "Bourg De Peage Tc à Bourg-de-peage",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 113
+  "creneaux_test": 22
+ },
+ {
+  "slug": "c-chartres-tennis",
+  "cp": "91142",
+  "name": "C&#x27;Chartres Tennis à Chartres",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 18
  },
  {
   "slug": "buenavista-padel-club-camblanes-et-meynac",
@@ -456,52 +472,44 @@
   "creneaux_test": 27
  },
  {
-  "slug": "bourg-de-peage-tc",
+  "slug": "brigode-villeneuve-ascq",
   "cp": "91142",
-  "name": "Bourg De Peage Tc à Bourg-de-peage",
+  "name": "Cs Brigode-Villeneuve D&#x27;Ascq à Villeneuve D&#x27;Ascq",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 18
+  "creneaux_test": 36
  },
  {
-  "slug": "castellas-padel-chateauneuf-les-martigues",
+  "slug": "camping-sunelia-air-marin-vias-plage",
   "cp": "91142",
-  "name": "Padel - Castellas Padel à Châteauneuf-les-Martigues",
+  "name": "Padel - Camping Club L&#x27;Air Marin à Vias Plage",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 17
+  "creneaux_test": 32
  },
  {
-  "slug": "biarritz-olympique",
+  "slug": "cap-7-padel-marseille",
   "cp": "91142",
-  "name": "Biarritz Olympique à Biarritz",
+  "name": "Padel - Cap 7 Padel à Marseille",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 1
+  "creneaux_test": 27
  },
  {
-  "slug": "central-club-notre-dame-doe",
+  "slug": "carre-padel-moissy-cramayel",
   "cp": "91142",
-  "name": "Central Club à Notre-Dame-d&#x27;Oé",
+  "name": "Padel - Carré Padel à Moissy-Cramayel",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 18
+  "creneaux_test": 113
  },
  {
-  "slug": "as-mantaise-mantes-la-jolie",
+  "slug": "cap-padel-coquelles",
   "cp": "91142",
-  "name": "As Mantaise Tennis à Mantes-la-Jolie",
+  "name": "Padel - Cap Padel à Coquelles",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 28
- },
- {
-  "slug": "centre-polygone-riviera-cagnes-sur-mer",
-  "cp": "91142",
-  "name": "Padel - Centre Polygone Riviera à Cagnes-sur-Mer",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 23
+  "creneaux_test": 4
  },
  {
   "slug": "caramel-padel-club-croix",
@@ -512,20 +520,84 @@
   "creneaux_test": 79
  },
  {
-  "slug": "auc-tennis-padel-aix-provence",
+  "slug": "casaperta-padel-club-pancheraccia",
   "cp": "91142",
-  "name": "Aix Université Club (Auc Tennis) à Aix-En-Provence",
+  "name": "Padel - Casaperta Padel Club à Pancheraccia",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 12
+  "creneaux_test": 40
  },
  {
-  "slug": "coco-padel-saint-leu",
+  "slug": "central-club-notre-dame-doe",
   "cp": "91142",
-  "name": "Padel - Coco Padel à Saint-Leu",
+  "name": "Central Club à Notre-Dame-d&#x27;Oé",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 31
+  "creneaux_test": 18
+ },
+ {
+  "slug": "castellas-padel-chateauneuf-les-martigues",
+  "cp": "91142",
+  "name": "Padel - Castellas Padel à Châteauneuf-les-Martigues",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 18
+ },
+ {
+  "slug": "centre-polygone-riviera-cagnes-sur-mer",
+  "cp": "91142",
+  "name": "Padel - Centre Polygone Riviera à Cagnes-sur-Mer",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 23
+ },
+ {
+  "slug": "chateau-de-luzac-lussac",
+  "cp": "91142",
+  "name": "Padel - Château de Lussac à Lussac",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 21
+ },
+ {
+  "slug": "centre-sportif-les-bruyeres-pau",
+  "cp": "91142",
+  "name": "Centre Sportif Les Bruyères à Pau",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 26
+ },
+ {
+  "slug": "chatuzange-le-goubet-tc",
+  "cp": "91142",
+  "name": "Chatuzange Le Goubet Tc à Chatuzange le goubet",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 29
+ },
+ {
+  "slug": "chantilly-tennis",
+  "cp": "91142",
+  "name": "Chantilly Tennis Club à Chantilly",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 66
+ },
+ {
+  "slug": "chez-pape-padel-avignon",
+  "cp": "91142",
+  "name": "Padel - Chez Papé Padel à Avignon",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 9
+ },
+ {
+  "slug": "chiquita-padel-malemort-malemort",
+  "cp": "91142",
+  "name": "Padel - Chiquita Padel Malemort à Malemort",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 79
  },
  {
   "slug": "cedres-cote-club-castres",
@@ -541,71 +613,7 @@
   "name": "Chassieu Tennis à Chassieu",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 3
- },
- {
-  "slug": "coquelicot-padel-boissy-saint-leger",
-  "cp": "91142",
-  "name": "Padel - Coquelicot Padel à Boissy-Saint-Léger",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 75
- },
- {
-  "slug": "chateau-de-luzac-lussac",
-  "cp": "91142",
-  "name": "Padel - Château de Lussac à Lussac",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 21
- },
- {
-  "slug": "dardilly-champagne-tennis",
-  "cp": "91142",
-  "name": "Dardilly Champagne (Tennis Club) à Champagne au mont d or",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 33
- },
- {
-  "slug": "casaperta-padel-club-pancheraccia",
-  "cp": "91142",
-  "name": "Padel - Casaperta Padel Club à Pancheraccia",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 40
- },
- {
-  "slug": "chez-pape-padel-avignon",
-  "cp": "91142",
-  "name": "Padel - Chez Papé Padel à Avignon",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 9
- },
- {
-  "slug": "dax-us",
-  "cp": "91142",
-  "name": "Us Dax Tennis à Dax",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 79
- },
- {
-  "slug": "domaine-de-grosmesnil-cottevrard",
-  "cp": "91142",
-  "name": "Padel - Domaine de Grosmesnil à Cottévrard",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 52
- },
- {
-  "slug": "cap-7-padel-marseille",
-  "cp": "91142",
-  "name": "Padel - Cap 7 Padel à Marseille",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 24
+  "creneaux_test": 5
  },
  {
   "slug": "concept-ball-champforgeuil",
@@ -613,47 +621,39 @@
   "name": "Concept Ball à Champforgeuil",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 67
+  "creneaux_test": 72
  },
  {
-  "slug": "chiquita-padel-malemort-malemort",
+  "slug": "complexe-13-puma",
   "cp": "91142",
-  "name": "Padel - Chiquita Padel Malemort à Malemort",
+  "name": "Padel - Le 13 à Marseille",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 79
+  "creneaux_test": 39
  },
  {
-  "slug": "domaine-padel-gaillac-gaillac",
+  "slug": "coco-padel-saint-leu",
   "cp": "91142",
-  "name": "Padel - Domaine Padel Gaillac à Gaillac",
+  "name": "Padel - Coco Padel à Saint-Leu",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 40
+  "creneaux_test": 31
  },
  {
-  "slug": "cysoing-padel-club-cysoing",
+  "slug": "club-45-chateaurenard",
   "cp": "91142",
-  "name": "Cysoing Padel Club à Cysoing",
+  "name": "Padel - Club 45 à Châteaurenard",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 63
+  "creneaux_test": 31
  },
  {
-  "slug": "davezieux-tennis",
+  "slug": "coquelicot-padel-boissy-saint-leger",
   "cp": "91142",
-  "name": "Davezieux Tennis Club à Davezieux",
+  "name": "Padel - Coquelicot Padel à Boissy-Saint-Léger",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 15
- },
- {
-  "slug": "chatuzange-le-goubet-tc",
-  "cp": "91142",
-  "name": "Chatuzange Le Goubet Tc à Chatuzange le goubet",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 29
+  "creneaux_test": 74
  },
  {
   "slug": "cpadel-club-virsac",
@@ -664,12 +664,60 @@
   "creneaux_test": 37
  },
  {
-  "slug": "c-chartres-tennis",
+  "slug": "court-padel-hyere",
   "cp": "91142",
-  "name": "C&#x27;Chartres Tennis à Chartres",
+  "name": "Padel - Le Court Padel Hyeres à Hyères",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 18
+  "creneaux_test": 76
+ },
+ {
+  "slug": "cysoing-padel-club-cysoing",
+  "cp": "91142",
+  "name": "Cysoing Padel Club à Cysoing",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 70
+ },
+ {
+  "slug": "dardilly-champagne-tennis",
+  "cp": "91142",
+  "name": "Dardilly Champagne (Tennis Club) à Champagne au mont d or",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 37
+ },
+ {
+  "slug": "dax-us",
+  "cp": "91142",
+  "name": "Us Dax Tennis à Dax",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 73
+ },
+ {
+  "slug": "davezieux-tennis",
+  "cp": "91142",
+  "name": "Davezieux Tennis Club à Davezieux",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 20
+ },
+ {
+  "slug": "domaine-de-grosmesnil-cottevrard",
+  "cp": "91142",
+  "name": "Padel - Domaine de Grosmesnil à Cottévrard",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 52
+ },
+ {
+  "slug": "dynamicsports-tourrette-levens",
+  "cp": "91142",
+  "name": "Dynamic&#x27;Sports à Tourrette-Levens",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 28
  },
  {
   "slug": "domaine-de-lassy-luzarches",
@@ -680,36 +728,20 @@
   "creneaux_test": 80
  },
  {
-  "slug": "at-grand-tours",
+  "slug": "domaine-padel-gaillac-gaillac",
   "cp": "91142",
-  "name": "Association Tennis Grand Tours à Tours",
+  "name": "Padel - Domaine Padel Gaillac à Gaillac",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 9
+  "creneaux_test": 40
  },
  {
-  "slug": "camping-sunelia-air-marin-vias-plage",
+  "slug": "domaine-des-forges-forges-les-eaux",
   "cp": "91142",
-  "name": "Padel - Camping Club L&#x27;Air Marin à Vias Plage",
+  "name": "Domaine de Forges à Forges-les-Eaux",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 32
- },
- {
-  "slug": "enjoy-padel-lancon-provence",
-  "cp": "91142",
-  "name": "Padel - Enjoy Padel à Lançon-Provence",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 32
- },
- {
-  "slug": "epibal-epinal",
-  "cp": "91142",
-  "name": "Padel - Epibal à Épinal",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 109
+  "creneaux_test": 28
  },
  {
   "slug": "endaia-padel-club-hendaye",
@@ -720,36 +752,12 @@
   "creneaux_test": 78
  },
  {
-  "slug": "es-massy",
+  "slug": "enjoy-padel-lancon-provence",
   "cp": "91142",
-  "name": "Es Massy à Massy",
+  "name": "Padel - Enjoy Padel à Lançon-Provence",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 48
- },
- {
-  "slug": "complexe-13-puma",
-  "cp": "91142",
-  "name": "Padel - Le 13 à Marseille",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 40
- },
- {
-  "slug": "esprit-padel-saint-priest-saint-priest",
-  "cp": "91142",
-  "name": "Padel - Esprit Padel Saint-Priest à Saint-Priest",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 50
- },
- {
-  "slug": "court-padel-hyere",
-  "cp": "91142",
-  "name": "Padel - Le Court Padel Hyeres à Hyères",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 79
+  "creneaux_test": 32
  },
  {
   "slug": "ermont-act",
@@ -760,12 +768,52 @@
   "creneaux_test": 26
  },
  {
-  "slug": "domaine-des-forges-forges-les-eaux",
+  "slug": "es-massy",
   "cp": "91142",
-  "name": "Domaine de Forges à Forges-les-Eaux",
+  "name": "Es Massy à Massy",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 28
+  "creneaux_test": 43
+ },
+ {
+  "slug": "epibal-epinal",
+  "cp": "91142",
+  "name": "Padel - Epibal à Épinal",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 109
+ },
+ {
+  "slug": "escapad-lille-lille",
+  "cp": "91142",
+  "name": "Padel - ESCAPAD Lille à Lille",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 46
+ },
+ {
+  "slug": "esprit-padel-la-boisse-la-boisse",
+  "cp": "91142",
+  "name": "Padel - Esprit Padel La Boisse à La Boisse",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 66
+ },
+ {
+  "slug": "esprit-padel-macon-saint-andre-de-bage",
+  "cp": "91142",
+  "name": "Padel - Esprit Padel Mâcon à Saint-André-de-Bâgé",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 113
+ },
+ {
+  "slug": "esprit-padel-saint-priest-saint-priest",
+  "cp": "91142",
+  "name": "Padel - Esprit Padel Saint-Priest à Saint-Priest",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 46
  },
  {
   "slug": "etoile-de-pompadour-beyssac",
@@ -784,22 +832,6 @@
   "creneaux_test": 42
  },
  {
-  "slug": "ginga-stadium-merignac",
-  "cp": "91142",
-  "name": "Ginga Stadium à Mérignac",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 30
- },
- {
-  "slug": "grain-de-sport-ger",
-  "cp": "91142",
-  "name": "Padel - Grains De Sport à Ger",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 27
- },
- {
   "slug": "fc5-football-club-rosny-sur-seine",
   "cp": "91142",
   "name": "Padel - Padel Club à Rosny-sur-Seine",
@@ -808,20 +840,20 @@
   "creneaux_test": 34
  },
  {
+  "slug": "five-arena-meaux",
+  "cp": "91142",
+  "name": "Padel - Five Arena à Meaux",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 112
+ },
+ {
   "slug": "forest-hill-nanterre-la-defense",
   "cp": "91142",
   "name": "Forest Hill Nanterre-La Défense à Nanterre",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 74
- },
- {
-  "slug": "galaxy-padel-poitiers-mignaloux-beauvoir",
-  "cp": "91142",
-  "name": "Galaxy Padel Poitiers à Mignaloux-Beauvoir",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 93
+  "creneaux_test": 70
  },
  {
   "slug": "flixecourt-tc-flixecourt",
@@ -829,7 +861,15 @@
   "name": "Flixecourt Tennis Club à Flixecourt",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 28
+  "creneaux_test": 39
+ },
+ {
+  "slug": "forest-hill-versailles",
+  "cp": "91142",
+  "name": "Forest Hill Versailles à Versailles",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 57
  },
  {
   "slug": "forever-padel-canejan",
@@ -837,23 +877,15 @@
   "name": "Padel - Forever Padel à Canéjan",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 63
+  "creneaux_test": 64
  },
  {
-  "slug": "gs-padel-saint-meard-de-gurcon",
+  "slug": "ginga-stadium-merignac",
   "cp": "91142",
-  "name": "Padel - G.S Padel à Saint-Méard-de-Gurçon",
+  "name": "Ginga Stadium à Mérignac",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 40
- },
- {
-  "slug": "gravity-padel-arena-buhl-lorraine",
-  "cp": "91142",
-  "name": "Padel - Gravity Padel Arena à Buhl-Lorraine",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 118
+  "creneaux_test": 43
  },
  {
   "slug": "full-padel-limoges",
@@ -864,20 +896,28 @@
   "creneaux_test": 67
  },
  {
-  "slug": "esprit-padel-macon-saint-andre-de-bage",
+  "slug": "frenchy-padel-la-reole",
   "cp": "91142",
-  "name": "Padel - Esprit Padel Mâcon à Saint-André-de-Bâgé",
+  "name": "Padel - Frenchy Padel à La Réole",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 109
+  "creneaux_test": 20
  },
  {
-  "slug": "centre-sportif-les-bruyeres-pau",
+  "slug": "glaz-padel-dinard",
   "cp": "91142",
-  "name": "Centre Sportif Les Bruyères à Pau",
+  "name": "Glaz Padel à Dinard",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 26
+  "creneaux_test": 36
+ },
+ {
+  "slug": "forest-hill-marnes-la-coquette",
+  "cp": "91142",
+  "name": "Forest Hill La Marche Marnes-La-Coquette à…",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 111
  },
  {
   "slug": "girondins-bordeaux",
@@ -888,28 +928,44 @@
   "creneaux_test": 54
  },
  {
-  "slug": "glaz-padel-dinard",
+  "slug": "grinta-padel-jasseron",
   "cp": "91142",
-  "name": "Glaz Padel à Dinard",
+  "name": "Padel - Grinta Padel à Jasseron",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 31
+  "creneaux_test": 88
  },
  {
-  "slug": "forest-hill-marnes-la-coquette",
+  "slug": "gravity-padel-arena-buhl-lorraine",
   "cp": "91142",
-  "name": "Forest Hill La Marche Marnes-La-Coquette à…",
+  "name": "Padel - Gravity Padel Arena à Buhl-Lorraine",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 113
+  "creneaux_test": 118
  },
  {
-  "slug": "chantilly-tennis",
+  "slug": "grain-de-sport-ger",
   "cp": "91142",
-  "name": "Chantilly Tennis Club à Chantilly",
+  "name": "Padel - Grains De Sport à Ger",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 66
+  "creneaux_test": 27
+ },
+ {
+  "slug": "galaxy-padel-poitiers-mignaloux-beauvoir",
+  "cp": "91142",
+  "name": "Galaxy Padel Poitiers à Mignaloux-Beauvoir",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 93
+ },
+ {
+  "slug": "gs-padel-saint-meard-de-gurcon",
+  "cp": "91142",
+  "name": "Padel - G.S Padel à Saint-Méard-de-Gurçon",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 40
  },
  {
   "slug": "gsem-nice",
@@ -920,44 +976,20 @@
   "creneaux_test": 27
  },
  {
-  "slug": "club-45-chateaurenard",
+  "slug": "guignicourt-union-sportive",
   "cp": "91142",
-  "name": "Padel - Club 45 à Châteaurenard",
+  "name": "Padel - Guignicourt Union Sportive à Guignicourt",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 31
+  "creneaux_test": 72
  },
  {
-  "slug": "grinta-padel-jasseron",
+  "slug": "home-padel-meaux",
   "cp": "91142",
-  "name": "Padel - Grinta Padel à Jasseron",
+  "name": "Padel - Home Padel à Meaux",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 93
- },
- {
-  "slug": "la-centrale-sport-co-saint-bauzille-de-putois",
-  "cp": "91142",
-  "name": "Padel - LA CENTRALE SPORT &amp; CO à Saint-Bauzille-de-Putois",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 118
- },
- {
-  "slug": "it-padel-tregueux",
-  "cp": "91142",
-  "name": "Padel - IT Padel à Trégueux",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 52
- },
- {
-  "slug": "dynamicsports-tourrette-levens",
-  "cp": "91142",
-  "name": "Dynamic&#x27;Sports à Tourrette-Levens",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 27
+  "creneaux_test": 102
  },
  {
   "slug": "hola-padel-saint-medard-en-jalles",
@@ -965,15 +997,15 @@
   "name": "Padel - Hola Padel à Saint-Médard-en-Jalles",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 25
+  "creneaux_test": 32
  },
  {
-  "slug": "inside-sport-reims",
+  "slug": "indoor-center-narbonne",
   "cp": "91142",
-  "name": "Padel - Inside Sport à Reims",
+  "name": "Indoor Center à Narbonne",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 61
+  "creneaux_test": 28
  },
  {
   "slug": "indoor64-lescar",
@@ -992,300 +1024,12 @@
   "creneaux_test": 35
  },
  {
-  "slug": "indoor-center-narbonne",
+  "slug": "inside-sport-reims",
   "cp": "91142",
-  "name": "Indoor Center à Narbonne",
+  "name": "Padel - Inside Sport à Reims",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 27
- },
- {
-  "slug": "la-tribu-padel-saint-remy-sur-durolle",
-  "cp": "91142",
-  "name": "Padel - Latribu Padel Saint Remy sur Durolle à…",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 108
- },
- {
-  "slug": "kervel-padel-chateaugiron",
-  "cp": "91142",
-  "name": "Padel - Kervel Padel à Châteaugiron",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 95
- },
- {
-  "slug": "jonzac",
-  "cp": "91142",
-  "name": "Jonzac Atc à Jonzac",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 36
- },
- {
-  "slug": "la-raquette-villeneuve-d-ascq-lille",
-  "cp": "91142",
-  "name": "La Raquette à Villeneuve-D&#x27;Ascq",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 3
- },
- {
-  "slug": "la-raquette-melgorienne-mauguio",
-  "cp": "91142",
-  "name": "Raquette Melgorienne Padel &amp; Tennis Club De Mauguio à…",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 13
- },
- {
-  "slug": "la-ferte-sous-jouarre-asm",
-  "cp": "91142",
-  "name": "Tennis Padel Club La Ferte sous Jouarre à Reuil en brie",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 35
- },
- {
-  "slug": "le-f-padel-saint-sauveur-des-landes",
-  "cp": "91142",
-  "name": "Padel - Le F Padel à Saint-Sauveur-des-Landes",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 94
- },
- {
-  "slug": "la-jeunesse-sportive-de-coulaines-coulaines",
-  "cp": "91142",
-  "name": "Les Jeunesses Sportives De Coulaines à Coulaines",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 15
- },
- {
-  "slug": "le-coucou-sportif-cocumont",
-  "cp": "91142",
-  "name": "Le Coucou Sportif à Cocumont",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 33
- },
- {
-  "slug": "latribu-padel-domerat-domerat",
-  "cp": "91142",
-  "name": "Padel - Latribu Padel Domérat à Domérat",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 96
- },
- {
-  "slug": "latribu-padel-sautron-sautron",
-  "cp": "91142",
-  "name": "Padel - Latribu Padel Sautron à Sautron",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 112
- },
- {
-  "slug": "le-padel-du-parc-arles",
-  "cp": "91142",
-  "name": "Padel - Le Padel du Parc à Arles",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 55
- },
- {
-  "slug": "le-cercle-du-padel-simiane-collongue",
-  "cp": "91142",
-  "name": "Padel - Le Cercle Du Padel à Simiane-Collongue",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 30
- },
- {
-  "slug": "le-qg-padel-saint-laurent-des-arbres",
-  "cp": "91142",
-  "name": "Padel - Le QG Padel à Saint-Laurent-des-Arbres",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 27
- },
- {
-  "slug": "le-five-moulins-les-metz",
-  "cp": "91142",
-  "name": "Padel - 4PADEL / Le Five - Metz à Moulins-Lès-Metz",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 13
- },
- {
-  "slug": "le-petit-filet-duisans",
-  "cp": "91142",
-  "name": "Padel - Le Petit Filet à Duisans",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 26
- },
- {
-  "slug": "frenchy-padel-la-reole",
-  "cp": "91142",
-  "name": "Padel - Frenchy Padel à La Réole",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 20
- },
- {
-  "slug": "le-five-annemasse-ville-la-grand",
-  "cp": "91142",
-  "name": "Padel - 4PADEL / Le Five Annemasse à Ville-La-Grand",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 6
- },
- {
-  "slug": "five-arena-meaux",
-  "cp": "91142",
-  "name": "Padel - Five Arena à Meaux",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 112
- },
- {
-  "slug": "le-set-le-bignon",
-  "cp": "91142",
-  "name": "LE SET Nantes à Le Bignon",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 31
- },
- {
-  "slug": "le-stadium-compiegne",
-  "cp": "91142",
-  "name": "Le Stadium à Compiègne",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 21
- },
- {
-  "slug": "escapad-lille-lille",
-  "cp": "91142",
-  "name": "Padel - ESCAPAD Lille à Lille",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 52
- },
- {
-  "slug": "le-five-marville-la-courneuve",
-  "cp": "91142",
-  "name": "Padel - 4PADEL / Le Five - Marville - La Courneuve à La…",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 14
- },
- {
-  "slug": "forest-hill-versailles",
-  "cp": "91142",
-  "name": "Forest Hill Versailles à Versailles",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 59
- },
- {
-  "slug": "lopen5-fontaine-le-comte",
-  "cp": "91142",
-  "name": "L&#x27;Open5 à Fontaine-le-Comte",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 94
- },
- {
-  "slug": "le-petit-gazon-le-touvet",
-  "cp": "91142",
-  "name": "Padel - Le Petit Gazon à Le Touvet",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 1
- },
- {
-  "slug": "le-par-4-ploneour-lanvern",
-  "cp": "91142",
-  "name": "Padel - Le Par 4 à Plonéour-Lanvern",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 32
- },
- {
-  "slug": "lyon-padel-vv-vaulx-en-velin",
-  "cp": "91142",
-  "name": "Padel - Lyon V&amp;V Padel à Vaulx-en-Velin",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 76
- },
- {
-  "slug": "limoges-bas-fargeas-tennis",
-  "cp": "91142",
-  "name": "Limoges Bas Fargeas Tennis à Limoges",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 52
- },
- {
-  "slug": "lexclusif-pirey",
-  "cp": "91142",
-  "name": "L&#x27;exclusif à Pirey",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 24
- },
- {
-  "slug": "mairie-croissy-beaubourg-croissy-beaubourg",
-  "cp": "91142",
-  "name": "Padel - Mairie Croissy Beaubourg à Croissy-Beaubourg",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 52
- },
- {
-  "slug": "mairie-de-cherisy-cherisy",
-  "cp": "91142",
-  "name": "Pôle multi raquettes de Cherisy à Cherisy",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 85
- },
- {
-  "slug": "maire-arles-sur-tech-arles-sur-tech",
-  "cp": "91142",
-  "name": "Padel - Mairie Arles sur tech à Arles-sur-Tech",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 48
- },
- {
-  "slug": "mairie-de-guillac-guillac",
-  "cp": "91142",
-  "name": "Padel - Mairie de Guillac à Guillac",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 44
- },
- {
-  "slug": "mairie-ignaux-ignaux",
-  "cp": "91142",
-  "name": "Padel - Mairie Ignaux à Ignaux",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 36
- },
- {
-  "slug": "esprit-padel-la-boisse-la-boisse",
-  "cp": "91142",
-  "name": "Padel - Esprit Padel La Boisse à La Boisse",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 57
+  "creneaux_test": 61
  },
  {
   "slug": "io-padel-le-chateau-doleron",
@@ -1296,12 +1040,228 @@
   "creneaux_test": 50
  },
  {
-  "slug": "guignicourt-union-sportive",
+  "slug": "jonzac",
   "cp": "91142",
-  "name": "Padel - Guignicourt Union Sportive à Guignicourt",
+  "name": "Jonzac Atc à Jonzac",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 72
+  "creneaux_test": 50
+ },
+ {
+  "slug": "la-chataigneraie-tc",
+  "cp": "91142",
+  "name": "La Chataigneraie à Rueil malmaison",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 23
+ },
+ {
+  "slug": "it-padel-tregueux",
+  "cp": "91142",
+  "name": "Padel - IT Padel à Trégueux",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 52
+ },
+ {
+  "slug": "kemp5-quimper",
+  "cp": "91142",
+  "name": "Kemp&#x27;5 à Quimper",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 36
+ },
+ {
+  "slug": "la-centrale-sport-co-saint-bauzille-de-putois",
+  "cp": "91142",
+  "name": "Padel - LA CENTRALE SPORT &amp; CO à Saint-Bauzille-de-Putois",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 118
+ },
+ {
+  "slug": "kervel-padel-chateaugiron",
+  "cp": "91142",
+  "name": "Padel - Kervel Padel à Châteaugiron",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 95
+ },
+ {
+  "slug": "la-jeunesse-sportive-de-coulaines-coulaines",
+  "cp": "91142",
+  "name": "Les Jeunesses Sportives De Coulaines à Coulaines",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 29
+ },
+ {
+  "slug": "la-raquette-villeneuve-d-ascq-lille",
+  "cp": "91142",
+  "name": "La Raquette à Villeneuve-D&#x27;Ascq",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 6
+ },
+ {
+  "slug": "la-tribu-padel-saint-remy-sur-durolle",
+  "cp": "91142",
+  "name": "Padel - Latribu Padel Saint Remy sur Durolle à…",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 108
+ },
+ {
+  "slug": "la-ferte-sous-jouarre-asm",
+  "cp": "91142",
+  "name": "Tennis Padel Club La Ferte sous Jouarre à Reuil en brie",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 35
+ },
+ {
+  "slug": "la-raquette-melgorienne-mauguio",
+  "cp": "91142",
+  "name": "Raquette Melgorienne Padel &amp; Tennis Club De Mauguio à…",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 11
+ },
+ {
+  "slug": "latribu-padel-sautron-sautron",
+  "cp": "91142",
+  "name": "Padel - Latribu Padel Sautron à Sautron",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 109
+ },
+ {
+  "slug": "latribu-padel-domerat-domerat",
+  "cp": "91142",
+  "name": "Padel - Latribu Padel Domérat à Domérat",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 90
+ },
+ {
+  "slug": "le-cercle-du-padel-simiane-collongue",
+  "cp": "91142",
+  "name": "Padel - Le Cercle Du Padel à Simiane-Collongue",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 31
+ },
+ {
+  "slug": "le-coucou-sportif-cocumont",
+  "cp": "91142",
+  "name": "Le Coucou Sportif à Cocumont",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 33
+ },
+ {
+  "slug": "le-f-padel-saint-sauveur-des-landes",
+  "cp": "91142",
+  "name": "Padel - Le F Padel à Saint-Sauveur-des-Landes",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 94
+ },
+ {
+  "slug": "le-five-annemasse-ville-la-grand",
+  "cp": "91142",
+  "name": "Padel - 4PADEL / Le Five Annemasse à Ville-La-Grand",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 18
+ },
+ {
+  "slug": "le-padel-du-parc-arles",
+  "cp": "91142",
+  "name": "Padel - Le Padel du Parc à Arles",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 55
+ },
+ {
+  "slug": "le-five-moulins-les-metz",
+  "cp": "91142",
+  "name": "Padel - 4PADEL / Le Five - Metz à Moulins-Lès-Metz",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 24
+ },
+ {
+  "slug": "le-five-marville-la-courneuve",
+  "cp": "91142",
+  "name": "Padel - 4PADEL / Le Five - Marville - La Courneuve à La…",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 35
+ },
+ {
+  "slug": "le-petit-filet-duisans",
+  "cp": "91142",
+  "name": "Padel - Le Petit Filet à Duisans",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 30
+ },
+ {
+  "slug": "le-petit-gazon-le-touvet",
+  "cp": "91142",
+  "name": "Padel - Le Petit Gazon à Le Touvet",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 4
+ },
+ {
+  "slug": "le-par-4-ploneour-lanvern",
+  "cp": "91142",
+  "name": "Padel - Le Par 4 à Plonéour-Lanvern",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 32
+ },
+ {
+  "slug": "le-qg-padel-saint-laurent-des-arbres",
+  "cp": "91142",
+  "name": "Padel - Le QG Padel à Saint-Laurent-des-Arbres",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 27
+ },
+ {
+  "slug": "le-shaft-lille",
+  "cp": "91142",
+  "name": "Le Shaft à Lille",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 28
+ },
+ {
+  "slug": "le-set-le-bignon",
+  "cp": "91142",
+  "name": "LE SET Nantes à Le Bignon",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 28
+ },
+ {
+  "slug": "le-stadium-compiegne",
+  "cp": "91142",
+  "name": "Le Stadium à Compiègne",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 18
+ },
+ {
+  "slug": "le-wam-wambrechies",
+  "cp": "91142",
+  "name": "Le Wam à Wambrechies",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 27
  },
  {
   "slug": "lepark-servon-servon",
@@ -1312,44 +1272,20 @@
   "creneaux_test": 55
  },
  {
-  "slug": "maison-padel-saint-jean-bournay",
+  "slug": "les-padelistes-bercy-paris",
   "cp": "91142",
-  "name": "Padel - Maison Padel à Saint-Jean-de-Bournay",
+  "name": "Padelistes Bercy - Paris 12 à Paris",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 64
+  "creneaux_test": 22
  },
  {
-  "slug": "make-it-padel-olivet",
+  "slug": "lexclusif-pirey",
   "cp": "91142",
-  "name": "Padel - Make it padel à Olivet",
+  "name": "L&#x27;exclusif à Pirey",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 53
- },
- {
-  "slug": "modern-squash-marseille",
-  "cp": "91142",
-  "name": "Modern Squash à Marseille",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 19
- },
- {
-  "slug": "mb-horizon-padel-chateau-arnoux-saint-auban",
-  "cp": "91142",
-  "name": "Padel - MB Horizon Padel à Château-Arnoux-Saint-Auban",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 36
- },
- {
-  "slug": "live-padel-selestat",
-  "cp": "91142",
-  "name": "Padel - LIVE PADEL à Sélestat",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 78
+  "creneaux_test": 24
  },
  {
   "slug": "lesigny-usc-lesigny",
@@ -1357,20 +1293,116 @@
   "name": "Lesigny Usc à Lesigny",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 3
+  "creneaux_test": 6
  },
  {
-  "slug": "mont2padel-mazerolles",
+  "slug": "lempdes-padel-lempdes",
   "cp": "91142",
-  "name": "Mont2Padel à Mazerolles",
+  "name": "Padel - Lempdes Padel à Lempdes",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 101
+  "creneaux_test": 116
+ },
+ {
+  "slug": "limoges-bas-fargeas-tennis",
+  "cp": "91142",
+  "name": "Limoges Bas Fargeas Tennis à Limoges",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 51
+ },
+ {
+  "slug": "live-padel-selestat",
+  "cp": "91142",
+  "name": "Padel - LIVE PADEL à Sélestat",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 76
+ },
+ {
+  "slug": "lopen5-fontaine-le-comte",
+  "cp": "91142",
+  "name": "L&#x27;Open5 à Fontaine-le-Comte",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 94
+ },
+ {
+  "slug": "lyon-padel-vv-vaulx-en-velin",
+  "cp": "91142",
+  "name": "Padel - Lyon V&amp;V Padel à Vaulx-en-Velin",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 81
+ },
+ {
+  "slug": "maire-arles-sur-tech-arles-sur-tech",
+  "cp": "91142",
+  "name": "Padel - Mairie Arles sur tech à Arles-sur-Tech",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 48
+ },
+ {
+  "slug": "mairie-ignaux-ignaux",
+  "cp": "91142",
+  "name": "Padel - Mairie Ignaux à Ignaux",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 36
+ },
+ {
+  "slug": "mairie-de-guillac-guillac",
+  "cp": "91142",
+  "name": "Padel - Mairie de Guillac à Guillac",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 44
+ },
+ {
+  "slug": "mairie-croissy-beaubourg-croissy-beaubourg",
+  "cp": "91142",
+  "name": "Padel - Mairie Croissy Beaubourg à Croissy-Beaubourg",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 52
+ },
+ {
+  "slug": "make-it-padel-olivet",
+  "cp": "91142",
+  "name": "Padel - Make it padel à Olivet",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 48
+ },
+ {
+  "slug": "mairie-de-cherisy-cherisy",
+  "cp": "91142",
+  "name": "Pôle multi raquettes de Cherisy à Cherisy",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 85
+ },
+ {
+  "slug": "mairie-de-cambrin-cambrin",
+  "cp": "91142",
+  "name": "Padel - Mairie de Cambrin à Cambrin",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 32
  },
  {
   "slug": "mairie-saint-drezery-saint-drezery",
   "cp": "91142",
   "name": "Padel - Commune Saint-Drézéry à Saint-Drézéry",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 18
+ },
+ {
+  "slug": "modern-squash-marseille",
+  "cp": "91142",
+  "name": "Modern Squash à Marseille",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 18
@@ -1384,156 +1416,12 @@
   "creneaux_test": 32
  },
  {
-  "slug": "montelo-padel-savasse",
+  "slug": "maison-padel-saint-jean-bournay",
   "cp": "91142",
-  "name": "Padel - Montelo Padel à Savasse",
+  "name": "Padel - Maison Padel à Saint-Jean-de-Bournay",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 29
- },
- {
-  "slug": "moods-padel-sorgues",
-  "cp": "91142",
-  "name": "Padel - Moods Padel à Sorgues",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 18
- },
- {
-  "slug": "montereau-cs",
-  "cp": "91142",
-  "name": "Montereau Cs à Montereau fault yonne",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 4
- },
- {
-  "slug": "moret-padel-moret-loing-et-orvanne",
-  "cp": "91142",
-  "name": "Moret Padel à Ecuelles",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 115
- },
- {
-  "slug": "mooving-arena-le-versoud",
-  "cp": "91142",
-  "name": "Mooving Arena à Le Versoud",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 14
- },
- {
-  "slug": "kemp5-quimper",
-  "cp": "91142",
-  "name": "Kemp&#x27;5 à Quimper",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 33
- },
- {
-  "slug": "moulins-les-metz-tc",
-  "cp": "91142",
-  "name": "Moulins Les Metz Tc à Moulins les metz",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 60
- },
- {
-  "slug": "la-chataigneraie-tc",
-  "cp": "91142",
-  "name": "La Chataigneraie à Rueil malmaison",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 26
- },
- {
-  "slug": "new-padel-club-chambly",
-  "cp": "91142",
-  "name": "New Padel Club à Chambly",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 44
- },
- {
-  "slug": "les-padelistes-bercy-paris",
-  "cp": "91142",
-  "name": "Padelistes Bercy - Paris 12 à Paris",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 23
- },
- {
-  "slug": "nokort-padel-indoor-villeneuve-sur-lot",
-  "cp": "91142",
-  "name": "Padel - Nokort Padel Indoor à Villeneuve-sur-Lot",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 51
- },
- {
-  "slug": "p-comme-padel-saint-martin-lez-tatinghem",
-  "cp": "91142",
-  "name": "Padel - P COMME PADEL à Saint-Martin-lez-Tatinghem",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 119
- },
- {
-  "slug": "my-sport-center-bueil",
-  "cp": "91142",
-  "name": "Padel - My Sport Center à Bueil",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 34
- },
- {
-  "slug": "noisiel-tc",
-  "cp": "91142",
-  "name": "Noisiel Tennis Club à Noisiel",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 50
- },
- {
-  "slug": "p3-by-marina-peypin",
-  "cp": "91142",
-  "name": "Padel - P3 By Marina à Peypin",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 21
- },
- {
-  "slug": "home-padel-meaux",
-  "cp": "91142",
-  "name": "Padel - Home Padel à Meaux",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 104
- },
- {
-  "slug": "padel-15-paris",
-  "cp": "91142",
-  "name": "Padel - Padel 15 à Paris",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 16
- },
- {
-  "slug": "p4-padel-indoor-lancon-provence",
-  "cp": "91142",
-  "name": "Padel - P4 Padel Indoor à Lançon-Provence",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 35
- },
- {
-  "slug": "pa-padel-nieppe",
-  "cp": "91142",
-  "name": "Padel - PA Padel à Nieppe",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 61
+  "creneaux_test": 64
  },
  {
   "slug": "marie-de-wallers-wallers",
@@ -1544,92 +1432,36 @@
   "creneaux_test": 41
  },
  {
-  "slug": "mairie-de-cambrin-cambrin",
+  "slug": "montelo-padel-savasse",
   "cp": "91142",
-  "name": "Padel - Mairie de Cambrin à Cambrin",
+  "name": "Padel - Montelo Padel à Savasse",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 32
+  "creneaux_test": 29
  },
  {
-  "slug": "olympia-sports-pont-eveque",
+  "slug": "martillac-offside-martillac",
   "cp": "91142",
-  "name": "Olympia Sports à Pont-Évêque",
+  "name": "Padel - Martillac Offside à Martillac",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 47
+  "creneaux_test": 24
  },
  {
-  "slug": "le-wam-wambrechies",
+  "slug": "montereau-cs",
   "cp": "91142",
-  "name": "Le Wam à Wambrechies",
+  "name": "Montereau Cs à Montereau fault yonne",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 27
+  "creneaux_test": 4
  },
  {
-  "slug": "le-shaft-lille",
+  "slug": "mb-horizon-padel-chateau-arnoux-saint-auban",
   "cp": "91142",
-  "name": "Le Shaft à Lille",
+  "name": "Padel - MB Horizon Padel à Château-Arnoux-Saint-Auban",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 26
- },
- {
-  "slug": "padel-ac-tremblay-en-france",
-  "cp": "91142",
-  "name": "Padel - Padel AC Paris Nord - Roissy à Roissy en France",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 79
- },
- {
-  "slug": "padel-camp-acheres",
-  "cp": "91142",
-  "name": "Padel - Padel Camp à Achères",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 18
- },
- {
-  "slug": "padel-club-flavacourtois-flavacourt",
-  "cp": "91142",
-  "name": "Padel - Padel Club Flava&#x27;courtois à Flavacourt",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 36
- },
- {
-  "slug": "padel-de-saint-sever-saint-sever",
-  "cp": "91142",
-  "name": "Padel - Padel de Saint-Sever à Saint-Sever",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 36
- },
- {
-  "slug": "padel-club-meze-meze",
-  "cp": "91142",
-  "name": "Padel - Padel club Mèze à Mèze",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 17
- },
- {
-  "slug": "padel-by-self-tulle",
-  "cp": "91142",
-  "name": "Padel - Padel by Self à Tulle",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 51
- },
- {
-  "slug": "padel-duvy-duvy",
-  "cp": "91142",
-  "name": "Padel - PADEL DUVY à Duvy",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 40
+  "creneaux_test": 34
  },
  {
   "slug": "mezzavia-tennis",
@@ -1640,84 +1472,68 @@
   "creneaux_test": 30
  },
  {
-  "slug": "padel-evolution-digne-les-bains-digne-les-bains",
+  "slug": "mont2padel-mazerolles",
   "cp": "91142",
-  "name": "Padel - Padel Evolution Digne-Les-Bains à Digne-les-Bains",
+  "name": "Mont2Padel à Mazerolles",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 105
+ },
+ {
+  "slug": "moods-padel-sorgues",
+  "cp": "91142",
+  "name": "Padel - Moods Padel à Sorgues",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 18
+ },
+ {
+  "slug": "mooving-arena-le-versoud",
+  "cp": "91142",
+  "name": "Mooving Arena à Le Versoud",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 12
+ },
+ {
+  "slug": "moret-padel-moret-loing-et-orvanne",
+  "cp": "91142",
+  "name": "Moret Padel à Ecuelles",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 112
+ },
+ {
+  "slug": "moulins-les-metz-tc",
+  "cp": "91142",
+  "name": "Moulins Les Metz Tc à Moulins les metz",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 60
+ },
+ {
+  "slug": "mp-padel-bordeaux",
+  "cp": "91142",
+  "name": "Padel - Mb Padel à Sainte-Eulalie",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 40
  },
  {
-  "slug": "padel-eaunes-eaunes",
+  "slug": "my-sport-center-bueil",
   "cp": "91142",
-  "name": "Padel - Padel Eaunes à Eaunes",
+  "name": "Padel - My Sport Center à Bueil",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 29
+  "creneaux_test": 34
  },
  {
-  "slug": "padel-carreau-de-lanes-nimes",
+  "slug": "new-padel-club-chambly",
   "cp": "91142",
-  "name": "Tennis Padel Carreau de Lanes à Nîmes",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 30
- },
- {
-  "slug": "padel-family-club-brebieres",
-  "cp": "91142",
-  "name": "Padel Family Club à Brebières",
+  "name": "New Padel Club à Chambly",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 44
- },
- {
-  "slug": "padel-district-sequedin",
-  "cp": "91142",
-  "name": "Padel - Padel District à Sequedin",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 67
- },
- {
-  "slug": "padel-cotiere-neyron",
-  "cp": "91142",
-  "name": "Padel - Padel Côtière à Neyron",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 36
- },
- {
-  "slug": "padel-compagnie-senas",
-  "cp": "91142",
-  "name": "Padel - Padel &amp; Compagnie à Sénas",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 113
- },
- {
-  "slug": "padel-des-ancises-creuzier-le-neuf",
-  "cp": "91142",
-  "name": "Padel - Padel Des Ancises à Creuzier-Le-Neuf",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 15
- },
- {
-  "slug": "padel-football-club-beauchamp",
-  "cp": "91142",
-  "name": "Padel - Padel Football club à Beauchamp",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 10
- },
- {
-  "slug": "padel-farm-ambonnay",
-  "cp": "91142",
-  "name": "Padel - Padel Farm à Val De Livre",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 48
  },
  {
   "slug": "no-ad-padel-cernay-les-reims",
@@ -1736,116 +1552,52 @@
   "creneaux_test": 97
  },
  {
-  "slug": "mp-padel-bordeaux",
+  "slug": "noisiel-tc",
   "cp": "91142",
-  "name": "Padel - Mb Padel à Sainte-Eulalie",
+  "name": "Noisiel Tennis Club à Noisiel",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 40
+  "creneaux_test": 48
  },
  {
-  "slug": "padel-95-pontoise",
+  "slug": "nokort-padel-indoor-villeneuve-sur-lot",
   "cp": "91142",
-  "name": "Padel - Padel 95 à Pontoise",
+  "name": "Padel - Nokort Padel Indoor à Villeneuve-sur-Lot",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 20
+  "creneaux_test": 51
  },
  {
-  "slug": "padel-boulevard-aix-en-provence",
+  "slug": "p3-by-marina-peypin",
   "cp": "91142",
-  "name": "Padel - Padel Boulevard à Aix-en-Provence",
+  "name": "Padel - P3 By Marina à Peypin",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 56
+  "creneaux_test": 21
  },
  {
-  "slug": "padel-house-cenon",
+  "slug": "olympia-sports-pont-eveque",
   "cp": "91142",
-  "name": "Padel - PADEL HOUSE à Cenon",
+  "name": "Olympia Sports à Pont-Évêque",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 16
+  "creneaux_test": 47
  },
  {
-  "slug": "martillac-offside-martillac",
+  "slug": "p-comme-padel-saint-martin-lez-tatinghem",
   "cp": "91142",
-  "name": "Padel - Martillac Offside à Martillac",
+  "name": "Padel - P COMME PADEL à Saint-Martin-lez-Tatinghem",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 24
+  "creneaux_test": 119
  },
  {
-  "slug": "padel-garden-cambrai-cambrai",
+  "slug": "p4-padel-indoor-lancon-provence",
   "cp": "91142",
-  "name": "Padel - Padel Garden Cambrai à Cambrai",
+  "name": "Padel - P4 Padel Indoor à Lançon-Provence",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 25
- },
- {
-  "slug": "padel-smi-marseille",
-  "cp": "91142",
-  "name": "Padel - Padel Smi Paulet à Marseille",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 69
- },
- {
-  "slug": "padel-passo-chartres",
-  "cp": "91142",
-  "name": "Padel - Padel Passo à Chartres",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 64
- },
- {
-  "slug": "padel-hopps-aix-en-provence",
-  "cp": "91142",
-  "name": "Padel - Padel Hopps à Aix-en-Provence",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 23
- },
- {
-  "slug": "padel-st-do-saint-donat-sur-lherbasse",
-  "cp": "91142",
-  "name": "Padel - Padel St Do&#x27; à Saint-Donat-sur-l&#x27;Herbasse",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 45
- },
- {
-  "slug": "padel-pioline-aix-en-provence",
-  "cp": "91142",
-  "name": "Padel - Padel Pioline à Aix-en-Provence",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 2
- },
- {
-  "slug": "padel-and-foot-strasbourg-bischheim",
-  "cp": "91142",
-  "name": "Padel - Padel And Foot Strasbourg à Bischheim",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 64
- },
- {
-  "slug": "padel-horizon-sucy-en-brie",
-  "cp": "91142",
-  "name": "Padel Horizon à Sucy En Brie",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 27
- },
- {
-  "slug": "lempdes-padel-lempdes",
-  "cp": "91142",
-  "name": "Padel - Lempdes Padel à Lempdes",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 120
+  "creneaux_test": 35
  },
  {
   "slug": "pad-five-lexy",
@@ -1856,20 +1608,188 @@
   "creneaux_test": 8
  },
  {
-  "slug": "padel-football-club-noyelles-sur-selle",
+  "slug": "pa-padel-nieppe",
   "cp": "91142",
-  "name": "Padel - Padel Football club à Noyelles-sur-Selle",
+  "name": "Padel - PA Padel à Nieppe",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 27
+  "creneaux_test": 61
  },
  {
-  "slug": "padel-rasteau",
+  "slug": "padel-95-pontoise",
   "cp": "91142",
-  "name": "Padel - Rasteau Padel Club à Rasteau",
+  "name": "Padel - Padel 95 à Pontoise",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 35
+  "creneaux_test": 19
+ },
+ {
+  "slug": "padel-15-paris",
+  "cp": "91142",
+  "name": "Padel - Padel 15 à Paris",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 15
+ },
+ {
+  "slug": "padel-ac-tremblay-en-france",
+  "cp": "91142",
+  "name": "Padel - Padel AC Paris Nord - Roissy à Roissy en France",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 78
+ },
+ {
+  "slug": "padel-and-foot-strasbourg-bischheim",
+  "cp": "91142",
+  "name": "Padel - Padel And Foot Strasbourg à Bischheim",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 64
+ },
+ {
+  "slug": "padel-boulevard-aix-en-provence",
+  "cp": "91142",
+  "name": "Padel - Padel Boulevard à Aix-en-Provence",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 56
+ },
+ {
+  "slug": "padel-camp-acheres",
+  "cp": "91142",
+  "name": "Padel - Padel Camp à Achères",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 18
+ },
+ {
+  "slug": "padel-by-self-tulle",
+  "cp": "91142",
+  "name": "Padel - Padel by Self à Tulle",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 51
+ },
+ {
+  "slug": "padel-carreau-de-lanes-nimes",
+  "cp": "91142",
+  "name": "Tennis Padel Carreau de Lanes à Nîmes",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 31
+ },
+ {
+  "slug": "padel-club-flavacourtois-flavacourt",
+  "cp": "91142",
+  "name": "Padel - Padel Club Flava&#x27;courtois à Flavacourt",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 36
+ },
+ {
+  "slug": "padel-compagnie-senas",
+  "cp": "91142",
+  "name": "Padel - Padel &amp; Compagnie à Sénas",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 113
+ },
+ {
+  "slug": "padel-club-meze-meze",
+  "cp": "91142",
+  "name": "Padel - Padel club Mèze à Mèze",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 16
+ },
+ {
+  "slug": "padel-cotiere-neyron",
+  "cp": "91142",
+  "name": "Padel - Padel Côtière à Neyron",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 36
+ },
+ {
+  "slug": "padel-des-ancises-creuzier-le-neuf",
+  "cp": "91142",
+  "name": "Padel - Padel Des Ancises à Creuzier-Le-Neuf",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 21
+ },
+ {
+  "slug": "padel-eaunes-eaunes",
+  "cp": "91142",
+  "name": "Padel - Padel Eaunes à Eaunes",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 29
+ },
+ {
+  "slug": "padel-family-club-brebieres",
+  "cp": "91142",
+  "name": "Padel Family Club à Brebières",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 57
+ },
+ {
+  "slug": "padel-football-club-beauchamp",
+  "cp": "91142",
+  "name": "Padel - Padel Football club à Beauchamp",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 10
+ },
+ {
+  "slug": "padel-duvy-duvy",
+  "cp": "91142",
+  "name": "Padel - PADEL DUVY à Duvy",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 40
+ },
+ {
+  "slug": "padel-de-saint-sever-saint-sever",
+  "cp": "91142",
+  "name": "Padel - Padel de Saint-Sever à Saint-Sever",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 36
+ },
+ {
+  "slug": "padel-farm-ambonnay",
+  "cp": "91142",
+  "name": "Padel - Padel Farm à Val De Livre",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 48
+ },
+ {
+  "slug": "padel-garden-cambrai-cambrai",
+  "cp": "91142",
+  "name": "Padel - Padel Garden Cambrai à Cambrai",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 19
+ },
+ {
+  "slug": "padel-evolution-digne-les-bains-digne-les-bains",
+  "cp": "91142",
+  "name": "Padel - Padel Evolution Digne-Les-Bains à Digne-les-Bains",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 39
+ },
+ {
+  "slug": "padel-district-sequedin",
+  "cp": "91142",
+  "name": "Padel - Padel District à Sequedin",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 67
  },
  {
   "slug": "padel-in-graulhet-graulhet",
@@ -1880,76 +1800,28 @@
   "creneaux_test": 24
  },
  {
-  "slug": "padel-rush-garennes-sur-eure",
+  "slug": "padel-football-club-noyelles-sur-selle",
   "cp": "91142",
-  "name": "Padel - Padel Rush à La Couture-Boussey",
+  "name": "Padel - Padel Football club à Noyelles-sur-Selle",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 52
+  "creneaux_test": 28
  },
  {
-  "slug": "padel-max-60-saint-maximin",
+  "slug": "padel-house-cenon",
   "cp": "91142",
-  "name": "Padel - Padel Max 60 à Saint-Maximin",
+  "name": "Padel - PADEL HOUSE à Cenon",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 125
+  "creneaux_test": 15
  },
  {
-  "slug": "padel-paradise-spay",
+  "slug": "padel-hopps-aix-en-provence",
   "cp": "91142",
-  "name": "Padel - Padel Paradise à Spay",
+  "name": "Padel - Padel Hopps à Aix-en-Provence",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 16
- },
- {
-  "slug": "padel-max-95-persan",
-  "cp": "91142",
-  "name": "Padel - Padel Max 95 à Persan",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 120
- },
- {
-  "slug": "padel-occitanie-montauban",
-  "cp": "91142",
-  "name": "Padel - Padel Occitanie à Montauban",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 59
- },
- {
-  "slug": "padel-zone-tarbes",
-  "cp": "91142",
-  "name": "Padel - Padel Zone à Tarbes",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 38
- },
- {
-  "slug": "padelmouv-saint-dionisy",
-  "cp": "91142",
-  "name": "Padel - PadelMouv à Saint-Dionisy",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 70
- },
- {
-  "slug": "padelbreak-bondues",
-  "cp": "91142",
-  "name": "Padel - PadelBreak à Bondues",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 70
- },
- {
-  "slug": "padel33-bruges",
-  "cp": "91142",
-  "name": "Padel33 Bruges à Bruges",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 69
+  "creneaux_test": 23
  },
  {
   "slug": "padel-lob-pont-leveque",
@@ -1960,108 +1832,52 @@
   "creneaux_test": 117
  },
  {
-  "slug": "padelea-les-mesneux",
+  "slug": "padel-max-95-persan",
   "cp": "91142",
-  "name": "Padel - Padelea à Les Mesneux",
+  "name": "Padel - Padel Max 95 à Persan",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 18
+  "creneaux_test": 117
  },
  {
-  "slug": "padel33-merignac",
+  "slug": "padel-passo-chartres",
   "cp": "91142",
-  "name": "Padel33 Mérignac à Mérignac",
+  "name": "Padel - Padel Passo à Chartres",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 21
+  "creneaux_test": 64
  },
  {
-  "slug": "padel4people-claye-souilly-claye-souilly",
+  "slug": "padel-rush-garennes-sur-eure",
   "cp": "91142",
-  "name": "Padel - Padel4People Claye-Souilly à Claye-Souilly",
+  "name": "Padel - Padel Rush à La Couture-Boussey",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 67
+  "creneaux_test": 52
  },
  {
-  "slug": "padel-versaille-versailles",
+  "slug": "padel-st-do-saint-donat-sur-lherbasse",
   "cp": "91142",
-  "name": "Padel - Royal Padel Club : Trianon Palace Versailles à…",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 101
- },
- {
-  "slug": "padelshot-caen-mondeville",
-  "cp": "91142",
-  "name": "Padelshot Caen Mondeville à Mondeville",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 38
- },
- {
-  "slug": "padelshot-saint-genis-laval-saint-genis-laval",
-  "cp": "91142",
-  "name": "Padel - PadelShot Saint-Genis-Laval à Saint-Genis-Laval",
+  "name": "Padel - Padel St Do&#x27; à Saint-Donat-sur-l&#x27;Herbasse",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 44
  },
  {
-  "slug": "padelshot-saint-etienne-saint-etienne",
+  "slug": "padel-rasteau",
   "cp": "91142",
-  "name": "Padelshot Saint-Etienne à Saint-Étienne",
+  "name": "Padel - Rasteau Padel Club à Rasteau",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 28
+  "creneaux_test": 34
  },
  {
-  "slug": "padelshot-lille-lille",
+  "slug": "padel-smi-marseille",
   "cp": "91142",
-  "name": "Padel - PadelShot Lille à Lille",
+  "name": "Padel - Padel Smi Paulet à Marseille",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 89
- },
- {
-  "slug": "padelshot-tours-saint-pierre-des-corps",
-  "cp": "91142",
-  "name": "Padel - PadelShot Tours - St Pierre des Corps à…",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 43
- },
- {
-  "slug": "padelshot-la-ville-aux-dames-la-ville-aux-dames",
-  "cp": "91142",
-  "name": "Padel - Padelshot Tours - La Ville-Aux-Dames à La…",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 84
- },
- {
-  "slug": "padelistes-quimper",
-  "cp": "91142",
-  "name": "Padelistes Quimper à Quimper",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 41
- },
- {
-  "slug": "padelshot-le-mans-saint-pavace",
-  "cp": "91142",
-  "name": "Padel - PadelShot Le Mans à Saint-Pavace",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 89
- },
- {
-  "slug": "padelshot-lyon-craponne",
-  "cp": "91142",
-  "name": "Padelshot Lyon à Craponne",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 28
+  "creneaux_test": 68
  },
  {
   "slug": "padel-tennis-club-faramans-faramans",
@@ -2069,39 +1885,7 @@
   "name": "Padel Tennis Club Faramans à Faramans",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 27
- },
- {
-  "slug": "paris-padel",
-  "cp": "91142",
-  "name": "Paris Padel à Paris",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 16
- },
- {
-  "slug": "padel33-gradignan",
-  "cp": "91142",
-  "name": "Padel33 Gradignan à Gradignan",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 49
- },
- {
-  "slug": "passage-as",
-  "cp": "91142",
-  "name": "Passage As à Le passage",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 27
- },
- {
-  "slug": "padeliste-soissons-belleu",
-  "cp": "91142",
-  "name": "Padelistes Soissons à Belleu",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 62
+  "creneaux_test": 30
  },
  {
   "slug": "padel-street-soccer-valentigney",
@@ -2112,6 +1896,110 @@
   "creneaux_test": 96
  },
  {
+  "slug": "padel-horizon-sucy-en-brie",
+  "cp": "91142",
+  "name": "Padel Horizon à Sucy En Brie",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 29
+ },
+ {
+  "slug": "padel33-gradignan",
+  "cp": "91142",
+  "name": "Padel33 Gradignan à Gradignan",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 59
+ },
+ {
+  "slug": "padel-versaille-versailles",
+  "cp": "91142",
+  "name": "Padel - Royal Padel Club : Trianon Palace Versailles à…",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 99
+ },
+ {
+  "slug": "padel33-bruges",
+  "cp": "91142",
+  "name": "Padel33 Bruges à Bruges",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 82
+ },
+ {
+  "slug": "padel-paradise-spay",
+  "cp": "91142",
+  "name": "Padel - Padel Paradise à Spay",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 16
+ },
+ {
+  "slug": "padel-max-60-saint-maximin",
+  "cp": "91142",
+  "name": "Padel - Padel Max 60 à Saint-Maximin",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 125
+ },
+ {
+  "slug": "padel-occitanie-montauban",
+  "cp": "91142",
+  "name": "Padel - Padel Occitanie à Montauban",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 59
+ },
+ {
+  "slug": "padel-pioline-aix-en-provence",
+  "cp": "91142",
+  "name": "Padel - Padel Pioline à Aix-en-Provence",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 5
+ },
+ {
+  "slug": "padel-zone-tarbes",
+  "cp": "91142",
+  "name": "Padel - Padel Zone à Tarbes",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 38
+ },
+ {
+  "slug": "padel4people-claye-souilly-claye-souilly",
+  "cp": "91142",
+  "name": "Padel - Padel4People Claye-Souilly à Claye-Souilly",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 67
+ },
+ {
+  "slug": "padel33-merignac",
+  "cp": "91142",
+  "name": "Padel33 Mérignac à Mérignac",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 24
+ },
+ {
+  "slug": "padelea-les-mesneux",
+  "cp": "91142",
+  "name": "Padel - Padelea à Les Mesneux",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 18
+ },
+ {
+  "slug": "padelbreak-bondues",
+  "cp": "91142",
+  "name": "Padel - PadelBreak à Bondues",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 66
+ },
+ {
   "slug": "padelimite-graveson",
   "cp": "91142",
   "name": "Padel - Padelimite à Graveson",
@@ -2120,12 +2008,44 @@
   "creneaux_test": 94
  },
  {
-  "slug": "patapim-padel-et-nousty",
+  "slug": "padelistes-quimper",
   "cp": "91142",
-  "name": "Padel - Patapim Padel et + à Nousty",
+  "name": "Padelistes Quimper à Quimper",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 68
+  "creneaux_test": 41
+ },
+ {
+  "slug": "padeliste-soissons-belleu",
+  "cp": "91142",
+  "name": "Padelistes Soissons à Belleu",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 62
+ },
+ {
+  "slug": "padelmouv-saint-dionisy",
+  "cp": "91142",
+  "name": "Padel - PadelMouv à Saint-Dionisy",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 70
+ },
+ {
+  "slug": "padelshot-la-ville-aux-dames-la-ville-aux-dames",
+  "cp": "91142",
+  "name": "Padel - Padelshot Tours - La Ville-Aux-Dames à La…",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 81
+ },
+ {
+  "slug": "padelshot-caen-mondeville",
+  "cp": "91142",
+  "name": "Padelshot Caen Mondeville à Mondeville",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 43
  },
  {
   "slug": "padelshot-clermont-ferrand-clermont-ferrand",
@@ -2133,7 +2053,23 @@
   "name": "Padel - Padelshot Clermont-Ferrand à Clermont-Ferrand",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 40
+  "creneaux_test": 44
+ },
+ {
+  "slug": "padelshot-lille-lille",
+  "cp": "91142",
+  "name": "Padel - PadelShot Lille à Lille",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 86
+ },
+ {
+  "slug": "padelshot-le-mans-saint-pavace",
+  "cp": "91142",
+  "name": "Padel - PadelShot Le Mans à Saint-Pavace",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 86
  },
  {
   "slug": "padelshot-reims-reims",
@@ -2141,151 +2077,23 @@
   "name": "Padel - Padelshot Reims à Reims",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 85
+  "creneaux_test": 84
  },
  {
-  "slug": "pian-medoc-as",
+  "slug": "padelshot-lyon-craponne",
   "cp": "91142",
-  "name": "ASPM TENNIS et PADEL à Le pian-medoc",
+  "name": "Padelshot Lyon Craponne à Craponne",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 33
+  "creneaux_test": 30
  },
  {
-  "slug": "pearl-padel-gerardmer",
+  "slug": "padelshot-tours-saint-pierre-des-corps",
   "cp": "91142",
-  "name": "Padel - Pearl Padel à Gérardmer",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 111
- },
- {
-  "slug": "padelshot-metz-woippy",
-  "cp": "91142",
-  "name": "Padel - PadelShot Metz à Woippy",
+  "name": "Padel - PadelShot Tours - St Pierre des Corps à…",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 44
- },
- {
-  "slug": "racket-world-saint-laurent-blangy",
-  "cp": "91142",
-  "name": "Racket World à Saint-Laurent-Blangy",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 34
- },
- {
-  "slug": "play-padel-alfortville",
-  "cp": "91142",
-  "name": "Play Padel Alfortville à Alfortville",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 103
- },
- {
-  "slug": "padelshot-rouen-barentin",
-  "cp": "91142",
-  "name": "PadelShot Rouen à Barentin",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 65
- },
- {
-  "slug": "saint-avold-tc",
-  "cp": "91142",
-  "name": "Saint Avold Tc à Saint avold",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 60
- },
- {
-  "slug": "palatium-lavau",
-  "cp": "91142",
-  "name": "Padel - Palatium à Lavau",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 139
- },
- {
-  "slug": "paul-louis-sport-le-pontet",
-  "cp": "91142",
-  "name": "Padel - PAUL &amp; LOUIS SPORT à Le Pontet",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 8
- },
- {
-  "slug": "platinium-padel-peyrolles-en-provence",
-  "cp": "91142",
-  "name": "Padel - Platinium Padel à Peyrolles-en-Provence",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 35
- },
- {
-  "slug": "route-dargent-tennis-club-luc-la-primaube",
-  "cp": "91142",
-  "name": "Tennis Club Route D&#x27;Argent à Luc-la-Primaube",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 23
- },
- {
-  "slug": "park-padel-sport-loyettes",
-  "cp": "91142",
-  "name": "Padel - Park Padel Sport à Loyettes",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 42
- },
- {
-  "slug": "pole-padel-belleville-en-beaujolais",
-  "cp": "91142",
-  "name": "Padel - Pole Padel à Belleville-en-Beaujolais",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 63
- },
- {
-  "slug": "player63-pont-du-chateau",
-  "cp": "91142",
-  "name": "Player63 à Pont-du-Château",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 18
- },
- {
-  "slug": "rc-padel-vallon-pont-darc",
-  "cp": "91142",
-  "name": "RC Padel à Vallon-Pont-d&#x27;Arc",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 124
- },
- {
-  "slug": "rochefort",
-  "cp": "91142",
-  "name": "SA Rochefort Tennis Squash Padel à Rochefort",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 16
- },
- {
-  "slug": "roissy-en-brie-ast",
-  "cp": "91142",
-  "name": "Tennis Padel Club Roissy En Brie AST à Roissy en brie",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 32
- },
- {
-  "slug": "rue-le-crotoy-tennis",
-  "cp": "91142",
-  "name": "Rue Le Crotoy Tennis Club à Rue",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 32
  },
  {
   "slug": "padelshot-rennes-chantepie",
@@ -2293,47 +2101,55 @@
   "name": "Padel - PadelShot Rennes à Chantepie",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 35
+  "creneaux_test": 39
  },
  {
-  "slug": "sport-dans-ma-ville-lyon",
+  "slug": "padelshot-metz-woippy",
   "cp": "91142",
-  "name": "Padel - Sport dans la Ville à Lyon",
+  "name": "Padel - PadelShot Metz à Woippy",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 53
+  "creneaux_test": 41
  },
  {
-  "slug": "senones-tc",
+  "slug": "padelshot-rouen-barentin",
   "cp": "91142",
-  "name": "TENNIS PADEL PICKLE CLUB DU PAYS DES ABBAYES à Senones",
+  "name": "PadelShot Rouen à Barentin",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 49
+  "creneaux_test": 60
  },
  {
-  "slug": "senart-padel-combs-la-ville",
+  "slug": "padelshot-saint-etienne-saint-etienne",
   "cp": "91142",
-  "name": "Padel - Sénart Padel à Combs-la-Ville",
+  "name": "Padelshot Saint-Etienne à Saint-Étienne",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 102
+  "creneaux_test": 36
  },
  {
-  "slug": "saint-maurice-beynost-tennis",
+  "slug": "paris-padel",
   "cp": "91142",
-  "name": "Saint Maurice de Beynost Tennis et Padel à…",
+  "name": "Paris Padel à Paris",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 37
+  "creneaux_test": 8
  },
  {
-  "slug": "sportfield-lyon",
+  "slug": "padelshot-saint-genis-laval-saint-genis-laval",
   "cp": "91142",
-  "name": "Padel - Sportfield Lyon 7 à Lyon",
+  "name": "Padel - PadelShot Saint-Genis-Laval à Saint-Genis-Laval",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 45
+ },
+ {
+  "slug": "palatium-lavau",
+  "cp": "91142",
+  "name": "Padel - Palatium à Lavau",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 138
  },
  {
   "slug": "padelshot-saint-quentin-en-yvelines-trappes",
@@ -2344,12 +2160,84 @@
   "creneaux_test": 98
  },
  {
-  "slug": "saint-maurice-l-exil-tennis",
+  "slug": "park-padel-sport-loyettes",
   "cp": "91142",
-  "name": "Tennis Padel Samauritain à St maurice l exil",
+  "name": "Padel - Park Padel Sport à Loyettes",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 42
+ },
+ {
+  "slug": "passage-as",
+  "cp": "91142",
+  "name": "Passage As à Le passage",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 36
+ },
+ {
+  "slug": "paul-louis-sport-le-pontet",
+  "cp": "91142",
+  "name": "Padel - PAUL &amp; LOUIS SPORT à Le Pontet",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 7
+ },
+ {
+  "slug": "pearl-padel-gerardmer",
+  "cp": "91142",
+  "name": "Padel - Pearl Padel à Gérardmer",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 111
+ },
+ {
+  "slug": "platinium-padel-peyrolles-en-provence",
+  "cp": "91142",
+  "name": "Padel - Platinium Padel à Peyrolles-en-Provence",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 34
+ },
+ {
+  "slug": "patapim-padel-et-nousty",
+  "cp": "91142",
+  "name": "Padel - Patapim Padel et + à Nousty",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 68
+ },
+ {
+  "slug": "pole-padel-belleville-en-beaujolais",
+  "cp": "91142",
+  "name": "Padel - Pole Padel à Belleville-en-Beaujolais",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 63
+ },
+ {
+  "slug": "play-padel-alfortville",
+  "cp": "91142",
+  "name": "Play Padel Alfortville à Alfortville",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 103
+ },
+ {
+  "slug": "player63-pont-du-chateau",
+  "cp": "91142",
+  "name": "Player63 à Pont-du-Château",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 18
+ },
+ {
+  "slug": "pian-medoc-as",
+  "cp": "91142",
+  "name": "ASPM TENNIS et PADEL à Le pian-medoc",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 33
  },
  {
   "slug": "road-padel-house-grans",
@@ -2357,55 +2245,47 @@
   "name": "Padel - Road Padel House à Grans",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 20
+  "creneaux_test": 23
  },
  {
-  "slug": "sportfield-bercy-paris",
+  "slug": "saint-avold-tc",
   "cp": "91142",
-  "name": "Padel - Sportfield Paris 12 - Bercy à Paris",
+  "name": "Saint Avold Tc à Saint avold",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 38
+  "creneaux_test": 72
  },
  {
-  "slug": "sport-events-bolbec",
+  "slug": "route-dargent-tennis-club-luc-la-primaube",
   "cp": "91142",
-  "name": "Sport Events à Bolbec",
+  "name": "Tennis Club Route D&#x27;Argent à Luc-la-Primaube",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 69
+  "creneaux_test": 35
  },
  {
-  "slug": "sportoo-goussainville",
+  "slug": "roissy-en-brie-ast",
   "cp": "91142",
-  "name": "Padel - Sportoo à Goussainville",
+  "name": "Tennis Padel Club Roissy En Brie AST à Roissy en brie",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 25
+  "creneaux_test": 31
  },
  {
-  "slug": "seynod-etoile-sportive-tennis",
+  "slug": "rue-le-crotoy-tennis",
   "cp": "91142",
-  "name": "Tennis Club De Seynod à Seynod",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 17
- },
- {
-  "slug": "sannois-oss",
-  "cp": "91142",
-  "name": "Sannois Oss à Sannois",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 12
- },
- {
-  "slug": "sport-in-park-saint-berthevin",
-  "cp": "91142",
-  "name": "Sport In Park à Saint-Berthevin",
+  "name": "Rue Le Crotoy Tennis Club à Rue",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 32
+ },
+ {
+  "slug": "rc-padel-vallon-pont-darc",
+  "cp": "91142",
+  "name": "RC Padel à Vallon-Pont-d&#x27;Arc",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 124
  },
  {
   "slug": "saint-florentin-es",
@@ -2416,36 +2296,36 @@
   "creneaux_test": 59
  },
  {
-  "slug": "saint-rambert-dalbon-saint-rambert-dalbon",
+  "slug": "saint-maurice-beynost-tennis",
   "cp": "91142",
-  "name": "Saint Rambert D&#x27;Albon à Saint-Rambert-d&#x27;Albon",
+  "name": "Saint Maurice de Beynost Tennis et Padel à…",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 24
+  "creneaux_test": 34
  },
  {
-  "slug": "sportfield-courbevoie-la-defense",
+  "slug": "racket-world-saint-laurent-blangy",
   "cp": "91142",
-  "name": "Padel - Sportfield La Défense à Courbevoie",
+  "name": "Racket World à Saint-Laurent-Blangy",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 54
+  "creneaux_test": 34
  },
  {
-  "slug": "sportfield-paris",
+  "slug": "rochefort",
   "cp": "91142",
-  "name": "Padel - Sportfield Paris 16 - Tour Eiffel à Paris",
+  "name": "SA Rochefort Tennis Squash Padel à Rochefort",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 26
+  "creneaux_test": 20
  },
  {
-  "slug": "smash-padel-castellet-signes",
+  "slug": "saint-maurice-l-exil-tennis",
   "cp": "91142",
-  "name": "Padel - Smash Padel Castellet à Signes",
+  "name": "Tennis Padel Samauritain à St maurice l exil",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 51
+  "creneaux_test": 36
  },
  {
   "slug": "saintes",
@@ -2456,76 +2336,20 @@
   "creneaux_test": 97
  },
  {
-  "slug": "spin-padel-88-epinal",
+  "slug": "saint-rambert-dalbon-saint-rambert-dalbon",
   "cp": "91142",
-  "name": "Padel - Spin padel 88 à Épinal",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 13
- },
- {
-  "slug": "sport-set-issoire",
-  "cp": "91142",
-  "name": "SPORT SET à Issoire",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 91
- },
- {
-  "slug": "squash-padel-club-parc-ducup-perpignan",
-  "cp": "91142",
-  "name": "Squash Padel Club Parc Ducup à Perpignan",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 18
- },
- {
-  "slug": "tc-denain",
-  "cp": "91142",
-  "name": "Denain Tennis Padel la Porte du Hainaut à Denain",
+  "name": "Saint Rambert D&#x27;Albon à Saint-Rambert-d&#x27;Albon",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 23
  },
  {
-  "slug": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
+  "slug": "senart-padel-combs-la-ville",
   "cp": "91142",
-  "name": "Padel - T.C. LA CELLE SAINT-CLOUD à La Celle-Saint-Cloud",
+  "name": "Padel - Sénart Padel à Combs-la-Ville",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 49
- },
- {
-  "slug": "stadium-riom-riom",
-  "cp": "91142",
-  "name": "Stadium Riom à Riom",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 29
- },
- {
-  "slug": "stadium-thiais-thiais",
-  "cp": "91142",
-  "name": "Stadium Thiais à Thiais",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 60
- },
- {
-  "slug": "stade-montois-tennis-padel",
-  "cp": "91142",
-  "name": "Stade Montois Tennis Padel à Mont De Marsan",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 31
- },
- {
-  "slug": "stadium-antibes-antibes",
-  "cp": "91142",
-  "name": "Padel - Stadium Antibes à Antibes",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 36
+  "creneaux_test": 102
  },
  {
   "slug": "smash-padel-club-saint-denis-en-val",
@@ -2536,28 +2360,116 @@
   "creneaux_test": 33
  },
  {
-  "slug": "tc-de-surbourg",
+  "slug": "sannois-oss",
   "cp": "91142",
-  "name": "Tc De Surbourg à Surbourg",
+  "name": "Sannois Oss à Sannois",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 40
+  "creneaux_test": 10
  },
  {
-  "slug": "t-populaire-weisweiller",
+  "slug": "seynod-etoile-sportive-tennis",
   "cp": "91142",
-  "name": "Tennis Populaire Weisweiller à Antibes",
+  "name": "Tennis Club De Seynod à Seynod",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 20
+  "creneaux_test": 22
  },
  {
-  "slug": "tarnos-turbomeca-asc",
+  "slug": "senones-tc",
   "cp": "91142",
-  "name": "Astt Tennis Padel Safran à Tarnos",
+  "name": "TENNIS PADEL PICKLE CLUB DU PAYS DES ABBAYES à Senones",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 23
+  "creneaux_test": 49
+ },
+ {
+  "slug": "sport-dans-ma-ville-lyon",
+  "cp": "91142",
+  "name": "Padel - Sport dans la Ville à Lyon",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 55
+ },
+ {
+  "slug": "smash-padel-castellet-signes",
+  "cp": "91142",
+  "name": "Padel - Smash Padel Castellet à Signes",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 50
+ },
+ {
+  "slug": "sport-in-park-saint-berthevin",
+  "cp": "91142",
+  "name": "Sport In Park à Saint-Berthevin",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 31
+ },
+ {
+  "slug": "spin-padel-88-epinal",
+  "cp": "91142",
+  "name": "Padel - Spin padel 88 à Épinal",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 13
+ },
+ {
+  "slug": "sportfield-bercy-paris",
+  "cp": "91142",
+  "name": "Padel - Sportfield Paris 12 - Bercy à Paris",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 37
+ },
+ {
+  "slug": "sport-events-bolbec",
+  "cp": "91142",
+  "name": "Sport Events à Bolbec",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 69
+ },
+ {
+  "slug": "sport-set-issoire",
+  "cp": "91142",
+  "name": "SPORT SET à Issoire",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 87
+ },
+ {
+  "slug": "sportfield-courbevoie-la-defense",
+  "cp": "91142",
+  "name": "Padel - Sportfield La Défense à Courbevoie",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 52
+ },
+ {
+  "slug": "sportfield-lyon",
+  "cp": "91142",
+  "name": "Padel - Sportfield Lyon 7 à Lyon",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 41
+ },
+ {
+  "slug": "sportfield-paris",
+  "cp": "91142",
+  "name": "Padel - Sportfield Paris 16 - Tour Eiffel à Paris",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 21
+ },
+ {
+  "slug": "sportoo-goussainville",
+  "cp": "91142",
+  "name": "Padel - Sportoo à Goussainville",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 25
  },
  {
   "slug": "sportiempo-artix",
@@ -2568,44 +2480,20 @@
   "creneaux_test": 72
  },
  {
-  "slug": "tc-gondecourt",
+  "slug": "squash-padel-club-parc-ducup-perpignan",
   "cp": "91142",
-  "name": "Padel - Tennis Club Gondecourt à Gondecourt",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 27
- },
- {
-  "slug": "tc-fonsorbes-fonsorbes",
-  "cp": "91142",
-  "name": "TC Fonsorbes à Fonsorbes",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 10
- },
- {
-  "slug": "tc-lezignan-corbieres-lezignan-corbieres",
-  "cp": "91142",
-  "name": "TC Lézignan Corbières à Lézignan-Corbières",
+  "name": "Squash Padel Club Parc Ducup à Perpignan",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 18
  },
  {
-  "slug": "sud-padel-vailhauques",
+  "slug": "stade-montois-tennis-padel",
   "cp": "91142",
-  "name": "Padel - Sud Padel à Vailhauquès",
+  "name": "Stade Montois Tennis Padel à Mont De Marsan",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 38
- },
- {
-  "slug": "tennis-altitude-500-grasse",
-  "cp": "91142",
-  "name": "Tennis Altitude 500 Grasse à Grasse",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 18
+  "creneaux_test": 31
  },
  {
   "slug": "squashbad33-bordeaux",
@@ -2613,55 +2501,63 @@
   "name": "Padel33 Bordeaux à Bordeaux",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 50
+  "creneaux_test": 64
  },
  {
-  "slug": "tc-muyois",
+  "slug": "stadium-antibes-antibes",
   "cp": "91142",
-  "name": "Tc Muyois à Le muy",
+  "name": "Padel - Stadium Antibes à Antibes",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 7
+  "creneaux_test": 35
  },
  {
-  "slug": "tc-roquettes-bagnols-sur-ceze",
+  "slug": "stadium-thiais-thiais",
   "cp": "91142",
-  "name": "Padel - Tc Roquettes à Bagnols-sur-Cèze",
+  "name": "Padel - Stadium Thiais à Thiais",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 12
+  "creneaux_test": 68
  },
  {
-  "slug": "tc-st-andre-de-la-roche-l-abadie",
+  "slug": "stadium-caen-epron",
   "cp": "91142",
-  "name": "Tc St Andre De La Roche L&#x27;Abadie à St andre de la roche",
+  "name": "Stadium Caen à Épron",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 32
+  "creneaux_test": 6
  },
  {
-  "slug": "tc-pyrenees-bigorre-chis",
+  "slug": "stadium-riom-riom",
   "cp": "91142",
-  "name": "TC Pyrénées Bigorre à Chis",
+  "name": "Stadium Riom à Riom",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 32
+  "creneaux_test": 29
  },
  {
-  "slug": "tcs-calonne-ricouart",
+  "slug": "sud-padel-vailhauques",
   "cp": "91142",
-  "name": "Tennis Club-Squash Calonne-Ricouart - Tcs à…",
+  "name": "Padel - Sud Padel à Vailhauquès",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 36
+  "creneaux_test": 41
  },
  {
-  "slug": "tc-st-omer",
+  "slug": "t-populaire-weisweiller",
   "cp": "91142",
-  "name": "Tennis Club Saint Omer à Saint-Omer",
+  "name": "Tennis Populaire Weisweiller à Antibes",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 27
+  "creneaux_test": 18
+ },
+ {
+  "slug": "tarnos-turbomeca-asc",
+  "cp": "91142",
+  "name": "Astt Tennis Padel Safran à Tarnos",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 22
  },
  {
   "slug": "tc-du-pinsan-eysines",
@@ -2680,20 +2576,12 @@
   "creneaux_test": 30
  },
  {
-  "slug": "tcsm-orgeval",
+  "slug": "tc-denain",
   "cp": "91142",
-  "name": "Tennis Club Saint Marc Orgeval à Orgeval",
+  "name": "Denain Tennis Padel la Porte du Hainaut à Denain",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 79
- },
- {
-  "slug": "tchole-padel-club-coudeville-sur-mer",
-  "cp": "91142",
-  "name": "Padel - Tcholé Padel Club à Coudeville-sur-Mer",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 137
+  "creneaux_test": 23
  },
  {
   "slug": "tc-auversois",
@@ -2701,15 +2589,95 @@
   "name": "Tennis Club Auversois à Auvers-Sur-Oise",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 20
+  "creneaux_test": 30
  },
  {
-  "slug": "tennis-club-municipal-du-5eme-lyon",
+  "slug": "tc-fonsorbes-fonsorbes",
   "cp": "91142",
-  "name": "Tcm5 Lyon - Tennis Club Municipal Du 5ème à Lyon",
+  "name": "TC Fonsorbes à Fonsorbes",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 8
+  "creneaux_test": 14
+ },
+ {
+  "slug": "tc-de-surbourg",
+  "cp": "91142",
+  "name": "Tc De Surbourg à Surbourg",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 60
+ },
+ {
+  "slug": "tc-gondecourt",
+  "cp": "91142",
+  "name": "Padel - Tennis Club Gondecourt à Gondecourt",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 27
+ },
+ {
+  "slug": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
+  "cp": "91142",
+  "name": "Padel - T.C. LA CELLE SAINT-CLOUD à La Celle-Saint-Cloud",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 49
+ },
+ {
+  "slug": "tc-lezignan-corbieres-lezignan-corbieres",
+  "cp": "91142",
+  "name": "TC Lézignan Corbières à Lézignan-Corbières",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 26
+ },
+ {
+  "slug": "tc-loubesien",
+  "cp": "91142",
+  "name": "Tennis Club Loubesien à Saint-Loubès",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 7
+ },
+ {
+  "slug": "tc-montigny-en-gohelle",
+  "cp": "91142",
+  "name": "Tc Montigny En Gohelle à Montigny-en-gohelle",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 6
+ },
+ {
+  "slug": "tc-muyois",
+  "cp": "91142",
+  "name": "Tc Muyois à Le muy",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 11
+ },
+ {
+  "slug": "tc-pyrenees-bigorre-chis",
+  "cp": "91142",
+  "name": "TC Pyrénées Bigorre à Chis",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 32
+ },
+ {
+  "slug": "tc-st-andre-de-la-roche-l-abadie",
+  "cp": "91142",
+  "name": "Tc St Andre De La Roche L&#x27;Abadie à St andre de la roche",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 30
+ },
+ {
+  "slug": "tc-roquettes-bagnols-sur-ceze",
+  "cp": "91142",
+  "name": "Padel - Tc Roquettes à Bagnols-sur-Cèze",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 12
  },
  {
   "slug": "tc-toulonnais-valette-du-var",
@@ -2717,7 +2685,55 @@
   "name": "Tennis Club Toulonnais (Tct) à La Valette-Du-Var",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 38
+  "creneaux_test": 34
+ },
+ {
+  "slug": "tc-st-omer",
+  "cp": "91142",
+  "name": "Tennis Club Saint Omer à Saint-Omer",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 27
+ },
+ {
+  "slug": "tchole-padel-club-coudeville-sur-mer",
+  "cp": "91142",
+  "name": "Padel - Tcholé Padel Club à Coudeville-sur-Mer",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 135
+ },
+ {
+  "slug": "tcsm-orgeval",
+  "cp": "91142",
+  "name": "Tennis Club Saint Marc Orgeval à Orgeval",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 77
+ },
+ {
+  "slug": "tcs-calonne-ricouart",
+  "cp": "91142",
+  "name": "Tennis Club-Squash Calonne-Ricouart - Tcs à…",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 52
+ },
+ {
+  "slug": "team-padel-mondragon",
+  "cp": "91142",
+  "name": "Padel - Team Padel à Mondragon",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 59
+ },
+ {
+  "slug": "tennis-cazaux",
+  "cp": "91142",
+  "name": "Tennis Club Cazaux à Cazaux",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 46
  },
  {
   "slug": "tennis-biterrois-beziers",
@@ -2733,63 +2749,7 @@
   "name": "Tennis Club Delta Teich à Le Teich",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 16
- },
- {
-  "slug": "tennis-de-la-viere-saint-thibery",
-  "cp": "91142",
-  "name": "Padel - Tennis Club De La Viere à Saint-Thibéry",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 12
- },
- {
-  "slug": "tennis-club-de-paray-le-monial",
-  "cp": "91142",
-  "name": "Tennis Club De Paray-Le-Monial à Paray-Le-Monial",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 29
- },
- {
-  "slug": "tennis-carpentras",
-  "cp": "91142",
-  "name": "Tennis Club Carpentras à Carpentras",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 70
- },
- {
-  "slug": "tc-montigny-en-gohelle",
-  "cp": "91142",
-  "name": "Tc Montigny En Gohelle à Montigny-en-gohelle",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 6
- },
- {
-  "slug": "team-padel-mondragon",
-  "cp": "91142",
-  "name": "Padel - Team Padel à Mondragon",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 60
- },
- {
-  "slug": "tennis-club-de-balma-balma",
-  "cp": "91142",
-  "name": "Tennis Club De Balma à Balma",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 4
- },
- {
-  "slug": "tennis-dommartin-bron",
-  "cp": "91142",
-  "name": "Tennis Club Dommartin à Dommartin",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 25
+  "creneaux_test": 26
  },
  {
   "slug": "tennis-club-beaumontois-beaumont-de-lomagne",
@@ -2797,47 +2757,7 @@
   "name": "Tennis Club Beaumontois à Beaumont-de-Lomagne",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 21
- },
- {
-  "slug": "tennis-cazaux",
-  "cp": "91142",
-  "name": "Tennis Club Cazaux à Cazaux",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 36
- },
- {
-  "slug": "tennis-club-padel-baraqueville",
-  "cp": "91142",
-  "name": "Tennis Club Padel Baraqueville à Baraqueville",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 32
- },
- {
-  "slug": "tennis-la-roseraie-fontmerle-antibes",
-  "cp": "91142",
-  "name": "Tc La Roseraie Fontmerle à Antibes",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 21
- },
- {
-  "slug": "tennis-club-monplaisir",
-  "cp": "91142",
-  "name": "Tennis Club Monplaisir à Thézan-Lès-Béziers",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 32
- },
- {
-  "slug": "tennis-club-boulogne-sur-mer",
-  "cp": "91142",
-  "name": "Tennis Club Boulogne-Sur-Mer à Saint-Martin-Boulogne",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 20
+  "creneaux_test": 29
  },
  {
   "slug": "tennis-castelbriantais-chateaubriant",
@@ -2848,20 +2768,60 @@
   "creneaux_test": 29
  },
  {
+  "slug": "tennis-altitude-500-grasse",
+  "cp": "91142",
+  "name": "Tennis Altitude 500 Grasse à Grasse",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 18
+ },
+ {
+  "slug": "tennis-carpentras",
+  "cp": "91142",
+  "name": "Tennis Club Carpentras à Carpentras",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 69
+ },
+ {
+  "slug": "tennis-club-boulogne-sur-mer",
+  "cp": "91142",
+  "name": "Tennis Club Boulogne-Sur-Mer à Saint-Martin-Boulogne",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 19
+ },
+ {
+  "slug": "tennis-club-de-balma-balma",
+  "cp": "91142",
+  "name": "Tennis Club De Balma à Balma",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 5
+ },
+ {
+  "slug": "tennis-club-de-paray-le-monial",
+  "cp": "91142",
+  "name": "Tennis Club De Paray-Le-Monial à Paray-Le-Monial",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 29
+ },
+ {
   "slug": "tennis-club-de-vauvert-vauvert",
   "cp": "91142",
   "name": "Tennis Club De Vauvert à Vauvert",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 16
+  "creneaux_test": 23
  },
  {
-  "slug": "tennis-courrieres",
+  "slug": "tennis-club-municipal-du-5eme-lyon",
   "cp": "91142",
-  "name": "Tennis Club De Courrières à Courrières",
+  "name": "Tcm5 Lyon - Tennis Club Municipal Du 5ème à Lyon",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 42
+  "creneaux_test": 11
  },
  {
   "slug": "tennis-club-la-pape",
@@ -2872,28 +2832,20 @@
   "creneaux_test": 68
  },
  {
-  "slug": "tennis-jonage",
+  "slug": "tennis-club-monplaisir",
   "cp": "91142",
-  "name": "Tennis Club Jonage à Jonage",
+  "name": "Tennis Club Monplaisir à Thézan-Lès-Béziers",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 5
+  "creneaux_test": 32
  },
  {
-  "slug": "tennis-club-senlis",
+  "slug": "tennis-club-padel-baraqueville",
   "cp": "91142",
-  "name": "Tennis Club Senlis à Senlis",
+  "name": "Tennis Club Padel Baraqueville à Baraqueville",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 35
- },
- {
-  "slug": "tennis-haguenau",
-  "cp": "91142",
-  "name": "Haguenau Tennis Club à Haguenau",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 44
+  "creneaux_test": 32
  },
  {
   "slug": "tennis-de-folelli",
@@ -2904,20 +2856,44 @@
   "creneaux_test": 65
  },
  {
-  "slug": "tennis-padel-bois-colombes-bois-colombes",
+  "slug": "tennis-courrieres",
   "cp": "91142",
-  "name": "Tennis Padel Bois-Colombes à Bois-Colombes",
+  "name": "Tennis Club De Courrières à Courrières",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 1
+  "creneaux_test": 41
  },
  {
-  "slug": "tennis-frontignan",
+  "slug": "tennis-club-senlis",
   "cp": "91142",
-  "name": "TC Frontignan à Frontignan",
+  "name": "Tennis Club Senlis à Senlis",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 5
+  "creneaux_test": 35
+ },
+ {
+  "slug": "tennis-club-saint-priest",
+  "cp": "91142",
+  "name": "Tennis Club Saint Priest à Saint-Priest",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 3
+ },
+ {
+  "slug": "tennis-de-la-viere-saint-thibery",
+  "cp": "91142",
+  "name": "Padel - Tennis Club De La Viere à Saint-Thibéry",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 12
+ },
+ {
+  "slug": "tennis-dommartin-bron",
+  "cp": "91142",
+  "name": "Tennis Club Dommartin à Dommartin",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 30
  },
  {
   "slug": "tennis-du-golf-de-la-boulie-versailles",
@@ -2928,20 +2904,36 @@
   "creneaux_test": 36
  },
  {
-  "slug": "tennis-la-teste-bassin-arcachon",
+  "slug": "tennis-frontignan",
   "cp": "91142",
-  "name": "Tennis Club La Teste Bassin D&#x27;Arcachon à La Teste",
+  "name": "TC Frontignan à Frontignan",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 3
+  "creneaux_test": 7
  },
  {
-  "slug": "tennis-padel-barcares",
+  "slug": "tennis-jonage",
   "cp": "91142",
-  "name": "Tennis Padel Club Barcarès à Le Barcares",
+  "name": "Tennis Club Jonage à Jonage",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 9
+  "creneaux_test": 8
+ },
+ {
+  "slug": "tennis-la-roseraie-fontmerle-antibes",
+  "cp": "91142",
+  "name": "Tc La Roseraie Fontmerle à Antibes",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 21
+ },
+ {
+  "slug": "tennis-haguenau",
+  "cp": "91142",
+  "name": "Haguenau Tennis Club à Haguenau",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 44
  },
  {
   "slug": "tennis-loisirs-levens",
@@ -2952,36 +2944,12 @@
   "creneaux_test": 44
  },
  {
-  "slug": "tennis-magny-vexin",
+  "slug": "tennis-la-teste-bassin-arcachon",
   "cp": "91142",
-  "name": "Magny (Tc) à Magny en vexin",
+  "name": "Tennis Club La Teste Bassin D&#x27;Arcachon à La Teste",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 27
- },
- {
-  "slug": "tennis-melun",
-  "cp": "91142",
-  "name": "Tennis Club Melun à Melun",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 67
- },
- {
-  "slug": "tennis-padel-montaleigne-cagnes-sur-mer",
-  "cp": "91142",
-  "name": "Tennis Padel Club De Montaleigne à Cagnes-Sur-Mer",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 16
- },
- {
-  "slug": "tennis-saint-paul-romans",
-  "cp": "91142",
-  "name": "Romans Tennis &amp; Padel à Saint-Paul-Lès-Romans",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 5
+  "creneaux_test": 3
  },
  {
   "slug": "tennis-latresne",
@@ -2992,12 +2960,44 @@
   "creneaux_test": 34
  },
  {
+  "slug": "tennis-magny-vexin",
+  "cp": "91142",
+  "name": "Magny (Tc) à Magny en vexin",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 27
+ },
+ {
   "slug": "tennis-mareil-sur-mauldre",
   "cp": "91142",
   "name": "Tennis Club Mareil Sur Mauldre à Mareil-Sur-Mauldre",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 56
+  "creneaux_test": 54
+ },
+ {
+  "slug": "tennis-melun",
+  "cp": "91142",
+  "name": "Tennis Club Melun à Melun",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 60
+ },
+ {
+  "slug": "tennis-padel-montaleigne-cagnes-sur-mer",
+  "cp": "91142",
+  "name": "Tennis Padel Club De Montaleigne à Cagnes-Sur-Mer",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 14
+ },
+ {
+  "slug": "tennis-padel-barcares",
+  "cp": "91142",
+  "name": "Tennis Padel Club Barcarès à Le Barcares",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 8
  },
  {
   "slug": "tennis-padel-club-saleillenc",
@@ -3005,23 +3005,7 @@
   "name": "Tennis Club Saleillenc à Saleilles",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 29
- },
- {
-  "slug": "tennis-padel-peynier",
-  "cp": "91142",
-  "name": "Tennis Padel Club Peynier à Peynier",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 7
- },
- {
-  "slug": "tennis-rambouillet",
-  "cp": "91142",
-  "name": "Padel - Tennis Padel Club Rambouillet à Rambouillet",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 35
+  "creneaux_test": 28
  },
  {
   "slug": "tennis-padel-lucois",
@@ -3032,33 +3016,41 @@
   "creneaux_test": 29
  },
  {
+  "slug": "tennis-padel-bois-colombes-bois-colombes",
+  "cp": "91142",
+  "name": "Tennis Padel Bois-Colombes à Bois-Colombes",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 4
+ },
+ {
+  "slug": "tennis-padel-peynier",
+  "cp": "91142",
+  "name": "Tennis Padel Club Peynier à Peynier",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 9
+ },
+ {
+  "slug": "tennis-rambouillet",
+  "cp": "91142",
+  "name": "Padel - Tennis Padel Club Rambouillet à Rambouillet",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 35
+ },
+ {
   "slug": "tennis-sorguais",
   "cp": "91142",
   "name": "Tennis Club Sorguais à Sorgues",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 27
+  "creneaux_test": 30
  },
  {
   "slug": "tennis-soorts-hossegor-odyssey",
   "cp": "91142",
   "name": "Hossegor Tennis club à Soorts-Hossegor",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 30
- },
- {
-  "slug": "todo-padel-saint-quentin-sur-le-homme",
-  "cp": "91142",
-  "name": "Padel - Todo Padel à Saint-Quentin-sur-le-Homme",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 99
- },
- {
-  "slug": "tennis-verneuil-sur-avre",
-  "cp": "91142",
-  "name": "Verneuil Sur Avre Tc à Verneuil sur Avre",
   "dept": "91",
   "metro": "idf",
   "creneaux_test": 29
@@ -3072,20 +3064,12 @@
   "creneaux_test": 50
  },
  {
-  "slug": "tennis-wasquehal",
+  "slug": "tennis-saint-paul-romans",
   "cp": "91142",
-  "name": "Wasquehal Tennis Club à Wasquehal",
+  "name": "Romans Tennis &amp; Padel à Saint-Paul-Lès-Romans",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 18
- },
- {
-  "slug": "the-country-club-cornebarrieu",
-  "cp": "91142",
-  "name": "The Country Club à Cornebarrieu",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 38
+  "creneaux_test": 9
  },
  {
   "slug": "tennis-villemoisson-sur-orge",
@@ -3096,44 +3080,12 @@
   "creneaux_test": 20
  },
  {
-  "slug": "the-monkey-padel-pelissanne",
+  "slug": "tennis-wasquehal",
   "cp": "91142",
-  "name": "Padel - The Monkey Padel à Pélissanne",
+  "name": "Wasquehal Tennis Club à Wasquehal",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 86
- },
- {
-  "slug": "the-padel-bordeaux-begles",
-  "cp": "91142",
-  "name": "Padel - The Padel Bordeaux Bègles à Bègles",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 63
- },
- {
-  "slug": "tennis-taden-dinan",
-  "cp": "91142",
-  "name": "Tennis Club Taden Dinan à Taden",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 65
- },
- {
-  "slug": "ultra-fabron-nice",
-  "cp": "91142",
-  "name": "Padel - Ultra Fabron Nice à Nice",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 17
- },
- {
-  "slug": "tennis-squash-badminton-jarville-tsb-heillecourt",
-  "cp": "91142",
-  "name": "Tennis Squash Badminton Jarville (TSB) à Heillecourt",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 23
+  "creneaux_test": 18
  },
  {
   "slug": "tennis-squash-padel-mas-perpignan",
@@ -3144,6 +3096,70 @@
   "creneaux_test": 6
  },
  {
+  "slug": "tennis-squash-badminton-jarville-tsb-heillecourt",
+  "cp": "91142",
+  "name": "Tennis Squash Badminton Jarville (TSB) à Heillecourt",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 22
+ },
+ {
+  "slug": "the-country-club-cornebarrieu",
+  "cp": "91142",
+  "name": "The Country Club à Cornebarrieu",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 37
+ },
+ {
+  "slug": "tennis-taden-dinan",
+  "cp": "91142",
+  "name": "Tennis Club Taden Dinan à Taden",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 62
+ },
+ {
+  "slug": "tennis-verneuil-sur-avre",
+  "cp": "91142",
+  "name": "Verneuil Sur Avre Tc à Verneuil sur Avre",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 41
+ },
+ {
+  "slug": "the-monkey-padel-pelissanne",
+  "cp": "91142",
+  "name": "Padel - The Monkey Padel à Pélissanne",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 83
+ },
+ {
+  "slug": "the-padel-bordeaux-begles",
+  "cp": "91142",
+  "name": "Padel - The Padel Bordeaux Bègles à Bègles",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 63
+ },
+ {
+  "slug": "trinquet-village-paris",
+  "cp": "91142",
+  "name": "Padel - Trinquet Village à Paris",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 77
+ },
+ {
+  "slug": "tipadel-martinique",
+  "cp": "91142",
+  "name": "Padel - Ti&#x27;Padel à Sainte-Luce",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 49
+ },
+ {
   "slug": "the-padel-to-b-la-roche-vineuse",
   "cp": "91142",
   "name": "Padel - The Padel To B à La Roche-Vineuse",
@@ -3152,12 +3168,20 @@
   "creneaux_test": 50
  },
  {
-  "slug": "ucpa-sport-station-a-paris-paris",
+  "slug": "thonon-les-bains-tc",
   "cp": "91142",
-  "name": "UCPA Sport Station Hostel Paris à Paris",
+  "name": "Thonon Les Bains Tc à Thonon les bains",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 13
+  "creneaux_test": 16
+ },
+ {
+  "slug": "todo-padel-saint-quentin-sur-le-homme",
+  "cp": "91142",
+  "name": "Padel - Todo Padel à Saint-Quentin-sur-le-Homme",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 99
  },
  {
   "slug": "toul-padel-club-toul",
@@ -3168,116 +3192,12 @@
   "creneaux_test": 55
  },
  {
-  "slug": "ucpa-sport-station-nantes-nantes",
-  "cp": "91142",
-  "name": "UCPA Sport Station Nantes à Nantes",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 20
- },
- {
-  "slug": "thonon-les-bains-tc",
-  "cp": "91142",
-  "name": "Thonon Les Bains Tc à Thonon les bains",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 6
- },
- {
-  "slug": "tipadel-martinique",
-  "cp": "91142",
-  "name": "Padel - Ti&#x27;Padel à Sainte-Luce",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 56
- },
- {
-  "slug": "ultimate-provence-la-garde-freinet",
-  "cp": "91142",
-  "name": "Padel - Ultimate Provence à La Garde-Freinet",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 36
- },
- {
-  "slug": "v-indomitus-padel-nice-la-trinite-la-trinite",
-  "cp": "91142",
-  "name": "Padel - V Indomitus Padel Nice la Trinité à La Trinité",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 5
- },
- {
-  "slug": "trinquet-village-paris",
-  "cp": "91142",
-  "name": "Padel - Trinquet Village à Paris",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 81
- },
- {
   "slug": "toulouse-padel-club-toulouse",
   "cp": "91142",
   "name": "Toulouse Padel Club à Toulouse",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 10
- },
- {
-  "slug": "ucpa-sport-station-de-bordeaux-bordeaux",
-  "cp": "91142",
-  "name": "UCPA Sport Station de Bordeaux à Bordeaux",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 24
- },
- {
-  "slug": "ucpa-sport-station-meudon-meudon",
-  "cp": "91142",
-  "name": "UCPA Sport Station Meudon à Meudon",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 28
- },
- {
-  "slug": "ucpa-sport-station-de-reims-reims",
-  "cp": "91142",
-  "name": "UCPA Sport Station de Reims à Reims",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 45
- },
- {
-  "slug": "vamos-padel-magalas-magalas",
-  "cp": "91142",
-  "name": "Padel - Vamos Padel Magalas à Magalas",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 53
- },
- {
-  "slug": "vercors-padel-vinay",
-  "cp": "91142",
-  "name": "Padel - Vercors Padel à Vinay",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 6
- },
- {
-  "slug": "univers-padel-fos-sur-mer",
-  "cp": "91142",
-  "name": "Padel - Univers Padel à Fos-sur-Mer",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 88
- },
- {
-  "slug": "us-cagnes-padel-cagnes-sur-mer",
-  "cp": "91142",
-  "name": "Padel - Us Cagnes Padel à Cagnes-sur-Mer",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 18
+  "creneaux_test": 13
  },
  {
   "slug": "ucpa-montigny-club-le-village-montigny-le-bretonneux",
@@ -3288,12 +3208,76 @@
   "creneaux_test": 8
  },
  {
-  "slug": "versus-padel-ploudaniel",
+  "slug": "ucpa-sport-station-de-bordeaux-bordeaux",
   "cp": "91142",
-  "name": "Padel - Padel Klub à Ploudaniel",
+  "name": "UCPA Sport Station de Bordeaux à Bordeaux",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 74
+  "creneaux_test": 24
+ },
+ {
+  "slug": "ucpa-sport-station-de-reims-reims",
+  "cp": "91142",
+  "name": "UCPA Sport Station de Reims à Reims",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 45
+ },
+ {
+  "slug": "ucpa-sport-station-a-paris-paris",
+  "cp": "91142",
+  "name": "UCPA Sport Station Hostel Paris à Paris",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 14
+ },
+ {
+  "slug": "ucpa-sport-station-meudon-meudon",
+  "cp": "91142",
+  "name": "UCPA Sport Station Meudon à Meudon",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 28
+ },
+ {
+  "slug": "ultimate-provence-la-garde-freinet",
+  "cp": "91142",
+  "name": "Padel - Ultimate Provence à La Garde-Freinet",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 36
+ },
+ {
+  "slug": "ucpa-sport-station-nantes-nantes",
+  "cp": "91142",
+  "name": "UCPA Sport Station Nantes à Nantes",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 20
+ },
+ {
+  "slug": "ultra-fabron-nice",
+  "cp": "91142",
+  "name": "Padel - Ultra Fabron Nice à Nice",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 17
+ },
+ {
+  "slug": "us-cagnes-padel-cagnes-sur-mer",
+  "cp": "91142",
+  "name": "Padel - Us Cagnes Padel à Cagnes-sur-Mer",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 15
+ },
+ {
+  "slug": "univers-padel-fos-sur-mer",
+  "cp": "91142",
+  "name": "Padel - Univers Padel à Fos-sur-Mer",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 84
  },
  {
   "slug": "us-colomiers-tennis-colomiers",
@@ -3304,76 +3288,44 @@
   "creneaux_test": 21
  },
  {
-  "slug": "via-padel-rivesaltes-rivesaltes",
-  "cp": "91142",
-  "name": "Padel - Via Padel Rivesaltes à Rivesaltes",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 68
- },
- {
-  "slug": "ville-de-gagny",
-  "cp": "91142",
-  "name": "Ville de Gagny à Gagny",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 45
- },
- {
   "slug": "usy-la-queue-lez-yvelines",
   "cp": "91142",
   "name": "Usy La Queue Lez Yvelines à La-Queue-Lez-Yvelines",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 18
+  "creneaux_test": 17
  },
  {
-  "slug": "winwin-padel-manosque-manosque",
+  "slug": "v-indomitus-padel-nice-la-trinite-la-trinite",
   "cp": "91142",
-  "name": "Padel - WinWin Padel Manosque à Manosque",
+  "name": "Padel - V Indomitus Padel Nice la Trinité à La Trinité",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 34
+  "creneaux_test": 10
  },
  {
-  "slug": "vuelta-padel-thorigny-sur-marne",
+  "slug": "vercors-padel-vinay",
   "cp": "91142",
-  "name": "Padel - Vuelta Padel à Thorigny-sur-Marne",
+  "name": "Padel - Vercors Padel à Vinay",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 49
+  "creneaux_test": 11
  },
  {
-  "slug": "villars-tennis",
+  "slug": "vamos-padel-magalas-magalas",
   "cp": "91142",
-  "name": "Villars (Tennis Club De) à Villars",
+  "name": "Padel - Vamos Padel Magalas à Magalas",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 28
+  "creneaux_test": 53
  },
  {
-  "slug": "wapadel-tarbes",
+  "slug": "vida-padel-maxeville",
   "cp": "91142",
-  "name": "Padel - WAPADEL à Tarbes",
+  "name": "Vida Padel à Maxéville",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 91
- },
- {
-  "slug": "ville-de-villargondran",
-  "cp": "91142",
-  "name": "Padel - Ville de Villargondran à Villargondran",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 19
- },
- {
-  "slug": "ville-de-galargues-galargues",
-  "cp": "91142",
-  "name": "Padel - Commune de Galargues à Galargues",
-  "dept": "91",
-  "metro": "idf",
-  "creneaux_test": 32
+  "creneaux_test": 57
  },
  {
   "slug": "verneuil-padel-club-verneuil-en-halatte",
@@ -3384,20 +3336,60 @@
   "creneaux_test": 116
  },
  {
+  "slug": "versus-padel-ploudaniel",
+  "cp": "91142",
+  "name": "Padel - Padel Klub à Ploudaniel",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 74
+ },
+ {
+  "slug": "via-padel-rivesaltes-rivesaltes",
+  "cp": "91142",
+  "name": "Padel - Via Padel Rivesaltes à Rivesaltes",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 67
+ },
+ {
   "slug": "village-vacances-la-vallicella-poggio-mezzana",
   "cp": "91142",
   "name": "Padel - Village Vacances La Vallicella à Poggio-Mezzana",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 30
+  "creneaux_test": 28
  },
  {
-  "slug": "wtc-wissous",
+  "slug": "villars-tennis",
   "cp": "91142",
-  "name": "Wtc Wissous à Wissous",
+  "name": "Villars (Tennis Club De) à Villars",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 51
+  "creneaux_test": 28
+ },
+ {
+  "slug": "ville-de-gagny",
+  "cp": "91142",
+  "name": "Ville de Gagny à Gagny",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 41
+ },
+ {
+  "slug": "vuelta-padel-thorigny-sur-marne",
+  "cp": "91142",
+  "name": "Padel - Vuelta Padel à Thorigny-sur-Marne",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 49
+ },
+ {
+  "slug": "ville-de-galargues-galargues",
+  "cp": "91142",
+  "name": "Padel - Commune de Galargues à Galargues",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 32
  },
  {
   "slug": "wrc-trappes",
@@ -3408,11 +3400,35 @@
   "creneaux_test": 40
  },
  {
-  "slug": "vida-padel-maxeville",
+  "slug": "ville-de-villargondran",
   "cp": "91142",
-  "name": "Vida Padel à Maxéville",
+  "name": "Padel - Ville de Villargondran à Villargondran",
   "dept": "91",
   "metro": "idf",
-  "creneaux_test": 54
+  "creneaux_test": 19
+ },
+ {
+  "slug": "wtc-wissous",
+  "cp": "91142",
+  "name": "Wtc Wissous à Wissous",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 51
+ },
+ {
+  "slug": "wapadel-tarbes",
+  "cp": "91142",
+  "name": "Padel - WAPADEL à Tarbes",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 87
+ },
+ {
+  "slug": "winwin-padel-manosque-manosque",
+  "cp": "91142",
+  "name": "Padel - WinWin Padel Manosque à Manosque",
+  "dept": "91",
+  "metro": "idf",
+  "creneaux_test": 34
  }
 ]
