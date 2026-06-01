@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Padel France · catalogue national multi-plateformes</title>
+<style>
+  :root{--bg:#0a0e1a;--card:#121828;--card2:#1a2238;--line:#2a3354;--text:#eef1fb;
+        --muted:#8a96b8;--accent:#2CDF62;--accent2:#7af0a0;--gold:#e6c14d;--red:#e07a6f;--blue:#6f82ff;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.55;}
+  a{color:var(--accent);}
+  header{padding:32px 24px 18px;border-bottom:1px solid var(--line);background:radial-gradient(800px 400px at 20% 0%,rgba(44,223,98,.12),transparent 60%);}
+  h1{margin:0 0 8px;font-size:28px;font-weight:800;letter-spacing:-.4px;}
+  .lead{color:var(--muted);font-size:14px;max-width:760px;margin:0;}
+  .pill{display:inline-block;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent2);background:rgba(44,223,98,.12);border:1px solid rgba(44,223,98,.35);padding:5px 12px;border-radius:99px;margin-bottom:14px;}
+  .wrap{max-width:1280px;margin:0 auto;padding:24px;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:24px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;border-left:3px solid var(--accent);}
+  .kpi .v{font-size:28px;font-weight:800;color:var(--accent2);line-height:1;}
+  .kpi .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-top:8px;}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin:14px 0;}
+  h2{font-size:18px;margin:0 0 14px;}
+  table.tbl{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums;}
+  table.tbl th,table.tbl td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line);}
+  table.tbl th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.4px;background:var(--card);font-weight:600;}
+  table.tbl td:first-child,table.tbl th:first-child{text-align:left;font-weight:600;}
+  table.tbl tr:hover{background:rgba(44,223,98,.04);}
+  .bar{display:inline-block;height:6px;background:var(--accent);border-radius:3px;vertical-align:middle;margin-right:6px;}
+  .src-stack{display:flex;height:14px;border-radius:7px;overflow:hidden;margin-top:4px;}
+  .src-stack div{height:100%;}
+  .src-anybuddy{background:#2CDF62;}
+  .src-doinsport{background:#9b7ff0;}
+  .src-playtomic{background:#faa619;}
+  .src-urbanpadel{background:#ff6b35;}
+  .src-legend{display:flex;gap:14px;font-size:11px;color:var(--muted);margin-top:8px;}
+  .src-legend .dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:middle;}
+  .note{background:rgba(230,193,77,.08);border:1px solid rgba(230,193,77,.3);border-left:3px solid var(--gold);border-radius:8px;padding:12px 16px;font-size:12.5px;color:var(--muted);margin:14px 0;}
+  .note b{color:var(--gold);}
+  footer{padding:24px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--line);}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="pill">🇫🇷 France entière · 14 métropoles</span>
+  <h1>Padel France · catalogue national</h1>
+  <p class="lead">Découverte exhaustive des clubs de padel sur les 4 plateformes : Anybuddy + Doinsport + Playtomic + UrbanPadel. Catalogue rafraîchi automatiquement tous les /2h via le workflow national.</p>
+</header>
+
+<div class="wrap">
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="note">
+    <b>⏳ Couverture progressive</b> : pour l'instant, seul l'IDF est scrapée en live (toutes les 30 min). Le workflow national lancera la première capture France entière dans les prochaines heures. <b>Compteurs de sessions</b> n'apparaîtront qu'après les premiers runs nationaux.
+  </div>
+
+  <div class="panel">
+    <h2>Répartition par métropole</h2>
+    <table class="tbl" id="tMetros">
+      <thead><tr>
+        <th>Métropole</th>
+        <th>Dépts</th>
+        <th>Anybuddy</th>
+        <th>Doinsport</th>
+        <th>Playtomic</th>
+        <th>UrbanPadel</th>
+        <th>Total entrées</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+    <div class="src-legend">
+      <span><span class="dot src-anybuddy"></span>Anybuddy</span>
+      <span><span class="dot src-doinsport"></span>Doinsport</span>
+      <span><span class="dot src-playtomic"></span>Playtomic</span>
+      <span><span class="dot src-urbanpadel"></span>UrbanPadel</span>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>📍 Tous les clubs (filtre métropole)</h2>
+    <input type="text" id="filterMetro" placeholder="Filtrer par métropole, ville, nom..." style="width:100%;padding:10px 14px;background:var(--card2);border:1px solid var(--line);border-radius:8px;color:var(--text);font-size:13px;margin-bottom:14px"/>
+    <div style="max-height:540px;overflow:auto;border:1px solid var(--line);border-radius:8px">
+      <table class="tbl" id="tClubs">
+        <thead><tr><th>Club</th><th>CP</th><th>Métropole</th><th>Plateforme</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="counterClubs" style="margin-top:10px;color:var(--muted);font-size:12px"></div>
+  </div>
+
+</div>
+
+<footer>
+  Catalogue généré par padel_national_discover.py · Workflow live : sectors-padel.yml (IDF /30 min), sectors-padel-national.yml (national /2h) ·
+  <a href="padel_idf.html">dashboard IDF</a> · <a href="padel_etude.html">étude IDF</a> · <a href="padel_insights.html">insights</a> · <a href="padel_anomalies.html">anomalies</a>
+</footer>
+
+<script>
+const META = {
+  'idf':           'Île-de-France',
+  'lyon':          'Lyon · Rhône-Alpes',
+  'marseille':     'Marseille · PACA',
+  'bordeaux':      'Bordeaux · Aquitaine',
+  'toulouse':      'Toulouse · Occitanie',
+  'lille':         'Lille · Hauts-de-France',
+  'nantes-rennes': 'Nantes-Rennes · Bretagne',
+  'strasbourg':    'Strasbourg · Grand-Est',
+  'normandie':     'Normandie',
+  'centre':        'Centre-Val-de-Loire',
+  'bourgogne':     'Bourgogne · Franche-Comté',
+  'limousin':      'Nouvelle-Aquitaine Sud',
+  'auvergne':      'Auvergne',
+  'corse':         'Corse',
+};
+const SRC_COLOR = {anybuddy:'#2CDF62', doinsport:'#9b7ff0', playtomic:'#faa619', urbanpadel:'#ff6b35'};
+
+const fmt = v => (v||0).toLocaleString('fr-FR');
+
+async function load(){
+  const clubs = await fetch('padel_national_clubs.json',{cache:'no-store'}).then(r=>r.json());
+
+  // KPIs globaux
+  const bySource = {};
+  const byMetro = {};
+  const byMetroSource = {};
+  for(const c of clubs){
+    bySource[c.source] = (bySource[c.source]||0) + 1;
+    if(c.metro){
+      byMetro[c.metro] = (byMetro[c.metro]||0) + 1;
+      const k = `${c.metro}|${c.source}`;
+      byMetroSource[k] = (byMetroSource[k]||0) + 1;
+    }
+  }
+  document.getElementById('kpis').innerHTML = [
+    [fmt(clubs.length), 'Entrées catalogue national', 'somme des 4 plateformes'],
+    [fmt(Object.keys(byMetro).length), 'Métropoles couvertes', 'sur 14 zones FR'],
+    [fmt(bySource.anybuddy||0), 'Anybuddy FR', 'clubs padel actifs'],
+    [fmt(bySource.doinsport||0), 'Doinsport FR', 'clubs padel'],
+    [fmt(bySource.playtomic||0), 'Playtomic FR', 'clubs padel'],
+    [fmt(bySource.urbanpadel||0), 'UrbanPadel FR', 'centres'],
+  ].map(([v,l,sub])=>`<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div><div style="color:var(--muted);font-size:11px;margin-top:4px">${sub}</div></div>`).join('');
+
+  // Métropoles
+  const metros = Object.keys(byMetro).sort((a,b)=>byMetro[b]-byMetro[a]);
+  const tb = document.querySelector('#tMetros tbody');
+  tb.innerHTML = metros.map(m => {
+    const ab = byMetroSource[`${m}|anybuddy`]||0;
+    const dop = byMetroSource[`${m}|doinsport`]||0;
+    const pt = byMetroSource[`${m}|playtomic`]||0;
+    const up = byMetroSource[`${m}|urbanpadel`]||0;
+    const tot = ab+dop+pt+up;
+    return `<tr>
+      <td>${META[m]||m}</td>
+      <td style="color:var(--muted)">—</td>
+      <td>${ab||'—'}</td>
+      <td>${dop||'—'}</td>
+      <td>${pt||'—'}</td>
+      <td>${up||'—'}</td>
+      <td><b>${tot}</b><div class="src-stack" style="width:${Math.round(150*tot/byMetro[metros[0]])}px">
+        <div class="src-anybuddy" style="width:${ab/tot*100}%"></div>
+        <div class="src-doinsport" style="width:${dop/tot*100}%"></div>
+        <div class="src-playtomic" style="width:${pt/tot*100}%"></div>
+        <div class="src-urbanpadel" style="width:${up/tot*100}%"></div>
+      </div></td>
+    </tr>`;
+  }).join('');
+
+  // Table clubs
+  const tClubs = document.querySelector('#tClubs tbody');
+  const ctr = document.getElementById('counterClubs');
+  function renderClubs(filter){
+    const f = (filter||'').toLowerCase();
+    const filtered = clubs.filter(c => !f || (c.name||'').toLowerCase().includes(f) || (c.metro||'').toLowerCase().includes(f) || (c.city||'').toLowerCase().includes(f) || (c.cp||'').includes(f));
+    ctr.textContent = `${filtered.length} clubs affichés sur ${clubs.length} total`;
+    tClubs.innerHTML = filtered.slice(0,500).map(c =>
+      `<tr>
+        <td>${c.name||c.slug||'?'}${c.city?'<div style="color:var(--muted);font-size:11px">'+c.city+'</div>':''}</td>
+        <td>${c.cp||'—'}</td>
+        <td>${META[c.metro]||c.metro||'—'}</td>
+        <td><span style="background:${SRC_COLOR[c.source]||'#888'}33;color:${SRC_COLOR[c.source]||'#888'};padding:3px 9px;border-radius:99px;font-size:11px;font-weight:700">${c.source}</span></td>
+      </tr>`
+    ).join('');
+  }
+  document.getElementById('filterMetro').addEventListener('input', e => renderClubs(e.target.value));
+  renderClubs('');
+}
+load();
+</script>
+</body>
+</html>
