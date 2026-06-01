@@ -110,7 +110,7 @@
 <body>
 <header>
   <h1>Re-SET &middot; Fréquentation des séances</h1>
-  <div class="sub">Période 22/03/2026 au 31/05/2026 &middot; généré le 01/06/2026 09:29</div>
+  <div class="sub">Période 22/03/2026 au 31/05/2026 &middot; généré le 01/06/2026 21:13</div>
 </header>
 <div class="wrap">
   <div style="background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 18px;margin:18px 0 4px;color:var(--muted);font-size:13px">ℹ️ <b>Re-SET &middot; plateforme bsport.</b> Présents = réservations validées ; capacité = effectif. <b>Historique complet depuis l'ouverture (22/03/2026)</b>. MAJ chaque matin 6h (chiffres de la veille) + bouton &laquo; Mettre à jour &raquo; en bas (lecture en direct de l'API bsport).</div>
@@ -163,6 +163,25 @@
     <h2>Visiteurs moyens par séance &amp; par coach (les stars)</h2>
     <canvas id="cCoach" style="max-height:none"></canvas>
   </div>
+
+  <div class="panel">
+    <h2>📅 Heatmap visiteurs jour &times; heure</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 12px">Total des visiteurs cumulés par bucket jour de semaine × heure. Plus la case est foncée, plus le créneau est chargé.</p>
+    <div id="heatmap" style="display:grid;grid-template-columns:48px repeat(17,1fr);gap:2px;font-size:10px"></div>
+  </div>
+
+  <div class="panel">
+    <h2>⚖️ Comparateur de créneaux</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 14px">Compare 2 créneaux jour × tranche (ex. mardi aprem vs samedi matin) : visiteurs, présence moyenne, remplissage.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px" id="creneauCompare"></div>
+  </div>
+
+  <div class="panel">
+    <h2>🏆 Top 20 créneaux jour × tranche</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 14px">35 buckets (7 jours × 5 tranches : matin / midi / aprem / soirée / fin) classés par visiteurs cumulés.</p>
+    <div id="topBuckets"></div>
+  </div>
+
   <div class="panel">
     <h2>Détail des séances</h2>
     <div class="filters">
@@ -181,7 +200,7 @@
   <div class="foot">Visiteurs = personnes présentes (réservations validées). Source : re-set.club (widget bsport).</div>
 </div>
 <script>
-const API="https://api.production.bsport.io", COMPANY=5181, BUILD_TS="20260601092907";
+const API="https://api.production.bsport.io", COMPANY=5181, BUILD_TS="20260601211359";
 const COACHES={"227547": "Agathe Delacour", "39572": "Agathe Delacour", "53037": "Agathe Delacour", "177812": "Agathe Delacour", "44065": "Agathe Delacour", "53324": "Agathe Delacour", "74267": "Agathe Delacour", "227556": "Alexis Boutot", "131652": "Alexis Boutot", "227552": "alice dunoyer", "41152": "alice dunoyer", "184815": "alice dunoyer", "225176": "alice dunoyer", "168414": "alice dunoyer", "185332": "alice dunoyer", "167642": "alice dunoyer", "190059": "alice dunoyer", "172798": "alice dunoyer", "169575": "alice dunoyer", "165099": "alice dunoyer", "168809": "alice dunoyer", "45728": "alice dunoyer", "227549": "Aymerick Saubion ", "131649": "Aymerick Saubion ", "227551": "Cécile Penager", "131651": "Cécile Penager", "227543": "Faustine CHOPIN", "23777": "Faustine CHOPIN", "239406": "Faustine CHOPIN", "185748": "Faustine CHOPIN", "233273": "Faustine CHOPIN", "53325": "Faustine CHOPIN", "155522": "Faustine CHOPIN", "215142": "Faustine CHOPIN", "212731": "Faustine CHOPIN", "158567": "Faustine CHOPIN", "48011": "Faustine CHOPIN", "179899": "Faustine CHOPIN", "58320": "Faustine CHOPIN", "53783": "Faustine CHOPIN", "53785": "Faustine CHOPIN", "24968": "Faustine CHOPIN", "231801": "Free Flow session", "134598": "Free Flow session", "227555": "Gautier Lacointa", "128960": "Gautier Lacointa", "236486": "Gautier Lacointa", "223640": "Gautier Lacointa", "227553": "Leonore Chapin", "80936": "Leonore Chapin", "211584": "Leonore Chapin", "218335": "Leonore Chapin", "217883": "Leonore Chapin", "214641": "Leonore Chapin", "202012": "Leonore Chapin", "208829": "Leonore Chapin", "204055": "Leonore Chapin", "165947": "Leonore Chapin", "179067": "Leonore Chapin", "185177": "Leonore Chapin", "187358": "Leonore Chapin", "180219": "Leonore Chapin", "179779": "Leonore Chapin", "178059": "Leonore Chapin", "160301": "Leonore Chapin", "158219": "Leonore Chapin", "226835": "Marie Vergne", "131164": "Marie Vergne", "227544": "Pauline RAMON @pilatesbypops", "116193": "Pauline RAMON @pilatesbypops", "213905": "Pauline RAMON @pilatesbypops", "217418": "Pauline RAMON @pilatesbypops", "217265": "Pauline RAMON @pilatesbypops", "213001": "Pauline RAMON @pilatesbypops", "206455": "Pauline RAMON @pilatesbypops", "227554": "Prosper MATUSSIERE", "24986": "Prosper MATUSSIERE", "184617": "Prosper MATUSSIERE", "188461": "Prosper MATUSSIERE", "209717": "Prosper MATUSSIERE", "217247": "Prosper MATUSSIERE", "43893": "Prosper MATUSSIERE", "50559": "Prosper MATUSSIERE", "49460": "Prosper MATUSSIERE", "158446": "Prosper MATUSSIERE", "36810": "Prosper MATUSSIERE", "51419": "Prosper MATUSSIERE", "26620": "Prosper MATUSSIERE", "36704": "Prosper MATUSSIERE", "29738": "Prosper MATUSSIERE", "227545": "Sacha Adda", "131647": "Sacha Adda", "227548": "Sarah Sirel", "108993": "Sarah Sirel", "196538": "Sarah Sirel", "233025": "Théodore Zacchée", "56209": "Théodore Zacchée", "222804": "Théodore Zacchée", "179754": "Théodore Zacchée", "222424": "Théodore Zacchée", "155435": "Théodore Zacchée", "210649": "Théodore Zacchée", "162862": "Théodore Zacchée", "64077": "Théodore Zacchée", "74630": "Théodore Zacchée", "64078": "Théodore Zacchée", "227550": "Théodore Zachée", "131650": "Théodore Zachée", "220745": "Thomas Verdier", "126891": "Thomas Verdier"};
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
@@ -384,10 +403,101 @@ function renderTop(){
   const byD={};DATA.forEach(r=>byD[r.jour]=(byD[r.jour]||0)+r.presents);
   rankList('topDay',JOURS.filter(j=>byD[j]).map(j=>[j,byD[j]]).sort((a,b)=>b[1]-a[1]));
 }
+// ============== HEATMAP + COMPARATEUR DE CRÉNEAUX ==============
+const TRANCHES_R={matin:{label:'Matin (7-12h)',hours:[7,8,9,10,11]},
+  midi:{label:'Midi (12-14h)',hours:[12,13]},
+  aprem:{label:'Après-midi (14-18h)',hours:[14,15,16,17]},
+  soiree:{label:'Soirée (18-22h)',hours:[18,19,20,21]},
+  fin:{label:'Fin soirée (22h+)',hours:[22,23]}};
+let CA_R={jour:'Mardi',tranche:'aprem'}, CB_R={jour:'Samedi',tranche:'matin'};
+const fillR=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
+function getFinies(){return rows.filter(r=>r.finie);}
+function renderHeatmapR(){
+  const hm=document.getElementById('heatmap');if(!hm)return;
+  const D=getFinies(),hours=Array.from({length:17},(_,i)=>i+7);
+  const heat={};let max=0;
+  D.forEach(r=>{const h=parseInt((r.heure||'').slice(0,2));if(isNaN(h))return;
+    const k=r.jour+'|'+h;heat[k]=(heat[k]||0)+(r.presents||0);if(heat[k]>max)max=heat[k];});
+  let html='<div></div>';
+  hours.forEach(h=>html+=`<div style="text-align:center;color:var(--muted);font-weight:600;padding:3px 0">${h}h</div>`);
+  JOURS.forEach(j=>{
+    html+=`<div style="color:var(--muted);text-align:right;padding:0 6px;font-weight:600">${j.slice(0,3)}</div>`;
+    hours.forEach(h=>{const v=heat[j+'|'+h]||0;const t=max?v/max:0;
+      const r=Math.round(44+(255-44)*t),g=Math.round(223-(223-100)*t),b=Math.round(98-(98-50)*t);
+      const op=v>0?0.25+0.7*t:0.05;
+      html+=`<div style="aspect-ratio:1;background:rgba(${r},${g},${b},${op});border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:9.5px" title="${j} ${h}h: ${nf(v)} visiteurs">${v?(v>=1000?Math.round(v/1000)+'k':v):''}</div>`;});
+  });
+  hm.innerHTML=html;
+}
+function computeCreneauR(jour,tranche){
+  const hours=new Set(TRANCHES_R[tranche].hours);
+  const f=getFinies().filter(r=>{const h=parseInt((r.heure||'').slice(0,2));return r.jour===jour&&hours.has(h);});
+  const presents=f.reduce((s,r)=>s+(r.presents||0),0);
+  const capacite=f.reduce((s,r)=>s+(r.capacite||0),0);
+  const byAct={};f.forEach(r=>{if(!r.activite)return;byAct[r.activite]=(byAct[r.activite]||0)+(r.presents||0);});
+  const topAct=Object.entries(byAct).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  const byCoach={};f.forEach(r=>{if(!r.coach)return;byCoach[r.coach]=byCoach[r.coach]||{p:0,n:0};byCoach[r.coach].p+=(r.presents||0);byCoach[r.coach].n++;});
+  const topCoach=Object.entries(byCoach).map(([k,o])=>[k,o.p/o.n,o.n]).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  return {n:f.length,presents,capacite,rempl:capacite?presents/capacite:0,moy:f.length?presents/f.length:0,topAct,topCoach};
+}
+function renderCreneauCompareR(){
+  const wrap=document.getElementById('creneauCompare');if(!wrap)return;
+  const box=(side,sel)=>{const c=computeCreneauR(sel.jour,sel.tranche);
+    const color=side==='A'?'var(--accent)':'var(--gold)';
+    return `<div style="background:var(--card2);padding:14px 16px;border-radius:10px;border-left:3px solid ${color}">
+      <div style="display:flex;gap:8px;margin-bottom:12px">
+        <select data-side="${side}" data-field="jour" style="flex:1;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:13px">${JOURS.map(j=>`<option value="${j}" ${j===sel.jour?'selected':''}>${j}</option>`).join('')}</select>
+        <select data-side="${side}" data-field="tranche" style="flex:1;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:13px">${Object.entries(TRANCHES_R).map(([k,v])=>`<option value="${k}" ${k===sel.tranche?'selected':''}>${v.label}</option>`).join('')}</select>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
+        <div><div style="font-size:22px;font-weight:800;color:var(--accent2)">${nf(c.n)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Séances</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:var(--accent2)">${c.moy.toFixed(1)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Visiteurs/séance</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:${fillR(c.rempl)}">${Math.round(100*c.rempl)}%</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Remplissage</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:var(--accent2)">${nf(c.presents)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Visiteurs cumulés</div></div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">Top activités · Top coachs</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:11.5px">
+        <div>${c.topAct.length?c.topAct.map(([k,v],i)=>`<div style="padding:3px 7px;background:var(--bg);border-radius:5px;margin-bottom:3px"><span style="color:var(--muted)">${i+1}.</span> ${k.slice(0,20)} <span style="color:var(--accent2);font-weight:700;float:right">${v}</span></div>`).join(''):'<div style="color:var(--muted);font-style:italic">—</div>'}</div>
+        <div>${c.topCoach.length?c.topCoach.map(([k,m,n],i)=>`<div style="padding:3px 7px;background:var(--bg);border-radius:5px;margin-bottom:3px"><span style="color:var(--muted)">${i+1}.</span> ${k.slice(0,20)} <span style="color:var(--accent2);font-weight:700;float:right">${m.toFixed(1)}</span></div>`).join(''):'<div style="color:var(--muted);font-style:italic">—</div>'}</div>
+      </div>
+    </div>`;};
+  const cA=computeCreneauR(CA_R.jour,CA_R.tranche),cB=computeCreneauR(CB_R.jour,CB_R.tranche);
+  const dV=cB.n?Math.round(100*(cA.n-cB.n)/cB.n):0, dM=cB.moy?Math.round(10*(cA.moy-cB.moy))/10:0;
+  wrap.innerHTML=`${box('A',CA_R)}${box('B',CB_R)}
+    <div style="grid-column:span 2;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 16px;text-align:center;font-size:13px;color:var(--muted)">
+      <b style="color:var(--accent)">${CA_R.jour} ${TRANCHES_R[CA_R.tranche].label}</b> vs <b style="color:var(--gold)">${CB_R.jour} ${TRANCHES_R[CB_R.tranche].label}</b> ·
+      Volume : <span style="color:${dV>0?'var(--green)':'var(--red)'};font-weight:700">${dV>0?'+':''}${dV}%</span> ·
+      Visiteurs moy. : <span style="color:${dM>0?'var(--green)':'var(--red)'};font-weight:700">${dM>0?'+':''}${dM}</span>
+    </div>`;
+  wrap.querySelectorAll('select[data-side]').forEach(s=>s.addEventListener('change',e=>{
+    const sel=e.target.dataset.side==='A'?CA_R:CB_R;sel[e.target.dataset.field]=e.target.value;
+    renderCreneauCompareR();
+  }));
+}
+function renderTopBucketsR(){
+  const buckets=[],D=getFinies();
+  for(const jour of JOURS){for(const [tk,tv] of Object.entries(TRANCHES_R)){
+    const hours=new Set(tv.hours);
+    const f=D.filter(r=>{const h=parseInt((r.heure||'').slice(0,2));return r.jour===jour&&hours.has(h);});
+    const p=f.reduce((s,r)=>s+(r.presents||0),0);
+    const c=f.reduce((s,r)=>s+(r.capacite||0),0);
+    buckets.push({label:jour+' '+tv.label,n:f.length,p,c,r:c?p/c:0});
+  }}
+  buckets.sort((a,b)=>b.p-a.p);
+  const max=buckets[0]?.p||1,w=document.getElementById('topBuckets');if(!w)return;
+  w.innerHTML=buckets.slice(0,20).map((b,i)=>`<div style="display:grid;grid-template-columns:32px 280px 1fr auto;gap:10px;align-items:center;font-size:13px;padding:5px 0;border-bottom:1px solid var(--line)">
+    <span style="color:var(--muted);font-weight:700;text-align:right">${i+1}.</span>
+    <span style="font-weight:600">${b.label}</span>
+    <span style="height:8px;background:var(--line);border-radius:4px;overflow:hidden"><span style="display:block;height:100%;background:${fillR(b.r)};width:${Math.round(100*b.p/max)}%"></span></span>
+    <span style="color:var(--muted);font-variant-numeric:tabular-nums;min-width:160px;text-align:right">${nf(b.p)} visiteurs · ${Math.round(100*b.r)}% remplissage</span>
+  </div>`).join('');
+}
+
 function renderAll(){
   populateFilters();
   renderKpis();renderTrend();renderEv();renderTop();renderAct();renderHour();renderCoach();renderCA();
   renderTable();updateLabel();
+  renderHeatmapR();renderCreneauCompareR();renderTopBucketsR();
 }
 
 // ---- interactions ----
