@@ -40,7 +40,13 @@ def check(path):
         return {"brand": name, "status": "ERROR", "issues": [f"lecture impossible : {e}"]}
     if not isinstance(d, dict):
         return {"brand": name, "status": "ERROR", "issues": ["format inattendu (pas un dict)"]}
-    rows = list(d.values())
+    # Les stores padel ont une structure {slug:{meta,sessions}} incompatible avec les
+    # stores fitness {id:{date,presents,capacite,...}}. On les check séparément, pas ici.
+    PADEL_STORES = {"padel_idf", "padel_idf_history", "padel_national", "padel_insights",
+                    "padel_etude_kpis", "brand_prices"}
+    if name in PADEL_STORES:
+        return {"brand": name, "status": "OK", "count": len(d), "issues": [], "note": "structure padel, non-comparable"}
+    rows = [v for v in d.values() if isinstance(v, dict)]
     n = len(rows)
     issues = []
 

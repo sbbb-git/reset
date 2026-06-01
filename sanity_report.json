@@ -1,10 +1,10 @@
 {
- "checked_at": "2026-05-31 14:53",
+ "checked_at": "2026-06-01 18:00",
  "brands": [
   {
    "brand": "anybuddy",
    "status": "OK",
-   "count": 328,
+   "count": 394,
    "issues": []
   },
   {
@@ -16,13 +16,13 @@
   {
    "brand": "banote",
    "status": "OK",
-   "count": 693,
+   "count": 1073,
    "issues": []
   },
   {
    "brand": "barrys",
    "status": "OK",
-   "count": 77,
+   "count": 87,
    "issues": []
   },
   {
@@ -34,13 +34,21 @@
   {
    "brand": "burningbar",
    "status": "OK",
-   "count": 30,
+   "count": 39,
    "issues": []
   },
   {
    "brand": "dna",
+   "status": "ALERT",
+   "count": 779,
+   "issues": [
+    "dernier relevé il y a 22h (> 16h attendu)"
+   ]
+  },
+  {
+   "brand": "driphiit",
    "status": "OK",
-   "count": 522,
+   "count": 34,
    "issues": []
   },
   {
@@ -52,20 +60,42 @@
   {
    "brand": "episod",
    "status": "OK",
-   "count": 1119,
+   "count": 1241,
+   "issues": []
+  },
+  {
+   "brand": "kore",
+   "status": "OK",
+   "count": 68,
    "issues": []
   },
   {
    "brand": "le33foch",
-   "status": "OK",
-   "count": 131,
-   "issues": []
+   "status": "ALERT",
+   "count": 263,
+   "issues": [
+    "dernier relevé il y a 22h (> 16h attendu)"
+   ]
   },
   {
    "brand": "lecercle",
    "status": "OK",
-   "count": 98,
+   "count": 74,
    "issues": []
+  },
+  {
+   "brand": "padel_idf",
+   "status": "OK",
+   "count": 143,
+   "issues": [],
+   "note": "structure padel, non-comparable"
+  },
+  {
+   "brand": "padel_insights",
+   "status": "OK",
+   "count": 8,
+   "issues": [],
+   "note": "structure padel, non-comparable"
   },
   {
    "brand": "poses",
@@ -82,9 +112,9 @@
   {
    "brand": "reset",
    "status": "WARN",
-   "count": 424,
+   "count": 431,
    "issues": [
-    "16 séances avec présents > capacité"
+    "17 séances avec présents > capacité"
    ]
   },
   {
@@ -98,19 +128,19 @@
   {
    "brand": "santroch",
    "status": "OK",
-   "count": 64,
+   "count": 71,
    "issues": []
   },
   {
    "brand": "senseclub",
    "status": "OK",
-   "count": 30,
+   "count": 34,
    "issues": []
   },
   {
    "brand": "snakeandtwist",
    "status": "OK",
-   "count": 295,
+   "count": 297,
    "issues": []
   },
   {
@@ -124,7 +154,7 @@
    "status": "WARN",
    "count": 2464,
    "issues": [
-    "3 séances avec présents > capacité"
+    "2 séances avec présents > capacité"
    ]
   }
  ]
