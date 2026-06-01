@@ -50,17 +50,16 @@ def check(path):
     n = len(rows)
     issues = []
 
-    # 1. overbook : présents > capacité
-    overbook = [r for r in rows if (r.get("presents") or 0) > (r.get("capacite") or 0) > 0]
-    if overbook:
-        issues.append(f"{len(overbook)} séances avec présents > capacité")
+    # NOTE : overbook (présents > capacité) volontairement retiré — la plupart
+    # des plateformes booking acceptent les sur-bookings (liste d'attente, places
+    # walk-in, comptage différé). Ce n'est pas un signal de qualité fiable.
 
-    # 2. capacités aberrantes
+    # 1. capacités aberrantes (livestream / cours géants visibles via API)
     bigcap = [r for r in rows if (r.get("capacite") or 0) > CAP_MAX]
     if bigcap:
         issues.append(f"{len(bigcap)} séances avec capacité > {CAP_MAX} (livestream ?)")
 
-    # 3. last update : trouve le releve le plus récent dans le store
+    # 2. last update : trouve le releve le plus récent dans le store
     last = max((r.get("releve") or "" for r in rows), default="")
     if last:
         try:

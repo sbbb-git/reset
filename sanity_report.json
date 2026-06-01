@@ -1,16 +1,16 @@
 {
- "checked_at": "2026-06-01 18:00",
+ "checked_at": "2026-06-01 18:11",
  "brands": [
   {
    "brand": "anybuddy",
    "status": "OK",
-   "count": 394,
+   "count": 395,
    "issues": []
   },
   {
    "brand": "athletx",
    "status": "OK",
-   "count": 248,
+   "count": 290,
    "issues": []
   },
   {
@@ -28,7 +28,7 @@
   {
    "brand": "belly",
    "status": "OK",
-   "count": 212,
+   "count": 242,
    "issues": []
   },
   {
@@ -48,7 +48,7 @@
   {
    "brand": "driphiit",
    "status": "OK",
-   "count": 34,
+   "count": 40,
    "issues": []
   },
   {
@@ -60,13 +60,13 @@
   {
    "brand": "episod",
    "status": "OK",
-   "count": 1241,
+   "count": 1243,
    "issues": []
   },
   {
    "brand": "kore",
    "status": "OK",
-   "count": 68,
+   "count": 80,
    "issues": []
   },
   {
@@ -80,7 +80,7 @@
   {
    "brand": "lecercle",
    "status": "OK",
-   "count": 74,
+   "count": 84,
    "issues": []
   },
   {
@@ -100,7 +100,7 @@
   {
    "brand": "poses",
    "status": "OK",
-   "count": 414,
+   "count": 471,
    "issues": []
   },
   {
@@ -111,19 +111,15 @@
   },
   {
    "brand": "reset",
-   "status": "WARN",
+   "status": "OK",
    "count": 431,
-   "issues": [
-    "17 séances avec présents > capacité"
-   ]
+   "issues": []
   },
   {
    "brand": "riise",
-   "status": "WARN",
+   "status": "OK",
    "count": 287,
-   "issues": [
-    "1 séances avec présents > capacité"
-   ]
+   "issues": []
   },
   {
    "brand": "santroch",
@@ -134,7 +130,7 @@
   {
    "brand": "senseclub",
    "status": "OK",
-   "count": 34,
+   "count": 35,
    "issues": []
   },
   {
@@ -146,16 +142,14 @@
   {
    "brand": "spacecycle",
    "status": "OK",
-   "count": 41,
+   "count": 46,
    "issues": []
   },
   {
    "brand": "thenewme",
-   "status": "WARN",
-   "count": 2464,
-   "issues": [
-    "2 séances avec présents > capacité"
-   ]
+   "status": "OK",
+   "count": 2815,
+   "issues": []
   }
  ]
 }
