@@ -51,6 +51,10 @@ jobs:
         run: python3 padel_insights_compute.py
         continue-on-error: true
 
+      - name: Détection anomalies (idle 24h+, prix shifts, drops volume)
+        run: python3 padel_anomalies_compute.py
+        continue-on-error: true
+
       # ============== SYNC SUPABASE ==============
       - name: Sync vers Supabase (padel_clubs + padel_slots)
         env:
@@ -66,7 +70,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add padel_idf_data.json padel_idf_creneaux.csv \
                   padel_idf_clubs.json doinsport_idf_clubs.json playtomic_idf_clubs.json \
-                  padel_club_unified.json padel_etude_kpis.json padel_insights_data.json
+                  padel_club_unified.json padel_etude_kpis.json padel_insights_data.json \
+                  padel_anomalies.json
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else

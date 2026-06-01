@@ -1,0 +1,192 @@
+[
+ {
+  "id": 50,
+  "name": "Avignon",
+  "cp": "84130",
+  "address": "948 route de Saint-Saturnin, 84130 Le Pontet",
+  "dept": "84",
+  "metro": "marseille",
+  "lat": 43.9521929,
+  "lng": 4.8713098
+ },
+ {
+  "id": 20,
+  "name": "Dijon",
+  "cp": "21850",
+  "address": "28 rue de Cracovie, 21850 Saint-Apollinaire",
+  "dept": "21",
+  "metro": "bourgogne",
+  "lat": 47.34102,
+  "lng": 5.0734199
+ },
+ {
+  "id": 10,
+  "name": "Evry-Courcouronnes",
+  "cp": "91080",
+  "address": "3 avenue du bois de l'Epine, 91080 Évry-Courcouronnes",
+  "dept": "91",
+  "metro": "idf",
+  "lat": 48.62901799999999,
+  "lng": 2.4061598
+ },
+ {
+  "id": 41,
+  "name": "Le Mans",
+  "cp": "72000",
+  "address": "13 Avenue du Panorama, 72000 Le Mans",
+  "dept": "72",
+  "metro": "nantes-rennes",
+  "lat": 47.96363270000001,
+  "lng": 0.2190805
+ },
+ {
+  "id": 6,
+  "name": "Lille-Bondues",
+  "cp": "59910",
+  "address": "5 chemin des Grands Obeaux, 59910 Bondues",
+  "dept": "59",
+  "metro": "lille",
+  "lat": 50.690521240234375,
+  "lng": 3.0850205421447754
+ },
+ {
+  "id": 28,
+  "name": "Lille-Lezennes",
+  "cp": "59260",
+  "address": "4 rue Paul Langevin, 59260 Lezennes",
+  "dept": "59",
+  "metro": "lille",
+  "lat": 50.61693203477826,
+  "lng": 3.099442720413208
+ },
+ {
+  "id": 32,
+  "name": "Lyon-Barolles",
+  "cp": "69530",
+  "address": "36 chemin de Sacuny, 69530 Brignais",
+  "dept": "69",
+  "metro": "lyon",
+  "lat": 45.6817246,
+  "lng": 4.7714824
+ },
+ {
+  "id": 48,
+  "name": "Lyon-Dardilly",
+  "cp": "69570",
+  "address": "11 chemin des pins, 69570 Dardilly",
+  "dept": "69",
+  "metro": "lyon",
+  "lat": 45.792426,
+  "lng": 4.738842
+ },
+ {
+  "id": 16,
+  "name": "Marne la Vallée",
+  "cp": "77185",
+  "address": "29 rue de la Maison Rouge, 77185 Lognes",
+  "dept": "77",
+  "metro": "idf",
+  "lat": 48.828060150146484,
+  "lng": 2.6295807361602788
+ },
+ {
+  "id": 52,
+  "name": "Marseille-La Valentine",
+  "cp": "13011",
+  "address": "1 Montée Commandant de Robien, 13011 Marseille",
+  "dept": "13",
+  "metro": "marseille",
+  "lat": 43.2905626,
+  "lng": 5.4834382
+ },
+ {
+  "id": 29,
+  "name": "Montpellier",
+  "cp": "34170",
+  "address": "400 avenue Marcel Dassault, 34170 Castelnau-le-Lez",
+  "dept": "34",
+  "metro": "toulouse",
+  "lat": 43.6282,
+  "lng": 3.91194
+ },
+ {
+  "id": 42,
+  "name": "Nantes – Carquefou",
+  "cp": "44470",
+  "address": "ZAC du Moulin Boisseau, 3 rue Suzanne Lenglen, 44470 Carquefou",
+  "dept": "44",
+  "metro": "nantes-rennes",
+  "lat": 47.2845814,
+  "lng": -1.4767439
+ },
+ {
+  "id": 9,
+  "name": "Porte d'aubervilliers",
+  "cp": "93300",
+  "address": "111 avenue Victor Hugo, 93300 Aubervilliers",
+  "dept": "93",
+  "metro": "idf",
+  "lat": 48.90721019999999,
+  "lng": 2.3756331
+ },
+ {
+  "id": 49,
+  "name": "Puteaux-Ile",
+  "cp": "92800",
+  "address": "1 allée des sports, 92800 Puteaux",
+  "dept": "92",
+  "metro": "idf",
+  "lat": 48.8762619,
+  "lng": 2.243941
+ },
+ {
+  "id": 19,
+  "name": "Rennes-Cap Malo",
+  "cp": "35520",
+  "address": "Avenue du Phare du Grand Lejeon Centre Commercial Cap Malo, 35520 Melesse",
+  "dept": "35",
+  "metro": "nantes-rennes",
+  "lat": 48.200007,
+  "lng": -1.7224
+ },
+ {
+  "id": 15,
+  "name": "Rennes-Vern",
+  "cp": "35770",
+  "address": "La Bois de Soeuvre - Route de Chantepie, 35770 Vern-sur-Seiche",
+  "dept": "35",
+  "metro": "nantes-rennes",
+  "lat": 48.05611,
+  "lng": -1.602827
+ },
+ {
+  "id": 30,
+  "name": "Saint Etienne",
+  "cp": "42000",
+  "address": "Allée Jean Lauer, 42000 Saint-Étienne",
+  "dept": "42",
+  "metro": "lyon",
+  "lat": 45.46050899999999,
+  "lng": 4.3922899
+ },
+ {
+  "id": 34,
+  "name": "Toulouse-Sept Deniers",
+  "cp": "31200",
+  "address": "2 rue de l'égalité, 31200 Toulouse",
+  "dept": "31",
+  "metro": "toulouse",
+  "lat": 43.6321,
+  "lng": 1.41191
+ },
+ {
+  "id": 11,
+  "name": "Villeneuve-Loubet",
+  "cp": "06270",
+  "address": "2284 route de Grasse, 06270 Villeneuve-Loubet",
+  "dept": "06",
+  "metro": "marseille",
+  "lat": 43.6612286,
+  "lng": 7.095559799999999
+ }
+]
