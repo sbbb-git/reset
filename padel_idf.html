@@ -114,6 +114,20 @@
   </div>
 
   <div class="panel">
+    <h2>⚖️ Comparateur de créneaux</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-6px 0 14px">Compare 2 créneaux jour × tranche horaire. Idéal pour comparer "mardi après-midi" vs "samedi matin" : volume, prix moyen, taux d'occupation, top clubs.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px" id="creneauCompare">
+      <!-- 2 sélecteurs + résultats injected here -->
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>🏆 Top 20 créneaux jour × tranche horaire</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-6px 0 14px">Classement des 35 buckets (7 jours × 5 tranches : matin / midi / après-midi / soirée / fin de soirée) par nombre de sessions cumulées. Permet de voir d'un coup d'œil les heures premium.</p>
+    <div id="topBuckets"></div>
+  </div>
+
+  <div class="panel">
     <h2>🔗 Cross-validation inter-plateformes (clubs sur 2+ sources)</h2>
     <p style="color:var(--muted);font-size:12.5px;margin:-6px 0 12px">Détection automatique des doublons via fuzzy matching (CP + nom). Comparaison des prix médians par durée entre les plateformes : si écart {">"} 20% ou créneaux/jour divergents, signal de divergence d'inventory ou de pricing par canal.</p>
     <div id="crossCheck"></div>
@@ -337,6 +351,116 @@ function render(){
       <td>${eur(s.prix)}</td>
       <td><span class="pill ${s.statut}">${s.statut}</span></td></tr>`).join('');
   renderCrossCheck();
+  renderCreneauCompare(D);
+  renderTopBuckets(D);
+}
+
+// ============== COMPARATEUR DE CRÉNEAUX ==============
+const JOURS_ALL=['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+const TRANCHES={
+  'matin':       {label:'Matin (7-12h)',         hours:[7,8,9,10,11]},
+  'midi':        {label:'Midi (12-14h)',         hours:[12,13]},
+  'aprem':       {label:'Après-midi (14-18h)',   hours:[14,15,16,17]},
+  'soiree':      {label:'Soirée (18-22h)',       hours:[18,19,20,21]},
+  'fin_soiree':  {label:'Fin de soirée (22h+)',  hours:[22,23]},
+};
+let CRENEAU_A={jour:'Mardi', tranche:'aprem'};
+let CRENEAU_B={jour:'Samedi', tranche:'matin'};
+
+function computeCreneau(rows, jour, tranche){
+  const hours=new Set(TRANCHES[tranche].hours);
+  const filtered=rows.filter(r=>{
+    const h=parseInt((r.heure||'').slice(0,2));
+    return r.jour===jour && hours.has(h);
+  });
+  const n=filtered.length;
+  const reserves=filtered.filter(r=>r.statut==='reserve').length;
+  const prices=filtered.map(r=>r.prix).filter(p=>p>0);
+  const prixMoy=prices.length?prices.reduce((a,b)=>a+b,0)/prices.length:0;
+  // Top clubs
+  const byClub={};
+  filtered.forEach(r=>{byClub[r.slug]=byClub[r.slug]||{nom:r.nom,city:r.city,n:0};byClub[r.slug].n++;});
+  const topClubs=Object.entries(byClub).map(([slug,c])=>({slug,...c})).sort((a,b)=>b.n-a.n).slice(0,5);
+  return {n, reserves, prixMoy, topClubs, occ:n?reserves/n:0};
+}
+
+function renderCreneauCompare(rows){
+  const wrap=document.getElementById('creneauCompare');
+  const sideBox=(side, sel)=>{
+    const c=computeCreneau(rows, sel.jour, sel.tranche);
+    return `<div style="background:var(--card2);padding:14px 16px;border-radius:10px;border-left:3px solid ${side==='A'?'var(--accent)':'var(--gold)'}">
+      <div style="display:flex;gap:8px;margin-bottom:14px">
+        <select data-side="${side}" data-field="jour" style="flex:1;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:13px">
+          ${JOURS_ALL.map(j=>`<option value="${j}" ${j===sel.jour?'selected':''}>${j}</option>`).join('')}
+        </select>
+        <select data-side="${side}" data-field="tranche" style="flex:1;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:13px">
+          ${Object.entries(TRANCHES).map(([k,v])=>`<option value="${k}" ${k===sel.tranche?'selected':''}>${v.label}</option>`).join('')}
+        </select>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
+        <div><div style="font-size:22px;font-weight:800;color:var(--accent2)">${nf(c.n)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Sessions</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:var(--accent2)">${eur(c.prixMoy)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Prix moyen</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:${c.occ>.5?'var(--red)':'var(--green)'}">${Math.round(100*c.occ)}%</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Occupation</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:var(--accent2)">${nf(c.reserves)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Réservés</div></div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">Top 5 clubs sur ce créneau</div>
+      <div style="display:flex;flex-direction:column;gap:4px">${c.topClubs.length?c.topClubs.map((cl,i)=>
+        `<a href="padel_club.html?slug=${encodeURIComponent(cl.slug)}" style="display:flex;justify-content:space-between;font-size:12px;padding:5px 8px;background:var(--bg);border-radius:5px;text-decoration:none;color:var(--text)"><span><span style="color:var(--muted);font-weight:700;margin-right:6px">${i+1}.</span>${cl.nom}<span style="color:var(--muted);font-size:10px;margin-left:4px">${cl.city||''}</span></span><span style="color:var(--accent2);font-weight:700">${cl.n}</span></a>`
+      ).join(''):'<div style="color:var(--muted);font-size:12px;font-style:italic">Aucune session sur ce créneau</div>'}</div>
+    </div>`;
+  };
+
+  // Delta entre les 2
+  const cA=computeCreneau(rows, CRENEAU_A.jour, CRENEAU_A.tranche);
+  const cB=computeCreneau(rows, CRENEAU_B.jour, CRENEAU_B.tranche);
+  const deltaPct=cB.n?Math.round(100*(cA.n-cB.n)/cB.n):0;
+  const deltaPrix=cA.prixMoy && cB.prixMoy?Math.round(cA.prixMoy-cB.prixMoy):0;
+
+  wrap.innerHTML=`
+    ${sideBox('A',CRENEAU_A)}
+    ${sideBox('B',CRENEAU_B)}
+    <div style="grid-column:span 2;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 16px;text-align:center;font-size:13px;color:var(--muted)">
+      <b style="color:var(--accent)">${CRENEAU_A.jour} ${TRANCHES[CRENEAU_A.tranche].label}</b> vs
+      <b style="color:var(--gold)">${CRENEAU_B.jour} ${TRANCHES[CRENEAU_B.tranche].label}</b> ·
+      Volume : <span style="color:${deltaPct>0?'var(--green)':'var(--red)'};font-weight:700">${deltaPct>0?'+':''}${deltaPct}%</span> ·
+      Prix : <span style="color:${deltaPrix>0?'var(--green)':'var(--red)'};font-weight:700">${deltaPrix>0?'+':''}${deltaPrix} €</span>
+    </div>`;
+
+  wrap.querySelectorAll('select[data-side]').forEach(s=>{
+    s.addEventListener('change', e=>{
+      const side=e.target.dataset.side, field=e.target.dataset.field;
+      const sel = side==='A'?CRENEAU_A:CRENEAU_B;
+      sel[field]=e.target.value;
+      renderCreneauCompare(rows);
+    });
+  });
+}
+
+// ============== TOP BUCKETS jour × tranche ==============
+function renderTopBuckets(rows){
+  const buckets=[];
+  for(const jour of JOURS_ALL){
+    for(const [tk,tv] of Object.entries(TRANCHES)){
+      const hours=new Set(tv.hours);
+      const filtered=rows.filter(r=>{
+        const h=parseInt((r.heure||'').slice(0,2));
+        return r.jour===jour && hours.has(h);
+      });
+      buckets.push({jour, tranche:tk, label:`${jour} ${tv.label}`, n:filtered.length,
+        reserves:filtered.filter(r=>r.statut==='reserve').length});
+    }
+  }
+  buckets.sort((a,b)=>b.n-a.n);
+  const max=buckets[0]?.n||1;
+  document.getElementById('topBuckets').innerHTML=buckets.slice(0,20).map((b,i)=>{
+    const occ=b.n?Math.round(100*b.reserves/b.n):0;
+    return `<div style="display:grid;grid-template-columns:32px 280px 1fr auto;gap:10px;align-items:center;font-size:13px;padding:5px 0;border-bottom:1px solid var(--line)">
+      <span style="color:var(--muted);font-weight:700;text-align:right">${i+1}.</span>
+      <span style="font-weight:600">${b.label}</span>
+      <span style="height:8px;background:var(--line);border-radius:4px;overflow:hidden"><span style="display:block;height:100%;background:var(--accent2);width:${Math.round(100*b.n/max)}%"></span></span>
+      <span style="color:var(--muted);font-variant-numeric:tabular-nums;min-width:140px;text-align:right">${nf(b.n)} sessions · ${occ}% occ.</span>
+    </div>`;
+  }).join('');
 }
 
 ['fDept','fPeriode','fQ','fSource'].forEach(id=>{
