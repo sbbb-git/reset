@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Club padel · détail</title>
+<script src="vendor_chartjs.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  :root{--bg:#0a0e1a;--card:#121828;--card2:#1a2238;--line:#2a3354;--text:#eef1fb;
+        --muted:#8a96b8;--accent:#2CDF62;--accent2:#7af0a0;--gold:#e6c14d;--red:#e07a6f;--blue:#6f82ff;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.55;}
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:1200px;margin:0 auto;padding:24px;}
+  .back{font-size:13px;color:var(--muted);margin-bottom:14px;display:inline-block;}
+  .back:hover{color:var(--accent);}
+  header.club{padding:18px 0 20px;border-bottom:1px solid var(--line);}
+  header.club h1{margin:0 0 6px;font-size:26px;font-weight:800;letter-spacing:-.3px;}
+  header.club .addr{color:var(--muted);font-size:14px;}
+  header.club .badges{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;}
+  header.club .badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:99px;letter-spacing:.3px;}
+  .badge.platform-anybuddy{background:rgba(44,223,98,.18);color:#2CDF62;border:1px solid rgba(44,223,98,.4);}
+  .badge.platform-urbanpadel{background:rgba(255,107,53,.18);color:#ff6b35;border:1px solid rgba(255,107,53,.4);}
+  .badge.platform-doinsport{background:rgba(155,127,240,.18);color:#9b7ff0;border:1px solid rgba(155,127,240,.4);}
+  .badge.platform-playtomic{background:rgba(250,166,25,.18);color:#faa619;border:1px solid rgba(250,166,25,.4);}
+  .badge.chain{background:rgba(230,193,77,.18);color:var(--gold);}
+  .badge.unif{background:rgba(111,130,255,.18);color:var(--blue);}
+  /* Grid layout */
+  .layout{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:22px;}
+  @media(max-width:900px){.layout{grid-template-columns:1fr;}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:16px;}
+  .panel h2{margin:0 0 14px;font-size:13px;color:var(--accent2);text-transform:uppercase;letter-spacing:.6px;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;}
+  .kpi{background:var(--card2);padding:12px 14px;border-radius:8px;border-left:3px solid var(--accent);}
+  .kpi .v{font-size:22px;font-weight:800;color:var(--accent2);line-height:1;}
+  .kpi .l{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-top:5px;}
+  /* Map */
+  #map{height:260px;border-radius:10px;}
+  /* Table */
+  table.tbl{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums;}
+  table.tbl th,table.tbl td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);}
+  table.tbl th{color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;background:var(--card);font-weight:600;}
+  table.tbl tr:hover{background:rgba(44,223,98,.04);}
+  .pill{padding:2px 8px;border-radius:99px;font-size:10.5px;font-weight:700;}
+  .pill.dispo{background:rgba(95,207,138,.18);color:var(--accent);}
+  .pill.reserve{background:rgba(224,122,111,.18);color:var(--red);}
+  .pill.finie{background:rgba(138,150,184,.18);color:var(--muted);}
+  /* Cross-platform list */
+  .cross-list .item{background:var(--card2);padding:10px 14px;border-radius:8px;margin:6px 0;border-left:3px solid var(--blue);}
+  .cross-list .item .nm{font-weight:600;font-size:13px;}
+  .cross-list .item .src{font-size:11px;color:var(--muted);}
+  .empty{color:var(--muted);text-align:center;padding:20px;font-style:italic;font-size:13px;}
+  canvas{max-height:240px;}
+  .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:8px;}
+  .pp{background:var(--card2);padding:10px 14px;border-radius:8px;border-left:3px solid var(--gold);}
+  .pp .v{font-size:18px;font-weight:800;color:var(--gold);}
+  .pp .l{font-size:10.5px;color:var(--muted);margin-top:3px;}
+  .infobox{background:rgba(111,130,255,.08);border:1px solid rgba(111,130,255,.3);border-left:3px solid var(--blue);padding:10px 14px;border-radius:8px;font-size:12.5px;color:var(--muted);margin:10px 0;}
+  .infobox b{color:var(--text);}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <a class="back" href="javascript:history.back()">← retour</a>
+
+  <div id="loading">
+    <p style="color:var(--muted)">⏳ Chargement…</p>
+  </div>
+
+  <div id="content" style="display:none">
+    <header class="club">
+      <h1 id="cName">—</h1>
+      <div class="addr" id="cAddr">—</div>
+      <div class="badges" id="cBadges"></div>
+    </header>
+
+    <div class="layout">
+      <div>
+        <!-- KPIs -->
+        <div class="panel">
+          <h2>📊 Vue d'ensemble</h2>
+          <div class="kpis" id="kpis"></div>
+        </div>
+
+        <!-- Prix -->
+        <div class="panel">
+          <h2>💰 Tarifs observés</h2>
+          <div id="prices"></div>
+        </div>
+
+        <!-- Évolution -->
+        <div class="panel">
+          <h2>📈 Activité par mois</h2>
+          <canvas id="cMonthly"></canvas>
+        </div>
+
+        <!-- Heatmap jour × heure -->
+        <div class="panel">
+          <h2>🕐 Heatmap activité (jour × heure)</h2>
+          <div id="heatmap"></div>
+        </div>
+
+        <!-- Cross-platform -->
+        <div class="panel">
+          <h2>🔗 Présent sur d'autres plateformes</h2>
+          <div class="cross-list" id="cross"></div>
+        </div>
+
+        <!-- Dernières séances -->
+        <div class="panel">
+          <h2>📋 Dernières séances observées (50)</h2>
+          <table class="tbl" id="tSessions">
+            <thead><tr><th>Date</th><th>Heure</th><th>Terrain</th><th>Durée</th><th>Prix</th><th>Statut</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <!-- Mini carte -->
+        <div class="panel">
+          <h2>📍 Localisation</h2>
+          <div id="map"></div>
+          <p style="color:var(--muted);font-size:11.5px;margin-top:10px" id="loc">—</p>
+        </div>
+
+        <!-- Quick links -->
+        <div class="panel">
+          <h2>🔎 Liens</h2>
+          <div id="links" style="font-size:12.5px"></div>
+        </div>
+
+        <!-- Méta -->
+        <div class="panel">
+          <h2>ℹ️ Métadonnées</h2>
+          <div id="meta" style="font-size:11.5px;color:var(--muted)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const PNAME = {anybuddy:'Anybuddy', urbanpadel:'UrbanPadel', doinsport:'Doinsport', playtomic:'Playtomic'};
+const DEPT_NAME = {'75':'Paris','77':'Seine-et-Marne','78':'Yvelines','91':'Essonne','92':'Hauts-de-Seine','93':'Seine-Saint-Denis','94':'Val-de-Marne','95':"Val-d'Oise",'69':'Rhône','13':'Bouches-du-Rhône','33':'Gironde','31':'Haute-Garonne','59':'Nord','44':'Loire-Atlantique','67':'Bas-Rhin','06':'Alpes-Maritimes'};
+const fmt = v => Math.round(v||0).toLocaleString('fr-FR');
+const eur = v => v ? Math.round(v) + ' €' : '—';
+const JOURS = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+
+function getSource(slug, meta){
+  return (meta && meta.source) || (
+    slug.startsWith('urbanpadel-') ? 'urbanpadel' :
+    slug.startsWith('doinsport-') ? 'doinsport' :
+    slug.startsWith('playtomic-') ? 'playtomic' : 'anybuddy');
+}
+
+function extractCityFromSlug(slug){
+  // ex: "4padel-paris-20" → "Paris 20"
+  // ex: "padelshot-saint-quentin-en-yvelines-trappes" → "Trappes"
+  // Strategy: take last 1-3 tokens
+  const parts = slug.split('-').filter(p => !/^\d{1,3}$/.test(p) || p.length >= 4);
+  const last = parts.slice(-3);
+  // Quel index est le mieux ? Last token unless last is "ville" or similar
+  return last.map(p => p.charAt(0).toUpperCase()+p.slice(1)).join(' ');
+}
+
+function detectChain(name, slug){
+  const s = (name + ' ' + slug).toLowerCase();
+  const rules = [
+    ['4PADEL', /\b4[- ]?padel\b/],
+    ['Casa Padel', /casa[- ]padel/],
+    ['Sportfield', /sportfield/],
+    ['Sanctuary', /sanctuary/],
+    ['Forest Hill', /forest[- ]hill/],
+    ['PadelShot', /padel[- ]?shot/],
+    ['UrbanPadel', /urban[- ]?padel|urbansoccer/],
+    ['UCPA', /ucpa/],
+    ['Aldea', /aldea/],
+    ['Trinquet', /trinquet/],
+    ['Le Five', /le[- ]five|five[- ]arena/],
+    ['Carre Padel', /carre[- ]padel/],
+    ['Play Padel', /play[- ]padel/],
+    ['Big Five', /big[- ]five/],
+    ['Padel Camp', /padel[- ]camp/],
+  ];
+  for(const [k, r] of rules) if(r.test(s)) return k;
+  return null;
+}
+
+async function load(){
+  const params = new URLSearchParams(location.search);
+  const slug = params.get('slug');
+  if(!slug){
+    document.getElementById('loading').innerHTML = '<p style="color:var(--red)">❌ Slug manquant dans l\'URL (?slug=X)</p>';
+    return;
+  }
+
+  const [data, unified] = await Promise.all([
+    fetch('padel_idf_data.json',{cache:'no-store'}).then(r=>r.json()),
+    fetch('padel_club_unified.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>[]),
+  ]);
+
+  const club = data[slug];
+  if(!club){
+    document.getElementById('loading').innerHTML = `<p style="color:var(--red)">❌ Club "${slug}" introuvable dans le store</p>
+      <p style="color:var(--muted);font-size:13px;margin-top:8px">Slugs disponibles dans le store actuel : ${Object.keys(data).length} clubs (IDF live).</p>`;
+    return;
+  }
+
+  const meta = club.meta || {};
+  const sessions = Object.values(club.sessions || {});
+  const source = getSource(slug, meta);
+  const chain = detectChain(meta.name || slug, slug);
+  const name = meta.name || slug.replace(/-/g,' ').replace(/\b\w/g, c=>c.toUpperCase());
+  const cp = meta.cp || '';
+  const city = meta.city || extractCityFromSlug(slug);
+  const dept = cp && cp.length===5 ? cp.slice(0,2) : null;
+  const deptName = DEPT_NAME[dept] || '';
+
+  // Header
+  document.title = name + ' · padel détail';
+  document.getElementById('cName').textContent = name;
+  document.getElementById('cAddr').innerHTML = `${city}${cp ? ' · CP ' + cp : ''}${deptName ? ' · ' + deptName + ' (' + dept + ')' : ''}`;
+
+  // Badges
+  const badges = [];
+  badges.push(`<span class="badge platform-${source}">${PNAME[source]||source}</span>`);
+  if(chain) badges.push(`<span class="badge chain">🏢 ${chain}</span>`);
+  // Cross-platform : check unified clusters
+  const cluster = unified.find(c => c.members.some(m => m.slug === slug));
+  if(cluster){
+    const others = cluster.members.filter(m => m.slug !== slug);
+    badges.push(`<span class="badge unif">🔗 cluster ${cluster.unified_id}</span>`);
+    for(const o of others){
+      const s = getSource(o.slug, {});
+      badges.push(`<a href="?slug=${encodeURIComponent(o.slug)}" class="badge platform-${s}">+${PNAME[s]} (autre)</a>`);
+    }
+  }
+  document.getElementById('cBadges').innerHTML = badges.join('');
+
+  // KPIs
+  const now = new Date();
+  const today = now.toISOString().slice(0,10);
+  const future = sessions.filter(s => (s.date||'') >= today);
+  const past = sessions.filter(s => (s.date||'') < today);
+  const reserves = sessions.filter(s => s.statut === 'reserve').length;
+  const prices_all = sessions.map(s => s.prix).filter(p => p > 0);
+  const avg_price = prices_all.length ? prices_all.reduce((a,b)=>a+b,0)/prices_all.length : 0;
+  const occ = future.length ? Math.round(100*future.filter(s=>s.statut==='reserve').length/future.length) : 0;
+  document.getElementById('kpis').innerHTML = [
+    [fmt(sessions.length), 'Sessions trackées'],
+    [fmt(future.length), 'À venir 7j'],
+    [fmt(reserves), 'Réservés détectés'],
+    [occ+'%', 'Taux occupation 7j'],
+    [eur(avg_price), 'Prix moyen'],
+    [fmt(past.length), 'Sessions passées'],
+  ].map(([v,l])=>`<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div></div>`).join('');
+
+  // Tarifs par durée
+  const by_dur = {};
+  sessions.forEach(s => {
+    if(s.prix > 0 && s.duree){
+      (by_dur[s.duree] = by_dur[s.duree] || []).push(s.prix);
+    }
+  });
+  const durations = Object.keys(by_dur).map(Number).sort((a,b)=>a-b);
+  if(durations.length){
+    document.getElementById('prices').innerHTML = `<div class="price-grid">${
+      durations.map(d => {
+        const arr = by_dur[d].sort((a,b)=>a-b);
+        const med = arr[Math.floor(arr.length/2)];
+        const min = arr[0], max = arr[arr.length-1];
+        return `<div class="pp"><div class="v">${eur(med)}</div><div class="l">${d} min médian (${arr.length} obs)<br>Range ${eur(min)} – ${eur(max)}</div></div>`;
+      }).join('')
+    }</div>`;
+  } else {
+    document.getElementById('prices').innerHTML = '<div class="empty">Pas de prix observés sur ce club.</div>';
+  }
+
+  // Évolution mensuelle
+  const monthly = {};
+  sessions.forEach(s => {
+    const d = s.date || '';
+    if(d.length >= 7) monthly[d.slice(0,7)] = (monthly[d.slice(0,7)]||0) + 1;
+  });
+  const months = Object.keys(monthly).sort();
+  if(months.length){
+    Chart.defaults.color = '#8a96b8'; Chart.defaults.borderColor = '#2a3354';
+    new Chart(document.getElementById('cMonthly'), {
+      type:'bar',
+      data:{labels: months, datasets:[{label:'Sessions', data: months.map(m=>monthly[m]), backgroundColor: '#2CDF62'}]},
+      options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>fmt(v)}}}}
+    });
+  }
+
+  // Heatmap jour × heure
+  const heat = {};
+  sessions.forEach(s => {
+    const j = s.jour; const h = parseInt((s.heure||'').slice(0,2));
+    if(!j || isNaN(h)) return;
+    heat[j+'|'+h] = (heat[j+'|'+h] || 0) + 1;
+  });
+  const hours = Array.from({length:17}, (_,i)=>i+7);
+  let max = 0; for(const k in heat) max = Math.max(max, heat[k]);
+  let hmHtml = '<div style="display:grid;grid-template-columns:48px repeat(17,1fr);gap:2px;font-size:9.5px">';
+  hmHtml += '<div></div>';
+  hours.forEach(h => hmHtml += `<div style="text-align:center;color:var(--muted)">${h}h</div>`);
+  JOURS.forEach(j => {
+    hmHtml += `<div style="color:var(--muted);text-align:right;padding:0 4px">${j.slice(0,3)}</div>`;
+    hours.forEach(h => {
+      const v = heat[j+'|'+h] || 0;
+      const t = max ? v/max : 0;
+      const r = Math.round(44 + (255-44)*t);
+      const g = Math.round(223 - (223-100)*t);
+      const b = Math.round(98 - (98-50)*t);
+      const op = v > 0 ? 0.25 + 0.7*t : 0.05;
+      hmHtml += `<div style="aspect-ratio:1;background:rgba(${r},${g},${b},${op});border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:9.5px" title="${j} ${h}h : ${v}">${v||''}</div>`;
+    });
+  });
+  hmHtml += '</div>';
+  document.getElementById('heatmap').innerHTML = hmHtml;
+
+  // Cross-platform
+  if(cluster && cluster.members.length > 1){
+    const others = cluster.members.filter(m => m.slug !== slug);
+    document.getElementById('cross').innerHTML = others.map(m => {
+      const s = getSource(m.slug, {});
+      return `<a href="?slug=${encodeURIComponent(m.slug)}" class="item" style="text-decoration:none;display:block">
+        <div class="nm">${m.name}</div>
+        <div class="src"><span style="color:${ {anybuddy:'#2CDF62',urbanpadel:'#ff6b35',doinsport:'#9b7ff0',playtomic:'#faa619'}[s] }">${PNAME[s]}</span> · slug ${m.slug}</div>
+      </a>`;
+    }).join('');
+  } else {
+    document.getElementById('cross').innerHTML = '<div class="empty">Ce club n\'apparaît que sur ' + PNAME[source] + '.</div>';
+  }
+
+  // Sessions table (50 dernières observées chronologiquement)
+  const sorted = [...sessions].sort((a,b)=>(b.date+' '+b.heure).localeCompare(a.date+' '+a.heure)).slice(0,50);
+  document.querySelector('#tSessions tbody').innerHTML = sorted.map(s => `
+    <tr>
+      <td>${s.date||'—'}</td>
+      <td>${s.heure||'—'}${s.fin?'–'+s.fin:''}</td>
+      <td>${s.terrain||'—'}</td>
+      <td>${s.duree?s.duree+'min':'—'}</td>
+      <td>${eur(s.prix)}</td>
+      <td><span class="pill ${s.statut||'finie'}">${s.statut||(s.finie?'finie':'?')}</span></td>
+    </tr>
+  `).join('') || '<tr><td colspan="6"><div class="empty">Aucune session observée.</div></td></tr>';
+
+  // Map
+  const lat = meta.lat, lng = meta.lng;
+  if(lat && lng){
+    const map = L.map('map', {zoomControl:false, attributionControl:false}).setView([lat,lng], 14);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {subdomains:'abcd', maxZoom:19}).addTo(map);
+    L.circleMarker([lat,lng], {radius:10, fillColor:'#2CDF62', color:'#fff', weight:2, fillOpacity:.85}).addTo(map);
+    document.getElementById('loc').innerHTML = `${lat.toFixed(5)}, ${lng.toFixed(5)} · <a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank">Google Maps</a> · <a href="https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=15/${lat}/${lng}" target="_blank">OpenStreetMap</a>`;
+  } else {
+    document.getElementById('map').style.display = 'none';
+    document.getElementById('loc').textContent = 'Coordonnées GPS non disponibles pour ce club.';
+  }
+
+  // Quick links externes
+  const links = [];
+  if(source === 'anybuddy'){
+    links.push(`<div>🔗 <a href="https://www.anybuddyapp.com/fr/club/${slug}" target="_blank">Page Anybuddy</a></div>`);
+    links.push(`<div>🔗 <a href="https://www.anybuddyapp.com/api/v1/availabilities?clubSlug=${slug}&dateFrom=${today}T00:00&dateTo=${today}T23:59&activity=padel" target="_blank">API dispos Anybuddy</a></div>`);
+  } else if(source === 'doinsport'){
+    const uuid = slug.replace('doinsport-','');
+    links.push(`<div>🔗 <a href="https://api-v3.doinsport.club/clubs/${uuid}/playgrounds" target="_blank">Playgrounds Doinsport</a></div>`);
+  } else if(source === 'playtomic'){
+    links.push(`<div>🔗 <a href="https://playtomic.com/clubs/" target="_blank">Playtomic clubs</a></div>`);
+  } else if(source === 'urbanpadel'){
+    links.push(`<div>🔗 <a href="https://www.urbanpadel.fr/" target="_blank">UrbanPadel.fr</a></div>`);
+  }
+  if(meta.lat && meta.lng){
+    const q = encodeURIComponent(name + ' ' + (city || ''));
+    links.push(`<div>🌍 <a href="https://www.google.com/search?q=${q}" target="_blank">Recherche Google</a></div>`);
+  }
+  document.getElementById('links').innerHTML = links.join('') || '<div class="empty">—</div>';
+
+  // Méta
+  const metaInfo = [];
+  metaInfo.push(`<div><b>Slug</b> : <code>${slug}</code></div>`);
+  metaInfo.push(`<div><b>Source</b> : ${PNAME[source]}</div>`);
+  if(meta.tenant_id) metaInfo.push(`<div><b>Tenant ID</b> : <code>${meta.tenant_id}</code></div>`);
+  if(meta.club_uuid) metaInfo.push(`<div><b>Club UUID Doinsport</b> : <code>${meta.club_uuid}</code></div>`);
+  if(meta.address) metaInfo.push(`<div><b>Adresse</b> : ${meta.address}</div>`);
+  document.getElementById('meta').innerHTML = metaInfo.join('');
+
+  // SHOW
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('content').style.display = '';
+}
+
+load();
+</script>
+</body>
+</html>

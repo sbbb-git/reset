@@ -249,7 +249,7 @@ function buildMarkers(){
       fillColor: color, color: '#fff', weight: 1.5, fillOpacity: .82,
     });
     const name = meta.name || slug;
-    let popup = `<h4>${name}</h4>`;
+    let popup = `<h4><a href="padel_club.html?slug=${encodeURIComponent(slug)}" style="color:var(--accent);text-decoration:none">${name} →</a></h4>`;
     if(chain) popup += `<div style="color:var(--accent);font-size:11px;margin-bottom:6px">🏢 Enseigne : ${chain}</div>`;
     popup += `<div>`;
     for(const s of entry.all_slugs){
@@ -268,6 +268,7 @@ function buildMarkers(){
     if(entry.cluster){
       popup += `<div class="row" style="margin-top:8px;padding-top:8px;border-top:1px dashed #2a3354"><span>Cluster cross-plateforme</span><b>${entry.cluster.unified_id}</b></div>`;
     }
+    popup += `<div style="margin-top:10px;text-align:center"><a href="padel_club.html?slug=${encodeURIComponent(slug)}" style="display:inline-block;background:var(--accent);color:#0a0e1a;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;text-decoration:none">Voir le détail →</a></div>`;
     marker.bindPopup(popup, {maxWidth: 320});
     MARKERS[src].push(marker);
     displayed++;

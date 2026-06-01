@@ -335,9 +335,10 @@ async function load(){
   ).join('');
 
   // ============== #5 ROCKET ==============
+  const nm = c => `<a href="padel_club.html?slug=${encodeURIComponent(c.slug)}" style="color:var(--accent)">${c.name}</a>`;
   document.querySelector('#tNewClubs tbody').innerHTML = D.rocket.new_clubs.slice(0,10).map(c => {
     return `<tr>
-      <td>${c.name}</td>
+      <td>${nm(c)}</td>
       <td>${c.cp||'—'}</td>
       <td>${c.first_seen||'—'}</td>
       <td><b>${fmt(c.n_total)}</b></td>
@@ -347,7 +348,7 @@ async function load(){
 
   document.querySelector('#tRocket tbody').innerHTML = D.rocket.rocket.map(c => {
     return `<tr>
-      <td>${c.name}</td>
+      <td>${nm(c)}</td>
       <td>${c.cp||'—'}</td>
       <td>${fmt(c.n_prev_6m)}</td>
       <td>${fmt(c.n_recent_6m)}</td>
@@ -357,7 +358,7 @@ async function load(){
 
   document.querySelector('#tStagnant tbody').innerHTML = D.rocket.stagnant.map(c => {
     return `<tr>
-      <td>${c.name}</td>
+      <td>${nm(c)}</td>
       <td>${c.cp||'—'}</td>
       <td>${fmt(c.n_prev_6m)}</td>
       <td>${fmt(c.n_recent_6m)}</td>

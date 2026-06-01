@@ -239,13 +239,14 @@ function getAll(){
     if(src&&source!==src)continue;
     if(dept&&cp.slice(0,2)!==dept)continue;
     if(q&&!slug.toLowerCase().includes(q)&&!(meta.name||'').toLowerCase().includes(q))continue;
+    const city=meta.city||'';
     for(const id in b.sessions){
       const s=b.sessions[id];
       const sd=new Date(s.date+'T00:00');
       if(sd<today)continue;
       if(maxd&&sd>maxd)continue;
       const nom=meta.name||slug.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
-      out.push({...s,slug,nom,cp,dept:cp.slice(0,2),source});
+      out.push({...s,slug,nom,cp,city,dept:cp.slice(0,2),source});
     }
   }
   return out;
@@ -274,19 +275,20 @@ function render(){
 
   // Classement clubs
   const byClub={};
-  D.forEach(s=>{const c=byClub[s.slug]=byClub[s.slug]||{nom:s.nom,cp:s.cp,n:0,res:0,prix:[]};
+  D.forEach(s=>{const c=byClub[s.slug]=byClub[s.slug]||{nom:s.nom,cp:s.cp,city:s.city,n:0,res:0,prix:[]};
     c.n++;if(s.statut==='reserve')c.res++;if(s.prix)c.prix.push(s.prix);});
   const ranked=Object.entries(byClub).map(([k,c])=>({
-    slug:k,nom:c.nom,cp:c.cp,n:c.n,res:c.res,occ:c.n?c.res/c.n:0,
+    slug:k,nom:c.nom,cp:c.cp,city:c.city,n:c.n,res:c.res,occ:c.n?c.res/c.n:0,
     prix:c.prix.length?c.prix.reduce((a,b)=>a+b,0)/c.prix.length:0,
   })).sort((a,b)=>b.n-a.n);
   const max_n=ranked[0]?ranked[0].n:1;
   document.getElementById('rkClubs').innerHTML=ranked.map((c,i)=>
-    `<div class="rk"><span class="rank">${i+1}.</span>
-      <span class="lbl">${c.nom}<span class="cp">CP ${c.cp}</span></span>
+    `<a class="rk" href="padel_club.html?slug=${encodeURIComponent(c.slug)}" style="text-decoration:none;color:inherit;cursor:pointer">
+      <span class="rank">${i+1}.</span>
+      <span class="lbl">${c.nom}<span class="cp">${c.city ? c.city : 'CP '+c.cp}</span></span>
       <span class="track"><span style="width:${Math.round(100*c.n/max_n)}%"></span></span>
       <span class="val">${nf(c.n)} créneaux · ${eur(c.prix)} · ${Math.round(100*c.occ)}% occ.</span>
-    </div>`).join('');
+    </a>`).join('');
 
   // Distribution par département
   const byDept={};
@@ -331,7 +333,7 @@ function render(){
   const rows=D.sort((a,b)=>(a.date+a.heure)<(b.date+b.heure)?-1:1).slice(0,300);
   document.querySelector('#tbl tbody').innerHTML=rows.map(s=>
     `<tr><td>${s.date}</td><td>${s.jour}</td><td>${s.heure}–${s.fin}</td>
-      <td>${s.nom}</td><td>${s.cp}</td><td>${s.terrain||'—'}</td><td>${s.duree}min</td>
+      <td><a href="padel_club.html?slug=${encodeURIComponent(s.slug)}" style="color:var(--accent)">${s.nom}</a><div style="color:var(--muted);font-size:11px">${s.city||'CP '+s.cp}</div></td><td>${s.cp}</td><td>${s.terrain||'—'}</td><td>${s.duree}min</td>
       <td>${eur(s.prix)}</td>
       <td><span class="pill ${s.statut}">${s.statut}</span></td></tr>`).join('');
   renderCrossCheck();

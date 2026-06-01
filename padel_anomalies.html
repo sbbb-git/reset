@@ -103,7 +103,7 @@ async function load(){
   const tIdle = document.querySelector('#tIdle tbody');
   if(d.idle_24h.length){
     tIdle.innerHTML = d.idle_24h.slice(0,30).map(c =>
-      `<tr><td><b>${c.name}</b></td><td><span class="badge amber">${c.source}</span></td><td>${c.cp||'—'}</td><td>${c.last_seen||'—'}</td><td><span class="badge red">${c.hours_idle}h</span></td></tr>`
+      `<tr><td><b><a href="padel_club.html?slug=${encodeURIComponent(c.slug)}" style="color:var(--accent)">${c.name}</a></b></td><td><span class="badge amber">${c.source}</span></td><td>${c.cp||'—'}</td><td>${c.last_seen||'—'}</td><td><span class="badge red">${c.hours_idle}h</span></td></tr>`
     ).join('');
   } else {
     tIdle.innerHTML = '<tr><td colspan="5"><div class="empty">✅ Aucun club idle — toutes les plateformes répondent</div></td></tr>';
@@ -112,7 +112,7 @@ async function load(){
   const tPrices = document.querySelector('#tPrices tbody');
   if(d.price_shifts.length){
     tPrices.innerHTML = d.price_shifts.slice(0,30).map(c =>
-      `<tr><td><b>${c.name}</b></td><td><span class="badge amber">${c.source}</span></td><td>${c.cp||'—'}</td><td>${eur(c.prix_30j)}</td><td>${eur(c.prix_recent)}</td><td><span class="badge ${c.delta_pct>0?'amber':'red'}">${c.delta_pct>0?'+':''}${c.delta_pct}%</span></td></tr>`
+      `<tr><td><b><a href="padel_club.html?slug=${encodeURIComponent(c.slug)}" style="color:var(--accent)">${c.name}</a></b></td><td><span class="badge amber">${c.source}</span></td><td>${c.cp||'—'}</td><td>${eur(c.prix_30j)}</td><td>${eur(c.prix_recent)}</td><td><span class="badge ${c.delta_pct>0?'amber':'red'}">${c.delta_pct>0?'+':''}${c.delta_pct}%</span></td></tr>`
     ).join('');
   } else {
     tPrices.innerHTML = '<tr><td colspan="6"><div class="empty">✅ Aucun shift de prix anormal</div></td></tr>';
@@ -121,7 +121,7 @@ async function load(){
   const tDrops = document.querySelector('#tDrops tbody');
   if(d.volume_drops.length){
     tDrops.innerHTML = d.volume_drops.slice(0,30).map(c =>
-      `<tr><td><b>${c.name}</b></td><td>${c.cp||'—'}</td><td>${fmt(c.bookings_7j)}</td><td>${fmt(c.bookings_moyenne_hebdo_30j)}</td><td><span class="badge red">${c.delta_pct}%</span></td></tr>`
+      `<tr><td><b><a href="padel_club.html?slug=${encodeURIComponent(c.slug)}" style="color:var(--accent)">${c.name}</a></b></td><td>${c.cp||'—'}</td><td>${fmt(c.bookings_7j)}</td><td>${fmt(c.bookings_moyenne_hebdo_30j)}</td><td><span class="badge red">${c.delta_pct}%</span></td></tr>`
     ).join('');
   } else {
     tDrops.innerHTML = '<tr><td colspan="5"><div class="empty">✅ Aucun drop de volume détecté</div></td></tr>';
@@ -130,7 +130,7 @@ async function load(){
   const tNew = document.querySelector('#tNew tbody');
   if(d.new_clubs.length){
     tNew.innerHTML = d.new_clubs.slice(0,30).map(c =>
-      `<tr><td><b>${c.name}</b></td><td><span class="badge blue">${c.source}</span></td><td>${c.cp||'—'}</td><td>${c.first_seen}</td><td><span class="badge green">J+${c.days_since}</span></td></tr>`
+      `<tr><td><b><a href="padel_club.html?slug=${encodeURIComponent(c.slug)}" style="color:var(--accent)">${c.name}</a></b></td><td><span class="badge blue">${c.source}</span></td><td>${c.cp||'—'}</td><td>${c.first_seen}</td><td><span class="badge green">J+${c.days_since}</span></td></tr>`
     ).join('');
   } else {
     tNew.innerHTML = '<tr><td colspan="5"><div class="empty">Aucun nouveau club détecté</div></td></tr>';
