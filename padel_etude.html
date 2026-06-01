@@ -87,6 +87,8 @@
     <h1>Le marché du padel IDF<br>en <span class="accent">données réelles</span>.</h1>
     <p class="lead">Première étude exhaustive du marché padel francilien construite sur 146 856 réservations effectivement passées (capture directe des plateformes de booking, pas du déclaratif), enrichie de sources publiques : INSEE, FFT, Padelonomics, Padel Magazine, Open-Meteo.</p>
 
+    <div id="maturityBar" style="margin-top:24px;padding:14px 18px;background:rgba(230,193,77,.08);border:1px solid rgba(230,193,77,.3);border-left:3px solid var(--gold);border-radius:8px;font-size:13px;color:var(--muted);"></div>
+
     <div class="hero-stats" id="heroStats"></div>
   </div>
 </header>
@@ -274,6 +276,27 @@ async function load(){
     fetch('padel_etude_kpis.json',{cache:'no-store'}).then(r=>r.json()),
     fetch('padel_etude_sources.json',{cache:'no-store'}).then(r=>r.json()),
   ]);
+
+  // MATURITY BANNER
+  const m = kpi.maturity || {};
+  const PNAME = {anybuddy:'Anybuddy', urbanpadel:'UrbanPadel', doinsport:'Doinsport', playtomic:'Playtomic'};
+  const bars = Object.entries(m).filter(([k,v])=>!k.startsWith('_')).map(([src,d])=>{
+    const c = d.pct >= 80 ? '#5fcf8a' : d.pct >= 30 ? '#e6c14d' : '#e07a6f';
+    return `<div style="display:flex;align-items:center;gap:8px;margin:5px 0">
+      <span style="width:90px;font-size:12px;color:var(--text);font-weight:600">${PNAME[src]||src}</span>
+      <div style="flex:1;height:8px;background:var(--card2);border-radius:4px;overflow:hidden"><div style="width:${d.pct}%;height:100%;background:${c}"></div></div>
+      <span style="font-size:11px;color:var(--muted);min-width:55px">${d.pct}% · ${d.note}</span>
+    </div>`;
+  }).join('');
+  const globalPct = m._global_pct || 0;
+  document.getElementById('maturityBar').innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <b style="color:var(--gold)">📊 Maturité des données : ${globalPct}% du chemin "6 mois d'historique robuste"</b>
+      <span style="font-size:11px">objectif : ${new Date(Date.now()+ (180 - (m.anybuddy?.days_elapsed||0))*86400000).toLocaleDateString('fr-FR')}</span>
+    </div>
+    ${bars}
+    <div style="font-size:11.5px;margin-top:8px;color:var(--muted);font-style:italic">Doinsport bénéficie de l'historique rétroactif (2-3 ans visible via leur endpoint plannings). Les 3 autres plateformes construisent leur historique au fil des polls /30 min — donc les insights de croissance / saisonnalité hors-Doinsport seront pleinement robustes <b style="color:var(--text);font-style:normal">à partir de fin 2026</b>.</div>
+  `;
 
   // HERO STATS
   const g = kpi.global;

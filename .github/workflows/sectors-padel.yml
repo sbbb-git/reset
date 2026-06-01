@@ -1,4 +1,4 @@
-name: Padel Île-de-France · 59 clubs Anybuddy
+name: Padel IDF · scrape + insights auto (4 plateformes)
 
 on:
   schedule:
@@ -15,28 +15,43 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
 
+      # ============== SCRAPING 4 PLATEFORMES ==============
       - name: Anybuddy (62 clubs IDF, parallèle x8)
         run: python3 padel_idf_scrape.py
         continue-on-error: true
 
-      - name: UrbanPadel (4 centres IDF, parallèle x4)
+      - name: UrbanPadel (4 centres IDF)
         run: python3 urbanpadel_scrape.py
         continue-on-error: true
 
-      - name: Doinsport (54 clubs IDF, parallèle x8)
+      - name: Doinsport (54 clubs IDF)
         run: python3 doinsport_scrape.py
         continue-on-error: true
 
-      - name: Playtomic (23 clubs IDF, parallèle x8)
+      - name: Playtomic (23 clubs IDF, dont Casa Padel)
         run: python3 playtomic_scrape.py
         continue-on-error: true
 
+      # ============== POST-PROCESSING & ANALYTICS ==============
+      - name: Recalcul clusters cross-plateforme
+        run: python3 padel_unified_compute.py
+        continue-on-error: true
+
+      - name: Recalcul KPIs étude marché
+        run: python3 padel_kpis_compute.py
+        continue-on-error: true
+
+      - name: Recalcul insights stratégiques
+        run: python3 padel_insights_compute.py
+        continue-on-error: true
+
+      # ============== SYNC SUPABASE ==============
       - name: Sync vers Supabase (padel_clubs + padel_slots)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
@@ -44,16 +59,18 @@ jobs:
         run: python3 padel_supabase_sync.py
         continue-on-error: true
 
+      # ============== COMMIT ==============
       - name: Commit si changement
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add padel_idf_data.json padel_idf_creneaux.csv \
-                  padel_idf_clubs.json doinsport_idf_clubs.json playtomic_idf_clubs.json
+                  padel_idf_clubs.json doinsport_idf_clubs.json playtomic_idf_clubs.json \
+                  padel_club_unified.json padel_etude_kpis.json padel_insights_data.json
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
-            git commit -m "Padel IDF scrape ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            git commit -m "Padel IDF scrape + insights ($(date -u +%Y-%m-%dT%H:%M)Z)"
             for i in 1 2 3 4; do
               git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
               echo "retry push $i"; sleep 5

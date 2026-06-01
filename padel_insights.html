@@ -78,6 +78,7 @@
 <header>
   <h1>7 insights stratégiques · <span class="accent">padel Île-de-France</span></h1>
   <p class="lead">Calculés sur 146 856 bookings historiques Doinsport (2024-2026) + 38 846 sessions live (4 plateformes) + INSEE + GPS. <b>Pour chaque insight on précise sa maturité actuelle</b> — certains (Rocket, Vacances) sont déjà robustes, d'autres (Élasticité, Chaînes vs Indé) le seront pleinement dans 6 mois quand Anybuddy/Playtomic/UrbanPadel auront accumulé leur historique de captures.</p>
+  <div id="maturityBar" style="margin-top:18px;padding:12px 16px;background:rgba(230,193,77,.08);border:1px solid rgba(230,193,77,.3);border-left:3px solid var(--gold);border-radius:8px;font-size:12.5px;color:var(--muted);"></div>
   <div class="quick-nav" style="margin-top:18px">
     <a href="#i1">1. Heatmap horaire</a>
     <a href="#i3">3. Élasticité prix</a>
@@ -236,7 +237,26 @@ const fmt = v => Math.round(v||0).toLocaleString('fr-FR');
 const eur = v => v ? fmt(v) + ' €' : '—';
 
 async function load(){
-  const D = await fetch('padel_insights_data.json',{cache:'no-store'}).then(r=>r.json());
+  const [D, kpi] = await Promise.all([
+    fetch('padel_insights_data.json',{cache:'no-store'}).then(r=>r.json()),
+    fetch('padel_etude_kpis.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({})),
+  ]);
+
+  // ============== MATURITY BANNER ==============
+  const m = kpi.maturity || {};
+  const PNAME = {anybuddy:'Anybuddy', urbanpadel:'UrbanPadel', doinsport:'Doinsport', playtomic:'Playtomic'};
+  const bars = Object.entries(m).filter(([k,v])=>!k.startsWith('_')).map(([src,d])=>{
+    const c = d.pct >= 80 ? '#5fcf8a' : d.pct >= 30 ? '#e6c14d' : '#e07a6f';
+    return `<div style="display:flex;align-items:center;gap:8px;margin:4px 0">
+      <span style="width:90px;font-size:11.5px;color:var(--text);font-weight:600">${PNAME[src]||src}</span>
+      <div style="flex:1;height:7px;background:var(--card2);border-radius:4px;overflow:hidden"><div style="width:${d.pct}%;height:100%;background:${c}"></div></div>
+      <span style="font-size:10.5px;color:var(--muted);min-width:50px;text-align:right">${d.pct}%</span>
+    </div>`;
+  }).join('');
+  document.getElementById('maturityBar').innerHTML = `
+    <b style="color:var(--gold);font-size:12px">📊 Maturité globale : ${m._global_pct||0}% · objectif "6 mois data robuste sur les 4 plateformes"</b>
+    <div style="margin-top:8px">${bars}</div>
+  `;
 
   // ============== #1 HEATMAP ==============
   const hmData = D.heatmap.data;
