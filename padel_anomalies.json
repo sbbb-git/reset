@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-01T10:40:15.055234",
+ "generated_at": "2026-06-01T16:42:10.298600",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -61,6 +61,14 @@
    "name": "Padel A.C",
    "cp": "95700",
    "first_seen": "2026-06-01 00:16",
+   "days_since": 0
+  },
+  {
+   "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
+   "source": "doinsport",
+   "name": "Padel Pulsion",
+   "cp": "91570",
+   "first_seen": "2026-06-01 18:41",
    "days_since": 0
   },
   {
@@ -149,6 +157,14 @@
    "name": "Planète Raquettes",
    "cp": "77870",
    "first_seen": "2026-06-01 00:16",
+   "days_since": 0
+  },
+  {
+   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "source": "doinsport",
+   "name": "FIVE ARENA",
+   "cp": "77100",
+   "first_seen": "2026-06-01 18:41",
    "days_since": 0
   },
   {
@@ -765,6 +781,6 @@
   "idle_24h": 0,
   "price_shifts": 1,
   "volume_drops": 0,
-  "new_clubs_14d": 93
+  "new_clubs_14d": 95
  }
 }
