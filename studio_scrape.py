@@ -132,6 +132,7 @@ def write_html(rows, cfg):
 HTML_TEMPLATE = r"""<!DOCTYPE html>
 <html lang="fr">
 <head>
+<script>if(sessionStorage.getItem("auth_ok")!=="1")location.replace("login.html?next="+encodeURIComponent(location.pathname+location.search+location.hash));</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>__BRAND__ - Fréquentation</title>

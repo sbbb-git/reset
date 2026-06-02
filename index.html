@@ -1,14 +1,231 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<script>if(sessionStorage.getItem("auth_ok")!=="1")location.replace("login.html?next="+encodeURIComponent(location.pathname+location.search+location.hash));</script>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=hub.html">
-<title>Redirection vers le hub…</title>
-<link rel="canonical" href="hub.html">
-<script>location.replace('hub.html' + (location.hash || ''));</script>
-<style>body{background:#0a0e1a;color:#8a96b8;font-family:-apple-system,sans-serif;text-align:center;padding:60px 20px;}a{color:#6f82ff;}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hub · tous les dashboards</title>
+<style>
+  :root{--bg:#0a0e1a;--card:#121828;--card2:#1a2238;--line:#2a3354;--text:#eef1fb;
+        --muted:#8a96b8;--accent:#6f82ff;--accent2:#a7b3ff;--gold:#e6c14d;--green:#5fcf8a;--padel:#2CDF62;--fit:#6f82ff;--orange:#ff6b35;}
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.55;}
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  header{padding:36px 24px 20px;border-bottom:1px solid var(--line);background:radial-gradient(900px 450px at 15% 0%,rgba(111,130,255,.12),transparent 60%),radial-gradient(800px 400px at 90% 30%,rgba(44,223,98,.08),transparent 60%);}
+  header h1{margin:0 0 8px;font-size:32px;font-weight:800;letter-spacing:-.5px;}
+  header .lead{color:var(--muted);font-size:14.5px;max-width:760px;margin:0;}
+  .wrap{max-width:1280px;margin:0 auto;padding:24px 24px 80px;}
+  .section{margin:30px 0 14px;}
+  .section h2{margin:0 0 4px;font-size:22px;font-weight:800;letter-spacing:-.3px;display:flex;align-items:center;gap:10px;}
+  .section .sub{color:var(--muted);font-size:13px;margin:0 0 16px;}
+  .section .badge{display:inline-block;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:99px;font-weight:700;margin-left:6px;}
+  .badge.live{background:rgba(95,207,138,.18);color:var(--green);border:1px solid rgba(95,207,138,.4);}
+  .badge.padel{background:rgba(44,223,98,.18);color:var(--padel);border:1px solid rgba(44,223,98,.4);}
+  .badge.fit{background:rgba(111,130,255,.18);color:var(--fit);border:1px solid rgba(111,130,255,.4);}
+  .badge.test{background:rgba(255,107,53,.18);color:var(--orange);border:1px solid rgba(255,107,53,.4);}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;border-left:3px solid var(--accent);transition:transform .12s, box-shadow .12s;display:block;color:inherit;text-decoration:none;}
+  .card.padel{border-left-color:var(--padel);}
+  .card.fit{border-left-color:var(--fit);}
+  .card.gold{border-left-color:var(--gold);}
+  .card.test{border-left-color:var(--orange);}
+  .card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.3);text-decoration:none;border-color:var(--accent);}
+  .card h3{margin:0 0 4px;font-size:15px;font-weight:800;}
+  .card .desc{color:var(--muted);font-size:12.5px;line-height:1.5;}
+  .card .url{color:var(--muted);font-size:10.5px;margin-top:8px;font-family:monospace;display:block;word-break:break-all;}
+  .kpi-row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0;}
+  .kpi{background:var(--card2);padding:9px 14px;border-radius:8px;font-size:12px;border-left:3px solid var(--accent);}
+  .kpi b{color:var(--accent2);font-size:18px;display:block;line-height:1;margin-bottom:3px;}
+  .kpi span{color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;}
+  .meta{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:12.5px;color:var(--muted);margin-top:14px;}
+  .meta b{color:var(--text);}
+  code{background:var(--card2);padding:1px 7px;border-radius:4px;font-size:11.5px;}
+  footer{padding:24px;text-align:center;color:var(--muted);font-size:11.5px;border-top:1px solid var(--line);margin-top:30px;}
+</style>
 </head>
 <body>
-  <p>Redirection vers <a href="hub.html">hub.html</a>…</p>
+
+<header>
+  <h1>🎯 Hub — tous les dashboards</h1>
+  <p class="lead">Lien unique d'accès à tous les projets et pages générés ensemble : fitness boutique (Re-SET + 21 concurrents), padel Île-de-France (143 clubs sur 4 plateformes) et France entière (940 clubs), pages d'analyse, étude marché, anomalies. Bookmarker cette page = porte d'entrée vers tout.</p>
+</header>
+
+<div class="wrap">
+
+  <!-- ========================= FITNESS BOUTIQUE ========================= -->
+  <div class="section">
+    <h2>🥊 Fitness boutique Paris <span class="badge fit">projet principal</span> <span class="badge live">live /5-30 min</span></h2>
+    <p class="sub">Re-SET (bootcamp) + 21 enseignes concurrentes scrapées en temps réel (bsport, Mindbody, Mariana Tek, resamania, Arketa, Anybuddy). Comparateur, étude B2B, grille de prix factuelle.</p>
+
+    <div class="kpi-row">
+      <div class="kpi"><b>22</b><span>Enseignes</span></div>
+      <div class="kpi"><b>~80</b><span>Studios trackés</span></div>
+      <div class="kpi"><b>906 k€</b><span>CA mensuel agrégé estimé</span></div>
+    </div>
+
+    <div class="cards">
+      <a class="card fit" href="all-1cda8fabdb.html">
+        <h3>📊 Hub fitness — toutes les marques</h3>
+        <div class="desc">Onglets de navigation entre tous les studios. Re-SET en premier, puis Punch, Dynamo, Riise, The New Me, Sanctuary, Sense-Club, etc.</div>
+        <span class="url">all-1cda8fabdb.html</span>
+      </a>
+      <a class="card fit" href="comparateur.html">
+        <h3>⚖️ Comparateur multi-marques</h3>
+        <div class="desc">Tableau comparatif, courbes par marque, CA estimé personnalisable, filtres période/catégorie/lieu. Utilise les prix gérés dans prix.html.</div>
+        <span class="url">comparateur.html</span>
+      </a>
+      <a class="card fit" href="etude.html">
+        <h3>💼 Étude marché B2B</h3>
+        <div class="desc">Page commerciale 3 audiences (studios concurrents · investisseurs · marques en projet). Aucun chiffre nominatif révélé, juste pitch + CTA mail.</div>
+        <span class="url">etude.html</span>
+      </a>
+      <a class="card gold" href="prix.html">
+        <h3>💶 Grille de prix factuelle</h3>
+        <div class="desc">Drop-in + tous les packs + abos par marque, scrapés des pages tarifs publiques. 3 méthodes de calcul du prix moyen (drop-in / pack 10 / pondéré). Lecture seule.</div>
+        <span class="url">prix.html</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================= PADEL IDF ========================= -->
+  <div class="section">
+    <h2>🎾 Padel Île-de-France <span class="badge padel">143 clubs · 4 plateformes</span> <span class="badge live">live /30 min</span></h2>
+    <p class="sub">Couverture exhaustive Anybuddy + UrbanPadel + Doinsport + Playtomic. 146 856 sessions historiques Doinsport (2024-2026) + ~45 k sessions live capturées en continu. 19 clusters cross-plateformes.</p>
+
+    <div class="kpi-row">
+      <div class="kpi"><b>143</b><span>Clubs IDF</span></div>
+      <div class="kpi"><b>~190 k</b><span>Sessions trackées</span></div>
+      <div class="kpi"><b>+125 %</b><span>Croissance mi-2024 → fin 2025</span></div>
+      <div class="kpi"><b>~65 €</b><span>Prix médian 90min</span></div>
+    </div>
+
+    <div class="cards">
+      <a class="card padel" href="padel_idf.html">
+        <h3>📊 Dashboard live</h3>
+        <div class="desc">KPIs IDF, classement clubs, heatmap jour×heure, cross-validation inter-plateformes, comparateur de créneaux (mardi aprem vs samedi matin), top 20 buckets, table détail.</div>
+        <span class="url">padel_idf.html</span>
+      </a>
+      <a class="card padel" href="padel_map.html">
+        <h3>🗺️ Carte interactive</h3>
+        <div class="desc">143 markers Leaflet géocodés. Toggle par plateforme, cluster markers, mode unifié (1 marker par club physique), filtres prix et enseigne (15 chaînes détectées).</div>
+        <span class="url">padel_map.html</span>
+      </a>
+      <a class="card padel" href="padel_etude.html">
+        <h3>📈 Étude marché IDF</h3>
+        <div class="desc">Synthèse multi-sources : INSEE pop/densité/revenu par dépt, croissance 2024-2026, top CA Doinsport, météo × bookings (la pluie n'affecte pas !), 10 insights stratégiques.</div>
+        <span class="url">padel_etude.html</span>
+      </a>
+      <a class="card padel" href="padel_insights.html">
+        <h3>🎯 7 insights stratégiques</h3>
+        <div class="desc">Heatmap horaire · Élasticité prix · Déserts padel · Rocket clubs · Chaînes vs indé · Vacances scolaires · Multi-plateformes. Badges 🟢🟡🔴 selon maturité actuelle vs 6m.</div>
+        <span class="url">padel_insights.html</span>
+      </a>
+      <a class="card padel" href="padel_anomalies.html">
+        <h3>⚠️ Anomalies détectées</h3>
+        <div class="desc">Auto-détection /30 min : clubs idle 24h+, prix shifts > 30%, volume drops > 50%, nouveaux clubs récents. Idéal pour surveiller le marché en continu.</div>
+        <span class="url">padel_anomalies.html</span>
+      </a>
+      <a class="card padel" href="padel_national.html">
+        <h3>🇫🇷 Catalogue national</h3>
+        <div class="desc">940 clubs FR padel sur 14 métropoles. Répartition par plateforme et par région, search par nom/CP/ville. Scrape national activable /2h.</div>
+        <span class="url">padel_national.html</span>
+      </a>
+      <a class="card padel" href="padel_club.html?slug=trinquet-village-paris">
+        <h3>🔎 Page détail club</h3>
+        <div class="desc">Page par club (URL ?slug=X) : KPIs, tarifs par durée, évolution mensuelle, heatmap, cluster cross-plateforme, dernières séances, mini-carte, liens externes.</div>
+        <span class="url">padel_club.html?slug=&lt;slug&gt;</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================= TEST/SCOPING ========================= -->
+  <div class="section">
+    <h2>🧪 Lab — secteurs en exploration <span class="badge test">scoping</span></h2>
+    <p class="sub">Extension à de nouveaux secteurs : spa/wellness, beauté premium, etc. (le padel a graduellement passé du scoping à live).</p>
+
+    <div class="cards">
+      <a class="card test" href="secteurs.html">
+        <h3>🔬 Page secteurs</h3>
+        <div class="desc">Statut : padel live ✅, spa/wellness scoping ⏳, beauté premium recon ❌ (bloqué Playwright Treatwell/Planity). Mises à jour au fil des explorations.</div>
+        <span class="url">secteurs.html</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================= DOCS & INFRA ========================= -->
+  <div class="section">
+    <h2>📚 Documentation & infra</h2>
+
+    <div class="cards">
+      <a class="card" href="PADEL_ROADMAP.md">
+        <h3>📖 Roadmap padel</h3>
+        <div class="desc">État de la couverture, 14 propositions d'amélioration classées par effort/impact (Pappers, dashboard public B2B, cluster geo, etc.).</div>
+        <span class="url">PADEL_ROADMAP.md</span>
+      </a>
+      <a class="card" href="PADEL_INSIGHTS_PROPOSES.md">
+        <h3>💡 Insights proposés</h3>
+        <div class="desc">8 insights stratégiques détaillés avec méthodologie et output attendu. 7 d'entre eux sont implémentés dans padel_insights.html.</div>
+        <span class="url">PADEL_INSIGHTS_PROPOSES.md</span>
+      </a>
+      <a class="card" href="https://github.com/sbbb-git/reset/actions">
+        <h3>⚙️ GitHub Actions</h3>
+        <div class="desc">Workflows live (toutes /30 min) : <code>sectors-padel.yml</code> · <code>live-status.yml</code> · <code>bsport-studios.yml</code> · <code>padel-discover.yml</code> (hebdo) · <code>padel-history-sync.yml</code> (manuel).</div>
+        <span class="url">github.com/sbbb-git/reset/actions</span>
+      </a>
+      <a class="card" href="https://supabase.com/dashboard/project/gxqaanumilsmqmodtnbl">
+        <h3>🗄️ Supabase</h3>
+        <div class="desc">Tables : <code>brands</code> · <code>sessions</code> · <code>brand_prices</code> · <code>padel_clubs</code> · <code>padel_slots</code>. ~65 MB DB sur plan Free 500 MB.</div>
+        <span class="url">supabase.com/dashboard/project/gxqaanumilsmqmodtnbl</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================= STUDIOS INDIVIDUELS ========================= -->
+  <div class="section">
+    <h2>🏟️ Pages individuelles studios fitness</h2>
+    <p class="sub">22 dashboards autonomes, un par marque, accessibles aussi via <a href="all-1cda8fabdb.html">le hub fitness</a>.</p>
+
+    <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+      <a class="card fit" style="padding:12px 16px" href="reset.html"><h3 style="font-size:14px;margin:0">Re-SET</h3><span class="url" style="margin-top:4px">reset.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="punch.html"><h3 style="font-size:14px;margin:0">Punch</h3><span class="url" style="margin-top:4px">punch.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="dynamo.html"><h3 style="font-size:14px;margin:0">Dynamo</h3><span class="url" style="margin-top:4px">dynamo.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="riise.html"><h3 style="font-size:14px;margin:0">Riise</h3><span class="url" style="margin-top:4px">riise.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="thenewme.html"><h3 style="font-size:14px;margin:0">The New Me</h3><span class="url" style="margin-top:4px">thenewme.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="lecercle.html"><h3 style="font-size:14px;margin:0">Le Cercle Boxing</h3><span class="url" style="margin-top:4px">lecercle.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="spacecycle.html"><h3 style="font-size:14px;margin:0">Space Cycle</h3><span class="url" style="margin-top:4px">spacecycle.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="poses.html"><h3 style="font-size:14px;margin:0">Poses Studio</h3><span class="url" style="margin-top:4px">poses.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="driphiit.html"><h3 style="font-size:14px;margin:0">DRIP HIIT</h3><span class="url" style="margin-top:4px">driphiit.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="kore.html"><h3 style="font-size:14px;margin:0">KORE Studio</h3><span class="url" style="margin-top:4px">kore.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="belly.html"><h3 style="font-size:14px;margin:0">Belly</h3><span class="url" style="margin-top:4px">belly.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="athletx.html"><h3 style="font-size:14px;margin:0">AthletX</h3><span class="url" style="margin-top:4px">athletx.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="senseclub.html"><h3 style="font-size:14px;margin:0">Sense-Club</h3><span class="url" style="margin-top:4px">senseclub.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="dna.html"><h3 style="font-size:14px;margin:0">DNA Pilates</h3><span class="url" style="margin-top:4px">dna.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="le33foch.html"><h3 style="font-size:14px;margin:0">Le 33 Foch</h3><span class="url" style="margin-top:4px">le33foch.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="banote.html"><h3 style="font-size:14px;margin:0">Banote</h3><span class="url" style="margin-top:4px">banote.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="santroch.html"><h3 style="font-size:14px;margin:0">Sant-Roch</h3><span class="url" style="margin-top:4px">santroch.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="snakeandtwist.html"><h3 style="font-size:14px;margin:0">Snake & Twist</h3><span class="url" style="margin-top:4px">snakeandtwist.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="burningbar.html"><h3 style="font-size:14px;margin:0">Burning Bar</h3><span class="url" style="margin-top:4px">burningbar.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="anybuddy.html"><h3 style="font-size:14px;margin:0">Trinquet padel</h3><span class="url" style="margin-top:4px">anybuddy.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="barrys.html"><h3 style="font-size:14px;margin:0">Barry's Paris</h3><span class="url" style="margin-top:4px">barrys.html</span></a>
+      <a class="card fit" style="padding:12px 16px" href="episod.html"><h3 style="font-size:14px;margin:0">Episod</h3><span class="url" style="margin-top:4px">episod.html</span></a>
+    </div>
+  </div>
+
+  <div class="meta">
+    <b>🎯 Comment naviguer ce hub :</b>
+    <br>· <b>Fitness boutique</b> = projet principal Re-SET (compétitive intel sur 22 marques boutique fitness Paris). Comparateur + prix factuels.
+    <br>· <b>Padel IDF</b> = projet en cours d'industrialisation, 4 plateformes scrapées en live, 7 insights stratégiques, anomaly detection, catalogue national 940 clubs.
+    <br>· <b>Lab</b> = secteurs en cours d'exploration (spa, beauté), suivi via secteurs.html.
+    <br>· <b>Studios individuels</b> = chaque marque a sa page dashboard autonome.
+    <br><br>
+    <b>📲 À bookmarker :</b> juste ce lien <code>hub.html</code> → tu retrouves tout.
+  </div>
+</div>
+
+<footer>
+  Hub auto-généré · branche claude/focused-bohr-TVENr · <a href="https://github.com/sbbb-git/reset">repo GitHub</a> · <a href="https://github.com/sbbb-git/reset/actions">workflows</a>
+</footer>
+
 </body>
 </html>
