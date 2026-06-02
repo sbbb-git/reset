@@ -2,54 +2,13 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dashboards · Monday Studios</title>
-<style>
-  :root{--bg:#0c1020;--bar:#141a30;--line:#2a3358;--text:#eef1fb;--muted:#97a1c8;--accent:#263fff;}
-  *{box-sizing:border-box;}
-  html,body{margin:0;height:100%;background:var(--bg);color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;}
-  body{display:flex;flex-direction:column;height:100vh;height:100dvh;}
-  .tabs{display:flex;gap:6px;padding:10px 12px;background:var(--bar);border-bottom:1px solid var(--line);
-    position:sticky;top:0;z-index:10;flex:0 0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch;}
-  .tabs button{flex:0 0 auto;background:transparent;color:var(--muted);border:1px solid transparent;
-    border-radius:10px;padding:10px 18px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;
-    -webkit-tap-highlight-color:transparent;}
-  .tabs button.active{color:#fff;background:var(--accent);}
-  .frames{position:relative;flex:1 1 auto;min-height:0;}
-  iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:var(--bg);}
-  iframe[hidden]{display:none;}
-</style>
+<meta http-equiv="refresh" content="0; url=hub.html">
+<title>Redirection vers le hub…</title>
+<link rel="canonical" href="hub.html">
+<script>location.replace('hub.html' + (location.hash || ''));</script>
+<style>body{background:#0a0e1a;color:#8a96b8;font-family:-apple-system,sans-serif;text-align:center;padding:60px 20px;}a{color:#6f82ff;}</style>
 </head>
 <body>
-  <nav class="tabs">
-    <button data-t="reset" class="active" style="--accent:#d98b63">Re-SET</button>
-    <button data-t="punch" style="--accent:#263fff">Punch</button>
-    <button data-t="dynamo" style="--accent:#faa619">Dynamo</button>
-    <button data-t="riise" style="--accent:#c25a3f">Riise</button>
-  </nav>
-  <div class="frames">
-    <iframe id="f-reset" src="reset.html" title="Re-SET"></iframe>
-    <iframe id="f-punch" data-src="punch.html" title="Punch" hidden></iframe>
-    <iframe id="f-dynamo" data-src="dynamo.html" title="Dynamo" hidden></iframe>
-    <iframe id="f-riise" data-src="riise.html" title="Riise" hidden></iframe>
-  </div>
-<script>
-  const order=['reset','punch','dynamo','riise'];
-  const btns=document.querySelectorAll('.tabs button');
-  const frames={};order.forEach(t=>frames[t]=document.getElementById('f-'+t));
-  function show(t){
-    if(!frames[t])t='reset';
-    btns.forEach(b=>b.classList.toggle('active',b.dataset.t===t));
-    Object.entries(frames).forEach(([k,f])=>{
-      const on=k===t;
-      if(on&&!f.src&&f.dataset.src){f.src=f.dataset.src;}  // chargement à la demande
-      f.hidden=!on;
-    });
-    try{location.hash=t;}catch(e){}
-  }
-  btns.forEach(b=>b.addEventListener('click',()=>show(b.dataset.t)));
-  show((location.hash||'').replace('#','')||'reset');
-</script>
+  <p>Redirection vers <a href="hub.html">hub.html</a>…</p>
 </body>
 </html>
