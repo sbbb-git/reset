@@ -140,6 +140,38 @@
     <div id="topCours"></div>
   </div>
 
+  <div class="panel">
+    <h2>🏟️ Classement studio par studio <span style="font-size:11px;color:var(--muted);font-weight:400;text-transform:none">(au niveau du lieu individuel, pas de la marque)</span></h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 12px">Une marque (ex. The New Me, 27 studios) peut cacher d'énormes disparités. Ce tableau montre <b>chaque studio individuellement</b>. Cliquer sur une colonne pour trier.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+      <select id="fStudioBrand" style="background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:7px 11px;font-size:13px"><option value="">Toutes les marques</option></select>
+      <select id="fStudioCat" style="background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:7px 11px;font-size:13px"><option value="">Toutes catégories</option></select>
+      <input id="fStudioQ" placeholder="Rechercher un studio…" style="flex:1;min-width:200px;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:7px 11px;font-size:13px">
+    </div>
+    <div style="max-height:540px;overflow:auto;border:1px solid var(--line);border-radius:10px">
+      <table id="tStudios" style="width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums">
+        <thead><tr style="color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.4px;position:sticky;top:0;background:var(--card)">
+          <th data-sort="lieu" style="text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);cursor:pointer">Studio</th>
+          <th data-sort="brand" style="text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);cursor:pointer">Marque</th>
+          <th data-sort="cat" style="text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);cursor:pointer">Cat.</th>
+          <th data-sort="n" style="text-align:right;padding:9px 10px;border-bottom:1px solid var(--line);cursor:pointer">Séances</th>
+          <th data-sort="presents" style="text-align:right;padding:9px 10px;border-bottom:1px solid var(--line);cursor:pointer">Présents</th>
+          <th data-sort="moy" style="text-align:right;padding:9px 10px;border-bottom:1px solid var(--line);cursor:pointer">Prés./séa.</th>
+          <th data-sort="rempl" style="text-align:right;padding:9px 10px;border-bottom:1px solid var(--line);cursor:pointer">Remplissage</th>
+          <th data-sort="ca" style="text-align:right;padding:9px 10px;border-bottom:1px solid var(--line);cursor:pointer">CA estimé</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="studiosCount" style="margin-top:10px;color:var(--muted);font-size:12px"></div>
+  </div>
+
+  <div class="panel">
+    <h2>⚖️ Comparateur 2 studios</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 12px">Compare 2 studios côte à côte. Particulièrement utile pour benchmark <b>intra-marque</b> : The New Me Wagram vs Châtelet vs Vaugirard, Le Cercle Beaubourg vs Montmartre, etc.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px" id="cmpStudios2"></div>
+  </div>
+
   <div class="foot" style="color:var(--muted);font-size:12px">Données live des dashboards par marque. Taux coloré : vert ≥75%, jaune ≥50%, rouge &lt;50%.</div>
 </div>
 <script>
@@ -301,6 +333,148 @@ function render(){
   renderCategories(rows);
   renderBrandCompare(rows);
   renderTopCours(rows);
+  renderStudiosTable(rows);
+  renderStudios2Compare(rows);
+}
+
+// ============== CLASSEMENT STUDIO PAR STUDIO ==============
+let STUDIOS_DATA = [];
+let STUDIO_SORT = {key:'ca', dir:-1};
+function buildStudios(rows){
+  const map = {};
+  rows.forEach(r => {
+    if(!r.finie || !r.lieu) return;
+    const key = r.brand + '|' + r.lieu;
+    if(!map[key]) map[key] = {
+      key, lieu: r.lieu, brand: r.brand,
+      label: (BMAP[r.brand]||{}).label || r.brand,
+      color: (BMAP[r.brand]||{}).color || '#888',
+      cat: r.cat || (BMAP[r.brand]||{}).cat || '?',
+      n:0, presents:0, capacite:0,
+    };
+    const s = map[key];
+    s.n++;
+    s.presents += r.presents||0;
+    s.capacite += r.capacite||0;
+  });
+  return Object.values(map).map(s => ({
+    ...s,
+    moy: s.n ? s.presents/s.n : 0,
+    rempl: s.capacite ? s.presents/s.capacite : 0,
+    ca: s.presents * priceOf(s.brand),
+  }));
+}
+function renderStudiosTable(rows){
+  STUDIOS_DATA = buildStudios(rows);
+  // Populate filters
+  const selB = document.getElementById('fStudioBrand');
+  const selC = document.getElementById('fStudioCat');
+  if(selB && selB.options.length <= 1){
+    const brands = [...new Set(STUDIOS_DATA.map(s=>s.label))].sort();
+    brands.forEach(b => selB.add(new Option(b, b)));
+    const cats = [...new Set(STUDIOS_DATA.map(s=>s.cat))].filter(Boolean).sort();
+    cats.forEach(c => selC.add(new Option(c, c)));
+    [selB, selC, document.getElementById('fStudioQ')].forEach(el => {
+      el.addEventListener(el.tagName === 'INPUT' ? 'input' : 'change', drawStudios);
+    });
+    document.querySelectorAll('#tStudios th[data-sort]').forEach(th => {
+      th.addEventListener('click', () => {
+        const k = th.dataset.sort;
+        if(STUDIO_SORT.key === k) STUDIO_SORT.dir *= -1;
+        else { STUDIO_SORT = {key:k, dir: (k==='lieu'||k==='brand'||k==='cat') ? 1 : -1}; }
+        drawStudios();
+      });
+    });
+  }
+  drawStudios();
+}
+function drawStudios(){
+  const fB = document.getElementById('fStudioBrand').value;
+  const fC = document.getElementById('fStudioCat').value;
+  const fQ = document.getElementById('fStudioQ').value.toLowerCase();
+  let arr = STUDIOS_DATA.filter(s =>
+    (!fB || s.label === fB) &&
+    (!fC || s.cat === fC) &&
+    (!fQ || s.lieu.toLowerCase().includes(fQ) || s.label.toLowerCase().includes(fQ))
+  );
+  // Sort
+  const k = STUDIO_SORT.key, d = STUDIO_SORT.dir;
+  arr.sort((a,b) => {
+    let va = a[k], vb = b[k];
+    if(typeof va === 'string') return va.localeCompare(vb) * d;
+    return (va - vb) * d;
+  });
+  const tbody = document.querySelector('#tStudios tbody');
+  tbody.innerHTML = arr.map(s => `<tr style="border-bottom:1px solid var(--line)">
+    <td style="padding:7px 10px"><b>${s.lieu}</b></td>
+    <td style="padding:7px 10px"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${s.color};margin-right:6px;vertical-align:middle"></span>${s.label}</td>
+    <td style="padding:7px 10px;color:var(--muted)">${s.cat}</td>
+    <td style="padding:7px 10px;text-align:right">${nf(s.n)}</td>
+    <td style="padding:7px 10px;text-align:right">${nf(s.presents)}</td>
+    <td style="padding:7px 10px;text-align:right">${s.moy.toFixed(1)}</td>
+    <td style="padding:7px 10px;text-align:right;color:${fill(s.rempl)};font-weight:700">${Math.round(100*s.rempl)}%</td>
+    <td style="padding:7px 10px;text-align:right;color:var(--accent2);font-weight:700">${eur(s.ca)}</td>
+  </tr>`).join('') || '<tr><td colspan="8" style="padding:20px;text-align:center;color:var(--muted);font-style:italic">Aucun studio sur ce filtre.</td></tr>';
+  document.getElementById('studiosCount').textContent = `${arr.length} studios affichés sur ${STUDIOS_DATA.length} total · tri : ${STUDIO_SORT.key} ${STUDIO_SORT.dir>0?'↑':'↓'}`;
+}
+
+// ============== COMPARATEUR 2 STUDIOS ==============
+let CMP_S_A=null, CMP_S_B=null;
+function renderStudios2Compare(rows){
+  const wrap = document.getElementById('cmpStudios2');
+  if(!wrap) return;
+  if(!STUDIOS_DATA.length) STUDIOS_DATA = buildStudios(rows);
+  if(!STUDIOS_DATA.length){ wrap.innerHTML='<div style="color:var(--muted);font-style:italic;padding:20px;grid-column:span 2;text-align:center">Pas encore de studios à comparer.</div>'; return; }
+  // Defaults : 2 plus gros studios différents
+  const sorted = [...STUDIOS_DATA].sort((a,b)=>b.presents - a.presents);
+  if(!CMP_S_A) CMP_S_A = sorted[0].key;
+  if(!CMP_S_B) CMP_S_B = (sorted[1] || sorted[0]).key;
+  const SBYK = Object.fromEntries(STUDIOS_DATA.map(s => [s.key, s]));
+
+  // Grouper studios par marque pour le select
+  const byBrand = {};
+  STUDIOS_DATA.forEach(s => { (byBrand[s.label] = byBrand[s.label] || []).push(s); });
+  const optgroups = Object.entries(byBrand).sort((a,b)=>a[0].localeCompare(b[0])).map(([brand, list]) =>
+    `<optgroup label="${brand}">${list.sort((a,b)=>a.lieu.localeCompare(b.lieu)).map(s =>
+      `<option value="${s.key}">${s.lieu}</option>`).join('')}</optgroup>`
+  ).join('');
+
+  const box = (side, key) => {
+    const s = SBYK[key] || sorted[0];
+    const color = side==='A' ? '#6f82ff' : '#e6c14d';
+    return `<div style="background:var(--card2);padding:14px 16px;border-radius:10px;border-left:3px solid ${color}">
+      <select data-side2="${side}" style="width:100%;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:7px 9px;font-size:12.5px;margin-bottom:12px">${optgroups.replace(`value="${key}"`, `value="${key}" selected`)}</select>
+      <div style="background:linear-gradient(135deg,${s.color}22,transparent);padding:10px;border-radius:8px;margin-bottom:10px">
+        <div style="font-weight:700;font-size:14px;color:${s.color}">${s.lieu}</div>
+        <div style="font-size:11px;color:var(--muted)">${s.label} · ${s.cat}</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <div><div style="font-size:22px;font-weight:800;color:var(--accent2)">${nf(s.n)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Séances</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:var(--accent2)">${s.moy.toFixed(1)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Présents/séa.</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:${fill(s.rempl)}">${Math.round(100*s.rempl)}%</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Remplissage</div></div>
+        <div><div style="font-size:18px;font-weight:800;color:var(--accent2)">${eur(s.ca)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">CA estimé</div></div>
+      </div>
+    </div>`;
+  };
+  const sA = SBYK[CMP_S_A], sB = SBYK[CMP_S_B];
+  const dR = Math.round(100*(sA.rempl - sB.rempl));
+  const dM = +(sA.moy - sB.moy).toFixed(1);
+  const dCA = sA.ca - sB.ca;
+  const sameBrand = sA.brand === sB.brand;
+  wrap.innerHTML = `${box('A', CMP_S_A)}${box('B', CMP_S_B)}
+    <div style="grid-column:span 2;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 16px;text-align:center;font-size:13px;color:var(--muted)">
+      ${sameBrand ? '<span style="background:rgba(95,207,138,.18);color:var(--green);padding:2px 8px;border-radius:99px;font-size:11px;font-weight:700;margin-right:10px">benchmark intra-marque</span>' : ''}
+      Delta · Remplissage <span style="color:${dR>0?'var(--green)':'var(--red)'};font-weight:700">${dR>0?'+':''}${dR} pts</span> ·
+      Prés./séa. <span style="color:${dM>0?'var(--green)':'var(--red)'};font-weight:700">${dM>0?'+':''}${dM}</span> ·
+      CA estimé <span style="color:${dCA>0?'var(--green)':'var(--red)'};font-weight:700">${dCA>0?'+':''}${eur(dCA)}</span>
+    </div>`;
+  wrap.querySelectorAll('select[data-side2]').forEach(sel => {
+    sel.addEventListener('change', e => {
+      if(e.target.dataset.side2 === 'A') CMP_S_A = e.target.value;
+      else CMP_S_B = e.target.value;
+      renderStudios2Compare(rows);
+    });
+  });
 }
 
 // ============== ÉVOLUTION MENSUELLE multi-marques ==============
