@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ÃÂ·</title>
+<title>·</title>
 <style>
   :root{--bg:#0a0e1a;--card:#121828;--card2:#1a2238;--line:#2a3354;--text:#eef1fb;--accent:#6f82ff;--red:#e07a6f;}
   *{box-sizing:border-box;}
@@ -20,7 +20,7 @@
 <body>
 <form id="f" autocomplete="off">
   <input id="p" type="password" placeholder="" required autofocus>
-  <button type="submit">Ã¢ÂÂ</button>
+  <button type="submit">→</button>
   <div id="msg" class="err"></div>
 </form>
 <script>
@@ -40,7 +40,7 @@ document.getElementById('f').addEventListener('submit', async e => {
     const next = new URLSearchParams(location.search).get('next') || 'hub.html';
     location.replace(next);
   } else {
-    msg.textContent = 'Ã¢ÂÂ';
+    msg.textContent = '✗';
     document.getElementById('p').select();
   }
 });
