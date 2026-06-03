@@ -29,6 +29,20 @@ jobs:
       - name: Scrape national 4 plateformes
         run: python3 padel_national_scrape.py
 
+      - name: Push national → Supabase (source of truth)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python3 padel_national_supabase_sync.py
+        continue-on-error: true
+
+      - name: Reconstruct local JSON depuis Supabase (backward-compat)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python3 padel_national_from_supabase.py
+        continue-on-error: true
+
       - name: Prune sessions > 30j (limite taille repo)
         run: python3 prune_padel_live.py
         continue-on-error: true

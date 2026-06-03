@@ -22,6 +22,11 @@ create index if not exists padel_clubs_cp_idx       on padel_clubs(cp);
 create index if not exists padel_clubs_source_idx   on padel_clubs(source);
 create index if not exists padel_clubs_unified_idx  on padel_clubs(unified_id) where unified_id is not null;
 
+-- Colonne metro pour distinguer "idf" du reste de la FR métropolitaine
+-- (alimentée par padel_idf_supabase_sync.py = idf, padel_national_supabase_sync.py = autres).
+alter table padel_clubs add column if not exists metro text;
+create index if not exists padel_clubs_metro_idx     on padel_clubs(metro);
+
 create table if not exists padel_slots (
   id            text primary key,         -- "{club_slug}|{session_id}" — globalement unique
   club_slug     text references padel_clubs(slug) on delete cascade,
