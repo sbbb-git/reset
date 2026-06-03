@@ -25,6 +25,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
 
       - name: Barry's Paris (Mariana Tek)
         run: python3 barrys_scrape.py
@@ -38,16 +39,8 @@ jobs:
       - name: Banote (Mindbody, statut)
         run: python3 banote_scrape.py
         continue-on-error: true
-      - name: Pause anti-throttle Mindbody
-        run: sleep 30
-      - name: DNA Pilates (Mindbody, statut)
-        run: python3 dna_scrape.py
-        continue-on-error: true
-      - name: Pause anti-throttle Mindbody
-        run: sleep 30
-      - name: Le 33 Foch (Mindbody, statut)
-        run: python3 le33foch_scrape.py
-        continue-on-error: true
+      # DNA + Le33Foch sortis dans live-mindbody-dna.yml / live-mindbody-le33foch.yml
+      # (crons décalés pour éviter throttle Mindbody : 3 scrapers Mindbody = 3 workflows)
       - name: Sant-Roch (Mariana Tek)
         run: python3 santroch_scrape.py
         continue-on-error: true
@@ -60,8 +53,6 @@ jobs:
                   episod_data.json episod_seances.csv episod.html \
                   anybuddy_data.json anybuddy_creneaux.csv anybuddy.html \
                   banote_data.json banote_seances.csv banote.html \
-                  dna_data.json dna_seances.csv dna.html \
-                  le33foch_data.json le33foch_seances.csv le33foch.html \
                   santroch_data.json santroch_seances.csv santroch.html
           if git diff --cached --quiet; then
             echo "Aucun changement."

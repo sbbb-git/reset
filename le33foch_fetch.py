@@ -26,7 +26,7 @@ _LAX_SSL = ssl.create_default_context()
 _LAX_SSL.check_hostname = False
 _LAX_SSL.verify_mode = ssl.CERT_NONE
 
-UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120"
+UA = "Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0"
 BASE = "https://widgets.mindbodyonline.com/widgets/schedules"
 
 # Le 33 Foch : un seul widget (extrait de https://le33foch.fr/accueil/planning-et-reservations).

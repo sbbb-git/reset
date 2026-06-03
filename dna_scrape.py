@@ -45,7 +45,7 @@ ACCENT2 = "#bfa46f"      # accent doré subtil
 
 WIDGET_ID = "712164001d62"
 BASE = "https://widgets.mindbodyonline.com/widgets/schedules"
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/120"
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15"
 
 # Mapping location id -> libellé court
 LIEU_MAP = {

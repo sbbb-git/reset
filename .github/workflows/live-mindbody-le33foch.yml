@@ -1,40 +1,43 @@
-name: Padel · Auto-discovery hebdo (nouveaux clubs IDF)
+name: Scrap live · Le 33 Foch (Mindbody isolé)
+
+# Mindbody throttle dur si plusieurs widgets scrapés à la chaîne.
+# Workflow isolé avec UA Firefox Linux différent.
 
 on:
   schedule:
-    - cron: "0 5 * * 1"   # Lundi 5h UTC = 7h Paris
+    - cron: "20,50 4-21 * * *"   # offset +10min vs live-status, +5 vs dna
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
 concurrency:
-  group: padel-discover
+  group: live-mindbody-le33foch
   cancel-in-progress: true
 
 jobs:
-  discover:
+  scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: "pip"
+          cache: 'pip'
 
-      - name: Re-scan plateformes pour nouveaux clubs IDF
-        run: python3 padel_discover.py
+      - name: Le 33 Foch (Mindbody, statut)
+        run: python3 le33foch_scrape.py
+        continue-on-error: true
 
-      - name: Commit si nouveaux clubs trouvés
+      - name: Commit si changement
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add padel_idf_clubs.json doinsport_idf_clubs.json playtomic_idf_clubs.json
+          git add le33foch_data.json le33foch_seances.csv le33foch.html
           if git diff --cached --quiet; then
-            echo "Aucun nouveau club détecté."
+            echo "Aucun changement."
           else
-            git commit -m "Auto-discovery padel ($(date -u +%Y-%m-%d)) : nouveaux clubs IDF"
+            git commit -m "Scrap Le 33 Foch ($(date -u +%Y-%m-%dT%H:%M)Z)"
             for i in 1 2 3 4; do
               git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
               echo "retry push $i"; sleep 5

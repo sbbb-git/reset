@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 concurrency:
   group: sanity
@@ -23,8 +24,48 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
       - name: Run sanity check
+        id: sanity
         run: python3 sanity_check.py
+        continue-on-error: true
+
+      - name: Open / update GitHub issue si ALERT
+        if: steps.sanity.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let report = {};
+            try { report = JSON.parse(fs.readFileSync('sanity_report.json','utf8')); } catch(e){}
+            const alerts = (report.brands||[]).filter(b => b.status === 'ALERT' || b.status === 'ERROR');
+            if (!alerts.length) return;
+            const title = `🚨 Sanity ALERT — ${alerts.length} marque(s)`;
+            const body = [
+              `Run : ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              `Checked at : ${report.checked_at || 'n/a'}`,
+              '',
+              ...alerts.map(a => `- **${a.brand}** (${a.status}, ${a.count} entrées)\n  - ` + (a.issues||[]).join('\n  - ')),
+            ].join('\n');
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'sanity-alert', per_page: 5,
+            });
+            if (existing.data.length) {
+              await github.rest.issues.update({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: existing.data[0].number, body, title,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, body, labels: ['sanity-alert'],
+              });
+            }
+
+      - name: Fail si sanity a échoué
+        if: steps.sanity.outcome == 'failure'
+        run: exit 1
       - name: Sync vers Supabase (graceful)
         if: always()
         env:
