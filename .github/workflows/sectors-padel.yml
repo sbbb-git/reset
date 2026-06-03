@@ -63,6 +63,11 @@ jobs:
         run: python3 padel_supabase_sync.py
         continue-on-error: true
 
+      # ============== PRUNE STORES (après sync, sinon perte donnée) ==============
+      - name: Prune sessions > 30j (déjà dans Supabase / history.json.gz)
+        run: python3 prune_padel_live.py
+        continue-on-error: true
+
       # ============== COMMIT ==============
       - name: Commit si changement
         run: |

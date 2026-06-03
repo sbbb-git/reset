@@ -171,6 +171,25 @@ TPL = r"""<!DOCTYPE html>
 <div class="note">ℹ️ <b>Snake & Twist &middot; plateforme Arketa.</b> Présents = `total_booked` exact, capacité = `max_capacity`. Les rendez-vous privés (Appointment) sont exclus pour ne garder que les cours collectifs. Fenêtre courante : ~5 semaines. MAJ 30 min via robot.</div>
 <div class="kpis" id="kpis"></div>
 <div class="panel"><h2>Présents par jour</h2><canvas id="cDay"></canvas></div>
+
+<div class="panel">
+  <h2>📅 Heatmap jour &times; heure <span style="font-size:11px;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(moyenne présents/séance, pondérée)</span></h2>
+  <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 12px"><b>Moyenne</b> par séance pour chaque bucket jour × heure (évite le biais "Mardi 10× vs Samedi 5×").</p>
+  <div id="heatmap" style="display:grid;grid-template-columns:48px repeat(17,1fr);gap:2px;font-size:10px"></div>
+</div>
+
+<div class="panel">
+  <h2>⚖️ Comparateur de créneaux</h2>
+  <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 14px">Compare 2 créneaux jour × tranche horaire.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px" id="creneauCompare"></div>
+</div>
+
+<div class="panel">
+  <h2>🏆 Top 20 créneaux jour × tranche horaire</h2>
+  <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 14px">7 jours × 5 tranches = 35 buckets, classés par présents cumulés.</p>
+  <div id="topBuckets"></div>
+</div>
+
 <div class="panel"><h2>Détail des séances</h2>
 <div class="tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div></div>
 </div>
@@ -189,6 +208,87 @@ if(window.Chart){Chart.defaults.color='#9ac0a8';
 const byDay={};DATA.forEach(r=>byDay[r.date]=(byDay[r.date]||0)+r.presents);
 const days=Object.keys(byDay).sort();
 new Chart(cDay,{type:'bar',data:{labels:days.map(d=>d.slice(8)+'/'+d.slice(5,7)),datasets:[{data:days.map(d=>byDay[d]),backgroundColor:'__ACCENT__'}]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>nf(v)}}}}});}
+
+// ============== HEATMAP / CRÉNEAUX (moyenne présents/séance pondérée) ==============
+const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
+const TRANCHES={matin:{label:'Matin (7-12h)',hours:[7,8,9,10,11]},
+  midi:{label:'Midi (12-14h)',hours:[12,13]},
+  aprem:{label:'Après-midi (14-18h)',hours:[14,15,16,17]},
+  soiree:{label:'Soirée (18-22h)',hours:[18,19,20,21]},
+  fin:{label:'Fin soirée (22h+)',hours:[22,23]}};
+let CRENEAU_A={jour:'Mardi',tranche:'aprem'};
+let CRENEAU_B={jour:'Samedi',tranche:'matin'};
+(function renderHeatmap(){
+  const hm=document.getElementById('heatmap');if(!hm)return;
+  const hours=Array.from({length:17},(_,i)=>i+7);
+  const heat={};let max=0;
+  DATA.forEach(r=>{const h=parseInt((r.heure||'').slice(0,2));if(isNaN(h))return;
+    const k=r.jour+'|'+h;heat[k]=heat[k]||{p:0,n:0};
+    heat[k].p+=(r.presents||0);heat[k].n++;});
+  Object.values(heat).forEach(x=>{x.avg=x.n?x.p/x.n:0;if(x.avg>max)max=x.avg;});
+  let html='<div></div>';
+  hours.forEach(h=>html+=`<div style="text-align:center;color:var(--muted);font-weight:600;padding:3px 0">${h}h</div>`);
+  JOURS.forEach(j=>{
+    html+=`<div style="color:var(--muted);text-align:right;padding:0 6px;font-weight:600">${j.slice(0,3)}</div>`;
+    hours.forEach(h=>{const cell=heat[j+'|'+h]||{avg:0,n:0,p:0};const v=cell.avg;const t=max?v/max:0;
+      const r=Math.round(44+(255-44)*t),g=Math.round(223-(223-100)*t),b=Math.round(98-(98-50)*t);
+      const op=v>0?0.25+0.7*t:0.05;
+      const label=v?(v>=10?Math.round(v):v.toFixed(1)):'';
+      html+=`<div style="aspect-ratio:1;background:rgba(${r},${g},${b},${op});border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:9.5px;cursor:default" title="${j} ${h}h : ${v.toFixed(1)} présents/séance (${cell.n} séances obs.)">${label}</div>`;});
+  });
+  hm.innerHTML=html;
+})();
+function computeCreneau(jour,tranche){
+  const hours=new Set(TRANCHES[tranche].hours);
+  const f=DATA.filter(r=>{const h=parseInt((r.heure||'').slice(0,2));return r.jour===jour&&hours.has(h);});
+  const presents=f.reduce((s,r)=>s+(r.presents||0),0);
+  const capacite=f.reduce((s,r)=>s+(r.capacite||0),0);
+  const remplissage=capacite?presents/capacite:0;
+  return {n:f.length,presents,capacite,remplissage,moy:f.length?presents/f.length:0};
+}
+function renderCreneauCompare(){
+  const wrap=document.getElementById('creneauCompare');if(!wrap)return;
+  const box=(side,sel)=>{const c=computeCreneau(sel.jour,sel.tranche);
+    const color=side==='A'?'__ACCENT__':'#5fcf8a';
+    return `<div style="background:var(--card2);padding:14px 16px;border-radius:10px;border-left:3px solid ${color}">
+      <div style="display:flex;gap:8px;margin-bottom:12px">
+        <select data-side="${side}" data-field="jour" style="flex:1;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:13px">${JOURS.map(j=>`<option value="${j}" ${j===sel.jour?'selected':''}>${j}</option>`).join('')}</select>
+        <select data-side="${side}" data-field="tranche" style="flex:1;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:13px">${Object.entries(TRANCHES).map(([k,v])=>`<option value="${k}" ${k===sel.tranche?'selected':''}>${v.label}</option>`).join('')}</select>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <div><div style="font-size:22px;font-weight:800;color:#9ac0a8">${nf(c.n)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Séances</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:#9ac0a8">${c.moy.toFixed(1)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Présents/séance</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:${fill(c.remplissage)}">${Math.round(100*c.remplissage)}%</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Remplissage</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:#9ac0a8">${nf(c.presents)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Présents cumulés</div></div>
+      </div>
+    </div>`;};
+  wrap.innerHTML=`${box('A',CRENEAU_A)}${box('B',CRENEAU_B)}`;
+  wrap.querySelectorAll('select[data-side]').forEach(s=>s.addEventListener('change',e=>{
+    const sel=e.target.dataset.side==='A'?CRENEAU_A:CRENEAU_B;sel[e.target.dataset.field]=e.target.value;
+    renderCreneauCompare();
+  }));
+}
+(function renderTopBuckets(){
+  const buckets=[];
+  for(const jour of JOURS){for(const[tk,tv]of Object.entries(TRANCHES)){
+    const hours=new Set(tv.hours);
+    const f=DATA.filter(r=>{const h=parseInt((r.heure||'').slice(0,2));return r.jour===jour&&hours.has(h);});
+    const p=f.reduce((s,r)=>s+(r.presents||0),0);
+    const c=f.reduce((s,r)=>s+(r.capacite||0),0);
+    buckets.push({label:jour+' '+tv.label,n:f.length,p,c,r:c?p/c:0});
+  }}
+  buckets.sort((a,b)=>b.p-a.p);
+  const max=buckets[0]?.p||1;
+  const w=document.getElementById('topBuckets');if(!w)return;
+  w.innerHTML=buckets.slice(0,20).map((b,i)=>`<div style="display:grid;grid-template-columns:32px 280px 1fr auto;gap:10px;align-items:center;font-size:13px;padding:5px 0;border-bottom:1px solid var(--line)">
+    <span style="color:var(--muted);font-weight:700;text-align:right">${i+1}.</span>
+    <span style="font-weight:600">${b.label}</span>
+    <span style="height:8px;background:var(--line);border-radius:4px;overflow:hidden"><span style="display:block;height:100%;background:${fill(b.r)};width:${Math.round(100*b.p/max)}%"></span></span>
+    <span style="color:var(--muted);font-variant-numeric:tabular-nums;min-width:160px;text-align:right">${nf(b.p)} présents · ${Math.round(100*b.r)}% remplissage</span>
+  </div>`).join('');
+})();
+renderCreneauCompare();
+
 const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['lieu','Lieu'],['cours','Cours'],['coach','Coach'],['presents','Présents'],['capacite','Capacité']];
 document.querySelector('#tbl thead').innerHTML='<tr>'+cols.map(c=>`<th>${c[1]}</th>`).join('')+'</tr>';
 const rows=[...DATA].sort((a,b)=>(a.date+a.heure)<(b.date+b.heure)?1:-1);

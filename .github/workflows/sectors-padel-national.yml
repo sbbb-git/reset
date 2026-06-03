@@ -29,6 +29,10 @@ jobs:
       - name: Scrape national 4 plateformes
         run: python3 padel_national_scrape.py
 
+      - name: Prune sessions > 30j (limite taille repo)
+        run: python3 prune_padel_live.py
+        continue-on-error: true
+
       - name: Commit si changement
         run: |
           git config user.name "github-actions[bot]"

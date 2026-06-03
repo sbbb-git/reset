@@ -1,0 +1,50 @@
+name: Reformation + Evocore · scrape via Playwright (quotidien)
+
+# Ces 2 widgets Mindbody sont des SPAs : nécessitent un navigateur réel
+# (Playwright) au lieu d'un simple requests.get. Schedule plus rare car
+# Mindbody throttle vite et le statut "complet/des places" évolue lentement.
+
+on:
+  schedule:
+    - cron: "20 5 * * *"   # 5h20 UTC = 7h20 Paris, avant la pointe matinale
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reformation-evocore
+  cancel-in-progress: true
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - name: Install Playwright + Chromium
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Scrape Reformation + Evocore
+        run: python3 reformation_evocore_scrape.py
+        continue-on-error: true
+
+      - name: Commit si changement
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reformation_data.json evocore_data.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "Reformation + Evocore Playwright scrape ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            for i in 1 2 3 4; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              echo "retry push $i"; sleep 5
+            done
+          fi

@@ -32,6 +32,70 @@ FAST = {"barrys", "episod", "anybuddy", "banote", "dna", "le33foch", "senseclub"
         "burningbar", "santroch"}
 
 
+def _check_padel(name, d):
+    """Sanity checks dédiés aux stores padel.
+    Structure typique : {slug: {meta:{nom,lat,lng,cp,ville,...}, sessions:[...]}}
+    pour padel_idf / padel_national. Variantes pour history/insights.
+    """
+    issues = []
+    n = len(d)
+
+    if name in ("padel_idf", "padel_national"):
+        no_geo = 0
+        no_cp = 0
+        bad_price = 0
+        bad_slot = 0
+        # CP attendus selon le scope
+        cp_prefixes_idf = {"75", "77", "78", "91", "92", "93", "94", "95"}
+        out_of_scope = 0
+
+        for slug, club in d.items():
+            if not isinstance(club, dict):
+                continue
+            meta = club.get("meta") or club.get("club") or {}
+            sessions = club.get("sessions") or club.get("slots") or []
+            lat, lng = meta.get("lat"), meta.get("lng")
+            if not (isinstance(lat, (int, float)) and isinstance(lng, (int, float))):
+                no_geo += 1
+            cp = str(meta.get("cp") or meta.get("postal_code") or "")
+            if not cp:
+                no_cp += 1
+            elif name == "padel_idf" and cp[:2] not in cp_prefixes_idf:
+                out_of_scope += 1
+            # Sessions : prix aberrants + créneaux < 30min ou > 180min
+            for s in sessions if isinstance(sessions, list) else []:
+                if not isinstance(s, dict):
+                    continue
+                p = s.get("prix") or s.get("price")
+                if isinstance(p, (int, float)) and (p < 0 or p > 200):
+                    bad_price += 1
+                d_min = s.get("duree") or s.get("duration_min") or s.get("duree_min")
+                if isinstance(d_min, (int, float)) and (d_min < 30 or d_min > 240):
+                    bad_slot += 1
+
+        if no_geo:
+            issues.append(f"{no_geo} clubs sans coordonnées GPS")
+        if no_cp:
+            issues.append(f"{no_cp} clubs sans code postal")
+        if out_of_scope:
+            issues.append(f"{out_of_scope} clubs hors IDF (CP non 75/77/78/91/92/93/94/95)")
+        if bad_price:
+            issues.append(f"{bad_price} créneaux avec prix aberrant (<0 ou >200€)")
+        if bad_slot:
+            issues.append(f"{bad_slot} créneaux avec durée aberrante (<30min ou >240min)")
+
+    elif name == "brand_prices":
+        # liste de prix par marque, on regarde juste qu'il y en a et qu'ils sont sains
+        if isinstance(d, dict):
+            for brand, price in d.items():
+                if isinstance(price, (int, float)) and (price < 5 or price > 100):
+                    issues.append(f"prix marque {brand} aberrant : {price}€")
+
+    status = "OK" if not issues else "WARN"
+    return {"brand": name, "status": status, "count": n, "issues": issues,
+            "note": "structure padel"}
+
+
 def check(path):
     name = os.path.basename(path).replace("_data.json", "")
     try:
@@ -45,7 +109,7 @@ def check(path):
     PADEL_STORES = {"padel_idf", "padel_idf_history", "padel_national", "padel_insights",
                     "padel_etude_kpis", "brand_prices"}
     if name in PADEL_STORES:
-        return {"brand": name, "status": "OK", "count": len(d), "issues": [], "note": "structure padel, non-comparable"}
+        return _check_padel(name, d)
     rows = [v for v in d.values() if isinstance(v, dict)]
     n = len(rows)
     issues = []

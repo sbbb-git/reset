@@ -230,6 +230,25 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <div class="panel"><h2>Créneaux qui affichent le plus « complet »</h2><div id="topHour" class="ranklist"></div></div>
   </div>
   <div class="panel"><h2>Répartition des statuts par type de cours</h2><canvas id="cCours"></canvas></div>
+
+  <div class="panel">
+    <h2>📅 Heatmap jour &times; heure <span style="font-size:11px;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(% complet, pondéré par nb séances observées)</span></h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 12px"><b>Taux de complétude</b> par bucket jour × heure. Évite le biais "Mardi 10× vs Samedi 5×".</p>
+    <div id="heatmap" style="display:grid;grid-template-columns:48px repeat(17,1fr);gap:2px;font-size:10px"></div>
+  </div>
+
+  <div class="panel">
+    <h2>⚖️ Comparateur de créneaux</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 14px">Compare 2 créneaux jour × tranche horaire : volume, taux complet, top cours.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px" id="creneauCompare"></div>
+  </div>
+
+  <div class="panel">
+    <h2>🏆 Top 20 créneaux jour × tranche horaire</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 14px">7 jours × 5 tranches = 35 buckets, classés par <b>taux de complétude</b> (min. 3 séances observées).</p>
+    <div id="topBuckets"></div>
+  </div>
+
   <div class="panel">
     <h2>Détail des séances (statut figé)</h2>
     <div class="filters">
@@ -290,6 +309,92 @@ new Chart(cCours,{type:'bar',data:{labels:cours,datasets:[
   {label:'presque complet',data:cours.map(c=>byC[c]['presque complet']),backgroundColor:STC['presque complet']},
   {label:'disponible',data:cours.map(c=>byC[c].disponible),backgroundColor:STC.disponible}]},
   options:{indexAxis:'y',plugins:{legend:{display:true}},scales:{x:{stacked:true,beginAtZero:true,ticks:{callback:v=>nf(v)}},y:{stacked:true}}}});
+
+// ============== HEATMAP / CRÉNEAUX (% complet pondéré) ==============
+const TRANCHES={matin:{label:'Matin (7-12h)',hours:[7,8,9,10,11]},
+  midi:{label:'Midi (12-14h)',hours:[12,13]},
+  aprem:{label:'Après-midi (14-18h)',hours:[14,15,16,17]},
+  soiree:{label:'Soirée (18-22h)',hours:[18,19,20,21]},
+  fin:{label:'Fin soirée (22h+)',hours:[22,23]}};
+let CRENEAU_A={jour:'Mardi',tranche:'aprem'};
+let CRENEAU_B={jour:'Samedi',tranche:'matin'};
+const fillColor=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
+(function renderHeatmap(){
+  const hm=document.getElementById('heatmap');if(!hm)return;
+  const hours=Array.from({length:17},(_,i)=>i+7);
+  const heat={};let max=0;
+  DATA.forEach(r=>{const h=parseInt((r.heure||'').slice(0,2));if(isNaN(h))return;
+    const k=r.jour+'|'+h;heat[k]=heat[k]||{c:0,n:0};
+    heat[k].n++;if(r.statut==='complet')heat[k].c++;});
+  Object.values(heat).forEach(x=>{x.rate=x.n?x.c/x.n:0;if(x.rate>max)max=x.rate;});
+  let html='<div></div>';
+  hours.forEach(h=>html+=`<div style="text-align:center;color:var(--muted);font-weight:600;padding:3px 0">${h}h</div>`);
+  JOURS.forEach(j=>{
+    html+=`<div style="color:var(--muted);text-align:right;padding:0 6px;font-weight:600">${j.slice(0,3)}</div>`;
+    hours.forEach(h=>{const cell=heat[j+'|'+h]||{rate:0,n:0,c:0};const v=cell.rate;const t=max?v/max:0;
+      const r=Math.round(44+(255-44)*t),g=Math.round(223-(223-100)*t),b=Math.round(98-(98-50)*t);
+      const op=cell.n?0.2+0.75*t:0.05;
+      const label=cell.n?Math.round(100*v)+'%':'';
+      html+=`<div style="aspect-ratio:1;background:rgba(${r},${g},${b},${op});border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:9.5px;cursor:default" title="${j} ${h}h : ${Math.round(100*v)}% complet (${cell.c}/${cell.n} séances observées)">${label}</div>`;});
+  });
+  hm.innerHTML=html;
+})();
+function computeCreneau(jour,tranche){
+  const hours=new Set(TRANCHES[tranche].hours);
+  const f=DATA.filter(r=>{const h=parseInt((r.heure||'').slice(0,2));return r.jour===jour&&hours.has(h);});
+  const c=f.filter(r=>r.statut==='complet').length;
+  const rate=f.length?c/f.length:0;
+  const byCours={};f.forEach(r=>{if(!r.cours)return;byCours[r.cours]=byCours[r.cours]||{c:0,n:0};byCours[r.cours].n++;if(r.statut==='complet')byCours[r.cours].c++;});
+  const topCours=Object.entries(byCours).map(([k,o])=>[k,o.n?o.c/o.n:0,o.c,o.n]).filter(x=>x[3]>=2).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  return {n:f.length,c,rate,topCours};
+}
+function renderCreneauCompare(){
+  const wrap=document.getElementById('creneauCompare');if(!wrap)return;
+  const box=(side,sel)=>{const c=computeCreneau(sel.jour,sel.tranche);
+    const color=side==='A'?'#e07a6f':'#e6c14d';
+    return `<div style="background:var(--card2);padding:14px 16px;border-radius:10px;border-left:3px solid ${color}">
+      <div style="display:flex;gap:8px;margin-bottom:12px">
+        <select data-side="${side}" data-field="jour" style="flex:1;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:13px">${JOURS.map(j=>`<option value="${j}" ${j===sel.jour?'selected':''}>${j}</option>`).join('')}</select>
+        <select data-side="${side}" data-field="tranche" style="flex:1;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:13px">${Object.entries(TRANCHES).map(([k,v])=>`<option value="${k}" ${k===sel.tranche?'selected':''}>${v.label}</option>`).join('')}</select>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
+        <div><div style="font-size:22px;font-weight:800;color:#9b7ff0">${nf(c.n)}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Séances observées</div></div>
+        <div><div style="font-size:22px;font-weight:800;color:${fillColor(c.rate)}">${Math.round(100*c.rate)}%</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">Taux complet</div></div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">Top cours (taux complet)</div>
+      <div style="font-size:11.5px">${c.topCours.length?c.topCours.map(([k,t,cc,n],i)=>`<div style="padding:3px 7px;background:var(--bg);border-radius:5px;margin-bottom:3px"><span style="color:var(--muted)">${i+1}.</span> ${k.slice(0,28)} <span style="color:${fillColor(t)};font-weight:700;float:right">${Math.round(100*t)}% (${cc}/${n})</span></div>`).join(''):'<div style="color:var(--muted);font-style:italic">—</div>'}</div>
+    </div>`;};
+  const cA=computeCreneau(CRENEAU_A.jour,CRENEAU_A.tranche),cB=computeCreneau(CRENEAU_B.jour,CRENEAU_B.tranche);
+  const dR=Math.round(100*(cA.rate-cB.rate));
+  wrap.innerHTML=`${box('A',CRENEAU_A)}${box('B',CRENEAU_B)}
+    <div style="grid-column:span 2;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 16px;text-align:center;font-size:13px;color:var(--muted)">
+      <b style="color:#e07a6f">${CRENEAU_A.jour} ${TRANCHES[CRENEAU_A.tranche].label}</b> vs <b style="color:#e6c14d">${CRENEAU_B.jour} ${TRANCHES[CRENEAU_B.tranche].label}</b> ·
+      Écart : <span style="color:${dR>0?'#5fcf8a':'#e07a6f'};font-weight:700">${dR>0?'+':''}${dR} pts</span>
+    </div>`;
+  wrap.querySelectorAll('select[data-side]').forEach(s=>s.addEventListener('change',e=>{
+    const sel=e.target.dataset.side==='A'?CRENEAU_A:CRENEAU_B;sel[e.target.dataset.field]=e.target.value;
+    renderCreneauCompare();
+  }));
+}
+function renderTopBuckets(){
+  const buckets=[];
+  for(const jour of JOURS){for(const[tk,tv]of Object.entries(TRANCHES)){
+    const hours=new Set(tv.hours);
+    const f=DATA.filter(r=>{const h=parseInt((r.heure||'').slice(0,2));return r.jour===jour&&hours.has(h);});
+    if(f.length<3)continue;
+    const c=f.filter(r=>r.statut==='complet').length;
+    buckets.push({label:jour+' '+tv.label,n:f.length,c,r:f.length?c/f.length:0});
+  }}
+  buckets.sort((a,b)=>b.r-a.r);
+  const w=document.getElementById('topBuckets');if(!w)return;
+  w.innerHTML=buckets.slice(0,20).map((b,i)=>`<div style="display:grid;grid-template-columns:32px 280px 1fr auto;gap:10px;align-items:center;font-size:13px;padding:5px 0;border-bottom:1px solid var(--line)">
+    <span style="color:var(--muted);font-weight:700;text-align:right">${i+1}.</span>
+    <span style="font-weight:600">${b.label}</span>
+    <span style="height:8px;background:var(--line);border-radius:4px;overflow:hidden"><span style="display:block;height:100%;background:${fillColor(b.r)};width:${Math.round(100*b.r)}%"></span></span>
+    <span style="color:var(--muted);font-variant-numeric:tabular-nums;min-width:160px;text-align:right">${Math.round(100*b.r)}% complet · ${b.c}/${b.n} séances</span>
+  </div>`).join('')||'<div style="color:var(--muted)">Pas encore assez de séances observées par bucket (min. 3).</div>';
+}
+renderCreneauCompare();renderTopBuckets();
 
 // table
 const cols=[['date','Date'],['jour','Jour'],['heure','Heure'],['cours','Cours'],['statut','Statut'],['presents','Présents'],['places_restantes','Places restantes']];
