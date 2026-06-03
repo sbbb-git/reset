@@ -97,7 +97,7 @@
 <!-- ============================================================ #1 ============================================================ -->
 <section id="i1">
   <h2>① Heatmap horaire de la demande <span class="maturity robust">robuste</span></h2>
-  <p class="sub">Pour chaque jour × heure, on cumule tous les bookings observés (Doinsport historique + sessions « reserve » live). Plus la case est foncée, plus la demande est forte. Permet de repérer instantanément les heures premium (jamais dispo) et les heures creuses (potentiel d'amplification ou idéal pour cours/formations).</p>
+  <p class="sub"><b>Taux d'occupation pondéré</b> par bucket jour × heure : <code>(créneaux réservés / créneaux observés) × 100</code>. Pondéré pour éviter le biais "Mardi observé 10× vs Samedi 5×" — on ne se laisse pas tromper par la fréquence d'observation. Plus la case est foncée, plus le créneau est <i>structurellement</i> en demande.</p>
 
   <div class="panel">
     <div class="kpis" id="i1Kpis"></div>
@@ -262,9 +262,10 @@ async function load(){
   // ============== #1 HEATMAP ==============
   const hmData = D.heatmap.data;
   const hours = Array.from({length:17}, (_,i)=>i+7);
-  // Trouve max value pour échelle
+  // PONDÉRÉ : on affiche le taux d'occupation (%) au lieu du cumulé pour éviter le biais
+  // "Mardi observé 10× vs Samedi 5×". L'échelle utilise le taux, plus comparable.
   let maxV = 0;
-  for(const j of JOURS) for(const cell of hmData[j]) maxV = Math.max(maxV, cell.demand);
+  for(const j of JOURS) for(const cell of hmData[j]) if(cell.offered > 0) maxV = Math.max(maxV, cell.occupation_pct);
 
   const hm = document.getElementById('heatmap');
   let html = '<div class="head"></div>';
@@ -272,14 +273,15 @@ async function load(){
   for(const j of JOURS){
     html += `<div class="axis">${j.slice(0,3)}</div>`;
     for(const cell of hmData[j]){
-      const v = cell.demand;
+      const v = cell.occupation_pct;
       const t = maxV ? v/maxV : 0;
       // Gradient vert (cold) → jaune → rouge (hot)
       const r = Math.round(44 + (255-44)*t);
       const g = Math.round(223 - (223-100)*t);
       const b = Math.round(98 - (98-50)*t);
-      const op = v > 0 ? 0.25 + 0.7*t : 0.05;
-      html += `<div class="cell" style="background:rgba(${r},${g},${b},${op})" title="${j} ${cell.heure}h: ${fmt(v)} bookings (${cell.offered} créneaux offerts, ${cell.occupation_pct}% occ.)">${v ? (v>=1000 ? Math.round(v/1000)+'k' : v) : ''}</div>`;
+      const op = cell.offered > 0 ? 0.25 + 0.7*t : 0.05;
+      const label = cell.offered > 0 ? v+'%' : '';
+      html += `<div class="cell" style="background:rgba(${r},${g},${b},${op})" title="${j} ${cell.heure}h : ${v}% d'occupation · ${fmt(cell.demand)} réservés sur ${fmt(cell.offered)} créneaux observés">${label}</div>`;
     }
   }
   hm.innerHTML = html;

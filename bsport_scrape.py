@@ -258,8 +258,8 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="panel"><h2>Coachs &laquo; stars &raquo; (moyenne de présents / cours)</h2><div id="topCoach" class="ranklist"></div></div>
 
   <div class="panel">
-    <h2>📅 Heatmap fréquentation jour &times; heure</h2>
-    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 12px">Total des présents par bucket jour de la semaine × heure de la journée. Plus la case est foncée, plus le créneau est chargé. Survol pour le détail.</p>
+    <h2>📅 Heatmap fréquentation jour &times; heure <span style="font-size:11px;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(moyenne présents/séance, pondérée)</span></h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 12px"><b>Moyenne</b> des présents par séance pour chaque bucket jour × heure. Pondéré par le nombre de séances observées dans la case (évite le biais : un mardi qu'on observe 10× n'est pas mécaniquement plus chargé qu'un samedi observé 5×). Plus foncé = créneau plus chargé en moyenne.</p>
     <div id="heatmap" style="display:grid;grid-template-columns:48px repeat(17,1fr);gap:2px;font-size:10px"></div>
   </div>
 
@@ -414,17 +414,21 @@ let CRENEAU_B={jour:'Samedi',tranche:'matin'};
 function renderHeatmap(D){
   const hm=document.getElementById('heatmap');if(!hm)return;
   const hours=Array.from({length:17},(_,i)=>i+7);
+  // PONDÉRÉ : moyenne présents/séance (évite biais "Mardi observé 10x vs Samedi 5x")
   const heat={};let max=0;
   D.forEach(r=>{const h=parseInt((r.heure||'').slice(0,2));if(isNaN(h))return;
-    const k=r.jour+'|'+h;heat[k]=(heat[k]||0)+(r.presents||0);if(heat[k]>max)max=heat[k];});
+    const k=r.jour+'|'+h;heat[k]=heat[k]||{p:0,n:0};
+    heat[k].p+=(r.presents||0);heat[k].n++;});
+  Object.values(heat).forEach(x=>{x.avg=x.n?x.p/x.n:0;if(x.avg>max)max=x.avg;});
   let html='<div></div>';
   hours.forEach(h=>html+=`<div style="text-align:center;color:var(--muted);font-weight:600;padding:3px 0">${h}h</div>`);
   JOURS.forEach(j=>{
     html+=`<div style="color:var(--muted);text-align:right;padding:0 6px;font-weight:600">${j.slice(0,3)}</div>`;
-    hours.forEach(h=>{const v=heat[j+'|'+h]||0;const t=max?v/max:0;
+    hours.forEach(h=>{const cell=heat[j+'|'+h]||{avg:0,n:0,p:0};const v=cell.avg;const t=max?v/max:0;
       const r=Math.round(44+(255-44)*t),g=Math.round(223-(223-100)*t),b=Math.round(98-(98-50)*t);
       const op=v>0?0.25+0.7*t:0.05;
-      html+=`<div style="aspect-ratio:1;background:rgba(${r},${g},${b},${op});border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:9.5px;cursor:default" title="${j} ${h}h: ${nf(v)} présents cumulés">${v?(v>=1000?Math.round(v/1000)+'k':v):''}</div>`;});
+      const label=v?(v>=10?Math.round(v):v.toFixed(1)):'';
+      html+=`<div style="aspect-ratio:1;background:rgba(${r},${g},${b},${op});border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:9.5px;cursor:default" title="${j} ${h}h : ${v.toFixed(1)} présents/séance (sur ${cell.n} séances observées, ${nf(cell.p)} cumulés)">${label}</div>`;});
   });
   hm.innerHTML=html;
 }

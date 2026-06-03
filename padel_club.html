@@ -300,26 +300,32 @@ async function load(){
 
   // Heatmap jour × heure
   const heat = {};
+  // PONDÉRÉ : taux d'occupation (% réservés) par bucket, évite le biais "jour observé N×".
   sessions.forEach(s => {
     const j = s.jour; const h = parseInt((s.heure||'').slice(0,2));
     if(!j || isNaN(h)) return;
-    heat[j+'|'+h] = (heat[j+'|'+h] || 0) + 1;
+    const k = j+'|'+h;
+    heat[k] = heat[k] || {n:0, res:0};
+    heat[k].n++;
+    if(s.statut === 'reserve') heat[k].res++;
   });
   const hours = Array.from({length:17}, (_,i)=>i+7);
-  let max = 0; for(const k in heat) max = Math.max(max, heat[k]);
+  let max = 0; for(const k in heat){ heat[k].rate = heat[k].n ? heat[k].res/heat[k].n : 0; if(heat[k].rate > max) max = heat[k].rate; }
   let hmHtml = '<div style="display:grid;grid-template-columns:48px repeat(17,1fr);gap:2px;font-size:9.5px">';
   hmHtml += '<div></div>';
   hours.forEach(h => hmHtml += `<div style="text-align:center;color:var(--muted)">${h}h</div>`);
   JOURS.forEach(j => {
     hmHtml += `<div style="color:var(--muted);text-align:right;padding:0 4px">${j.slice(0,3)}</div>`;
     hours.forEach(h => {
-      const v = heat[j+'|'+h] || 0;
+      const cell = heat[j+'|'+h] || {n:0,res:0,rate:0};
+      const v = cell.rate;
       const t = max ? v/max : 0;
       const r = Math.round(44 + (255-44)*t);
       const g = Math.round(223 - (223-100)*t);
       const b = Math.round(98 - (98-50)*t);
-      const op = v > 0 ? 0.25 + 0.7*t : 0.05;
-      hmHtml += `<div style="aspect-ratio:1;background:rgba(${r},${g},${b},${op});border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:9.5px" title="${j} ${h}h : ${v}">${v||''}</div>`;
+      const op = cell.n > 0 ? 0.25 + 0.7*t : 0.05;
+      const label = cell.n > 0 ? Math.round(100*v)+'%' : '';
+      hmHtml += `<div style="aspect-ratio:1;background:rgba(${r},${g},${b},${op});border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:9.5px" title="${j} ${h}h : ${Math.round(100*v)}% occupation (${cell.res} réservés / ${cell.n} observés)">${label}</div>`;
     });
   });
   hmHtml += '</div>';
