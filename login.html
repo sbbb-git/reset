@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Â·</title>
+<title>ÃÂ·</title>
 <style>
   :root{--bg:#0a0e1a;--card:#121828;--card2:#1a2238;--line:#2a3354;--text:#eef1fb;--accent:#6f82ff;--red:#e07a6f;}
   *{box-sizing:border-box;}
@@ -20,11 +20,11 @@
 <body>
 <form id="f" autocomplete="off">
   <input id="p" type="password" placeholder="" required autofocus>
-  <button type="submit">â</button>
+  <button type="submit">Ã¢ÂÂ</button>
   <div id="msg" class="err"></div>
 </form>
 <script>
-const DEFAULT_HASH = 'f9fbb088ceabb7da0dac2e0a80fedd3b83cdf962814d2f6a504a105c2737c89b';
+const DEFAULT_HASH = 'b25e0f72478441d4385e3c89a07bd4722f9df0787d84980507fd679dad998a52';
 async function sha256(s){
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
   return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
@@ -40,7 +40,7 @@ document.getElementById('f').addEventListener('submit', async e => {
     const next = new URLSearchParams(location.search).get('next') || 'hub.html';
     location.replace(next);
   } else {
-    msg.textContent = 'â';
+    msg.textContent = 'Ã¢ÂÂ';
     document.getElementById('p').select();
   }
 });
