@@ -1,6 +1,15 @@
 {
- "generated_at": "2026-06-04T16:04:09.834685",
- "idle_24h": [],
+ "generated_at": "2026-06-04T18:36:01.074243",
+ "idle_24h": [
+  {
+   "slug": "tennis-padel-bois-colombes-bois-colombes",
+   "source": "anybuddy",
+   "name": "tennis-padel-bois-colombes-bois-colombes",
+   "cp": "92700",
+   "last_seen": "2026-06-03 17:19",
+   "hours_idle": 25.3
+  }
+ ],
  "price_shifts": [
   {
    "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
@@ -802,8 +811,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 3,
-  "idle_24h": 0,
+  "total_anomalies": 4,
+  "idle_24h": 1,
   "price_shifts": 1,
   "volume_drops": 2,
   "new_clubs_14d": 96
