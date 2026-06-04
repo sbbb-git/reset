@@ -283,6 +283,7 @@ document.getElementById('kpis').innerHTML=[
   ['Présents (total connu)',nf(totPres)],
   ['Moy. présents / séance',known.length?avgPres.toFixed(1)+' / '+CAP:'—'],
   ['Complètes (5/5)',nf(nComplet)+(DATA.length?` (${Math.round(100*nComplet/DATA.length)}%)`:'')],
+  ['Presque complètes',nf(nPresque)+(DATA.length?` (${Math.round(100*nPresque/DATA.length)}%)`:'')],
 ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
 
 // séances complètes par jour
