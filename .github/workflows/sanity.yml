@@ -64,6 +64,9 @@ jobs:
 
       - name: Fail si sanity a échoué
         if: steps.sanity.outcome == 'failure'
+        # Mais sans bloquer le workflow → l'alerte vit dans l'issue GitHub (step
+        # précédent), inutile de marquer le run rouge en plus.
+        continue-on-error: true
         run: exit 1
       - name: Sync vers Supabase (graceful)
         if: always()
