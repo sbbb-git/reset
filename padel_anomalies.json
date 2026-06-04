@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-04T09:14:04.473036",
+ "generated_at": "2026-06-04T12:30:37.418688",
  "idle_24h": [
   {
    "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
@@ -7,7 +7,7 @@
    "name": "Padel Pulsion",
    "cp": "91570",
    "last_seen": "2026-06-02 21:44",
-   "hours_idle": 35.5
+   "hours_idle": 38.8
   }
  ],
  "price_shifts": [
@@ -41,6 +41,14 @@
   }
  ],
  "new_clubs": [
+  {
+   "slug": "playtomic-d25392c9",
+   "source": "playtomic",
+   "name": "Net And Connect",
+   "cp": "75009 Paris",
+   "first_seen": "2026-06-04 14:30",
+   "days_since": 0
+  },
   {
    "slug": "doinsport-27823ee9-57fe-4fbc-92ba-079443df934e",
    "source": "doinsport",
@@ -807,6 +815,6 @@
   "idle_24h": 1,
   "price_shifts": 1,
   "volume_drops": 2,
-  "new_clubs_14d": 95
+  "new_clubs_14d": 96
  }
 }
