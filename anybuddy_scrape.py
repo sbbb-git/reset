@@ -149,6 +149,7 @@ def capture(cfg):
                         "heure": sdt.strftime("%H:%M"),
                         "fin": edt.strftime("%H:%M"),
                         "terrain": court_name(cfg, cid),
+                        "lieu": court_name(cfg, cid),   # alias unifié avec les autres scrapers
                         "court_id": cid,
                         "duree": dur,
                         "prix": round((sv.get("price") or 0) / 100, 2),

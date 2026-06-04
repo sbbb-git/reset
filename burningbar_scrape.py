@@ -82,10 +82,21 @@ def capture():
         except ValueError:
             continue
         lock = now >= start - dt.timedelta(minutes=LOCK_MIN)
+        # Capacité par défaut : 25 (cours collectifs Burning Bar / The Hot Room ~20-30 places)
+        cap = 25
+        if statut == "complet":
+            presents = cap
+        elif statut == "presque complet" and isinstance(places, int):
+            presents = max(0, cap - places)
+        else:
+            presents = 0
         store[key] = {
             "date": today.isoformat(), "jour": jour, "heure": heure, "salle": salle,
+            "lieu": salle,    # alias unifié avec les autres scrapers
             "cours": s.get("cours", ""), "statut": statut, "places_restantes": places,
-            "locked": lock, "releve": now.strftime("%Y-%m-%d %H:%M"),
+            "capacite": cap, "presents": presents,
+            "locked": lock, "finie": lock,    # alias finie = locked (terminologie unifiée)
+            "releve": now.strftime("%Y-%m-%d %H:%M"),
         }
         if lock:
             locked_now += 1
@@ -105,7 +116,8 @@ def capture():
     return store
 
 
-FIELDS = ["date", "jour", "heure", "salle", "cours", "statut", "places_restantes", "locked", "releve"]
+FIELDS = ["date", "jour", "heure", "salle", "lieu", "cours", "statut",
+          "places_restantes", "capacite", "presents", "locked", "finie", "releve"]
 
 
 def write_csv(rows, path):
@@ -228,10 +240,14 @@ const nComplet=DATA.filter(r=>r.statut==='complet').length;
 const nPresque=DATA.filter(r=>r.statut==='presque complet').length;
 const salles=new Set(DATA.map(r=>r.salle)).size;
 const jours=new Set(DATA.map(r=>r.date)).size;
+const totPres=DATA.reduce((s,r)=>s+(r.presents||0),0);
+const avgPres=DATA.length?totPres/DATA.length:0;
 document.getElementById('kpis').innerHTML=[
   ['Séances suivies',nf(DATA.length)],
   ['Complètes',nf(nComplet)+(DATA.length?` (${Math.round(100*nComplet/DATA.length)}%)`:'')],
-  ['Presque complètes',nf(nPresque)],
+  ['Presque complètes',nf(nPresque)+(DATA.length?` (${Math.round(100*nPresque/DATA.length)}%)`:'')],
+  ['Présents estimés',nf(totPres)],
+  ['Moy. présents / séance',DATA.length?avgPres.toFixed(1):'—'],
   ['Salles',nf(salles)],
   ['Jours couverts',nf(jours)],
 ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');

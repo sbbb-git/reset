@@ -29,6 +29,12 @@ jobs:
       - name: Scrape national 4 plateformes
         run: python3 padel_national_scrape.py
 
+      - name: Backfill GPS (catalogue + Nominatim opt-in)
+        env:
+          USE_NOMINATIM: "1"
+        run: python3 padel_geocode_backfill.py
+        continue-on-error: true
+
       - name: Push national → Supabase (source of truth)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
@@ -63,4 +69,14 @@ jobs:
               git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
               echo "retry push $i"; sleep 5
             done
+          fi
+
+      - name: Healthcheck ping (si HEALTHCHECK_URL défini)
+        if: always()
+        env:
+          HC_URL: ${{ secrets.HEALTHCHECK_URL }}
+          WF: sectors-padel-national
+        run: |
+          if [ -n "$HC_URL" ]; then
+            curl -fsSL --max-time 10 "$HC_URL/$WF?status=${{ job.status }}" || true
           fi

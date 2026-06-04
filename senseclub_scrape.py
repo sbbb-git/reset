@@ -262,7 +262,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 </div>
 <script>
 const ALL=__DATA__;
-const DATA=ALL.filter(r=>r.locked);   // on n'affiche que les statuts figés (definitifs)
+const DATA=ALL.filter(r=>r.finie||r.locked);   // on n'affiche que les statuts figés (definitifs ; 'finie' alias unifié)
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
 const nf=v=>Math.round(v).toLocaleString('fr-FR');

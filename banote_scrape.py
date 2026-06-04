@@ -234,7 +234,7 @@ const isNarrow=()=>matchMedia('(max-width:600px)').matches;
 const DATA=ALL.filter(r=>r.finie&&r.statut!=='annule'&&(r.capacite||0)>0);
 const selLieu=document.getElementById('fLieu'),selStatut=document.getElementById('fStatut');
 function fillSel(sel,vals,label){sel.innerHTML='';sel.add(new Option(label,''));[...new Set(vals)].filter(Boolean).sort().forEach(v=>sel.add(new Option(LBL[v]||v,v)));}
-fillSel(selLieu,DATA.map(r=>r.lieu),'Tous les lieux');
+fillSel(selLieu,DATA.map(r=>r.lieu),'Tous les studios');
 fillSel(selStatut,DATA.map(r=>r.statut),'Tous les statuts');
 function current(){
   const q=document.getElementById('q').value.toLowerCase();
@@ -254,11 +254,11 @@ function render(){
     : 'Aucune séance figée sur cette sélection (l\'historique se construit au fil des relevés).';
   document.getElementById('kpis').innerHTML=[
     ['Séances figées',nf(D.length)],
-    ['Lieux',nf(nLieux)],
+    ['Studios',nf(nLieux)],
     ['Complètes',nf(nComplet)+(D.length?` (${Math.round(100*nComplet/D.length)}%)`:'')],
     ['Présents estimés',nf(totPres)],
-    ['Présents / lieu',nf(totPres/nLieux)],
-    ['Compl. / lieu',nf(nComplet/nLieux)],
+    ['Présents / studio',nf(totPres/nLieux)],
+    ['Compl. / studio',nf(nComplet/nLieux)],
   ].map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
 
   const byDay={};D.forEach(r=>{byDay[r.date]=byDay[r.date]||{c:0,t:0};byDay[r.date].t++;if(r.statut==='complet')byDay[r.date].c++;});
