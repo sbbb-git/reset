@@ -23,8 +23,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
 
-      - name: Le 33 Foch (Mindbody, statut)
+      - name: Install Playwright (fallback throttle Mindbody)
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Le 33 Foch (HTTP + fallback Playwright si throttle)
         run: python3 le33foch_scrape.py
         continue-on-error: true
 

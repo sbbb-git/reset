@@ -1,86 +1,84 @@
 {
- "checked_at": "2026-06-01 18:11",
+ "checked_at": "2026-06-05 16:38",
  "brands": [
   {
    "brand": "anybuddy",
    "status": "OK",
-   "count": 395,
+   "count": 582,
    "issues": []
   },
   {
    "brand": "athletx",
    "status": "OK",
-   "count": 290,
+   "count": 440,
    "issues": []
   },
   {
    "brand": "banote",
    "status": "OK",
-   "count": 1073,
+   "count": 1510,
    "issues": []
   },
   {
    "brand": "barrys",
    "status": "OK",
-   "count": 87,
+   "count": 125,
    "issues": []
   },
   {
    "brand": "belly",
    "status": "OK",
-   "count": 242,
+   "count": 347,
    "issues": []
   },
   {
    "brand": "burningbar",
    "status": "OK",
-   "count": 39,
+   "count": 118,
    "issues": []
   },
   {
    "brand": "dna",
-   "status": "ALERT",
-   "count": 779,
-   "issues": [
-    "dernier relevé il y a 22h (> 16h attendu)"
-   ]
+   "status": "OK",
+   "count": 1934,
+   "issues": []
   },
   {
    "brand": "driphiit",
    "status": "OK",
-   "count": 40,
+   "count": 59,
    "issues": []
   },
   {
    "brand": "dynamo",
    "status": "OK",
-   "count": 242,
+   "count": 502,
    "issues": []
   },
   {
    "brand": "episod",
    "status": "OK",
-   "count": 1243,
+   "count": 1705,
    "issues": []
   },
   {
    "brand": "kore",
    "status": "OK",
-   "count": 80,
+   "count": 124,
    "issues": []
   },
   {
    "brand": "le33foch",
    "status": "ALERT",
-   "count": 263,
+   "count": 532,
    "issues": [
-    "dernier relevé il y a 22h (> 16h attendu)"
+    "dernier relevé il y a 65h (> 16h attendu)"
    ]
   },
   {
    "brand": "lecercle",
    "status": "OK",
-   "count": 84,
+   "count": 121,
    "issues": []
   },
   {
@@ -88,67 +86,76 @@
    "status": "OK",
    "count": 143,
    "issues": [],
-   "note": "structure padel, non-comparable"
+   "note": "structure padel"
   },
   {
    "brand": "padel_insights",
    "status": "OK",
    "count": 8,
    "issues": [],
-   "note": "structure padel, non-comparable"
+   "note": "structure padel"
+  },
+  {
+   "brand": "padel_national",
+   "status": "WARN",
+   "count": 942,
+   "issues": [
+    "942 clubs sans coordonnées GPS"
+   ],
+   "note": "structure padel"
   },
   {
    "brand": "poses",
    "status": "OK",
-   "count": 471,
+   "count": 666,
    "issues": []
   },
   {
    "brand": "punch",
    "status": "OK",
-   "count": 119,
+   "count": 251,
    "issues": []
   },
   {
    "brand": "reset",
    "status": "OK",
-   "count": 431,
+   "count": 456,
    "issues": []
   },
   {
    "brand": "riise",
    "status": "OK",
-   "count": 287,
+   "count": 603,
    "issues": []
   },
   {
    "brand": "santroch",
    "status": "OK",
-   "count": 71,
+   "count": 111,
    "issues": []
   },
   {
    "brand": "senseclub",
    "status": "OK",
-   "count": 35,
+   "count": 79,
    "issues": []
   },
   {
    "brand": "snakeandtwist",
    "status": "OK",
-   "count": 297,
+   "count": 310,
    "issues": []
   },
   {
    "brand": "spacecycle",
    "status": "OK",
-   "count": 46,
+   "count": 65,
    "issues": []
   },
   {
    "brand": "thenewme",
    "status": "OK",
-   "count": 2815,
+   "count": 4087,
    "issues": []
   }
  ]

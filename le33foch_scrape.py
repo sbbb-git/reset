@@ -30,6 +30,11 @@ from zoneinfo import ZoneInfo
 
 import le33foch_fetch
 
+# Plan B : si le widget Mindbody HTTP throttle (commun depuis IPs GitHub
+# Actions), fallback automatique sur Playwright (le33foch_playwright.py).
+# Activé via env USE_PLAYWRIGHT=1 ou si le fetch HTTP retourne 0.
+USE_PLAYWRIGHT_ENV = os.environ.get("USE_PLAYWRIGHT", "").lower() in ("1", "true", "yes")
+
 PARIS = ZoneInfo("Europe/Paris")
 STORE = "le33foch_data.json"
 CSV = "le33foch_seances.csv"
@@ -105,7 +110,17 @@ def save_store(store):
 def capture():
     now = dt.datetime.now(PARIS)
     store = load_store()
-    sessions = le33foch_fetch.fetch_all()
+    sessions = []
+    if not USE_PLAYWRIGHT_ENV:
+        sessions = le33foch_fetch.fetch_all()
+    if not sessions:
+        # HTTP a échoué ou throttled → fallback Playwright
+        try:
+            import le33foch_playwright
+            print("  HTTP a renvoyé 0 séances → fallback Playwright", file=sys.stderr)
+            sessions = le33foch_playwright.fetch_all()
+        except ImportError:
+            print("  Playwright indispo, abandon", file=sys.stderr)
     locked_now = 0
     for s in sessions:
         sid = str(s["id"])
