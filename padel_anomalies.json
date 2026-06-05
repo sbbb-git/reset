@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-05T12:12:17.628006",
+ "generated_at": "2026-06-05T15:36:54.431226",
  "idle_24h": [
   {
    "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
@@ -7,15 +7,7 @@
    "name": "Padel Pulsion",
    "cp": "91570",
    "last_seen": "2026-06-02 21:44",
-   "hours_idle": 62.5
-  },
-  {
-   "slug": "tennis-padel-bois-colombes-bois-colombes",
-   "source": "anybuddy",
-   "name": "tennis-padel-bois-colombes-bois-colombes",
-   "cp": "92700",
-   "last_seen": "2026-06-03 17:19",
-   "hours_idle": 42.9
+   "hours_idle": 65.9
   }
  ],
  "price_shifts": [
@@ -883,8 +875,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 13,
-  "idle_24h": 2,
+  "total_anomalies": 12,
+  "idle_24h": 1,
   "price_shifts": 1,
   "volume_drops": 10,
   "new_clubs_14d": 96
