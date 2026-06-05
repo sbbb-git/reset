@@ -16,6 +16,8 @@ car Mindbody charge ses donnees en JS.
 Genere : senseclub_seances.csv et senseclub.html
 """
 import csv
+import dashboard_meta
+from template_common import meta_panel_html
 import datetime as dt
 import json
 import os
@@ -163,10 +165,22 @@ def write_html(rows, path):
     if os.path.exists(vendor):
         with open(vendor, encoding="utf-8") as f:
             chartjs = f.read()
+    last_iso = ""
+    _releves = [r.get("releve") or "" for r in (rows if isinstance(rows,list) else rows.values()) if isinstance(r, dict)]
+    _last = max(_releves) if _releves else ""
+    if _last:
+        try:
+            last_iso = dt.datetime.strptime(_last[:16], "%Y-%m-%d %H:%M").replace(tzinfo=PARIS).isoformat()
+        except ValueError:
+            pass
+    _n_rows = len(rows) if isinstance(rows, (list, dict)) else 0
+    _m = dashboard_meta.get("senseclub")
+    _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, _n_rows)
+
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
-            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")))
+            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")).replace("__META_PANEL__", _meta_html))
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"-> {path}")
@@ -223,6 +237,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">généré le __GENERATED__</div>
 </header>
 <div class="wrap">
+  __META_PANEL__
   <div class="note">ℹ️ Séances de <b>5 places max</b> : <b>complet = 5 personnes</b>, et « presque complet — reste X places » = <b>5 − X présents</b>. Mindbody n'affiche pas le compte exact quand il reste beaucoup de place (statut « disponible »). Le statut est <b>figé ~10 min avant chaque séance</b> (quasi définitif). L'historique se construit jour après jour.</div>
   <div class="kpis" id="kpis"></div>
   <div class="grid">

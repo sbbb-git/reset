@@ -13,6 +13,8 @@ du cours). Conçu pour tourner souvent (~5 min) afin de capter le remplissage
 juste avant chaque séance. CORS fermé -> pas de bouton live (maj côté serveur).
 """
 import csv
+import dashboard_meta
+from template_common import meta_panel_html
 import datetime as dt
 import json
 import os
@@ -162,10 +164,22 @@ def write_html(rows, cfg):
     if os.path.exists(vendor):
         with open(vendor, encoding="utf-8") as f:
             chartjs = f.read()
+    last_iso = ""
+    _releves = [r.get("releve") or "" for r in (rows if isinstance(rows,list) else rows.values()) if isinstance(r, dict)]
+    _last = max(_releves) if _releves else ""
+    if _last:
+        try:
+            last_iso = dt.datetime.strptime(_last[:16], "%Y-%m-%d %H:%M").replace(tzinfo=PARIS).isoformat()
+        except ValueError:
+            pass
+    _n_rows = len(rows) if isinstance(rows, (list, dict)) else 0
+    _m = dashboard_meta.get("barrys")
+    _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, _n_rows)
+
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
-            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"))
+            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")).replace("__META_PANEL__", _meta_html)
             .replace("__BRAND__", cfg["brand"])
             .replace("__PRICE__", str(cfg["price"]))
             .replace("__PRIXKEY__", cfg["key"] + "_prix")
@@ -229,6 +243,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">généré le __GENERATED__ &middot; réservations (Mariana Tek)</div>
 </header>
 <div class="wrap">
+  __META_PANEL__
   <div class="note">ℹ️ <b>Présents</b> = capacité &minus; places restantes, figé juste avant chaque séance. Le décompte <b>s'arrête à la première séance pas encore commencée</b> (les séances à venir, encore vides, sont exclues). Un robot capte le remplissage ~5 min avant chaque séance et l'historique s'accumule jour après jour.</div>
   <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>

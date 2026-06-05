@@ -24,12 +24,14 @@ import sys
 from zoneinfo import ZoneInfo
 
 import banote_fetch
+import dashboard_meta
 from template_common import (
     CSS_COMMON,
     EXPORT_CSV_BLOCK,
     HEAD_COMMON,
     HEATMAP_BLOCK_STATUT,
     HEATMAP_PANELS_HTML,
+    meta_panel_html,
 )
 
 PARIS = ZoneInfo("Europe/Paris")
@@ -157,6 +159,16 @@ def write_html(rows):
     if os.path.exists(vendor):
         with open(vendor, encoding="utf-8") as f:
             chartjs = f.read()
+    last_iso = ""
+    if rows:
+        last = max((r.get("releve") or "" for r in rows), default="")
+        if last:
+            try:
+                last_iso = dt.datetime.strptime(last[:16], "%Y-%m-%d %H:%M").replace(tzinfo=PARIS).isoformat()
+            except ValueError:
+                pass
+    m = dashboard_meta.get("banote")
+    meta_html = meta_panel_html(m["method"], m["risk"], m["freq"], last_iso, len(rows))
     # Injecte d'abord les blocs communs (template_common), puis les valeurs
     # dynamiques. L'ordre compte : __CHARTJS__/__ACCENT__/__ACCENT2__ vivent
     # dans HEAD_COMMON / CSS_COMMON, donc on remplace les blocs en premier.
@@ -166,6 +178,7 @@ def write_html(rows):
             .replace("__HEATMAP_PANELS_HTML__", HEATMAP_PANELS_HTML)
             .replace("__HEATMAP_BLOCK__", HEATMAP_BLOCK_STATUT)
             .replace("__EXPORT_CSV_BLOCK__", EXPORT_CSV_BLOCK)
+            .replace("__META_PANEL__", meta_html)
             .replace("__FILENAME__", "banote_seances.csv")
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
@@ -191,6 +204,7 @@ __CSS_COMMON__
   <div class="sub">Fréquentation &middot; généré le __GENERATED__ &middot; 3 lieux (Mindbody)</div>
 </header>
 <div class="wrap">
+  __META_PANEL__
   <div class="note">ℹ️ <b>Mindbody n'expose qu'un statut par séance</b> (pas le nombre exact d'inscrits ni la capacité). On déduit : <b>« complet » = __CAP__ présents</b> (capacité Lagree estimée), sinon le compte exact est inconnu. Le statut est <b>figé ~15 min avant chaque séance</b>. L'historique se construit au fil des relevés. Les présents sont donc une <b>borne basse / estimation</b>, pas une mesure exacte.</div>
   <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>

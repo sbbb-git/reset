@@ -20,6 +20,8 @@ Mindbody ne donne pas le compte réel.
 Génère : le33foch_data.json, le33foch_seances.csv, le33foch.html.
 """
 import csv
+import dashboard_meta
+from template_common import meta_panel_html
 import datetime as dt
 import json
 import os
@@ -193,10 +195,22 @@ def write_html(rows):
     if os.path.exists(vendor):
         with open(vendor, encoding="utf-8") as f:
             chartjs = f.read()
+    last_iso = ""
+    _releves = [r.get("releve") or "" for r in (rows if isinstance(rows,list) else rows.values()) if isinstance(r, dict)]
+    _last = max(_releves) if _releves else ""
+    if _last:
+        try:
+            last_iso = dt.datetime.strptime(_last[:16], "%Y-%m-%d %H:%M").replace(tzinfo=PARIS).isoformat()
+        except ValueError:
+            pass
+    _n_rows = len(rows) if isinstance(rows, (list, dict)) else 0
+    _m = dashboard_meta.get("le33foch")
+    _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, _n_rows)
+
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
-            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"))
+            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")).replace("__META_PANEL__", _meta_html)
             .replace("__CAP__", str(CAP_DEFAUT))
             .replace("__ACCENT__", ACCENT)
             .replace("__ACCENT2__", ACCENT2))
@@ -257,6 +271,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">Fréquentation &middot; généré le __GENERATED__ &middot; Mindbody (statut seulement)</div>
 </header>
 <div class="wrap">
+  __META_PANEL__
   <div class="note">ℹ️ <b>Mindbody n'expose qu'un statut par séance</b> (pas le nombre exact d'inscrits ni la capacité). On déduit : <b>« complet » = __CAP__ présents</b> (capacité par défaut), sinon le compte exact est inconnu. Le statut est <b>figé ~15 min avant chaque séance</b>. L'historique se construit au fil des relevés. Les présents sont donc une <b>borne basse / estimation</b>, pas une mesure exacte.</div>
   <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>

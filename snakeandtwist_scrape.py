@@ -15,6 +15,8 @@ privés (experience_type=Appointment) qui ne reflètent pas la fréquentation
 d'un cours collectif.
 """
 import csv
+import dashboard_meta
+from template_common import meta_panel_html
 import datetime as dt
 import json
 import os
@@ -126,9 +128,21 @@ def write_html(rows):
     if os.path.exists(vendor):
         with open(vendor, encoding="utf-8") as f:
             chartjs = f.read()
+    last_iso = ""
+    _releves = [r.get("releve") or "" for r in (rows if isinstance(rows,list) else rows.values()) if isinstance(r, dict)]
+    _last = max(_releves) if _releves else ""
+    if _last:
+        try:
+            last_iso = dt.datetime.strptime(_last[:16], "%Y-%m-%d %H:%M").replace(tzinfo=PARIS).isoformat()
+        except ValueError:
+            pass
+    _n_rows = len(rows) if isinstance(rows, (list, dict)) else 0
+    _m = dashboard_meta.get("snakeandtwist")
+    _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, _n_rows)
+
     html = (TPL.replace("__CHARTJS__", chartjs)
               .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
-              .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"))
+              .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")).replace("__META_PANEL__", _meta_html)
               .replace("__ACCENT__", ACCENT).replace("__ACCENT2__", ACCENT2)
               .replace("__BRAND__", BRAND))
     with open(HTML, "w", encoding="utf-8") as f:
@@ -168,6 +182,7 @@ TPL = r"""<!DOCTYPE html>
 <header><h1>SNAKE &amp; TWIST &middot; Fréquentation</h1>
 <div class="sub">généré le __GENERATED__ &middot; chiffres exacts (Arketa)</div></header>
 <div class="wrap">
+  __META_PANEL__
 <div class="note">ℹ️ <b>Snake & Twist &middot; plateforme Arketa.</b> Présents = `total_booked` exact, capacité = `max_capacity`. Les rendez-vous privés (Appointment) sont exclus pour ne garder que les cours collectifs. Fenêtre courante : ~5 semaines. MAJ 30 min via robot.</div>
 <div class="kpis" id="kpis"></div>
 <div class="panel"><h2>Présents par jour</h2><canvas id="cDay"></canvas></div>

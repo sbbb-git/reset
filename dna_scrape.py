@@ -20,6 +20,8 @@ Schéma dna_data.json (compatible comparateur) :
 Génère : dna_data.json, dna_seances.csv, dna.html.
 """
 import csv
+import dashboard_meta
+from template_common import meta_panel_html
 import datetime as dt
 import html as _html
 import json
@@ -239,10 +241,22 @@ def write_html(rows):
     if os.path.exists(vendor):
         with open(vendor, encoding="utf-8") as f:
             chartjs = f.read()
+    last_iso = ""
+    _releves = [r.get("releve") or "" for r in (rows if isinstance(rows,list) else rows.values()) if isinstance(r, dict)]
+    _last = max(_releves) if _releves else ""
+    if _last:
+        try:
+            last_iso = dt.datetime.strptime(_last[:16], "%Y-%m-%d %H:%M").replace(tzinfo=PARIS).isoformat()
+        except ValueError:
+            pass
+    _n_rows = len(rows) if isinstance(rows, (list, dict)) else 0
+    _m = dashboard_meta.get("dna")
+    _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, _n_rows)
+
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
-            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"))
+            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")).replace("__META_PANEL__", _meta_html)
             .replace("__CAP__", str(CAP_DEFAUT))
             .replace("__ACCENT__", ACCENT)
             .replace("__ACCENT2__", ACCENT2))
@@ -305,6 +319,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">Fréquentation des 2 studios &middot; généré le __GENERATED__</div>
 </header>
 <div class="wrap">
+  __META_PANEL__
   <div class="note">ℹ️ <b>Mindbody n'expose qu'un statut par séance</b> (pas le nombre exact d'inscrits ni la capacité chiffrée). Lecture du widget public : bouton « Book » = il reste des places, bouton « Join Waitlist » = séance complète. On déduit : <b>« complet » = __CAP__ présents</b> (capacité reformer estimée). Le statut est <b>figé ~15 min avant chaque séance</b>. L'historique se construit au fil des relevés — c'est une <b>estimation honnête</b>, pas une mesure exacte.</div>
   <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent2);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>

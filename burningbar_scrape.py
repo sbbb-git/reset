@@ -9,6 +9,8 @@ burningbar_fetch.cjs) et on fige le statut ~10 min avant chaque séance.
 Génère : burningbar_seances.csv et burningbar.html
 """
 import csv
+import dashboard_meta
+from template_common import meta_panel_html
 import datetime as dt
 import json
 import os
@@ -134,10 +136,22 @@ def write_html(rows, path):
     if os.path.exists(vendor):
         with open(vendor, encoding="utf-8") as f:
             chartjs = f.read()
+    last_iso = ""
+    _releves = [r.get("releve") or "" for r in (rows if isinstance(rows,list) else rows.values()) if isinstance(r, dict)]
+    _last = max(_releves) if _releves else ""
+    if _last:
+        try:
+            last_iso = dt.datetime.strptime(_last[:16], "%Y-%m-%d %H:%M").replace(tzinfo=PARIS).isoformat()
+        except ValueError:
+            pass
+    _n_rows = len(rows) if isinstance(rows, (list, dict)) else 0
+    _m = dashboard_meta.get("burningbar")
+    _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, _n_rows)
+
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
-            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")))
+            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")).replace("__META_PANEL__", _meta_html))
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"-> {path}")
@@ -187,6 +201,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">généré le __GENERATED__ &middot; statut Mindbody</div>
 </header>
 <div class="wrap">
+  __META_PANEL__
   <div class="note">ℹ️ <b>Burning Bar &middot; plateforme Mindbody (widget standard).</b> Comme Sense-Club, Mindbody n'expose <b>que le statut</b> (Réserver / Il reste X places / Complet), <b>pas le nombre exact</b>. Statut lu sur les widgets des 2 salles (The Hot Room, The Reformer Room) et <b>figé ~10 min avant chaque séance</b>. L'historique s'accumule. MAJ toutes les 10 min.</div>
   <div id="emptywrap"></div>
   <div class="kpis" id="kpis"></div>

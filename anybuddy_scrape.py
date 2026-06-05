@@ -30,6 +30,8 @@ CORS fermé (pas d'en-tête Access-Control-Allow-Origin) -> pas de bouton live,
 mise à jour côté serveur uniquement.
 """
 import csv
+import dashboard_meta
+from template_common import meta_panel_html
 import datetime as dt
 import json
 import os
@@ -209,10 +211,22 @@ def write_html(rows, cfg):
     if os.path.exists(vendor):
         with open(vendor, encoding="utf-8") as f:
             chartjs = f.read()
+    last_iso = ""
+    _releves = [r.get("releve") or "" for r in (rows if isinstance(rows,list) else rows.values()) if isinstance(r, dict)]
+    _last = max(_releves) if _releves else ""
+    if _last:
+        try:
+            last_iso = dt.datetime.strptime(_last[:16], "%Y-%m-%d %H:%M").replace(tzinfo=PARIS).isoformat()
+        except ValueError:
+            pass
+    _n_rows = len(rows) if isinstance(rows, (list, dict)) else 0
+    _m = dashboard_meta.get("anybuddy")
+    _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, _n_rows)
+
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
-            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"))
+            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")).replace("__META_PANEL__", _meta_html)
             .replace("__BRAND__", cfg["brand"])
             .replace("__PRICE__", str(cfg["price"]))
             .replace("__PRIXKEY__", cfg["key"] + "_prix")
@@ -279,6 +293,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">généré le __GENERATED__ &middot; réservations déduites (Anybuddy)</div>
 </header>
 <div class="wrap">
+  __META_PANEL__
   <div class="note">ℹ️ Anybuddy n'expose que les créneaux <b>disponibles</b>. Méthode : un robot relève très régulièrement (~5&ndash;15&nbsp;min) les terrains libres. Quand un créneau vu libre <b>disparaît avant son heure</b>, c'est qu'il a été <b>réservé</b>. L'<b>occupation</b> = créneaux réservés / (réservés + restés libres), par jour, heure et terrain. Plus l'historique s'accumule, plus la mesure est fiable. Pas de mise à jour live (le site bloque les appels navigateur externes).</div>
   <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>

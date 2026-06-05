@@ -227,3 +227,53 @@ EXPORT_CSV_BLOCK = r"""document.getElementById('btnExport').addEventListener('cl
   const blob=new Blob(['﻿'+lines.join('\r\n')],{type:'text/csv;charset=utf-8;'});
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='__FILENAME__';document.body.appendChild(a);a.click();a.remove();
 });"""
+
+
+# ---------------------------------------------------------------------------
+# META PANEL — Méthode / Risque / État scraping (date dernier scrape + nb rows
+# + freshness calculée côté client). À insérer juste après le bloc <header>.
+# Placeholders : __META_METHOD__, __META_RISK__, __META_FREQ__,
+#                __META_LAST_ISO__, __META_ROWS__.
+# Le scraper appelle meta_panel_html(method, risk, freq, last_iso, n_rows).
+# ---------------------------------------------------------------------------
+META_PANEL_HTML = r"""<div class="meta-panel" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:18px 0 4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px">
+  <div>
+    <div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">⚙️ Méthode</div>
+    <div style="font-size:13px;color:var(--text);line-height:1.4">__META_METHOD__</div>
+  </div>
+  <div>
+    <div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">⚠️ Limites &middot; risques</div>
+    <div style="font-size:13px;color:var(--text);line-height:1.4">__META_RISK__</div>
+  </div>
+  <div>
+    <div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">📡 État du scrap</div>
+    <div style="font-size:13px;color:var(--text);line-height:1.4">
+      <span id="meta-freshness" style="font-weight:700">…</span> &middot; <b>__META_ROWS__</b> entrées
+      <div style="font-size:11.5px;color:var(--muted);margin-top:2px">Fréquence : __META_FREQ__</div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const last = "__META_LAST_ISO__";
+  if(!last) return;
+  const el = document.getElementById('meta-freshness'); if(!el) return;
+  const ago = (Date.now() - new Date(last).getTime()) / 36e5;
+  let label, color;
+  if (ago < 1) { label = Math.round(ago*60)+' min'; color = '#5fcf8a'; }
+  else if (ago < 24) { label = ago.toFixed(1)+' h'; color = ago<6?'#5fcf8a':'#e6c14d'; }
+  else { label = Math.round(ago/24)+' j'; color = '#e07a6f'; }
+  el.textContent = 'Dernier scrap il y a ' + label;
+  el.style.color = color;
+})();
+</script>"""
+
+
+def meta_panel_html(method, risk, freq, last_iso, n_rows):
+    """Rendu HTML du panneau META. last_iso au format ISO 8601."""
+    return (META_PANEL_HTML
+            .replace("__META_METHOD__", method)
+            .replace("__META_RISK__", risk)
+            .replace("__META_FREQ__", freq)
+            .replace("__META_LAST_ISO__", last_iso or "")
+            .replace("__META_ROWS__", str(n_rows)))

@@ -181,6 +181,8 @@ def write_xlsx(rows, path):
 
 
 def write_html(rows, coaches, path, start, end):
+    import dashboard_meta
+    from template_common import meta_panel_html
     chartjs = ""
     vendor = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vendor_chartjs.min.js")
     if os.path.exists(vendor):
@@ -189,6 +191,16 @@ def write_html(rows, coaches, path, start, end):
     else:
         chartjs = ('document.write(\'<scr\'+\'ipt src="https://cdn.jsdelivr.net/npm/'
                    'chart.js@4.4.1/dist/chart.umd.min.js"><\\/scr\'+\'ipt>\');')
+    # META panel
+    last_iso = ""
+    _last = max((r.get("releve") or "" for r in rows if isinstance(r, dict)), default="")
+    if _last:
+        try:
+            last_iso = dt.datetime.strptime(_last[:16], "%Y-%m-%d %H:%M").isoformat()
+        except ValueError:
+            pass
+    _m = dashboard_meta.get("reset")
+    _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, len(rows))
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
@@ -196,6 +208,7 @@ def write_html(rows, coaches, path, start, end):
             .replace("__COMPANY__", str(COMPANY))
             .replace("__BUILDTS__", dt.datetime.now().strftime("%Y%m%d%H%M%S"))
             .replace("__GENERATED__", dt.datetime.now().strftime("%d/%m/%Y %H:%M"))
+            .replace("__META_PANEL__", _meta_html)
             .replace("__PERIODE__", f"{start.strftime('%d/%m/%Y')} au {end.strftime('%d/%m/%Y')}"))
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
@@ -298,6 +311,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">Période __PERIODE__ &middot; généré le __GENERATED__</div>
 </header>
 <div class="wrap">
+  __META_PANEL__
   <div style="background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 18px;margin:18px 0 4px;color:var(--muted);font-size:13px">ℹ️ <b>Re-SET &middot; plateforme bsport.</b> Présents = réservations validées ; capacité = effectif. <b>Historique complet depuis l'ouverture (22/03/2026)</b>. MAJ chaque matin 6h (chiffres de la veille) + bouton &laquo; Mettre à jour &raquo; en bas (lecture en direct de l'API bsport).</div>
   <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 14px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>

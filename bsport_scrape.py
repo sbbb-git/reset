@@ -158,6 +158,8 @@ def write_csv(rows, path):
 
 
 def write_html(rows, cfg):
+    import dashboard_meta
+    from template_common import meta_panel_html
     chartjs = ""
     vendor = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vendor_chartjs.min.js")
     if os.path.exists(vendor):
@@ -165,12 +167,24 @@ def write_html(rows, cfg):
             chartjs = f.read()
     est_js = {str(k): v for k, v in cfg["_est"].items()}
     coa_js = {str(k): v for k, v in cfg["_coaches"].items()}
+    # META panel (état du scrap pour ce dashboard)
+    last_iso = ""
+    _releves = [r.get("releve") or "" for r in (rows if isinstance(rows, list) else rows.values()) if isinstance(r, dict)]
+    _last = max(_releves) if _releves else ""
+    if _last:
+        try:
+            last_iso = dt.datetime.strptime(_last[:16], "%Y-%m-%d %H:%M").replace(tzinfo=PARIS).isoformat()
+        except ValueError:
+            pass
+    _m = dashboard_meta.get(cfg.get("key") or "bsport_generic")
+    _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, len(rows))
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
             .replace("__EST__", json.dumps(est_js, ensure_ascii=False))
             .replace("__COACHES__", json.dumps(coa_js, ensure_ascii=False))
             .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"))
+            .replace("__META_PANEL__", _meta_html)
             .replace("__BRAND__", cfg["brand"])
             .replace("__METHODE__", cfg.get("methode", ""))
             .replace("__PRICE__", str(cfg["price"]))
@@ -237,6 +251,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="sub">généré le __GENERATED__ &middot; réservations validées (bsport)</div>
 </header>
 <div class="wrap">
+  __META_PANEL__
   <div class="note">ℹ️ __METHODE__</div>
   <div id="periode" style="background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 16px;margin:14px 0 4px;color:var(--text);font-size:13.5px;font-weight:600"></div>
   <div class="kpis" id="kpis"></div>
