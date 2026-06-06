@@ -1,7 +1,17 @@
 {
- "generated_at": "2026-06-06T17:19:35.560345",
+ "generated_at": "2026-06-06T18:49:47.013314",
  "idle_24h": [],
  "price_shifts": [
+  {
+   "slug": "doinsport-59044915-a142-4f27-a8f4-433b199d73d5",
+   "source": "doinsport",
+   "name": "Play Padel Alfortville",
+   "cp": "94140",
+   "prix_30j": 36.0,
+   "prix_recent": 49.5,
+   "delta_pct": 37.5,
+   "direction": "hausse"
+  },
   {
    "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
    "source": "doinsport",
@@ -890,9 +900,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 14,
+  "total_anomalies": 15,
   "idle_24h": 0,
-  "price_shifts": 1,
+  "price_shifts": 2,
   "volume_drops": 13,
   "new_clubs_14d": 96
  }
