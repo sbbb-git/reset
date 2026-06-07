@@ -1,6 +1,15 @@
 {
- "generated_at": "2026-06-07T15:52:39.884633",
- "idle_24h": [],
+ "generated_at": "2026-06-07T17:23:35.345951",
+ "idle_24h": [
+  {
+   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "source": "doinsport",
+   "name": "FIVE ARENA",
+   "cp": "77100",
+   "last_seen": "2026-06-06 14:09",
+   "hours_idle": 27.2
+  }
+ ],
  "price_shifts": [
   {
    "slug": "doinsport-59044915-a142-4f27-a8f4-433b199d73d5",
@@ -900,8 +909,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 15,
-  "idle_24h": 0,
+  "total_anomalies": 16,
+  "idle_24h": 1,
   "price_shifts": 2,
   "volume_drops": 13,
   "new_clubs_14d": 96
