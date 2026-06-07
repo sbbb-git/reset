@@ -1,13 +1,21 @@
 {
- "generated_at": "2026-06-07T18:50:28.101227",
+ "generated_at": "2026-06-07T20:16:05.499408",
  "idle_24h": [
+  {
+   "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
+   "source": "doinsport",
+   "name": "Padel Pulsion",
+   "cp": "91570",
+   "last_seen": "2026-06-02 21:44",
+   "hours_idle": 118.5
+  },
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
    "source": "doinsport",
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-06-06 14:09",
-   "hours_idle": 28.7
+   "hours_idle": 30.1
   }
  ],
  "price_shifts": [
@@ -17,8 +25,8 @@
    "name": "Play Padel Alfortville",
    "cp": "94140",
    "prix_30j": 36.0,
-   "prix_recent": 54.0,
-   "delta_pct": 50.0,
+   "prix_recent": 60.0,
+   "delta_pct": 66.7,
    "direction": "hausse"
   },
   {
@@ -909,8 +917,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 16,
-  "idle_24h": 1,
+  "total_anomalies": 17,
+  "idle_24h": 2,
   "price_shifts": 2,
   "volume_drops": 13,
   "new_clubs_14d": 96
