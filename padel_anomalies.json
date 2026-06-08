@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-08T16:37:08.728653",
+ "generated_at": "2026-06-08T19:24:22.072735",
  "idle_24h": [
   {
    "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
@@ -7,7 +7,7 @@
    "name": "Padel Pulsion",
    "cp": "91570",
    "last_seen": "2026-06-02 21:44",
-   "hours_idle": 138.9
+   "hours_idle": 141.7
   }
  ],
  "price_shifts": [
@@ -40,6 +40,16 @@
    "prix_recent": 44.0,
    "delta_pct": -40.5,
    "direction": "baisse"
+  },
+  {
+   "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
+   "source": "doinsport",
+   "name": "Domaine de Lassy",
+   "cp": "95270",
+   "prix_30j": 54.0,
+   "prix_recent": 72.0,
+   "delta_pct": 33.3,
+   "direction": "hausse"
   },
   {
    "slug": "4padel-epinay-sur-seine",
@@ -945,9 +955,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 20,
+  "total_anomalies": 21,
   "idle_24h": 1,
-  "price_shifts": 4,
+  "price_shifts": 5,
   "volume_drops": 15,
   "new_clubs_14d": 96
  }
