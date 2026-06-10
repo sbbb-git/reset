@@ -1,6 +1,15 @@
 {
- "generated_at": "2026-06-10T16:24:44.093128",
- "idle_24h": [],
+ "generated_at": "2026-06-10T19:16:00.872950",
+ "idle_24h": [
+  {
+   "slug": "sannois-oss",
+   "source": "anybuddy",
+   "name": "sannois-oss",
+   "cp": "95110",
+   "last_seen": "2026-06-09 17:40",
+   "hours_idle": 25.6
+  }
+ ],
  "price_shifts": [
   {
    "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
@@ -966,8 +975,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 22,
-  "idle_24h": 0,
+  "total_anomalies": 23,
+  "idle_24h": 1,
   "price_shifts": 7,
   "volume_drops": 15,
   "new_clubs_14d": 96
