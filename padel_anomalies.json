@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-10T08:33:14.270135",
+ "generated_at": "2026-06-10T12:25:46.772120",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -8,8 +8,18 @@
    "name": "O.S. Sannois",
    "cp": "95110",
    "prix_30j": 9.0,
-   "prix_recent": 36.0,
-   "delta_pct": 300.0,
+   "prix_recent": 31.5,
+   "delta_pct": 250.0,
+   "direction": "hausse"
+  },
+  {
+   "slug": "play-padel-alfortville",
+   "source": "anybuddy",
+   "name": "play-padel-alfortville",
+   "cp": "94140",
+   "prix_30j": 27.0,
+   "prix_recent": 60.0,
+   "delta_pct": 122.2,
    "direction": "hausse"
   },
   {
@@ -19,16 +29,6 @@
    "cp": "94140",
    "prix_30j": 36.0,
    "prix_recent": 72.0,
-   "delta_pct": 100.0,
-   "direction": "hausse"
-  },
-  {
-   "slug": "play-padel-alfortville",
-   "source": "anybuddy",
-   "name": "play-padel-alfortville",
-   "cp": "94140",
-   "prix_30j": 27.0,
-   "prix_recent": 54.0,
    "delta_pct": 100.0,
    "direction": "hausse"
   },
@@ -50,6 +50,16 @@
    "prix_30j": 48.0,
    "prix_recent": 72.0,
    "delta_pct": 50.0,
+   "direction": "hausse"
+  },
+  {
+   "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
+   "source": "doinsport",
+   "name": "Domaine de Lassy",
+   "cp": "95270",
+   "prix_30j": 54.0,
+   "prix_recent": 72.0,
+   "delta_pct": 33.3,
    "direction": "hausse"
   },
   {
@@ -966,9 +976,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 22,
+  "total_anomalies": 23,
   "idle_24h": 0,
-  "price_shifts": 7,
+  "price_shifts": 8,
   "volume_drops": 15,
   "new_clubs_14d": 96
  }
