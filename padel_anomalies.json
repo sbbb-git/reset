@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-11T07:16:35.942741",
+ "generated_at": "2026-06-11T11:57:52.157066",
  "idle_24h": [
   {
    "slug": "sannois-oss",
@@ -7,7 +7,7 @@
    "name": "sannois-oss",
    "cp": "95110",
    "last_seen": "2026-06-09 17:40",
-   "hours_idle": 37.6
+   "hours_idle": 42.3
   }
  ],
  "price_shifts": [
@@ -62,6 +62,16 @@
    "direction": "hausse"
   },
   {
+   "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
+   "source": "doinsport",
+   "name": "Domaine de Lassy",
+   "cp": "95270",
+   "prix_30j": 54.0,
+   "prix_recent": 72.0,
+   "delta_pct": 33.3,
+   "direction": "hausse"
+  },
+  {
    "slug": "five-arena-meaux",
    "source": "anybuddy",
    "name": "five-arena-meaux",
@@ -77,7 +87,7 @@
    "name": "UrbanPadel Porte d'Aubervilliers",
    "cp": "93300",
    "prix_30j": 60,
-   "prix_recent": 78.0,
+   "prix_recent": 78,
    "delta_pct": 30.0,
    "direction": "hausse"
   }
@@ -975,9 +985,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 23,
+  "total_anomalies": 24,
   "idle_24h": 1,
-  "price_shifts": 7,
+  "price_shifts": 8,
   "volume_drops": 15,
   "new_clubs_14d": 96
  }
