@@ -178,6 +178,8 @@ def write_html(rows, cfg):
             pass
     _m = dashboard_meta.get(cfg.get("key") or "bsport_generic")
     _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, len(rows))
+    from template_common import price_loader_html
+    _price_loader = price_loader_html(cfg.get("key") or "")
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
@@ -185,6 +187,7 @@ def write_html(rows, cfg):
             .replace("__COACHES__", json.dumps(coa_js, ensure_ascii=False))
             .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"))
             .replace("__META_PANEL__", _meta_html)
+            .replace("__PRICE_LOADER__", _price_loader)
             .replace("__BRAND__", cfg["brand"])
             .replace("__METHODE__", cfg.get("methode", ""))
             .replace("__PRICE__", str(cfg["price"]))
@@ -367,7 +370,6 @@ function render(){
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>nf(v)}}}}});
 
   const prix=parseFloat(document.getElementById('prix').value)||0;
-  try{localStorage.setItem('__PRIXKEY__',prix);}catch(e){}
   const nbJours=days.length||1,totalCA=totPres*prix;
   document.getElementById('caKpis').innerHTML=[
     ['CA total estimé',eur(totalCA)],
@@ -528,8 +530,7 @@ function renderTable(D){
 }
 ['q','prix'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 [selLieu,selCours,selCoach].forEach(s=>s.addEventListener('change',render));
-const _sp=(()=>{try{return localStorage.getItem('__PRIXKEY__');}catch(e){return null;}})();
-if(_sp)document.getElementById('prix').value=_sp;
+// prix géré par PRICE_LOADER_BLOCK (lecture brand_prices.json)
 document.getElementById('btnExport').addEventListener('click',()=>{
   const esc=v=>{v=(''+v).replace(/"/g,'""');return /[";\n]/.test(v)?`"${v}"`:v;};
   const lines=[cols.map(c=>c[1]).join(';')];
@@ -582,6 +583,7 @@ async function majNow(){
 document.getElementById('btnMaj').addEventListener('click',majNow);
 render();
 </script>
+__PRICE_LOADER__
 </body>
 </html>"""
 

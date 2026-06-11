@@ -175,11 +175,13 @@ def write_html(rows, cfg):
     _n_rows = len(rows) if isinstance(rows, (list, dict)) else 0
     _m = dashboard_meta.get("santroch")
     _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, _n_rows)
+    from template_common import price_loader_html
+    _price_loader = price_loader_html(cfg.get("key"))
 
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
-            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")).replace("__META_PANEL__", _meta_html)
+            .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M")).replace("__META_PANEL__", _meta_html).replace("__PRICE_LOADER__", _price_loader)
             .replace("__BRAND__", cfg["brand"])
             .replace("__PRICE__", str(cfg["price"]))
             .replace("__PRIXKEY__", cfg["key"] + "_prix")
@@ -355,7 +357,6 @@ function render(){
     options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>nf(v)}}}}});
 
   const prix=parseFloat(document.getElementById('prix').value)||0;
-  try{localStorage.setItem('__PRIXKEY__',prix);}catch(e){}
   const nbJours=days.length||1,totalCA=totPres*prix;
   document.getElementById('caKpis').innerHTML=[
     ['CA total estimé',eur(totalCA)],
@@ -514,8 +515,7 @@ function renderTable(D){
 }
 ['q','prix'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 [selLieu,selCours,selCoach].forEach(s=>s.addEventListener('change',render));
-const _sp=(()=>{try{return localStorage.getItem('__PRIXKEY__');}catch(e){return null;}})();
-if(_sp)document.getElementById('prix').value=_sp;
+// prix géré par PRICE_LOADER_BLOCK (lecture brand_prices.json)
 document.getElementById('btnExport').addEventListener('click',()=>{
   const esc=v=>{v=(''+v).replace(/"/g,'""');return /[";\n]/.test(v)?`"${v}"`:v;};
   const lines=[cols.map(c=>c[1]).join(';')];
@@ -525,6 +525,7 @@ document.getElementById('btnExport').addEventListener('click',()=>{
 });
 render();
 </script>
+__PRICE_LOADER__
 </body>
 </html>"""
 

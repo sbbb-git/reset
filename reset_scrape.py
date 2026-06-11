@@ -201,6 +201,8 @@ def write_html(rows, coaches, path, start, end):
             pass
     _m = dashboard_meta.get("reset")
     _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, len(rows))
+    from template_common import price_loader_html
+    _price_loader = price_loader_html("reset")
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
@@ -208,7 +210,7 @@ def write_html(rows, coaches, path, start, end):
             .replace("__COMPANY__", str(COMPANY))
             .replace("__BUILDTS__", dt.datetime.now().strftime("%Y%m%d%H%M%S"))
             .replace("__GENERATED__", dt.datetime.now().strftime("%d/%m/%Y %H:%M"))
-            .replace("__META_PANEL__", _meta_html)
+            .replace("__META_PANEL__", _meta_html).replace("__PRICE_LOADER__", _price_loader)
             .replace("__PERIODE__", f"{start.strftime('%d/%m/%Y')} au {end.strftime('%d/%m/%Y')}"))
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
@@ -508,7 +510,6 @@ function renderCoach(){
 
 function renderCA(){
   const prix=parseFloat(document.getElementById('prix').value)||0;
-  try{localStorage.setItem('reset_prix',prix);}catch(e){}
   const sumBy=g=>{const m={};DATA.forEach(r=>{const k=periodKey(r,g);m[k]=(m[k]||0)+r.presents;});return m;};
   const nbMois=new Set(DATA.map(r=>r.date.slice(0,7))).size||1;
   const nbSem=new Set(DATA.map(r=>lundi(r.date))).size||1;
@@ -719,8 +720,7 @@ document.querySelectorAll('#tbl thead th').forEach(th=>th.onclick=()=>{
 ['q','fAct','fDay'].forEach(id=>document.getElementById(id).addEventListener('input',renderTable));
 document.getElementById('prix').addEventListener('input',renderCA);
 
-const sp=(()=>{try{return localStorage.getItem('reset_prix');}catch(e){return null;}})();
-if(sp)document.getElementById('prix').value=sp;
+// prix géré par PRICE_LOADER_BLOCK (lecture brand_prices.json)
 
 // ---- Export Excel (CSV ; + BOM) ----
 document.getElementById('btnExport').addEventListener('click',()=>{
@@ -783,6 +783,7 @@ document.getElementById('btnUpdate').addEventListener('click',async()=>{
 
 renderAll();
 </script>
+__PRICE_LOADER__
 </body>
 </html>"""
 

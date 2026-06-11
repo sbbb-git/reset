@@ -277,3 +277,70 @@ def meta_panel_html(method, risk, freq, last_iso, n_rows):
             .replace("__META_FREQ__", freq)
             .replace("__META_LAST_ISO__", last_iso or "")
             .replace("__META_ROWS__", str(n_rows)))
+
+
+# ---------------------------------------------------------------------------
+# PRICE LOADER — fetch brand_prices.json (ou Supabase) au chargement et set
+# l'input #prix à la valeur officielle (drop_in). Garde le localStorage user
+# comme override si présent.
+#
+# Placeholders : __BRAND_KEY__ (clé marque, ex. "barrys").
+# À insérer juste APRÈS le bloc qui définit l'input #prix dans le HTML.
+# ---------------------------------------------------------------------------
+PRICE_LOADER_BLOCK = r"""<script>
+// Prix READ-ONLY depuis brand_prices.json (source unique = prix.html).
+// Pas de modification locale possible : pour changer un prix, passer par
+// la grille de prix (prix.html) puis re-générer brand_prices.json côté
+// scraper (prices_scrape.py).
+(async function(){
+  const BK = "__BRAND_KEY__";
+  const input = document.getElementById("prix");
+  if (!input) return;
+
+  // Verrouille l'input
+  input.readOnly = true;
+  input.style.opacity = '0.85';
+  input.style.cursor = 'not-allowed';
+  input.title = 'Prix figé sur la grille — modifier dans prix.html';
+
+  // Badge "prix officiel scrapé" + lien vers la grille
+  const badge = document.createElement('span');
+  badge.id = 'prix-badge';
+  badge.style.cssText = 'margin-left:8px;font-size:11px;padding:2px 8px;border-radius:12px;font-weight:600';
+  input.parentNode.insertBefore(badge, input.nextSibling);
+
+  const link = document.createElement('a');
+  link.href = 'prix.html';
+  link.target = '_blank';
+  link.textContent = '↗ éditer dans prix.html';
+  link.style.cssText = 'margin-left:8px;font-size:11px;color:var(--accent2);text-decoration:none;font-weight:600';
+  input.parentNode.insertBefore(link, badge.nextSibling);
+
+  // Récupère le prix officiel depuis brand_prices.json
+  let official = null;
+  try {
+    const r = await fetch("brand_prices.json", {cache:"no-store"});
+    const d = await r.json();
+    const b = d[BK];
+    if (b) official = b.drop_in || (b.packs && b.packs[0] && b.packs[0].prix_unitaire) || null;
+  } catch(e) {}
+
+  if (official != null) {
+    input.value = official;
+    badge.textContent = `✓ prix officiel scrapé (${official}€)`;
+    badge.style.background = 'rgba(95,207,138,0.18)';
+    badge.style.color = '#5fcf8a';
+  } else {
+    badge.textContent = '? prix non trouvé dans brand_prices.json';
+    badge.style.background = 'rgba(160,160,160,0.15)';
+    badge.style.color = '#999';
+  }
+  // Déclenche le render pour mettre à jour le CA (les scrapers écoutent 'input' sur prix)
+  input.dispatchEvent(new Event('input', {bubbles:true}));
+  document.dispatchEvent(new Event('priceloaded'));
+})();
+</script>"""
+
+
+def price_loader_html(brand_key):
+    return PRICE_LOADER_BLOCK.replace("__BRAND_KEY__", brand_key)

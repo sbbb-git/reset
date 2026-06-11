@@ -122,11 +122,13 @@ def write_html(rows, cfg):
             pass
     _m = dashboard_meta.get(cfg.get("key") or "bsport_generic")
     _meta_html = meta_panel_html(_m["method"], _m["risk"], _m["freq"], last_iso, len(rows))
+    from template_common import price_loader_html
+    _price_loader = price_loader_html(cfg.get("key") or "")
     html = (HTML_TEMPLATE
             .replace("__CHARTJS__", chartjs)
             .replace("__DATA__", json.dumps(rows, ensure_ascii=False))
             .replace("__GENERATED__", dt.datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"))
-            .replace("__META_PANEL__", _meta_html)
+            .replace("__META_PANEL__", _meta_html).replace("__PRICE_LOADER__", _price_loader)
             .replace("__BRAND__", cfg["brand"])
             .replace("__METHODE__", cfg.get("methode", ""))
             .replace("__PRICE__", str(cfg["price"]))
@@ -317,7 +319,6 @@ function render(){
 
   // chiffre d'affaires estimé
   const prix=parseFloat(document.getElementById('prix').value)||0;
-  try{localStorage.setItem('__PRIXKEY__',prix);}catch(e){}
   const nbJours=days.length||1;
   const totalCA=totPres*prix;
   document.getElementById('caKpis').innerHTML=[
@@ -480,8 +481,7 @@ function renderTable(D){
 }
 ['q','prix'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 [selLieu,selCours,selCoach].forEach(s=>s.addEventListener('change',render));
-const _sp=(()=>{try{return localStorage.getItem('__PRIXKEY__');}catch(e){return null;}})();
-if(_sp)document.getElementById('prix').value=_sp;
+// prix géré par PRICE_LOADER_BLOCK (lecture brand_prices.json)
 
 // mise à jour live depuis l'API (CORS autorisé) : fusionne les cours du jour
 function shortLoc(n){n=(n||'').trim();if(PREFIX&&n.toLowerCase().startsWith(PREFIX.toLowerCase()))n=n.slice(PREFIX.length).trim();return n.replace(/^-+/,'').trim()||n;}
@@ -521,6 +521,7 @@ document.getElementById('btnExport').addEventListener('click',()=>{
 });
 render();
 </script>
+__PRICE_LOADER__
 </body>
 </html>"""
 
