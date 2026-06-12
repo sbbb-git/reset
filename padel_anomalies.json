@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12T06:53:44.297549",
+ "generated_at": "2026-06-12T11:05:05.481509",
  "idle_24h": [
   {
    "slug": "sannois-oss",
@@ -7,7 +7,7 @@
    "name": "sannois-oss",
    "cp": "95110",
    "last_seen": "2026-06-09 17:40",
-   "hours_idle": 61.2
+   "hours_idle": 65.4
   }
  ],
  "price_shifts": [
@@ -197,6 +197,14 @@
   }
  ],
  "new_clubs": [
+  {
+   "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
+   "source": "doinsport",
+   "name": "ASS TENNIS CLUB SARCELLOIS",
+   "cp": "95200",
+   "first_seen": "2026-06-12 13:04",
+   "days_since": 0
+  },
   {
    "slug": "playtomic-d25392c9",
    "source": "playtomic",
@@ -971,6 +979,6 @@
   "idle_24h": 1,
   "price_shifts": 7,
   "volume_drops": 14,
-  "new_clubs_14d": 96
+  "new_clubs_14d": 97
  }
 }
