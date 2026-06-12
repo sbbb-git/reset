@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12T17:26:20.671410",
+ "generated_at": "2026-06-12T19:33:08.039130",
  "idle_24h": [
   {
    "slug": "sannois-oss",
@@ -7,7 +7,7 @@
    "name": "sannois-oss",
    "cp": "95110",
    "last_seen": "2026-06-09 17:40",
-   "hours_idle": 71.8
+   "hours_idle": 73.9
   }
  ],
  "price_shifts": [
@@ -59,6 +59,26 @@
    "prix_30j": 48.0,
    "prix_recent": 72.0,
    "delta_pct": 50.0,
+   "direction": "hausse"
+  },
+  {
+   "slug": "4padel-epinay-sur-seine",
+   "source": "anybuddy",
+   "name": "4padel-epinay-sur-seine",
+   "cp": "93800",
+   "prix_30j": 54.0,
+   "prix_recent": 78.0,
+   "delta_pct": 44.4,
+   "direction": "hausse"
+  },
+  {
+   "slug": "4-padel-montreuil",
+   "source": "anybuddy",
+   "name": "4-padel-montreuil",
+   "cp": "93100",
+   "prix_30j": 60.0,
+   "prix_recent": 84.0,
+   "delta_pct": 40.0,
    "direction": "hausse"
   },
   {
@@ -975,9 +995,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 22,
+  "total_anomalies": 24,
   "idle_24h": 1,
-  "price_shifts": 7,
+  "price_shifts": 9,
   "volume_drops": 14,
   "new_clubs_14d": 97
  }
