@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<script>if(sessionStorage.getItem("auth_ok")!=="1")location.replace("login.html?next="+encodeURIComponent(location.pathname+location.search+location.hash));</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pilates Île-de-France · agrégat live</title>
+<script src="vendor_chartjs.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  :root{--bg:#0d0a14;--card:#181423;--card2:#221c30;--line:#352c4a;--text:#f0ecf7;
+        --muted:#9c95b3;--accent:#b07ff0;--accent2:#d4b8ff;--gold:#e6c14d;
+        --green:#5fcf8a;--yellow:#e6c14d;--red:#e07a6f;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.5;}
+  a{color:var(--accent);}
+  header{padding:24px 28px 14px;border-bottom:1px solid var(--line);}
+  header h1{margin:0;font-size:26px;font-weight:800;letter-spacing:-.3px;}
+  header .sub{color:var(--muted);font-size:13px;margin-top:6px;}
+  .wrap{max-width:1300px;margin:0 auto;padding:0 24px 60px;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:22px 0;}
+  .k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;}
+  .k .v{font-size:30px;font-weight:800;color:var(--accent2);letter-spacing:-.5px;line-height:1;}
+  .k .l{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px;margin-top:6px;}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:14px 0;}
+  .panel h2{margin:0 0 14px;font-size:14px;color:var(--accent2);text-transform:uppercase;letter-spacing:1px;}
+  canvas{max-height:340px;}
+  .ranklist{display:flex;flex-direction:column;gap:7px;}
+  .rk{display:grid;grid-template-columns:32px 240px 1fr auto;align-items:center;gap:10px;font-size:13px;}
+  .rk .lbl{font-weight:600;}
+  .rk .track{height:8px;background:var(--card2);border-radius:5px;overflow:hidden;}
+  .rk .track>span{display:block;height:100%;border-radius:5px;}
+  .rk .val{color:var(--muted);font-variant-numeric:tabular-nums;}
+  #map{height:500px;border-radius:14px;border:1px solid var(--line);}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);}
+  th{color:var(--muted);text-transform:uppercase;letter-spacing:.4px;font-size:11px;}
+  .pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:10.5px;font-weight:700;letter-spacing:.3px;background:var(--card2);color:var(--accent);}
+  .foot{color:var(--muted);font-size:12px;margin-top:24px;text-align:center;}
+  @media(max-width:880px){.rk{grid-template-columns:24px 140px 1fr auto;}}
+</style>
+</head>
+<body>
+<header>
+  <h1>🧘 Pilates Île-de-France <span style="color:var(--muted);font-weight:400;font-size:14px">— agrégat live</span></h1>
+  <div class="sub">10 marques scrapées · ~30k séances cumulées · données en temps réel toutes les 10-30 min</div>
+  <div style="margin-top:8px"><a href="hub.html">← hub</a> · <a href="comparateur.html">comparateur fitness</a> · <a href="prix.html">grille tarifaire</a></div>
+</header>
+<div class="wrap">
+  <div class="kpis" id="kpis"></div>
+
+  <div class="panel">
+    <h2>📍 Carte des studios Pilates IDF</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 12px">Markers colorés par taux de remplissage moyen (vert ≥75% · jaune 50-75% · rouge &lt;50%). Cliquer un studio pour voir ses détails.</p>
+    <div id="map"></div>
+  </div>
+
+  <div class="panel">
+    <h2>🏆 Classement studios — remplissage moyen</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 12px">Trié par taux de remplissage moyen pondéré (présents cumulés / capacité cumulée, séances figées uniquement).</p>
+    <div id="topStudios" class="ranklist"></div>
+  </div>
+
+  <div class="panel">
+    <h2>📊 Comparatif des marques</h2>
+    <div style="overflow-x:auto"><table id="tblBrands"><thead></thead><tbody></tbody></table></div>
+  </div>
+
+  <div class="panel">
+    <h2>📅 Heatmap fréquentation jour × heure <span style="font-size:11px;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(toutes marques Pilates confondues, moyenne pondérée)</span></h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 12px">Présents moyens par séance, agrégé sur tous les studios Pilates IDF. Plus foncé = créneau plus chargé en moyenne.</p>
+    <div id="heatmap" style="display:grid;grid-template-columns:48px repeat(17,1fr);gap:2px;font-size:10px"></div>
+  </div>
+
+  <div class="panel">
+    <h2>🎯 Top 20 créneaux jour × tranche horaire</h2>
+    <div id="topBuckets"></div>
+  </div>
+
+  <div class="panel">
+    <h2>💼 Top types de cours Pilates IDF</h2>
+    <p style="color:var(--muted);font-size:12.5px;margin:-4px 0 12px">Cours qui captent le plus de présents cumulés sur tout le marché Pilates IDF.</p>
+    <div id="topCours" class="ranklist"></div>
+  </div>
+
+  <div class="panel" style="border-left:3px solid var(--gold)">
+    <h2>🔎 Roadmap d'extension — 44 studios cibles identifiés</h2>
+    <p style="color:var(--muted);font-size:13px">Studios Pilates/Reformer/Lagree IDF non encore intégrés. Voir <code>pilates_discover_roadmap.json</code> pour la liste complète + priorités + plateformes booking.</p>
+    <div id="rdmStats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0"></div>
+    <div id="rdmHaute" style="font-size:13px;line-height:1.7"></div>
+    <details style="margin-top:14px"><summary style="cursor:pointer;color:var(--accent);font-size:13px">▸ Voir les 14 cibles moyennes</summary><div id="rdmMoy" style="font-size:13px;line-height:1.7;margin-top:8px"></div></details>
+    <details style="margin-top:8px"><summary style="cursor:pointer;color:var(--accent);font-size:13px">▸ Voir les 23 cibles basses (longue traîne)</summary><div id="rdmBasse" style="font-size:13px;line-height:1.7;margin-top:8px"></div></details>
+  </div>
+
+  <div class="foot">Source : agrégation de 10 scrapers individuels (cf. <code>pilates_idf_compute.py</code>). MAJ ~30 min par scraper individuel + agrégation au push.</div>
+</div>
+
+<script>
+const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
+const nf=v=>Math.round(v).toLocaleString('fr-FR');
+const eur=v=>v.toLocaleString('fr-FR',{maximumFractionDigits:0})+' €';
+const fill=t=>t>=0.75?'#5fcf8a':t>=0.5?'#e6c14d':'#e07a6f';
+
+(async function(){
+  const r = await fetch('pilates_idf_data.json',{cache:'no-store'});
+  const D = await r.json();
+
+  // === KPIs globaux ===
+  let totSeances=0, totPres=0, totCap=0, totLieux=0, totFigees=0;
+  for (const [bk,b] of Object.entries(D.brands)) {
+    totLieux += (b.meta.lieux||[]).length;
+    for (const s of b.sessions) {
+      if (s.finie && s.capacite > 0) {
+        totSeances++;
+        totPres += s.presents || 0;
+        totCap += s.capacite || 0;
+        totFigees++;
+      }
+    }
+  }
+  const tauxMoy = totCap ? totPres/totCap : 0;
+  document.getElementById('kpis').innerHTML = [
+    ['Marques scrapées', nf(D.n_brands)],
+    ['Lieux Pilates IDF', nf(totLieux)],
+    ['Séances figées (cumul)', nf(totFigees)],
+    ['Présents cumulés', nf(totPres)],
+    ['Taux remplissage moyen', Math.round(100*tauxMoy)+'%'],
+    ['Présents / séance (moy.)', totSeances?(totPres/totSeances).toFixed(1):'—'],
+  ].map(k=>`<div class="k"><div class="v">${k[1]}</div><div class="l">${k[0]}</div></div>`).join('');
+
+  // === Carte ===
+  const map = L.map('map').setView([48.8566, 2.3522], 12);
+  L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap (Humanitarian style)'
+  }).addTo(map);
+  for (const [bk,b] of Object.entries(D.brands)) {
+    // Calculer taux remplissage pondéré par marque
+    let p=0, c=0;
+    for (const s of b.sessions) { if (s.finie) { p += s.presents||0; c += s.capacite||0; } }
+    const taux = c ? p/c : 0;
+    const couleur = fill(taux);
+    for (const lieu of (b.meta.lieux||[])) {
+      if (!lieu.lat || !lieu.lng) continue;
+      const marker = L.circleMarker([lieu.lat, lieu.lng], {
+        radius: 11, fillColor: couleur, color: '#fff', weight: 2, fillOpacity: 0.85
+      }).addTo(map);
+      marker.bindPopup(`
+        <div style="font-family:system-ui;min-width:200px">
+          <b style="font-size:14px">${b.meta.label}</b><br>
+          <span style="color:#888;font-size:11px">${lieu.nom} · ${lieu.cp}</span><br>
+          <div style="margin-top:8px;font-size:12px">
+            <b>${Math.round(100*taux)}%</b> remplissage moyen<br>
+            <b>${nf(p)}</b> présents cumulés<br>
+            <b>${b.meta.type}</b> · ${b.meta.plateforme}<br>
+          </div>
+          <a href="${bk}.html" style="display:inline-block;margin-top:6px;color:#b07ff0">→ dashboard détaillé</a>
+        </div>
+      `);
+    }
+  }
+
+  // === Classement studios ===
+  const studios = [];
+  for (const [bk,b] of Object.entries(D.brands)) {
+    let p=0, c=0, n=0;
+    for (const s of b.sessions) { if (s.finie && s.capacite>0) { p += s.presents||0; c += s.capacite||0; n++; } }
+    studios.push({brand:bk, label:b.meta.label, type:b.meta.type, plateforme:b.meta.plateforme,
+                  n, p, c, taux: c?p/c:0, moy: n?p/n:0});
+  }
+  studios.sort((a,b)=>b.taux-a.taux);
+  document.getElementById('topStudios').innerHTML = studios.map((s,i)=>`
+    <div class="rk">
+      <span class="val">${i+1}.</span>
+      <span class="lbl"><a href="${s.brand}.html" style="color:var(--text);text-decoration:none">${s.label}</a><br><span style="font-size:11px;color:var(--muted)">${s.type} · ${s.plateforme}</span></span>
+      <span class="track"><span style="width:${Math.round(100*s.taux)}%;background:${fill(s.taux)}"></span></span>
+      <span class="val"><b style="color:${fill(s.taux)}">${Math.round(100*s.taux)}%</b> · ${s.moy.toFixed(1)}/séance · ${nf(s.n)} séances</span>
+    </div>
+  `).join('');
+
+  // === Comparatif marques (table) ===
+  const cols = [['Marque','label'],['Type','type'],['Plateforme','plateforme'],['Lieux','lieux'],['Séances figées','n'],['Présents','p'],['Cap. cumulée','c'],['Taux remp.','taux'],['Moy./séance','moy']];
+  document.querySelector('#tblBrands thead').innerHTML = '<tr>' + cols.map(c=>`<th>${c[0]}</th>`).join('') + '</tr>';
+  document.querySelector('#tblBrands tbody').innerHTML = studios.map(s=>{
+    const lieuxN = (D.brands[s.brand].meta.lieux||[]).length;
+    return `<tr>
+      <td><a href="${s.brand}.html" style="color:var(--accent);text-decoration:none">${s.label}</a></td>
+      <td><span class="pill">${s.type}</span></td>
+      <td><span class="pill" style="color:var(--gold)">${s.plateforme}</span></td>
+      <td>${lieuxN}</td>
+      <td>${nf(s.n)}</td>
+      <td>${nf(s.p)}</td>
+      <td>${nf(s.c)}</td>
+      <td style="color:${fill(s.taux)};font-weight:700">${Math.round(100*s.taux)}%</td>
+      <td>${s.moy.toFixed(1)}</td>
+    </tr>`;
+  }).join('');
+
+  // === Heatmap jour × heure (toutes marques) ===
+  const allSessions = [];
+  for (const [bk,b] of Object.entries(D.brands)) {
+    for (const s of b.sessions) {
+      if (s.finie && s.capacite>0) allSessions.push(s);
+    }
+  }
+  const hours = Array.from({length:17},(_,i)=>i+7);
+  const heat = {}; let max=0;
+  allSessions.forEach(r=>{
+    const h = parseInt((r.heure||'').slice(0,2));
+    if (isNaN(h)) return;
+    const k = r.jour+'|'+h;
+    heat[k] = heat[k] || {p:0, n:0};
+    heat[k].p += r.presents||0;
+    heat[k].n++;
+  });
+  Object.values(heat).forEach(x=>{x.avg = x.n ? x.p/x.n : 0; if (x.avg > max) max = x.avg;});
+  let html = '<div></div>';
+  hours.forEach(h=>html += `<div style="text-align:center;color:var(--muted);font-weight:600;padding:3px 0">${h}h</div>`);
+  JOURS.forEach(j=>{
+    html += `<div style="color:var(--muted);text-align:right;padding:0 6px;font-weight:600">${j.slice(0,3)}</div>`;
+    hours.forEach(h=>{
+      const cell = heat[j+'|'+h] || {avg:0, n:0, p:0};
+      const v = cell.avg;
+      const t = max ? v/max : 0;
+      const r = Math.round(44+(255-44)*t);
+      const g = Math.round(223-(223-100)*t);
+      const b = Math.round(98-(98-50)*t);
+      const op = v > 0 ? 0.25+0.7*t : 0.05;
+      const label = v ? (v >= 10 ? Math.round(v) : v.toFixed(1)) : '';
+      html += `<div style="aspect-ratio:1;background:rgba(${r},${g},${b},${op});border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:9.5px;cursor:default" title="${j} ${h}h : ${v.toFixed(1)} présents/séance (sur ${cell.n} séances Pilates IDF, ${nf(cell.p)} cumulés)">${label}</div>`;
+    });
+  });
+  document.getElementById('heatmap').innerHTML = html;
+
+  // === Top 20 buckets ===
+  const TRANCHES = {
+    matin: {label:'Matin (7-12h)', hours:[7,8,9,10,11]},
+    midi: {label:'Midi (12-14h)', hours:[12,13]},
+    aprem: {label:'Après-midi (14-18h)', hours:[14,15,16,17]},
+    soiree: {label:'Soirée (18-22h)', hours:[18,19,20,21]},
+    fin: {label:'Fin soirée (22h+)', hours:[22,23]},
+  };
+  const buckets = [];
+  for (const jour of JOURS) {
+    for (const [tk, tv] of Object.entries(TRANCHES)) {
+      const hs = new Set(tv.hours);
+      const f = allSessions.filter(r=>{
+        const h = parseInt((r.heure||'').slice(0,2));
+        return r.jour === jour && hs.has(h);
+      });
+      const p = f.reduce((s,r)=>s+(r.presents||0),0);
+      const c = f.reduce((s,r)=>s+(r.capacite||0),0);
+      buckets.push({label: jour+' '+tv.label, n:f.length, p, c, r:c?p/c:0});
+    }
+  }
+  buckets.sort((a,b)=>b.p-a.p);
+  const maxB = buckets[0]?.p || 1;
+  document.getElementById('topBuckets').innerHTML = buckets.slice(0,20).map((b,i)=>`
+    <div style="display:grid;grid-template-columns:32px 280px 1fr auto;gap:10px;align-items:center;font-size:13px;padding:5px 0;border-bottom:1px solid var(--line)">
+      <span style="color:var(--muted);font-weight:700;text-align:right">${i+1}.</span>
+      <span style="font-weight:600">${b.label}</span>
+      <span style="height:8px;background:var(--card2);border-radius:4px;overflow:hidden"><span style="display:block;height:100%;background:${fill(b.r)};width:${Math.round(100*b.p/maxB)}%"></span></span>
+      <span style="color:var(--muted);font-variant-numeric:tabular-nums;min-width:200px;text-align:right">${nf(b.p)} présents · ${Math.round(100*b.r)}% remplissage</span>
+    </div>
+  `).join('');
+
+  // === Roadmap d'extension ===
+  try {
+    const rdmR = await fetch('pilates_discover_roadmap.json',{cache:'no-store'});
+    const rdm = await rdmR.json();
+    const ajout = rdm.a_ajouter || [];
+    const byPrio = {haute:[], moyenne:[], basse:[]};
+    ajout.forEach(s => (byPrio[s.priorite]||byPrio.basse).push(s));
+    document.getElementById('rdmStats').innerHTML = [
+      ['Total à ajouter', rdm.stats?.total_a_ajouter || ajout.length],
+      ['Priorité haute', byPrio.haute.length],
+      ['Priorité moyenne', byPrio.moyenne.length],
+      ['Priorité basse', byPrio.basse.length],
+    ].map(k=>`<div style="background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 14px"><div style="font-size:22px;font-weight:800;color:var(--gold)">${k[1]}</div><div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px">${k[0]}</div></div>`).join('');
+    const fmt = s => `<li><b>${s.nom}</b> ${typeof s.lieux === 'number' && s.lieux > 1 ? `(${s.lieux} lieux)` : (s.lieux === 'multi' ? '(multi-lieux)' : '')} — ${s.type} · <span class="pill" style="color:var(--gold)">${s.plateforme}</span> · CP ${(s.cp||[]).join('/')}${s.note ? `<br><span style="color:var(--muted);font-size:11.5px">${s.note}</span>` : ''}</li>`;
+    document.getElementById('rdmHaute').innerHTML = '<b style="color:var(--accent2)">🎯 Priorité haute :</b><ul style="margin-top:8px">' + byPrio.haute.map(fmt).join('') + '</ul>';
+    document.getElementById('rdmMoy').innerHTML = '<ul>' + byPrio.moyenne.map(fmt).join('') + '</ul>';
+    document.getElementById('rdmBasse').innerHTML = '<ul>' + byPrio.basse.map(fmt).join('') + '</ul>';
+  } catch(e) { console.error('roadmap KO', e); }
+
+  // === Top cours Pilates IDF ===
+  const byC = {};
+  allSessions.forEach(r=>{
+    const c = (r.cours||'').trim();
+    if (!c) return;
+    byC[c] = byC[c] || {p:0, n:0};
+    byC[c].p += r.presents||0;
+    byC[c].n++;
+  });
+  const cours = Object.entries(byC)
+    .map(([k,o])=>[k, o.p, o.n, o.p/o.n])
+    .filter(x=>x[2]>=5)
+    .sort((a,b)=>b[1]-a[1])
+    .slice(0,15);
+  const maxC = cours.length ? cours[0][1] : 1;
+  document.getElementById('topCours').innerHTML = cours.length ? cours.map(([k,p,n,m],i)=>`
+    <div class="rk">
+      <span class="val">${i+1}.</span>
+      <span class="lbl">${k.length>40?k.slice(0,40)+'…':k}</span>
+      <span class="track"><span style="width:${Math.round(100*p/maxC)}%;background:var(--accent)"></span></span>
+      <span class="val">${nf(p)} présents · ${nf(n)} séances · ${m.toFixed(1)}/séance</span>
+    </div>
+  `).join('') : '<div style="color:var(--muted)">Pas encore de cours avec ≥5 séances.</div>';
+})();
+</script>
+</body>
+</html>

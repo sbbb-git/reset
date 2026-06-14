@@ -1,0 +1,59 @@
+name: Pilates IDF · agrégation cross-marques
+
+# Lit les *_data.json des 10 marques Pilates scrapées et produit
+# pilates_idf_data.json pour le dashboard agrégé.
+# Tourne plus rarement que les scrapers individuels (les data fraîches
+# sont déjà visibles dans chaque dashboard de marque).
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"   # toutes les 2h
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pilates-aggregate
+  cancel-in-progress: true
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pull last scraper commits
+        run: |
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+
+      - name: Aggregate Pilates brands → pilates_idf_data.json
+        run: python3 pilates_idf_compute.py
+
+      - name: Commit si changement
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pilates_idf_data.json
+          if git diff --cached --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "Pilates IDF aggregate ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            for i in 1 2 3 4; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              echo "retry push $i"; sleep 5
+            done
+          fi
+
+      - name: Healthcheck ping (si HEALTHCHECK_URL défini)
+        if: always()
+        env:
+          HC_URL: ${{ secrets.HEALTHCHECK_URL }}
+          WF: pilates-aggregate
+        run: |
+          if [ -n "$HC_URL" ]; then
+            curl -fsSL --max-time 10 "$HC_URL/$WF?status=${{ job.status }}" || true
+          fi
