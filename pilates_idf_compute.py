@@ -117,6 +117,44 @@ PILATES_BRANDS = {
 }
 
 OUT = "pilates_idf_data.json"
+BRANDS_EXT_CFG = "pilates_extension_brands.json"
+
+
+def load_extension_brands():
+    """Ajoute dynamiquement les brands extension qui ont déjà un *_data.json."""
+    if not os.path.exists(BRANDS_EXT_CFG):
+        return
+    try:
+        ext = json.load(open(BRANDS_EXT_CFG, encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return
+    for key, b in ext.items():
+        if key in PILATES_BRANDS:
+            continue
+        data_path = f"{key}_data.json"
+        if not os.path.exists(data_path):
+            continue
+        # CP → lat/lng approximatif Paris (centre arrond moyen, pour la carte)
+        # On utilisera juste un GPS fallback ; les vraies coords pourraient être
+        # backfilled plus tard via pilates_geocode_backfill.py.
+        cp = (b.get("cp") or ["75008"])[0]
+        try:
+            cp_int = int(cp[:2] if len(cp) >= 5 else cp)
+        except ValueError:
+            cp_int = 75
+        PILATES_BRANDS[key] = {
+            "data": data_path,
+            "label": b.get("label") or key,
+            "type": b.get("type") or "Pilates",
+            "plateforme": b.get("platform_guess") or "extension",
+            "lieux": [{
+                "nom": b.get("label") or key,
+                "cp": cp,
+                # GPS Paris-centre par défaut, à raffiner via geocode
+                "lat": 48.8566 + 0.005 * (cp_int % 7 - 3),
+                "lng": 2.3522 + 0.008 * ((cp_int * 3) % 5 - 2),
+            }],
+        }
 
 
 def is_reformer_session(brand, row):
@@ -162,6 +200,7 @@ def load_brand_sessions(brand_key, cfg):
 
 
 def main():
+    load_extension_brands()
     store = {}
     total_sessions = 0
     for brand, cfg in PILATES_BRANDS.items():
