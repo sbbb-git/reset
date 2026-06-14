@@ -1,0 +1,119 @@
+{
+ "_meta": {
+  "generated_at": "2026-06-14",
+  "note": "Résolu manuellement à partir de la discovery agent. Les bsport sont immédiatement scrapables, les mindbody healcode nécessitent un fetcher dédié (en cours)."
+ },
+ "define_studio": {
+  "platform": "bsport",
+  "company_id": "4343",
+  "status": "resolved",
+  "booking_url": "https://definestudio.fr/planning/",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "maison_amat": {
+  "platform": "bsport",
+  "company_id": "3000",
+  "status": "resolved",
+  "booking_url": "https://backoffice.bsport.io/m/Maison%20Amat/3000/pass/",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "le_hyve": {
+  "platform": "bsport",
+  "company_id": "2805",
+  "status": "resolved",
+  "booking_url": "https://backoffice.bsport.io/m/LE%20HYVE%20/2805/calendar/",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "remega": {
+  "platform": "bsport",
+  "company_id": "3001",
+  "status": "resolved",
+  "booking_url": "https://backoffice.bsport.io/m/Remega/3001",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "brume_studios": {
+  "platform": "bsport",
+  "company_id": "4350",
+  "status": "resolved",
+  "booking_url": "https://backoffice.bsport.io/m/.../4350/",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "le_cercle_pilates": {
+  "platform": "bsport",
+  "company_id": "3852",
+  "subdomain_id": "134",
+  "status": "resolved",
+  "booking_url": "https://lecerclepilates.com/planning-studio-paris-6/",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "reformation_pilates": {
+  "platform": "mindbody_healcode",
+  "mb_site_id": "736776",
+  "site_id": "39353",
+  "status": "resolved_needs_engine",
+  "booking_url": "https://www.reformation-pilates.com/",
+  "note": "Healcode widget — fetcher dédié à coder (différent de le33foch_fetch qui utilise BW widget_id)",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "yuj_paris": {
+  "platform": "mindbody_healcode",
+  "mb_site_id": "42787",
+  "status": "resolved_needs_engine",
+  "booking_url": "https://cart.mindbodyonline.com/sites/42787/session/new",
+  "note": "Healcode widget — fetcher dédié à coder",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "studio_on": {
+  "platform": "mindbody_healcode",
+  "mb_site_id": "5746914",
+  "site_id": "128181",
+  "schedules_widget_id": "6434318df2d",
+  "status": "resolved_needs_engine",
+  "booking_url": "https://www.studioon.fr/rdv",
+  "note": "Healcode widget — fetcher dédié à coder",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "pyra": {
+  "platform": "sportigo",
+  "slug": "pyra",
+  "status": "resolved_needs_engine",
+  "booking_url": "https://pyra.sportigo.club/",
+  "note": "Plateforme Sportigo — nouvelle, moteur à coder",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "elevate_paris": {
+  "platform": "mindbody",
+  "site_slug": "elevate-paris",
+  "status": "partial",
+  "booking_url": "https://www.mindbodyonline.com/explore/locations/elevate-paris",
+  "note": "Pas de site_id numérique exposé en HTML — nécessite résolution via Mindbody explore API ou Playwright",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "corpoz": {
+  "platform": "bsport",
+  "company_id": "TODO",
+  "status": "needs_playwright",
+  "booking_url": "https://www.corpoz.fit/book",
+  "note": "Next.js SPA — companyId injecté à l'hydratation React",
+  "needs_playwright": true,
+  "checked_at": "2026-06-14 23:30"
+ },
+ "stripd": {
+  "platform": "defunct",
+  "status": "skip",
+  "note": "Domaine stripdfitness.com redirige vers survey-smiles.com (parked) — studio probablement fermé",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "studio_by_holy": {
+  "platform": "not_live",
+  "status": "skip",
+  "note": "Site = prototype Anima Playground, pas d'intégration booking réelle",
+  "checked_at": "2026-06-14 23:30"
+ },
+ "cosmo_pilates": {
+  "platform": "unknown",
+  "status": "retry",
+  "note": "cosmopilates.com retourne 503 — origin down, à retenter au prochain run",
+  "checked_at": "2026-06-14 23:30"
+ }
+}

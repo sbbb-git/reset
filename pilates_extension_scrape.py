@@ -119,20 +119,48 @@ def scrape_brand(key, brand_cfg, resolved):
     res = resolved.get(key) or {}
     platform = res.get("platform")
 
-    if platform == "bsport" and res.get("company_id"):
+    status = res.get("status", "")
+
+    # Statuts terminaux : skip silencieux
+    if status in ("skip", "defunct"):
+        return
+    if platform in ("defunct", "not_live"):
+        return
+
+    # Bsport résolu → scrape immédiat
+    if platform == "bsport" and res.get("company_id") and res["company_id"] != "TODO":
         print(f"→ {key:30s} bsport company={res['company_id']}")
         scrape_bsport(key, label, res["company_id"])
-    elif platform == "mindbody" and res.get("widget_id") and not res.get("needs_playwright"):
-        print(f"→ {key:30s} mindbody widget={res['widget_id']}")
+        return
+
+    # Mindbody BW widget (le33foch-style) → scrape HTTP
+    if platform == "mindbody" and res.get("widget_id") and not res.get("needs_playwright"):
+        print(f"→ {key:30s} mindbody BW widget={res['widget_id']}")
         scrape_mindbody_http(key, label, res["widget_id"])
-    elif platform == "mindbody" and res.get("needs_playwright"):
-        print(f"→ {key:30s} mindbody SPA — déléguer à reformation_evocore_scrape.py (TODO)")
-    elif platform == "arketa":
-        print(f"→ {key:30s} arketa — TODO (calque sur snakeandtwist_scrape.py)")
-    elif platform == "clubready":
-        print(f"→ {key:30s} clubready — TODO (API privée Club Pilates franchise)")
-    else:
-        print(f"⊘ {key:30s} platform={platform or 'unknown'} — skip")
+        return
+
+    # Mindbody healcode → fetcher dédié pas encore codé
+    if platform in ("mindbody_healcode", "mindbody") and (res.get("mb_site_id") or res.get("site_id")):
+        site = res.get("mb_site_id") or res.get("site_id")
+        print(f"⏳ {key:30s} mindbody healcode site={site} — fetcher dédié à coder (skipped)")
+        return
+
+    # Sportigo, ClubReady, Arketa, etc. → TODO
+    if platform in ("sportigo", "clubready", "arketa"):
+        print(f"⏳ {key:30s} {platform} — engine à coder (skipped)")
+        return
+
+    # needs_playwright (Corpoz, Elevate, SPA) → reformation_evocore pattern
+    if res.get("needs_playwright"):
+        print(f"⏳ {key:30s} needs_playwright — déléguer à pattern reformation_evocore (TODO)")
+        return
+
+    # Retry au prochain discover
+    if status == "retry":
+        print(f"↻ {key:30s} {res.get('note', 'retry')}")
+        return
+
+    print(f"⊘ {key:30s} platform={platform or 'unknown'} status={status} — skip")
 
 
 def main():
