@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "category": "yoga",
+    "scope": "Studios Yoga / Hot Yoga / Yoga aérien IDF (Paris + 92/93/94/77/78/91/95)",
+    "note": "Catalogue à enrichir au fur et à mesure des discoveries."
+  },
+  "yuj_paris_yoga": {"label": "YUJ Paris (Yoga)", "url": "https://www.yujparis.com/", "cp": ["75001"], "type": "Vinyasa/Yin/Hot", "platform_guess": "mindbody", "priorite": "haute"},
+  "tigre_yoga_club": {"label": "Tigre Yoga Club", "url": "https://www.letigreyoga.com/", "cp": ["75007"], "type": "Vinyasa/Hatha/Yin", "platform_guess": "mindbody", "priorite": "haute"},
+  "rasa_yoga": {"label": "Rasa Yoga", "url": "https://www.rasa-yogarivegauche.com/", "cp": ["75005"], "type": "Vinyasa/Hatha/Ashtanga", "platform_guess": "mindbody", "priorite": "haute"},
+  "yoga_searcher_paris": {"label": "Yoga Searcher", "url": "https://www.yogasearcher.com/", "cp": ["75002"], "type": "Vinyasa", "platform_guess": "mindbody", "priorite": "moyenne"},
+  "ashtanga_yoga_paris": {"label": "Ashtanga Yoga Paris", "url": "https://www.ashtangayogaparis.fr/", "cp": ["75010"], "type": "Ashtanga", "platform_guess": "wordpress", "priorite": "moyenne"},
+  "on_air_yoga": {"label": "Onair Yoga", "url": "https://onairyoga.fr/", "cp": ["75009"], "type": "Vinyasa/Hot", "platform_guess": "bsport", "priorite": "haute"},
+  "casa_yoga_paris": {"label": "Casa Yoga", "url": "https://www.casayoga.fr/", "cp": ["75011"], "type": "Vinyasa", "platform_guess": "bsport", "priorite": "moyenne"},
+  "yoga_connection": {"label": "Yoga Connection", "url": "https://yogaconnection.fr/", "cp": ["75002"], "type": "Vinyasa/Hatha", "platform_guess": "bsport", "priorite": "moyenne"}
+}
