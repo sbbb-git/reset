@@ -1,51 +1,926 @@
 {
-  "_meta": {
-    "category": "yoga",
-    "scope": "Studios Yoga / Hot Yoga / Yoga aérien IDF (Paris + 92/93/94/77/78/91/95)",
-    "note": "Catalogue v2 — seedé avec les noms majeurs du marché parisien. URLs/CP à valider via discovery."
-  },
-  "yuj_paris_yoga": {"label": "YUJ Paris (Yoga)", "url": "https://www.yujparis.com/", "cp": ["75001"], "type": "Vinyasa/Yin/Hot", "platform_guess": "mindbody", "priorite": "haute"},
-  "tigre_yoga_club": {"label": "Tigre Yoga Club", "url": "https://www.letigreyoga.com/", "cp": ["75007"], "type": "Vinyasa/Hatha/Yin", "platform_guess": "mindbody", "priorite": "haute"},
-  "rasa_yoga": {"label": "Rasa Yoga Rive Gauche", "url": "https://www.rasa-yogarivegauche.com/", "cp": ["75005"], "type": "Vinyasa/Hatha/Ashtanga", "platform_guess": "mindbody", "priorite": "haute"},
-  "yoga_searcher_paris": {"label": "Yoga Searcher", "url": "https://www.yogasearcher.com/", "cp": ["75002"], "type": "Vinyasa", "platform_guess": "mindbody", "priorite": "moyenne"},
-  "ashtanga_yoga_paris": {"label": "Ashtanga Yoga Paris", "url": "https://www.ashtangayogaparis.fr/", "cp": ["75010"], "type": "Ashtanga", "platform_guess": "wordpress", "priorite": "moyenne"},
-  "on_air_yoga": {"label": "Onair Yoga", "url": "https://onairyoga.fr/", "cp": ["75009"], "type": "Vinyasa/Hot", "platform_guess": "bsport", "priorite": "haute"},
-  "casa_yoga_paris": {"label": "Casa Yoga", "url": "https://www.casayoga.fr/", "cp": ["75011"], "type": "Vinyasa", "platform_guess": "bsport", "priorite": "moyenne"},
-  "yoga_connection": {"label": "Yoga Connection", "url": "https://yogaconnection.fr/", "cp": ["75002"], "type": "Vinyasa/Hatha", "platform_guess": "bsport", "priorite": "moyenne"},
-  "live_yoga_paris": {"label": "Live Yoga Paris", "url": "https://www.live-yoga-paris.com/", "cp": ["75008"], "type": "Vinyasa", "platform_guess": "bsport", "priorite": "moyenne"},
-  "magma_yoga": {"label": "Magma Yoga", "url": "https://www.magmayoga.com/", "cp": ["75003"], "type": "Hot/Vinyasa", "platform_guess": "mindbody", "priorite": "moyenne"},
-  "easy_yoga": {"label": "EasyYoga", "url": "https://www.easyyoga.fr/", "cp": ["75009"], "type": "Hatha", "platform_guess": "wordpress", "priorite": "basse"},
-  "le_slow_yoga": {"label": "Le Slow Yoga Paris", "url": "https://www.leslowyoga.com/", "cp": ["75004"], "type": "Slow/Yin", "platform_guess": "wordpress", "priorite": "basse"},
-  "hot_yoga_paris": {"label": "Hot Yoga Paris (Hot House)", "url": "https://www.hothouseparis.com/", "cp": ["75002"], "type": "Bikram/Hot", "platform_guess": "mindbody", "priorite": "moyenne"},
-  "bikram_marais": {"label": "Bikram Yoga Marais", "url": "https://www.bikramyogaparis.com/", "cp": ["75003"], "type": "Bikram", "platform_guess": "mindbody", "priorite": "moyenne"},
-  "atlas_yoga": {"label": "Atlas Yoga Paris", "url": "https://www.atlas-yoga.fr/", "cp": ["75011"], "type": "Vinyasa/Hatha", "platform_guess": "bsport", "priorite": "basse"},
-  "paris_yoga_shala": {"label": "Paris Yoga Shala", "url": "https://parisyogashala.com/", "cp": ["75011"], "type": "Ashtanga/Mysore", "platform_guess": "wordpress", "priorite": "basse"},
-  "sivananda_yoga": {"label": "Sivananda Yoga Paris", "url": "https://www.sivananda.eu/fr/", "cp": ["75015"], "type": "Sivananda/Hatha", "platform_guess": "propriétaire", "priorite": "basse"},
-  "iyengar_yoga_paris": {"label": "Iyengar Yoga Paris", "url": "https://www.iyengar-yoga-paris.com/", "cp": ["75011"], "type": "Iyengar", "platform_guess": "wordpress", "priorite": "basse"},
-  "le_yoga_club": {"label": "Le Yoga Club", "url": "https://www.leyogaclub.com/", "cp": ["75008"], "type": "Vinyasa", "platform_guess": "bsport", "priorite": "moyenne"},
-  "maison_yoga_paris": {"label": "Maison Yoga Paris", "url": "https://www.maisonyogaparis.fr/", "cp": ["75011"], "type": "Vinyasa/Hatha", "platform_guess": "bsport", "priorite": "basse"},
-  "glo_studio_paris": {"label": "Glo Studio", "url": "https://www.glostudio.fr/", "cp": ["75009"], "type": "Vinyasa/Hot", "platform_guess": "bsport", "priorite": "haute"},
-  "studio_yoga_22": {"label": "22 Yoga Studio", "url": "https://www.22yogastudio.com/", "cp": ["75011"], "type": "Vinyasa", "platform_guess": "bsport", "priorite": "basse"},
-  "mind_body_studio": {"label": "Mind & Body Studio", "url": "https://www.mindbodystudio.fr/", "cp": ["75017"], "type": "Yoga/Méditation", "platform_guess": "mindbody", "priorite": "basse"},
-  "babylon_yoga": {"label": "Babylon Yoga", "url": "https://www.babylonyoga.com/", "cp": ["75004"], "type": "Vinyasa/Hatha", "platform_guess": "bsport", "priorite": "basse"},
-  "trini_foundation": {"label": "Trini Foundation Yoga", "url": "https://www.trini.fr/", "cp": ["75009"], "type": "Bhakti/Vinyasa", "platform_guess": "wordpress", "priorite": "basse"},
-  "niyaa_yoga": {"label": "Niyaa Yoga", "url": "https://niyaayoga.com/", "cp": ["75011"], "type": "Vinyasa", "platform_guess": "wordpress", "priorite": "basse"},
-  "yoga_village_paris": {"label": "Yoga Village", "url": "https://yogavillage.fr/", "cp": ["75011"], "type": "Vinyasa", "platform_guess": "bsport", "priorite": "basse"},
-  "yoga_house": {"label": "Yoga House Paris", "url": "https://www.yogahouseparis.com/", "cp": ["75010"], "type": "Vinyasa/Hot", "platform_guess": "bsport", "priorite": "basse"},
-  "studio_lakshmi": {"label": "Studio Lakshmi", "url": "https://www.studiolakshmi.com/", "cp": ["75011"], "type": "Hatha", "platform_guess": "wordpress", "priorite": "basse"},
-  "yogamoves": {"label": "YogaMoves", "url": "https://www.yogamoves.fr/", "cp": ["75011"], "type": "Vinyasa", "platform_guess": "bsport", "priorite": "basse"},
-  "soraya_yoga": {"label": "Soraya Yoga", "url": "https://sorayayoga.com/", "cp": ["92200"], "type": "Vinyasa", "platform_guess": "bsport", "priorite": "basse"},
-  "yoga_loft": {"label": "Yoga Loft Paris", "url": "https://www.yogaloft-paris.com/", "cp": ["75010"], "type": "Vinyasa/Yin", "platform_guess": "bsport", "priorite": "basse"},
-  "yoga_aerien_paris": {"label": "Yoga Aérien Paris", "url": "https://www.yogaaerien.fr/", "cp": ["75011"], "type": "Yoga Aérien/Silk", "platform_guess": "wordpress", "priorite": "basse"},
-  "yoga_pause": {"label": "Yoga Pause", "url": "https://yogapause.com/", "cp": ["75010"], "type": "Vinyasa", "platform_guess": "bsport", "priorite": "basse"},
-  "modjo_yoga": {"label": "Modjo Yoga (Yoga part)", "url": "https://www.modjo.fr/", "cp": ["75001"], "type": "Vinyasa/Hatha", "platform_guess": "bsport", "priorite": "moyenne"},
-  "klay_yoga": {"label": "Klay Saint-Sauveur (Yoga)", "url": "https://www.klay.com/", "cp": ["75002"], "type": "Vinyasa/Hatha", "platform_guess": "mindbody", "priorite": "moyenne"},
-  "yoga_namaste_paris": {"label": "Namaste Studio", "url": "https://www.namastestudio.fr/", "cp": ["75017"], "type": "Vinyasa/Hatha", "platform_guess": "bsport", "priorite": "basse"},
-  "studio_yoga_lyon": {"label": "Studio Yoga Lyon", "url": "https://studio-yoga-lyon.fr/", "cp": ["75011"], "type": "Hatha", "platform_guess": "wordpress", "priorite": "basse"},
-  "yoga_studio_neuilly": {"label": "Studio Yoga Neuilly", "url": "https://www.yoga-neuilly.fr/", "cp": ["92200"], "type": "Vinyasa/Hatha", "platform_guess": "wordpress", "priorite": "basse"},
-  "yoga_levallois": {"label": "Yoga Levallois", "url": "https://www.yogalevallois.fr/", "cp": ["92300"], "type": "Hatha", "platform_guess": "wordpress", "priorite": "basse"},
-  "yoga_boulogne": {"label": "Yoga Boulogne", "url": "https://yogaboulogne.fr/", "cp": ["92100"], "type": "Vinyasa", "platform_guess": "bsport", "priorite": "basse"},
-  "yoga_room_vincennes": {"label": "Yoga Room Vincennes", "url": "https://www.yogaroomvincennes.fr/", "cp": ["94300"], "type": "Hatha", "platform_guess": "wordpress", "priorite": "basse"},
-  "yoga_versailles": {"label": "Yoga Versailles", "url": "https://www.yoga-versailles.fr/", "cp": ["78000"], "type": "Hatha/Vinyasa", "platform_guess": "wordpress", "priorite": "basse"},
-  "yoga_st_germain_laye": {"label": "Yoga Saint-Germain-en-Laye", "url": "https://www.yogastgermainenlaye.fr/", "cp": ["78100"], "type": "Hatha", "platform_guess": "wordpress", "priorite": "basse"}
+ "_meta": {
+  "category": "yoga",
+  "scope": "Studios Yoga / Hot / Vinyasa / Bikram / Aérien / Iyengar / Ashtanga / Prénatal IDF (Paris + 75/77/78/91/92/93/94/95)",
+  "note": "Catalogue v3 — 90+ studios issus de discovery agent + ma connaissance. Exclus Poses + Episod (déjà scrapés via Pilates)."
+ },
+ "shakti_studio": {
+  "label": "Shakti Yoga Studio",
+  "url": "https://www.shaktistudio.yoga/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Hatha+Vinyasa+Yin+Nidra",
+  "platform_guess": "unknown",
+  "priorite": "basse"
+ },
+ "munnshala": {
+  "label": "Mūnnshala Yoga",
+  "url": "https://munnshalayoga.com/",
+  "cp": [
+   "75018"
+  ],
+  "type": "Mixte",
+  "platform_guess": "unknown",
+  "priorite": "basse"
+ },
+ "studio_kind": {
+  "label": "Studio Kind",
+  "url": "https://kind.yoga/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "rasa_yoga": {
+  "label": "Rasa Yoga Rive Gauche",
+  "url": "https://www.rasa-yogarivegauche.com/",
+  "cp": [
+   "75005"
+  ],
+  "type": "Mixte",
+  "platform_guess": "mindbody",
+  "priorite": "haute"
+ },
+ "yoga_garden": {
+  "label": "Yoga Garden (Hot26/Bikram)",
+  "url": "https://www.yogagarden.fr/",
+  "cp": [
+   "75014"
+  ],
+  "type": "Hot+Bikram",
+  "platform_guess": "propriétaire",
+  "priorite": "haute"
+ },
+ "bikram_marais": {
+  "label": "Yoga Bikram Paris Marais",
+  "url": "https://www.bikramyogaparis.com/",
+  "cp": [
+   "75004"
+  ],
+  "type": "Bikram",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "bikram_grds_blvds": {
+  "label": "Yoga Bikram Paris Grands Boulevards",
+  "url": "https://www.bikramyogaparis.com/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Bikram",
+  "platform_guess": "mindbody",
+  "priorite": "basse"
+ },
+ "espace_bikram": {
+  "label": "L'Espace Bikram Paris",
+  "url": "https://espacebikram.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Bikram",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "modo_yoga": {
+  "label": "Modo Yoga Paris",
+  "url": "https://modoyoga.com/paris/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Hot",
+  "platform_guess": "mindbody",
+  "priorite": "haute"
+ },
+ "not_yoga": {
+  "label": "Not Yoga",
+  "url": "https://notyoga.fr/",
+  "cp": [
+   "75004"
+  ],
+  "type": "Hot+Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "haute"
+ },
+ "fly_yoga": {
+  "label": "Fly Yoga Paris (Aérien)",
+  "url": "https://www.fly-yoga.fr/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Aérien",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "studio_massaro": {
+  "label": "Studio Massaro (Aérien)",
+  "url": "https://studio-massaro.fr/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Aérien+Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "aeroyoga": {
+  "label": "Aéroyoga Paris",
+  "url": "https://www.aeroyoga-paris.com/",
+  "cp": [
+   "93100"
+  ],
+  "type": "Aérien",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "chita_studio": {
+  "label": "Chita Studio (Aérien)",
+  "url": "https://chitastudio.fr/",
+  "cp": [
+   "75116"
+  ],
+  "type": "Aérien+Restorative",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "my_golden_hour": {
+  "label": "My Golden Hour",
+  "url": "https://www.mygoldenhour.fr/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Aérien+Mixte",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "ashtanga_yoga_paris": {
+  "label": "Ashtanga Yoga Paris",
+  "url": "https://www.ashtangayogaparis.fr/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Ashtanga+Mysore",
+  "platform_guess": "wordpress",
+  "priorite": "moyenne"
+ },
+ "yoga_searcher": {
+  "label": "Yoga Searcher Paris",
+  "url": "https://yogasearcher.com/",
+  "cp": [
+   "75003"
+  ],
+  "type": "Mixte",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "casa_yoga_paradis": {
+  "label": "CasaYoga Paradis",
+  "url": "https://www.casayoga-paris.fr/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Mixte+Prénatal",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "casa_yoga_canal": {
+  "label": "CasaYoga Canal",
+  "url": "https://www.casayoga-paris.fr/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Mixte+Prénatal",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "tigre_yoga": {
+  "label": "Tigre Yoga Club (chaîne 4 lieux)",
+  "url": "https://www.tigre-yoga.com/",
+  "cp": [
+   "75116",
+   "75007",
+   "75003",
+   "92200"
+  ],
+  "type": "Mixte",
+  "platform_guess": "mindbody",
+  "priorite": "haute"
+ },
+ "yoga_village": {
+  "label": "Yoga Village (2 lieux)",
+  "url": "https://yogavillage.fr/",
+  "cp": [
+   "75002",
+   "75017"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "haute"
+ },
+ "yay_yoga": {
+  "label": "YAY Yoga Studio (chaîne 3 lieux)",
+  "url": "https://www.yay-yoga.com/",
+  "cp": [
+   "75009",
+   "75017",
+   "75018"
+  ],
+  "type": "Mixte+Prénatal",
+  "platform_guess": "bsport",
+  "priorite": "haute"
+ },
+ "aikya_yoga": {
+  "label": "Aikya Yoga",
+  "url": "https://aikya-yoga.com/",
+  "cp": [
+   "75018"
+  ],
+  "type": "Mixte",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "centre_anima": {
+  "label": "Centre Anima",
+  "url": "https://centreanima.com/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Mixte+Prénatal+Iyengar+Kundalini",
+  "platform_guess": "wordpress",
+  "priorite": "moyenne"
+ },
+ "home_yoga": {
+  "label": "Home Yoga Paris (Prénatal)",
+  "url": "https://www.homeyogaparis.fr/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Mixte+Prénatal",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "iyengar_paris": {
+  "label": "Centre Iyengar Paris",
+  "url": "https://centreiyengar-paris.fr/",
+  "cp": [
+   "75116"
+  ],
+  "type": "Iyengar",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "yoga_republique": {
+  "label": "Studio Yoga République (Iyengar)",
+  "url": "https://www.studio-yoga-republique.fr/",
+  "cp": [
+   "75003"
+  ],
+  "type": "Iyengar",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "sivananda": {
+  "label": "Centre Sivananda",
+  "url": "https://sivanandaparis.org/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Hatha Sivananda",
+  "platform_guess": "propriétaire",
+  "priorite": "basse"
+ },
+ "jivamukti": {
+  "label": "Jivamukti Yoga Paris",
+  "url": "https://www.jivamuktiyoga.fr/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Jivamukti+Vinyasa",
+  "platform_guess": "mindbody",
+  "priorite": "haute"
+ },
+ "trini_yoga": {
+  "label": "Trini Yoga",
+  "url": "https://triniyoga.paris/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "montgolfiere_toudic": {
+  "label": "La Montgolfière Yves Toudic",
+  "url": "https://lamontgolfiereclub.com/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Vinyasa+Hatha+Hybride",
+  "platform_guess": "bsport",
+  "priorite": "haute"
+ },
+ "montgolfiere_lamarck": {
+  "label": "La Montgolfière Lamarck",
+  "url": "https://lamontgolfiereclub.com/",
+  "cp": [
+   "75018"
+  ],
+  "type": "Vinyasa+Hatha",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "beyoga": {
+  "label": "Beyoga",
+  "url": "https://www.beyoga.fr/",
+  "cp": [
+   "75014"
+  ],
+  "type": "Iyengar+Ashtanga+Anusara+Mixte+Prénatal",
+  "platform_guess": "wordpress",
+  "priorite": "moyenne"
+ },
+ "kayastha_yoga": {
+  "label": "Kâyastha Yoga",
+  "url": "https://kayastha-yoga.fr/",
+  "cp": [
+   "75014"
+  ],
+  "type": "Vinyasa+Hatha+Prénatal",
+  "platform_guess": "eversports",
+  "priorite": "moyenne"
+ },
+ "studio_marga": {
+  "label": "Studio Marga",
+  "url": "https://studiomarga.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Mixte+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "haute"
+ },
+ "gerard_arnaud_amelot": {
+  "label": "Gérard Arnaud Yoga Amelot",
+  "url": "https://www.yoga-paris.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "wordpress",
+  "priorite": "moyenne"
+ },
+ "gerard_arnaud_rauch": {
+  "label": "Gérard Arnaud Yoga Rauch",
+  "url": "https://www.yoga-paris.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Vinyasa+Yin",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "yoga_connect": {
+  "label": "Yoga Connect",
+  "url": "https://www.yoga-connect.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "riise_yoga": {
+  "label": "Riise (Hot Vinyasa)",
+  "url": "https://riise.com/",
+  "cp": [
+   "75003"
+  ],
+  "type": "Hot+Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "haute"
+ },
+ "omm_studio": {
+  "label": "Omm Studio",
+  "url": "https://ommstudio.fr/",
+  "cp": [
+   "75003"
+  ],
+  "type": "Vinyasa+Yin",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "atelier_marais_charlot": {
+  "label": "Atelier Marais Charlot",
+  "url": "https://atelier-marais.fr/",
+  "cp": [
+   "75003"
+  ],
+  "type": "Mixte+Prénatal+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "atelier_marais_republique": {
+  "label": "Atelier Marais République",
+  "url": "https://atelier-marais.fr/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "pyra_yoga": {
+  "label": "Pyra (Yoga part)",
+  "url": "https://pyra.paris/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Vinyasa+Pilates+HIIT",
+  "platform_guess": "sportigo",
+  "priorite": "haute"
+ },
+ "hera_club": {
+  "label": "Hera Club",
+  "url": "https://heraclubparis.com/",
+  "cp": [
+   "75116"
+  ],
+  "type": "Mixte+Barre",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "yoga_by_muriel": {
+  "label": "Studio Yoga By Muriel (Prénatal)",
+  "url": "https://www.yogabymuriel.com/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Prénatal+Postnatal",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "espace_perinat": {
+  "label": "Espace Périnat Nation",
+  "url": "https://espace-perinat-nation.com/",
+  "cp": [
+   "75012"
+  ],
+  "type": "Prénatal",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "studiolo": {
+  "label": "Le Studiolo Yoga",
+  "url": "https://www.yoganita.fr/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Hatha+Vinyasa+Yin+Prénatal",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "lomey": {
+  "label": "Lomey Yoga Studio",
+  "url": "https://www.lomey-yoga.com/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "cmonyoga": {
+  "label": "Cmonyoga",
+  "url": "https://cmonyoga.com/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "byo_yoga": {
+  "label": "B'YO! Yoga",
+  "url": "https://www.b-yo.fr/",
+  "cp": [
+   "75013"
+  ],
+  "type": "Vinyasa+Yin",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "core_yoga": {
+  "label": "Core Yoga Paris 13",
+  "url": "https://www.coreyogaparis.com/",
+  "cp": [
+   "75013"
+  ],
+  "type": "Hatha+Vinyasa+Ashtanga+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "yoze": {
+  "label": "Yoze (chaîne 5 lieux)",
+  "url": "https://www.yoze.fr/",
+  "cp": [
+   "75006",
+   "75003",
+   "75012",
+   "75018"
+  ],
+  "type": "Vinyasa+Hatha+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "haute"
+ },
+ "mirz_yoga": {
+  "label": "MIRZ Yoga (Legato)",
+  "url": "https://www.mirz-yoga.com/",
+  "cp": [
+   "75019"
+  ],
+  "type": "Hatha Flow",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "m_yoga_boulogne": {
+  "label": "M-Yoga Boulogne",
+  "url": "https://m-yoga.fr/",
+  "cp": [
+   "92100"
+  ],
+  "type": "Mixte+Bikram",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "yoga92": {
+  "label": "Yoga 92 Boulogne",
+  "url": "https://yoga92.com/",
+  "cp": [
+   "92100"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "vitality_levallois": {
+  "label": "Vitality Levallois",
+  "url": "https://www.vitalitylevallois.fr/",
+  "cp": [
+   "92300"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "studio_air_yoga": {
+  "label": "Studio AIR Yoga Suresnes",
+  "url": "https://www.studioairyoga.fr/",
+  "cp": [
+   "92150"
+  ],
+  "type": "Mixte+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "yoga_sphinx": {
+  "label": "Yoga Ayurveda Sphinx Rueil",
+  "url": "https://www.yogasphinx.fr/",
+  "cp": [
+   "92500"
+  ],
+  "type": "Hatha+Ayurveda",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "mon_studio_yoga": {
+  "label": "Mon Studio de Yoga Courbevoie",
+  "url": "https://monstudio-yoga.fr/",
+  "cp": [
+   "92400"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "studio_palloy": {
+  "label": "Studio Palloy Clichy",
+  "url": "https://studiopalloy.fr/",
+  "cp": [
+   "92110"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "le_studio_yoga": {
+  "label": "Le Studio.YOGA Issy",
+  "url": "https://www.lestudio.yoga/",
+  "cp": [
+   "92130"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "the_new_cool": {
+  "label": "La Maison The New Cool Issy",
+  "url": "https://thenewcool.fr/",
+  "cp": [
+   "92130"
+  ],
+  "type": "Mixte+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "louve_yoga": {
+  "label": "Louve Yoga Sceaux",
+  "url": "https://www.louveyoga.com/",
+  "cp": [
+   "92330"
+  ],
+  "type": "Vinyasa+Yin+Prénatal",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "deeply_yoga": {
+  "label": "Deeply Yoga Châtenay-Malabry",
+  "url": "https://deeplyyoga.fr/",
+  "cp": [
+   "92290"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "yoga_culture": {
+  "label": "Yoga et Culture Antony",
+  "url": "https://yoga-et-culture.fr/",
+  "cp": [
+   "92160"
+  ],
+  "type": "Hatha",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "genesis_yoga": {
+  "label": "Genesis Yoga Saint-Mandé",
+  "url": "https://www.genesisyoga.fr/",
+  "cp": [
+   "94160"
+  ],
+  "type": "Vinyasa+Hatha+Yin+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "yoga_saint_mande": {
+  "label": "Yoga Studio Saint-Mandé (Iyengar)",
+  "url": "https://www.yogasaintmande94160.com/",
+  "cp": [
+   "94160"
+  ],
+  "type": "Iyengar+Vinyasa",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "shamash_yoga": {
+  "label": "Shamash Yoga Vincennes",
+  "url": "https://www.shamashyoga.com/",
+  "cp": [
+   "94300"
+  ],
+  "type": "Hatha+Yin",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "studio_perche": {
+  "label": "Studio Perché Vincennes",
+  "url": "https://studio-perche.fr/",
+  "cp": [
+   "94300"
+  ],
+  "type": "Vinyasa+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "subtil_yoga": {
+  "label": "Subtil Yoga Saint-Maur",
+  "url": "https://www.subtil-yoga.fr/",
+  "cp": [
+   "94100"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "yogattitude_nogent": {
+  "label": "YOGAttitude Nogent",
+  "url": "https://yoga-nogent.fr/",
+  "cp": [
+   "94130"
+  ],
+  "type": "Mixte+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "casa_studio_aubervilliers": {
+  "label": "La Casa Studio Aubervilliers",
+  "url": "https://casastudio.fr/",
+  "cp": [
+   "93300"
+  ],
+  "type": "Ashtanga+Hatha+Yin",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "atelier_gokko": {
+  "label": "Atelier Gokko Montreuil",
+  "url": "https://ateliergokko.fr/",
+  "cp": [
+   "93100"
+  ],
+  "type": "Hatha",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "atelier_ml": {
+  "label": "L'Atelier ML Montreuil",
+  "url": "https://www.atelier-ml.fr/",
+  "cp": [
+   "93100"
+  ],
+  "type": "Mixte+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "yoga_6bis": {
+  "label": "Yoga 6 Bis Saint-Germain",
+  "url": "https://yoga6bis.com/",
+  "cp": [
+   "78100"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "club_67": {
+  "label": "Club 67 Saint-Germain",
+  "url": "https://club67.fr/",
+  "cp": [
+   "78100"
+  ],
+  "type": "Mixte+Bien-être",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "warrior_yoga_stgermain": {
+  "label": "Warrior Yoga Saint-Germain",
+  "url": "https://warrioryoga.fr/",
+  "cp": [
+   "78100"
+  ],
+  "type": "Mixte",
+  "platform_guess": "eversports",
+  "priorite": "moyenne"
+ },
+ "warrior_yoga_versailles": {
+  "label": "Warrior Yoga Versailles",
+  "url": "https://warrioryoga.fr/",
+  "cp": [
+   "78000"
+  ],
+  "type": "Mixte+Pilates",
+  "platform_guess": "eversports",
+  "priorite": "basse"
+ },
+ "yoga_shala_poissy": {
+  "label": "Yoga Shala Poissy",
+  "url": "https://yogashalapoissy.fr/",
+  "cp": [
+   "78300"
+  ],
+  "type": "Hatha+Ashtanga+Prénatal",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "sp_studio_conflans": {
+  "label": "SP Studio Conflans",
+  "url": "https://www.s-pilatesstudio.com/",
+  "cp": [
+   "78700"
+  ],
+  "type": "Ashtanga+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "mudra_massy": {
+  "label": "Mudra Yoga Massy",
+  "url": "https://www.mudrayoga.fr/",
+  "cp": [
+   "91300"
+  ],
+  "type": "Hatha+Vinyasa+Yin+Iyengar",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "mudra_palaiseau": {
+  "label": "Mudra Yoga Palaiseau",
+  "url": "https://www.mudrayoga.fr/",
+  "cp": [
+   "91120"
+  ],
+  "type": "Yoga+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "arkose_massy": {
+  "label": "Studio Arkose Massy (Yoga)",
+  "url": "https://lestudio.arkose.com/massy/",
+  "cp": [
+   "91300"
+  ],
+  "type": "Hatha+Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "active_flow_montmorency": {
+  "label": "Yoga Active Flow Montmorency",
+  "url": "https://www.yoga-activeflow.com/",
+  "cp": [
+   "95160"
+  ],
+  "type": "Vinyasa+Prénatal",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "yoga_cergy": {
+  "label": "Yoga Et Bien Être Cergy",
+  "url": "https://yogacergy.com/",
+  "cp": [
+   "95000"
+  ],
+  "type": "Hatha+Prénatal",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "le_studio_fontainebleau": {
+  "label": "Le Studio Fontainebleau",
+  "url": "https://www.lestudiofontainebleau.com/",
+  "cp": [
+   "77300"
+  ],
+  "type": "Mixte+Méditation+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "bleausard": {
+  "label": "Bleausard's Studio Fontainebleau",
+  "url": "https://bleausard-studio.com/",
+  "cp": [
+   "77300"
+  ],
+  "type": "Ashtanga+Vinyasa+Hatha+Yin",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "wellness_fontainebleau": {
+  "label": "Wellness Studio Fontainebleau",
+  "url": "https://wellness-studio.fr/",
+  "cp": [
+   "77300"
+  ],
+  "type": "Mixte+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "studio_tk_melun": {
+  "label": "Studio TK Yoga Melun",
+  "url": "https://studiotkyoga.fr/",
+  "cp": [
+   "77000"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "le_rempart_melun": {
+  "label": "Le Rempart Melun",
+  "url": "https://www.le-rempart.fr/",
+  "cp": [
+   "77000"
+  ],
+  "type": "Mixte+Pilates",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "sweet_om_meaux": {
+  "label": "Sweet Ôm Meaux",
+  "url": "https://sweetom.fr/",
+  "cp": [
+   "77100"
+  ],
+  "type": "Mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ }
 }
