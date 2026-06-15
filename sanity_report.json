@@ -1,10 +1,10 @@
 {
- "checked_at": "2026-06-14 22:51",
+ "checked_at": "2026-06-15 09:29",
  "brands": [
   {
    "brand": "anybuddy",
    "status": "OK",
-   "count": 951,
+   "count": 991,
    "issues": []
   },
   {
@@ -22,7 +22,7 @@
   {
    "brand": "barrys",
    "status": "OK",
-   "count": 213,
+   "count": 223,
    "issues": []
   },
   {
@@ -32,16 +32,30 @@
    "issues": []
   },
   {
+   "brand": "brume_studios",
+   "status": "OK",
+   "count": 126,
+   "issues": []
+  },
+  {
    "brand": "burningbar",
    "status": "OK",
    "count": 284,
    "issues": []
   },
   {
-   "brand": "dna",
+   "brand": "define_studio",
    "status": "OK",
-   "count": 5321,
+   "count": 41,
    "issues": []
+  },
+  {
+   "brand": "dna",
+   "status": "ALERT",
+   "count": 5321,
+   "issues": [
+    "dernier relevé il y a 16h (> 16h attendu)"
+   ]
   },
   {
    "brand": "driphiit",
@@ -57,9 +71,11 @@
   },
   {
    "brand": "episod",
-   "status": "OK",
+   "status": "ALERT",
    "count": 2738,
-   "issues": []
+   "issues": [
+    "dernier relevé il y a 16h (> 16h attendu)"
+   ]
   },
   {
    "brand": "kore",
@@ -70,13 +86,31 @@
   {
    "brand": "le33foch",
    "status": "OK",
-   "count": 9310,
+   "count": 9447,
+   "issues": []
+  },
+  {
+   "brand": "le_cercle_pilates",
+   "status": "OK",
+   "count": 28,
+   "issues": []
+  },
+  {
+   "brand": "le_hyve",
+   "status": "OK",
+   "count": 110,
    "issues": []
   },
   {
    "brand": "lecercle",
    "status": "OK",
    "count": 212,
+   "issues": []
+  },
+  {
+   "brand": "maison_amat",
+   "status": "OK",
+   "count": 113,
    "issues": []
   },
   {
@@ -103,6 +137,12 @@
    "note": "structure padel"
   },
   {
+   "brand": "pilates_idf",
+   "status": "OK",
+   "count": 1,
+   "issues": []
+  },
+  {
    "brand": "poses",
    "status": "OK",
    "count": 1189,
@@ -112,6 +152,12 @@
    "brand": "punch",
    "status": "OK",
    "count": 382,
+   "issues": []
+  },
+  {
+   "brand": "remega",
+   "status": "OK",
+   "count": 49,
    "issues": []
   },
   {
@@ -129,14 +175,16 @@
   {
    "brand": "santroch",
    "status": "OK",
-   "count": 194,
+   "count": 198,
    "issues": []
   },
   {
    "brand": "senseclub",
-   "status": "OK",
+   "status": "ALERT",
    "count": 160,
-   "issues": []
+   "issues": [
+    "dernier relevé il y a 16h (> 16h attendu)"
+   ]
   },
   {
    "brand": "snakeandtwist",
