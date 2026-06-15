@@ -112,8 +112,209 @@
  },
  "cosmo_pilates": {
   "platform": "unknown",
-  "status": "retry",
-  "note": "cosmopilates.com retourne 503 — origin down, à retenter au prochain run",
-  "checked_at": "2026-06-14 23:30"
+  "note": "Aucune signature détectée sur https://cosmopilates.com/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:52",
+  "url": "https://cosmopilates.com/"
+ },
+ "evocore": {
+  "platform": "mindbody",
+  "widget_id": null,
+  "note": "Mindbody detected mais widget_id introuvable — probablement SPA, Playwright requis",
+  "needs_playwright": true,
+  "detected_via": "https://www.evocorestudio.com/",
+  "checked_at": "2026-06-15 12:46",
+  "url": "https://www.evocorestudio.com/"
+ },
+ "club_pilates_convention": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://www.clubpilates.fr/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:47",
+  "url": "https://www.clubpilates.fr/"
+ },
+ "club_pilates_pompe": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://www.clubpilates.fr/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:47",
+  "url": "https://www.clubpilates.fr/"
+ },
+ "club_pilates_champ": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://www.clubpilates.fr/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:47",
+  "url": "https://www.clubpilates.fr/"
+ },
+ "paris_pilates_society": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://parispilates.com/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:52",
+  "url": "https://parispilates.com/"
+ },
+ "method_lagree": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://www.instagram.com/methodlagreestudio/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:52",
+  "url": "https://www.instagram.com/methodlagreestudio/"
+ },
+ "lagree_france": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://lagreefrance.com/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:52",
+  "url": "https://lagreefrance.com/"
+ },
+ "pilates_social_club": {
+  "platform": "mindbody",
+  "widget_id": null,
+  "note": "Mindbody detected mais widget_id introuvable — probablement SPA, Playwright requis",
+  "needs_playwright": true,
+  "detected_via": "https://pilatesocialclub.fr/paris/",
+  "checked_at": "2026-06-15 12:52",
+  "url": "https://pilatesocialclub.fr/paris/"
+ },
+ "janet_studio": {
+  "platform": "bsport",
+  "company_id": "4040",
+  "detected_via": "https://janetstudio.fr/",
+  "checked_at": "2026-06-15 12:52",
+  "url": "https://janetstudio.fr/"
+ },
+ "keana": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://keana-studio.com/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:53",
+  "url": "https://keana-studio.com/"
+ },
+ "culte_reformer": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://culte.paris/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:53",
+  "url": "https://culte.paris/"
+ },
+ "club_lulu": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://clublulu.fr/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:53",
+  "url": "https://clublulu.fr/"
+ },
+ "chez_simone": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://chezsimone.club/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:54",
+  "url": "https://chezsimone.club/"
+ },
+ "ozenhit": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://ozenhit.com/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:54",
+  "url": "https://ozenhit.com/"
+ },
+ "fit_room": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://fitroom.paris/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:54",
+  "url": "https://fitroom.paris/"
+ },
+ "carbonne": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://carbonne.club/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:55",
+  "url": "https://carbonne.club/"
+ },
+ "slowe": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://slowe.fr/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:55",
+  "url": "https://slowe.fr/"
+ },
+ "ailes_du_canal": {
+  "platform": "bsport",
+  "company_id": "219",
+  "detected_via": "https://lesailesducanal.com/",
+  "checked_at": "2026-06-15 12:55",
+  "url": "https://lesailesducanal.com/"
+ },
+ "ateliers_ground_control": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://ateliersgroundcontrol.com/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:55",
+  "url": "https://ateliersgroundcontrol.com/"
+ },
+ "caudalie_studio": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://fr.caudalie.com/spa-caudalie (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:56",
+  "url": "https://fr.caudalie.com/spa-caudalie"
+ },
+ "bikram_yoga_paris": {
+  "platform": "mindbody",
+  "widget_id": null,
+  "note": "Mindbody detected mais widget_id introuvable — probablement SPA, Playwright requis",
+  "needs_playwright": true,
+  "detected_via": "https://bikramyogaparis.com/planning/",
+  "checked_at": "2026-06-15 12:56",
+  "url": "https://bikramyogaparis.com/"
+ },
+ "semper_wellness": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://semperwellness.com/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:56",
+  "url": "https://semperwellness.com/"
+ },
+ "silo_paris": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://silo.paris/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:57",
+  "url": "https://silo.paris/"
+ },
+ "cercles_forme": {
+  "platform": "resamania",
+  "slug": "cdf",
+  "detected_via": "https://www.cerclesdelaforme.com/pilates-reformer/",
+  "checked_at": "2026-06-15 12:57",
+  "url": "https://www.cerclesdelaforme.com/pilates-reformer/"
+ },
+ "soraya_pilates": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://sorayapilates.com/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:57",
+  "url": "https://sorayapilates.com/"
+ },
+ "mucho_pilates": {
+  "platform": "mindbody",
+  "widget_id": null,
+  "note": "Mindbody detected mais widget_id introuvable — probablement SPA, Playwright requis",
+  "needs_playwright": true,
+  "detected_via": "https://muchopilates-studio.com/",
+  "checked_at": "2026-06-15 12:57",
+  "url": "https://muchopilates-studio.com/"
+ },
+ "mood_pilates": {
+  "platform": "bsport",
+  "company_id": null,
+  "note": "bsport detected mais ID introuvable",
+  "detected_via": "https://www.mood-pilates.fr/",
+  "checked_at": "2026-06-15 12:57",
+  "url": "https://www.mood-pilates.fr/"
+ },
+ "inspire_pilates": {
+  "platform": "mindbody",
+  "widget_id": null,
+  "note": "Mindbody detected mais widget_id introuvable — probablement SPA, Playwright requis",
+  "needs_playwright": true,
+  "detected_via": "https://www.pilates-paris.fr/",
+  "checked_at": "2026-06-15 12:57",
+  "url": "https://www.pilates-paris.fr/"
+ },
+ "pilatestudio_boulogne": {
+  "platform": "bsport",
+  "company_id": "1784",
+  "detected_via": "https://pilatestudioparis.fr/boulogne-reformer/",
+  "checked_at": "2026-06-15 12:57",
+  "url": "https://pilatestudioparis.fr/boulogne-reformer/"
+ },
+ "studio_pilates_neuilly": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://studiopilatesneuilly.com/ (homepage + 5 paths)",
+  "checked_at": "2026-06-15 12:57",
+  "url": "https://studiopilatesneuilly.com/"
  }
 }
