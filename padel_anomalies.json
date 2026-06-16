@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-16T18:18:43.039297",
+ "generated_at": "2026-06-16T21:28:59.039820",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -31,6 +31,16 @@
    "prix_recent": 72.0,
    "delta_pct": 33.3,
    "direction": "hausse"
+  },
+  {
+   "slug": "sannois-oss",
+   "source": "anybuddy",
+   "name": "sannois-oss",
+   "cp": "95110",
+   "prix_30j": 54.0,
+   "prix_recent": 36.0,
+   "delta_pct": -33.3,
+   "direction": "baisse"
   }
  ],
  "volume_drops": [
@@ -166,9 +176,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 17,
+  "total_anomalies": 18,
   "idle_24h": 0,
-  "price_shifts": 3,
+  "price_shifts": 4,
   "volume_drops": 14,
   "new_clubs_14d": 2
  }
