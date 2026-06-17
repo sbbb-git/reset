@@ -2,7 +2,7 @@
  "shakti_studio": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.shaktistudio.yoga/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 11:58",
+  "checked_at": "2026-06-17 11:25",
   "url": "https://www.shaktistudio.yoga/"
  },
  "munnshala": {
@@ -58,7 +58,7 @@
  "espace_bikram": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://espacebikram.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 11:59",
+  "checked_at": "2026-06-17 11:25",
   "url": "https://espacebikram.com/"
  },
  "modo_yoga": {
@@ -79,31 +79,31 @@
  "fly_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.fly-yoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 11:59",
+  "checked_at": "2026-06-17 11:25",
   "url": "https://www.fly-yoga.fr/"
  },
  "studio_massaro": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studio-massaro.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 11:59",
+  "checked_at": "2026-06-17 11:25",
   "url": "https://studio-massaro.fr/"
  },
  "aeroyoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.aeroyoga-paris.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:00",
+  "checked_at": "2026-06-17 11:26",
   "url": "https://www.aeroyoga-paris.com/"
  },
  "chita_studio": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://chitastudio.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:00",
+  "checked_at": "2026-06-17 11:26",
   "url": "https://chitastudio.fr/"
  },
  "my_golden_hour": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.mygoldenhour.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:00",
+  "checked_at": "2026-06-17 11:26",
   "url": "https://www.mygoldenhour.fr/"
  },
  "ashtanga_yoga_paris": {
@@ -117,7 +117,7 @@
  "yoga_searcher": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yogasearcher.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:01",
+  "checked_at": "2026-06-17 11:27",
   "url": "https://yogasearcher.com/"
  },
  "casa_yoga_paradis": {
@@ -139,7 +139,7 @@
  "tigre_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.tigre-yoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:01",
+  "checked_at": "2026-06-17 11:27",
   "url": "https://www.tigre-yoga.com/"
  },
  "yoga_village": {
@@ -159,25 +159,25 @@
  "aikya_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://aikya-yoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:01",
+  "checked_at": "2026-06-17 11:27",
   "url": "https://aikya-yoga.com/"
  },
  "centre_anima": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://centreanima.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:02",
+  "checked_at": "2026-06-17 11:28",
   "url": "https://centreanima.com/"
  },
  "home_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.homeyogaparis.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:02",
+  "checked_at": "2026-06-17 11:28",
   "url": "https://www.homeyogaparis.fr/"
  },
  "iyengar_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://centreiyengar-paris.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:03",
+  "checked_at": "2026-06-17 11:29",
   "url": "https://centreiyengar-paris.fr/"
  },
  "yoga_republique": {
@@ -206,7 +206,7 @@
  "trini_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://triniyoga.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:04",
+  "checked_at": "2026-06-17 11:29",
   "url": "https://triniyoga.paris/"
  },
  "montgolfiere_toudic": {
@@ -233,7 +233,7 @@
  "kayastha_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://kayastha-yoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:04",
+  "checked_at": "2026-06-17 11:29",
   "url": "https://kayastha-yoga.fr/"
  },
  "studio_marga": {
@@ -254,45 +254,48 @@
   "url": "https://www.yoga-paris.com/"
  },
  "gerard_arnaud_rauch": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.yoga-paris.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:05",
+  "platform": "mindbody",
+  "widget_id": null,
+  "note": "Mindbody detected mais widget_id introuvable — probablement SPA, Playwright requis",
+  "needs_playwright": true,
+  "detected_via": "https://www.yoga-paris.com/planning/",
+  "checked_at": "2026-06-17 11:29",
   "url": "https://www.yoga-paris.com/"
  },
  "yoga_connect": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yoga-connect.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:05",
+  "checked_at": "2026-06-17 11:30",
   "url": "https://www.yoga-connect.com/"
  },
  "riise_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://riise.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:06",
+  "checked_at": "2026-06-17 11:30",
   "url": "https://riise.com/"
  },
  "omm_studio": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://ommstudio.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:06",
+  "checked_at": "2026-06-17 11:31",
   "url": "https://ommstudio.fr/"
  },
  "atelier_marais_charlot": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://atelier-marais.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:07",
+  "checked_at": "2026-06-17 11:31",
   "url": "https://atelier-marais.fr/"
  },
  "atelier_marais_republique": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://atelier-marais.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:07",
+  "checked_at": "2026-06-17 11:31",
   "url": "https://atelier-marais.fr/"
  },
  "pyra_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://pyra.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:07",
+  "checked_at": "2026-06-17 11:32",
   "url": "https://pyra.paris/"
  },
  "hera_club": {
@@ -307,37 +310,37 @@
  "yoga_by_muriel": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yogabymuriel.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:08",
+  "checked_at": "2026-06-17 11:32",
   "url": "https://www.yogabymuriel.com/"
  },
  "espace_perinat": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://espace-perinat-nation.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:08",
+  "checked_at": "2026-06-17 11:32",
   "url": "https://espace-perinat-nation.com/"
  },
  "studiolo": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yoganita.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:08",
+  "checked_at": "2026-06-17 11:33",
   "url": "https://www.yoganita.fr/"
  },
  "lomey": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.lomey-yoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:09",
+  "checked_at": "2026-06-17 11:33",
   "url": "https://www.lomey-yoga.com/"
  },
  "cmonyoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://cmonyoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:09",
+  "checked_at": "2026-06-17 11:33",
   "url": "https://cmonyoga.com/"
  },
  "byo_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.b-yo.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:10",
+  "checked_at": "2026-06-17 11:34",
   "url": "https://www.b-yo.fr/"
  },
  "core_yoga": {
@@ -357,7 +360,7 @@
  "mirz_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.mirz-yoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:10",
+  "checked_at": "2026-06-17 11:34",
   "url": "https://www.mirz-yoga.com/"
  },
  "m_yoga_boulogne": {
@@ -386,13 +389,13 @@
  "studio_air_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.studioairyoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:11",
+  "checked_at": "2026-06-17 11:35",
   "url": "https://www.studioairyoga.fr/"
  },
  "yoga_sphinx": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yogasphinx.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:11",
+  "checked_at": "2026-06-17 11:35",
   "url": "https://www.yogasphinx.fr/"
  },
  "mon_studio_yoga": {
@@ -406,13 +409,13 @@
  "studio_palloy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studiopalloy.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:11",
+  "checked_at": "2026-06-17 11:35",
   "url": "https://studiopalloy.fr/"
  },
  "le_studio_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.lestudio.yoga/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:12",
+  "checked_at": "2026-06-17 11:36",
   "url": "https://www.lestudio.yoga/"
  },
  "the_new_cool": {
@@ -425,37 +428,37 @@
  "louve_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.louveyoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:12",
+  "checked_at": "2026-06-17 11:36",
   "url": "https://www.louveyoga.com/"
  },
  "deeply_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://deeplyyoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:12",
+  "checked_at": "2026-06-17 11:36",
   "url": "https://deeplyyoga.fr/"
  },
  "yoga_culture": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yoga-et-culture.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:13",
+  "checked_at": "2026-06-17 11:37",
   "url": "https://yoga-et-culture.fr/"
  },
  "genesis_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.genesisyoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:13",
+  "checked_at": "2026-06-17 11:37",
   "url": "https://www.genesisyoga.fr/"
  },
  "yoga_saint_mande": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yogasaintmande94160.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:13",
+  "checked_at": "2026-06-17 11:37",
   "url": "https://www.yogasaintmande94160.com/"
  },
  "shamash_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.shamashyoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:14",
+  "checked_at": "2026-06-17 11:38",
   "url": "https://www.shamashyoga.com/"
  },
  "studio_perche": {
@@ -470,133 +473,133 @@
  "subtil_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.subtil-yoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:14",
+  "checked_at": "2026-06-17 11:38",
   "url": "https://www.subtil-yoga.fr/"
  },
  "yogattitude_nogent": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yoga-nogent.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:14",
+  "checked_at": "2026-06-17 11:38",
   "url": "https://yoga-nogent.fr/"
  },
  "casa_studio_aubervilliers": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://casastudio.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:15",
+  "checked_at": "2026-06-17 11:39",
   "url": "https://casastudio.fr/"
  },
  "atelier_gokko": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://ateliergokko.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:15",
+  "checked_at": "2026-06-17 11:39",
   "url": "https://ateliergokko.fr/"
  },
  "atelier_ml": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.atelier-ml.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:15",
+  "checked_at": "2026-06-17 11:39",
   "url": "https://www.atelier-ml.fr/"
  },
  "yoga_6bis": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yoga6bis.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:15",
+  "checked_at": "2026-06-17 11:39",
   "url": "https://yoga6bis.com/"
  },
  "club_67": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://club67.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:16",
+  "checked_at": "2026-06-17 11:40",
   "url": "https://club67.fr/"
  },
  "warrior_yoga_stgermain": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://warrioryoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:16",
+  "checked_at": "2026-06-17 11:40",
   "url": "https://warrioryoga.fr/"
  },
  "warrior_yoga_versailles": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://warrioryoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:17",
+  "checked_at": "2026-06-17 11:41",
   "url": "https://warrioryoga.fr/"
  },
  "yoga_shala_poissy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yogashalapoissy.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:17",
+  "checked_at": "2026-06-17 11:41",
   "url": "https://yogashalapoissy.fr/"
  },
  "sp_studio_conflans": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.s-pilatesstudio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:17",
+  "checked_at": "2026-06-17 11:41",
   "url": "https://www.s-pilatesstudio.com/"
  },
  "mudra_massy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.mudrayoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:18",
+  "checked_at": "2026-06-17 11:42",
   "url": "https://www.mudrayoga.fr/"
  },
  "mudra_palaiseau": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.mudrayoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:18",
+  "checked_at": "2026-06-17 11:42",
   "url": "https://www.mudrayoga.fr/"
  },
  "arkose_massy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://lestudio.arkose.com/massy/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:18",
+  "checked_at": "2026-06-17 11:42",
   "url": "https://lestudio.arkose.com/massy/"
  },
  "active_flow_montmorency": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yoga-activeflow.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:19",
+  "checked_at": "2026-06-17 11:43",
   "url": "https://www.yoga-activeflow.com/"
  },
  "yoga_cergy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yogacergy.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:19",
+  "checked_at": "2026-06-17 11:43",
   "url": "https://yogacergy.com/"
  },
  "le_studio_fontainebleau": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.lestudiofontainebleau.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:19",
+  "checked_at": "2026-06-17 11:43",
   "url": "https://www.lestudiofontainebleau.com/"
  },
  "bleausard": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://bleausard-studio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:20",
+  "checked_at": "2026-06-17 11:44",
   "url": "https://bleausard-studio.com/"
  },
  "wellness_fontainebleau": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://wellness-studio.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:20",
+  "checked_at": "2026-06-17 11:44",
   "url": "https://wellness-studio.fr/"
  },
  "studio_tk_melun": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studiotkyoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:21",
+  "checked_at": "2026-06-17 11:45",
   "url": "https://studiotkyoga.fr/"
  },
  "le_rempart_melun": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.le-rempart.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:21",
+  "checked_at": "2026-06-17 11:45",
   "url": "https://www.le-rempart.fr/"
  },
  "sweet_om_meaux": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://sweetom.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-06-16 12:22",
+  "checked_at": "2026-06-17 11:45",
   "url": "https://sweetom.fr/"
  }
 }
