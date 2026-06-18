@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-18T19:40:33.239898",
+ "generated_at": "2026-06-18T22:15:08.769769",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -20,6 +20,16 @@
    "prix_30j": 54.0,
    "prix_recent": 96.0,
    "delta_pct": 77.8,
+   "direction": "hausse"
+  },
+  {
+   "slug": "4padel-epinay-sur-seine",
+   "source": "anybuddy",
+   "name": "4padel-epinay-sur-seine",
+   "cp": "93800",
+   "prix_30j": 54.0,
+   "prix_recent": 78.0,
+   "delta_pct": 44.4,
    "direction": "hausse"
   },
   {
@@ -166,9 +176,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 17,
+  "total_anomalies": 18,
   "idle_24h": 0,
-  "price_shifts": 3,
+  "price_shifts": 4,
   "volume_drops": 14,
   "new_clubs_14d": 2
  }
