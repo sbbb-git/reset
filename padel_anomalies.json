@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-17T23:00:51.609020",
+ "generated_at": "2026-06-18T00:25:40.119141",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -13,23 +13,13 @@
    "direction": "hausse"
   },
   {
-   "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
-   "source": "doinsport",
-   "name": "O.S. Sannois",
-   "cp": "95110",
-   "prix_30j": 27.0,
-   "prix_recent": 36.0,
-   "delta_pct": 33.3,
-   "direction": "hausse"
-  },
-  {
-   "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
-   "source": "doinsport",
-   "name": "Domaine de Lassy",
-   "cp": "95270",
+   "slug": "forest-hill-nanterre-la-defense",
+   "source": "anybuddy",
+   "name": "forest-hill-nanterre-la-defense",
+   "cp": "92000",
    "prix_30j": 54.0,
-   "prix_recent": 72.0,
-   "delta_pct": 33.3,
+   "prix_recent": 96.0,
+   "delta_pct": 77.8,
    "direction": "hausse"
   },
   {
@@ -49,7 +39,7 @@
    "name": "Senart Padel",
    "cp": "77380",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 70.7,
+   "bookings_moyenne_hebdo_30j": 64.9,
    "delta_pct": -100.0
   },
   {
@@ -57,7 +47,7 @@
    "name": "Padel Camp",
    "cp": "78260",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 55.3,
+   "bookings_moyenne_hebdo_30j": 51.8,
    "delta_pct": -100.0
   },
   {
@@ -73,7 +63,7 @@
    "name": "Bad Pad",
    "cp": "91420",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 54.6,
+   "bookings_moyenne_hebdo_30j": 49.5,
    "delta_pct": -100.0
   },
   {
@@ -81,7 +71,7 @@
    "name": "Padel A.C",
    "cp": "95700",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 199.5,
+   "bookings_moyenne_hebdo_30j": 184.6,
    "delta_pct": -100.0
   },
   {
@@ -89,7 +79,7 @@
    "name": "Domaine de Lassy",
    "cp": "95270",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 47.8,
+   "bookings_moyenne_hebdo_30j": 44.6,
    "delta_pct": -100.0
   },
   {
@@ -105,7 +95,7 @@
    "name": "Tennis Club de Paris",
    "cp": "75016",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 12.1,
+   "bookings_moyenne_hebdo_30j": 11.9,
    "delta_pct": -100.0
   },
   {
@@ -113,7 +103,7 @@
    "name": "Tennis Club de la Chataigneraie",
    "cp": "92500",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 58.1,
+   "bookings_moyenne_hebdo_30j": 52.5,
    "delta_pct": -100.0
   },
   {
@@ -121,7 +111,7 @@
    "name": "FOOTBALL 5 CLUB",
    "cp": "78710",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 16.1,
+   "bookings_moyenne_hebdo_30j": 14.7,
    "delta_pct": -100.0
   },
   {
@@ -137,7 +127,7 @@
    "name": "Aldea Padel",
    "cp": "91100",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 43.2,
+   "bookings_moyenne_hebdo_30j": 41.8,
    "delta_pct": -100.0
   },
   {
@@ -145,7 +135,7 @@
    "name": "B14",
    "cp": "91070",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 155.9,
+   "bookings_moyenne_hebdo_30j": 144.4,
    "delta_pct": -100.0
   },
   {
@@ -153,7 +143,7 @@
    "name": "Planète Raquettes",
    "cp": "77870",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 33.1,
+   "bookings_moyenne_hebdo_30j": 32.2,
    "delta_pct": -100.0
   }
  ],
@@ -164,7 +154,7 @@
    "name": "ASS TENNIS CLUB SARCELLOIS",
    "cp": "95200",
    "first_seen": "2026-06-12 13:04",
-   "days_since": 5
+   "days_since": 6
   },
   {
    "slug": "playtomic-d25392c9",
@@ -172,13 +162,13 @@
    "name": "Net And Connect",
    "cp": "75009 Paris",
    "first_seen": "2026-06-04 14:30",
-   "days_since": 13
+   "days_since": 14
   }
  ],
  "summary": {
-  "total_anomalies": 18,
+  "total_anomalies": 17,
   "idle_24h": 0,
-  "price_shifts": 4,
+  "price_shifts": 3,
   "volume_drops": 14,
   "new_clubs_14d": 2
  }
