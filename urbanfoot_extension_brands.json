@@ -1,0 +1,33 @@
+{
+ "_meta": {
+  "category": "urbanfoot",
+  "scope": "Centres de football à 5 indoor / urban foot IDF",
+  "note": "Modèle terrain-based (comme padel). Plateformes habituelles : Anybuddy, Doinsport, Playtomic, ClubsResa, propriétaire."
+ },
+ "le_five_bercy": {"label": "Le Five Paris Bercy", "url": "https://lefive.fr/centre/bercy/", "cp": ["75012"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "haute"},
+ "le_five_porte_saint_cloud": {"label": "Le Five Porte de Saint-Cloud", "url": "https://lefive.fr/centre/porte-de-saint-cloud/", "cp": ["75016"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "haute"},
+ "le_five_clichy": {"label": "Le Five Clichy", "url": "https://lefive.fr/centre/clichy/", "cp": ["92110"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "haute"},
+ "le_five_arcueil": {"label": "Le Five Arcueil", "url": "https://lefive.fr/centre/arcueil/", "cp": ["94110"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "haute"},
+ "le_five_aubervilliers": {"label": "Le Five Aubervilliers", "url": "https://lefive.fr/centre/aubervilliers/", "cp": ["93300"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "haute"},
+ "le_five_villepinte": {"label": "Le Five Villepinte", "url": "https://lefive.fr/centre/villepinte/", "cp": ["93420"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "le_five_thiais": {"label": "Le Five Thiais", "url": "https://lefive.fr/centre/thiais/", "cp": ["94320"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "le_five_carrieres": {"label": "Le Five Carrières-sur-Seine", "url": "https://lefive.fr/centre/carrieres-sur-seine/", "cp": ["78420"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "urban_football_montrouge": {"label": "Urban Football Montrouge", "url": "https://www.urbanfootball.fr/montrouge/", "cp": ["92120"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "haute"},
+ "urban_football_chevilly": {"label": "Urban Football Chevilly-Larue", "url": "https://www.urbanfootball.fr/chevilly-larue/", "cp": ["94550"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "urban_football_chevreuse": {"label": "Urban Football Chevreuse", "url": "https://www.urbanfootball.fr/chevreuse/", "cp": ["78460"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "basse"},
+ "urban_football_montigny": {"label": "Urban Football Montigny-le-Bretonneux", "url": "https://www.urbanfootball.fr/montigny/", "cp": ["78180"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "urban_football_pierrefitte": {"label": "Urban Football Pierrefitte", "url": "https://www.urbanfootball.fr/pierrefitte/", "cp": ["93380"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "basse"},
+ "foot_5_creteil": {"label": "Foot 5 Créteil", "url": "https://www.foot5.fr/creteil/", "cp": ["94000"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "foot_5_orly": {"label": "Foot 5 Orly", "url": "https://www.foot5.fr/orly/", "cp": ["94310"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "basse"},
+ "soccer_park_paris": {"label": "Soccer Park Paris", "url": "https://www.soccerpark.com/", "cp": ["94000"], "type": "Foot5 indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "soccerinside": {"label": "Soccer Inside Issy", "url": "https://soccerinside.fr/", "cp": ["92130"], "type": "Foot5 indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "footcenter_paris": {"label": "FootCenter Paris", "url": "https://www.footcenter.fr/", "cp": ["75019"], "type": "Foot5 indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "my_foot_paris": {"label": "My Foot", "url": "https://www.myfoot.com/", "cp": ["93800"], "type": "Foot5 indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "city_sport_foot": {"label": "City Sport Foot", "url": "https://www.citysport-foot.com/", "cp": ["95110"], "type": "Foot5 indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "powerleague_villeneuve": {"label": "Powerleague Villeneuve-Saint-Georges", "url": "https://powerleague.fr/", "cp": ["94190"], "type": "Foot5 indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "indoor_sport_palaiseau": {"label": "Indoor Sport Palaiseau", "url": "https://indoorsport-palaiseau.com/", "cp": ["91120"], "type": "Foot5 indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "foot_park_franconville": {"label": "Foot Park Franconville", "url": "https://www.footpark.fr/", "cp": ["95130"], "type": "Foot5 indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "kappa_foot_argenteuil": {"label": "Kappa Foot Argenteuil", "url": "https://kappafoot.fr/", "cp": ["95100"], "type": "Foot5 indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "le_five_morangis": {"label": "Le Five Morangis", "url": "https://lefive.fr/centre/morangis/", "cp": ["91420"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "le_five_marne_la_vallee": {"label": "Le Five Marne-la-Vallée", "url": "https://lefive.fr/centre/marne-la-vallee/", "cp": ["77700"], "type": "Foot5 indoor", "platform_guess": "doinsport", "priorite": "basse"}
+}
