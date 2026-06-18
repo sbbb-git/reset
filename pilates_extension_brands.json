@@ -1,47 +1,1387 @@
 {
-  "reformation_pilates": {"label": "Reformation Pilates", "url": "https://reformation-pilates.com/", "cp": ["75001","75003","75006"], "type": "Reformer", "platform_guess": "mindbody", "priorite": "haute"},
-  "evocore": {"label": "Evocore Lagree", "url": "https://www.evocorestudio.com/", "cp": ["75016"], "type": "Lagree", "platform_guess": "mindbody", "priorite": "haute"},
-  "pyra": {"label": "Pyra", "url": "https://pyra.paris/", "cp": ["75009"], "type": "Reformer", "platform_guess": "bsport", "priorite": "haute"},
-  "define_studio": {"label": "Define Studio", "url": "https://definestudio.fr/", "cp": ["75116"], "type": "Reformer", "platform_guess": "bsport", "priorite": "haute"},
-  "maison_amat": {"label": "Maison Amat", "url": "https://maisonamat.com/", "cp": ["75010"], "type": "Reformer/Mat/Barre", "platform_guess": "bsport", "priorite": "haute"},
-  "studio_on": {"label": "Studio On", "url": "https://www.studioon.fr/", "cp": ["75017"], "type": "Reformer", "platform_guess": "unknown", "priorite": "haute"},
-  "stripd": {"label": "Stripd Studio", "url": "https://www.stripdfitness.com/", "cp": ["75008"], "type": "Lagree/Microformer", "platform_guess": "mindbody", "priorite": "haute"},
-  "elevate_paris": {"label": "Elevate Paris", "url": "https://elevateparis.com/", "cp": ["75002"], "type": "Lagree/Megaformer", "platform_guess": "mindbody", "priorite": "haute"},
-  "club_pilates_convention": {"label": "Club Pilates Convention", "url": "https://www.clubpilates.fr/", "cp": ["75015"], "type": "Reformer (franchise)", "platform_guess": "clubready", "priorite": "moyenne"},
-  "club_pilates_pompe": {"label": "Club Pilates Rue de la Pompe", "url": "https://www.clubpilates.fr/", "cp": ["75116"], "type": "Reformer", "platform_guess": "clubready", "priorite": "moyenne"},
-  "club_pilates_champ": {"label": "Club Pilates Champ-de-Mars", "url": "https://www.clubpilates.fr/", "cp": ["75007"], "type": "Reformer", "platform_guess": "clubready", "priorite": "moyenne"},
-  "corpoz": {"label": "Corpoz", "url": "https://www.corpoz.fit/", "cp": ["75011"], "type": "Reformer", "platform_guess": "bsport", "priorite": "moyenne"},
-  "le_hyve": {"label": "Le Hyve", "url": "https://lehyve.com/", "cp": ["75009"], "type": "Reformer", "platform_guess": "bsport", "priorite": "moyenne"},
-  "remega": {"label": "Remega", "url": "https://remega.fr/", "cp": ["75009"], "type": "Megaformer", "platform_guess": "bsport", "priorite": "moyenne"},
-  "brume_studios": {"label": "BRUME Studios", "url": "https://www.brumestudios.fr/", "cp": ["75012"], "type": "Reformer/Hot Pilates", "platform_guess": "bsport", "priorite": "moyenne"},
-  "studio_by_holy": {"label": "Studio By Holy", "url": "https://studiobyholy.com/", "cp": ["75017"], "type": "Reformer", "platform_guess": "mindbody", "priorite": "moyenne"},
-  "yuj_paris": {"label": "YUJ Paris", "url": "https://www.yujparis.com/", "cp": ["75001"], "type": "Reformer", "platform_guess": "mindbody", "priorite": "moyenne"},
-  "cosmo_pilates": {"label": "Cosmo Pilates", "url": "https://cosmopilates.com/", "cp": ["75006"], "type": "Megaformer", "platform_guess": "bsport", "priorite": "moyenne"},
-  "paris_pilates_society": {"label": "Paris Pilates Society", "url": "https://parispilates.com/", "cp": ["75007"], "type": "Reformer", "platform_guess": "mindbody", "priorite": "moyenne"},
-  "le_cercle_pilates": {"label": "Le Cercle Pilates", "url": "https://lecerclepilates.com/", "cp": ["75006"], "type": "Reformer/Tower", "platform_guess": "bsport", "priorite": "moyenne"},
-  "method_lagree": {"label": "METHOD Lagree", "url": "https://www.instagram.com/methodlagreestudio/", "cp": ["75015"], "type": "Lagree", "platform_guess": "mindbody", "priorite": "moyenne"},
-  "lagree_france": {"label": "Lagree France", "url": "https://lagreefrance.com/", "cp": ["75017"], "type": "Lagree", "platform_guess": "mindbody", "priorite": "moyenne"},
-  "pilates_social_club": {"label": "Pilates Social Club", "url": "https://pilatesocialclub.fr/paris/", "cp": ["75008"], "type": "Reformer", "platform_guess": "bsport", "priorite": "moyenne"},
-  "janet_studio": {"label": "Janet Studio", "url": "https://janetstudio.fr/", "cp": ["75008"], "type": "Reformer", "platform_guess": "bsport", "priorite": "moyenne"},
-  "keana": {"label": "Keana", "url": "https://keana-studio.com/", "cp": ["75017"], "type": "Reformer", "platform_guess": "bsport", "priorite": "moyenne"},
-  "culte_reformer": {"label": "CULTE Reformer", "url": "https://culte.paris/", "cp": ["75002"], "type": "Reformer", "platform_guess": "bsport", "priorite": "basse"},
-  "club_lulu": {"label": "Club Lulu", "url": "https://clublulu.fr/", "cp": ["75001"], "type": "Reformer mixte", "platform_guess": "bsport", "priorite": "basse"},
-  "chez_simone": {"label": "Chez Simone", "url": "https://chezsimone.club/", "cp": ["75002"], "type": "Pilates/Yoga/Hyrox", "platform_guess": "bsport", "priorite": "basse"},
-  "ozenhit": {"label": "ÔZENHIT", "url": "https://ozenhit.com/", "cp": ["75004"], "type": "Reformer gym premium", "platform_guess": "unknown", "priorite": "basse"},
-  "fit_room": {"label": "Fit Room", "url": "https://fitroom.paris/", "cp": ["75016"], "type": "Reformer intimiste", "platform_guess": "bsport", "priorite": "basse"},
-  "carbonne": {"label": "Carbonne", "url": "https://carbonne.club/", "cp": ["75010"], "type": "Reformer hybride", "platform_guess": "bsport", "priorite": "basse"},
-  "slowe": {"label": "Slowe Wellness House", "url": "https://slowe.fr/", "cp": ["75010"], "type": "Reformer wellness", "platform_guess": "bsport", "priorite": "basse"},
-  "ailes_du_canal": {"label": "Les Ailes du Canal", "url": "https://lesailesducanal.com/", "cp": ["75010"], "type": "Pilates (Temple)", "platform_guess": "bsport", "priorite": "basse"},
-  "ateliers_ground_control": {"label": "Ateliers Ground Control", "url": "https://ateliersgroundcontrol.com/", "cp": ["75002"], "type": "Reformer", "platform_guess": "unknown", "priorite": "basse"},
-  "caudalie_studio": {"label": "Caudalie Studio", "url": "https://fr.caudalie.com/spa-caudalie", "cp": ["75003"], "type": "Yoga/Pilates", "platform_guess": "unknown", "priorite": "basse"},
-  "bikram_yoga_paris": {"label": "Bikram Yoga Paris", "url": "https://bikramyogaparis.com/", "cp": ["75002","75003"], "type": "Hot Pilates/Yoga", "platform_guess": "mindbody", "priorite": "basse"},
-  "semper_wellness": {"label": "SEMPER Wellness", "url": "https://semperwellness.com/", "cp": ["75008"], "type": "Reformer gym premium", "platform_guess": "unknown", "priorite": "basse"},
-  "silo_paris": {"label": "Silo Paris", "url": "https://silo.paris/", "cp": ["75008"], "type": "Lagree gym premium", "platform_guess": "unknown", "priorite": "basse"},
-  "cercles_forme": {"label": "Cercles de la Forme", "url": "https://www.cerclesdelaforme.com/pilates-reformer/", "cp": ["75"], "type": "Reformer chaîne club", "platform_guess": "unknown", "priorite": "basse"},
-  "soraya_pilates": {"label": "Soraya Pilates", "url": "https://sorayapilates.com/", "cp": ["92200","92300","75016"], "type": "Reformer (multi)", "platform_guess": "bsport", "priorite": "basse"},
-  "mucho_pilates": {"label": "Mucho Pilates Studio", "url": "https://muchopilates-studio.com/", "cp": ["94300"], "type": "Reformer/Tower", "platform_guess": "bsport", "priorite": "basse"},
-  "mood_pilates": {"label": "Mood Pilates Reformer", "url": "https://www.mood-pilates.fr/", "cp": ["92220"], "type": "Reformer", "platform_guess": "bsport", "priorite": "basse"},
-  "inspire_pilates": {"label": "Inspire Pilates", "url": "https://www.pilates-paris.fr/", "cp": ["92210"], "type": "Reformer/Mat", "platform_guess": "wordpress", "priorite": "basse"},
-  "pilatestudio_boulogne": {"label": "Pilatestudio Paris Boulogne", "url": "https://pilatestudioparis.fr/boulogne-reformer/", "cp": ["92100"], "type": "Reformer", "platform_guess": "bsport", "priorite": "basse"},
-  "studio_pilates_neuilly": {"label": "Studio Pilates de Neuilly", "url": "https://studiopilatesneuilly.com/", "cp": ["92200"], "type": "Reformer/Mat", "platform_guess": "wordpress", "priorite": "basse"}
+ "reformation_pilates": {
+  "label": "Reformation Pilates",
+  "url": "https://reformation-pilates.com/",
+  "cp": [
+   "75001",
+   "75003",
+   "75006"
+  ],
+  "type": "Reformer",
+  "platform_guess": "mindbody",
+  "priorite": "haute"
+ },
+ "evocore": {
+  "label": "Evocore Lagree",
+  "url": "https://www.evocorestudio.com/",
+  "cp": [
+   "75016"
+  ],
+  "type": "Lagree",
+  "platform_guess": "mindbody",
+  "priorite": "haute"
+ },
+ "pyra": {
+  "label": "Pyra",
+  "url": "https://pyra.paris/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "haute"
+ },
+ "define_studio": {
+  "label": "Define Studio",
+  "url": "https://definestudio.fr/",
+  "cp": [
+   "75116"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "haute"
+ },
+ "maison_amat": {
+  "label": "Maison Amat",
+  "url": "https://maisonamat.com/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Reformer/Mat/Barre",
+  "platform_guess": "bsport",
+  "priorite": "haute"
+ },
+ "studio_on": {
+  "label": "Studio On",
+  "url": "https://www.studioon.fr/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "haute"
+ },
+ "stripd": {
+  "label": "Stripd Studio",
+  "url": "https://www.stripdfitness.com/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Lagree/Microformer",
+  "platform_guess": "mindbody",
+  "priorite": "haute"
+ },
+ "elevate_paris": {
+  "label": "Elevate Paris",
+  "url": "https://elevateparis.com/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Lagree/Megaformer",
+  "platform_guess": "mindbody",
+  "priorite": "haute"
+ },
+ "club_pilates_convention": {
+  "label": "Club Pilates Convention",
+  "url": "https://www.clubpilates.fr/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Reformer (franchise)",
+  "platform_guess": "clubready",
+  "priorite": "moyenne"
+ },
+ "club_pilates_pompe": {
+  "label": "Club Pilates Rue de la Pompe",
+  "url": "https://www.clubpilates.fr/",
+  "cp": [
+   "75116"
+  ],
+  "type": "Reformer",
+  "platform_guess": "clubready",
+  "priorite": "moyenne"
+ },
+ "club_pilates_champ": {
+  "label": "Club Pilates Champ-de-Mars",
+  "url": "https://www.clubpilates.fr/",
+  "cp": [
+   "75007"
+  ],
+  "type": "Reformer",
+  "platform_guess": "clubready",
+  "priorite": "moyenne"
+ },
+ "corpoz": {
+  "label": "Corpoz",
+  "url": "https://www.corpoz.fit/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "le_hyve": {
+  "label": "Le Hyve",
+  "url": "https://lehyve.com/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "remega": {
+  "label": "Remega",
+  "url": "https://remega.fr/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Megaformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "brume_studios": {
+  "label": "BRUME Studios",
+  "url": "https://www.brumestudios.fr/",
+  "cp": [
+   "75012"
+  ],
+  "type": "Reformer/Hot Pilates",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "studio_by_holy": {
+  "label": "Studio By Holy",
+  "url": "https://studiobyholy.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Reformer",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "yuj_paris": {
+  "label": "YUJ Paris",
+  "url": "https://www.yujparis.com/",
+  "cp": [
+   "75001"
+  ],
+  "type": "Reformer",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "cosmo_pilates": {
+  "label": "Cosmo Pilates",
+  "url": "https://cosmopilates.com/",
+  "cp": [
+   "75006"
+  ],
+  "type": "Megaformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "paris_pilates_society": {
+  "label": "Paris Pilates Society",
+  "url": "https://parispilates.com/",
+  "cp": [
+   "75007"
+  ],
+  "type": "Reformer",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "le_cercle_pilates": {
+  "label": "Le Cercle Pilates",
+  "url": "https://lecerclepilates.com/",
+  "cp": [
+   "75006"
+  ],
+  "type": "Reformer/Tower",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "method_lagree": {
+  "label": "METHOD Lagree",
+  "url": "https://www.instagram.com/methodlagreestudio/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Lagree",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "lagree_france": {
+  "label": "Lagree France",
+  "url": "https://lagreefrance.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Lagree",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "pilates_social_club": {
+  "label": "Pilates Social Club",
+  "url": "https://pilatesocialclub.fr/paris/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "janet_studio": {
+  "label": "Janet Studio",
+  "url": "https://janetstudio.fr/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "keana": {
+  "label": "Keana",
+  "url": "https://keana-studio.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "culte_reformer": {
+  "label": "CULTE Reformer",
+  "url": "https://culte.paris/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "club_lulu": {
+  "label": "Club Lulu",
+  "url": "https://clublulu.fr/",
+  "cp": [
+   "75001"
+  ],
+  "type": "Reformer mixte",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "chez_simone": {
+  "label": "Chez Simone",
+  "url": "https://chezsimone.club/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Pilates/Yoga/Hyrox",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "ozenhit": {
+  "label": "ÔZENHIT",
+  "url": "https://ozenhit.com/",
+  "cp": [
+   "75004"
+  ],
+  "type": "Reformer gym premium",
+  "platform_guess": "unknown",
+  "priorite": "basse"
+ },
+ "fit_room": {
+  "label": "Fit Room",
+  "url": "https://fitroom.paris/",
+  "cp": [
+   "75016"
+  ],
+  "type": "Reformer intimiste",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "carbonne": {
+  "label": "Carbonne",
+  "url": "https://carbonne.club/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Reformer hybride",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "slowe": {
+  "label": "Slowe Wellness House",
+  "url": "https://slowe.fr/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Reformer wellness",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "ailes_du_canal": {
+  "label": "Les Ailes du Canal",
+  "url": "https://lesailesducanal.com/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Pilates (Temple)",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "ateliers_ground_control": {
+  "label": "Ateliers Ground Control",
+  "url": "https://ateliersgroundcontrol.com/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "basse"
+ },
+ "caudalie_studio": {
+  "label": "Caudalie Studio",
+  "url": "https://fr.caudalie.com/spa-caudalie",
+  "cp": [
+   "75003"
+  ],
+  "type": "Yoga/Pilates",
+  "platform_guess": "unknown",
+  "priorite": "basse"
+ },
+ "bikram_yoga_paris": {
+  "label": "Bikram Yoga Paris",
+  "url": "https://bikramyogaparis.com/",
+  "cp": [
+   "75002",
+   "75003"
+  ],
+  "type": "Hot Pilates/Yoga",
+  "platform_guess": "mindbody",
+  "priorite": "basse"
+ },
+ "semper_wellness": {
+  "label": "SEMPER Wellness",
+  "url": "https://semperwellness.com/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Reformer gym premium",
+  "platform_guess": "unknown",
+  "priorite": "basse"
+ },
+ "silo_paris": {
+  "label": "Silo Paris",
+  "url": "https://silo.paris/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Lagree gym premium",
+  "platform_guess": "unknown",
+  "priorite": "basse"
+ },
+ "cercles_forme": {
+  "label": "Cercles de la Forme",
+  "url": "https://www.cerclesdelaforme.com/pilates-reformer/",
+  "cp": [
+   "75"
+  ],
+  "type": "Reformer chaîne club",
+  "platform_guess": "unknown",
+  "priorite": "basse"
+ },
+ "soraya_pilates": {
+  "label": "Soraya Pilates",
+  "url": "https://sorayapilates.com/",
+  "cp": [
+   "92200",
+   "92300",
+   "75016"
+  ],
+  "type": "Reformer (multi)",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "mucho_pilates": {
+  "label": "Mucho Pilates Studio",
+  "url": "https://muchopilates-studio.com/",
+  "cp": [
+   "94300"
+  ],
+  "type": "Reformer/Tower",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "mood_pilates": {
+  "label": "Mood Pilates Reformer",
+  "url": "https://www.mood-pilates.fr/",
+  "cp": [
+   "92220"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "inspire_pilates": {
+  "label": "Inspire Pilates",
+  "url": "https://www.pilates-paris.fr/",
+  "cp": [
+   "92210"
+  ],
+  "type": "Reformer/Mat",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "pilatestudio_boulogne": {
+  "label": "Pilatestudio Paris Boulogne",
+  "url": "https://pilatestudioparis.fr/boulogne-reformer/",
+  "cp": [
+   "92100"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "basse"
+ },
+ "studio_pilates_neuilly": {
+  "label": "Studio Pilates de Neuilly",
+  "url": "https://studiopilatesneuilly.com/",
+  "cp": [
+   "92200"
+  ],
+  "type": "Reformer/Mat",
+  "platform_guess": "wordpress",
+  "priorite": "basse"
+ },
+ "l_atelier_de_la_forme": {
+  "label": "L'Atelier de la Forme",
+  "url": "https://latelierdelaforme.com/",
+  "cp": [
+   "75014"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "riise_studios_pilates_reformer": {
+  "label": "RIISE Studios Pilates Reformer",
+  "url": "https://riise-studios.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "now_reformer": {
+  "label": "Now Reformer",
+  "url": "https://nowreformer.com/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "episod_louvre": {
+  "label": "Episod Louvre",
+  "url": "https://episod.fr/louvre/",
+  "cp": [
+   "75001"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "episod_bourse": {
+  "label": "Episod Bourse",
+  "url": "https://episod.fr/bourse/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "episod_pigalle": {
+  "label": "Episod Pigalle",
+  "url": "https://episod.fr/pigalle/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "episod_r_publique": {
+  "label": "Episod République",
+  "url": "https://episod.fr/republique/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "episod_nation": {
+  "label": "Episod Nation",
+  "url": "https://episod.fr/nation/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "kurv": {
+  "label": "Kurv",
+  "url": "https://kurv.fr/",
+  "cp": [
+   "75006"
+  ],
+  "type": "Lagree",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "studio_fabrica": {
+  "label": "Studio Fabrica",
+  "url": "https://www.studiofabricaparis.com/",
+  "cp": [
+   "75016"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "studio_newformer_passy": {
+  "label": "Studio Newformer Passy",
+  "url": "https://thenewmeparis.com/pages/studio-reformer-passy",
+  "cp": [
+   "75016"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_pilates_16": {
+  "label": "Studio Pilates 16",
+  "url": "https://www.studiopilates16.com/",
+  "cp": [
+   "75016"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "miraj_paris": {
+  "label": "Miraj Paris",
+  "url": "https://mirajparis.fr/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "popilates": {
+  "label": "Popilates",
+  "url": "https://popilates.fr/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "wunder_barre": {
+  "label": "Wunder Barre",
+  "url": "https://www.wunder-barre.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Reformer+Barre",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "reform_island": {
+  "label": "Reform Island",
+  "url": "https://reformisland.com/",
+  "cp": [
+   "75018"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "chen_pilates_et_yoga": {
+  "label": "CHEN Pilates et Yoga",
+  "url": "https://www.fresha.com/lvp/chen-pilates-et-yoga-paris-19-paris-20-rue-de-belleville-paris-q8bL45",
+  "cp": [
+   "75020"
+  ],
+  "type": "Pilates",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "clara_et_jo": {
+  "label": "Clara et Jo",
+  "url": "https://www.claraetjo.com/pilates-reformer-paris",
+  "cp": [
+   "92100"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pilates_sant_issy": {
+  "label": "Pilates Santé Issy",
+  "url": "https://www.pilates-sante-issy.fr/",
+  "cp": [
+   "92130"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "aquazena": {
+  "label": "AquaZena",
+  "url": "https://aquazena.fr/",
+  "cp": [
+   "92130"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "le_studio_lagree_neuilly": {
+  "label": "Le Studio Lagree Neuilly",
+  "url": "https://lestudiolagree.com/",
+  "cp": [
+   "92200"
+  ],
+  "type": "Lagree",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "playground_pilates_studio": {
+  "label": "Playground Pilates Studio",
+  "url": "https://www.playgroundpilatesstudio.com/",
+  "cp": [
+   "92200"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "origyn_puteaux": {
+  "label": "Origyn Puteaux",
+  "url": "https://origynandco.com/",
+  "cp": [
+   "92800"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "pilates_performer": {
+  "label": "Pilates Performer",
+  "url": "https://pilatesperformer.fr/",
+  "cp": [
+   "92500"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "panache_holiformer": {
+  "label": "Panache Holiformer",
+  "url": "https://panacheholiformerpilates.squarespace.com/",
+  "cp": [
+   "92500"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "annec_pilates": {
+  "label": "AnneC Pilates",
+  "url": "https://annecpilates.fr/",
+  "cp": [
+   "92000"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pilates_nanterre": {
+  "label": "Pilates Nanterre",
+  "url": "https://www.pilates-nanterre.com/",
+  "cp": [
+   "92000"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "vybes_reformer_more": {
+  "label": "Vybes Reformer & More",
+  "url": "https://vybes-reformer.com/",
+  "cp": [
+   "92600"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "reform_studio_reform_from_bali": {
+  "label": "Reform Studio (Reform from Bali)",
+  "url": "https://reformfrombali.com/",
+  "cp": [
+   "92120"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "pilates_en_apart": {
+  "label": "Pilates en Aparté",
+  "url": "https://pilatesenaparte.helloresa.com/",
+  "cp": [
+   "92120"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "my_sweet_pilates": {
+  "label": "My Sweet Pilates",
+  "url": "https://www.mysweetpilates.com/",
+  "cp": [
+   "92170"
+  ],
+  "type": "Pilates",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "in_m_pilates_clamart": {
+  "label": "Inām Pilates Clamart",
+  "url": "https://inampilates.com/",
+  "cp": [
+   "92140"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "mlm_pilates_sceaux": {
+  "label": "MLM Pilates Sceaux",
+  "url": "https://www.mlmpilates.com/",
+  "cp": [
+   "92330"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "cours_pilates_antony": {
+  "label": "Cours Pilates Antony",
+  "url": "https://cours-pilates.fr/",
+  "cp": [
+   "92160"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "impact_studio_antony": {
+  "label": "Impact Studio Antony",
+  "url": "https://impact-pilates.fr/",
+  "cp": [
+   "92160"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "studio_svb": {
+  "label": "Studio SVB",
+  "url": "https://studiosvb.com/",
+  "cp": [
+   "93400"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "atelier_ml_montreuil": {
+  "label": "Atelier ML Montreuil",
+  "url": "https://www.atelierml.fr/pilates-montreuil/",
+  "cp": [
+   "93100"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "perspectives_studio": {
+  "label": "Perspectives Studio",
+  "url": "https://www.perspectivesstudio.fr/",
+  "cp": [
+   "94300"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "studio_forme_vincennes": {
+  "label": "Studio Forme Vincennes",
+  "url": "https://studioforme.fr/pilates-reformer/",
+  "cp": [
+   "94300"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "nava_pilates": {
+  "label": "Nava Pilates",
+  "url": "https://navapilates.com/",
+  "cp": [
+   "94300"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pilates_saint_mand": {
+  "label": "Pilates Saint-Mandé",
+  "url": "https://pilates-saint-mande.fr/",
+  "cp": [
+   "94160"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "vital_house_gym_charenton": {
+  "label": "Vital House Gym Charenton",
+  "url": "https://www.vitalhousegym.com/services",
+  "cp": [
+   "94220"
+  ],
+  "type": "Hybride",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "lm_studio_joinville": {
+  "label": "LM Studio Joinville",
+  "url": "https://www.lmstudio.fit/",
+  "cp": [
+   "94340"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "flow_pilates_maisons_alfort": {
+  "label": "Flow Pilates Maisons-Alfort",
+  "url": "https://flowpilatesstudio.fr/",
+  "cp": [
+   "94700"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "nyou_studio_maisons_alfort": {
+  "label": "Nyou Studio Maisons-Alfort",
+  "url": "https://www.nyoustudio.com/",
+  "cp": [
+   "94700"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "l_atelier_gambetta": {
+  "label": "L'Atelier Gambetta",
+  "url": "https://www.lateliergambetta.com/",
+  "cp": [
+   "94700"
+  ],
+  "type": "Pilates",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "reformyou_saint_maur": {
+  "label": "ReformYou Saint-Maur",
+  "url": "https://reformyou-pilates-st-maur.fr/",
+  "cp": [
+   "94100"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "myo_pilates_saint_maur": {
+  "label": "MYO Pilates Saint-Maur",
+  "url": "https://www.myopilates.fr/",
+  "cp": [
+   "94100"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "atelier_r_pilates": {
+  "label": "Atelier R Pilates",
+  "url": "https://pilates-saintmaur.fr/",
+  "cp": [
+   "94100"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "house_of_pilates_saint_maur": {
+  "label": "House of Pilates Saint-Maur",
+  "url": "https://houseofpilates.fr/",
+  "cp": [
+   "94100"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "l_atelier_reformer_cr_teil": {
+  "label": "L'Atelier Reformer Créteil",
+  "url": "https://www.latelier-reformer.fr/",
+  "cp": [
+   "94000"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_pilates_bm_kremlin": {
+  "label": "Studio Pilates BM Kremlin",
+  "url": "https://www.studiopilates-bm.com/",
+  "cp": [
+   "94270"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "la_r_serve_pilates_versailles": {
+  "label": "La Réserve Pilates Versailles",
+  "url": "https://lareservepilates.fr/",
+  "cp": [
+   "78000"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pilates_ouest": {
+  "label": "Pilates Ouest",
+  "url": "https://www.pilates-ouest.com/",
+  "cp": [
+   "78100"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "masami_miyauchi": {
+  "label": "Masami Miyauchi",
+  "url": "https://www.masamimiyauchi.com/",
+  "cp": [
+   "78100"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "sculpt_club_saint_germain": {
+  "label": "Sculpt Club Saint-Germain",
+  "url": "https://gymlib.com/fr/gym/sculpt-pilates",
+  "cp": [
+   "78100"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "halo_studio_v_sinet": {
+  "label": "Halo Studio Vésinet",
+  "url": "https://halostudiopilates.com/",
+  "cp": [
+   "78110"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "details_pilates_enghien": {
+  "label": "DETAILS PILATES Enghien",
+  "url": "https://details-pilates.fr/",
+  "cp": [
+   "95880"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "m_pilates_flow_argenteuil": {
+  "label": "M'PILATES FLOW Argenteuil",
+  "url": "https://studios-pilates.fr/studio-de-pilates-argenteuil-95.html",
+  "cp": [
+   "95100"
+  ],
+  "type": "Pilates",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "si_le_pilates_pontoise": {
+  "label": "Si Le Pilates Pontoise",
+  "url": "https://si-lepilates.com/",
+  "cp": [
+   "95300"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "cergy_pilates": {
+  "label": "Cergy Pilates",
+  "url": "https://www.cergypilates.com/",
+  "cp": [
+   "95000"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_linea_meaux": {
+  "label": "Studio Linea Meaux",
+  "url": "https://studio-linea.fr/",
+  "cp": [
+   "77100"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "harmony_pilates_val_d_europe": {
+  "label": "Harmony Pilates Val d'Europe",
+  "url": "https://www.studioharmonypilates.fr/",
+  "cp": [
+   "77700"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "espace_pilates_fontainebleau": {
+  "label": "Espace Pilates Fontainebleau",
+  "url": "https://www.espace-pilates.fr/",
+  "cp": [
+   "77300"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bliss_pilates_fontainebleau": {
+  "label": "Bliss Pilates Fontainebleau",
+  "url": "https://www.bliss-pilates.com/",
+  "cp": [
+   "77300"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "eden_by_chlo_melun": {
+  "label": "EDEN by Chloé Melun",
+  "url": "https://www.edenbychloe.fr/",
+  "cp": [
+   "77000"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "reformyou_bussy": {
+  "label": "ReformYou Bussy",
+  "url": "https://reformyou.fr/",
+  "cp": [
+   "77600"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "moove_studio_bi_vres": {
+  "label": "Moove Studio Bièvres",
+  "url": "https://moovestudio.fr/",
+  "cp": [
+   "91570"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "the_club_studio": {
+  "label": "The Club Studio",
+  "url": "https://www.the-club-studio.com/",
+  "cp": [
+   "91280"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "feel_pilates_palaiseau": {
+  "label": "Feel Pilates Palaiseau",
+  "url": "https://feelpilates.fr/",
+  "cp": [
+   "91120"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pilates_en_seine_etiolles": {
+  "label": "Pilates en Seine Etiolles",
+  "url": "https://www.pilates-en-seine.fr/",
+  "cp": [
+   "91450"
+  ],
+  "type": "Pilates+Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "now_reformer_neuilly": {
+  "label": "NOW Reformer Neuilly",
+  "url": "https://nowreformer.com/neuilly/",
+  "cp": [
+   "92200"
+  ],
+  "type": "Reformer",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "l_acad_mie_34": {
+  "label": "L'Académie 34",
+  "url": "https://www.academie34paris.com/",
+  "cp": [
+   "75016"
+  ],
+  "type": "Reformer",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "studio_toile_pilates": {
+  "label": "Studio Étoile Pilates",
+  "url": "https://www.studioetoilepilates.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "social_reformers": {
+  "label": "Social Reformers",
+  "url": "https://socialreformers.fr/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "sculpt_reformer_club": {
+  "label": "Sculpt Reformer Club",
+  "url": "https://www.sculptclubco.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "reformer_raum": {
+  "label": "Reformer Raum",
+  "url": "https://reformerraum.com/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Reformer",
+  "platform_guess": "eversports",
+  "priorite": "moyenne"
+ },
+ "harmonie_studio_pilates": {
+  "label": "Harmonie Studio Pilates",
+  "url": "https://www.harmoniestudio.fr/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Reformer/Mat",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_rituel_pilates": {
+  "label": "Studio Rituel Pilates",
+  "url": "https://www.studio-rituel.paris/",
+  "cp": [
+   "75006"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "aja_house": {
+  "label": "Aja House",
+  "url": "https://www.ajahouse.fr/",
+  "cp": [
+   "75007"
+  ],
+  "type": "Reformer/Barre",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pilates_des_gobelins": {
+  "label": "Pilates des Gobelins",
+  "url": "https://pilatesdesgobelins.com/",
+  "cp": [
+   "75013"
+  ],
+  "type": "Reformer",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "studio_biopilates": {
+  "label": "Studio Biopilates",
+  "url": "https://www.biopilates.fr/",
+  "cp": [
+   "75020"
+  ],
+  "type": "STOTT Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "apog_e_paris": {
+  "label": "Apogée Paris",
+  "url": "https://apogee-paris.fr/",
+  "cp": [
+   "75020"
+  ],
+  "type": "Pilates+Coaching",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pilatestudio_paris_15": {
+  "label": "Pilatestudio Paris 15",
+  "url": "https://pilatestudioparis.fr/paris-15/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Reformer",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "inam_pilates_gagny": {
+  "label": "INAM Pilates Gagny",
+  "url": "https://inampilates.com/gagny/",
+  "cp": [
+   "93220"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_air_pilates_maisons_alfort": {
+  "label": "Studio Air Pilates Maisons-Alfort",
+  "url": "https://www.facebook.com/airpilates/",
+  "cp": [
+   "94700"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "club_pilates_saint_maur": {
+  "label": "Club Pilates Saint-Maur",
+  "url": "https://www.clubpilates.fr/location/saint-maur",
+  "cp": [
+   "94100"
+  ],
+  "type": "Reformer franchise",
+  "platform_guess": "clubready",
+  "priorite": "moyenne"
+ },
+ "studio_b_unik_garches": {
+  "label": "Studio B-Unik Garches",
+  "url": "https://www.studio-b-unik.com/",
+  "cp": [
+   "92380"
+  ],
+  "type": "Reformer/Mat",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_sel_ni_colombes": {
+  "label": "Studio Selíni Colombes",
+  "url": "https://yogaselini.fr/",
+  "cp": [
+   "92700"
+  ],
+  "type": "Reformer/Yoga",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_gambetta_bois_colombes": {
+  "label": "Studio Gambetta Bois-Colombes",
+  "url": "https://www.pilates-yoga-studio-gambetta-bois-colombes.com/",
+  "cp": [
+   "92270"
+  ],
+  "type": "Reformer/Mat",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "stayfit_kaizoku_bourg_la_reine": {
+  "label": "StayFit Kaizoku Bourg-la-Reine",
+  "url": "https://www.stayfit.fr/",
+  "cp": [
+   "92340"
+  ],
+  "type": "Reformer",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pilateswithflo_rueil": {
+  "label": "Pilateswithflo Rueil",
+  "url": "https://www.pilateswithflo.com/",
+  "cp": [
+   "92500"
+  ],
+  "type": "Pilates Machines",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_pilates_myriam_blanc": {
+  "label": "Studio Pilates Myriam Blanc",
+  "url": "https://studiopilatesmyriamblanc.com/",
+  "cp": [
+   "78000"
+  ],
+  "type": "Reformer/Cadillac",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ }
 }

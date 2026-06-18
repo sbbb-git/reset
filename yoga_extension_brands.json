@@ -922,5 +922,785 @@
   "type": "Mixte",
   "platform_guess": "bsport",
   "priorite": "basse"
+ },
+ "espace_yoga_13": {
+  "label": "Espace Yoga 13",
+  "url": "https://www.espaceyoga13.com/",
+  "cp": [
+   "75013"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "yoga_soin": {
+  "label": "Yoga-Soin",
+  "url": "https://www.yoga-soin.com/",
+  "cp": [
+   "75013"
+  ],
+  "type": "Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "yuj_yoga_station_f": {
+  "label": "YUJ Yoga Station F",
+  "url": "https://www.yujparis.com/en/pages/yuj-yoga-studio-station-f",
+  "cp": [
+   "75013"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "yoga_daguerre": {
+  "label": "Yoga Daguerre",
+  "url": "https://www.yogadaguerre.fr/",
+  "cp": [
+   "75014"
+  ],
+  "type": "Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "ateliers_de_yoga": {
+  "label": "Ateliers de Yoga",
+  "url": "https://ateliersdeyoga.com/",
+  "cp": [
+   "75014"
+  ],
+  "type": "Iyengar",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "climbing_district_buttes": {
+  "label": "Climbing District Buttes",
+  "url": "https://fitness.climbingdistrict.com/salle-fitness/paris-19-buttes-chaumont/",
+  "cp": [
+   "75019"
+  ],
+  "type": "Vinyasa+Climbing",
+  "platform_guess": "resamania",
+  "priorite": "moyenne"
+ },
+ "anjaliom": {
+  "label": "Anjaliom",
+  "url": "https://www.yoga.paris/",
+  "cp": [
+   "75019"
+  ],
+  "type": "Iyengar",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "penser_yoga": {
+  "label": "Penser Yoga",
+  "url": "https://www.penseryoga.com/",
+  "cp": [
+   "75019"
+  ],
+  "type": "Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "ataum_paris": {
+  "label": "Ataum Paris",
+  "url": "https://www.ataum.fr/",
+  "cp": [
+   "75020"
+  ],
+  "type": "Yin",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "aux_plateaux_sauvages": {
+  "label": "Aux Plateaux Sauvages",
+  "url": "https://lesplateauxsauvages.fr/",
+  "cp": [
+   "75020"
+  ],
+  "type": "Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "gym_studio_pix_r_court": {
+  "label": "GYM Studio Pixérécourt",
+  "url": "https://www.gymstudio.fr/yoga-paris-20.html",
+  "cp": [
+   "75020"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "the_space_yoga_belleville": {
+  "label": "The Space Yoga Belleville",
+  "url": "https://thespaceparis.com/",
+  "cp": [
+   "75020"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "the_space_yoga_nation": {
+  "label": "The Space Yoga Nation",
+  "url": "https://thespaceparis.com/nation/",
+  "cp": [
+   "75012"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "m_y_shala": {
+  "label": "Māyāshala",
+  "url": "https://mayashala.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "body_yoga_paris": {
+  "label": "Body Yoga Paris",
+  "url": "https://www.body-yoga-paris.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_district_batignolles": {
+  "label": "Studio District Batignolles",
+  "url": "https://studiodistrict.fr/salle-fitness/paris-17-batignolles/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "resamania",
+  "priorite": "moyenne"
+ },
+ "mama_yoga_batignolles": {
+  "label": "Mama Yoga Batignolles",
+  "url": "https://mamayoga.fr/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Hot",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "yoga_room_paris_17": {
+  "label": "Yoga Room Paris 17",
+  "url": "https://www.yogaroomparis.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "yuj_yoga_wagram": {
+  "label": "YUJ Yoga Wagram",
+  "url": "https://www.yujparis.com/en/pages/yuj-yoga-studio-wagram",
+  "cp": [
+   "75017"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "my_ginger": {
+  "label": "My Ginger",
+  "url": "https://www.myginger.fr/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Yoga+Pilates+Sound",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "studio_16": {
+  "label": "Studio 16",
+  "url": "https://www.studio16.fr/yoga-vinyasa-flow/",
+  "cp": [
+   "75016"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "sagesse_harmonie": {
+  "label": "Sagesse & Harmonie",
+  "url": "https://sagesse-harmonie.fr/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Ashtanga",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "jeen_plus_paris_15": {
+  "label": "Jeen Plus Paris 15",
+  "url": "https://www.jeen.care/centres/jeen-plus-paris15",
+  "cp": [
+   "75015"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "baba_yoga_social_club": {
+  "label": "Baba Yoga Social Club",
+  "url": "https://www.babayoga.fr/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "living_being_paris": {
+  "label": "Living Being Paris",
+  "url": "https://www.livingbeingparis.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Yin+Sound",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bandha_yoga": {
+  "label": "Bandha Yoga",
+  "url": "https://www.bandhayoga.paris/",
+  "cp": [
+   "75006"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "yoga_colibri": {
+  "label": "Yoga Colibri",
+  "url": "https://www.yoga-colibri.com/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "kadampa_paris": {
+  "label": "Kadampa Paris",
+  "url": "https://meditation-paris.org/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Méditation+Yoga",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "healthy_warriors_boulogne": {
+  "label": "Healthy Warriors Boulogne",
+  "url": "https://www.healthy-warriors.com/",
+  "cp": [
+   "92100"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "poses_studio_levallois": {
+  "label": "POSES Studio Levallois",
+  "url": "https://poses-levallois.com/",
+  "cp": [
+   "92300"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "yoga_loft_puteaux": {
+  "label": "Yoga Loft Puteaux",
+  "url": "https://www.yogaloft.club/",
+  "cp": [
+   "92800"
+  ],
+  "type": "Hot",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "origyn_puteaux": {
+  "label": "ORIGYN Puteaux",
+  "url": "https://origynandco.com/",
+  "cp": [
+   "92800"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "moi_aussi_yoga": {
+  "label": "Moi Aussi Yoga",
+  "url": "https://www.moiaussiyoga.fr/",
+  "cp": [
+   "93400"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "muses_yoga_montreuil": {
+  "label": "Muses Yoga Montreuil",
+  "url": "https://www.musesyoga.org/",
+  "cp": [
+   "93100"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "mindbody",
+  "priorite": "moyenne"
+ },
+ "la_clairi_re_pantin": {
+  "label": "La Clairière Pantin",
+  "url": "https://laclairiere-bienetre.com/",
+  "cp": [
+   "93500"
+  ],
+  "type": "Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "i_flow_arcueil": {
+  "label": "I-Flow Arcueil",
+  "url": "https://www.i-flow.fr/",
+  "cp": [
+   "94110"
+  ],
+  "type": "Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "fushan_kwoon_vanves": {
+  "label": "Fushan Kwoon Vanves",
+  "url": "https://www.fushankwoon.com/",
+  "cp": [
+   "92170"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "le_dojo_de_montreuil": {
+  "label": "Le Dojo de Montreuil",
+  "url": "https://www.ledojodemontreuil.fr/",
+  "cp": [
+   "93100"
+  ],
+  "type": "Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "connecting_yoga_aubervilliers": {
+  "label": "Connecting Yoga Aubervilliers",
+  "url": "https://www.connectingyoga.fr/",
+  "cp": [
+   "93300"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "maison_amara_versailles": {
+  "label": "Maison Amara Versailles",
+  "url": "https://www.maisonamara.fr/",
+  "cp": [
+   "78000"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "dharma_yoga_saint_germain": {
+  "label": "Dharma Yoga Saint-Germain",
+  "url": "https://www.dharmayoga.fr/",
+  "cp": [
+   "78100"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "eversports",
+  "priorite": "moyenne"
+ },
+ "equi_libre_yoga_rambouillet": {
+  "label": "Equi-Libre Yoga Rambouillet",
+  "url": "https://www.equi-libre-yoga.fr/",
+  "cp": [
+   "78120"
+  ],
+  "type": "Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "my_bb_yogi": {
+  "label": "My BB Yogi",
+  "url": "https://www.mybbyogi.com/",
+  "cp": [
+   "91600"
+  ],
+  "type": "Prénatal",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pole_hit_yoga_a_rien": {
+  "label": "Pole Hit Yoga Aérien",
+  "url": "https://www.polehit.fr/yoga-aerien-valdoise-95-osny/",
+  "cp": [
+   "95520"
+  ],
+  "type": "Aérien",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "ashtanga_argenteuil": {
+  "label": "Ashtanga Argenteuil",
+  "url": "https://www.ashtangayoga-argenteuil.fr/",
+  "cp": [
+   "95100"
+  ],
+  "type": "Ashtanga",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "mudit_yoga_melun": {
+  "label": "Muditâ Yoga Melun",
+  "url": "https://www.muditayoga.fr/",
+  "cp": [
+   "77000"
+  ],
+  "type": "Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "le_studio_de_hem": {
+  "label": "Le Studio de Hem",
+  "url": "https://lestudiodehem.com/",
+  "cp": [
+   "75004"
+  ],
+  "type": "Iyengar/Ashtanga/Yin/Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "centre_du_yoga_marais": {
+  "label": "Centre du Yoga Marais",
+  "url": "https://www.yogamarais.com/",
+  "cp": [
+   "75003"
+  ],
+  "type": "Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "la_canop_e_atelier": {
+  "label": "La Canopée Atelier",
+  "url": "https://www.atelierlacanopee.com/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Vinyasa/Hatha/Yin/Nidra/Prénatal",
+  "platform_guess": "bsport",
+  "priorite": "moyenne"
+ },
+ "ter_happy_studio": {
+  "label": "Ter'happy Studio",
+  "url": "https://www.terhappy-studio.fr/",
+  "cp": [
+   "75012"
+  ],
+  "type": "Vinyasa/Ashtanga/Hatha/Yin",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "myfitness_studio_yoga": {
+  "label": "MyFitness Studio Yoga",
+  "url": "https://myfitness-studio.com/",
+  "cp": [
+   "75020"
+  ],
+  "type": "Yoga/Pilates/HIIT",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "espace_jaya": {
+  "label": "Espace Jaya",
+  "url": "https://espacejaya.com/",
+  "cp": [
+   "75020"
+  ],
+  "type": "Kundalini/Hatha/Vinyasa/Yin/Iyengar",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "ze_art_studios": {
+  "label": "Ze Art Studios",
+  "url": "https://zeartstudios.com/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Hatha/Vinyasa/Pilates",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "maison_n_paris_12": {
+  "label": "Maison Né Paris 12",
+  "url": "https://www.maison-ne.com/",
+  "cp": [
+   "75012"
+  ],
+  "type": "Prénatal/Postnatal/Vinyasa",
+  "platform_guess": "doctolib",
+  "priorite": "moyenne"
+ },
+ "maison_n_paris_14": {
+  "label": "Maison Né Paris 14",
+  "url": "https://www.maison-ne.com/paris-14/",
+  "cp": [
+   "75014"
+  ],
+  "type": "Prénatal/Postnatal",
+  "platform_guess": "doctolib",
+  "priorite": "moyenne"
+ },
+ "sceaux_yoga_studio": {
+  "label": "Sceaux Yoga Studio",
+  "url": "https://www.sceaux-yoga-studio.fr/",
+  "cp": [
+   "92330"
+  ],
+  "type": "Hatha/Yoga Intégral",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "yoga_born_vincennes": {
+  "label": "Yoga Born Vincennes",
+  "url": "https://www.yoga-born.fr/",
+  "cp": [
+   "94300"
+  ],
+  "type": "Hatha/Ashtanga/Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "shala_omm_versailles": {
+  "label": "Shala Omm Versailles",
+  "url": "https://shalaomm.com/",
+  "cp": [
+   "78000"
+  ],
+  "type": "Vinyasa/Yin/Prénatal",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "dharma_yoga_sgel": {
+  "label": "Dharma Yoga SGEL",
+  "url": "https://www.dharma-yoga.fr/",
+  "cp": [
+   "78100"
+  ],
+  "type": "Hatha/Vinyasa/Nidra",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "nalaya_yoga_maisons_laffitte": {
+  "label": "Nalaya Yoga Maisons-Laffitte",
+  "url": "https://nalaya-yoga.fr/",
+  "cp": [
+   "78600"
+  ],
+  "type": "Hatha/Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "taraka_yoga_studio": {
+  "label": "Taraka Yoga Studio",
+  "url": "https://www.eversports.fr/s/taraka-yoga-studio",
+  "cp": [
+   "78600"
+  ],
+  "type": "Vinyasa/Hatha",
+  "platform_guess": "eversports",
+  "priorite": "moyenne"
+ },
+ "espace_yoga_sartrouville": {
+  "label": "Espace Yoga Sartrouville",
+  "url": "https://www.nathalie-labbe.fr/",
+  "cp": [
+   "78500"
+  ],
+  "type": "Vinyasa/Yin/Prénatal",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pure_yoga_enghien": {
+  "label": "Pure Yoga Enghien",
+  "url": "https://www.eversports.fr/s/pure-yoga-studio",
+  "cp": [
+   "95880"
+  ],
+  "type": "Vinyasa/Prénatal/Infrared",
+  "platform_guess": "eversports",
+  "priorite": "moyenne"
+ },
+ "yogabhyasa_mantes": {
+  "label": "Yogabhyasa Mantes",
+  "url": "http://www.yogamantes.fr/",
+  "cp": [
+   "78200"
+  ],
+  "type": "Anusara/Vinyasa/Yin",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "yoga_nepita_pantin": {
+  "label": "Yoga Nepita Pantin",
+  "url": "https://yoganepita.com/pantin/",
+  "cp": [
+   "93500"
+  ],
+  "type": "Hatha/Vinyasa/Pilates",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "yoga_nepita_les_lilas": {
+  "label": "Yoga Nepita Les Lilas",
+  "url": "https://yoganepita.com/lilas/",
+  "cp": [
+   "93260"
+  ],
+  "type": "Hatha/Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "yoga_nepita_romainville": {
+  "label": "Yoga Nepita Romainville",
+  "url": "https://yoganepita.com/romainville/",
+  "cp": [
+   "93230"
+  ],
+  "type": "Hatha/Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "superbanane_yoga_chaville": {
+  "label": "Superbanane Yoga Chaville",
+  "url": "https://yogachaville.fr/",
+  "cp": [
+   "92370"
+  ],
+  "type": "Hatha Vinyasa/Thérapie",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "anahata_yoga_s_vres": {
+  "label": "Anahata Yoga Sèvres",
+  "url": "https://www.anahata-paris.fr/",
+  "cp": [
+   "92310"
+  ],
+  "type": "Vinyasa/Ashtanga",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "anahata_studio_montrouge": {
+  "label": "Anahata Studio Montrouge",
+  "url": "https://anahatastudio.net/",
+  "cp": [
+   "92120"
+  ],
+  "type": "Hatha/Yoga+Ostéo",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "esprit_anahata_paris_18": {
+  "label": "Esprit Anahata Paris 18",
+  "url": "https://www.espritanahata.com/",
+  "cp": [
+   "75018"
+  ],
+  "type": "Hatha/Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "shala_yoga_fontenay": {
+  "label": "Shala Yoga Fontenay",
+  "url": "https://shala-yoga-fontenay.fr/",
+  "cp": [
+   "94120"
+  ],
+  "type": "Hatha/Vinyasa",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "ustr_yoga_bagneux": {
+  "label": "USTR Yoga Bagneux",
+  "url": "https://ustr-yoga.fr/",
+  "cp": [
+   "92220"
+  ],
+  "type": "Iyengar/Ashtanga",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "home_yoga_belleville": {
+  "label": "Home Yoga Belleville",
+  "url": "https://homeyogabelleville.com/",
+  "cp": [
+   "75020"
+  ],
+  "type": "Vinyasa/Hatha",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "yo_shi_vanves": {
+  "label": "Yo-Shi Vanves",
+  "url": "https://yo-shi.fr/",
+  "cp": [
+   "92170"
+  ],
+  "type": "Yoga/Shiatsu",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "atha_yoga_meudon": {
+  "label": "ATHA Yoga Meudon",
+  "url": "https://atha-yoga.fr/",
+  "cp": [
+   "92190"
+  ],
+  "type": "Hatha/Pilates",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "yoga_and_co_paris_19": {
+  "label": "Yoga and Co Paris 19",
+  "url": "https://yogaandco.fr/",
+  "cp": [
+   "75019"
+  ],
+  "type": "Vinyasa/Hatha/Yin/Prénatal",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "yoga_in_paris_francoeur": {
+  "label": "Yoga in Paris Francoeur",
+  "url": "https://yogainparis.com/",
+  "cp": [
+   "75018"
+  ],
+  "type": "Hatha/Méditation",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
  }
 }

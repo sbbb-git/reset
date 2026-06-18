@@ -1,7 +1,857 @@
 {
-  "_meta": {
-    "category": "fitness_general",
-    "scope": "Studios boutique fitness IDF non-Pilates non-Yoga (HIIT, Cycling, Boxing, Barre, Hyrox, Strength, Climbing, Trampoline...)",
-    "note": "Catalogue v1 — sera enrichi par l'agent discovery."
-  }
+ "_meta": {
+  "category": "fitness_general",
+  "scope": "Studios boutique fitness IDF non-Pilates non-Yoga (HIIT, Cycling, Boxing, Barre, Hyrox, Strength, Climbing, Trampoline...)",
+  "note": "Catalogue v1 — sera enrichi par l'agent discovery."
+ },
+ "f45_training_sentier": {
+  "label": "F45 Training Sentier",
+  "url": "https://f45training.com/studio/sentier",
+  "cp": [
+   "75002"
+  ],
+  "type": "HIIT/Functional",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bodyhit_chatelet_marais": {
+  "label": "BodyHit Chatelet Marais",
+  "url": "https://bodyhit.fr/bodyhit-club-paris-3-chatelet/",
+  "cp": [
+   "75003"
+  ],
+  "type": "EMS",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bodyhit_parmentier": {
+  "label": "BodyHit Parmentier",
+  "url": "https://bodyhit.fr/bodyhit-club-paris-11-parmentier/",
+  "cp": [
+   "75011"
+  ],
+  "type": "EMS",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bodyhit_place_d_italie": {
+  "label": "BodyHit Place d'Italie",
+  "url": "https://bodyhit.fr/bodyhit-club-paris-13-place-italie/",
+  "cp": [
+   "75013"
+  ],
+  "type": "EMS",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bodyhit_montmartre": {
+  "label": "BodyHit Montmartre",
+  "url": "https://bodyhit.fr/bodyhit-club-paris-18-montmartre/",
+  "cp": [
+   "75018"
+  ],
+  "type": "EMS",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bodyhit_nation": {
+  "label": "BodyHit Nation",
+  "url": "https://bodyhit.fr/bodyhit-club-paris-20-nation/",
+  "cp": [
+   "75020"
+  ],
+  "type": "EMS",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "le_temple_palais_royal": {
+  "label": "Le Temple Palais Royal",
+  "url": "https://www.temple-nobleart.com/clubs/club-de-boxe-paris-1/",
+  "cp": [
+   "75001"
+  ],
+  "type": "Boxing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "le_temple_saint_lazare": {
+  "label": "Le Temple Saint-Lazare",
+  "url": "https://www.temple-nobleart.com/temple-saint-lazare/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Boxing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "le_temple_r_publique": {
+  "label": "Le Temple République",
+  "url": "https://www.temple-nobleart.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Boxing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "nrfight_tolbiac": {
+  "label": "NRFight Tolbiac",
+  "url": "https://www.nrfight.com/club-boxe-thai-paris",
+  "cp": [
+   "75013"
+  ],
+  "type": "Muay Thai/Boxing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "kajyn_paris": {
+  "label": "Kajyn Paris",
+  "url": "https://paris.kajyn.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Boxing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "striking_paris_xv": {
+  "label": "Striking Paris XV",
+  "url": "https://www.striking-paris15.com/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Boxing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "cenvint_paris_13": {
+  "label": "Cenvint Paris 13",
+  "url": "https://www.cenvint.fr/",
+  "cp": [
+   "75013"
+  ],
+  "type": "Boxing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "storm_cycling_club": {
+  "label": "Storm Cycling Club",
+  "url": "https://www.stormcyclingclub.com/",
+  "cp": [
+   "75005"
+  ],
+  "type": "Cycling",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "aqua_by_r_aumur": {
+  "label": "Aqua By Réaumur",
+  "url": "https://aqua-by.com/en/our-studios/studio-reaumur/",
+  "cp": [
+   "75003"
+  ],
+  "type": "Aqua Cycling",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "aqua_by_bastille": {
+  "label": "Aqua By Bastille",
+  "url": "https://aqua-by.com/en/our-studios/bastille-studio/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Aqua Cycling",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "aqua_by_charonne": {
+  "label": "Aqua By Charonne",
+  "url": "https://aqua-by.com/en/our-studios/studio-charonne/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Aqua Cycling",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "aqua_by_boulogne": {
+  "label": "Aqua By Boulogne",
+  "url": "https://aqua-by.com/",
+  "cp": [
+   "92100"
+  ],
+  "type": "Aqua Cycling",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "hyrox_france_training_bastille": {
+  "label": "Hyrox France Training Bastille",
+  "url": "https://hyrosocks.com/blogs/find-a-hyrox-gym/paris",
+  "cp": [
+   "75011"
+  ],
+  "type": "Hyrox",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "arkose_montmartre": {
+  "label": "Arkose Montmartre",
+  "url": "https://arkose.com/",
+  "cp": [
+   "75018"
+  ],
+  "type": "Climbing",
+  "platform_guess": "resamania",
+  "priorite": "moyenne"
+ },
+ "arkose_nation": {
+  "label": "Arkose Nation",
+  "url": "https://arkose.com/en/nation",
+  "cp": [
+   "75020"
+  ],
+  "type": "Climbing",
+  "platform_guess": "resamania",
+  "priorite": "moyenne"
+ },
+ "climb_up_porte_d_italie": {
+  "label": "Climb Up Porte d'Italie",
+  "url": "https://paris-porteditalie.climb-up.fr/",
+  "cp": [
+   "75013"
+  ],
+  "type": "Climbing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "climb_up_aubervilliers": {
+  "label": "Climb Up Aubervilliers",
+  "url": "https://aubervilliers.climb-up.fr/",
+  "cp": [
+   "93300"
+  ],
+  "type": "Climbing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "climbing_district_saint_lazare": {
+  "label": "Climbing District Saint-Lazare",
+  "url": "https://climbingdistrict.com/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Climbing",
+  "platform_guess": "resamania",
+  "priorite": "moyenne"
+ },
+ "vertical_art_chevaleret": {
+  "label": "Vertical'Art Chevaleret",
+  "url": "https://www.vertical-art.fr/",
+  "cp": [
+   "75013"
+  ],
+  "type": "Climbing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "vertical_art_sqy": {
+  "label": "Vertical'Art SQY",
+  "url": "https://montigny.vertical-art.fr/",
+  "cp": [
+   "78180"
+  ],
+  "type": "Climbing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "vertical_art_rungis": {
+  "label": "Vertical'Art Rungis",
+  "url": "https://rungis.vertical-art.fr/",
+  "cp": [
+   "94150"
+  ],
+  "type": "Climbing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "block_out_saint_ouen": {
+  "label": "Block'Out Saint-Ouen",
+  "url": "https://www.blockout.fr/paris/",
+  "cp": [
+   "93400"
+  ],
+  "type": "Climbing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "block_out_pantin": {
+  "label": "Block'Out Pantin",
+  "url": "https://www.blockout.fr/",
+  "cp": [
+   "93500"
+  ],
+  "type": "Climbing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "murmur_pantin": {
+  "label": "MurMur Pantin",
+  "url": "https://www.murmur.fr/",
+  "cp": [
+   "93500"
+  ],
+  "type": "Climbing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "antrebloc_villejuif": {
+  "label": "Antrebloc Villejuif",
+  "url": "https://antrebloc.com/",
+  "cp": [
+   "94800"
+  ],
+  "type": "Climbing",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "crossfit_louvre": {
+  "label": "CrossFit Louvre",
+  "url": "https://www.crossfitlouvre.com/",
+  "cp": [
+   "75001"
+  ],
+  "type": "CrossFit",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "crossfit_lut_ce": {
+  "label": "CrossFit Lutèce",
+  "url": "https://crossfitlutece.com/",
+  "cp": [
+   "75015"
+  ],
+  "type": "CrossFit",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "hego_batignolles": {
+  "label": "HEGO Batignolles",
+  "url": "https://hego.paris/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Functional",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "silvaticus_crossfit": {
+  "label": "Silvaticus CrossFit",
+  "url": "https://www.silvaticus.fr/",
+  "cp": [
+   "75011"
+  ],
+  "type": "CrossFit",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "orangetheory_maillot": {
+  "label": "Orangetheory Maillot",
+  "url": "https://www.orangetheory.com/en-fr/locations/ile-de-france/paris/60-avenue-de-la-grande-armee",
+  "cp": [
+   "75017"
+  ],
+  "type": "HIIT",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "barreshape_beaubourg": {
+  "label": "Barreshape Beaubourg",
+  "url": "https://www.barreshape.com/",
+  "cp": [
+   "75003"
+  ],
+  "type": "Barre",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "kalon_barre": {
+  "label": "Kalon Barre",
+  "url": "https://www.kalonbarre.com/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Barre",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "la_salle_de_sport_madeleine": {
+  "label": "La Salle de Sport Madeleine",
+  "url": "https://lasalledesport.paris/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Boutique mixte",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "decibel_studio_beaubourg": {
+  "label": "DECIBEL Studio Beaubourg",
+  "url": "https://www.decibel-danse.com/",
+  "cp": [
+   "75004"
+  ],
+  "type": "Boutique mixte",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "the_studio_paris": {
+  "label": "The Studio Paris",
+  "url": "https://thestudioparis.com/",
+  "cp": [
+   "75001"
+  ],
+  "type": "Boutique mixte",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "flexlab": {
+  "label": "FlexLab",
+  "url": "https://www.flexlabstudio.fr/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Stretching",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "kajyn_stretch": {
+  "label": "Kajyn Stretch",
+  "url": "https://paris.kajyn.com/studio/cours-fitness-forme-paris/fitness-stretching",
+  "cp": [
+   "75011"
+  ],
+  "type": "Stretching",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_node": {
+  "label": "Studio Node",
+  "url": "https://studionode.fr/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Stretching",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "sore_studio": {
+  "label": "SORE Studio",
+  "url": "https://sorestudio.fr/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Stretching",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "elite_stimulation": {
+  "label": "Elite Stimulation",
+  "url": "https://www.elite-stimulation.com/",
+  "cp": [
+   "75008"
+  ],
+  "type": "EMS",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pulse_training_studio": {
+  "label": "Pulse Training Studio",
+  "url": "https://pulsetraining.fr/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Functional",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "jumpcity_paris": {
+  "label": "Jumpcity Paris",
+  "url": "https://www.jumpcity.fr/",
+  "cp": [
+   "75019"
+  ],
+  "type": "Trampoline",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "nikito_rosny": {
+  "label": "NIKITO Rosny",
+  "url": "https://nikito.com/",
+  "cp": [
+   "93110"
+  ],
+  "type": "Trampoline",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "smile_world_bercy": {
+  "label": "Smile World Bercy",
+  "url": "https://smileworld.fr/",
+  "cp": [
+   "75012"
+  ],
+  "type": "Trampoline",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "you_jump_paris": {
+  "label": "You Jump Paris",
+  "url": "https://www.youjump.fr/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Trampoline",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "l_usine_op_ra": {
+  "label": "L'Usine Opéra",
+  "url": "https://www.usinesportsclub.com/paris-opera",
+  "cp": [
+   "75009"
+  ],
+  "type": "Boutique premium",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "l_usine_saint_lazare": {
+  "label": "L'Usine Saint-Lazare",
+  "url": "https://www.usinesportsclub.com/paris-saint-lazare",
+  "cp": [
+   "75008"
+  ],
+  "type": "Boutique premium",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "l_usine_beaubourg": {
+  "label": "L'Usine Beaubourg",
+  "url": "https://www.usinesportsclub.com/paris-beaubourg",
+  "cp": [
+   "75004"
+  ],
+  "type": "Boutique premium",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "blanche": {
+  "label": "Blanche",
+  "url": "https://www.blanche.club/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Boutique premium",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "klay_club": {
+  "label": "Klay Club",
+  "url": "https://www.klay.fr/",
+  "cp": [
+   "75002"
+  ],
+  "type": "Boutique premium",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "ken_club": {
+  "label": "Ken Club",
+  "url": "https://www.kenclub.com/",
+  "cp": [
+   "75016"
+  ],
+  "type": "Boutique premium",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "triomphe_fitness_club": {
+  "label": "Triomphe Fitness Club",
+  "url": "https://triomphe-fitness.com/",
+  "cp": [
+   "75016"
+  ],
+  "type": "Boutique premium",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "club_jean_de_beauvais": {
+  "label": "Club Jean de Beauvais",
+  "url": "https://www.jeandebeauvais.com/",
+  "cp": [
+   "75005"
+  ],
+  "type": "Boutique premium",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "apollo_sporting_club_paris_3": {
+  "label": "Apollo Sporting Club Paris 3",
+  "url": "https://www.apollosportingclub.com/paris-3/",
+  "cp": [
+   "75003"
+  ],
+  "type": "Boxing/Fitness",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "apollo_sporting_club_paris_9": {
+  "label": "Apollo Sporting Club Paris 9",
+  "url": "https://www.apollosportingclub.com/paris-9/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Boxing/Fitness",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "apollo_sporting_club_paris_11": {
+  "label": "Apollo Sporting Club Paris 11",
+  "url": "https://www.apollosportingclub.com/paris-11/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Boxing/Fitness",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "apollo_sporting_club_paris_17": {
+  "label": "Apollo Sporting Club Paris 17",
+  "url": "https://www.apollosportingclub.com/paris-17/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Boxing/Fitness",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "apollo_sporting_club_paris_19": {
+  "label": "Apollo Sporting Club Paris 19",
+  "url": "https://www.apollosportingclub.com/paris-19/",
+  "cp": [
+   "75019"
+  ],
+  "type": "Boxing/Fitness",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_punch_team_zeitoun": {
+  "label": "Studio Punch Team Zeitoun",
+  "url": "https://www.teamzeitoun.fr/",
+  "cp": [
+   "75012"
+  ],
+  "type": "Muay Thai",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "la_belle_quipe": {
+  "label": "La Belle Équipe",
+  "url": "https://www.labelleequipeparis.fr/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Muay Thai",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "phenix_muay_thai": {
+  "label": "Phenix Muay Thai",
+  "url": "https://phenixmuaythai.fr/",
+  "cp": [
+   "75013"
+  ],
+  "type": "Muay Thai",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "shiwata_boxing": {
+  "label": "Shiwataï Boxing",
+  "url": "https://www.shiwatai.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Muay Thai",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "maccabi_paris": {
+  "label": "Maccabi Paris",
+  "url": "https://maccabiparis.com/",
+  "cp": [
+   "75010"
+  ],
+  "type": "Muay Thai",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "muay_tha_france": {
+  "label": "Muay-Thaï France",
+  "url": "https://muaythai-france.fr/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Muay Thai",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "crossfit_rebirth": {
+  "label": "CrossFit Rebirth",
+  "url": "https://www.crossfitrebirth.fr/",
+  "cp": [
+   "75013"
+  ],
+  "type": "CrossFit",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "crossfit_rive_gauche": {
+  "label": "CrossFit Rive Gauche",
+  "url": "https://crossfitrg.com/",
+  "cp": [
+   "75013"
+  ],
+  "type": "CrossFit/Hyrox",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "crossfit_original_addicts": {
+  "label": "CrossFit Original Addicts",
+  "url": "https://crossfitoriginaladdicts.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "CrossFit",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bodyhit_jussieu": {
+  "label": "BodyHit Jussieu",
+  "url": "https://bodyhit.fr/bodyhit-club-jussieu-paris-5/",
+  "cp": [
+   "75005"
+  ],
+  "type": "EMS",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bodyhit_bonne_nouvelle": {
+  "label": "BodyHit Bonne Nouvelle",
+  "url": "https://bodyhit.fr/bodyhit-club-paris-10-bonne-nouvelle/",
+  "cp": [
+   "75010"
+  ],
+  "type": "EMS",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bodyhit_paris_16": {
+  "label": "BodyHit Paris 16",
+  "url": "https://bodyhit.fr/paris-16/",
+  "cp": [
+   "75016"
+  ],
+  "type": "EMS",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bodytech_vip_pereire": {
+  "label": "Bodytech VIP Pereire",
+  "url": "https://www.bodytech-vip.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "EMS",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "my_big_bang_paris_11": {
+  "label": "My Big Bang Paris 11",
+  "url": "https://www.my-big-bang.fr/studios/paris11/",
+  "cp": [
+   "75011"
+  ],
+  "type": "EMS",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "myfitness_studio_paris_20": {
+  "label": "MyFitness Studio Paris 20",
+  "url": "https://myfitness-studio.com/",
+  "cp": [
+   "75020"
+  ],
+  "type": "EMS/Boutique",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "arkose_massy": {
+  "label": "Arkose Massy",
+  "url": "https://arkose.com/massy",
+  "cp": [
+   "91300"
+  ],
+  "type": "Climbing",
+  "platform_guess": "resamania",
+  "priorite": "moyenne"
+ },
+ "fit_ballet": {
+  "label": "Fit'Ballet",
+  "url": "https://www.fitballet.fr/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Barre/Ballet",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_rituel": {
+  "label": "Studio Rituel",
+  "url": "https://www.studio-rituel.paris/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Barre/Cardio dance",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "the_dailey_method_paris": {
+  "label": "The Dailey Method Paris",
+  "url": "https://www.thedaileymethod.com/paris/",
+  "cp": [
+   "75001"
+  ],
+  "type": "Barre",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "jumpman_paris": {
+  "label": "Jumpman Paris",
+  "url": "https://www.jumpmanfitness.com/",
+  "cp": [
+   "75116"
+  ],
+  "type": "Trampoline",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "hyrox_france_training_club_vend_me": {
+  "label": "Hyrox France Training Club Vendôme",
+  "url": "https://hyroxfrancetc.com/",
+  "cp": [
+   "75001"
+  ],
+  "type": "Hyrox",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ }
 }
