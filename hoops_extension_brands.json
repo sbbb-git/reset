@@ -1,0 +1,25 @@
+{
+ "_meta": {
+  "category": "hoops_basket",
+  "scope": "Centres de basketball indoor / hoops IDF (terrain-based)",
+  "note": "Modèle terrain-based comme padel / urban foot. Plateformes : Doinsport, Anybuddy, propriétaire."
+ },
+ "hoops_factory_paris_15": {"label": "Hoops Factory Paris 15", "url": "https://www.hoopsfactory.com/paris-15/", "cp": ["75015"], "type": "Basketball indoor", "platform_guess": "doinsport", "priorite": "haute"},
+ "hoops_factory_aubervilliers": {"label": "Hoops Factory Aubervilliers", "url": "https://www.hoopsfactory.com/aubervilliers/", "cp": ["93300"], "type": "Basketball indoor", "platform_guess": "doinsport", "priorite": "haute"},
+ "hoops_factory_courbevoie": {"label": "Hoops Factory Courbevoie", "url": "https://www.hoopsfactory.com/courbevoie/", "cp": ["92400"], "type": "Basketball indoor", "platform_guess": "doinsport", "priorite": "haute"},
+ "hoops_factory_montigny": {"label": "Hoops Factory Montigny-le-Bretonneux", "url": "https://www.hoopsfactory.com/montigny/", "cp": ["78180"], "type": "Basketball indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "hoops_factory_orly": {"label": "Hoops Factory Orly", "url": "https://www.hoopsfactory.com/orly/", "cp": ["94310"], "type": "Basketball indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "hoops_factory_thiais": {"label": "Hoops Factory Thiais", "url": "https://www.hoopsfactory.com/thiais/", "cp": ["94320"], "type": "Basketball indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "hoops_factory_villepinte": {"label": "Hoops Factory Villepinte", "url": "https://www.hoopsfactory.com/villepinte/", "cp": ["93420"], "type": "Basketball indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "hoops_factory_argenteuil": {"label": "Hoops Factory Argenteuil", "url": "https://www.hoopsfactory.com/argenteuil/", "cp": ["95100"], "type": "Basketball indoor", "platform_guess": "doinsport", "priorite": "basse"},
+ "le_five_basket_bercy": {"label": "Le Five Basket Bercy", "url": "https://lefive.fr/basketball/", "cp": ["75012"], "type": "Basketball indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "le_five_basket_clichy": {"label": "Le Five Basket Clichy", "url": "https://lefive.fr/basketball/", "cp": ["92110"], "type": "Basketball indoor", "platform_guess": "doinsport", "priorite": "moyenne"},
+ "urban_basketball_montrouge": {"label": "Urban Basketball Montrouge", "url": "https://www.urbanfootball.fr/montrouge/basketball/", "cp": ["92120"], "type": "Basketball indoor", "platform_guess": "doinsport", "priorite": "basse"},
+ "hoopscity_villejuif": {"label": "Hoops City Villejuif", "url": "https://hoopscity.fr/", "cp": ["94800"], "type": "Basketball indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "basketball_factory_creteil": {"label": "Basketball Factory Créteil", "url": "https://basketballfactory.fr/", "cp": ["94000"], "type": "Basketball indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "fun_basket_paris": {"label": "Fun Basket Paris", "url": "https://funbasket.fr/", "cp": ["75019"], "type": "Basketball indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "5tonik_basket": {"label": "5tonik Basket Massy", "url": "https://5tonik.fr/", "cp": ["91300"], "type": "Basketball indoor", "platform_guess": "unknown", "priorite": "basse"},
+ "ballin_paris": {"label": "Ballin' Paris", "url": "https://ballin.paris/", "cp": ["75010"], "type": "Basketball training", "platform_guess": "unknown", "priorite": "basse"},
+ "shoot_again_basket": {"label": "Shoot Again Basket", "url": "https://shootagain.fr/", "cp": ["93200"], "type": "Basketball training", "platform_guess": "unknown", "priorite": "basse"},
+ "we_are_basket_paris": {"label": "We Are Basket", "url": "https://wearebasket.com/", "cp": ["75011"], "type": "Basketball training", "platform_guess": "unknown", "priorite": "basse"}
+}

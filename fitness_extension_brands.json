@@ -853,5 +853,475 @@
   "type": "Hyrox",
   "platform_guess": "unknown",
   "priorite": "moyenne"
+ },
+ "squash_lecourbe": {
+  "label": "Squash Lecourbe",
+  "url": "https://www.squashlecourbe.com/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Squash",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "squash_issy": {
+  "label": "Squash Issy",
+  "url": "https://www.squash-issy.fr/",
+  "cp": [
+   "92130"
+  ],
+  "type": "Squash",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "squash_saint_quentin": {
+  "label": "Squash Saint-Quentin",
+  "url": "https://www.squash-sqy.com/",
+  "cp": [
+   "78180"
+  ],
+  "type": "Squash",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "squash_stadium": {
+  "label": "Squash Stadium",
+  "url": "https://www.stadium-squash.com/",
+  "cp": [
+   "75019"
+  ],
+  "type": "Squash",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "forest_hill_squash_la_marche": {
+  "label": "Forest Hill Squash La Marche",
+  "url": "https://www.foresthillclubs.com/",
+  "cp": [
+   "92430"
+  ],
+  "type": "Squash",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "squash_aubervilliers": {
+  "label": "Squash Aubervilliers",
+  "url": "https://www.squash93.com/",
+  "cp": [
+   "93300"
+  ],
+  "type": "Squash",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "squash_yvelines": {
+  "label": "Squash Yvelines",
+  "url": "https://www.squash-yvelines.com/",
+  "cp": [
+   "78280"
+  ],
+  "type": "Squash",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "le_five_squash": {
+  "label": "Le Five Squash",
+  "url": "https://lefive.fr/squash/",
+  "cp": [
+   "75012"
+  ],
+  "type": "Squash",
+  "platform_guess": "doinsport",
+  "priorite": "moyenne"
+ },
+ "five_iron_golf_paris": {
+  "label": "Five Iron Golf Paris",
+  "url": "https://fiveirongolf.com/locations/paris/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Golf indoor",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pure_golf_paris": {
+  "label": "Pure Golf Paris",
+  "url": "https://www.pure-golf.fr/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Golf indoor",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "golf_in_the_city_paris": {
+  "label": "Golf in the City Paris",
+  "url": "https://www.golfinthecity.fr/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Golf indoor",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "magnus_golf_centre": {
+  "label": "Magnus Golf Centre",
+  "url": "https://magnusgolfcentre.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Golf indoor",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "topgolf_venir": {
+  "label": "TopGolf (à venir)",
+  "url": "https://topgolf.com/",
+  "cp": [
+   "95430"
+  ],
+  "type": "Golf indoor",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "golf_acad_mie_paris_16": {
+  "label": "Golf Académie Paris 16",
+  "url": "https://golf-academie-paris.fr/",
+  "cp": [
+   "75016"
+  ],
+  "type": "Golf indoor",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bluegolf_paris": {
+  "label": "BlueGolf Paris",
+  "url": "https://www.bluegolf-paris.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Golf simulator",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "golfy_paris_garage_indoor": {
+  "label": "Golfy Paris (Garage Indoor)",
+  "url": "https://golfy.fr/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Golf indoor",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "krav_maga_paris_sud": {
+  "label": "Krav Maga Paris Sud",
+  "url": "https://www.kravmaga-parissud.fr/",
+  "cp": [
+   "75013"
+  ],
+  "type": "Krav Maga",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "krav_maga_acad_mie_paris": {
+  "label": "Krav Maga Académie Paris",
+  "url": "https://www.kravmagaacademie.fr/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Krav Maga",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "eyal_yanilov_krav_maga": {
+  "label": "Eyal Yanilov Krav Maga",
+  "url": "https://www.krav-maga-yanilov.com/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Krav Maga",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "krav_maga_pro_paris": {
+  "label": "Krav Maga Pro Paris",
+  "url": "https://www.kravmagapro.com/",
+  "cp": [
+   "75016"
+  ],
+  "type": "Krav Maga",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_harmonic": {
+  "label": "Studio Harmonic",
+  "url": "https://www.studio-harmonic.fr/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Danse boutique",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "centre_du_marais": {
+  "label": "Centre du Marais",
+  "url": "https://parismarais.com/",
+  "cp": [
+   "75004"
+  ],
+  "type": "Danse boutique",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_des_arts": {
+  "label": "Studio des Arts",
+  "url": "https://www.studiodesarts.fr/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Danse boutique",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_7_paris": {
+  "label": "Studio 7 Paris",
+  "url": "https://www.studio7-paris.com/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Danse boutique",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "movement": {
+  "label": "Movement",
+  "url": "https://movementparis.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Danse boutique",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "mademoiselle_b": {
+  "label": "Mademoiselle B",
+  "url": "https://www.mademoiselleb.fr/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Danse/Pole",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pole_position": {
+  "label": "Pole Position",
+  "url": "https://poleposition.fr/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Pole/Aérien",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "club_360": {
+  "label": "Club 360",
+  "url": "https://www.club360-paris.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Pole/Aérien",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "studio_pulse": {
+  "label": "Studio Pulse",
+  "url": "https://www.studiopulseparis.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Danse boutique",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "pickleball_paris": {
+  "label": "Pickleball Paris",
+  "url": "https://www.pickleballparis.com/",
+  "cp": [
+   "75012"
+  ],
+  "type": "Pickleball",
+  "platform_guess": "anybuddy",
+  "priorite": "moyenne"
+ },
+ "pickle_up_boulogne": {
+  "label": "Pickle Up Boulogne",
+  "url": "https://www.pickleup.fr/",
+  "cp": [
+   "92100"
+  ],
+  "type": "Pickleball",
+  "platform_guess": "anybuddy",
+  "priorite": "moyenne"
+ },
+ "cole_nationale_des_arts_du_cirque_annie_": {
+  "label": "École Nationale des Arts du Cirque Annie Fratellini",
+  "url": "https://www.academie-fratellini.com/",
+  "cp": [
+   "93300"
+  ],
+  "type": "Cirque",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "cirqu_volution_pantin": {
+  "label": "Cirqu'évolution Pantin",
+  "url": "https://www.cirquevolution.com/",
+  "cp": [
+   "93500"
+  ],
+  "type": "Cirque",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "aqua_studio_paris": {
+  "label": "Aqua Studio Paris",
+  "url": "https://aquastudio-paris.fr/",
+  "cp": [
+   "75011"
+  ],
+  "type": "Aquabiking",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "bluezen": {
+  "label": "BlueZen",
+  "url": "https://bluezen.fr/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Aquabiking",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "aquasport_concept": {
+  "label": "Aquasport Concept",
+  "url": "https://www.aquasport-concept.com/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Aquabiking",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "city_tennis_paris": {
+  "label": "City Tennis Paris",
+  "url": "https://www.citytennis.fr/",
+  "cp": [
+   "75019"
+  ],
+  "type": "Tennis indoor",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "tennis_plus_paris": {
+  "label": "Tennis Plus Paris",
+  "url": "https://www.tennisplus.fr/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Tennis indoor",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "casa_tennis_paris": {
+  "label": "Casa Tennis Paris",
+  "url": "https://www.casatennis.fr/",
+  "cp": [
+   "75015"
+  ],
+  "type": "Tennis indoor",
+  "platform_guess": "anybuddy",
+  "priorite": "moyenne"
+ },
+ "trib3_paris": {
+  "label": "Trib3 Paris",
+  "url": "https://www.trib3.com/paris/",
+  "cp": [
+   "75009"
+  ],
+  "type": "HIIT boutique",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "p4p_performance_for_pleasure": {
+  "label": "P4P Performance for Pleasure",
+  "url": "https://www.p4paris.com/",
+  "cp": [
+   "75011"
+  ],
+  "type": "HIIT/Strength",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "forge_studio": {
+  "label": "Forge Studio",
+  "url": "https://www.forge-studio.com/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Strength boutique",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "r30_paris_rowing": {
+  "label": "R30 Paris (Rowing)",
+  "url": "https://www.r30.fr/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Rowing HIIT",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "forme_bain_vapeur": {
+  "label": "Forme Bain Vapeur",
+  "url": "https://www.formebainvapeur.com/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Sauna infrarouge",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "cryo_body": {
+  "label": "Cryo Body",
+  "url": "https://www.cryobody.fr/",
+  "cp": [
+   "75008"
+  ],
+  "type": "Cryothérapie",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "cryotonik": {
+  "label": "Cryotonik",
+  "url": "https://cryotonik.fr/",
+  "cp": [
+   "75017"
+  ],
+  "type": "Cryothérapie",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
+ },
+ "recovery_studio_paris": {
+  "label": "Recovery Studio Paris",
+  "url": "https://www.recovery-studio.fr/",
+  "cp": [
+   "75009"
+  ],
+  "type": "Recovery",
+  "platform_guess": "unknown",
+  "priorite": "moyenne"
  }
 }
