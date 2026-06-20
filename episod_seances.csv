@@ -2604,13 +2604,13 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-06-20,Samedi,16:15,17:05,République Studio bootcamp,Bootcamp,Alex R.,0,0,False,2026-06-13 14:12
 2026-06-20,Samedi,16:30,17:20,Nation Studio yoga,Yin Yoga,Karine,0,0,False,2026-06-13 14:12
 2026-06-20,Samedi,16:30,17:20,République Studio reformer,Pilates reformer,Coline,0,0,False,2026-06-13 14:12
-2026-06-20,Samedi,16:45,17:35,Bourse Studio bootcamp,Bootcamp,Thomas T.,0,0,False,2026-06-13 14:12
+2026-06-20,Samedi,16:45,17:35,Bourse Studio bootcamp,Bootcamp,Thomas T.,28,9,False,2026-06-20 16:55
 2026-06-20,Samedi,17:00,17:50,Levallois Reformer Studio reformer,Pilates reformer,Leila B.,0,0,False,2026-06-13 14:12
-2026-06-20,Samedi,17:00,17:50,Louvre Studio reformer,Pilates reformer,Célia,0,0,False,2026-06-13 14:12
-2026-06-20,Samedi,17:00,17:50,Place de Clichy Studio bootcamp,Bootcamp,Feriel,0,0,False,2026-06-13 14:12
-2026-06-20,Samedi,17:00,17:50,République Studio yoga,Dynamic stretch,Sophie,0,0,False,2026-06-13 14:12
-2026-06-20,Samedi,17:15,18:05,Pigalle Studio reformer,Pilates reformer,Linda,0,0,False,2026-06-13 14:12
-2026-06-20,Samedi,17:15,18:05,République Studio bootcamp,Bootcamp Strong,Alex R.,0,0,False,2026-06-13 14:12
+2026-06-20,Samedi,17:00,17:50,Louvre Studio reformer,Pilates reformer,Célia,20,13,False,2026-06-20 16:55
+2026-06-20,Samedi,17:00,17:50,Place de Clichy Studio bootcamp,Bootcamp,Feriel,30,24,False,2026-06-20 16:55
+2026-06-20,Samedi,17:00,17:50,République Studio yoga,Dynamic stretch,Sophie,35,9,False,2026-06-20 16:55
+2026-06-20,Samedi,17:15,18:05,Pigalle Studio reformer,Pilates reformer,Linda,18,7,False,2026-06-20 16:55
+2026-06-20,Samedi,17:15,18:05,République Studio bootcamp,Bootcamp Strong,Alex R.,30,21,False,2026-06-20 16:55
 2026-06-20,Samedi,17:30,18:20,Louvre Studio cycling,Cycling,Inès,0,0,False,2026-06-13 14:12
 2026-06-20,Samedi,17:30,18:20,Nation Studio bootcamp,Bootcamp,Samy,0,0,False,2026-06-13 14:12
 2026-06-20,Samedi,17:30,18:20,Pigalle Studio lift,Lift,Sliven,0,0,False,2026-06-13 14:12
@@ -2789,7 +2789,7 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-06-22,Lundi,17:15,18:05,République Studio lift,Lift,Eva,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,17:15,18:05,République Studio reformer,Pilates reformer,Emma,0,0,False,2026-06-17 18:42
 2026-06-22,Lundi,17:30,18:20,Levallois Reformer Studio reformer,Pilates reformer,Solène,0,0,False,2026-06-15 12:31
-2026-06-22,Lundi,17:30,18:20,Nation Studio athletic,Athletic Hyrox,Flora,0,0,False,2026-06-15 12:31
+2026-06-22,Lundi,17:30,18:20,Nation Studio athletic,Athletic Training,Jérémie S.,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,17:30,18:20,Place de Clichy Studio bootcamp,Bootcamp Strong,Harold,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,17:30,18:20,République Studio bootcamp,Bootcamp,Martin,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,17:45,18:35,Nation Studio bootcamp,Bootcamp,Louis,0,0,False,2026-06-15 12:31
@@ -2815,7 +2815,7 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-06-22,Lundi,18:30,19:20,République Studio bootcamp,Bootcamp,Ousmane,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,18:30,19:20,République Studio boxing,Boxing,Jérémie N.,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,18:45,19:35,Nation Studio bootcamp,Bootcamp,Louis,0,0,False,2026-06-15 12:31
-2026-06-22,Lundi,18:45,19:35,Nation Studio cycling,Cycling Hyrox,Flora,0,0,False,2026-06-15 12:31
+2026-06-22,Lundi,18:45,19:35,Nation Studio cycling,Cycling,Yohan,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,18:45,19:35,République Studio cycling,Cycling,Martin,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,19:00,19:50,Bourse Studio yoga,Yoga Hatha,Avine,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,19:00,19:50,Louvre Studio reformer,Pilates reformer,Léa B.,0,0,False,2026-06-15 12:31
@@ -2837,7 +2837,7 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-06-22,Lundi,19:30,20:20,République Studio athletic,Athletic Strong,Andy,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,19:30,20:20,République Studio bootcamp,Bootcamp,Abi,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,19:30,20:20,République Studio boxing,Boxing,Ousmane,0,0,False,2026-06-15 12:31
-2026-06-22,Lundi,19:45,20:35,Nation Studio athletic,Athletic Hyrox,Flora,0,0,False,2026-06-15 12:31
+2026-06-22,Lundi,19:45,20:35,Nation Studio athletic,Athletic Hyrox,Yohan,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,19:45,20:35,Nation Studio bootcamp,Bootcamp,Jérémie S.,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,19:45,20:35,Nation Studio cycling,Cycling,Louis,0,0,False,2026-06-15 12:31
 2026-06-22,Lundi,19:45,20:35,Place de Clichy Studio bootcamp,Bootcamp,Yassin,0,0,False,2026-06-15 12:31
