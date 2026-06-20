@@ -1,6 +1,15 @@
 {
- "generated_at": "2026-06-20T04:01:51.098280",
- "idle_24h": [],
+ "generated_at": "2026-06-20T08:03:58.673666",
+ "idle_24h": [
+  {
+   "slug": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
+   "source": "anybuddy",
+   "name": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
+   "cp": "78170",
+   "last_seen": "2026-06-19 07:34",
+   "hours_idle": 24.5
+  }
+ ],
  "price_shifts": [
   {
    "slug": "doinsport-59044915-a142-4f27-a8f4-433b199d73d5",
@@ -208,8 +217,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 22,
-  "idle_24h": 0,
+  "total_anomalies": 23,
+  "idle_24h": 1,
   "price_shifts": 8,
   "volume_drops": 14,
   "new_clubs_14d": 1
