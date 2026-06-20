@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-20T10:59:53.999232",
+ "generated_at": "2026-06-20T12:57:05.436853",
  "idle_24h": [
   {
    "slug": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
@@ -7,7 +7,7 @@
    "name": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
    "cp": "78170",
    "last_seen": "2026-06-19 07:34",
-   "hours_idle": 27.4
+   "hours_idle": 29.4
   }
  ],
  "price_shifts": [
@@ -39,16 +39,6 @@
    "prix_30j": 54.0,
    "prix_recent": 78.0,
    "delta_pct": 44.4,
-   "direction": "hausse"
-  },
-  {
-   "slug": "4padel-argenteuil",
-   "source": "anybuddy",
-   "name": "4padel-argenteuil",
-   "cp": "95100",
-   "prix_30j": 54.0,
-   "prix_recent": 72.0,
-   "delta_pct": 33.3,
    "direction": "hausse"
   },
   {
@@ -217,9 +207,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 23,
+  "total_anomalies": 22,
   "idle_24h": 1,
-  "price_shifts": 8,
+  "price_shifts": 7,
   "volume_drops": 14,
   "new_clubs_14d": 1
  }
