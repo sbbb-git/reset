@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-21T13:10:52.829470",
+ "generated_at": "2026-06-21T15:29:14.166953",
  "idle_24h": [
   {
    "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
@@ -7,7 +7,7 @@
    "name": "Padel Pulsion",
    "cp": "91570",
    "last_seen": "2026-06-02 21:44",
-   "hours_idle": 447.4
+   "hours_idle": 449.8
   },
   {
    "slug": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
@@ -15,7 +15,7 @@
    "name": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
    "cp": "78170",
    "last_seen": "2026-06-19 07:34",
-   "hours_idle": 53.6
+   "hours_idle": 55.9
   }
  ],
  "price_shifts": [
@@ -27,16 +27,6 @@
    "prix_30j": 36.0,
    "prix_recent": 72.0,
    "delta_pct": 100.0,
-   "direction": "hausse"
-  },
-  {
-   "slug": "4padel-epinay-sur-seine",
-   "source": "anybuddy",
-   "name": "4padel-epinay-sur-seine",
-   "cp": "93800",
-   "prix_30j": 54.0,
-   "prix_recent": 78.0,
-   "delta_pct": 44.4,
    "direction": "hausse"
   },
   {
@@ -185,9 +175,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 20,
+  "total_anomalies": 19,
   "idle_24h": 2,
-  "price_shifts": 4,
+  "price_shifts": 3,
   "volume_drops": 14,
   "new_clubs_14d": 1
  }
