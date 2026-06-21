@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-21T22:18:09.063626",
+ "generated_at": "2026-06-21T23:53:13.914886",
  "heatmap": {
   "days": [
    "Lundi",
@@ -26,14 +26,14 @@
     },
     {
      "heure": 9,
-     "offered": 3199,
-     "demand": 1869,
+     "offered": 3200,
+     "demand": 1870,
      "occupation_pct": 58
     },
     {
      "heure": 10,
      "offered": 3648,
-     "demand": 1789,
+     "demand": 1790,
      "occupation_pct": 49
     },
     {
@@ -202,8 +202,8 @@
     },
     {
      "heure": 21,
-     "offered": 3417,
-     "demand": 2948,
+     "offered": 3418,
+     "demand": 2949,
      "occupation_pct": 86
     },
     {
@@ -223,7 +223,7 @@
     {
      "heure": 7,
      "offered": 346,
-     "demand": 107,
+     "demand": 108,
      "occupation_pct": 31
     },
     {
@@ -235,7 +235,7 @@
     {
      "heure": 9,
      "offered": 3117,
-     "demand": 1796,
+     "demand": 1797,
      "occupation_pct": 58
     },
     {
@@ -300,14 +300,14 @@
     },
     {
      "heure": 20,
-     "offered": 3411,
-     "demand": 3033,
+     "offered": 3412,
+     "demand": 3034,
      "occupation_pct": 89
     },
     {
      "heure": 21,
      "offered": 3571,
-     "demand": 3163,
+     "demand": 3164,
      "occupation_pct": 89
     },
     {
@@ -398,14 +398,14 @@
     },
     {
      "heure": 19,
-     "offered": 3761,
-     "demand": 3421,
+     "offered": 3762,
+     "demand": 3423,
      "occupation_pct": 91
     },
     {
      "heure": 20,
      "offered": 3675,
-     "demand": 3353,
+     "demand": 3356,
      "occupation_pct": 91
     },
     {
@@ -416,7 +416,7 @@
     },
     {
      "heure": 22,
-     "offered": 2035,
+     "offered": 2037,
      "demand": 1733,
      "occupation_pct": 85
     },
@@ -508,19 +508,19 @@
     },
     {
      "heure": 20,
-     "offered": 3429,
+     "offered": 3432,
      "demand": 2933,
-     "occupation_pct": 86
+     "occupation_pct": 85
     },
     {
      "heure": 21,
-     "offered": 2805,
+     "offered": 2808,
      "demand": 2312,
      "occupation_pct": 82
     },
     {
      "heure": 22,
-     "offered": 1974,
+     "offered": 1976,
      "demand": 1553,
      "occupation_pct": 79
     },
@@ -546,33 +546,33 @@
     },
     {
      "heure": 9,
-     "offered": 3598,
+     "offered": 3600,
      "demand": 2906,
      "occupation_pct": 81
     },
     {
      "heure": 10,
-     "offered": 2881,
+     "offered": 2883,
      "demand": 2318,
      "occupation_pct": 80
     },
     {
      "heure": 11,
      "offered": 2896,
-     "demand": 2266,
+     "demand": 2267,
      "occupation_pct": 78
     },
     {
      "heure": 12,
-     "offered": 3544,
-     "demand": 2496,
+     "offered": 3546,
+     "demand": 2497,
      "occupation_pct": 70
     },
     {
      "heure": 13,
-     "offered": 2754,
+     "offered": 2756,
      "demand": 1722,
-     "occupation_pct": 63
+     "occupation_pct": 62
     },
     {
      "heure": 14,
@@ -582,7 +582,7 @@
     },
     {
      "heure": 15,
-     "offered": 3935,
+     "offered": 3937,
      "demand": 3066,
      "occupation_pct": 78
     },
@@ -699,7 +699,7 @@
     {
      "heure": 17,
      "offered": 4094,
-     "demand": 3441,
+     "demand": 3442,
      "occupation_pct": 84
     },
     {
@@ -789,12 +789,12 @@
    [
     "Dimanche",
     17,
-    3441
+    3442
    ],
    [
     "Jeudi",
     19,
-    3421
+    3423
    ],
    [
     "Dimanche",
@@ -814,7 +814,7 @@
    [
     "Jeudi",
     20,
-    3353
+    3356
    ],
    [
     "Samedi",
@@ -844,8 +844,8 @@
   ]
  },
  "elasticity": {
-  "slope": 0.489,
-  "intercept": 5.452,
+  "slope": 0.488,
+  "intercept": 5.459,
   "interpretation": "élasticité prix demande estimée (log-log)",
   "data": [
    {
@@ -1476,8 +1476,8 @@
     "slug": "urbanpadel-puteaux-ile",
     "name": "UrbanPadel Puteaux-Île",
     "source": "urbanpadel",
-    "prix_median_90": 75,
-    "n_bookings": 2854,
+    "prix_median_90": 75.0,
+    "n_bookings": 2865,
     "cp": "92800"
    },
    {
@@ -1485,7 +1485,7 @@
     "name": "usy-la-queue-lez-yvelines",
     "source": "anybuddy",
     "prix_median_90": 45.0,
-    "n_bookings": 277,
+    "n_bookings": 287,
     "cp": "78940"
    },
    {
@@ -2815,7 +2815,7 @@
    {
     "chain": "UrbanPadel",
     "n_clubs": 4,
-    "median_sessions_per_club": 2957.0,
+    "median_sessions_per_club": 2962.5,
     "median_price_90": 73.5
    },
    {
@@ -2845,8 +2845,8 @@
    {
     "chain": "Aldea",
     "n_clubs": 2,
-    "median_sessions_per_club": 5069.0,
-    "median_price_90": 74.5
+    "median_sessions_per_club": 5069.5,
+    "median_price_90": 73.8
    },
    {
     "chain": "Padel Camp",
@@ -2954,7 +2954,7 @@
   "n_mono": 102,
   "median_sessions_multi": 3131,
   "median_sessions_mono": 224,
-  "avg_sessions_multi": 5411,
+  "avg_sessions_multi": 5412,
   "avg_sessions_mono": 1038,
   "clusters": [
    {
@@ -2983,7 +2983,7 @@
     "canonical_name": "aldea-padel-villabe",
     "cp": "91100",
     "n_platforms": 2,
-    "total_sessions": 10138
+    "total_sessions": 10139
    },
    {
     "unified_id": "unif_005",
@@ -3074,7 +3074,7 @@
     "canonical_name": "O.S. Sannois",
     "cp": "95110",
     "n_platforms": 2,
-    "total_sessions": 725
+    "total_sessions": 726
    },
    {
     "unified_id": "unif_006",
