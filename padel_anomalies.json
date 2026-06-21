@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-20T23:13:36.543509",
+ "generated_at": "2026-06-21T02:00:54.979111",
  "idle_24h": [
   {
    "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
@@ -7,7 +7,7 @@
    "name": "Padel Pulsion",
    "cp": "91570",
    "last_seen": "2026-06-02 21:44",
-   "hours_idle": 433.5
+   "hours_idle": 436.3
   },
   {
    "slug": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
@@ -15,7 +15,7 @@
    "name": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
    "cp": "78170",
    "last_seen": "2026-06-19 07:34",
-   "hours_idle": 39.7
+   "hours_idle": 42.4
   }
  ],
  "price_shifts": [
@@ -30,16 +30,6 @@
    "direction": "hausse"
   },
   {
-   "slug": "forest-hill-nanterre-la-defense",
-   "source": "anybuddy",
-   "name": "forest-hill-nanterre-la-defense",
-   "cp": "92000",
-   "prix_30j": 54.0,
-   "prix_recent": 96.0,
-   "delta_pct": 77.8,
-   "direction": "hausse"
-  },
-  {
    "slug": "4padel-epinay-sur-seine",
    "source": "anybuddy",
    "name": "4padel-epinay-sur-seine",
@@ -50,33 +40,13 @@
    "direction": "hausse"
   },
   {
-   "slug": "4padel-argenteuil",
+   "slug": "home-padel-meaux",
    "source": "anybuddy",
-   "name": "4padel-argenteuil",
-   "cp": "95100",
+   "name": "home-padel-meaux",
+   "cp": "77100",
    "prix_30j": 54.0,
    "prix_recent": 72.0,
    "delta_pct": 33.3,
-   "direction": "hausse"
-  },
-  {
-   "slug": "five-arena-meaux",
-   "source": "anybuddy",
-   "name": "five-arena-meaux",
-   "cp": "77100",
-   "prix_30j": 48.0,
-   "prix_recent": 64.0,
-   "delta_pct": 33.3,
-   "direction": "hausse"
-  },
-  {
-   "slug": "paris-padel",
-   "source": "anybuddy",
-   "name": "paris-padel",
-   "cp": "75020",
-   "prix_30j": 76.7,
-   "prix_recent": 100.0,
-   "delta_pct": 30.4,
    "direction": "hausse"
   },
   {
@@ -96,7 +66,7 @@
    "name": "Senart Padel",
    "cp": "77380",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 53.2,
+   "bookings_moyenne_hebdo_30j": 44.6,
    "delta_pct": -100.0
   },
   {
@@ -104,7 +74,7 @@
    "name": "Padel Camp",
    "cp": "78260",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 41.8,
+   "bookings_moyenne_hebdo_30j": 37.6,
    "delta_pct": -100.0
   },
   {
@@ -112,7 +82,7 @@
    "name": "Play Padel Alfortville",
    "cp": "94140",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 100.1,
+   "bookings_moyenne_hebdo_30j": 92.9,
    "delta_pct": -100.0
   },
   {
@@ -120,7 +90,7 @@
    "name": "Bad Pad",
    "cp": "91420",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 39.2,
+   "bookings_moyenne_hebdo_30j": 35.2,
    "delta_pct": -100.0
   },
   {
@@ -128,7 +98,7 @@
    "name": "Padel A.C",
    "cp": "95700",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 152.8,
+   "bookings_moyenne_hebdo_30j": 136.7,
    "delta_pct": -100.0
   },
   {
@@ -136,7 +106,7 @@
    "name": "Domaine de Lassy",
    "cp": "95270",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 38.5,
+   "bookings_moyenne_hebdo_30j": 33.4,
    "delta_pct": -100.0
   },
   {
@@ -144,7 +114,7 @@
    "name": "Royal Padel Club",
    "cp": "78000",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 23.6,
+   "bookings_moyenne_hebdo_30j": 22.2,
    "delta_pct": -100.0
   },
   {
@@ -152,7 +122,7 @@
    "name": "Tennis Club de Paris",
    "cp": "75016",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 9.8,
+   "bookings_moyenne_hebdo_30j": 8.9,
    "delta_pct": -100.0
   },
   {
@@ -160,7 +130,7 @@
    "name": "Tennis Club de la Chataigneraie",
    "cp": "92500",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 42.5,
+   "bookings_moyenne_hebdo_30j": 38.0,
    "delta_pct": -100.0
   },
   {
@@ -168,7 +138,7 @@
    "name": "FOOTBALL 5 CLUB",
    "cp": "78710",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 12.6,
+   "bookings_moyenne_hebdo_30j": 11.2,
    "delta_pct": -100.0
   },
   {
@@ -176,7 +146,7 @@
    "name": "Big Five & Padel",
    "cp": "95350",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 10.3,
+   "bookings_moyenne_hebdo_30j": 9.3,
    "delta_pct": -100.0
   },
   {
@@ -184,7 +154,7 @@
    "name": "Aldea Padel",
    "cp": "91100",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 34.3,
+   "bookings_moyenne_hebdo_30j": 30.8,
    "delta_pct": -100.0
   },
   {
@@ -192,7 +162,7 @@
    "name": "B14",
    "cp": "91070",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 118.8,
+   "bookings_moyenne_hebdo_30j": 106.9,
    "delta_pct": -100.0
   },
   {
@@ -200,7 +170,7 @@
    "name": "Planète Raquettes",
    "cp": "77870",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 27.1,
+   "bookings_moyenne_hebdo_30j": 24.7,
    "delta_pct": -100.0
   }
  ],
@@ -211,13 +181,13 @@
    "name": "ASS TENNIS CLUB SARCELLOIS",
    "cp": "95200",
    "first_seen": "2026-06-12 13:04",
-   "days_since": 8
+   "days_since": 9
   }
  ],
  "summary": {
-  "total_anomalies": 23,
+  "total_anomalies": 20,
   "idle_24h": 2,
-  "price_shifts": 7,
+  "price_shifts": 4,
   "volume_drops": 14,
   "new_clubs_14d": 1
  }
