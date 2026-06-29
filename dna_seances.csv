@@ -8236,11 +8236,11 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 1652740,2026-06-29,Lundi,20:30,21:15,DNA Victor Hugo,Lagree,Catrin Karlson English class,0,0,True,disponible,2026-06-24 20:22
 23694960,2026-06-29,Lundi,20:30,21:15,DNA Victor Hugo,Lagree,Catrin Karlson English class,0,0,True,disponible,2026-06-26 15:21
 70113543993000,2026-06-29,Lundi,20:30,21:15,DNA Victor Hugo,Lagree,Catrin Karlson English class,0,0,True,disponible,2026-06-24 09:52
-1225860,2026-06-29,Lundi,21:00,21:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,False,disponible,2026-06-27 23:18
-1303060,2026-06-29,Lundi,21:00,21:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,False,disponible,2026-06-26 22:07
-1652780,2026-06-29,Lundi,21:00,21:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,False,disponible,2026-06-24 20:22
-23695000,2026-06-29,Lundi,21:00,21:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,False,disponible,2026-06-26 15:21
-70113546254500,2026-06-29,Lundi,21:00,21:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,False,disponible,2026-06-24 09:52
+1225860,2026-06-29,Lundi,21:00,21:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,True,disponible,2026-06-27 23:18
+1303060,2026-06-29,Lundi,21:00,21:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,True,disponible,2026-06-26 22:07
+1652780,2026-06-29,Lundi,21:00,21:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,True,disponible,2026-06-24 20:22
+23695000,2026-06-29,Lundi,21:00,21:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,True,disponible,2026-06-26 15:21
+70113546254500,2026-06-29,Lundi,21:00,21:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,True,disponible,2026-06-24 09:52
 1225900,2026-06-30,Mardi,08:00,08:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1225940,2026-06-30,Mardi,08:00,08:50,DNA Yvon Villarceau,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-27 23:18
 1303100,2026-06-30,Mardi,08:00,08:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 22:07
@@ -8253,6 +8253,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 70113544098880,2026-06-30,Mardi,08:00,08:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-24 09:52
 70113546561720,2026-06-30,Mardi,08:00,08:50,DNA Yvon Villarceau,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-24 09:52
 70125489902200,2026-06-30,Mardi,08:00,08:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3074800,2026-06-30,Mardi,08:00,08:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
 1225980,2026-06-30,Mardi,08:30,09:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1226020,2026-06-30,Mardi,08:30,09:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1303180,2026-06-30,Mardi,08:30,09:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-26 22:07
@@ -8265,6 +8266,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 47098037132960,2026-06-30,Mardi,08:30,09:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
 70113411857780,2026-06-30,Mardi,08:30,09:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-24 09:52
 70113539577360,2026-06-30,Mardi,08:30,09:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-24 09:52
+3075100,2026-06-30,Mardi,08:30,09:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1226060,2026-06-30,Mardi,09:00,09:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1226100,2026-06-30,Mardi,09:00,09:50,DNA Yvon Villarceau,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-27 23:18
 1303260,2026-06-30,Mardi,09:00,09:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 22:07
@@ -8277,6 +8279,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 70113544116560,2026-06-30,Mardi,09:00,09:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-24 09:52
 70113546463620,2026-06-30,Mardi,09:00,09:50,DNA Yvon Villarceau,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-24 09:52
 70125489913520,2026-06-30,Mardi,09:00,09:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3075140,2026-06-30,Mardi,09:00,09:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
+3075180,2026-06-30,Mardi,09:00,09:50,DNA Yvon Villarceau,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-29 22:30
 1226140,2026-06-30,Mardi,09:30,10:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1226180,2026-06-30,Mardi,09:30,10:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1303340,2026-06-30,Mardi,09:30,10:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-26 22:07
@@ -8289,6 +8293,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 47098037152620,2026-06-30,Mardi,09:30,10:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
 70113411882880,2026-06-30,Mardi,09:30,10:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-24 09:52
 70113539608560,2026-06-30,Mardi,09:30,10:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-24 09:52
+3075220,2026-06-30,Mardi,09:30,10:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3075260,2026-06-30,Mardi,09:30,10:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-29 22:30
 1226220,2026-06-30,Mardi,10:00,10:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1226260,2026-06-30,Mardi,10:00,10:50,DNA Yvon Villarceau,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-27 23:18
 1303420,2026-06-30,Mardi,10:00,10:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 22:07
@@ -8301,12 +8307,14 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 70113544124240,2026-06-30,Mardi,10:00,10:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-24 09:52
 70113546470660,2026-06-30,Mardi,10:00,10:50,DNA Yvon Villarceau,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-24 09:52
 70125489908100,2026-06-30,Mardi,10:00,10:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3075300,2026-06-30,Mardi,10:00,10:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
 1226300,2026-06-30,Mardi,10:30,11:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-27 23:18
 1303500,2026-06-30,Mardi,10:30,11:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-26 22:07
 1653220,2026-06-30,Mardi,10:30,11:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-24 20:22
 23695440,2026-06-30,Mardi,10:30,11:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-26 15:21
 47098005327240,2026-06-30,Mardi,10:30,11:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
 70113546290900,2026-06-30,Mardi,10:30,11:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-24 09:52
+3075340,2026-06-30,Mardi,10:30,11:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-29 22:30
 1226340,2026-06-30,Mardi,11:00,11:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-27 23:18
 1226380,2026-06-30,Mardi,11:00,11:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-27 23:18
 1303540,2026-06-30,Mardi,11:00,11:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-26 22:07
@@ -8319,6 +8327,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 70113543006660,2026-06-30,Mardi,11:00,11:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-24 09:52
 70125489495800,2026-06-30,Mardi,11:00,11:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-23 09:57
 70125489620840,2026-06-30,Mardi,11:00,11:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-23 09:57
+3075380,2026-06-30,Mardi,11:00,11:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-29 22:30
 1226420,2026-06-30,Mardi,11:30,12:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-27 23:18
 1226460,2026-06-30,Mardi,11:30,12:20,DNA Victor Hugo,Reformer,Victoria Schafter (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1303620,2026-06-30,Mardi,11:30,12:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-26 22:07
@@ -8331,6 +8340,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 47098011597000,2026-06-30,Mardi,11:30,12:20,DNA Victor Hugo,Reformer,Victoria Schafter (Suppléant),0,0,False,disponible,2026-06-23 09:57
 70113539613520,2026-06-30,Mardi,11:30,12:20,DNA Victor Hugo,Reformer,Victoria Schafter (Suppléant),0,0,False,disponible,2026-06-24 09:52
 70113546337860,2026-06-30,Mardi,11:30,12:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-24 09:52
+3075420,2026-06-30,Mardi,11:30,12:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-29 22:30
+3075460,2026-06-30,Mardi,11:30,12:20,DNA Victor Hugo,Reformer,Victoria Schafter (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1226500,2026-06-30,Mardi,12:00,12:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-27 23:18
 1226540,2026-06-30,Mardi,12:00,12:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-27 23:18
 1303700,2026-06-30,Mardi,12:00,12:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-26 22:07
@@ -8343,6 +8354,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 70113542594960,2026-06-30,Mardi,12:00,12:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-24 09:52
 70113546510360,2026-06-30,Mardi,12:00,12:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-24 09:52
 70125489490960,2026-06-30,Mardi,12:00,12:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-23 09:57
+3075500,2026-06-30,Mardi,12:00,12:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-29 22:30
 1226580,2026-06-30,Mardi,12:30,13:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-27 23:18
 1226620,2026-06-30,Mardi,12:30,13:20,DNA Victor Hugo,Reformer,Victoria Schafter (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1303780,2026-06-30,Mardi,12:30,13:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-26 22:07
@@ -8355,6 +8367,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 47098011668300,2026-06-30,Mardi,12:30,13:20,DNA Victor Hugo,Reformer,Victoria Schafter (Suppléant),0,0,False,disponible,2026-06-23 09:57
 70113539661140,2026-06-30,Mardi,12:30,13:20,DNA Victor Hugo,Reformer,Victoria Schafter (Suppléant),0,0,False,disponible,2026-06-24 09:52
 70113546359220,2026-06-30,Mardi,12:30,13:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-24 09:52
+3075540,2026-06-30,Mardi,12:30,13:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-29 22:30
+3075580,2026-06-30,Mardi,12:30,13:20,DNA Victor Hugo,Reformer,Victoria Schafter (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1226660,2026-06-30,Mardi,13:00,13:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-27 23:18
 1226700,2026-06-30,Mardi,13:00,13:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-27 23:18
 1303860,2026-06-30,Mardi,13:00,13:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-26 22:07
@@ -8367,6 +8381,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 70113542628960,2026-06-30,Mardi,13:00,13:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-24 09:52
 70113546519560,2026-06-30,Mardi,13:00,13:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-24 09:52
 70125489501560,2026-06-30,Mardi,13:00,13:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-23 09:57
+3075620,2026-06-30,Mardi,13:00,13:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-29 22:30
+3075660,2026-06-30,Mardi,13:00,13:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-29 22:30
 1226740,2026-06-30,Mardi,13:30,14:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-27 23:18
 1226780,2026-06-30,Mardi,13:30,14:20,DNA Victor Hugo,Reformer,Victoria Schafter (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1303940,2026-06-30,Mardi,13:30,14:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-26 22:07
@@ -8385,30 +8401,35 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23695960,2026-06-30,Mardi,14:00,14:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-26 15:21
 47097985250240,2026-06-30,Mardi,14:00,14:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-23 09:57
 70113546552600,2026-06-30,Mardi,14:00,14:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-24 09:52
+3075700,2026-06-30,Mardi,14:00,14:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-29 22:30
 1226860,2026-06-30,Mardi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-27 23:18
 1304060,2026-06-30,Mardi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 22:07
 1653780,2026-06-30,Mardi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-24 20:22
 23696000,2026-06-30,Mardi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 15:21
 47098038204040,2026-06-30,Mardi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-23 09:57
 70113396718560,2026-06-30,Mardi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-24 09:52
+3075740,2026-06-30,Mardi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-29 22:30
 1226900,2026-06-30,Mardi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-27 23:18
 1304100,2026-06-30,Mardi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 22:07
 1653820,2026-06-30,Mardi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-24 20:22
 23696040,2026-06-30,Mardi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 15:21
 47098038233900,2026-06-30,Mardi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-23 09:57
 70113396741920,2026-06-30,Mardi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-24 09:52
+3075800,2026-06-30,Mardi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-29 22:30
 1226940,2026-06-30,Mardi,16:00,16:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1304140,2026-06-30,Mardi,16:00,16:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 22:07
 1653860,2026-06-30,Mardi,16:00,16:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-24 20:22
 23696080,2026-06-30,Mardi,16:00,16:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 15:21
 47097997737340,2026-06-30,Mardi,16:00,16:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
 70113546094700,2026-06-30,Mardi,16:00,16:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-24 09:52
+3075840,2026-06-30,Mardi,16:00,16:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
 1226980,2026-06-30,Mardi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-27 23:18
 1304180,2026-06-30,Mardi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 22:07
 1653900,2026-06-30,Mardi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-24 20:22
 23696120,2026-06-30,Mardi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 15:21
 47098038302940,2026-06-30,Mardi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-23 09:57
 70113396764540,2026-06-30,Mardi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-24 09:52
+3075880,2026-06-30,Mardi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-29 22:30
 1227020,2026-06-30,Mardi,17:00,17:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-27 23:18
 1227060,2026-06-30,Mardi,17:00,17:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1304220,2026-06-30,Mardi,17:00,17:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-26 22:07
@@ -8421,12 +8442,15 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 70113545270640,2026-06-30,Mardi,17:00,17:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-24 09:52
 70113546157280,2026-06-30,Mardi,17:00,17:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-24 09:52
 70125489939740,2026-06-30,Mardi,17:00,17:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-23 09:57
+3075920,2026-06-30,Mardi,17:00,17:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-29 22:30
+3075960,2026-06-30,Mardi,17:00,17:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
 1227100,2026-06-30,Mardi,17:30,18:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-27 23:18
 1304300,2026-06-30,Mardi,17:30,18:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-26 22:07
 1654020,2026-06-30,Mardi,17:30,18:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-24 20:22
 23696240,2026-06-30,Mardi,17:30,18:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-26 15:21
 47097996772060,2026-06-30,Mardi,17:30,18:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
 70113545767280,2026-06-30,Mardi,17:30,18:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-24 09:52
+3076000,2026-06-30,Mardi,17:30,18:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-29 22:30
 1227140,2026-06-30,Mardi,18:00,18:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-27 23:18
 1227180,2026-06-30,Mardi,18:00,18:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1304340,2026-06-30,Mardi,18:00,18:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-26 22:07
@@ -8439,6 +8463,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 70113545287060,2026-06-30,Mardi,18:00,18:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-24 09:52
 70113546173080,2026-06-30,Mardi,18:00,18:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-24 09:52
 70125489948580,2026-06-30,Mardi,18:00,18:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-23 09:57
+3076040,2026-06-30,Mardi,18:00,18:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-29 22:30
+3076080,2026-06-30,Mardi,18:00,18:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
 1227220,2026-06-30,Mardi,18:30,19:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-27 23:18
 1227260,2026-06-30,Mardi,18:30,19:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-27 23:18
 1304420,2026-06-30,Mardi,18:30,19:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-26 22:07
@@ -8451,6 +8477,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 47098013749500,2026-06-30,Mardi,18:30,19:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-23 09:57
 70113395500860,2026-06-30,Mardi,18:30,19:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-24 09:52
 70113545800160,2026-06-30,Mardi,18:30,19:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-24 09:52
+3076120,2026-06-30,Mardi,18:30,19:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-29 22:30
+3076160,2026-06-30,Mardi,18:30,19:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-29 22:30
 1227300,2026-06-30,Mardi,19:00,19:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-27 23:18
 1227340,2026-06-30,Mardi,19:00,19:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1304500,2026-06-30,Mardi,19:00,19:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-26 22:07
@@ -8463,6 +8491,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 47097997105140,2026-06-30,Mardi,19:00,19:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-23 09:57
 70113545895720,2026-06-30,Mardi,19:00,19:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-24 09:52
 70113546037800,2026-06-30,Mardi,19:00,19:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-24 09:52
+3076200,2026-06-30,Mardi,19:00,19:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-29 22:30
+3076240,2026-06-30,Mardi,19:00,19:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1227380,2026-06-30,Mardi,19:30,20:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-27 23:18
 1227420,2026-06-30,Mardi,19:30,20:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-27 23:18
 1304580,2026-06-30,Mardi,19:30,20:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-26 22:07
@@ -8475,6 +8505,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 47098013728460,2026-06-30,Mardi,19:30,20:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-23 09:57
 70113407499320,2026-06-30,Mardi,19:30,20:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-24 09:52
 70113545815800,2026-06-30,Mardi,19:30,20:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-24 09:52
+3076280,2026-06-30,Mardi,19:30,20:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-29 22:30
+3076340,2026-06-30,Mardi,19:30,20:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-29 22:30
 1227460,2026-06-30,Mardi,20:00,20:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-27 23:18
 1227500,2026-06-30,Mardi,20:00,20:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1304660,2026-06-30,Mardi,20:00,20:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-26 22:07
@@ -8487,6 +8519,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 47097997509620,2026-06-30,Mardi,20:00,20:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-23 09:57
 70113545920260,2026-06-30,Mardi,20:00,20:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-24 09:52
 70113546057280,2026-06-30,Mardi,20:00,20:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-24 09:52
+3076380,2026-06-30,Mardi,20:00,20:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-29 22:30
+3076420,2026-06-30,Mardi,20:00,20:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1227540,2026-06-30,Mardi,20:30,21:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-27 23:18
 1227580,2026-06-30,Mardi,20:30,21:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-27 23:18
 1304740,2026-06-30,Mardi,20:30,21:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-26 22:07
@@ -8499,6 +8533,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 47098013924620,2026-06-30,Mardi,20:30,21:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-23 09:57
 70113407572520,2026-06-30,Mardi,20:30,21:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-24 09:52
 70113545832600,2026-06-30,Mardi,20:30,21:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-24 09:52
+3076460,2026-06-30,Mardi,20:30,21:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-29 22:30
+3076500,2026-06-30,Mardi,20:30,21:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-29 22:30
 1227620,2026-06-30,Mardi,21:00,21:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1227660,2026-06-30,Mardi,21:00,21:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-27 23:18
 1304820,2026-06-30,Mardi,21:00,21:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-26 22:07
@@ -8511,10 +8547,13 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 47098037573320,2026-06-30,Mardi,21:00,21:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-23 09:57
 70113410249820,2026-06-30,Mardi,21:00,21:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-24 09:52
 70113546088480,2026-06-30,Mardi,21:00,21:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-24 09:52
+3076540,2026-06-30,Mardi,21:00,21:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3076580,2026-06-30,Mardi,21:00,21:50,DNA Yvon Villarceau,Lagree,Calista Ruat,0,0,False,disponible,2026-06-29 22:30
 1227700,2026-07-01,Mercredi,07:00,07:50,DNA Yvon Villarceau,Lagree,Kim Sarfati,0,0,False,inconnu,2026-06-27 23:18
 1304900,2026-07-01,Mercredi,07:00,07:50,DNA Yvon Villarceau,Lagree,Kim Sarfati,0,0,False,inconnu,2026-06-26 22:07
 23696840,2026-07-01,Mercredi,07:00,07:50,DNA Yvon Villarceau,Lagree,Kim Sarfati,0,0,False,inconnu,2026-06-26 15:21
 70125489743980,2026-07-01,Mercredi,07:00,07:50,DNA Yvon Villarceau,Lagree,Kim Sarfati,0,0,False,inconnu,2026-06-23 09:57
+3076620,2026-07-01,Mercredi,07:00,07:50,DNA Yvon Villarceau,Lagree,Kim Sarfati,0,0,False,inconnu,2026-06-29 22:30
 1227740,2026-07-01,Mercredi,08:00,08:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-27 23:18
 1227780,2026-07-01,Mercredi,08:00,08:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1304940,2026-07-01,Mercredi,08:00,08:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-26 22:07
@@ -8523,6 +8562,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23696920,2026-07-01,Mercredi,08:00,08:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-26 15:21
 70125489539980,2026-07-01,Mercredi,08:00,08:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-23 09:57
 70125489615120,2026-07-01,Mercredi,08:00,08:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
+3076660,2026-07-01,Mercredi,08:00,08:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-29 22:30
+3076700,2026-07-01,Mercredi,08:00,08:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-29 22:30
 1227820,2026-07-01,Mercredi,08:30,09:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1227860,2026-07-01,Mercredi,08:30,09:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1305020,2026-07-01,Mercredi,08:30,09:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 22:07
@@ -8531,6 +8572,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23697000,2026-07-01,Mercredi,08:30,09:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-26 15:21
 47098009302880,2026-07-01,Mercredi,08:30,09:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
 47098037192160,2026-07-01,Mercredi,08:30,09:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
+3076740,2026-07-01,Mercredi,08:30,09:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
+3076780,2026-07-01,Mercredi,08:30,09:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-29 22:30
 1227900,2026-07-01,Mercredi,09:00,09:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-27 23:18
 1227940,2026-07-01,Mercredi,09:00,09:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1305100,2026-07-01,Mercredi,09:00,09:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-26 22:07
@@ -8539,6 +8582,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23697080,2026-07-01,Mercredi,09:00,09:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-26 15:21
 70125489551040,2026-07-01,Mercredi,09:00,09:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-23 09:57
 70125489625420,2026-07-01,Mercredi,09:00,09:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
+3076820,2026-07-01,Mercredi,09:00,09:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-29 22:30
+3076860,2026-07-01,Mercredi,09:00,09:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-29 22:30
 1227980,2026-07-01,Mercredi,09:30,10:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1228020,2026-07-01,Mercredi,09:30,10:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1305180,2026-07-01,Mercredi,09:30,10:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 22:07
@@ -8547,6 +8592,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23697160,2026-07-01,Mercredi,09:30,10:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-26 15:21
 47098009327180,2026-07-01,Mercredi,09:30,10:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
 47098037288120,2026-07-01,Mercredi,09:30,10:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
+3076900,2026-07-01,Mercredi,09:30,10:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
+3076940,2026-07-01,Mercredi,09:30,10:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-29 22:30
 1228060,2026-07-01,Mercredi,10:00,10:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1228100,2026-07-01,Mercredi,10:00,10:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-27 23:18
 1305260,2026-07-01,Mercredi,10:00,10:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-26 22:07
@@ -8555,6 +8602,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23697240,2026-07-01,Mercredi,10:00,10:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-26 15:21
 70125489496560,2026-07-01,Mercredi,10:00,10:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
 70125489507900,2026-07-01,Mercredi,10:00,10:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-23 09:57
+3076980,2026-07-01,Mercredi,10:00,10:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-29 22:30
+3077020,2026-07-01,Mercredi,10:00,10:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-29 22:30
 1228140,2026-07-01,Mercredi,10:30,11:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1228180,2026-07-01,Mercredi,10:30,11:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1305340,2026-07-01,Mercredi,10:30,11:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 22:07
@@ -8563,6 +8612,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23697320,2026-07-01,Mercredi,10:30,11:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-26 15:21
 47098009391520,2026-07-01,Mercredi,10:30,11:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
 47098037280820,2026-07-01,Mercredi,10:30,11:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
+3077060,2026-07-01,Mercredi,10:30,11:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
+3077100,2026-07-01,Mercredi,10:30,11:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-29 22:30
 1228220,2026-07-01,Mercredi,11:00,11:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1228260,2026-07-01,Mercredi,11:00,11:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-27 23:18
 1305420,2026-07-01,Mercredi,11:00,11:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-26 22:07
@@ -8571,6 +8622,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23697400,2026-07-01,Mercredi,11:00,11:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-26 15:21
 70125489513500,2026-07-01,Mercredi,11:00,11:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-23 09:57
 70125489518540,2026-07-01,Mercredi,11:00,11:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
+3077140,2026-07-01,Mercredi,11:00,11:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-29 22:30
+3077180,2026-07-01,Mercredi,11:00,11:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-29 22:30
 1228300,2026-07-01,Mercredi,11:30,12:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-27 23:18
 1228340,2026-07-01,Mercredi,11:30,12:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1305500,2026-07-01,Mercredi,11:30,12:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-26 22:07
@@ -8579,6 +8632,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23697480,2026-07-01,Mercredi,11:30,12:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 15:21
 47098008950180,2026-07-01,Mercredi,11:30,12:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 47098013073880,2026-07-01,Mercredi,11:30,12:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3077220,2026-07-01,Mercredi,11:30,12:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-29 22:30
+3077260,2026-07-01,Mercredi,11:30,12:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
 1228380,2026-07-01,Mercredi,12:00,12:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-27 23:18
 1228420,2026-07-01,Mercredi,12:00,12:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1305580,2026-07-01,Mercredi,12:00,12:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-26 22:07
@@ -8587,6 +8642,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23697560,2026-07-01,Mercredi,12:00,12:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-26 15:21
 47097996488980,2026-07-01,Mercredi,12:00,12:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
 70125489524600,2026-07-01,Mercredi,12:00,12:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-23 09:57
+3077300,2026-07-01,Mercredi,12:00,12:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-29 22:30
+3077360,2026-07-01,Mercredi,12:00,12:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-29 22:30
 1228460,2026-07-01,Mercredi,12:30,13:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-27 23:18
 1228500,2026-07-01,Mercredi,12:30,13:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1305660,2026-07-01,Mercredi,12:30,13:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-26 22:07
@@ -8595,6 +8652,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23697640,2026-07-01,Mercredi,12:30,13:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 15:21
 47098008980320,2026-07-01,Mercredi,12:30,13:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 47098009581360,2026-07-01,Mercredi,12:30,13:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3077400,2026-07-01,Mercredi,12:30,13:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-29 22:30
+3077440,2026-07-01,Mercredi,12:30,13:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
 1228540,2026-07-01,Mercredi,13:00,13:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-27 23:18
 1228580,2026-07-01,Mercredi,13:00,13:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-27 23:18
 1305740,2026-07-01,Mercredi,13:00,13:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-26 22:07
@@ -8603,15 +8662,19 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23697720,2026-07-01,Mercredi,13:00,13:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-26 15:21
 47097996560340,2026-07-01,Mercredi,13:00,13:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-23 09:57
 70125489535500,2026-07-01,Mercredi,13:00,13:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-23 09:57
+3077480,2026-07-01,Mercredi,13:00,13:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-29 22:30
+3077520,2026-07-01,Mercredi,13:00,13:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-29 22:30
 1228620,2026-07-01,Mercredi,13:30,14:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-27 23:18
 1305820,2026-07-01,Mercredi,13:30,14:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-26 22:07
 23697760,2026-07-01,Mercredi,13:30,14:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-26 15:21
 47098009058040,2026-07-01,Mercredi,13:30,14:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
+3077560,2026-07-01,Mercredi,13:30,14:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-29 22:30
 1228660,2026-07-01,Mercredi,14:00,14:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-27 23:18
 1305860,2026-07-01,Mercredi,14:00,14:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-26 22:07
 23697800,2026-07-01,Mercredi,14:00,14:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-26 15:21
 47098004812460,2026-07-01,Mercredi,14:00,14:50,DNA Yvon Villarceau,Reformer,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
 70125489959520,2026-07-01,Mercredi,14:00,14:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-23 09:57
+3077600,2026-07-01,Mercredi,14:00,14:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-29 22:30
 1228700,2026-07-01,Mercredi,14:30,15:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-27 23:18
 1228740,2026-07-01,Mercredi,14:30,15:20,DNA Victor Hugo,Reformer,Sarah Elfassy,0,0,False,disponible,2026-06-27 23:18
 1305900,2026-07-01,Mercredi,14:30,15:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-26 22:07
@@ -8620,19 +8683,24 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23697880,2026-07-01,Mercredi,14:30,15:20,DNA Victor Hugo,Reformer,Sarah Elfassy,0,0,False,disponible,2026-06-26 15:21
 47098009165000,2026-07-01,Mercredi,14:30,15:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 47098036330080,2026-07-01,Mercredi,14:30,15:20,DNA Victor Hugo,Reformer,Sarah Elfassy,0,0,False,disponible,2026-06-23 09:57
+3077640,2026-07-01,Mercredi,14:30,15:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-29 22:30
+3077680,2026-07-01,Mercredi,14:30,15:20,DNA Victor Hugo,Reformer,Sarah Elfassy,0,0,False,disponible,2026-06-29 22:30
 1228780,2026-07-01,Mercredi,15:00,15:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-27 23:18
 1305980,2026-07-01,Mercredi,15:00,15:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-26 22:07
 23697920,2026-07-01,Mercredi,15:00,15:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-26 15:21
 47098004854100,2026-07-01,Mercredi,15:00,15:50,DNA Yvon Villarceau,Reformer,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
 70125489970840,2026-07-01,Mercredi,15:00,15:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-23 09:57
+3077720,2026-07-01,Mercredi,15:00,15:50,DNA Yvon Villarceau,Lagree,Carla B,0,0,False,disponible,2026-06-29 22:30
 1228820,2026-07-01,Mercredi,15:30,16:20,DNA Victor Hugo,Reformer,Sarah Elfassy,0,0,False,disponible,2026-06-27 23:18
 1306020,2026-07-01,Mercredi,15:30,16:20,DNA Victor Hugo,Reformer,Sarah Elfassy,0,0,False,disponible,2026-06-26 22:07
 23697960,2026-07-01,Mercredi,15:30,16:20,DNA Victor Hugo,Reformer,Sarah Elfassy,0,0,False,disponible,2026-06-26 15:21
 47098036359980,2026-07-01,Mercredi,15:30,16:20,DNA Victor Hugo,Reformer,Sarah Elfassy,0,0,False,disponible,2026-06-23 09:57
+3077760,2026-07-01,Mercredi,15:30,16:20,DNA Victor Hugo,Reformer,Sarah Elfassy,0,0,False,disponible,2026-06-29 22:30
 1228860,2026-07-01,Mercredi,16:00,16:50,DNA Yvon Villarceau,Reformer,Liz Torres (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1306060,2026-07-01,Mercredi,16:00,16:50,DNA Yvon Villarceau,Reformer,Liz Torres (Suppléant),0,0,False,disponible,2026-06-26 22:07
 23698000,2026-07-01,Mercredi,16:00,16:50,DNA Yvon Villarceau,Reformer,Liz Torres (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098004946280,2026-07-01,Mercredi,16:00,16:50,DNA Yvon Villarceau,Reformer,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
+3077800,2026-07-01,Mercredi,16:00,16:50,DNA Yvon Villarceau,Reformer,Liz Torres (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1228900,2026-07-01,Mercredi,17:00,17:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1228940,2026-07-01,Mercredi,17:00,17:50,DNA Yvon Villarceau,Reformer,Liz Torres (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1306100,2026-07-01,Mercredi,17:00,17:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-26 22:07
@@ -8641,6 +8709,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23698080,2026-07-01,Mercredi,17:00,17:50,DNA Yvon Villarceau,Reformer,Liz Torres (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47097988981820,2026-07-01,Mercredi,17:00,17:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
 47098004993120,2026-07-01,Mercredi,17:00,17:50,DNA Yvon Villarceau,Reformer,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
+3077840,2026-07-01,Mercredi,17:00,17:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-29 22:30
+3077880,2026-07-01,Mercredi,17:00,17:50,DNA Yvon Villarceau,Reformer,Liz Torres (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1228980,2026-07-01,Mercredi,17:30,18:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-27 23:18
 1229020,2026-07-01,Mercredi,17:30,18:15,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1306180,2026-07-01,Mercredi,17:30,18:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-26 22:07
@@ -8649,6 +8719,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23698160,2026-07-01,Mercredi,17:30,18:15,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-26 15:21
 47098014008940,2026-07-01,Mercredi,17:30,18:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-23 09:57
 47098036790840,2026-07-01,Mercredi,17:30,18:15,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
+3077920,2026-07-01,Mercredi,17:30,18:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-29 22:30
+3077960,2026-07-01,Mercredi,17:30,18:15,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-29 22:30
 1229060,2026-07-01,Mercredi,18:00,18:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1229100,2026-07-01,Mercredi,18:00,18:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1306260,2026-07-01,Mercredi,18:00,18:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 22:07
@@ -8657,6 +8729,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23698240,2026-07-01,Mercredi,18:00,18:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-26 15:21
 47097989592660,2026-07-01,Mercredi,18:00,18:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
 70125489923960,2026-07-01,Mercredi,18:00,18:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3078000,2026-07-01,Mercredi,18:00,18:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
+3078040,2026-07-01,Mercredi,18:00,18:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-29 22:30
 1229140,2026-07-01,Mercredi,18:30,19:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-27 23:18
 1229180,2026-07-01,Mercredi,18:30,19:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1306340,2026-07-01,Mercredi,18:30,19:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-26 22:07
@@ -8665,6 +8739,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23698320,2026-07-01,Mercredi,18:30,19:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-26 15:21
 47098014107120,2026-07-01,Mercredi,18:30,19:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-23 09:57
 47098037866640,2026-07-01,Mercredi,18:30,19:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
+3078080,2026-07-01,Mercredi,18:30,19:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-29 22:30
+3078120,2026-07-01,Mercredi,18:30,19:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-29 22:30
 1229220,2026-07-01,Mercredi,19:00,19:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1229260,2026-07-01,Mercredi,19:00,19:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1306420,2026-07-01,Mercredi,19:00,19:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 22:07
@@ -8673,6 +8749,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23698400,2026-07-01,Mercredi,19:00,19:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-26 15:21
 47097994513600,2026-07-01,Mercredi,19:00,19:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
 70125489572900,2026-07-01,Mercredi,19:00,19:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3078160,2026-07-01,Mercredi,19:00,19:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
+3078200,2026-07-01,Mercredi,19:00,19:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-29 22:30
 1229300,2026-07-01,Mercredi,19:30,20:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-27 23:18
 1229340,2026-07-01,Mercredi,19:30,20:15,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1306500,2026-07-01,Mercredi,19:30,20:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-26 22:07
@@ -8681,6 +8759,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23698480,2026-07-01,Mercredi,19:30,20:15,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-26 15:21
 47098035121740,2026-07-01,Mercredi,19:30,20:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-23 09:57
 47098036865460,2026-07-01,Mercredi,19:30,20:15,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
+3078240,2026-07-01,Mercredi,19:30,20:20,DNA Victor Hugo,Reformer,Cecilia Pinto,7,7,False,complet,2026-06-29 22:30
+3078280,2026-07-01,Mercredi,19:30,20:15,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-29 22:30
 1229380,2026-07-01,Mercredi,20:00,20:50,DNA Yvon Villarceau,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1229420,2026-07-01,Mercredi,20:00,20:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1306580,2026-07-01,Mercredi,20:00,20:50,DNA Yvon Villarceau,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-26 22:07
@@ -8689,6 +8769,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23698560,2026-07-01,Mercredi,20:00,20:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-26 15:21
 47097994809340,2026-07-01,Mercredi,20:00,20:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
 70125489917500,2026-07-01,Mercredi,20:00,20:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3078320,2026-07-01,Mercredi,20:00,20:50,DNA Yvon Villarceau,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3078360,2026-07-01,Mercredi,20:00,20:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-29 22:30
 1229460,2026-07-01,Mercredi,20:30,21:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-27 23:18
 1229500,2026-07-01,Mercredi,20:30,21:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1306660,2026-07-01,Mercredi,20:30,21:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-26 22:07
@@ -8697,10 +8779,13 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23698640,2026-07-01,Mercredi,20:30,21:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-26 15:21
 47098035488180,2026-07-01,Mercredi,20:30,21:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-23 09:57
 47098036949400,2026-07-01,Mercredi,20:30,21:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
+3078400,2026-07-01,Mercredi,20:30,21:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-29 22:30
+3078440,2026-07-01,Mercredi,20:30,21:20,DNA Victor Hugo,Lagree,Melody Naggar,0,0,False,disponible,2026-06-29 22:30
 1229540,2026-07-01,Mercredi,21:00,21:50,DNA Yvon Villarceau,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1306740,2026-07-01,Mercredi,21:00,21:50,DNA Yvon Villarceau,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-26 22:07
 23698680,2026-07-01,Mercredi,21:00,21:50,DNA Yvon Villarceau,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-26 15:21
 70125489928920,2026-07-01,Mercredi,21:00,21:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3078480,2026-07-01,Mercredi,21:00,21:50,DNA Yvon Villarceau,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1229580,2026-07-02,Jeudi,08:00,08:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1229620,2026-07-02,Jeudi,08:00,08:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1306780,2026-07-02,Jeudi,08:00,08:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-26 22:07
@@ -8709,6 +8794,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23698760,2026-07-02,Jeudi,08:00,08:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-26 15:21
 47098036689780,2026-07-02,Jeudi,08:00,08:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
 70125489601420,2026-07-02,Jeudi,08:00,08:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3078520,2026-07-02,Jeudi,08:00,08:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3078560,2026-07-02,Jeudi,08:00,08:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-29 22:30
 1229660,2026-07-02,Jeudi,08:30,09:15,DNA Victor Hugo,Lagree,Calista Ruat,0,0,False,disponible,2026-06-27 23:18
 1229700,2026-07-02,Jeudi,08:30,09:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1306860,2026-07-02,Jeudi,08:30,09:15,DNA Victor Hugo,Lagree,Calista Ruat,0,0,False,disponible,2026-06-26 22:07
@@ -8717,6 +8804,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23698840,2026-07-02,Jeudi,08:30,09:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 15:21
 47097984396320,2026-07-02,Jeudi,08:30,09:15,DNA Victor Hugo,Lagree,Calista Ruat,0,0,False,disponible,2026-06-23 09:57
 47098009626660,2026-07-02,Jeudi,08:30,09:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3078600,2026-07-02,Jeudi,08:30,09:15,DNA Victor Hugo,Lagree,Calista Ruat,0,0,False,disponible,2026-06-29 22:30
+3078640,2026-07-02,Jeudi,08:30,09:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
 1229740,2026-07-02,Jeudi,09:00,09:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1229780,2026-07-02,Jeudi,09:00,09:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1306940,2026-07-02,Jeudi,09:00,09:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-26 22:07
@@ -8725,6 +8814,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23698920,2026-07-02,Jeudi,09:00,09:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-26 15:21
 47098036731420,2026-07-02,Jeudi,09:00,09:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
 70125489594680,2026-07-02,Jeudi,09:00,09:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3078680,2026-07-02,Jeudi,09:00,09:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3078720,2026-07-02,Jeudi,09:00,09:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-29 22:30
 1229820,2026-07-02,Jeudi,09:30,10:15,DNA Victor Hugo,Lagree,Calista Ruat,0,0,False,disponible,2026-06-27 23:18
 1229860,2026-07-02,Jeudi,09:30,10:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1307020,2026-07-02,Jeudi,09:30,10:15,DNA Victor Hugo,Lagree,Calista Ruat,0,0,False,disponible,2026-06-26 22:07
@@ -8733,6 +8824,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23699000,2026-07-02,Jeudi,09:30,10:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 15:21
 47097984964300,2026-07-02,Jeudi,09:30,10:15,DNA Victor Hugo,Lagree,Calista Ruat,0,0,False,disponible,2026-06-23 09:57
 47098009698040,2026-07-02,Jeudi,09:30,10:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3078760,2026-07-02,Jeudi,09:30,10:15,DNA Victor Hugo,Lagree,Calista Ruat,0,0,False,disponible,2026-06-29 22:30
+3078800,2026-07-02,Jeudi,09:30,10:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
 1229900,2026-07-02,Jeudi,10:00,10:50,DNA Yvon Villarceau,Reformer,Liz Torres,0,0,False,disponible,2026-06-27 23:18
 1229940,2026-07-02,Jeudi,10:00,10:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-27 23:18
 1307100,2026-07-02,Jeudi,10:00,10:50,DNA Yvon Villarceau,Reformer,Liz Torres,0,0,False,disponible,2026-06-26 22:07
@@ -8741,6 +8834,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23699080,2026-07-02,Jeudi,10:00,10:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-26 15:21
 47098005298740,2026-07-02,Jeudi,10:00,10:50,DNA Yvon Villarceau,Reformer,Liz Torres,0,0,False,disponible,2026-06-23 09:57
 47098036755480,2026-07-02,Jeudi,10:00,10:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-23 09:57
+3078840,2026-07-02,Jeudi,10:00,10:50,DNA Yvon Villarceau,Reformer,Liz Torres,0,0,False,disponible,2026-06-29 22:30
+3078880,2026-07-02,Jeudi,10:00,10:50,DNA Yvon Villarceau,Lagree,Melody Naggar,0,0,False,disponible,2026-06-29 22:30
 1229980,2026-07-02,Jeudi,10:30,11:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-27 23:18
 1230020,2026-07-02,Jeudi,10:30,11:15,DNA Victor Hugo,Lagree,Laura Provost (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1307180,2026-07-02,Jeudi,10:30,11:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-26 22:07
@@ -8749,6 +8844,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23699160,2026-07-02,Jeudi,10:30,11:15,DNA Victor Hugo,Lagree,Laura Provost (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098009758260,2026-07-02,Jeudi,10:30,11:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
 47098011873520,2026-07-02,Jeudi,10:30,11:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
+3078920,2026-07-02,Jeudi,10:30,11:20,DNA Victor Hugo,Reformer,Charlie DMC,0,0,False,disponible,2026-06-29 22:30
+3078960,2026-07-02,Jeudi,10:30,11:15,DNA Victor Hugo,Lagree,Laura Provost (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1230060,2026-07-02,Jeudi,11:00,11:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1230100,2026-07-02,Jeudi,11:00,11:50,DNA Yvon Villarceau,Reformer,Liz Torres,0,0,False,disponible,2026-06-27 23:18
 1307260,2026-07-02,Jeudi,11:00,11:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-26 22:07
@@ -8757,11 +8854,14 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23699240,2026-07-02,Jeudi,11:00,11:50,DNA Yvon Villarceau,Reformer,Liz Torres,0,0,False,disponible,2026-06-26 15:21
 47098036163080,2026-07-02,Jeudi,11:00,11:50,DNA Yvon Villarceau,Reformer,Liz Torres,0,0,False,disponible,2026-06-23 09:57
 70125489263060,2026-07-02,Jeudi,11:00,11:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3079000,2026-07-02,Jeudi,11:00,11:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3079040,2026-07-02,Jeudi,11:00,11:50,DNA Yvon Villarceau,Reformer,Liz Torres,0,0,False,disponible,2026-06-29 22:30
 1230140,2026-07-02,Jeudi,11:30,12:20,DNA Victor Hugo,Reformer,Charlie DMC (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1307340,2026-07-02,Jeudi,11:30,12:20,DNA Victor Hugo,Reformer,Charlie DMC (Suppléant),0,0,False,disponible,2026-06-26 22:07
 23699280,2026-07-02,Jeudi,11:30,12:20,DNA Victor Hugo,Reformer,Charlie DMC (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098011922800,2026-07-02,Jeudi,11:30,12:15,DNA Victor Hugo,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
 47098012423140,2026-07-02,Jeudi,11:30,12:20,DNA Victor Hugo,Reformer,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
+3079080,2026-07-02,Jeudi,11:30,12:20,DNA Victor Hugo,Reformer,Charlie DMC (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1230180,2026-07-02,Jeudi,12:00,12:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1230220,2026-07-02,Jeudi,12:00,12:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-27 23:18
 1307380,2026-07-02,Jeudi,12:00,12:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-26 22:07
@@ -8770,6 +8870,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23699360,2026-07-02,Jeudi,12:00,12:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-26 15:21
 70125489269740,2026-07-02,Jeudi,12:00,12:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-23 09:57
 70125489274660,2026-07-02,Jeudi,12:00,12:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3079120,2026-07-02,Jeudi,12:00,12:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3079160,2026-07-02,Jeudi,12:00,12:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-29 22:30
 1230260,2026-07-02,Jeudi,12:30,13:15,DNA Victor Hugo,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-27 23:18
 1230300,2026-07-02,Jeudi,12:30,13:20,DNA Victor Hugo,Reformer,Charlie DMC (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1307460,2026-07-02,Jeudi,12:30,13:15,DNA Victor Hugo,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-26 22:07
@@ -8778,6 +8880,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23699440,2026-07-02,Jeudi,12:30,13:20,DNA Victor Hugo,Reformer,Charlie DMC (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098012357660,2026-07-02,Jeudi,12:30,13:20,DNA Victor Hugo,Reformer,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 70125489862540,2026-07-02,Jeudi,12:30,13:15,DNA Victor Hugo,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-23 09:57
+3079200,2026-07-02,Jeudi,12:30,13:15,DNA Victor Hugo,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-29 22:30
+3079240,2026-07-02,Jeudi,12:30,13:20,DNA Victor Hugo,Reformer,Charlie DMC (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1230340,2026-07-02,Jeudi,13:00,13:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1230380,2026-07-02,Jeudi,13:00,13:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-27 23:18
 1307540,2026-07-02,Jeudi,13:00,13:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-26 22:07
@@ -8786,6 +8890,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23699520,2026-07-02,Jeudi,13:00,13:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-26 15:21
 70125489276660,2026-07-02,Jeudi,13:00,13:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-23 09:57
 70125489281280,2026-07-02,Jeudi,13:00,13:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3079280,2026-07-02,Jeudi,13:00,13:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3079320,2026-07-02,Jeudi,13:00,13:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-29 22:30
 1230420,2026-07-02,Jeudi,13:30,14:15,DNA Victor Hugo,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-27 23:18
 1230460,2026-07-02,Jeudi,13:30,14:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1307620,2026-07-02,Jeudi,13:30,14:15,DNA Victor Hugo,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-26 22:07
@@ -8794,14 +8900,18 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23699600,2026-07-02,Jeudi,13:30,14:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098012483480,2026-07-02,Jeudi,13:30,14:20,DNA Victor Hugo,Reformer,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 70125489856920,2026-07-02,Jeudi,13:30,14:15,DNA Victor Hugo,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-23 09:57
+3079360,2026-07-02,Jeudi,13:30,14:15,DNA Victor Hugo,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-29 22:30
+3079400,2026-07-02,Jeudi,13:30,14:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1230500,2026-07-02,Jeudi,14:00,14:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-27 23:18
 1307700,2026-07-02,Jeudi,14:00,14:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-26 22:07
 23699640,2026-07-02,Jeudi,14:00,14:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-26 15:21
 70125489632660,2026-07-02,Jeudi,14:00,14:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-23 09:57
+3079440,2026-07-02,Jeudi,14:00,14:50,DNA Yvon Villarceau,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-29 22:30
 1230540,2026-07-02,Jeudi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-27 23:18
 1307740,2026-07-02,Jeudi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 22:07
 23699680,2026-07-02,Jeudi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 15:21
 47098038341260,2026-07-02,Jeudi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-23 09:57
+3079480,2026-07-02,Jeudi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-29 22:30
 1230580,2026-07-02,Jeudi,15:00,15:50,DNA Yvon Villarceau,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-27 23:18
 1230620,2026-07-02,Jeudi,15:00,15:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1307780,2026-07-02,Jeudi,15:00,15:50,DNA Yvon Villarceau,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-26 22:07
@@ -8810,10 +8920,13 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23699760,2026-07-02,Jeudi,15:00,15:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-26 15:21
 47098007200980,2026-07-02,Jeudi,15:00,15:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489561560,2026-07-02,Jeudi,15:00,15:50,DNA Yvon Villarceau,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-23 09:57
+3079520,2026-07-02,Jeudi,15:00,15:50,DNA Yvon Villarceau,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-29 22:30
+3079560,2026-07-02,Jeudi,15:00,15:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-29 22:30
 1230660,2026-07-02,Jeudi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-27 23:18
 1307860,2026-07-02,Jeudi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 22:07
 23699800,2026-07-02,Jeudi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 15:21
 47098038407820,2026-07-02,Jeudi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-23 09:57
+3079600,2026-07-02,Jeudi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-29 22:30
 1230700,2026-07-02,Jeudi,16:00,16:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1230740,2026-07-02,Jeudi,16:00,16:50,DNA Yvon Villarceau,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-27 23:18
 1307900,2026-07-02,Jeudi,16:00,16:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-26 22:07
@@ -8822,10 +8935,13 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23699880,2026-07-02,Jeudi,16:00,16:50,DNA Yvon Villarceau,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-26 15:21
 47098007346860,2026-07-02,Jeudi,16:00,16:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 47098037510800,2026-07-02,Jeudi,16:00,16:50,DNA Yvon Villarceau,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-23 09:57
+3079640,2026-07-02,Jeudi,16:00,16:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3079680,2026-07-02,Jeudi,16:00,16:50,DNA Yvon Villarceau,Lagree,Sarah Elfassy,0,0,False,disponible,2026-06-29 22:30
 1230780,2026-07-02,Jeudi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-27 23:18
 1307980,2026-07-02,Jeudi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 22:07
 23699920,2026-07-02,Jeudi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-26 15:21
 47098038473000,2026-07-02,Jeudi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-23 09:57
+3079720,2026-07-02,Jeudi,16:30,17:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-29 22:30
 1230820,2026-07-02,Jeudi,17:00,17:50,DNA Yvon Villarceau,Lagree,Jade C,0,0,False,disponible,2026-06-27 23:18
 1230860,2026-07-02,Jeudi,17:00,17:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1308020,2026-07-02,Jeudi,17:00,17:50,DNA Yvon Villarceau,Lagree,Jade C,0,0,False,disponible,2026-06-26 22:07
@@ -8834,6 +8950,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23700000,2026-07-02,Jeudi,17:00,17:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-26 15:21
 70125489288200,2026-07-02,Jeudi,17:00,17:50,DNA Yvon Villarceau,Lagree,Jade C,0,0,False,disponible,2026-06-23 09:57
 70125489299040,2026-07-02,Jeudi,17:00,17:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3079760,2026-07-02,Jeudi,17:00,17:50,DNA Yvon Villarceau,Lagree,Jade C,0,0,False,disponible,2026-06-29 22:30
+3079800,2026-07-02,Jeudi,17:00,17:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-29 22:30
 1230900,2026-07-02,Jeudi,17:30,18:15,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1230940,2026-07-02,Jeudi,17:30,18:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1308100,2026-07-02,Jeudi,17:30,18:15,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-26 22:07
@@ -8842,6 +8960,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23700080,2026-07-02,Jeudi,17:30,18:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098005624300,2026-07-02,Jeudi,17:30,18:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 47098010669840,2026-07-02,Jeudi,17:30,18:20,DNA Victor Hugo,Reformer,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
+3079840,2026-07-02,Jeudi,17:30,18:15,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3079880,2026-07-02,Jeudi,17:30,18:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1230980,2026-07-02,Jeudi,18:00,18:50,DNA Yvon Villarceau,Lagree,Jade C,0,0,False,disponible,2026-06-27 23:18
 1231020,2026-07-02,Jeudi,18:00,18:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1308180,2026-07-02,Jeudi,18:00,18:50,DNA Yvon Villarceau,Lagree,Jade C,0,0,False,disponible,2026-06-26 22:07
@@ -8850,6 +8970,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23700160,2026-07-02,Jeudi,18:00,18:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-26 15:21
 70125489293800,2026-07-02,Jeudi,18:00,18:50,DNA Yvon Villarceau,Lagree,Jade C,0,0,False,disponible,2026-06-23 09:57
 70125489304140,2026-07-02,Jeudi,18:00,18:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3079920,2026-07-02,Jeudi,18:00,18:50,DNA Yvon Villarceau,Lagree,Jade C,0,0,False,disponible,2026-06-29 22:30
+3079960,2026-07-02,Jeudi,18:00,18:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-29 22:30
 1231060,2026-07-02,Jeudi,18:30,19:15,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1231100,2026-07-02,Jeudi,18:30,19:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1308260,2026-07-02,Jeudi,18:30,19:15,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-26 22:07
@@ -8858,6 +8980,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23700240,2026-07-02,Jeudi,18:30,19:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098005690400,2026-07-02,Jeudi,18:30,19:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 47098010728760,2026-07-02,Jeudi,18:30,19:20,DNA Victor Hugo,Reformer,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
+3080000,2026-07-02,Jeudi,18:30,19:15,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3080040,2026-07-02,Jeudi,18:30,19:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1231140,2026-07-02,Jeudi,19:00,19:50,DNA Yvon Villarceau,Lagree,Jade C,7,7,False,complet,2026-06-27 23:18
 1231180,2026-07-02,Jeudi,19:00,19:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1308340,2026-07-02,Jeudi,19:00,19:50,DNA Yvon Villarceau,Lagree,Jade C,7,7,False,complet,2026-06-26 22:07
@@ -8866,6 +8990,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23700320,2026-07-02,Jeudi,19:00,19:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098007509360,2026-07-02,Jeudi,19:00,19:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
 70125489299560,2026-07-02,Jeudi,19:00,19:50,DNA Yvon Villarceau,Lagree,Jade C,0,0,False,disponible,2026-06-23 09:57
+3080080,2026-07-02,Jeudi,19:00,19:50,DNA Yvon Villarceau,Lagree,Jade C,7,7,False,complet,2026-06-29 22:30
+3080120,2026-07-02,Jeudi,19:00,19:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1231220,2026-07-02,Jeudi,19:30,20:15,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1231260,2026-07-02,Jeudi,19:30,20:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1308420,2026-07-02,Jeudi,19:30,20:15,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-26 22:07
@@ -8874,6 +9000,8 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23700400,2026-07-02,Jeudi,19:30,20:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098005843160,2026-07-02,Jeudi,19:30,20:15,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 47098010835040,2026-07-02,Jeudi,19:30,20:20,DNA Victor Hugo,Reformer,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
+3080160,2026-07-02,Jeudi,19:30,20:15,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3080200,2026-07-02,Jeudi,19:30,20:20,DNA Victor Hugo,Reformer,Laura Provost (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1231300,2026-07-02,Jeudi,20:00,20:50,DNA Yvon Villarceau,Lagree,Jade C,0,0,False,disponible,2026-06-27 23:18
 1231340,2026-07-02,Jeudi,20:00,20:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1308500,2026-07-02,Jeudi,20:00,20:50,DNA Yvon Villarceau,Lagree,Jade C,7,7,False,complet,2026-06-26 22:07
@@ -8882,174 +9010,295 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 23700480,2026-07-02,Jeudi,20:00,20:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098007611460,2026-07-02,Jeudi,20:00,20:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
 70125489310680,2026-07-02,Jeudi,20:00,20:50,DNA Yvon Villarceau,Lagree,Jade C,0,0,False,disponible,2026-06-23 09:57
+3080240,2026-07-02,Jeudi,20:00,20:50,DNA Yvon Villarceau,Lagree,Jade C,7,7,False,complet,2026-06-29 22:30
+3080280,2026-07-02,Jeudi,20:00,20:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1231380,2026-07-02,Jeudi,20:30,21:20,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1308580,2026-07-02,Jeudi,20:30,21:20,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-26 22:07
 23700520,2026-07-02,Jeudi,20:30,21:20,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098009190900,2026-07-02,Jeudi,20:30,21:20,DNA Victor Hugo,Lagree,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
+3080320,2026-07-02,Jeudi,20:30,21:20,DNA Victor Hugo,Lagree,Catrin Karlson English class (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1231420,2026-07-02,Jeudi,21:00,21:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1308620,2026-07-02,Jeudi,21:00,21:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-26 22:07
 23700560,2026-07-02,Jeudi,21:00,21:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-26 15:21
 47098007731640,2026-07-02,Jeudi,21:00,21:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3080360,2026-07-02,Jeudi,21:00,21:50,DNA Yvon Villarceau,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1231460,2026-07-03,Vendredi,08:00,08:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1231500,2026-07-03,Vendredi,08:00,08:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-27 23:18
 70125489320920,2026-07-03,Vendredi,08:00,08:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489700040,2026-07-03,Vendredi,08:00,08:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3080400,2026-07-03,Vendredi,08:00,08:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3080440,2026-07-03,Vendredi,08:00,08:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 1231540,2026-07-03,Vendredi,08:30,09:15,DNA Victor Hugo,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1231580,2026-07-03,Vendredi,08:30,09:20,DNA Victor Hugo,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-27 23:18
 47098011275760,2026-07-03,Vendredi,08:30,09:20,DNA Victor Hugo,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-23 09:57
 70125489755140,2026-07-03,Vendredi,08:30,09:15,DNA Victor Hugo,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
+3080480,2026-07-03,Vendredi,08:30,09:15,DNA Victor Hugo,Lagree,Leann Mroueh (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3080520,2026-07-03,Vendredi,08:30,09:20,DNA Victor Hugo,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-29 22:30
 1231620,2026-07-03,Vendredi,09:00,09:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1231660,2026-07-03,Vendredi,09:00,09:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-27 23:18
 70125489316220,2026-07-03,Vendredi,09:00,09:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489694200,2026-07-03,Vendredi,09:00,09:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3080560,2026-07-03,Vendredi,09:00,09:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3080600,2026-07-03,Vendredi,09:00,09:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 1231700,2026-07-03,Vendredi,09:30,10:15,DNA Victor Hugo,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1231740,2026-07-03,Vendredi,09:30,10:20,DNA Victor Hugo,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-27 23:18
 47098011321380,2026-07-03,Vendredi,09:30,10:20,DNA Victor Hugo,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-23 09:57
 70125489765240,2026-07-03,Vendredi,09:30,10:15,DNA Victor Hugo,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
+3080640,2026-07-03,Vendredi,09:30,10:15,DNA Victor Hugo,Lagree,Leann Mroueh (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3080680,2026-07-03,Vendredi,09:30,10:20,DNA Victor Hugo,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-29 22:30
 1231780,2026-07-03,Vendredi,10:00,10:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1231820,2026-07-03,Vendredi,10:00,10:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-27 23:18
 70125489327720,2026-07-03,Vendredi,10:00,10:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489705560,2026-07-03,Vendredi,10:00,10:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3080720,2026-07-03,Vendredi,10:00,10:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3080760,2026-07-03,Vendredi,10:00,10:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 1231860,2026-07-03,Vendredi,10:30,11:15,DNA Victor Hugo,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-27 23:18
 1231900,2026-07-03,Vendredi,10:30,11:20,DNA Victor Hugo,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-27 23:18
 47098011386160,2026-07-03,Vendredi,10:30,11:20,DNA Victor Hugo,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-23 09:57
 70125489774540,2026-07-03,Vendredi,10:30,11:15,DNA Victor Hugo,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
+3080800,2026-07-03,Vendredi,10:30,11:15,DNA Victor Hugo,Lagree,Leann Mroueh (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3080840,2026-07-03,Vendredi,10:30,11:20,DNA Victor Hugo,Reformer,Soudi Zargham,0,0,False,disponible,2026-06-29 22:30
 1231940,2026-07-03,Vendredi,11:00,11:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1231980,2026-07-03,Vendredi,11:00,11:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-27 23:18
 70125489577500,2026-07-03,Vendredi,11:00,11:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489716200,2026-07-03,Vendredi,11:00,11:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3080880,2026-07-03,Vendredi,11:00,11:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3080920,2026-07-03,Vendredi,11:00,11:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 1232020,2026-07-03,Vendredi,11:30,12:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1232060,2026-07-03,Vendredi,11:30,12:15,DNA Victor Hugo,Lagree,Laura Provost (Suppléant),0,0,False,disponible,2026-06-27 23:18
 47098012092840,2026-07-03,Vendredi,11:30,12:20,DNA Victor Hugo,Reformer,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 47098012133880,2026-07-03,Vendredi,11:30,12:15,DNA Victor Hugo,Lagree,Carla B,0,0,False,disponible,2026-06-23 09:57
+3080960,2026-07-03,Vendredi,11:30,12:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3081000,2026-07-03,Vendredi,11:30,12:15,DNA Victor Hugo,Lagree,Laura Provost (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1232100,2026-07-03,Vendredi,12:00,12:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1232140,2026-07-03,Vendredi,12:00,12:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-27 23:18
 70125489339320,2026-07-03,Vendredi,12:00,12:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489711680,2026-07-03,Vendredi,12:00,12:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3081040,2026-07-03,Vendredi,12:00,12:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3081080,2026-07-03,Vendredi,12:00,12:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 1232180,2026-07-03,Vendredi,12:30,13:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1232220,2026-07-03,Vendredi,12:30,13:15,DNA Victor Hugo,Lagree,Laura Provost (Suppléant),0,0,False,disponible,2026-06-27 23:18
 47098012107580,2026-07-03,Vendredi,12:30,13:15,DNA Victor Hugo,Lagree,Carla B,0,0,False,disponible,2026-06-23 09:57
 47098012187180,2026-07-03,Vendredi,12:30,13:20,DNA Victor Hugo,Reformer,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
+3081120,2026-07-03,Vendredi,12:30,13:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3081160,2026-07-03,Vendredi,12:30,13:15,DNA Victor Hugo,Lagree,Laura Provost (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1232260,2026-07-03,Vendredi,13:00,13:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-27 23:18
 1232300,2026-07-03,Vendredi,13:00,13:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-27 23:18
 70125489334740,2026-07-03,Vendredi,13:00,13:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489723060,2026-07-03,Vendredi,13:00,13:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3081200,2026-07-03,Vendredi,13:00,13:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3081240,2026-07-03,Vendredi,13:00,13:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 1232340,2026-07-03,Vendredi,13:30,14:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 47098009837100,2026-07-03,Vendredi,13:30,14:20,DNA Victor Hugo,Reformer,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
+3081280,2026-07-03,Vendredi,13:30,14:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
 47097996925680,2026-07-03,Vendredi,15:00,15:50,DNA Yvon Villarceau,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
 47097996945600,2026-07-03,Vendredi,16:00,16:50,DNA Yvon Villarceau,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
 1232380,2026-07-03,Vendredi,16:30,17:20,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-27 23:18
 47098038547480,2026-07-03,Vendredi,16:30,17:20,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-23 09:57
+3081320,2026-07-03,Vendredi,16:30,17:20,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-29 22:30
 1232420,2026-07-03,Vendredi,17:00,17:50,DNA Yvon Villarceau,Reformer,Carla Triboul (Suppléant),0,0,False,disponible,2026-06-27 23:18
 47098011996220,2026-07-03,Vendredi,17:00,17:50,DNA Yvon Villarceau,Lagree,Leann Mroueh,0,0,False,disponible,2026-06-23 09:57
 47098035795540,2026-07-03,Vendredi,17:00,17:50,DNA Yvon Villarceau,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
+3081360,2026-07-03,Vendredi,17:00,17:50,DNA Yvon Villarceau,Reformer,Carla Triboul (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1232460,2026-07-03,Vendredi,17:30,18:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1232500,2026-07-03,Vendredi,17:30,18:20,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-27 23:18
 47098009944540,2026-07-03,Vendredi,17:30,18:20,DNA Victor Hugo,Reformer,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 47098038584460,2026-07-03,Vendredi,17:30,18:20,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-23 09:57
+3081400,2026-07-03,Vendredi,17:30,18:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3081440,2026-07-03,Vendredi,17:30,18:20,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-29 22:30
 1232540,2026-07-03,Vendredi,18:00,18:50,DNA Yvon Villarceau,Reformer,Carla Triboul (Suppléant),0,0,False,disponible,2026-06-27 23:18
 1232580,2026-07-03,Vendredi,18:00,18:50,DNA Yvon Villarceau,Lagree,Calista Ruat (Suppléant),0,0,False,disponible,2026-06-27 23:18
 47098035832780,2026-07-03,Vendredi,18:00,18:50,DNA Yvon Villarceau,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
 47098037313680,2026-07-03,Vendredi,18:00,18:50,DNA Yvon Villarceau,Lagree,Daphne Sulowski,0,0,False,disponible,2026-06-23 09:57
+3081480,2026-07-03,Vendredi,18:00,18:50,DNA Yvon Villarceau,Reformer,Carla Triboul (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3081520,2026-07-03,Vendredi,18:00,18:50,DNA Yvon Villarceau,Lagree,Calista Ruat (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1232620,2026-07-03,Vendredi,18:30,19:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-27 23:18
 1232660,2026-07-03,Vendredi,18:30,19:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 47098009870820,2026-07-03,Vendredi,18:30,19:20,DNA Victor Hugo,Reformer,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 70125489768960,2026-07-03,Vendredi,18:30,19:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-23 09:57
+3081560,2026-07-03,Vendredi,18:30,19:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-29 22:30
+3081600,2026-07-03,Vendredi,18:30,19:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1232700,2026-07-03,Vendredi,19:00,19:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-27 23:18
 1232740,2026-07-03,Vendredi,19:00,19:50,DNA Yvon Villarceau,Lagree,Calista Ruat (Suppléant),0,0,False,disponible,2026-06-27 23:18
 47098037377120,2026-07-03,Vendredi,19:00,19:50,DNA Yvon Villarceau,Lagree,Daphne Sulowski,0,0,False,disponible,2026-06-23 09:57
 70125489935420,2026-07-03,Vendredi,19:00,19:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3081640,2026-07-03,Vendredi,19:00,19:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
+3081680,2026-07-03,Vendredi,19:00,19:50,DNA Yvon Villarceau,Lagree,Calista Ruat (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1232780,2026-07-03,Vendredi,19:30,20:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-27 23:18
 1232820,2026-07-03,Vendredi,19:30,20:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-27 23:18
 47098012255700,2026-07-03,Vendredi,19:30,20:20,DNA Victor Hugo,Reformer,Victoria Schafter,0,0,False,disponible,2026-06-23 09:57
 70125489780260,2026-07-03,Vendredi,19:30,20:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-23 09:57
+3081720,2026-07-03,Vendredi,19:30,20:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-29 22:30
+3081760,2026-07-03,Vendredi,19:30,20:20,DNA Victor Hugo,Reformer,Melody Naggar (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1232860,2026-07-03,Vendredi,20:00,20:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-27 23:18
 1232900,2026-07-03,Vendredi,20:00,20:50,DNA Yvon Villarceau,Lagree,Calista Ruat (Suppléant),0,0,False,disponible,2026-06-27 23:18
 47097986561320,2026-07-03,Vendredi,20:00,20:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
 47098012039360,2026-07-03,Vendredi,20:00,20:50,DNA Yvon Villarceau,Lagree,Daphne Sulowski,0,0,False,disponible,2026-06-23 09:57
+3081800,2026-07-03,Vendredi,20:00,20:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
+3081840,2026-07-03,Vendredi,20:00,20:50,DNA Yvon Villarceau,Lagree,Calista Ruat (Suppléant),0,0,False,disponible,2026-06-29 22:30
 1232940,2026-07-03,Vendredi,21:00,21:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,inconnu,2026-06-27 23:18
 47098036398680,2026-07-03,Vendredi,21:00,21:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,inconnu,2026-06-23 09:57
+3081880,2026-07-03,Vendredi,21:00,21:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,inconnu,2026-06-29 22:30
 70125489251680,2026-07-04,Samedi,08:00,09:00,DNA Yvon Villarceau,Lagree,Alice Amat,0,0,False,inconnu,2026-06-23 09:57
+3081920,2026-07-04,Samedi,08:00,09:00,DNA Yvon Villarceau,Lagree,Alice Amat,0,0,False,inconnu,2026-06-29 22:30
 47098007425820,2026-07-04,Samedi,09:00,09:50,DNA Yvon Villarceau,Lagree,Vanessa Slomka,0,0,False,disponible,2026-06-23 09:57
 70125489627740,2026-07-04,Samedi,09:00,09:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3081960,2026-07-04,Samedi,09:00,09:50,DNA Yvon Villarceau,Reformer,Eve Lacroix (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3082000,2026-07-04,Samedi,09:00,09:50,DNA Yvon Villarceau,Lagree,Leann Mroueh (Suppléant),0,0,False,disponible,2026-06-29 22:30
 47098035901580,2026-07-04,Samedi,09:30,10:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
 70125489775240,2026-07-04,Samedi,09:30,10:15,DNA Victor Hugo,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3082040,2026-07-04,Samedi,09:30,10:15,DNA Victor Hugo,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3082080,2026-07-04,Samedi,09:30,10:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-29 22:30
 47098007455560,2026-07-04,Samedi,10:00,10:50,DNA Yvon Villarceau,Lagree,Vanessa Slomka,0,0,False,disponible,2026-06-23 09:57
 70125489639260,2026-07-04,Samedi,10:00,10:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3082120,2026-07-04,Samedi,10:00,10:50,DNA Yvon Villarceau,Reformer,Eve Lacroix (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3082160,2026-07-04,Samedi,10:00,10:50,DNA Yvon Villarceau,Lagree,Leann Mroueh (Suppléant),0,0,False,disponible,2026-06-29 22:30
 47098035956820,2026-07-04,Samedi,10:30,11:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
 70125489786600,2026-07-04,Samedi,10:30,11:15,DNA Victor Hugo,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3082200,2026-07-04,Samedi,10:30,11:15,DNA Victor Hugo,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3082240,2026-07-04,Samedi,10:30,11:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-29 22:30
 47097974012200,2026-07-04,Samedi,11:00,11:50,DNA Yvon Villarceau,Lagree,Vanessa Slomka,0,0,False,disponible,2026-06-23 09:57
 70125489649980,2026-07-04,Samedi,11:00,11:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3082280,2026-07-04,Samedi,11:00,11:50,DNA Yvon Villarceau,Reformer,Eve Lacroix (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3082320,2026-07-04,Samedi,11:00,11:50,DNA Yvon Villarceau,Lagree,Leann Mroueh (Suppléant),0,0,False,disponible,2026-06-29 22:30
 47098036023780,2026-07-04,Samedi,11:30,12:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
 70125489798420,2026-07-04,Samedi,11:30,12:15,DNA Victor Hugo,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3082360,2026-07-04,Samedi,11:30,12:15,DNA Victor Hugo,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3082400,2026-07-04,Samedi,11:30,12:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-29 22:30
 47097975778400,2026-07-04,Samedi,12:00,12:50,DNA Yvon Villarceau,Lagree,Vanessa Slomka,0,0,False,disponible,2026-06-23 09:57
 70125489644140,2026-07-04,Samedi,12:00,12:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3082440,2026-07-04,Samedi,12:00,12:50,DNA Yvon Villarceau,Reformer,Eve Lacroix (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3082480,2026-07-04,Samedi,12:00,12:50,DNA Yvon Villarceau,Lagree,Leann Mroueh (Suppléant),0,0,False,disponible,2026-06-29 22:30
 47098012594460,2026-07-04,Samedi,12:30,13:15,DNA Victor Hugo,Lagree,Hala Takkiedine,0,0,False,disponible,2026-06-23 09:57
 47098036476100,2026-07-04,Samedi,12:30,13:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
+3082520,2026-07-04,Samedi,12:30,13:15,DNA Victor Hugo,Lagree,Hala Takkiedine,0,0,False,disponible,2026-06-29 22:30
+3082560,2026-07-04,Samedi,12:30,13:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-29 22:30
 47097982280800,2026-07-04,Samedi,13:00,13:50,DNA Yvon Villarceau,Lagree,Vanessa Slomka,0,0,False,disponible,2026-06-23 09:57
 70125489655480,2026-07-04,Samedi,13:00,13:50,DNA Yvon Villarceau,Reformer,Charlie DMC,0,0,False,disponible,2026-06-23 09:57
+3082600,2026-07-04,Samedi,13:00,13:50,DNA Yvon Villarceau,Reformer,Eve Lacroix (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3082640,2026-07-04,Samedi,13:00,13:50,DNA Yvon Villarceau,Lagree,Leann Mroueh (Suppléant),0,0,False,disponible,2026-06-29 22:30
 47098012623960,2026-07-04,Samedi,13:30,14:15,DNA Victor Hugo,Lagree,Hala Takkiedine,0,0,False,disponible,2026-06-23 09:57
 47098036088160,2026-07-04,Samedi,13:30,14:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
+3082680,2026-07-04,Samedi,13:30,14:15,DNA Victor Hugo,Lagree,Hala Takkiedine,0,0,False,disponible,2026-06-29 22:30
+3082720,2026-07-04,Samedi,13:30,14:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-29 22:30
 47098037418640,2026-07-04,Samedi,14:00,14:50,DNA Yvon Villarceau,Lagree,Lucrezia Amerio,0,0,False,disponible,2026-06-23 09:57
 70125489556660,2026-07-04,Samedi,14:00,14:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3082760,2026-07-04,Samedi,14:00,14:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3082800,2026-07-04,Samedi,14:00,14:50,DNA Yvon Villarceau,Lagree,Lucrezia Amerio,0,0,False,disponible,2026-06-29 22:30
 47098012781260,2026-07-04,Samedi,14:30,15:15,DNA Victor Hugo,Lagree,Hala Takkiedine,0,0,False,disponible,2026-06-23 09:57
 47098037745300,2026-07-04,Samedi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-23 09:57
+3082840,2026-07-04,Samedi,14:30,15:15,DNA Victor Hugo,Lagree,Hala Takkiedine,0,0,False,disponible,2026-06-29 22:30
+3082880,2026-07-04,Samedi,14:30,15:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-29 22:30
 47098037489960,2026-07-04,Samedi,15:00,15:50,DNA Yvon Villarceau,Lagree,Lucrezia Amerio,0,0,False,disponible,2026-06-23 09:57
 70125489566980,2026-07-04,Samedi,15:00,15:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-23 09:57
+3082920,2026-07-04,Samedi,15:00,15:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3082960,2026-07-04,Samedi,15:00,15:50,DNA Yvon Villarceau,Lagree,Lucrezia Amerio,0,0,False,disponible,2026-06-29 22:30
 47098037809740,2026-07-04,Samedi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-23 09:57
+3083000,2026-07-04,Samedi,15:30,16:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-29 22:30
 47098035520520,2026-07-04,Samedi,16:00,16:50,DNA Yvon Villarceau,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
 47098038660840,2026-07-04,Samedi,16:00,16:50,DNA Yvon Villarceau,Lagree,Laura Provost,0,0,False,disponible,2026-06-23 09:57
 70125489346020,2026-07-04,Samedi,16:00,16:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,inconnu,2026-06-23 09:57
+3083040,2026-07-04,Samedi,16:00,16:50,DNA Yvon Villarceau,Reformer,Nina Claro,0,0,False,inconnu,2026-06-29 22:30
+3083080,2026-07-04,Samedi,16:00,16:50,DNA Yvon Villarceau,Lagree,Laura Provost,0,0,False,disponible,2026-06-29 22:30
 47098036499680,2026-07-04,Samedi,16:30,17:20,DNA Victor Hugo,Reformer,Lucrezia Amerio,0,0,False,disponible,2026-06-23 09:57
 47098037906960,2026-07-04,Samedi,16:30,17:20,DNA Victor Hugo,Lagree,Carla Triboul,0,0,False,disponible,2026-06-23 09:57
+3083120,2026-07-04,Samedi,16:30,17:20,DNA Victor Hugo,Reformer,Lucrezia Amerio,0,0,False,disponible,2026-06-29 22:30
+3083160,2026-07-04,Samedi,16:30,17:20,DNA Victor Hugo,Lagree,Carla Triboul,0,0,False,disponible,2026-06-29 22:30
 47098035591320,2026-07-04,Samedi,17:00,17:50,DNA Yvon Villarceau,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
 47098038733560,2026-07-04,Samedi,17:00,17:50,DNA Yvon Villarceau,Lagree,Laura Provost,0,0,False,disponible,2026-06-23 09:57
+3083200,2026-07-04,Samedi,17:00,17:50,DNA Yvon Villarceau,Reformer,Olivia Lamarre Reyner (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3083240,2026-07-04,Samedi,17:00,17:50,DNA Yvon Villarceau,Lagree,Laura Provost,0,0,False,disponible,2026-06-29 22:30
 47098036536520,2026-07-04,Samedi,17:30,18:20,DNA Victor Hugo,Reformer,Lucrezia Amerio,0,0,False,disponible,2026-06-23 09:57
 47098037985000,2026-07-04,Samedi,17:30,18:15,DNA Victor Hugo,Lagree,Carla Triboul,0,0,False,disponible,2026-06-23 09:57
+3083280,2026-07-04,Samedi,17:30,18:20,DNA Victor Hugo,Reformer,Lucrezia Amerio,0,0,False,disponible,2026-06-29 22:30
+3083320,2026-07-04,Samedi,17:30,18:15,DNA Victor Hugo,Lagree,Carla Triboul,0,0,False,disponible,2026-06-29 22:30
 47098035642280,2026-07-04,Samedi,18:00,18:50,DNA Yvon Villarceau,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
 47098038774780,2026-07-04,Samedi,18:00,18:50,DNA Yvon Villarceau,Lagree,Laura Provost,0,0,False,disponible,2026-06-23 09:57
+3083360,2026-07-04,Samedi,18:00,18:50,DNA Yvon Villarceau,Reformer,Olivia Lamarre Reyner (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3083400,2026-07-04,Samedi,18:00,18:50,DNA Yvon Villarceau,Lagree,Laura Provost,0,0,False,disponible,2026-06-29 22:30
 47098036577740,2026-07-04,Samedi,18:30,19:20,DNA Victor Hugo,Reformer,Lucrezia Amerio,0,0,False,disponible,2026-06-23 09:57
 47098038015900,2026-07-04,Samedi,18:30,19:15,DNA Victor Hugo,Lagree,Carla Triboul,0,0,False,disponible,2026-06-23 09:57
+3083440,2026-07-04,Samedi,18:30,19:20,DNA Victor Hugo,Reformer,Lucrezia Amerio,0,0,False,disponible,2026-06-29 22:30
+3083480,2026-07-04,Samedi,18:30,19:15,DNA Victor Hugo,Lagree,Carla Triboul,0,0,False,disponible,2026-06-29 22:30
 47098035727420,2026-07-04,Samedi,19:00,19:50,DNA Yvon Villarceau,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
 47098038850600,2026-07-04,Samedi,19:00,19:50,DNA Yvon Villarceau,Lagree,Laura Provost,0,0,False,disponible,2026-06-23 09:57
+3083520,2026-07-04,Samedi,19:00,19:50,DNA Yvon Villarceau,Reformer,Olivia Lamarre Reyner (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3083560,2026-07-04,Samedi,19:00,19:50,DNA Yvon Villarceau,Lagree,Laura Provost,0,0,False,disponible,2026-06-29 22:30
 47098036610680,2026-07-04,Samedi,19:30,20:20,DNA Victor Hugo,Reformer,Lucrezia Amerio,0,0,False,disponible,2026-06-23 09:57
 47098038055780,2026-07-04,Samedi,19:30,20:15,DNA Victor Hugo,Lagree,Carla Triboul,0,0,False,disponible,2026-06-23 09:57
+3083600,2026-07-04,Samedi,19:30,20:20,DNA Victor Hugo,Reformer,Lucrezia Amerio,0,0,False,disponible,2026-06-29 22:30
+3083640,2026-07-04,Samedi,19:30,20:15,DNA Victor Hugo,Lagree,Carla Triboul,0,0,False,disponible,2026-06-29 22:30
 70125489340720,2026-07-05,Dimanche,09:00,09:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489666280,2026-07-05,Dimanche,09:00,09:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3083680,2026-07-05,Dimanche,09:00,09:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3083720,2026-07-05,Dimanche,09:00,09:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 47098013040860,2026-07-05,Dimanche,09:30,10:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-23 09:57
 70125489792260,2026-07-05,Dimanche,09:30,10:15,DNA Victor Hugo,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
+3083760,2026-07-05,Dimanche,09:30,10:15,DNA Victor Hugo,Lagree,Carla Triboul (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3083800,2026-07-05,Dimanche,09:30,10:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-29 22:30
 70125489350400,2026-07-05,Dimanche,10:00,10:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489661480,2026-07-05,Dimanche,10:00,10:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3083840,2026-07-05,Dimanche,10:00,10:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3083880,2026-07-05,Dimanche,10:00,10:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 47098013413920,2026-07-05,Dimanche,10:30,11:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-23 09:57
 70125489803200,2026-07-05,Dimanche,10:30,11:15,DNA Victor Hugo,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
+3083920,2026-07-05,Dimanche,10:30,11:15,DNA Victor Hugo,Lagree,Carla Triboul (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3083960,2026-07-05,Dimanche,10:30,11:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-29 22:30
 70125489427320,2026-07-05,Dimanche,11:00,11:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489672920,2026-07-05,Dimanche,11:00,11:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3084000,2026-07-05,Dimanche,11:00,11:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3084040,2026-07-05,Dimanche,11:00,11:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 47098013468360,2026-07-05,Dimanche,11:30,12:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-23 09:57
 70125489813000,2026-07-05,Dimanche,11:30,12:15,DNA Victor Hugo,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
+3084080,2026-07-05,Dimanche,11:30,12:15,DNA Victor Hugo,Lagree,Carla Triboul (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3084120,2026-07-05,Dimanche,11:30,12:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-29 22:30
 70125489422800,2026-07-05,Dimanche,12:00,12:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489682160,2026-07-05,Dimanche,12:00,12:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3084160,2026-07-05,Dimanche,12:00,12:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3084200,2026-07-05,Dimanche,12:00,12:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 47098013581780,2026-07-05,Dimanche,12:30,13:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-23 09:57
 70125489807800,2026-07-05,Dimanche,12:30,13:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-23 09:57
+3084240,2026-07-05,Dimanche,12:30,13:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-29 22:30
+3084280,2026-07-05,Dimanche,12:30,13:20,DNA Victor Hugo,Reformer,Cecilia Pinto,0,0,False,disponible,2026-06-29 22:30
 70125489432180,2026-07-05,Dimanche,13:00,13:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489677500,2026-07-05,Dimanche,13:00,13:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3084320,2026-07-05,Dimanche,13:00,13:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3084360,2026-07-05,Dimanche,13:00,13:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 70125489817920,2026-07-05,Dimanche,13:30,14:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-23 09:57
+3084400,2026-07-05,Dimanche,13:30,14:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-29 22:30
 70125489604120,2026-07-05,Dimanche,14:00,14:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-23 09:57
 70125489689160,2026-07-05,Dimanche,14:00,14:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-23 09:57
+3084440,2026-07-05,Dimanche,14:00,14:50,DNA Yvon Villarceau,Lagree,Nina Claro,0,0,False,disponible,2026-06-29 22:30
+3084480,2026-07-05,Dimanche,14:00,14:50,DNA Yvon Villarceau,Reformer,Eve Lacroix,0,0,False,disponible,2026-06-29 22:30
 70125489829140,2026-07-05,Dimanche,14:30,15:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-23 09:57
+3084520,2026-07-05,Dimanche,14:30,15:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-29 22:30
 47098037585260,2026-07-05,Dimanche,15:00,15:50,DNA Yvon Villarceau,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-23 09:57
+3084560,2026-07-05,Dimanche,15:00,15:50,DNA Yvon Villarceau,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-29 22:30
 70125489823840,2026-07-05,Dimanche,15:30,16:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-23 09:57
+3084600,2026-07-05,Dimanche,15:30,16:15,DNA Victor Hugo,Lagree,Mathilde Lafont,0,0,False,disponible,2026-06-29 22:30
 47097982905440,2026-07-05,Dimanche,16:00,16:50,DNA Yvon Villarceau,Lagree,Catrin Karlson English class,0,0,False,disponible,2026-06-23 09:57
 47098037625640,2026-07-05,Dimanche,16:00,16:50,DNA Yvon Villarceau,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-23 09:57
+3084640,2026-07-05,Dimanche,16:00,16:50,DNA Yvon Villarceau,Lagree,Catrin Karlson English class,0,0,False,disponible,2026-06-29 22:30
+3084680,2026-07-05,Dimanche,16:00,16:50,DNA Yvon Villarceau,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-29 22:30
 47097983249640,2026-07-05,Dimanche,17:00,17:50,DNA Yvon Villarceau,Lagree,Catrin Karlson English class,0,0,False,disponible,2026-06-23 09:57
 47098037693380,2026-07-05,Dimanche,17:00,17:50,DNA Yvon Villarceau,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-23 09:57
+3084720,2026-07-05,Dimanche,17:00,17:50,DNA Yvon Villarceau,Lagree,Catrin Karlson English class,0,0,False,disponible,2026-06-29 22:30
+3084760,2026-07-05,Dimanche,17:00,17:50,DNA Yvon Villarceau,Reformer,Olivia Lamarre Reyner,0,0,False,disponible,2026-06-29 22:30
 47098035673700,2026-07-05,Dimanche,17:30,18:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
 47097983922480,2026-07-05,Dimanche,18:00,18:50,DNA Yvon Villarceau,Lagree,Catrin Karlson English class,0,0,False,disponible,2026-06-23 09:57
 47098007750060,2026-07-05,Dimanche,18:00,18:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,False,disponible,2026-06-23 09:57
+3084800,2026-07-05,Dimanche,18:00,18:50,DNA Yvon Villarceau,Lagree,Catrin Karlson English class,0,0,False,disponible,2026-06-29 22:30
+3084840,2026-07-05,Dimanche,18:00,18:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,False,disponible,2026-06-29 22:30
 47098035688340,2026-07-05,Dimanche,18:30,19:20,DNA Victor Hugo,Reformer,Chloe Graeffly,0,0,False,disponible,2026-06-23 09:57
 47098038089660,2026-07-05,Dimanche,18:30,19:15,DNA Victor Hugo,Lagree,Hala Takkiedine,0,0,False,disponible,2026-06-23 09:57
+3084880,2026-07-05,Dimanche,18:30,19:20,DNA Victor Hugo,Reformer,Olivia Lamarre Reyner (Suppléant),0,0,False,disponible,2026-06-29 22:30
+3084920,2026-07-05,Dimanche,18:30,19:15,DNA Victor Hugo,Lagree,Hala Takkiedine,0,0,False,disponible,2026-06-29 22:30
 47097984227920,2026-07-05,Dimanche,19:00,19:50,DNA Yvon Villarceau,Lagree,Catrin Karlson English class,0,0,False,disponible,2026-06-23 09:57
 47098007894480,2026-07-05,Dimanche,19:00,19:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,False,disponible,2026-06-23 09:57
+3084960,2026-07-05,Dimanche,19:00,19:50,DNA Yvon Villarceau,Lagree,Catrin Karlson English class,0,0,False,disponible,2026-06-29 22:30
+3085000,2026-07-05,Dimanche,19:00,19:50,DNA Yvon Villarceau,Reformer,Marie De Saint Simon,0,0,False,disponible,2026-06-29 22:30
 47098038163580,2026-07-05,Dimanche,19:30,20:15,DNA Victor Hugo,Lagree,Hala Takkiedine,0,0,False,disponible,2026-06-23 09:57
+3085040,2026-07-05,Dimanche,19:30,20:15,DNA Victor Hugo,Lagree,Hala Takkiedine,0,0,False,disponible,2026-06-29 22:30
 70125489544840,2026-07-06,Lundi,08:00,08:50,DNA Yvon Villarceau,Reformer,Rebecca Raccah,0,0,False,disponible,2026-06-23 09:57
 70125489584640,2026-07-06,Lundi,08:00,08:50,DNA Yvon Villarceau,Lagree,Ela Anastasia,0,0,False,disponible,2026-06-23 09:57
 47098009977640,2026-07-06,Lundi,08:30,09:20,DNA Victor Hugo,Reformer,Joy Duquesne,0,0,False,disponible,2026-06-23 09:57
