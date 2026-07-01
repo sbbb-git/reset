@@ -314,48 +314,58 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-06-28,Dimanche,18:00,18:50,Studio Beaubourg,Le Cercle Original,Sabri .,56,0,True,2026-07-01 15:32
 2026-06-28,Dimanche,18:00,18:50,Studio Beaubourg,Le Cercle Original,Laurie .,56,0,True,2026-07-01 15:32
 2026-06-28,Dimanche,18:00,18:50,Studio Montmartre,Le Cercle Original,Kader .,44,21,True,2026-07-01 15:32
-2026-06-29,Lundi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Kader .,56,15,True,2026-07-01 15:32
-2026-06-29,Lundi,12:30,13:20,Studio Montmartre,Le Cercle Original,Romain .,44,27,True,2026-07-01 15:32
-2026-06-29,Lundi,18:30,19:20,Studio Beaubourg,Le Cercle 5 vs 5 🔥,Marvin .,56,32,True,2026-07-01 15:32
-2026-06-29,Lundi,18:30,19:20,Studio Montmartre,Le Cercle 5 vs 5 🔥,Coach remplaçant .,44,0,True,2026-07-01 15:32
-2026-06-29,Lundi,19:30,20:20,Studio Beaubourg,Le Cercle Original,Marvin .,56,24,True,2026-07-01 15:32
-2026-06-29,Lundi,19:30,20:20,Studio Montmartre,Le Cercle Original,Coach remplaçant .,44,0,True,2026-07-01 15:32
-2026-06-29,Lundi,20:30,21:20,Studio Beaubourg,Le Cercle Original,Rafaël .,56,14,True,2026-07-01 15:32
-2026-06-30,Mardi,07:30,08:20,Studio Montmartre,Le Cercle Original,Maud .,44,19,True,2026-07-01 15:32
-2026-06-30,Mardi,07:45,08:35,Studio Beaubourg,Le Cercle Original,Kader .,56,0,True,2026-07-01 15:32
-2026-06-30,Mardi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Marvin .,56,21,True,2026-07-01 15:32
-2026-06-30,Mardi,12:30,13:20,Studio Montmartre,Le Cercle Original,Yaya .,44,40,True,2026-07-01 15:32
-2026-06-30,Mardi,18:30,19:20,Studio Beaubourg,Le Cercle Original,Maud .,56,41,True,2026-07-01 15:32
-2026-06-30,Mardi,18:30,19:20,Studio Montmartre,Le Cercle Original,Romain .,44,32,True,2026-07-01 15:32
-2026-06-30,Mardi,19:30,20:20,Studio Beaubourg,Le Cercle Original,Yaya .,56,54,True,2026-07-01 15:32
-2026-06-30,Mardi,19:30,20:20,Studio Montmartre,Le Cercle Original,Romain .,44,25,True,2026-07-01 15:32
-2026-06-30,Mardi,20:30,21:20,Studio Beaubourg,Le Cercle Original,Justine .,56,13,True,2026-07-01 15:32
-2026-06-30,Mardi,20:30,21:20,Studio Montmartre,Le Cercle Original,Laurie .,44,10,True,2026-07-01 15:32
-2026-07-01,Mercredi,07:30,08:20,Studio Montmartre,Le Cercle Original,Maud .,44,22,True,2026-07-01 15:32
-2026-07-01,Mercredi,07:45,08:35,Studio Beaubourg,Le Cercle Original,Coach remplaçant .,56,0,True,2026-07-01 15:32
-2026-07-01,Mercredi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Yaya .,56,31,True,2026-07-01 15:32
-2026-07-01,Mercredi,12:30,13:20,Studio Montmartre,Le Cercle Original,Rafaël .,44,14,True,2026-07-01 15:32
-2026-07-01,Mercredi,18:30,19:20,Studio Beaubourg,Le Cercle Original,Romain .,56,27,False,2026-07-01 15:32
-2026-07-01,Mercredi,18:30,19:20,Studio Montmartre,Le Cercle Original,Yaya .,44,43,False,2026-07-01 15:32
-2026-07-01,Mercredi,19:30,20:20,Studio Beaubourg,Le Cercle Focus - Arms & Abs 🥊,Rafaël .,56,25,False,2026-07-01 15:32
-2026-07-01,Mercredi,19:30,20:20,Studio Montmartre,Le Cercle Focus - Arms & Abs 🥊,Sabri .,44,23,False,2026-07-01 15:32
-2026-07-01,Mercredi,20:30,21:20,Studio Beaubourg,Le Cercle Original,Rafaël .,56,9,False,2026-07-01 15:32
-2026-07-01,Mercredi,20:30,21:20,Studio Montmartre,Le Cercle Original,Paloma .,44,7,False,2026-07-01 15:32
-2026-07-02,Jeudi,07:30,08:20,Studio Montmartre,Le Cercle Original,Anne K .,44,0,False,2026-07-01 15:32
-2026-07-02,Jeudi,07:45,08:35,Studio Beaubourg,Le Cercle Original,Yaya .,56,21,False,2026-07-01 15:32
-2026-07-02,Jeudi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Rafaël .,56,12,False,2026-07-01 15:32
-2026-07-02,Jeudi,12:30,13:20,Studio Montmartre,Le Cercle Original,Romain .,44,10,False,2026-07-01 15:32
-2026-07-02,Jeudi,17:30,18:20,Studio Beaubourg,Le Cercle Original,Camille .,56,0,False,2026-07-01 15:32
-2026-07-02,Jeudi,18:30,19:20,Studio Beaubourg,Le Cercle Original,Rafaël .,56,27,False,2026-07-01 15:32
-2026-07-02,Jeudi,18:30,19:20,Studio Montmartre,Le Cercle Original,Maud .,44,17,False,2026-07-01 15:32
-2026-07-02,Jeudi,19:30,20:20,Studio Beaubourg,Le Cercle Original,Yaya .,56,47,False,2026-07-01 15:32
-2026-07-02,Jeudi,19:30,20:20,Studio Montmartre,Le Cercle Original,Maud .,44,10,False,2026-07-01 15:32
-2026-07-02,Jeudi,20:30,21:20,Studio Beaubourg,Le Cercle Original,Laurie .,56,0,False,2026-07-01 15:32
-2026-07-03,Vendredi,07:45,08:35,Studio Beaubourg,Le Cercle Focus - Legs & Booty  🍑,Romain .,56,9,False,2026-07-01 15:32
-2026-07-03,Vendredi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Coach remplaçant .,56,11,False,2026-07-01 15:32
-2026-07-03,Vendredi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Rafaël .,56,0,False,2026-07-01 15:32
-2026-07-03,Vendredi,12:30,13:20,Studio Montmartre,Le Cercle Original,Rafaël .,44,18,False,2026-07-01 15:32
-2026-07-03,Vendredi,17:30,18:20,Studio Montmartre,Le Cercle Original,Romain .,44,6,False,2026-07-01 15:32
-2026-07-03,Vendredi,18:00,18:50,Studio Beaubourg,Le Cercle Original,Rafaël .,56,11,False,2026-07-01 15:32
-2026-07-03,Vendredi,18:30,19:20,Studio Montmartre,Le Cercle Original,Laurie .,44,16,False,2026-07-01 15:32
-2026-07-03,Vendredi,19:00,19:50,Studio Beaubourg,Le Cercle Original,Kader .,56,15,False,2026-07-01 15:32
+2026-06-29,Lundi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Kader .,56,15,True,2026-07-02 00:14
+2026-06-29,Lundi,12:30,13:20,Studio Montmartre,Le Cercle Original,Romain .,44,27,True,2026-07-02 00:14
+2026-06-29,Lundi,18:30,19:20,Studio Beaubourg,Le Cercle 5 vs 5 🔥,Marvin .,56,32,True,2026-07-02 00:14
+2026-06-29,Lundi,18:30,19:20,Studio Montmartre,Le Cercle 5 vs 5 🔥,Coach remplaçant .,44,0,True,2026-07-02 00:14
+2026-06-29,Lundi,19:30,20:20,Studio Beaubourg,Le Cercle Original,Marvin .,56,24,True,2026-07-02 00:14
+2026-06-29,Lundi,19:30,20:20,Studio Montmartre,Le Cercle Original,Coach remplaçant .,44,0,True,2026-07-02 00:14
+2026-06-29,Lundi,20:30,21:20,Studio Beaubourg,Le Cercle Original,Rafaël .,56,14,True,2026-07-02 00:14
+2026-06-30,Mardi,07:30,08:20,Studio Montmartre,Le Cercle Original,Maud .,44,19,True,2026-07-02 00:14
+2026-06-30,Mardi,07:45,08:35,Studio Beaubourg,Le Cercle Original,Kader .,56,0,True,2026-07-02 00:14
+2026-06-30,Mardi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Marvin .,56,21,True,2026-07-02 00:14
+2026-06-30,Mardi,12:30,13:20,Studio Montmartre,Le Cercle Original,Yaya .,44,40,True,2026-07-02 00:14
+2026-06-30,Mardi,18:30,19:20,Studio Beaubourg,Le Cercle Original,Maud .,56,41,True,2026-07-02 00:14
+2026-06-30,Mardi,18:30,19:20,Studio Montmartre,Le Cercle Original,Romain .,44,32,True,2026-07-02 00:14
+2026-06-30,Mardi,19:30,20:20,Studio Beaubourg,Le Cercle Original,Yaya .,56,54,True,2026-07-02 00:14
+2026-06-30,Mardi,19:30,20:20,Studio Montmartre,Le Cercle Original,Romain .,44,25,True,2026-07-02 00:14
+2026-06-30,Mardi,20:30,21:20,Studio Beaubourg,Le Cercle Original,Justine .,56,13,True,2026-07-02 00:14
+2026-06-30,Mardi,20:30,21:20,Studio Montmartre,Le Cercle Original,Laurie .,44,10,True,2026-07-02 00:14
+2026-07-01,Mercredi,07:30,08:20,Studio Montmartre,Le Cercle Original,Maud .,44,22,True,2026-07-02 00:14
+2026-07-01,Mercredi,07:45,08:35,Studio Beaubourg,Le Cercle Original,Coach remplaçant .,56,0,True,2026-07-02 00:14
+2026-07-01,Mercredi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Yaya .,56,31,True,2026-07-02 00:14
+2026-07-01,Mercredi,12:30,13:20,Studio Montmartre,Le Cercle Original,Rafaël .,44,14,True,2026-07-02 00:14
+2026-07-01,Mercredi,18:30,19:20,Studio Beaubourg,Le Cercle Original,Romain .,56,34,True,2026-07-02 00:14
+2026-07-01,Mercredi,18:30,19:20,Studio Montmartre,Le Cercle Original,Yaya .,44,42,True,2026-07-02 00:14
+2026-07-01,Mercredi,19:30,20:20,Studio Beaubourg,Le Cercle Focus - Arms & Abs 🥊,Rafaël .,56,24,True,2026-07-02 00:14
+2026-07-01,Mercredi,19:30,20:20,Studio Montmartre,Le Cercle Focus - Arms & Abs 🥊,Sabri .,44,30,True,2026-07-02 00:14
+2026-07-01,Mercredi,20:30,21:20,Studio Beaubourg,Le Cercle Original,Rafaël .,56,15,True,2026-07-02 00:14
+2026-07-01,Mercredi,20:30,21:20,Studio Montmartre,Le Cercle Original,Paloma .,44,8,True,2026-07-02 00:14
+2026-07-02,Jeudi,07:30,08:20,Studio Montmartre,Le Cercle Original,Anne K .,44,0,False,2026-07-02 00:14
+2026-07-02,Jeudi,07:45,08:35,Studio Beaubourg,Le Cercle Original,Yaya .,56,21,False,2026-07-02 00:14
+2026-07-02,Jeudi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Rafaël .,56,11,False,2026-07-02 00:14
+2026-07-02,Jeudi,12:30,13:20,Studio Montmartre,Le Cercle Original,Romain .,44,13,False,2026-07-02 00:14
+2026-07-02,Jeudi,17:30,18:20,Studio Beaubourg,Le Cercle Original,Camille .,56,0,False,2026-07-02 00:14
+2026-07-02,Jeudi,18:30,19:20,Studio Beaubourg,Le Cercle Original,Rafaël .,56,28,False,2026-07-02 00:14
+2026-07-02,Jeudi,18:30,19:20,Studio Montmartre,Le Cercle Original,Maud .,44,17,False,2026-07-02 00:14
+2026-07-02,Jeudi,19:30,20:20,Studio Beaubourg,Le Cercle Original,Yaya .,56,45,False,2026-07-02 00:14
+2026-07-02,Jeudi,19:30,20:20,Studio Montmartre,Le Cercle Original,Maud .,44,20,False,2026-07-02 00:14
+2026-07-02,Jeudi,20:30,21:20,Studio Beaubourg,Le Cercle Original,Laurie .,56,0,False,2026-07-02 00:14
+2026-07-03,Vendredi,07:45,08:35,Studio Beaubourg,Le Cercle Focus - Legs & Booty  🍑,Romain .,56,10,False,2026-07-02 00:14
+2026-07-03,Vendredi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Coach remplaçant .,56,10,False,2026-07-02 00:14
+2026-07-03,Vendredi,12:30,13:20,Studio Beaubourg,Le Cercle Original,Rafaël .,56,0,False,2026-07-02 00:14
+2026-07-03,Vendredi,12:30,13:20,Studio Montmartre,Le Cercle Original,Rafaël .,44,21,False,2026-07-02 00:14
+2026-07-03,Vendredi,17:30,18:20,Studio Montmartre,Le Cercle Original,Romain .,44,7,False,2026-07-02 00:14
+2026-07-03,Vendredi,18:00,18:50,Studio Beaubourg,Le Cercle Original,Rafaël .,56,13,False,2026-07-02 00:14
+2026-07-03,Vendredi,18:30,19:20,Studio Montmartre,Le Cercle Original,Laurie .,44,17,False,2026-07-02 00:14
+2026-07-03,Vendredi,19:00,19:50,Studio Beaubourg,Le Cercle Original,Kader .,56,14,False,2026-07-02 00:14
+2026-07-04,Samedi,10:00,10:50,Studio Beaubourg,Le Cercle Original,Coach remplaçant .,56,0,False,2026-07-02 00:14
+2026-07-04,Samedi,10:00,10:50,Studio Montmartre,Le Cercle Original,Marvin .,44,7,False,2026-07-02 00:14
+2026-07-04,Samedi,11:00,11:50,Studio Beaubourg,Le Cercle 5 vs 5 🔥,Yaya .,56,16,False,2026-07-02 00:14
+2026-07-04,Samedi,11:00,11:50,Studio Montmartre,Le Cercle 5 vs 5 🔥,Marvin .,44,10,False,2026-07-02 00:14
+2026-07-04,Samedi,12:00,12:50,Studio Beaubourg,Le Cercle Original,Yaya .,56,40,False,2026-07-02 00:14
+2026-07-04,Samedi,12:00,12:50,Studio Montmartre,Le Cercle Original,Rafaël .,44,3,False,2026-07-02 00:14
+2026-07-04,Samedi,17:00,17:50,Studio Montmartre,Le Cercle Original,Paloma .,44,2,False,2026-07-02 00:14
+2026-07-04,Samedi,17:30,18:20,Studio Beaubourg,Le Cercle Original,Sabri .,56,6,False,2026-07-02 00:14
+2026-07-04,Samedi,18:00,18:50,Studio Montmartre,Le Cercle Original,Rafaël .,44,0,False,2026-07-02 00:14
+2026-07-04,Samedi,18:30,19:20,Studio Beaubourg,Le Cercle Original,Esther .,56,7,False,2026-07-02 00:14
