@@ -1,17 +1,7 @@
 {
- "generated_at": "2026-07-06T04:53:36.701217",
+ "generated_at": "2026-07-06T09:03:27.889709",
  "idle_24h": [],
  "price_shifts": [
-  {
-   "slug": "forest-hill-nanterre-la-defense",
-   "source": "anybuddy",
-   "name": "forest-hill-nanterre-la-defense",
-   "cp": "92000",
-   "prix_30j": 96.0,
-   "prix_recent": 54.0,
-   "delta_pct": -43.8,
-   "direction": "baisse"
-  },
   {
    "slug": "doinsport-f73b2bef-eedd-4fba-9d72-15595ac723fa",
    "source": "doinsport",
@@ -75,9 +65,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 6,
+  "total_anomalies": 5,
   "idle_24h": 0,
-  "price_shifts": 6,
+  "price_shifts": 5,
   "volume_drops": 0,
   "new_clubs_14d": 1
  }
