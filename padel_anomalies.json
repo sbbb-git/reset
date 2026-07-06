@@ -1,194 +1,75 @@
 {
- "generated_at": "2026-06-21T23:53:14.108648",
- "idle_24h": [
-  {
-   "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
-   "source": "doinsport",
-   "name": "Padel Pulsion",
-   "cp": "91570",
-   "last_seen": "2026-06-02 21:44",
-   "hours_idle": 458.2
-  },
-  {
-   "slug": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
-   "source": "anybuddy",
-   "name": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
-   "cp": "78170",
-   "last_seen": "2026-06-19 07:34",
-   "hours_idle": 64.3
-  }
- ],
+ "generated_at": "2026-07-06T00:11:14.182214",
+ "idle_24h": [],
  "price_shifts": [
   {
-   "slug": "doinsport-59044915-a142-4f27-a8f4-433b199d73d5",
+   "slug": "forest-hill-nanterre-la-defense",
+   "source": "anybuddy",
+   "name": "forest-hill-nanterre-la-defense",
+   "cp": "92000",
+   "prix_30j": 96.0,
+   "prix_recent": 54.0,
+   "delta_pct": -43.8,
+   "direction": "baisse"
+  },
+  {
+   "slug": "doinsport-f73b2bef-eedd-4fba-9d72-15595ac723fa",
    "source": "doinsport",
-   "name": "Play Padel Alfortville",
-   "cp": "94140",
-   "prix_30j": 36.0,
-   "prix_recent": 72.0,
-   "delta_pct": 100.0,
+   "name": "B14",
+   "cp": "91070",
+   "prix_30j": 49.5,
+   "prix_recent": 66.0,
+   "delta_pct": 33.3,
    "direction": "hausse"
+  },
+  {
+   "slug": "sannois-oss",
+   "source": "anybuddy",
+   "name": "sannois-oss",
+   "cp": "95110",
+   "prix_30j": 54.0,
+   "prix_recent": 36.0,
+   "delta_pct": -33.3,
+   "direction": "baisse"
+  },
+  {
+   "slug": "tennis-du-golf-de-la-boulie-versailles",
+   "source": "anybuddy",
+   "name": "tennis-du-golf-de-la-boulie-versailles",
+   "cp": "78000",
+   "prix_30j": 60.0,
+   "prix_recent": 80.0,
+   "delta_pct": 33.3,
+   "direction": "hausse"
+  },
+  {
+   "slug": "wrc-trappes",
+   "source": "anybuddy",
+   "name": "wrc-trappes",
+   "cp": "78190",
+   "prix_30j": 72.0,
+   "prix_recent": 48.0,
+   "delta_pct": -33.3,
+   "direction": "baisse"
   },
   {
    "slug": "4padel-epinay-sur-seine",
    "source": "anybuddy",
    "name": "4padel-epinay-sur-seine",
    "cp": "93800",
-   "prix_30j": 54.0,
-   "prix_recent": 78.0,
-   "delta_pct": 44.4,
-   "direction": "hausse"
-  },
-  {
-   "slug": "home-padel-meaux",
-   "source": "anybuddy",
-   "name": "home-padel-meaux",
-   "cp": "77100",
-   "prix_30j": 54.0,
-   "prix_recent": 72.0,
-   "delta_pct": 33.3,
-   "direction": "hausse"
-  },
-  {
-   "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
-   "source": "doinsport",
-   "name": "Padel Pulsion",
-   "cp": "91570",
-   "prix_30j": 30.0,
-   "prix_recent": 21.0,
-   "delta_pct": -30.0,
+   "prix_30j": 78.0,
+   "prix_recent": 54.0,
+   "delta_pct": -30.8,
    "direction": "baisse"
   }
  ],
- "volume_drops": [
-  {
-   "slug": "doinsport-27823ee9-57fe-4fbc-92ba-079443df934e",
-   "name": "Senart Padel",
-   "cp": "77380",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 44.6,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-46006260-0a24-4f36-b27b-a489ed46a9c3",
-   "name": "Padel Camp",
-   "cp": "78260",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 37.6,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-59044915-a142-4f27-a8f4-433b199d73d5",
-   "name": "Play Padel Alfortville",
-   "cp": "94140",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 92.9,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-5f3c10f2-e0fa-4fd6-a707-04f7ea53deb9",
-   "name": "Bad Pad",
-   "cp": "91420",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 35.2,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-81d36fb8-553b-4fe5-87f4-ab76a12acbaf",
-   "name": "Padel A.C",
-   "cp": "95700",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 136.7,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
-   "name": "Domaine de Lassy",
-   "cp": "95270",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 33.4,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-ad752496-c285-4ff2-9914-f7b9a2382ded",
-   "name": "Royal Padel Club",
-   "cp": "78000",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 22.2,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-b92e567b-e393-4f48-9e88-f36cdae6dd5b",
-   "name": "Tennis Club de Paris",
-   "cp": "75016",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 8.9,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-d016516b-15a9-4f04-a359-53c6be5395ac",
-   "name": "Tennis Club de la Chataigneraie",
-   "cp": "92500",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 38.0,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-f52e0e2b-788f-4f0c-aa91-a8841c8d9d22",
-   "name": "FOOTBALL 5 CLUB",
-   "cp": "78710",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 11.2,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-f592228c-faee-4fd9-93a9-83a651a0703b",
-   "name": "Big Five & Padel",
-   "cp": "95350",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 9.3,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-f67a973f-6bbb-4f01-9a9b-89d2e8c12c52",
-   "name": "Aldea Padel",
-   "cp": "91100",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 30.8,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-f73b2bef-eedd-4fba-9d72-15595ac723fa",
-   "name": "B14",
-   "cp": "91070",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 106.9,
-   "delta_pct": -100.0
-  },
-  {
-   "slug": "doinsport-f7defd74-40b0-4fd2-be0f-69d69c4b4bd6",
-   "name": "Planète Raquettes",
-   "cp": "77870",
-   "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 24.7,
-   "delta_pct": -100.0
-  }
- ],
- "new_clubs": [
-  {
-   "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
-   "source": "doinsport",
-   "name": "ASS TENNIS CLUB SARCELLOIS",
-   "cp": "95200",
-   "first_seen": "2026-06-12 13:04",
-   "days_since": 9
-  }
- ],
+ "volume_drops": [],
+ "new_clubs": [],
  "summary": {
-  "total_anomalies": 20,
-  "idle_24h": 2,
-  "price_shifts": 4,
-  "volume_drops": 14,
-  "new_clubs_14d": 1
+  "total_anomalies": 6,
+  "idle_24h": 0,
+  "price_shifts": 6,
+  "volume_drops": 0,
+  "new_clubs_14d": 0
  }
 }
