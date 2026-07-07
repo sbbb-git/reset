@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-07T03:44:17.397360",
+ "generated_at": "2026-07-07T07:44:08.514143",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,12 +9,12 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 143044,
-   "doinsport": 11131,
-   "playtomic": 48449,
-   "urbanpadel": 14764
+   "anybuddy": 138261,
+   "doinsport": 10635,
+   "playtomic": 47260,
+   "urbanpadel": 14363
   },
-  "n_sessions_live": 217388,
+  "n_sessions_live": 210519,
   "n_sessions_history": 146856,
   "pop_idf": 12258660
  },
@@ -37,7 +37,7 @@
    "revenu_median_uc": 24820,
    "clubs_padel": 22,
    "hab_par_club": 66017,
-   "prix_median_90min": 60.0
+   "prix_median_90min": 56.0
   },
   "78": {
    "nom": "Yvelines",
@@ -57,7 +57,7 @@
    "revenu_median_uc": 24370,
    "clubs_padel": 13,
    "hab_par_club": 101303,
-   "prix_median_90min": 63
+   "prix_median_90min": 60.0
   },
   "92": {
    "nom": "Hauts-de-Seine",
