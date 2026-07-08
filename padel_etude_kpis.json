@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-08T00:01:31.240972",
+ "generated_at": "2026-07-08T03:38:54.023626",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,12 +9,12 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 143368,
-   "doinsport": 10903,
-   "playtomic": 49021,
-   "urbanpadel": 15040
+   "anybuddy": 138296,
+   "doinsport": 10322,
+   "playtomic": 47564,
+   "urbanpadel": 14548
   },
-  "n_sessions_live": 218332,
+  "n_sessions_live": 210730,
   "n_sessions_history": 146856,
   "pop_idf": 12258660
  },
@@ -47,7 +47,7 @@
    "revenu_median_uc": 28290,
    "clubs_padel": 20,
    "hab_par_club": 72431,
-   "prix_median_90min": 72.0
+   "prix_median_90min": 70.0
   },
   "91": {
    "nom": "Essonne",
@@ -57,7 +57,7 @@
    "revenu_median_uc": 24370,
    "clubs_padel": 13,
    "hab_par_club": 101303,
-   "prix_median_90min": 60.0
+   "prix_median_90min": 60
   },
   "92": {
    "nom": "Hauts-de-Seine",
@@ -67,7 +67,7 @@
    "revenu_median_uc": 29710,
    "clubs_padel": 12,
    "hab_par_club": 134553,
-   "prix_median_90min": 75.0
+   "prix_median_90min": 72
   },
   "93": {
    "nom": "Seine-Saint-Denis",
@@ -97,7 +97,7 @@
    "revenu_median_uc": 22680,
    "clubs_padel": 22,
    "hab_par_club": 57088,
-   "prix_median_90min": 68.0
+   "prix_median_90min": 66.0
   }
  },
  "monthly": [
