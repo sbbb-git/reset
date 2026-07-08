@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-08T06:32:27.608421",
+ "generated_at": "2026-07-08T09:29:07.585320",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -36,6 +36,14 @@
  "volume_drops": [],
  "new_clubs": [
   {
+   "slug": "doinsport-c0ec9544-c563-4f09-a752-7d0a8d11577d",
+   "source": "doinsport",
+   "name": "Mundo Padel Club",
+   "cp": "77230",
+   "first_seen": "2026-07-08 11:28",
+   "days_since": 0
+  },
+  {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
    "source": "anybuddy",
    "name": "tennis-padel-bois-colombes-bois-colombes",
@@ -49,6 +57,6 @@
   "idle_24h": 0,
   "price_shifts": 3,
   "volume_drops": 0,
-  "new_clubs_14d": 1
+  "new_clubs_14d": 2
  }
 }
