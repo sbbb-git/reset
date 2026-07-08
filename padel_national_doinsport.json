@@ -858,17 +858,6 @@
   "website": null
  },
  {
-  "id": "df398a31-7cc5-4f03-a3d4-20c93dfdf9df",
-  "name": "Coba Padel",
-  "cp": "64990",
-  "city": "Villefranque",
-  "dept": "64",
-  "metro": "bordeaux",
-  "lat": 43.464425,
-  "lng": -1.454547,
-  "website": null
- },
- {
   "id": "6a54bb35-cfcf-4f71-97ea-c74d0529bed4",
   "name": "Commune d'Anglet",
   "cp": "64603",
@@ -1210,17 +1199,6 @@
   "website": null
  },
  {
-  "id": "d53ccbc1-fdb7-4f36-9648-c878681e49d0",
-  "name": "FIT SILHOUETTE",
-  "cp": "13009",
-  "city": "MARSEILLE",
-  "dept": "13",
-  "metro": "marseille",
-  "lat": 43.2479532,
-  "lng": 5.4233804,
-  "website": null
- },
- {
   "id": "fe8883b8-dd75-4f72-96d8-1a448611a164",
   "name": "FIVE ARENA",
   "cp": "77100",
@@ -1406,17 +1384,6 @@
   "lat": 45.6923776,
   "lng": 4.8275538,
   "website": "https://www.gonespadel.fr/"
- },
- {
-  "id": "47a11786-19eb-4f45-b412-e92aa43cfa32",
-  "name": "Grenoble Tennis Padel",
-  "cp": "38100",
-  "city": "Grenoble",
-  "dept": "38",
-  "metro": "lyon",
-  "lat": 45.1781096,
-  "lng": 5.7298979,
-  "website": "https://www.grenobletennis.fr/"
  },
  {
   "id": "89fdf25f-09d5-4f96-8e55-480161c09b8e",
@@ -1683,17 +1650,6 @@
   "website": "https://www.kipstadium.com"
  },
  {
-  "id": "2f7a4fb8-b000-4f17-a807-bda6fd2194ee",
-  "name": "L Park",
-  "cp": "12345",
-  "city": "Liévin",
-  "dept": "12",
-  "metro": "toulouse",
-  "lat": 50.4289539,
-  "lng": 2.7439633,
-  "website": null
- },
- {
   "id": "621087f9-859a-4f28-a9bb-20eaa8aa7365",
   "name": "L'Etincelle",
   "cp": "67600",
@@ -1890,17 +1846,6 @@
   "lat": 45.0513444,
   "lng": 3.966246,
   "website": null
- },
- {
-  "id": "33ec6679-ff8b-4f3c-874a-c568a998e013",
-  "name": "Le Komplex",
-  "cp": "25300",
-  "city": "Pontarlier",
-  "dept": "25",
-  "metro": "bourgogne",
-  "lat": 46.9073264,
-  "lng": 6.3385723,
-  "website": "https://lekomplex.com/"
  },
  {
   "id": "af5c97a7-390f-4f23-afca-6d10c0d117cd",
@@ -2519,17 +2464,6 @@
   "website": null
  },
  {
-  "id": "b9033593-37ea-4fe8-a26e-1d789c3bd069",
-  "name": "Pad&Ball",
-  "cp": "83600",
-  "city": "Fréjus",
-  "dept": "83",
-  "metro": "marseille",
-  "lat": 43.459377,
-  "lng": 6.741116,
-  "website": "https://www.padandball.fr/"
- },
- {
   "id": "c829317c-521b-4ff8-ae47-483fd508ba04",
   "name": "Padel & Company",
   "cp": "78470",
@@ -2725,7 +2659,7 @@
   "metro": "marseille",
   "lat": 43.571871,
   "lng": 5.4764287,
-  "website": null
+  "website": "https://www.padelcollection.fr/"
  },
  {
   "id": "048d455f-7010-4fa3-a90f-9038a1d8c9fe",
@@ -2880,17 +2814,6 @@
   "lat": 50.6543078,
   "lng": 2.9874484,
   "website": null
- },
- {
-  "id": "e4967689-c3ad-4f03-a281-3ec3bc1449e2",
-  "name": "Padel Klub",
-  "cp": "29260",
-  "city": "Ploudaniel",
-  "dept": "29",
-  "metro": "nantes-rennes",
-  "lat": 48.5596991,
-  "lng": -4.3208061,
-  "website": "https://www.padelklub.fr/"
  },
  {
   "id": "a2abb627-55fe-4f57-ba85-0ebdfa9aa026",
@@ -3795,17 +3718,6 @@
   "website": null
  },
  {
-  "id": "d484cf2e-5d60-4f47-bb37-290e420b8bfa",
-  "name": "TC des Acacias",
-  "cp": "06800",
-  "city": "La Gaude par Cagnes sur Mer",
-  "dept": "06",
-  "metro": "marseille",
-  "lat": 43.6951253,
-  "lng": 7.1585522,
-  "website": "https://les-acacias-tennis-padel-foot.com/"
- },
- {
   "id": "0d130e72-fc8e-4f12-b3a6-088d2ca77c14",
   "name": "TC Lyon 1",
   "cp": "69001",
@@ -3991,17 +3903,6 @@
   "lat": 43.083821,
   "lng": 5.8738187,
   "website": "https://tennispadelclublaseynesurmer.fr"
- },
- {
-  "id": "7755ef46-660d-4f69-a968-ddf5cb88bf72",
-  "name": "Tennis Padel Club Toulonnais",
-  "cp": "83160",
-  "city": "La Valette-du-var France",
-  "dept": "83",
-  "metro": "marseille",
-  "lat": 43.1345806,
-  "lng": 5.9997047,
-  "website": null
  },
  {
   "id": "e2e40f85-d4af-4fbf-a4af-78153699ea14",
@@ -4277,17 +4178,6 @@
   "lat": 43.490696,
   "lng": -1.4297332,
   "website": "https://eu.wellputt.com/fr/"
- },
- {
-  "id": "d4e2f3b1-8619-4f02-8759-57ef8dc92df1",
-  "name": "WEST PADEL LIMAY",
-  "cp": "78520",
-  "city": "Limay",
-  "dept": "78",
-  "metro": "idf",
-  "lat": 48.989934,
-  "lng": 1.760598,
-  "website": null
  },
  {
   "id": "7c154eb5-10a6-4fb3-a239-0fe084011940",
