@@ -1,7 +1,26 @@
 {
- "generated_at": "2026-07-08T09:29:07.585320",
- "idle_24h": [],
+ "generated_at": "2026-07-09T00:15:37.143604",
+ "idle_24h": [
+  {
+   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "source": "doinsport",
+   "name": "FIVE ARENA",
+   "cp": "77100",
+   "last_seen": "2026-07-07 09:43",
+   "hours_idle": 38.5
+  }
+ ],
  "price_shifts": [
+  {
+   "slug": "doinsport-f73b2bef-eedd-4fba-9d72-15595ac723fa",
+   "source": "doinsport",
+   "name": "B14",
+   "cp": "91070",
+   "prix_30j": 49.5,
+   "prix_recent": 66.0,
+   "delta_pct": 33.3,
+   "direction": "hausse"
+  },
   {
    "slug": "sannois-oss",
    "source": "anybuddy",
@@ -41,7 +60,7 @@
    "name": "Mundo Padel Club",
    "cp": "77230",
    "first_seen": "2026-07-08 11:28",
-   "days_since": 0
+   "days_since": 1
   },
   {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
@@ -49,13 +68,13 @@
    "name": "tennis-padel-bois-colombes-bois-colombes",
    "cp": "92700",
    "first_seen": "2026-07-06 02:10",
-   "days_since": 2
+   "days_since": 3
   }
  ],
  "summary": {
-  "total_anomalies": 3,
-  "idle_24h": 0,
-  "price_shifts": 3,
+  "total_anomalies": 5,
+  "idle_24h": 1,
+  "price_shifts": 4,
   "volume_drops": 0,
   "new_clubs_14d": 2
  }
