@@ -6664,17 +6664,17 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8448900,2026-07-09,Jeudi,13:00,14:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Mel (Suppléant),12,0,True,disponible,2026-07-07 09:54
 90746300,2026-07-09,Jeudi,13:00,14:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-05 11:56
 99170560,2026-07-09,Jeudi,13:00,14:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-05 18:38
-108278140,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-05 23:40
-1127220,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-07 22:29
-13753120,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-03 18:43
-15058400,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-03 20:22
-40262940,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-05 22:44
-5901020,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Mel (Suppléant),12,0,False,disponible,2026-07-08 15:13
-63669860,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-04 17:18
-65525180,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-04 19:40
-8448940,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-07 09:54
-90746340,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-05 11:56
-99170600,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-05 18:38
+108278140,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-05 23:40
+1127220,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-07 22:29
+13753120,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-03 18:43
+15058400,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-03 20:22
+40262940,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-05 22:44
+5901020,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Mel (Suppléant),12,0,True,disponible,2026-07-08 15:13
+63669860,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-04 17:18
+65525180,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-04 19:40
+8448940,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-07 09:54
+90746340,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-05 11:56
+99170600,2026-07-09,Jeudi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,True,disponible,2026-07-05 18:38
 107074600,2026-07-09,Jeudi,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-05 22:44
 13744880,2026-07-09,Jeudi,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-03 18:43
 1553580,2026-07-09,Jeudi,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 22:29
@@ -6710,6 +6710,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8577300,2026-07-09,Jeudi,18:30,19:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 09:54
 92089840,2026-07-09,Jeudi,18:30,19:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-05 13:46
 98016040,2026-07-09,Jeudi,18:30,19:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-05 17:24
+692320,2026-07-09,Jeudi,18:30,19:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 108278220,2026-07-09,Jeudi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 23:40
 1127300,2026-07-09,Jeudi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 22:29
 13753200,2026-07-09,Jeudi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-03 18:43
@@ -6721,6 +6722,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449020,2026-07-09,Jeudi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 09:54
 90746420,2026-07-09,Jeudi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 11:56
 99170680,2026-07-09,Jeudi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 18:38
+11522440,2026-07-09,Jeudi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-09 16:11
 107074680,2026-07-09,Jeudi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-05 22:44
 13744960,2026-07-09,Jeudi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-03 18:43
 1553660,2026-07-09,Jeudi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 22:29
@@ -6733,6 +6735,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8577340,2026-07-09,Jeudi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 09:54
 92089880,2026-07-09,Jeudi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-05 13:46
 98016080,2026-07-09,Jeudi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-05 17:24
+692620,2026-07-09,Jeudi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 108278260,2026-07-09,Jeudi,19:30,20:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 23:40
 1127340,2026-07-09,Jeudi,19:30,20:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 22:29
 13753240,2026-07-09,Jeudi,19:30,20:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-03 18:43
@@ -6744,6 +6747,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449060,2026-07-09,Jeudi,19:30,20:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 09:54
 90746460,2026-07-09,Jeudi,19:30,20:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 11:56
 99170720,2026-07-09,Jeudi,19:30,20:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 18:38
+11522740,2026-07-09,Jeudi,19:30,20:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,12,False,complet,2026-07-09 16:11
 107074720,2026-07-10,Vendredi,09:00,10:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-05 22:44
 1553700,2026-07-10,Vendredi,09:00,10:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 22:29
 17255380,2026-07-10,Vendredi,09:00,10:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-08 15:13
@@ -6753,6 +6757,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8577380,2026-07-10,Vendredi,09:00,10:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 09:54
 92089920,2026-07-10,Vendredi,09:00,10:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-05 13:46
 98016120,2026-07-10,Vendredi,09:00,10:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-05 17:24
+692660,2026-07-10,Vendredi,09:00,10:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-09 16:11
 108278300,2026-07-10,Vendredi,09:00,10:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 23:40
 1127380,2026-07-10,Vendredi,09:00,10:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-07 22:29
 40263100,2026-07-10,Vendredi,09:00,10:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 22:44
@@ -6762,6 +6767,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449100,2026-07-10,Vendredi,09:00,10:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-07 09:54
 90746500,2026-07-10,Vendredi,09:00,10:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 11:56
 99170760,2026-07-10,Vendredi,09:00,10:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 18:38
+11522780,2026-07-10,Vendredi,09:00,10:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-09 16:11
 107074760,2026-07-10,Vendredi,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-05 22:44
 1553740,2026-07-10,Vendredi,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 22:29
 17255420,2026-07-10,Vendredi,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-08 15:13
@@ -6771,6 +6777,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8577420,2026-07-10,Vendredi,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 09:54
 92089960,2026-07-10,Vendredi,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-05 13:46
 98016160,2026-07-10,Vendredi,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-05 17:24
+692700,2026-07-10,Vendredi,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-09 16:11
 108278340,2026-07-10,Vendredi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 23:40
 1127420,2026-07-10,Vendredi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-07 22:29
 40263140,2026-07-10,Vendredi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 22:44
@@ -6780,6 +6787,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449140,2026-07-10,Vendredi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-07 09:54
 90746540,2026-07-10,Vendredi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 11:56
 99170800,2026-07-10,Vendredi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 18:38
+11522820,2026-07-10,Vendredi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-09 16:11
 107074800,2026-07-10,Vendredi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-05 22:44
 1553780,2026-07-10,Vendredi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 22:29
 17255460,2026-07-10,Vendredi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-08 15:13
@@ -6789,6 +6797,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8577460,2026-07-10,Vendredi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 09:54
 92090000,2026-07-10,Vendredi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-05 13:46
 98016200,2026-07-10,Vendredi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-05 17:24
+692740,2026-07-10,Vendredi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-09 16:11
 108278380,2026-07-10,Vendredi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 23:40
 1127460,2026-07-10,Vendredi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-07 22:29
 40263180,2026-07-10,Vendredi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 22:44
@@ -6798,6 +6807,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449180,2026-07-10,Vendredi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-07 09:54
 90746580,2026-07-10,Vendredi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 11:56
 99170840,2026-07-10,Vendredi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-05 18:38
+11522860,2026-07-10,Vendredi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Charlotte (Suppléant),12,0,False,disponible,2026-07-09 16:11
 108278420,2026-07-10,Vendredi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 23:40
 1127500,2026-07-10,Vendredi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-07 22:29
 40263220,2026-07-10,Vendredi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 22:44
@@ -6807,6 +6817,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449220,2026-07-10,Vendredi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-07 09:54
 90746620,2026-07-10,Vendredi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 11:56
 99170880,2026-07-10,Vendredi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 18:38
+11522900,2026-07-10,Vendredi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-09 16:11
 107074840,2026-07-10,Vendredi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 22:44
 1553820,2026-07-10,Vendredi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 17255500,2026-07-10,Vendredi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
@@ -6816,6 +6827,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8577500,2026-07-10,Vendredi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
 92090040,2026-07-10,Vendredi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 13:46
 98016240,2026-07-10,Vendredi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 17:24
+692780,2026-07-10,Vendredi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 108278460,2026-07-10,Vendredi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 23:40
 1127540,2026-07-10,Vendredi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-07 22:29
 40263260,2026-07-10,Vendredi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 22:44
@@ -6825,6 +6837,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449260,2026-07-10,Vendredi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-07 09:54
 90746660,2026-07-10,Vendredi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 11:56
 99170920,2026-07-10,Vendredi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 18:38
+11522940,2026-07-10,Vendredi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-09 16:11
 107074880,2026-07-10,Vendredi,13:30,14:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 22:44
 1553860,2026-07-10,Vendredi,13:30,14:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 17255540,2026-07-10,Vendredi,13:30,14:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
@@ -6834,6 +6847,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8577540,2026-07-10,Vendredi,13:30,14:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
 92090080,2026-07-10,Vendredi,13:30,14:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 13:46
 98016280,2026-07-10,Vendredi,13:30,14:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 17:24
+692820,2026-07-10,Vendredi,13:30,14:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 108278500,2026-07-10,Vendredi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 23:40
 1127580,2026-07-10,Vendredi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-07 22:29
 40263300,2026-07-10,Vendredi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 22:44
@@ -6843,6 +6857,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449300,2026-07-10,Vendredi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-07 09:54
 90746700,2026-07-10,Vendredi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 11:56
 99170960,2026-07-10,Vendredi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-05 18:38
+11522980,2026-07-10,Vendredi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose (Suppléant),12,0,False,disponible,2026-07-09 16:11
 108278540,2026-07-10,Vendredi,16:00,17:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 23:40
 1127620,2026-07-10,Vendredi,16:00,17:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 40263340,2026-07-10,Vendredi,16:00,17:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 22:44
@@ -6852,6 +6867,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449340,2026-07-10,Vendredi,16:00,17:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
 90746740,2026-07-10,Vendredi,16:00,17:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 11:56
 99171000,2026-07-10,Vendredi,16:00,17:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 18:38
+11523020,2026-07-10,Vendredi,16:00,17:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 108278580,2026-07-10,Vendredi,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 23:40
 1127660,2026-07-10,Vendredi,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 40263380,2026-07-10,Vendredi,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 22:44
@@ -6861,6 +6877,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449380,2026-07-10,Vendredi,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
 90746780,2026-07-10,Vendredi,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 11:56
 99171040,2026-07-10,Vendredi,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 18:38
+11523060,2026-07-10,Vendredi,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 108278620,2026-07-10,Vendredi,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 23:40
 1127700,2026-07-10,Vendredi,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 40263420,2026-07-10,Vendredi,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 22:44
@@ -6870,6 +6887,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449420,2026-07-10,Vendredi,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
 90746820,2026-07-10,Vendredi,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 11:56
 99171080,2026-07-10,Vendredi,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-05 18:38
+11523100,2026-07-10,Vendredi,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 108278660,2026-07-11,Samedi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 23:40
 1127740,2026-07-11,Samedi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 22:29
 40263460,2026-07-11,Samedi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 22:44
@@ -6877,6 +6895,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449460,2026-07-11,Samedi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 09:54
 90746860,2026-07-11,Samedi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 11:56
 99171120,2026-07-11,Samedi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 18:38
+11523140,2026-07-11,Samedi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-09 16:11
 108278700,2026-07-11,Samedi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 23:40
 1127780,2026-07-11,Samedi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 22:29
 40263500,2026-07-11,Samedi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 22:44
@@ -6884,6 +6903,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449500,2026-07-11,Samedi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 09:54
 90746900,2026-07-11,Samedi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 11:56
 99171160,2026-07-11,Samedi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 18:38
+11523180,2026-07-11,Samedi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-09 16:11
 108278740,2026-07-11,Samedi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 23:40
 1127820,2026-07-11,Samedi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 22:29
 40263540,2026-07-11,Samedi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 22:44
@@ -6891,6 +6911,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449540,2026-07-11,Samedi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 09:54
 90746940,2026-07-11,Samedi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 11:56
 99171200,2026-07-11,Samedi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 18:38
+11523220,2026-07-11,Samedi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-09 16:11
 108278780,2026-07-11,Samedi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 23:40
 1127860,2026-07-11,Samedi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 22:29
 40263580,2026-07-11,Samedi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 22:44
@@ -6898,6 +6919,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449580,2026-07-11,Samedi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 09:54
 90746980,2026-07-11,Samedi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 11:56
 99171240,2026-07-11,Samedi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-05 18:38
+11523260,2026-07-11,Samedi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-09 16:11
 108278820,2026-07-11,Samedi,17:30,18:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-05 23:40
 1127900,2026-07-11,Samedi,17:30,18:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-07 22:29
 40263620,2026-07-11,Samedi,17:30,18:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-05 22:44
@@ -6905,6 +6927,7 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449620,2026-07-11,Samedi,17:30,18:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-07 09:54
 90747020,2026-07-11,Samedi,17:30,18:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-05 11:56
 99171280,2026-07-11,Samedi,17:30,18:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-05 18:38
+11523300,2026-07-11,Samedi,17:30,18:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-09 16:11
 108278860,2026-07-11,Samedi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-05 23:40
 1127940,2026-07-11,Samedi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-07 22:29
 40263660,2026-07-11,Samedi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-05 22:44
@@ -6912,103 +6935,161 @@ id,date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,statut,releve
 8449660,2026-07-11,Samedi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-07 09:54
 90747060,2026-07-11,Samedi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-05 11:56
 99171320,2026-07-11,Samedi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-05 18:38
+11523340,2026-07-11,Samedi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-09 16:11
 1553900,2026-07-12,Dimanche,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 17255580,2026-07-12,Dimanche,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
 344440,2026-07-12,Dimanche,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-06 22:31
 8577580,2026-07-12,Dimanche,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
+692860,2026-07-12,Dimanche,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 1127980,2026-07-12,Dimanche,10:00,11:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 22:29
 5901780,2026-07-12,Dimanche,10:00,11:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-08 15:13
 8449700,2026-07-12,Dimanche,10:00,11:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 09:54
+11523380,2026-07-12,Dimanche,10:00,11:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 1553940,2026-07-12,Dimanche,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 17255620,2026-07-12,Dimanche,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
 344480,2026-07-12,Dimanche,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-06 22:31
 8577620,2026-07-12,Dimanche,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
+692900,2026-07-12,Dimanche,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 1128020,2026-07-12,Dimanche,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 22:29
 5901820,2026-07-12,Dimanche,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-08 15:13
 8449740,2026-07-12,Dimanche,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 09:54
+11523420,2026-07-12,Dimanche,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 1553980,2026-07-12,Dimanche,12:00,13:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 17255660,2026-07-12,Dimanche,12:00,13:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
 344520,2026-07-12,Dimanche,12:00,13:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-06 22:31
 8577660,2026-07-12,Dimanche,12:00,13:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
+692940,2026-07-12,Dimanche,12:00,13:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 1128060,2026-07-12,Dimanche,12:00,13:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 22:29
 5901860,2026-07-12,Dimanche,12:00,13:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-08 15:13
 8449780,2026-07-12,Dimanche,12:00,13:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 09:54
+11523460,2026-07-12,Dimanche,12:00,13:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 1554020,2026-07-12,Dimanche,13:00,14:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 17255700,2026-07-12,Dimanche,13:00,14:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
 344560,2026-07-12,Dimanche,13:00,14:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-06 22:31
 8577700,2026-07-12,Dimanche,13:00,14:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
+692980,2026-07-12,Dimanche,13:00,14:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 1128100,2026-07-12,Dimanche,13:00,14:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 22:29
 5901900,2026-07-12,Dimanche,13:00,14:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-08 15:13
 8449820,2026-07-12,Dimanche,13:00,14:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 09:54
+11523500,2026-07-12,Dimanche,13:00,14:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 1554060,2026-07-12,Dimanche,16:30,17:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 22:29
 17255740,2026-07-12,Dimanche,16:30,17:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-08 15:13
 344600,2026-07-12,Dimanche,16:30,17:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-06 22:31
 8577740,2026-07-12,Dimanche,16:30,17:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 09:54
+693020,2026-07-12,Dimanche,16:30,17:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-09 16:11
 1128140,2026-07-12,Dimanche,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 22:29
 5901940,2026-07-12,Dimanche,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-08 15:13
 8449860,2026-07-12,Dimanche,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 09:54
+11523540,2026-07-12,Dimanche,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-09 16:11
 1554100,2026-07-12,Dimanche,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 22:29
 17255780,2026-07-12,Dimanche,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-08 15:13
 344640,2026-07-12,Dimanche,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-06 22:31
 8577780,2026-07-12,Dimanche,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 09:54
+693060,2026-07-12,Dimanche,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-09 16:11
 1128180,2026-07-12,Dimanche,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 22:29
 5901980,2026-07-12,Dimanche,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-08 15:13
 8449900,2026-07-12,Dimanche,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 09:54
+11523580,2026-07-12,Dimanche,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-09 16:11
 1128220,2026-07-12,Dimanche,19:00,20:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 22:29
 5902020,2026-07-12,Dimanche,19:00,20:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-08 15:13
 8449940,2026-07-12,Dimanche,19:00,20:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-07 09:54
+11523620,2026-07-12,Dimanche,19:00,20:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Aya Rose,12,0,False,disponible,2026-07-09 16:11
 1554140,2026-07-13,Lundi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 22:29
 17255820,2026-07-13,Lundi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-08 15:13
 8577820,2026-07-13,Lundi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 09:54
+693100,2026-07-13,Lundi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-09 16:11
 1128260,2026-07-13,Lundi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-07 22:29
 5902060,2026-07-13,Lundi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-08 15:13
 8449980,2026-07-13,Lundi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-07 09:54
+11523660,2026-07-13,Lundi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-09 16:11
 1128300,2026-07-13,Lundi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-07 22:29
 5902100,2026-07-13,Lundi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-08 15:13
 8450020,2026-07-13,Lundi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-07 09:54
+11523700,2026-07-13,Lundi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-09 16:11
 1554180,2026-07-13,Lundi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 22:29
 17255860,2026-07-13,Lundi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-08 15:13
 8577860,2026-07-13,Lundi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 09:54
+693140,2026-07-13,Lundi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-09 16:11
 1128340,2026-07-13,Lundi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-07 22:29
 5902140,2026-07-13,Lundi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-08 15:13
 8450060,2026-07-13,Lundi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-07 09:54
+11523740,2026-07-13,Lundi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-09 16:11
 1554220,2026-07-13,Lundi,13:30,14:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 22:29
 17255900,2026-07-13,Lundi,13:30,14:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-08 15:13
 8577900,2026-07-13,Lundi,13:30,14:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-07 09:54
+693180,2026-07-13,Lundi,13:30,14:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Tally,12,0,False,disponible,2026-07-09 16:11
 1128380,2026-07-13,Lundi,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 22:29
 5902180,2026-07-13,Lundi,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-08 15:13
 8450100,2026-07-13,Lundi,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 09:54
+11523780,2026-07-13,Lundi,17:00,18:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 1554260,2026-07-13,Lundi,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 17255940,2026-07-13,Lundi,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
 8577940,2026-07-13,Lundi,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
+693220,2026-07-13,Lundi,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 1128420,2026-07-13,Lundi,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 22:29
 5902220,2026-07-13,Lundi,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-08 15:13
 8450140,2026-07-13,Lundi,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 09:54
+11523820,2026-07-13,Lundi,18:00,19:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 1554300,2026-07-13,Lundi,18:30,19:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 17255980,2026-07-13,Lundi,18:30,19:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
 8577980,2026-07-13,Lundi,18:30,19:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
+693260,2026-07-13,Lundi,18:30,19:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 1128460,2026-07-13,Lundi,19:00,20:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 22:29
 5902260,2026-07-13,Lundi,19:00,20:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-08 15:13
 8450180,2026-07-13,Lundi,19:00,20:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 09:54
+11523860,2026-07-13,Lundi,19:00,20:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 1554340,2026-07-13,Lundi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 22:29
 17256020,2026-07-13,Lundi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
 8578020,2026-07-13,Lundi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-07 09:54
+693300,2026-07-13,Lundi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 1128500,2026-07-13,Lundi,20:00,21:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 22:29
 5902300,2026-07-13,Lundi,20:00,21:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-08 15:13
 8450220,2026-07-13,Lundi,20:00,21:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-07 09:54
+11523900,2026-07-13,Lundi,20:00,21:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 5902340,2026-07-14,Mardi,09:00,10:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-08 15:13
+11523940,2026-07-14,Mardi,09:00,10:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 17256060,2026-07-14,Mardi,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
+693340,2026-07-14,Mardi,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 5902380,2026-07-14,Mardi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-08 15:13
+11523980,2026-07-14,Mardi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
 17256100,2026-07-14,Mardi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
+693380,2026-07-14,Mardi,11:00,12:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 5902420,2026-07-14,Mardi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-08 15:13
+11524020,2026-07-14,Mardi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-09 16:11
 5902460,2026-07-14,Mardi,12:00,13:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-08 15:13
+11524060,2026-07-14,Mardi,12:00,13:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-09 16:11
 17256140,2026-07-14,Mardi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
+693420,2026-07-14,Mardi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 5902500,2026-07-14,Mardi,13:00,14:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-08 15:13
+11524100,2026-07-14,Mardi,13:00,14:00,Banote Club Paris 16e,ADVANCED FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-09 16:11
 5902540,2026-07-14,Mardi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-08 15:13
+11524140,2026-07-14,Mardi,14:00,15:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-09 16:11
 17256180,2026-07-14,Mardi,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Marine (Suppléant),12,0,False,disponible,2026-07-08 15:13
+693460,2026-07-14,Mardi,17:30,18:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Marine (Suppléant),12,0,False,disponible,2026-07-09 16:11
 5902580,2026-07-14,Mardi,17:30,18:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
+11524180,2026-07-14,Mardi,17:30,18:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 17256220,2026-07-14,Mardi,18:30,19:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Marine (Suppléant),12,0,False,disponible,2026-07-08 15:13
+693500,2026-07-14,Mardi,18:30,19:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Marine (Suppléant),12,0,False,disponible,2026-07-09 16:11
 5902620,2026-07-14,Mardi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
+11524220,2026-07-14,Mardi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 17256260,2026-07-14,Mardi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Marine (Suppléant),12,0,False,disponible,2026-07-08 15:13
+693540,2026-07-14,Mardi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Marine (Suppléant),12,0,False,disponible,2026-07-09 16:11
 5902660,2026-07-14,Mardi,19:30,20:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
+11524260,2026-07-14,Mardi,19:30,20:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
 5902700,2026-07-14,Mardi,20:30,21:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-08 15:13
+11524300,2026-07-14,Mardi,20:30,21:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
+11524340,2026-07-15,Mercredi,08:00,09:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
+11524380,2026-07-15,Mercredi,09:00,10:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
+693580,2026-07-15,Mercredi,10:00,11:00,Banote Club Charenton,FULL BODY - MICRO LAGREE,Marine,12,0,False,disponible,2026-07-09 16:11
+11524420,2026-07-15,Mercredi,10:00,11:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Tally (Suppléant),12,0,False,disponible,2026-07-09 16:11
+11524460,2026-07-15,Mercredi,11:00,12:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-09 16:11
+693620,2026-07-15,Mercredi,11:30,12:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Marine,12,0,False,disponible,2026-07-09 16:11
+11524500,2026-07-15,Mercredi,12:00,13:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-09 16:11
+693660,2026-07-15,Mercredi,12:30,13:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Marine,12,0,False,disponible,2026-07-09 16:11
+11524540,2026-07-15,Mercredi,13:00,14:00,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Noa (Suppléant),12,0,False,disponible,2026-07-09 16:11
+693700,2026-07-15,Mercredi,18:30,19:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
+11524580,2026-07-15,Mercredi,18:30,19:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-09 16:11
+693740,2026-07-15,Mercredi,19:30,20:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
+11524620,2026-07-15,Mercredi,19:30,20:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-09 16:11
+693780,2026-07-15,Mercredi,20:30,21:30,Banote Club Charenton,FULL BODY - MICRO LAGREE,Noa,12,0,False,disponible,2026-07-09 16:11
+11524660,2026-07-15,Mercredi,20:30,21:30,Banote Club Paris 16e,FULL BODY - MICRO LAGREE,Alexandra,12,0,False,disponible,2026-07-09 16:11
