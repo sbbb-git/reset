@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-09T12:09:37.460254",
+ "generated_at": "2026-07-10T01:11:56.497447",
  "idle_24h": [
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -7,7 +7,7 @@
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-07-07 09:43",
-   "hours_idle": 50.4
+   "hours_idle": 63.5
   }
  ],
  "price_shifts": [
@@ -50,6 +50,16 @@
    "prix_recent": 48.0,
    "delta_pct": -33.3,
    "direction": "baisse"
+  },
+  {
+   "slug": "4padel-epinay-sur-seine",
+   "source": "anybuddy",
+   "name": "4padel-epinay-sur-seine",
+   "cp": "93800",
+   "prix_30j": 78.0,
+   "prix_recent": 54.0,
+   "delta_pct": -30.8,
+   "direction": "baisse"
   }
  ],
  "volume_drops": [],
@@ -60,7 +70,7 @@
    "name": "Mundo Padel Club",
    "cp": "77230",
    "first_seen": "2026-07-08 11:28",
-   "days_since": 1
+   "days_since": 2
   },
   {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
@@ -68,13 +78,13 @@
    "name": "tennis-padel-bois-colombes-bois-colombes",
    "cp": "92700",
    "first_seen": "2026-07-06 02:10",
-   "days_since": 3
+   "days_since": 4
   }
  ],
  "summary": {
-  "total_anomalies": 5,
+  "total_anomalies": 6,
   "idle_24h": 1,
-  "price_shifts": 4,
+  "price_shifts": 5,
   "volume_drops": 0,
   "new_clubs_14d": 2
  }
