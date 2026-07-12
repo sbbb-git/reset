@@ -221,7 +221,7 @@ date,jour,heure,activite,coach,presents,capacite,remplissage,taux_%,complet,sess
 2026-05-01,Vendredi,18:15,RE-LAX,Gautier Lacointa,23,28,23/28,82.1,non,36320879
 2026-05-01,Vendredi,20:00,Social Free-Flow,Free Flow,6,17,6/17,35.3,non,36893816
 2026-05-01,Vendredi,20:15,Social Free-Flow,Free Flow,1,17,1/17,5.9,non,36893856
-2026-05-02,Samedi,09:30,Quiet Free-Flow,Free Flow,20,32,20/32,62.5,non,36323263
+2026-05-02,Samedi,09:30,Quiet Free-Flow,Free Flow,18,32,18/32,56.2,non,36323263
 2026-05-02,Samedi,11:30,RE-BOOST  (English version),Alice Dunoyer,15,28,15/28,53.6,non,36323109
 2026-05-02,Samedi,14:30,RE-LAX,Prosper MATUSSIERE,14,28,14/28,50.0,non,36329191
 2026-05-02,Samedi,16:15,Quiet Free-Flow,Free Flow,11,32,11/32,34.4,non,36329732
@@ -255,7 +255,7 @@ date,jour,heure,activite,coach,presents,capacite,remplissage,taux_%,complet,sess
 2026-05-06,Mercredi,16:30,Quiet Free-Flow,Free Flow,10,18,10/18,55.6,non,36298331
 2026-05-06,Mercredi,18:30,RE-LAX,Pauline Ramon,26,28,26/28,92.9,non,36298371
 2026-05-06,Mercredi,20:15,RE-LAX,Prosper MATUSSIERE,20,28,20/28,71.4,non,36298569
-2026-05-07,Jeudi,09:30,Quiet Free-Flow,Free Flow,4,13,4/13,30.8,non,37230104
+2026-05-07,Jeudi,09:30,Quiet Free-Flow,Free Flow,3,13,3/13,23.1,non,37230104
 2026-05-07,Jeudi,09:45,Quiet Free-Flow,Free Flow,0,13,0/13,0.0,non,37230140
 2026-05-07,Jeudi,10:00,Quiet Free-Flow,Free Flow,4,13,4/13,30.8,non,37090954
 2026-05-07,Jeudi,12:15,RE-BOOST,Leonore Chapin,15,28,15/28,53.6,non,36321551
@@ -447,7 +447,7 @@ date,jour,heure,activite,coach,presents,capacite,remplissage,taux_%,complet,sess
 2026-06-03,Mercredi,18:30,RE-LAX,Pauline Ramon,32,33,32/33,97.0,non,36298376
 2026-06-03,Mercredi,20:15,RE-LAX,Prosper MATUSSIERE,23,33,23/33,69.7,non,36298573
 2026-06-04,Jeudi,07:45,RE-BOOST,Cécile Penager,5,28,5/28,17.9,non,37090000
-2026-06-04,Jeudi,09:30,Quiet Free-Flow,Free Flow,2,13,2/13,15.4,non,37230108
+2026-06-04,Jeudi,09:30,Quiet Free-Flow,Free Flow,1,13,1/13,7.7,non,37230108
 2026-06-04,Jeudi,09:45,Quiet Free-Flow,Free Flow,0,13,0/13,0.0,non,37230144
 2026-06-04,Jeudi,10:00,Quiet Free-Flow,Free Flow,5,13,5/13,38.5,non,37090958
 2026-06-04,Jeudi,12:15,RE-BOOST,Gautier Lacointa,15,33,15/33,45.5,non,36321555
@@ -470,7 +470,7 @@ date,jour,heure,activite,coach,presents,capacite,remplissage,taux_%,complet,sess
 2026-06-06,Samedi,18:30,RE-LAX,Gautier Lacointa,28,33,28/33,84.8,non,36329961
 2026-06-06,Samedi,20:15,Social Free-Flow,Free Flow,4,20,4/20,20.0,non,36935868
 2026-06-06,Samedi,20:30,Social Free-Flow,Free Flow,10,20,10/20,50.0,non,36323853
-2026-06-07,Dimanche,09:30,Quiet Free-Flow,Free Flow,7,36,7/36,19.4,non,37240278
+2026-06-07,Dimanche,09:30,Quiet Free-Flow,Free Flow,6,36,6/36,16.7,non,37240278
 2026-06-07,Dimanche,11:30,RE-LAX,Cécile Penager,25,33,25/33,75.8,non,36336024
 2026-06-07,Dimanche,13:30,Quiet Free-Flow,Free Flow,14,32,14/32,43.8,non,37240421
 2026-06-07,Dimanche,15:00,Quiet Free-Flow,Free Flow,24,32,24/32,75.0,non,36892138
@@ -688,3 +688,9 @@ date,jour,heure,activite,coach,presents,capacite,remplissage,taux_%,complet,sess
 2026-07-10,Vendredi,16:30,Quiet Free-Flow,Free Flow,5,32,5/32,15.6,non,36320779
 2026-07-10,Vendredi,18:15,RE-LAX,Gautier Lacointa,23,33,23/33,69.7,non,36320889
 2026-07-10,Vendredi,20:00,Social Free-Flow,Free Flow,22,20,22/20,110.0,oui,36893826
+2026-07-11,Samedi,09:30,Quiet Free-Flow,Free Flow,8,32,8/32,25.0,non,36323273
+2026-07-11,Samedi,11:30,RE-BOOST  (English version),Alice Dunoyer,12,33,12/33,36.4,non,36323119
+2026-07-11,Samedi,13:15,Quiet Free-Flow,Free Flow,9,32,9/32,28.1,non,38771771
+2026-07-11,Samedi,15:00,RE-LAX,Prosper MATUSSIERE,10,33,10/33,30.3,non,36329201
+2026-07-11,Samedi,16:45,Social Free-Flow,Free Flow,37,32,37/32,115.6,oui,38771871
+2026-07-11,Samedi,18:30,RE-LAX  (English version),Sigga Daregard,28,28,28/28,100.0,oui,36329966
