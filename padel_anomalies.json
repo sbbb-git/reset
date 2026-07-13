@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-11T23:59:41.545844",
+ "generated_at": "2026-07-12T23:59:36.636204",
  "idle_24h": [
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -7,7 +7,7 @@
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-07-07 09:43",
-   "hours_idle": 110.3
+   "hours_idle": 134.3
   },
   {
    "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
@@ -15,15 +15,7 @@
    "name": "Padel Pulsion",
    "cp": "91570",
    "last_seen": "2026-07-10 11:41",
-   "hours_idle": 36.3
-  },
-  {
-   "slug": "tennis-padel-bois-colombes-bois-colombes",
-   "source": "anybuddy",
-   "name": "tennis-padel-bois-colombes-bois-colombes",
-   "cp": "92700",
-   "last_seen": "2026-07-10 11:41",
-   "hours_idle": 36.3
+   "hours_idle": 60.3
   },
   {
    "slug": "wtc-wissous",
@@ -31,20 +23,10 @@
    "name": "wtc-wissous",
    "cp": "91320",
    "last_seen": "2026-07-10 11:41",
-   "hours_idle": 36.3
+   "hours_idle": 60.3
   }
  ],
  "price_shifts": [
-  {
-   "slug": "le-five-marville-la-courneuve",
-   "source": "anybuddy",
-   "name": "le-five-marville-la-courneuve",
-   "cp": "93120",
-   "prix_30j": 54.0,
-   "prix_recent": 78.0,
-   "delta_pct": 44.4,
-   "direction": "hausse"
-  },
   {
    "slug": "4padel-paris-20",
    "source": "anybuddy",
@@ -76,6 +58,16 @@
    "direction": "baisse"
   },
   {
+   "slug": "tennis-du-golf-de-la-boulie-versailles",
+   "source": "anybuddy",
+   "name": "tennis-du-golf-de-la-boulie-versailles",
+   "cp": "78000",
+   "prix_30j": 60.0,
+   "prix_recent": 80.0,
+   "delta_pct": 33.3,
+   "direction": "hausse"
+  },
+  {
    "slug": "wrc-trappes",
    "source": "anybuddy",
    "name": "wrc-trappes",
@@ -89,12 +81,20 @@
  "volume_drops": [],
  "new_clubs": [
   {
+   "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
+   "source": "doinsport",
+   "name": "Padel Futur Dammarie",
+   "cp": "77190",
+   "first_seen": "2026-07-13 01:59",
+   "days_since": -1
+  },
+  {
    "slug": "doinsport-c0ec9544-c563-4f09-a752-7d0a8d11577d",
    "source": "doinsport",
    "name": "Mundo Padel Club",
    "cp": "77230",
    "first_seen": "2026-07-08 11:28",
-   "days_since": 3
+   "days_since": 4
   },
   {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
@@ -102,14 +102,14 @@
    "name": "tennis-padel-bois-colombes-bois-colombes",
    "cp": "92700",
    "first_seen": "2026-07-06 02:10",
-   "days_since": 5
+   "days_since": 6
   }
  ],
  "summary": {
-  "total_anomalies": 9,
-  "idle_24h": 4,
+  "total_anomalies": 8,
+  "idle_24h": 3,
   "price_shifts": 5,
   "volume_drops": 0,
-  "new_clubs_14d": 2
+  "new_clubs_14d": 3
  }
 }
