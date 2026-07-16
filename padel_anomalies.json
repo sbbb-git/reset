@@ -1,13 +1,21 @@
 {
- "generated_at": "2026-07-16T09:38:49.688468",
+ "generated_at": "2026-07-16T11:46:02.085008",
  "idle_24h": [
+  {
+   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "source": "doinsport",
+   "name": "FIVE ARENA",
+   "cp": "77100",
+   "last_seen": "2026-07-07 09:43",
+   "hours_idle": 218.1
+  },
   {
    "slug": "wtc-wissous",
    "source": "anybuddy",
    "name": "wtc-wissous",
    "cp": "91320",
    "last_seen": "2026-07-10 11:41",
-   "hours_idle": 142.0
+   "hours_idle": 144.1
   },
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -15,7 +23,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "last_seen": "2026-07-13 08:57",
-   "hours_idle": 72.7
+   "hours_idle": 74.8
   },
   {
    "slug": "playtomic-0628edc6",
@@ -23,7 +31,7 @@
    "name": "CASA PADEL ASNIERES",
    "cp": "92600",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 72.7
+   "hours_idle": 74.8
   },
   {
    "slug": "playtomic-1191f8b5",
@@ -31,7 +39,7 @@
    "name": "PADEL 15",
    "cp": "75015",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 72.7
+   "hours_idle": 74.8
   },
   {
    "slug": "playtomic-25bf0a66",
@@ -39,7 +47,7 @@
    "name": "Paris Padel",
    "cp": "75020",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 72.7
+   "hours_idle": 74.8
   },
   {
    "slug": "playtomic-391997f9",
@@ -47,7 +55,7 @@
    "name": "CASA PADEL CROISSY-BEAUBOURG",
    "cp": "77183",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 72.7
+   "hours_idle": 74.8
   },
   {
    "slug": "playtomic-49bf96dc",
@@ -55,7 +63,7 @@
    "name": "Royal Padel Club - Versailles",
    "cp": "78000",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 72.7
+   "hours_idle": 74.8
   },
   {
    "slug": "playtomic-51b02a03",
@@ -63,7 +71,7 @@
    "name": "TC Melun",
    "cp": "77000",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 72.7
+   "hours_idle": 74.8
   },
   {
    "slug": "playtomic-7f3d8837",
@@ -71,7 +79,7 @@
    "name": "Moret Padel",
    "cp": "77250",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 72.7
+   "hours_idle": 74.8
   },
   {
    "slug": "playtomic-be89f91d",
@@ -79,7 +87,7 @@
    "name": "PadelShot St Quentin en Yvelines",
    "cp": "78190",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 72.7
+   "hours_idle": 74.8
   },
   {
    "slug": "playtomic-d04b7959",
@@ -87,7 +95,7 @@
    "name": "CASA PADEL SAINT-DENIS",
    "cp": "93200",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 72.7
+   "hours_idle": 74.8
   },
   {
    "slug": "playtomic-ed652309",
@@ -95,7 +103,7 @@
    "name": "Rpadel",
    "cp": "93210",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 72.7
+   "hours_idle": 74.8
   }
  ],
  "price_shifts": [
@@ -178,8 +186,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 17,
-  "idle_24h": 12,
+  "total_anomalies": 18,
+  "idle_24h": 13,
   "price_shifts": 5,
   "volume_drops": 0,
   "new_clubs_14d": 3
