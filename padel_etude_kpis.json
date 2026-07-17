@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-17T21:25:15.899021",
+ "generated_at": "2026-07-17T22:26:37.912202",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,12 +9,12 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 145970,
-   "doinsport": 8649,
+   "anybuddy": 145984,
+   "doinsport": 8757,
    "playtomic": 41098,
-   "urbanpadel": 15472
+   "urbanpadel": 16070
   },
-  "n_sessions_live": 211189,
+  "n_sessions_live": 211909,
   "n_sessions_history": 146856,
   "pop_idf": 12258660
  },
@@ -57,7 +57,7 @@
    "revenu_median_uc": 24370,
    "clubs_padel": 13,
    "hab_par_club": 101303,
-   "prix_median_90min": 63
+   "prix_median_90min": 60.0
   },
   "92": {
    "nom": "Hauts-de-Seine",
