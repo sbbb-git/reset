@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-17T23:28:18.804860",
+ "generated_at": "2026-07-18T01:00:08.433969",
  "idle_24h": [
   {
    "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
@@ -7,7 +7,7 @@
    "name": "ASS TENNIS CLUB SARCELLOIS",
    "cp": "95200",
    "last_seen": "2026-07-13 08:57",
-   "hours_idle": 110.5
+   "hours_idle": 112.1
   },
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -15,7 +15,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "last_seen": "2026-07-13 08:57",
-   "hours_idle": 110.5
+   "hours_idle": 112.1
   },
   {
    "slug": "playtomic-0628edc6",
@@ -23,7 +23,7 @@
    "name": "CASA PADEL ASNIERES",
    "cp": "92600",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 110.5
+   "hours_idle": 112.0
   },
   {
    "slug": "playtomic-1191f8b5",
@@ -31,7 +31,7 @@
    "name": "PADEL 15",
    "cp": "75015",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 110.5
+   "hours_idle": 112.0
   },
   {
    "slug": "playtomic-25bf0a66",
@@ -39,7 +39,7 @@
    "name": "Paris Padel",
    "cp": "75020",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 110.5
+   "hours_idle": 112.0
   },
   {
    "slug": "playtomic-391997f9",
@@ -47,7 +47,7 @@
    "name": "CASA PADEL CROISSY-BEAUBOURG",
    "cp": "77183",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 110.5
+   "hours_idle": 112.0
   },
   {
    "slug": "playtomic-49bf96dc",
@@ -55,7 +55,7 @@
    "name": "Royal Padel Club - Versailles",
    "cp": "78000",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 110.5
+   "hours_idle": 112.0
   },
   {
    "slug": "playtomic-51b02a03",
@@ -63,7 +63,7 @@
    "name": "TC Melun",
    "cp": "77000",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 110.5
+   "hours_idle": 112.0
   },
   {
    "slug": "playtomic-7f3d8837",
@@ -71,7 +71,7 @@
    "name": "Moret Padel",
    "cp": "77250",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 110.5
+   "hours_idle": 112.0
   },
   {
    "slug": "playtomic-be89f91d",
@@ -79,7 +79,7 @@
    "name": "PadelShot St Quentin en Yvelines",
    "cp": "78190",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 110.5
+   "hours_idle": 112.0
   },
   {
    "slug": "playtomic-d04b7959",
@@ -87,7 +87,7 @@
    "name": "CASA PADEL SAINT-DENIS",
    "cp": "93200",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 110.5
+   "hours_idle": 112.0
   },
   {
    "slug": "playtomic-ed652309",
@@ -95,10 +95,20 @@
    "name": "Rpadel",
    "cp": "93210",
    "last_seen": "2026-07-13 08:58",
-   "hours_idle": 110.5
+   "hours_idle": 112.0
   }
  ],
  "price_shifts": [
+  {
+   "slug": "play-padel-alfortville",
+   "source": "anybuddy",
+   "name": "play-padel-alfortville",
+   "cp": "94140",
+   "prix_30j": 39.0,
+   "prix_recent": 72.0,
+   "delta_pct": 84.6,
+   "direction": "hausse"
+  },
   {
    "slug": "4padel-epinay-sur-seine",
    "source": "anybuddy",
@@ -140,22 +150,12 @@
    "direction": "hausse"
   },
   {
-   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
    "source": "doinsport",
-   "name": "FIVE ARENA",
-   "cp": "77100",
-   "prix_30j": 36.0,
-   "prix_recent": 48.0,
-   "delta_pct": 33.3,
-   "direction": "hausse"
-  },
-  {
-   "slug": "play-padel-alfortville",
-   "source": "anybuddy",
-   "name": "play-padel-alfortville",
-   "cp": "94140",
-   "prix_30j": 54.0,
-   "prix_recent": 72.0,
+   "name": "O.S. Sannois",
+   "cp": "95110",
+   "prix_30j": 27.0,
+   "prix_recent": 36.0,
    "delta_pct": 33.3,
    "direction": "hausse"
   }
@@ -168,7 +168,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "first_seen": "2026-07-13 01:59",
-   "days_since": 4
+   "days_since": 5
   },
   {
    "slug": "doinsport-c0ec9544-c563-4f09-a752-7d0a8d11577d",
@@ -176,7 +176,7 @@
    "name": "Mundo Padel Club",
    "cp": "77230",
    "first_seen": "2026-07-08 11:28",
-   "days_since": 9
+   "days_since": 10
   },
   {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
@@ -184,7 +184,7 @@
    "name": "tennis-padel-bois-colombes-bois-colombes",
    "cp": "92700",
    "first_seen": "2026-07-06 02:10",
-   "days_since": 11
+   "days_since": 12
   }
  ],
  "summary": {
