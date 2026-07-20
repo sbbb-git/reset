@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-20T22:05:44.258058",
+ "generated_at": "2026-07-20T23:34:58.652144",
  "heatmap": {
   "days": [
    "Lundi",
@@ -136,14 +136,14 @@
     },
     {
      "heure": 10,
-     "offered": 3559,
-     "demand": 1562,
+     "offered": 3560,
+     "demand": 1563,
      "occupation_pct": 44
     },
     {
      "heure": 11,
      "offered": 3175,
-     "demand": 1229,
+     "demand": 1230,
      "occupation_pct": 39
     },
     {
@@ -203,7 +203,7 @@
     {
      "heure": 21,
      "offered": 3429,
-     "demand": 2597,
+     "demand": 2598,
      "occupation_pct": 76
     },
     {
@@ -247,7 +247,7 @@
     {
      "heure": 11,
      "offered": 3262,
-     "demand": 1142,
+     "demand": 1143,
      "occupation_pct": 35
     },
     {
@@ -313,7 +313,7 @@
     {
      "heure": 22,
      "offered": 1631,
-     "demand": 1091,
+     "demand": 1093,
      "occupation_pct": 67
     },
     {
@@ -356,7 +356,7 @@
     },
     {
      "heure": 12,
-     "offered": 3755,
+     "offered": 3756,
      "demand": 1783,
      "occupation_pct": 47
     },
@@ -644,85 +644,85 @@
     },
     {
      "heure": 8,
-     "offered": 926,
+     "offered": 929,
      "demand": 541,
      "occupation_pct": 58
     },
     {
      "heure": 9,
-     "offered": 4265,
+     "offered": 4268,
      "demand": 3435,
-     "occupation_pct": 81
+     "occupation_pct": 80
     },
     {
      "heure": 10,
-     "offered": 3526,
+     "offered": 3529,
      "demand": 2788,
      "occupation_pct": 79
     },
     {
      "heure": 11,
-     "offered": 4276,
+     "offered": 4278,
      "demand": 3400,
-     "occupation_pct": 80
+     "occupation_pct": 79
     },
     {
      "heure": 12,
-     "offered": 4033,
+     "offered": 4036,
      "demand": 2654,
      "occupation_pct": 66
     },
     {
      "heure": 13,
-     "offered": 3723,
+     "offered": 3726,
      "demand": 2307,
      "occupation_pct": 62
     },
     {
      "heure": 14,
-     "offered": 4369,
+     "offered": 4371,
      "demand": 2971,
      "occupation_pct": 68
     },
     {
      "heure": 15,
-     "offered": 4610,
+     "offered": 4613,
      "demand": 3216,
      "occupation_pct": 70
     },
     {
      "heure": 16,
-     "offered": 4378,
-     "demand": 3090,
+     "offered": 4381,
+     "demand": 3091,
      "occupation_pct": 71
     },
     {
      "heure": 17,
-     "offered": 4571,
-     "demand": 3283,
+     "offered": 4572,
+     "demand": 3286,
      "occupation_pct": 72
     },
     {
      "heure": 18,
-     "offered": 5019,
-     "demand": 3779,
+     "offered": 5021,
+     "demand": 3782,
      "occupation_pct": 75
     },
     {
      "heure": 19,
-     "offered": 3644,
-     "demand": 2460,
+     "offered": 3646,
+     "demand": 2462,
      "occupation_pct": 68
     },
     {
      "heure": 20,
-     "offered": 3607,
+     "offered": 3608,
      "demand": 2541,
      "occupation_pct": 70
     },
     {
      "heure": 21,
-     "offered": 2425,
+     "offered": 2426,
      "demand": 1651,
      "occupation_pct": 68
     },
@@ -744,7 +744,7 @@
    [
     "Dimanche",
     18,
-    3779
+    3782
    ],
    [
     "Lundi",
@@ -779,7 +779,7 @@
    [
     "Dimanche",
     17,
-    3283
+    3286
    ],
    [
     "Lundi",
@@ -809,7 +809,7 @@
    [
     "Dimanche",
     16,
-    3090
+    3091
    ],
    [
     "Jeudi",
@@ -844,8 +844,8 @@
   ]
  },
  "elasticity": {
-  "slope": 0.765,
-  "intercept": 4.39,
+  "slope": 0.763,
+  "intercept": 4.4,
   "interpretation": "élasticité prix demande estimée (log-log)",
   "data": [
    {
@@ -1429,7 +1429,7 @@
     "name": "tennis-rambouillet",
     "source": "anybuddy",
     "prix_median_90": 40.0,
-    "n_bookings": 245,
+    "n_bookings": 254,
     "cp": "78120"
    },
    {
@@ -1460,8 +1460,8 @@
     "slug": "urbanpadel-marne-la-vallee-lognes",
     "name": "UrbanPadel Marne la Vallée (Lognes)",
     "source": "urbanpadel",
-    "prix_median_90": 72,
-    "n_bookings": 4368,
+    "prix_median_90": 72.0,
+    "n_bookings": 4369,
     "cp": "77185"
    },
    {
@@ -2815,7 +2815,7 @@
    {
     "chain": "UrbanPadel",
     "n_clubs": 4,
-    "median_sessions_per_club": 3884.5,
+    "median_sessions_per_club": 3885.0,
     "median_price_90": 75.0
    },
    {
@@ -2953,9 +2953,9 @@
   "n_multi_platforms": 19,
   "n_mono": 102,
   "median_sessions_multi": 2988,
-  "median_sessions_mono": 209,
+  "median_sessions_mono": 210,
   "avg_sessions_multi": 5201,
-  "avg_sessions_mono": 1107,
+  "avg_sessions_mono": 1108,
   "clusters": [
    {
     "unified_id": "unif_015",
