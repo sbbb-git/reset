@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-19T15:34:47.859737",
+ "generated_at": "2026-07-20T00:07:18.794598",
  "idle_24h": [
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -7,79 +7,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "last_seen": "2026-07-13 08:57",
-   "hours_idle": 150.6
-  },
-  {
-   "slug": "playtomic-0628edc6",
-   "source": "playtomic",
-   "name": "CASA PADEL ASNIERES",
-   "cp": "92600",
-   "last_seen": "2026-07-13 08:58",
-   "hours_idle": 150.6
-  },
-  {
-   "slug": "playtomic-25bf0a66",
-   "source": "playtomic",
-   "name": "Paris Padel",
-   "cp": "75020",
-   "last_seen": "2026-07-13 08:58",
-   "hours_idle": 150.6
-  },
-  {
-   "slug": "playtomic-391997f9",
-   "source": "playtomic",
-   "name": "CASA PADEL CROISSY-BEAUBOURG",
-   "cp": "77183",
-   "last_seen": "2026-07-13 08:58",
-   "hours_idle": 150.6
-  },
-  {
-   "slug": "playtomic-49bf96dc",
-   "source": "playtomic",
-   "name": "Royal Padel Club - Versailles",
-   "cp": "78000",
-   "last_seen": "2026-07-13 08:58",
-   "hours_idle": 150.6
-  },
-  {
-   "slug": "playtomic-51b02a03",
-   "source": "playtomic",
-   "name": "TC Melun",
-   "cp": "77000",
-   "last_seen": "2026-07-13 08:58",
-   "hours_idle": 150.6
-  },
-  {
-   "slug": "playtomic-7f3d8837",
-   "source": "playtomic",
-   "name": "Moret Padel",
-   "cp": "77250",
-   "last_seen": "2026-07-13 08:58",
-   "hours_idle": 150.6
-  },
-  {
-   "slug": "playtomic-be89f91d",
-   "source": "playtomic",
-   "name": "PadelShot St Quentin en Yvelines",
-   "cp": "78190",
-   "last_seen": "2026-07-13 08:58",
-   "hours_idle": 150.6
-  },
-  {
-   "slug": "playtomic-d04b7959",
-   "source": "playtomic",
-   "name": "CASA PADEL SAINT-DENIS",
-   "cp": "93200",
-   "last_seen": "2026-07-13 08:58",
-   "hours_idle": 150.6
-  },
-  {
-   "slug": "playtomic-ed652309",
-   "source": "playtomic",
-   "name": "Rpadel",
-   "cp": "93210",
-   "last_seen": "2026-07-13 08:58",
-   "hours_idle": 150.6
+   "hours_idle": 159.2
   },
   {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
@@ -87,30 +15,10 @@
    "name": "tennis-padel-bois-colombes-bois-colombes",
    "cp": "92700",
    "last_seen": "2026-07-17 17:56",
-   "hours_idle": 45.6
+   "hours_idle": 54.2
   }
  ],
  "price_shifts": [
-  {
-   "slug": "le-five-marville-la-courneuve",
-   "source": "anybuddy",
-   "name": "le-five-marville-la-courneuve",
-   "cp": "93120",
-   "prix_30j": 54.0,
-   "prix_recent": 78.0,
-   "delta_pct": 44.4,
-   "direction": "hausse"
-  },
-  {
-   "slug": "4padel-paris-20",
-   "source": "anybuddy",
-   "name": "4padel-paris-20",
-   "cp": "75020",
-   "prix_30j": 60.0,
-   "prix_recent": 84.0,
-   "delta_pct": 40.0,
-   "direction": "hausse"
-  },
   {
    "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
    "source": "doinsport",
@@ -120,6 +28,26 @@
    "prix_recent": 36.0,
    "delta_pct": 33.3,
    "direction": "hausse"
+  },
+  {
+   "slug": "home-padel-meaux",
+   "source": "anybuddy",
+   "name": "home-padel-meaux",
+   "cp": "77100",
+   "prix_30j": 72.0,
+   "prix_recent": 48.0,
+   "delta_pct": -33.3,
+   "direction": "baisse"
+  },
+  {
+   "slug": "wrc-trappes",
+   "source": "anybuddy",
+   "name": "wrc-trappes",
+   "cp": "78190",
+   "prix_30j": 72.0,
+   "prix_recent": 48.0,
+   "delta_pct": -33.3,
+   "direction": "baisse"
   }
  ],
  "volume_drops": [],
@@ -130,7 +58,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "first_seen": "2026-07-13 01:59",
-   "days_since": 6
+   "days_since": 7
   },
   {
    "slug": "wtc-wissous",
@@ -138,7 +66,7 @@
    "name": "wtc-wissous",
    "cp": "91320",
    "first_seen": "2026-07-10 11:41",
-   "days_since": 9
+   "days_since": 10
   },
   {
    "slug": "doinsport-c0ec9544-c563-4f09-a752-7d0a8d11577d",
@@ -146,7 +74,7 @@
    "name": "Mundo Padel Club",
    "cp": "77230",
    "first_seen": "2026-07-08 11:28",
-   "days_since": 11
+   "days_since": 12
   },
   {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
@@ -154,12 +82,12 @@
    "name": "tennis-padel-bois-colombes-bois-colombes",
    "cp": "92700",
    "first_seen": "2026-07-06 02:10",
-   "days_since": 13
+   "days_since": 14
   }
  ],
  "summary": {
-  "total_anomalies": 14,
-  "idle_24h": 11,
+  "total_anomalies": 5,
+  "idle_24h": 2,
   "price_shifts": 3,
   "volume_drops": 0,
   "new_clubs_14d": 4
