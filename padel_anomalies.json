@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-20T10:58:45.925858",
+ "generated_at": "2026-07-20T13:12:42.227763",
  "idle_24h": [
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -7,7 +7,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "last_seen": "2026-07-13 08:57",
-   "hours_idle": 170.0
+   "hours_idle": 172.3
   },
   {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
@@ -15,15 +15,7 @@
    "name": "tennis-padel-bois-colombes-bois-colombes",
    "cp": "92700",
    "last_seen": "2026-07-17 17:56",
-   "hours_idle": 65.0
-  },
-  {
-   "slug": "carre-padel-moissy-cramayel",
-   "source": "anybuddy",
-   "name": "carre-padel-moissy-cramayel",
-   "cp": "77550",
-   "last_seen": "2026-07-19 06:49",
-   "hours_idle": 28.2
+   "hours_idle": 67.3
   }
  ],
  "price_shifts": [
@@ -94,8 +86,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 6,
-  "idle_24h": 3,
+  "total_anomalies": 5,
+  "idle_24h": 2,
   "price_shifts": 3,
   "volume_drops": 0,
   "new_clubs_14d": 4
