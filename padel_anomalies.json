@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-20T23:34:58.855174",
+ "generated_at": "2026-07-21T02:58:17.994666",
  "idle_24h": [
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -7,7 +7,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "last_seen": "2026-07-13 08:57",
-   "hours_idle": 182.6
+   "hours_idle": 186.0
   },
   {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
@@ -15,7 +15,7 @@
    "name": "tennis-padel-bois-colombes-bois-colombes",
    "cp": "92700",
    "last_seen": "2026-07-17 17:56",
-   "hours_idle": 77.6
+   "hours_idle": 81.0
   }
  ],
  "price_shifts": [
@@ -28,26 +28,6 @@
    "prix_recent": 36.0,
    "delta_pct": 33.3,
    "direction": "hausse"
-  },
-  {
-   "slug": "home-padel-meaux",
-   "source": "anybuddy",
-   "name": "home-padel-meaux",
-   "cp": "77100",
-   "prix_30j": 72.0,
-   "prix_recent": 48.0,
-   "delta_pct": -33.3,
-   "direction": "baisse"
-  },
-  {
-   "slug": "wrc-trappes",
-   "source": "anybuddy",
-   "name": "wrc-trappes",
-   "cp": "78190",
-   "prix_30j": 72.0,
-   "prix_recent": 48.0,
-   "delta_pct": -33.3,
-   "direction": "baisse"
   }
  ],
  "volume_drops": [],
@@ -58,7 +38,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "first_seen": "2026-07-13 01:59",
-   "days_since": 7
+   "days_since": 8
   },
   {
    "slug": "wtc-wissous",
@@ -66,7 +46,7 @@
    "name": "wtc-wissous",
    "cp": "91320",
    "first_seen": "2026-07-10 11:41",
-   "days_since": 10
+   "days_since": 11
   },
   {
    "slug": "doinsport-c0ec9544-c563-4f09-a752-7d0a8d11577d",
@@ -74,22 +54,14 @@
    "name": "Mundo Padel Club",
    "cp": "77230",
    "first_seen": "2026-07-08 11:28",
-   "days_since": 12
-  },
-  {
-   "slug": "tennis-padel-bois-colombes-bois-colombes",
-   "source": "anybuddy",
-   "name": "tennis-padel-bois-colombes-bois-colombes",
-   "cp": "92700",
-   "first_seen": "2026-07-06 02:10",
-   "days_since": 14
+   "days_since": 13
   }
  ],
  "summary": {
-  "total_anomalies": 5,
+  "total_anomalies": 3,
   "idle_24h": 2,
-  "price_shifts": 3,
+  "price_shifts": 1,
   "volume_drops": 0,
-  "new_clubs_14d": 4
+  "new_clubs_14d": 3
  }
 }
