@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-22T13:07:06.409964",
+ "generated_at": "2026-07-22T15:23:16.001318",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,12 +9,12 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 153571,
-   "doinsport": 8263,
+   "anybuddy": 153810,
+   "doinsport": 8306,
    "playtomic": 33682,
-   "urbanpadel": 15972
+   "urbanpadel": 15975
   },
-  "n_sessions_live": 211488,
+  "n_sessions_live": 211773,
   "n_sessions_history": 146856,
   "pop_idf": 12258660
  },
@@ -87,7 +87,7 @@
    "revenu_median_uc": 23560,
    "clubs_padel": 9,
    "hab_par_club": 156672,
-   "prix_median_90min": 50.4
+   "prix_median_90min": 54.0
   },
   "95": {
    "nom": "Val-d'Oise",
