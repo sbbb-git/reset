@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-21T18:20:40.740363",
+ "generated_at": "2026-07-22T00:04:39.562004",
  "idle_24h": [
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -7,7 +7,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "last_seen": "2026-07-13 08:57",
-   "hours_idle": 201.4
+   "hours_idle": 207.1
   },
   {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
@@ -15,10 +15,20 @@
    "name": "tennis-padel-bois-colombes-bois-colombes",
    "cp": "92700",
    "last_seen": "2026-07-17 17:56",
-   "hours_idle": 96.4
+   "hours_idle": 102.1
   }
  ],
  "price_shifts": [
+  {
+   "slug": "play-padel-alfortville",
+   "source": "anybuddy",
+   "name": "play-padel-alfortville",
+   "cp": "94140",
+   "prix_30j": 39.0,
+   "prix_recent": 72.0,
+   "delta_pct": 84.6,
+   "direction": "hausse"
+  },
   {
    "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
    "source": "doinsport",
@@ -38,7 +48,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "first_seen": "2026-07-13 01:59",
-   "days_since": 8
+   "days_since": 9
   },
   {
    "slug": "wtc-wissous",
@@ -46,7 +56,7 @@
    "name": "wtc-wissous",
    "cp": "91320",
    "first_seen": "2026-07-10 11:41",
-   "days_since": 11
+   "days_since": 12
   },
   {
    "slug": "doinsport-c0ec9544-c563-4f09-a752-7d0a8d11577d",
@@ -54,13 +64,13 @@
    "name": "Mundo Padel Club",
    "cp": "77230",
    "first_seen": "2026-07-08 11:28",
-   "days_since": 13
+   "days_since": 14
   }
  ],
  "summary": {
-  "total_anomalies": 3,
+  "total_anomalies": 4,
   "idle_24h": 2,
-  "price_shifts": 1,
+  "price_shifts": 2,
   "volume_drops": 0,
   "new_clubs_14d": 3
  }
