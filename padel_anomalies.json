@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-24T09:08:39.253779",
+ "generated_at": "2026-07-24T11:21:11.538667",
  "idle_24h": [
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -7,7 +7,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "last_seen": "2026-07-13 08:57",
-   "hours_idle": 264.2
+   "hours_idle": 266.4
   }
  ],
  "price_shifts": [
@@ -19,16 +19,6 @@
    "prix_30j": 39.0,
    "prix_recent": 72.0,
    "delta_pct": 84.6,
-   "direction": "hausse"
-  },
-  {
-   "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
-   "source": "doinsport",
-   "name": "O.S. Sannois",
-   "cp": "95110",
-   "prix_30j": 27.0,
-   "prix_recent": 36.0,
-   "delta_pct": 33.3,
    "direction": "hausse"
   }
  ],
@@ -52,9 +42,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 3,
+  "total_anomalies": 2,
   "idle_24h": 1,
-  "price_shifts": 2,
+  "price_shifts": 1,
   "volume_drops": 0,
   "new_clubs_14d": 2
  }
