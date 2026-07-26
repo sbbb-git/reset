@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-25T17:35:31.855347",
+ "generated_at": "2026-07-26T03:21:18.754602",
  "idle_24h": [
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -7,31 +7,10 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "last_seen": "2026-07-13 08:57",
-   "hours_idle": 296.6
+   "hours_idle": 306.4
   }
  ],
- "price_shifts": [
-  {
-   "slug": "play-padel-alfortville",
-   "source": "anybuddy",
-   "name": "play-padel-alfortville",
-   "cp": "94140",
-   "prix_30j": 39.0,
-   "prix_recent": 72.0,
-   "delta_pct": 84.6,
-   "direction": "hausse"
-  },
-  {
-   "slug": "4padel-argenteuil",
-   "source": "anybuddy",
-   "name": "4padel-argenteuil",
-   "cp": "95100",
-   "prix_30j": 54.0,
-   "prix_recent": 72.0,
-   "delta_pct": 33.3,
-   "direction": "hausse"
-  }
- ],
+ "price_shifts": [],
  "volume_drops": [],
  "new_clubs": [
   {
@@ -40,13 +19,13 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "first_seen": "2026-07-13 01:59",
-   "days_since": 12
+   "days_since": 13
   }
  ],
  "summary": {
-  "total_anomalies": 3,
+  "total_anomalies": 1,
   "idle_24h": 1,
-  "price_shifts": 2,
+  "price_shifts": 0,
   "volume_drops": 0,
   "new_clubs_14d": 1
  }
