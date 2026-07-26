@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-26T09:00:28.323842",
+ "generated_at": "2026-07-26T10:51:52.842536",
  "idle_24h": [
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -7,7 +7,15 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "last_seen": "2026-07-13 08:57",
-   "hours_idle": 312.1
+   "hours_idle": 313.9
+  },
+  {
+   "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
+   "source": "doinsport",
+   "name": "Padel Pulsion",
+   "cp": "91570",
+   "last_seen": "2026-07-22 13:27",
+   "hours_idle": 93.4
   }
  ],
  "price_shifts": [],
@@ -23,8 +31,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 1,
-  "idle_24h": 1,
+  "total_anomalies": 2,
+  "idle_24h": 2,
   "price_shifts": 0,
   "volume_drops": 0,
   "new_clubs_14d": 1
