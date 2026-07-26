@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-26T06:24:00.856781",
+ "generated_at": "2026-07-26T09:00:25.379453",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,12 +9,12 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 160184,
-   "doinsport": 8653,
+   "anybuddy": 160578,
+   "doinsport": 8671,
    "playtomic": 27289,
    "urbanpadel": 15850
   },
-  "n_sessions_live": 211976,
+  "n_sessions_live": 212388,
   "n_sessions_history": 146856,
   "pop_idf": 12258660
  },
@@ -77,7 +77,7 @@
    "revenu_median_uc": 19460,
    "clubs_padel": 14,
    "hab_par_club": 118386,
-   "prix_median_90min": 78
+   "prix_median_90min": 78.0
   },
   "94": {
    "nom": "Val-de-Marne",
