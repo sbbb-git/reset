@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-26T10:51:52.842536",
+ "generated_at": "2026-07-27T00:05:44.649607",
  "idle_24h": [
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -7,18 +7,39 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "last_seen": "2026-07-13 08:57",
-   "hours_idle": 313.9
+   "hours_idle": 327.1
   },
   {
-   "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
-   "source": "doinsport",
-   "name": "Padel Pulsion",
-   "cp": "91570",
-   "last_seen": "2026-07-22 13:27",
-   "hours_idle": 93.4
+   "slug": "4padel-cao-saint-denis",
+   "source": "anybuddy",
+   "name": "4padel-cao-saint-denis",
+   "cp": "93200",
+   "last_seen": "2026-07-25 07:46",
+   "hours_idle": 40.3
   }
  ],
- "price_shifts": [],
+ "price_shifts": [
+  {
+   "slug": "4padel-epinay-sur-seine",
+   "source": "anybuddy",
+   "name": "4padel-epinay-sur-seine",
+   "cp": "93800",
+   "prix_30j": 78.0,
+   "prix_recent": 54.0,
+   "delta_pct": -30.8,
+   "direction": "baisse"
+  },
+  {
+   "slug": "le-five-marville-la-courneuve",
+   "source": "anybuddy",
+   "name": "le-five-marville-la-courneuve",
+   "cp": "93120",
+   "prix_30j": 78.0,
+   "prix_recent": 54.0,
+   "delta_pct": -30.8,
+   "direction": "baisse"
+  }
+ ],
  "volume_drops": [],
  "new_clubs": [
   {
@@ -27,13 +48,13 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "first_seen": "2026-07-13 01:59",
-   "days_since": 13
+   "days_since": 14
   }
  ],
  "summary": {
-  "total_anomalies": 2,
+  "total_anomalies": 4,
   "idle_24h": 2,
-  "price_shifts": 0,
+  "price_shifts": 2,
   "volume_drops": 0,
   "new_clubs_14d": 1
  }
