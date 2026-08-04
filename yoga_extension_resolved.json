@@ -380,11 +380,11 @@
   "url": "https://yoga92.com/"
  },
  "vitality_levallois": {
-  "platform": "bsport",
-  "company_id": "193",
-  "detected_via": "https://www.vitalitylevallois.fr/",
-  "checked_at": "2026-06-16 12:10",
-  "url": "https://www.vitalitylevallois.fr/"
+  "platform": "unknown",
+  "note": "bsport company=193 ne renvoie plus d'offre depuis le 2026-06-20 (site toujours en ligne) — départ de bsport ou changement d'ID, à resonder",
+  "url": "https://www.vitalitylevallois.fr/",
+  "checked_at": "2026-08-04 12:00",
+  "attempts": 0
  },
  "studio_air_yoga": {
   "platform": "unknown",
