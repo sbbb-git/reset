@@ -36,7 +36,7 @@ from zoneinfo import ZoneInfo
 PARIS = ZoneInfo("Europe/Paris")
 BASE = "https://www.episod.com"
 PLANNING = BASE + "/planning/"
-RESA = BASE + "/reservation/{}/"
+RESA = BASE + "/reservation-v2/{}/"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"
 JOURS_FR = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
 FIELDS = ["date", "jour", "heure", "fin", "lieu", "cours", "coach",
@@ -74,37 +74,57 @@ def _clean(s):
 
 
 def parse_planning(html):
-    """Renvoie une liste de séances (métadonnées, sans capacité)."""
+    """Renvoie une liste de séances (métadonnées, sans capacité).
+
+    Markup « planning v2 » (refonte du front Episod mi-2026) :
+      <li class="planning-item planning-item-v2" id="session-v2-<id>"
+          data-started-at="2026-08-04T13:00:00+02:00" data-hub-id="6" ...>
+    L'ancien markup (<li id="session-<id>"> + date en dd/mm) reste toléré en
+    repli : les deux formes sont acceptées le temps que le v2 se généralise.
+    """
     out = []
-    blocks = re.findall(r"(<li id=\"session-\d+\".*?</li>)", html, re.S)
+    blocks = re.findall(r'(<li[^>]*id="session-(?:v2-)?\d+".*?</li>)', html, re.S)
     for b in blocks:
-        sid = re.search(r"session-(\d+)", b).group(1)
+        sid = re.search(r"session-(?:v2-)?(\d+)", b).group(1)
 
         def f(pat, default=""):
             m = re.search(pat, b, re.S)
             return _clean(m.group(1)) if m else default
 
-        jour = f(r'data-jour="(\d)"')
-        ddmm = f(r'masterclass-txt">([0-9]{2}/[0-9]{2})</div>')
-        heure = f(r"<time[^>]*>([^<]+)</time>").replace("H", ":").strip()
+        # v2 : date + heure exactes via data-started-at (ISO 8601, tz incluse).
+        start_iso = (re.search(r'data-started-at="([^"]+)"', b) or [None, ""])[1]
+        ddmm = f(r'masterclass-txt">([0-9]{2}/[0-9]{2})</div>') or f(r'<div>([0-9]{2}/[0-9]{2})</div>')
+        heure = f(r"<time[^>]*>([^<]+)</time>").replace("H", ":").replace("h", ":").strip()
+        # v2 expose la durée réelle ("45 mins") au lieu du forfait 50 min.
+        duree = f(r'class="duration[^"]*">\s*([0-9]+)\s*(?:&nbsp;|\s)*mins?')
         cours = f(r'data-type="sport"[^>]*>([^<]+)</h2>')
         coach = f(r'data-type="coach"[^>]*>([^<]+)</h4>')
         hubraw = f(r'data-type="hub"[^>]*>(.*?)</address>')
-        hubslug = (re.search(r'data-hub="([^"]*)"', b) or [None, ""])[1]
+        hubslug = (re.search(r'data-hub(?:-id)?="([^"]*)"', b) or [None, ""])[1]
         out.append({
-            "id": sid, "jour_idx": jour, "ddmm": ddmm, "heure": heure,
+            "id": sid, "start_iso": start_iso, "ddmm": ddmm, "heure": heure,
+            "duree": int(duree) if duree.isdigit() else 0,
             "cours": cours, "coach": coach, "lieu": hubraw, "hub": hubslug,
         })
     return out
 
 
 def parse_seatmap(html):
-    """(capacite, presents) d'après le plan de salle. coach/line exclus.
+    """(capacite, presents) d'après le plan de salle. Coach exclu.
 
+    v2 : <div class="layout-item type-<équipement> is-available|is-taken">.
+    Ancien markup (type-X bookable|unbookable) toléré en repli.
     Renvoie (0, 0) si aucun plan (certains types de séance sans placement)."""
-    seats = re.findall(r'class="(type-[a-z-]+ [^"]*?(?:bookable|unbookable)[^"]*)"', html)
     cap = pres = 0
-    for s in seats:
+    for s in re.findall(r'class="layout-item type-[a-z-]+ (is-[a-z-]+)"', html):
+        if s == "is-coach":
+            continue
+        cap += 1
+        if s == "is-taken":
+            pres += 1
+    if cap:
+        return cap, pres
+    for s in re.findall(r'class="(type-[a-z-]+ [^"]*?(?:bookable|unbookable)[^"]*)"', html):
         if "type-coach" in s or "type-line" in s:
             continue
         cap += 1
@@ -150,14 +170,24 @@ def capture():
         return store
     fetched = withmap = 0
     for s in sessions:
-        date = resolve_date(s["ddmm"], now)
-        if not date or not s["heure"]:
-            continue
-        try:
-            sdt = dt.datetime.combine(date, dt.time(int(s["heure"][:2]), int(s["heure"][3:5])), PARIS)
-        except (ValueError, IndexError):
-            continue
-        edt = sdt + dt.timedelta(minutes=50)  # durée ~50 min (inconnue dans le planning)
+        # v2 : data-started-at donne date+heure exactes ; sinon repli dd/mm + <time>.
+        sdt = None
+        if s.get("start_iso"):
+            try:
+                sdt = dt.datetime.fromisoformat(s["start_iso"]).astimezone(PARIS)
+            except ValueError:
+                sdt = None
+        if sdt is None:
+            date = resolve_date(s["ddmm"], now)
+            if not date or not s["heure"]:
+                continue
+            try:
+                sdt = dt.datetime.combine(date, dt.time(int(s["heure"][:2]), int(s["heure"][3:5])), PARIS)
+            except (ValueError, IndexError):
+                continue
+        date = sdt.date()
+        s["heure"] = sdt.strftime("%H:%M")
+        edt = sdt + dt.timedelta(minutes=s.get("duree") or 50)
         sid = s["id"]
         prev = store.get(sid) or {}
         rec = {
@@ -182,6 +212,24 @@ def capture():
             except Exception as e:  # noqa: BLE001
                 print(f"  (resa {sid} échouée : {e})", file=sys.stderr)
         store[sid] = rec
+    # Une séance qui sort de la fenêtre du planning n'est plus revue par la
+    # boucle ci-dessus : sans ce passage son `finie` resterait False à vie.
+    figees = 0
+    for v in store.values():
+        if v.get("finie"):
+            continue
+        try:
+            end = dt.datetime.combine(
+                dt.date.fromisoformat(v["date"]),
+                dt.time(int(v["heure"][:2]), int(v["heure"][3:5])), PARIS,
+            ) + dt.timedelta(minutes=50)
+        except (ValueError, KeyError, IndexError):
+            continue
+        if now >= end:
+            v["finie"] = True
+            figees += 1
+    if figees:
+        print(f"  ({figees} séances passées figées rétroactivement)", file=sys.stderr)
     save_store(store, STORE)
     fin = sum(1 for v in store.values() if v.get("finie"))
     print(f"[{KEY}] {now:%Y-%m-%d %H:%M} : {len(sessions)} au planning, {fetched} plans lus "
