@@ -1,0 +1,76 @@
+name: Extensions · discovery plateformes (incrémentale)
+
+# Sonde les catalogues pour trouver l'identifiant booking de chaque marque.
+# Chaque catégorie a son propre budget temps côté script (MAX_SECONDS) ET un
+# timeout de step : une catégorie lente ne peut plus bloquer les suivantes.
+# Les marques non résolues sont reprises au run suivant, et abandonnées après
+# MAX_ATTEMPTS essais infructueux.
+
+on:
+  schedule:
+    - cron: "40 3 * * *"   # 3h40 UTC = 5h40 Paris, hors des pics de scrape
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: extensions-discover
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 140
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pilates
+        run: python3 pilates_extension_discover.py
+        timeout-minutes: 22
+        continue-on-error: true
+      - name: Yoga
+        run: python3 yoga_extension_discover.py
+        timeout-minutes: 22
+        continue-on-error: true
+      - name: Fitness général
+        run: python3 fitness_extension_discover.py
+        timeout-minutes: 22
+        continue-on-error: true
+      - name: Urban Foot
+        run: python3 urbanfoot_extension_discover.py
+        timeout-minutes: 22
+        continue-on-error: true
+      - name: Hoops
+        run: python3 hoops_extension_discover.py
+        timeout-minutes: 22
+        continue-on-error: true
+
+      - name: Commit des résolutions
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*_extension_resolved.json' 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Aucune nouvelle résolution."
+          else
+            git commit -m "Extensions discovery ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            for i in 1 2 3 4; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              echo "retry push $i"; sleep 5
+            done
+          fi
+
+      - name: Healthcheck ping
+        if: always()
+        env:
+          HC_URL: ${{ secrets.HEALTHCHECK_URL }}
+          WF: extensions-discover
+        run: |
+          if [ -n "$HC_URL" ]; then
+            curl -fsSL --max-time 10 "$HC_URL/$WF?status=${{ job.status }}" || true
+          fi

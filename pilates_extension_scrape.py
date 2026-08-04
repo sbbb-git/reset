@@ -163,17 +163,19 @@ def scrape_brand(key, brand_cfg, resolved):
     print(f"⊘ {key:30s} platform={platform or 'unknown'} status={status} — skip")
 
 
-def main():
-    brands = load_or_die(BRANDS_CFG)
-    if not os.path.exists(RESOLVED):
-        print(f"⚠️ {RESOLVED} introuvable — aucune brand résolue encore. Lance pilates_extension_discover.py.",
+def run_scrape(brands_cfg, resolved_path, label="EXT"):
+    """Scrape toutes les marques résolues d'un catalogue. Retourne (ok, erreurs)."""
+    brands = load_or_die(brands_cfg)
+    if not os.path.exists(resolved_path):
+        print(f"⚠️ [{label}] {resolved_path} introuvable — lance la discovery d'abord.",
               file=sys.stderr)
-        sys.exit(0)
-    resolved = json.load(open(RESOLVED, encoding="utf-8"))
+        return 0, 0
+    resolved = json.load(open(resolved_path, encoding="utf-8"))
 
-    ok = 0
-    err = 0
+    ok = err = 0
     for key, b in brands.items():
+        if key.startswith("_"):
+            continue
         try:
             scrape_brand(key, b, resolved)
             ok += 1
@@ -182,7 +184,12 @@ def main():
             print(f"❌ {key} : {e}", file=sys.stderr)
             traceback.print_exc(file=sys.stderr)
 
-    print(f"\nDone : {ok} brands traitées, {err} erreurs")
+    print(f"[{label}] {ok} marques traitées, {err} erreurs")
+    return ok, err
+
+
+def main():
+    run_scrape(BRANDS_CFG, RESOLVED, "PILATES")
 
 
 if __name__ == "__main__":

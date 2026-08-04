@@ -1,0 +1,75 @@
+name: Extensions · scrape (Pilates / Yoga / Fitness / Foot / Hoops)
+
+# Ne fait QUE scraper les marques déjà résolues, et rien d'autre.
+# La discovery vit dans extensions-discover.yml : elle est lente et bornée
+# dans le temps, elle ne doit plus pouvoir emporter le scrape avec elle
+# (c'est ce qui a gelé 18 scrapers du 18 juin au 4 août 2026).
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"   # toutes les 4 h
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: extensions-scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pilates
+        run: python3 pilates_extension_scrape.py
+        continue-on-error: true
+      - name: Yoga
+        run: python3 yoga_extension_scrape.py
+        continue-on-error: true
+      - name: Fitness général
+        run: python3 fitness_extension_scrape.py
+        continue-on-error: true
+      - name: Urban Foot
+        run: python3 urbanfoot_extension_scrape.py
+        continue-on-error: true
+      - name: Hoops
+        run: python3 hoops_extension_scrape.py
+        continue-on-error: true
+
+      - name: Agrégats Pilates + Yoga
+        run: |
+          python3 pilates_idf_compute.py || true
+          python3 yoga_idf_compute.py || true
+        continue-on-error: true
+
+      - name: Commit si changement
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- '*_data.json' '*_seances.csv' '*.html' 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "Extensions scrape ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            for i in 1 2 3 4; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              echo "retry push $i"; sleep 5
+            done
+          fi
+
+      - name: Healthcheck ping
+        if: always()
+        env:
+          HC_URL: ${{ secrets.HEALTHCHECK_URL }}
+          WF: extensions-scrape
+        run: |
+          if [ -n "$HC_URL" ]; then
+            curl -fsSL --max-time 10 "$HC_URL/$WF?status=${{ job.status }}" || true
+          fi
