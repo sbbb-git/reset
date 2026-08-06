@@ -198,6 +198,94 @@
   }
  },
  {
+  "slug": "doinsport-d4ba1352-8196-4f65-a16f-5125f07f074e",
+  "source": "doinsport",
+  "name": "ALL IN ACADEMY COTE D'AZUR",
+  "cp": "06270",
+  "city": "Villeneuve-Loubet ",
+  "dept": "06",
+  "metro": "marseille",
+  "lat": 43.6590455,
+  "lng": 7.0945897,
+  "raw": {
+   "id": "d4ba1352-8196-4f65-a16f-5125f07f074e",
+   "name": "ALL IN ACADEMY COTE D'AZUR",
+   "cp": "06270",
+   "city": "Villeneuve-Loubet ",
+   "dept": "06",
+   "metro": "marseille",
+   "lat": 43.6590455,
+   "lng": 7.0945897,
+   "website": "https://www.allin-cotedazur.com/"
+  }
+ },
+ {
+  "slug": "doinsport-699d8822-4902-4ff5-b287-7331b11d926f",
+  "source": "doinsport",
+  "name": "All In Country Club Grasse",
+  "cp": "06130",
+  "city": "Grasse",
+  "dept": "06",
+  "metro": "marseille",
+  "lat": 43.631841,
+  "lng": 6.9531961,
+  "raw": {
+   "id": "699d8822-4902-4ff5-b287-7331b11d926f",
+   "name": "All In Country Club Grasse",
+   "cp": "06130",
+   "city": "Grasse",
+   "dept": "06",
+   "metro": "marseille",
+   "lat": 43.631841,
+   "lng": 6.9531961,
+   "website": null
+  }
+ },
+ {
+  "slug": "doinsport-41a84a31-1471-4fad-8344-37029d9749b5",
+  "source": "doinsport",
+  "name": "All In Padel Décines",
+  "cp": "69150",
+  "city": "Décines-Charpieu",
+  "dept": "69",
+  "metro": "lyon",
+  "lat": 45.7682805,
+  "lng": 4.9781645,
+  "raw": {
+   "id": "41a84a31-1471-4fad-8344-37029d9749b5",
+   "name": "All In Padel Décines",
+   "cp": "69150",
+   "city": "Décines-Charpieu",
+   "dept": "69",
+   "metro": "lyon",
+   "lat": 45.7682805,
+   "lng": 4.9781645,
+   "website": "https://www.allin-padel.com/"
+  }
+ },
+ {
+  "slug": "doinsport-9ca8aec4-6d34-4f5e-9e32-7b403ebee41a",
+  "source": "doinsport",
+  "name": "All in Padel Villefranche",
+  "cp": "69400",
+  "city": "Villefranche sur Saône",
+  "dept": "69",
+  "metro": "lyon",
+  "lat": 45.9976927,
+  "lng": 4.7325588,
+  "raw": {
+   "id": "9ca8aec4-6d34-4f5e-9e32-7b403ebee41a",
+   "name": "All in Padel Villefranche",
+   "cp": "69400",
+   "city": "Villefranche sur Saône",
+   "dept": "69",
+   "metro": "lyon",
+   "lat": 45.9976927,
+   "lng": 4.7325588,
+   "website": "https://allin-padel.com"
+  }
+ },
+ {
   "slug": "doinsport-0bc27594-7716-4fc7-af6d-cf6927556040",
   "source": "doinsport",
   "name": "All Square by Eagle Spirit",
@@ -283,6 +371,28 @@
    "lat": 47.4605218,
    "lng": -0.5324927,
    "website": "https://footsal.angers-sco.fr/"
+  }
+ },
+ {
+  "slug": "doinsport-923c2681-0e3d-4f33-9dcd-24ede918528e",
+  "source": "doinsport",
+  "name": "Area Padel - La Coupe",
+  "cp": "11100",
+  "city": "Narbonne",
+  "dept": "11",
+  "metro": "toulouse",
+  "lat": 43.1837757,
+  "lng": 3.0041906,
+  "raw": {
+   "id": "923c2681-0e3d-4f33-9dcd-24ede918528e",
+   "name": "Area Padel - La Coupe",
+   "cp": "11100",
+   "city": "Narbonne",
+   "dept": "11",
+   "metro": "toulouse",
+   "lat": 43.1837757,
+   "lng": 3.0041906,
+   "website": null
   }
  },
  {
@@ -425,8 +535,8 @@
   "city": "Trégueux",
   "dept": "22",
   "metro": "nantes-rennes",
-  "lat": null,
-  "lng": null,
+  "lat": 48.4897528,
+  "lng": -2.7672229,
   "raw": {
    "id": "bce4b4a5-d113-4f82-b96c-3e14208d8dd2",
    "name": "Armoric Pulse",
@@ -434,8 +544,8 @@
    "city": "Trégueux",
    "dept": "22",
    "metro": "nantes-rennes",
-   "lat": null,
-   "lng": null,
+   "lat": 48.4897528,
+   "lng": -2.7672229,
    "website": "https://armoricpulse.fr/"
   }
  },
@@ -552,7 +662,7 @@
  {
   "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
   "source": "doinsport",
-  "name": "ASS TENNIS CLUB SARCELLOIS",
+  "name": "ASS TENNIS PADEL",
   "cp": "95200",
   "city": "Sarcelles",
   "dept": "95",
@@ -561,7 +671,7 @@
   "lng": 2.3785883,
   "raw": {
    "id": "06004879-0ab9-4f57-af7c-8d8e704f9efa",
-   "name": "ASS TENNIS CLUB SARCELLOIS",
+   "name": "ASS TENNIS PADEL",
    "cp": "95200",
    "city": "Sarcelles",
    "dept": "95",
@@ -579,8 +689,8 @@
   "city": "MIRANDE",
   "dept": "32",
   "metro": "toulouse",
-  "lat": null,
-  "lng": null,
+  "lat": 43.504521,
+  "lng": 0.39927,
   "raw": {
    "id": "2e1c6bef-b1f1-4fd4-b24a-0de1289750b0",
    "name": "Astarac Padel",
@@ -588,9 +698,9 @@
    "city": "MIRANDE",
    "dept": "32",
    "metro": "toulouse",
-   "lat": null,
-   "lng": null,
-   "website": null
+   "lat": 43.504521,
+   "lng": 0.39927,
+   "website": "https://astaracpadel.wixsite.com/astaracpadel?fbclid=IwY2xjawTA1qhleHRuA2FlbQIxMABicmlkETFjS3dTUmw0VXZtSGhMN05Wc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHtvWI5n3AVcsy16-HQ9Upxt7v0Q_qmLDod3566E3EARmzXyLOlw80mixm__c_aem_mSac-6JrSt6_6UjO8wjDOw"
   }
  },
  {
@@ -601,8 +711,8 @@
   "city": "Saint-Raphaël",
   "dept": "83",
   "metro": "marseille",
-  "lat": null,
-  "lng": null,
+  "lat": 43.4248547,
+  "lng": 6.781153,
   "raw": {
    "id": "eb684d65-86b9-4fe1-8c79-2a16574f83f8",
    "name": "AU FIVE ",
@@ -610,8 +720,8 @@
    "city": "Saint-Raphaël",
    "dept": "83",
    "metro": "marseille",
-   "lat": null,
-   "lng": null,
+   "lat": 43.4248547,
+   "lng": 6.781153,
    "website": "https://padel.aufive.com/"
   }
  },
@@ -667,8 +777,8 @@
   "city": "Signes",
   "dept": "83",
   "metro": "marseille",
-  "lat": null,
-  "lng": null,
+  "lat": 43.2641357,
+  "lng": 5.7842213,
   "raw": {
    "id": "9c6c757c-d4f7-4fd8-81a3-73c888211af9",
    "name": "AZUR TENNIS",
@@ -676,8 +786,8 @@
    "city": "Signes",
    "dept": "83",
    "metro": "marseille",
-   "lat": null,
-   "lng": null,
+   "lat": 43.2641357,
+   "lng": 5.7842213,
    "website": null
   }
  },
@@ -887,8 +997,8 @@
   "city": "Creysse",
   "dept": "24",
   "metro": "bordeaux",
-  "lat": null,
-  "lng": null,
+  "lat": 44.848058,
+  "lng": 0.5306182,
   "raw": {
    "id": "2a0b5fb8-20f9-4ff0-a176-06d4fa439d29",
    "name": "Big Padel - Bergerac",
@@ -896,8 +1006,8 @@
    "city": "Creysse",
    "dept": "24",
    "metro": "bordeaux",
-   "lat": null,
-   "lng": null,
+   "lat": 44.848058,
+   "lng": 0.5306182,
    "website": "https://bergerac.bigpadel.fr/"
   }
  },
@@ -997,8 +1107,8 @@
   "city": "Saint-malo",
   "dept": "35",
   "metro": "nantes-rennes",
-  "lat": null,
-  "lng": null,
+  "lat": 48.637679,
+  "lng": -1.9894578,
   "raw": {
    "id": "c352cb7a-8f44-4fef-8284-d3db0161c896",
    "name": "BOOMSY",
@@ -1006,8 +1116,8 @@
    "city": "Saint-malo",
    "dept": "35",
    "metro": "nantes-rennes",
-   "lat": null,
-   "lng": null,
+   "lat": 48.637679,
+   "lng": -1.9894578,
    "website": "https://boomsy.fr/"
   }
  },
@@ -1452,6 +1562,28 @@
   }
  },
  {
+  "slug": "doinsport-83800f72-df40-4f0c-954d-b7551d4b494b",
+  "source": "doinsport",
+  "name": "City Sport Lannion",
+  "cp": "22300",
+  "city": "Ploulec'h",
+  "dept": "22",
+  "metro": "nantes-rennes",
+  "lat": 47.923886,
+  "lng": -3.7219575,
+  "raw": {
+   "id": "83800f72-df40-4f0c-954d-b7551d4b494b",
+   "name": "City Sport Lannion",
+   "cp": "22300",
+   "city": "Ploulec'h",
+   "dept": "22",
+   "metro": "nantes-rennes",
+   "lat": 47.923886,
+   "lng": -3.7219575,
+   "website": "https://www.city-sport.fr/"
+  }
+ },
+ {
   "slug": "doinsport-d18d4f30-ee99-4fd0-aeea-c71379800b68",
   "source": "doinsport",
   "name": "Classico Foot",
@@ -1481,8 +1613,8 @@
   "city": "Vernou Sur Brenne",
   "dept": "37",
   "metro": "centre",
-  "lat": null,
-  "lng": null,
+  "lat": 47.442236,
+  "lng": 0.8221967,
   "raw": {
    "id": "a7896bd5-118c-4f56-85c2-898ae2bfe637",
    "name": "Click & Padel",
@@ -1490,8 +1622,8 @@
    "city": "Vernou Sur Brenne",
    "dept": "37",
    "metro": "centre",
-   "lat": null,
-   "lng": null,
+   "lat": 47.442236,
+   "lng": 0.8221967,
    "website": null
   }
  },
@@ -1540,6 +1672,28 @@
   }
  },
  {
+  "slug": "doinsport-5e04a63c-e2e7-4f88-8903-c1f41860843e",
+  "source": "doinsport",
+  "name": "CLUB DE L’ADOUR",
+  "cp": "40220",
+  "city": "Tarnos",
+  "dept": "40",
+  "metro": "bordeaux",
+  "lat": 43.5359833,
+  "lng": -1.4968888,
+  "raw": {
+   "id": "5e04a63c-e2e7-4f88-8903-c1f41860843e",
+   "name": "CLUB DE L’ADOUR",
+   "cp": "40220",
+   "city": "Tarnos",
+   "dept": "40",
+   "metro": "bordeaux",
+   "lat": 43.5359833,
+   "lng": -1.4968888,
+   "website": "https://clubdeladour.fr/"
+  }
+ },
+ {
   "slug": "doinsport-3123dca4-9f40-4f78-9c51-f89192c24039",
   "source": "doinsport",
   "name": "Club House",
@@ -1547,8 +1701,8 @@
   "city": "Chambry",
   "dept": "02",
   "metro": "lille",
-  "lat": null,
-  "lng": null,
+  "lat": 49.5919,
+  "lng": 3.65549,
   "raw": {
    "id": "3123dca4-9f40-4f78-9c51-f89192c24039",
    "name": "Club House",
@@ -1556,8 +1710,8 @@
    "city": "Chambry",
    "dept": "02",
    "metro": "lille",
-   "lat": null,
-   "lng": null,
+   "lat": 49.5919,
+   "lng": 3.65549,
    "website": null
   }
  },
@@ -1870,6 +2024,28 @@
   }
  },
  {
+  "slug": "doinsport-9541fd22-6527-4fd6-9589-2ae5672ee1d3",
+  "source": "doinsport",
+  "name": "Doin Demo",
+  "cp": "13002",
+  "city": "Marseille",
+  "dept": "13",
+  "metro": "marseille",
+  "lat": 43.3016949,
+  "lng": 5.3701123,
+  "raw": {
+   "id": "9541fd22-6527-4fd6-9589-2ae5672ee1d3",
+   "name": "Doin Demo",
+   "cp": "13002",
+   "city": "Marseille",
+   "dept": "13",
+   "metro": "marseille",
+   "lat": 43.3016949,
+   "lng": 5.3701123,
+   "website": null
+  }
+ },
+ {
   "slug": "doinsport-c4e7a0c3-0d33-4f01-97de-a6b6e53bfd01",
   "source": "doinsport",
   "name": "Domaine de la Choquette",
@@ -1999,50 +2175,6 @@
    "lat": 48.9481744,
    "lng": 4.3980443,
    "website": "https://energysports51.fr"
-  }
- },
- {
-  "slug": "doinsport-3aa7871b-15de-4f83-a58e-49668922f9b1",
-  "source": "doinsport",
-  "name": "ESCAPAD - LILLE",
-  "cp": "59777",
-  "city": "LILLE",
-  "dept": "59",
-  "metro": "lille",
-  "lat": 50.6374889,
-  "lng": 3.0744436,
-  "raw": {
-   "id": "3aa7871b-15de-4f83-a58e-49668922f9b1",
-   "name": "ESCAPAD - LILLE",
-   "cp": "59777",
-   "city": "LILLE",
-   "dept": "59",
-   "metro": "lille",
-   "lat": 50.6374889,
-   "lng": 3.0744436,
-   "website": "https://escapad.fr/"
-  }
- },
- {
-  "slug": "doinsport-7e197041-86cb-4fdb-9dd6-5682fe1c60fc",
-  "source": "doinsport",
-  "name": "ESCAPAD CHAMPIGNY",
-  "cp": "69930",
-  "city": "Saint-Laurent-de-Chamousset",
-  "dept": "69",
-  "metro": "lyon",
-  "lat": 45.7405264,
-  "lng": 4.4563965,
-  "raw": {
-   "id": "7e197041-86cb-4fdb-9dd6-5682fe1c60fc",
-   "name": "ESCAPAD CHAMPIGNY",
-   "cp": "69930",
-   "city": "Saint-Laurent-de-Chamousset",
-   "dept": "69",
-   "metro": "lyon",
-   "lat": 45.7405264,
-   "lng": 4.4563965,
-   "website": null
   }
  },
  {
@@ -2244,28 +2376,6 @@
   }
  },
  {
-  "slug": "doinsport-a05c09f0-aa7c-4ff9-aa50-db66f142ed3b",
-  "source": "doinsport",
-  "name": "Foot Five 47",
-  "cp": "47240",
-  "city": "Castelculier",
-  "dept": "47",
-  "metro": "bordeaux",
-  "lat": 44.1753184,
-  "lng": 0.6896657,
-  "raw": {
-   "id": "a05c09f0-aa7c-4ff9-aa50-db66f142ed3b",
-   "name": "Foot Five 47",
-   "cp": "47240",
-   "city": "Castelculier",
-   "dept": "47",
-   "metro": "bordeaux",
-   "lat": 44.1753184,
-   "lng": 0.6896657,
-   "website": "https://www.footfive-squash47.fr/"
-  }
- },
- {
   "slug": "doinsport-f52e0e2b-788f-4f0c-aa91-a8841c8d9d22",
   "source": "doinsport",
   "name": "FOOTBALL 5 CLUB",
@@ -2310,6 +2420,28 @@
   }
  },
  {
+  "slug": "doinsport-b781c6b7-1ad6-4f80-948b-249961f4a9f5",
+  "source": "doinsport",
+  "name": "FT Echirolles",
+  "cp": "38130",
+  "city": "Echirolles",
+  "dept": "38",
+  "metro": "lyon",
+  "lat": 45.1376544,
+  "lng": 5.7091171,
+  "raw": {
+   "id": "b781c6b7-1ad6-4f80-948b-249961f4a9f5",
+   "name": "FT Echirolles",
+   "cp": "38130",
+   "city": "Echirolles",
+   "dept": "38",
+   "metro": "lyon",
+   "lat": 45.1376544,
+   "lng": 5.7091171,
+   "website": "https://foottime.fr/"
+  }
+ },
+ {
   "slug": "doinsport-72277c62-8c39-4f31-abc5-949e52f2d4ee",
   "source": "doinsport",
   "name": "FunNsport ",
@@ -2329,6 +2461,28 @@
    "lat": 47.7450112,
    "lng": -3.0798384,
    "website": "https://funnsport.com/"
+  }
+ },
+ {
+  "slug": "doinsport-a05c09f0-aa7c-4ff9-aa50-db66f142ed3b",
+  "source": "doinsport",
+  "name": "Fùtsal 47",
+  "cp": "47240",
+  "city": "Castelculier",
+  "dept": "47",
+  "metro": "bordeaux",
+  "lat": 44.1753184,
+  "lng": 0.6896657,
+  "raw": {
+   "id": "a05c09f0-aa7c-4ff9-aa50-db66f142ed3b",
+   "name": "Fùtsal 47",
+   "cp": "47240",
+   "city": "Castelculier",
+   "dept": "47",
+   "metro": "bordeaux",
+   "lat": 44.1753184,
+   "lng": 0.6896657,
+   "website": "https://www.footfive-squash47.fr/"
   }
  },
  {
@@ -2417,6 +2571,28 @@
    "lat": 43.114475,
    "lng": 5.8452591,
    "website": "https://www.gardensoccer.fr/"
+  }
+ },
+ {
+  "slug": "doinsport-d84c9152-be56-4f36-8433-8bd52009fdbd",
+  "source": "doinsport",
+  "name": "Garden Tennis & Padel Royan",
+  "cp": "17200",
+  "city": "Royan",
+  "dept": "17",
+  "metro": "limousin",
+  "lat": 45.6186822,
+  "lng": -1.040518,
+  "raw": {
+   "id": "d84c9152-be56-4f36-8433-8bd52009fdbd",
+   "name": "Garden Tennis & Padel Royan",
+   "cp": "17200",
+   "city": "Royan",
+   "dept": "17",
+   "metro": "limousin",
+   "lat": 45.6186822,
+   "lng": -1.040518,
+   "website": null
   }
  },
  {
@@ -2552,6 +2728,28 @@
   }
  },
  {
+  "slug": "doinsport-9a638fba-4426-4f88-86e2-c7463a09a214",
+  "source": "doinsport",
+  "name": "Hangar 21",
+  "cp": "06130",
+  "city": "Grasse",
+  "dept": "06",
+  "metro": "marseille",
+  "lat": 43.6312217,
+  "lng": 6.9596418,
+  "raw": {
+   "id": "9a638fba-4426-4f88-86e2-c7463a09a214",
+   "name": "Hangar 21",
+   "cp": "06130",
+   "city": "Grasse",
+   "dept": "06",
+   "metro": "marseille",
+   "lat": 43.6312217,
+   "lng": 6.9596418,
+   "website": "https://www.hgr21.com/"
+  }
+ },
+ {
   "slug": "doinsport-c36f0bc0-56bd-4f89-895a-8ec626ee711a",
   "source": "doinsport",
   "name": "hangar 24",
@@ -2559,8 +2757,8 @@
   "city": "Nantes",
   "dept": "44",
   "metro": "nantes-rennes",
-  "lat": null,
-  "lng": null,
+  "lat": 47.1960732,
+  "lng": -1.5370351,
   "raw": {
    "id": "c36f0bc0-56bd-4f89-895a-8ec626ee711a",
    "name": "hangar 24",
@@ -2568,8 +2766,8 @@
    "city": "Nantes",
    "dept": "44",
    "metro": "nantes-rennes",
-   "lat": null,
-   "lng": null,
+   "lat": 47.1960732,
+   "lng": -1.5370351,
    "website": "https://www.hangar24.fr/"
   }
  },
@@ -2684,6 +2882,28 @@
   }
  },
  {
+  "slug": "doinsport-f2c38bf1-6a5f-4ff1-a3ae-625a0cf239a1",
+  "source": "doinsport",
+  "name": "Hola Arena",
+  "cp": "38690",
+  "city": "Le Grand-Lemps",
+  "dept": "38",
+  "metro": "lyon",
+  "lat": 45.7756669,
+  "lng": 4.8283285,
+  "raw": {
+   "id": "f2c38bf1-6a5f-4ff1-a3ae-625a0cf239a1",
+   "name": "Hola Arena",
+   "cp": "38690",
+   "city": "Le Grand-Lemps",
+   "dept": "38",
+   "metro": "lyon",
+   "lat": 45.7756669,
+   "lng": 4.8283285,
+   "website": null
+  }
+ },
+ {
   "slug": "doinsport-d093bc9d-8f40-4f02-b309-78b54f617719",
   "source": "doinsport",
   "name": "Hossegor Tennis Club",
@@ -2757,8 +2977,8 @@
   "city": "Jebsheim",
   "dept": "68",
   "metro": "strasbourg",
-  "lat": null,
-  "lng": null,
+  "lat": 48.1227514,
+  "lng": 7.4766303,
   "raw": {
    "id": "6b8f2fd1-9372-4fe8-91b2-e99281086c30",
    "name": "HPadel Le padel du Ried",
@@ -2766,8 +2986,8 @@
    "city": "Jebsheim",
    "dept": "68",
    "metro": "strasbourg",
-   "lat": null,
-   "lng": null,
+   "lat": 48.1227514,
+   "lng": 7.4766303,
    "website": null
   }
  },
@@ -2794,6 +3014,28 @@
   }
  },
  {
+  "slug": "doinsport-a1c1683a-5b6a-4f63-bba6-b1f283fd6825",
+  "source": "doinsport",
+  "name": "In'Sport",
+  "cp": "34000",
+  "city": "Montpellier",
+  "dept": "34",
+  "metro": "toulouse",
+  "lat": 43.5873767,
+  "lng": 3.8870685,
+  "raw": {
+   "id": "a1c1683a-5b6a-4f63-bba6-b1f283fd6825",
+   "name": "In'Sport",
+   "cp": "34000",
+   "city": "Montpellier",
+   "dept": "34",
+   "metro": "toulouse",
+   "lat": 43.5873767,
+   "lng": 3.8870685,
+   "website": "https://insport.fr/"
+  }
+ },
+ {
   "slug": "doinsport-7fbf5369-4378-4fa8-ae3e-9190cb60d8b4",
   "source": "doinsport",
   "name": "INDOOR PADEL LOUDEAC",
@@ -2801,8 +3043,8 @@
   "city": "Loudéac",
   "dept": "22",
   "metro": "nantes-rennes",
-  "lat": null,
-  "lng": null,
+  "lat": 48.1762534,
+  "lng": -2.7535644,
   "raw": {
    "id": "7fbf5369-4378-4fa8-ae3e-9190cb60d8b4",
    "name": "INDOOR PADEL LOUDEAC",
@@ -2810,8 +3052,8 @@
    "city": "Loudéac",
    "dept": "22",
    "metro": "nantes-rennes",
-   "lat": null,
-   "lng": null,
+   "lat": 48.1762534,
+   "lng": -2.7535644,
    "website": "https://www.loudeacpadel.fr/"
   }
  },
@@ -2886,7 +3128,7 @@
   "source": "doinsport",
   "name": "JLNA Padel",
   "cp": "84800",
-  "city": "Saumane-de-Vaucluse",
+  "city": "Isle sur la Sorgue ",
   "dept": "84",
   "metro": "marseille",
   "lat": 43.9158132,
@@ -2895,7 +3137,7 @@
    "id": "fab8c7dd-074e-4f20-9449-8b09cf904915",
    "name": "JLNA Padel",
    "cp": "84800",
-   "city": "Saumane-de-Vaucluse",
+   "city": "Isle sur la Sorgue ",
    "dept": "84",
    "metro": "marseille",
    "lat": 43.9158132,
@@ -2945,6 +3187,28 @@
    "lat": 50.5043092,
    "lng": 5.3949289,
    "website": "https://www.just-padel.be/"
+  }
+ },
+ {
+  "slug": "doinsport-b08e067a-7f20-4f01-b349-003d6b5b2530",
+  "source": "doinsport",
+  "name": "KAPITAL",
+  "cp": "14440",
+  "city": "Douvres-la-Délivrande",
+  "dept": "14",
+  "metro": "normandie",
+  "lat": 49.2835775,
+  "lng": -0.3768777,
+  "raw": {
+   "id": "b08e067a-7f20-4f01-b349-003d6b5b2530",
+   "name": "KAPITAL",
+   "cp": "14440",
+   "city": "Douvres-la-Délivrande",
+   "dept": "14",
+   "metro": "normandie",
+   "lat": 49.2835775,
+   "lng": -0.3768777,
+   "website": null
   }
  },
  {
@@ -3124,6 +3388,28 @@
   }
  },
  {
+  "slug": "doinsport-96fd4802-7cac-4f45-bf13-87b78fd77883",
+  "source": "doinsport",
+  "name": "La Pyrite Soyons",
+  "cp": "07130",
+  "city": "Soyons",
+  "dept": "07",
+  "metro": "lyon",
+  "lat": 44.8898599,
+  "lng": 4.8507143,
+  "raw": {
+   "id": "96fd4802-7cac-4f45-bf13-87b78fd77883",
+   "name": "La Pyrite Soyons",
+   "cp": "07130",
+   "city": "Soyons",
+   "dept": "07",
+   "metro": "lyon",
+   "lat": 44.8898599,
+   "lng": 4.8507143,
+   "website": null
+  }
+ },
+ {
   "slug": "doinsport-8fbe58af-0e53-4f11-a41c-617aeac62263",
   "source": "doinsport",
   "name": "Lattes Padel Club",
@@ -3153,8 +3439,8 @@
   "city": "Marseille",
   "dept": "13",
   "metro": "marseille",
-  "lat": null,
-  "lng": null,
+  "lat": 43.3351698,
+  "lng": 5.3925732,
   "raw": {
    "id": "c83f4866-26a4-4f5c-b009-9e4bef1b6954",
    "name": "Le 13",
@@ -3162,8 +3448,8 @@
    "city": "Marseille",
    "dept": "13",
    "metro": "marseille",
-   "lat": null,
-   "lng": null,
+   "lat": 43.3351698,
+   "lng": 5.3925732,
    "website": "https://le13footensalle.fr/"
   }
  },
@@ -3175,8 +3461,8 @@
   "city": "Tarascon",
   "dept": "13",
   "metro": "marseille",
-  "lat": null,
-  "lng": null,
+  "lat": 43.7914189,
+  "lng": 4.6890115,
   "raw": {
    "id": "8d8a1630-d5a0-4f50-a32d-a216db28a851",
    "name": "Le Central",
@@ -3184,8 +3470,8 @@
    "city": "Tarascon",
    "dept": "13",
    "metro": "marseille",
-   "lat": null,
-   "lng": null,
+   "lat": 43.7914189,
+   "lng": 4.6890115,
    "website": "https://lecentralclub.fr/le-central"
   }
  },
@@ -3241,8 +3527,8 @@
   "city": "Toulouse",
   "dept": "31",
   "metro": "toulouse",
-  "lat": null,
-  "lng": null,
+  "lat": 43.6330885,
+  "lng": 1.4437645,
   "raw": {
    "id": "66cf46ce-6b7f-4f2c-b623-b13633e15b54",
    "name": "Le coin du padel",
@@ -3250,8 +3536,8 @@
    "city": "Toulouse",
    "dept": "31",
    "metro": "toulouse",
-   "lat": null,
-   "lng": null,
+   "lat": 43.6330885,
+   "lng": 1.4437645,
    "website": null
   }
  },
@@ -3344,6 +3630,28 @@
   }
  },
  {
+  "slug": "doinsport-452cb698-5356-4f33-9bac-fe35b1f3a288",
+  "source": "doinsport",
+  "name": "Le jeu de paume et de squash",
+  "cp": "75116",
+  "city": "Paris",
+  "dept": "75",
+  "metro": "idf",
+  "lat": 48.86839679529407,
+  "lng": 2.2889103557858945,
+  "raw": {
+   "id": "452cb698-5356-4f33-9bac-fe35b1f3a288",
+   "name": "Le jeu de paume et de squash",
+   "cp": "75116",
+   "city": "Paris",
+   "dept": "75",
+   "metro": "idf",
+   "lat": 48.86839679529407,
+   "lng": 2.2889103557858945,
+   "website": "http://squashjeudepaume.com/"
+  }
+ },
+ {
   "slug": "doinsport-db3369a3-71bc-4ffc-a1bc-31f5b180514e",
   "source": "doinsport",
   "name": "Le Kemp",
@@ -3395,8 +3703,8 @@
   "city": "Le Thillay",
   "dept": "95",
   "metro": "idf",
-  "lat": null,
-  "lng": null,
+  "lat": 48.9954226,
+  "lng": 2.4786025,
   "raw": {
    "id": "af5c97a7-390f-4f23-afca-6d10c0d117cd",
    "name": "Le Padel Wellness",
@@ -3404,8 +3712,8 @@
    "city": "Le Thillay",
    "dept": "95",
    "metro": "idf",
-   "lat": null,
-   "lng": null,
+   "lat": 48.9954226,
+   "lng": 2.4786025,
    "website": null
   }
  },
@@ -3479,8 +3787,8 @@
   "slug": "doinsport-1c86d3cf-243a-4f61-bb95-d2209ecde61d",
   "source": "doinsport",
   "name": "Le Punto",
-  "cp": "64600",
-  "city": "Anglet",
+  "cp": "64340",
+  "city": "Boucau",
   "dept": "64",
   "metro": "bordeaux",
   "lat": 43.499716,
@@ -3488,13 +3796,13 @@
   "raw": {
    "id": "1c86d3cf-243a-4f61-bb95-d2209ecde61d",
    "name": "Le Punto",
-   "cp": "64600",
-   "city": "Anglet",
+   "cp": "64340",
+   "city": "Boucau",
    "dept": "64",
    "metro": "bordeaux",
    "lat": 43.499716,
    "lng": -1.532788,
-   "website": null
+   "website": ""
   }
  },
  {
@@ -3505,8 +3813,8 @@
   "city": "Maubourguet",
   "dept": "65",
   "metro": "toulouse",
-  "lat": null,
-  "lng": null,
+  "lat": 43.4657,
+  "lng": 0.043272,
   "raw": {
    "id": "e06f6e21-b895-4fe0-9e88-ecc2cd2fb031",
    "name": "LE REBOND",
@@ -3514,8 +3822,8 @@
    "city": "Maubourguet",
    "dept": "65",
    "metro": "toulouse",
-   "lat": null,
-   "lng": null,
+   "lat": 43.4657,
+   "lng": 0.043272,
    "website": null
   }
  },
@@ -3593,8 +3901,8 @@
   "city": "Chateaubriant",
   "dept": "44",
   "metro": "nantes-rennes",
-  "lat": null,
-  "lng": null,
+  "lat": 47.702327,
+  "lng": -1.39446,
   "raw": {
    "id": "f83537a5-4ab7-4ffe-999b-18c06f7da843",
    "name": "Le Smas'h",
@@ -3602,8 +3910,8 @@
    "city": "Chateaubriant",
    "dept": "44",
    "metro": "nantes-rennes",
-   "lat": null,
-   "lng": null,
+   "lat": 47.702327,
+   "lng": -1.39446,
    "website": null
   }
  },
@@ -3762,6 +4070,28 @@
   }
  },
  {
+  "slug": "doinsport-3aa7871b-15de-4f83-a58e-49668922f9b1",
+  "source": "doinsport",
+  "name": "LILLE",
+  "cp": "59777",
+  "city": "LILLE",
+  "dept": "59",
+  "metro": "lille",
+  "lat": 50.6374889,
+  "lng": 3.0744436,
+  "raw": {
+   "id": "3aa7871b-15de-4f83-a58e-49668922f9b1",
+   "name": "LILLE",
+   "cp": "59777",
+   "city": "LILLE",
+   "dept": "59",
+   "metro": "lille",
+   "lat": 50.6374889,
+   "lng": 3.0744436,
+   "website": "https://escapad.fr/"
+  }
+ },
+ {
   "slug": "doinsport-6facc2a9-5703-4f10-9456-600826b0aa1e",
   "source": "doinsport",
   "name": "LOIRE VALLÉE PADEL",
@@ -3791,8 +4121,8 @@
   "city": "Vic-Fezensac",
   "dept": "32",
   "metro": "toulouse",
-  "lat": null,
-  "lng": null,
+  "lat": 43.7578115,
+  "lng": 0.2991151,
   "raw": {
    "id": "8b956e19-8793-4f2d-ac9e-147b3add19c4",
    "name": "LUDO PADEL",
@@ -3800,8 +4130,8 @@
    "city": "Vic-Fezensac",
    "dept": "32",
    "metro": "toulouse",
-   "lat": null,
-   "lng": null,
+   "lat": 43.7578115,
+   "lng": 0.2991151,
    "website": null
   }
  },
@@ -3857,8 +4187,8 @@
   "city": "Borgo",
   "dept": "2B",
   "metro": "corse",
-  "lat": null,
-  "lng": null,
+  "lat": 42.590712,
+  "lng": 9.4389641,
   "raw": {
    "id": "796462f5-b539-4f0d-8e90-ca6a764cd535",
    "name": "Magic Padel",
@@ -3866,8 +4196,8 @@
    "city": "Borgo",
    "dept": "2B",
    "metro": "corse",
-   "lat": null,
-   "lng": null,
+   "lat": 42.590712,
+   "lng": 9.4389641,
    "website": "https://www.magicpadel.fr/"
   }
  },
@@ -3960,6 +4290,28 @@
   }
  },
  {
+  "slug": "doinsport-444c33a5-0c73-4fc8-9213-c42dec41d47d",
+  "source": "doinsport",
+  "name": "Mama Padel",
+  "cp": "11100",
+  "city": "Dakar",
+  "dept": "11",
+  "metro": "toulouse",
+  "lat": 14.716677,
+  "lng": -17.4676861,
+  "raw": {
+   "id": "444c33a5-0c73-4fc8-9213-c42dec41d47d",
+   "name": "Mama Padel",
+   "cp": "11100",
+   "city": "Dakar",
+   "dept": "11",
+   "metro": "toulouse",
+   "lat": 14.716677,
+   "lng": -17.4676861,
+   "website": null
+  }
+ },
+ {
   "slug": "doinsport-eaeeb613-b3b7-4f3e-a336-12e994c02698",
   "source": "doinsport",
   "name": "MB HORIZON PADEL & CO",
@@ -4011,8 +4363,8 @@
   "city": "Portet-sur-Garonne",
   "dept": "31",
   "metro": "toulouse",
-  "lat": null,
-  "lng": null,
+  "lat": 43.5221852,
+  "lng": 1.4076378,
   "raw": {
    "id": "8d3a8177-9207-4f20-afc3-bd60ba113730",
    "name": "Meet Padel",
@@ -4020,8 +4372,8 @@
    "city": "Portet-sur-Garonne",
    "dept": "31",
    "metro": "toulouse",
-   "lat": null,
-   "lng": null,
+   "lat": 43.5221852,
+   "lng": 1.4076378,
    "website": null
   }
  },
@@ -4121,8 +4473,8 @@
   "city": "PASSY",
   "dept": "74",
   "metro": "lyon",
-  "lat": null,
-  "lng": null,
+  "lat": 45.9232994,
+  "lng": 6.6845339,
   "raw": {
    "id": "b2c95578-3a2e-4f55-a77c-0aca49a2d300",
    "name": "Mont Blanc Padel",
@@ -4130,8 +4482,8 @@
    "city": "PASSY",
    "dept": "74",
    "metro": "lyon",
-   "lat": null,
-   "lng": null,
+   "lat": 45.9232994,
+   "lng": 6.6845339,
    "website": null
   }
  },
@@ -4407,8 +4759,8 @@
   "city": "Saint-jory",
   "dept": "31",
   "metro": "toulouse",
-  "lat": null,
-  "lng": null,
+  "lat": 43.7395754,
+  "lng": 1.3831182,
   "raw": {
    "id": "50b6eda7-03dc-4f14-b5d8-354f32f5a64a",
    "name": "OJ Padel",
@@ -4416,8 +4768,8 @@
    "city": "Saint-jory",
    "dept": "31",
    "metro": "toulouse",
-   "lat": null,
-   "lng": null,
+   "lat": 43.7395754,
+   "lng": 1.3831182,
    "website": null
   }
  },
@@ -4473,8 +4825,8 @@
   "city": "verdun",
   "dept": "55",
   "metro": "strasbourg",
-  "lat": null,
-  "lng": null,
+  "lat": 49.1589278,
+  "lng": 5.3867277,
   "raw": {
    "id": "a8cdeaba-c9b7-4fd7-880f-1b7c060dcaa2",
    "name": "Orchidées Padel Verdun",
@@ -4482,8 +4834,8 @@
    "city": "verdun",
    "dept": "55",
    "metro": "strasbourg",
-   "lat": null,
-   "lng": null,
+   "lat": 49.1589278,
+   "lng": 5.3867277,
    "website": null
   }
  },
@@ -4572,7 +4924,7 @@
    "metro": "strasbourg",
    "lat": 49.2252708,
    "lng": 6.2067178,
-   "website": null
+   "website": ""
   }
  },
  {
@@ -4660,7 +5012,7 @@
    "metro": "idf",
    "lat": 49.0033942,
    "lng": 2.5099864,
-   "website": "http://www.padelac.fr"
+   "website": "https://padelac.fr/"
   }
  },
  {
@@ -4693,8 +5045,8 @@
   "city": "Crots",
   "dept": "05",
   "metro": "marseille",
-  "lat": null,
-  "lng": null,
+  "lat": 44.53293,
+  "lng": 6.47095,
   "raw": {
    "id": "1ba04c13-9fee-4f44-9c79-e71dadee52b4",
    "name": "PADEL ALTITUDE",
@@ -4702,8 +5054,8 @@
    "city": "Crots",
    "dept": "05",
    "metro": "marseille",
-   "lat": null,
-   "lng": null,
+   "lat": 44.53293,
+   "lng": 6.47095,
    "website": "https://www.bartavelles.com/hotel-terrain-padel-embrun-hautes-alpes-lac-serre-poncon"
   }
  },
@@ -4781,8 +5133,8 @@
   "city": "Aix-en-provence",
   "dept": "13",
   "metro": "marseille",
-  "lat": null,
-  "lng": null,
+  "lat": 43.533089,
+  "lng": 5.5440192,
   "raw": {
    "id": "9ddb81bf-e6ad-4f00-9f22-d485fbdc7a5b",
    "name": "Padel Boulevard",
@@ -4790,8 +5142,8 @@
    "city": "Aix-en-provence",
    "dept": "13",
    "metro": "marseille",
-   "lat": null,
-   "lng": null,
+   "lat": 43.533089,
+   "lng": 5.5440192,
    "website": null
   }
  },
@@ -4862,6 +5214,28 @@
   }
  },
  {
+  "slug": "doinsport-ef744429-cac9-4f54-a0ea-39a885a1e121",
+  "source": "doinsport",
+  "name": "Padel Club Albigeois",
+  "cp": "81990",
+  "city": "Puygouzon",
+  "dept": "81",
+  "metro": "toulouse",
+  "lat": 43.892772,
+  "lng": 2.164085,
+  "raw": {
+   "id": "ef744429-cac9-4f54-a0ea-39a885a1e121",
+   "name": "Padel Club Albigeois",
+   "cp": "81990",
+   "city": "Puygouzon",
+   "dept": "81",
+   "metro": "toulouse",
+   "lat": 43.892772,
+   "lng": 2.164085,
+   "website": null
+  }
+ },
+ {
   "slug": "doinsport-675839d2-c567-4f9d-b78c-dd8a7cff1175",
   "source": "doinsport",
   "name": "Padel Club Bischo",
@@ -4913,8 +5287,8 @@
   "city": "IZON",
   "dept": "33",
   "metro": "bordeaux",
-  "lat": null,
-  "lng": null,
+  "lat": 44.9164553,
+  "lng": -0.3783722,
   "raw": {
    "id": "511de91f-acaf-4f05-a95d-a70ff1263102",
    "name": "Padel club Izon",
@@ -4922,8 +5296,8 @@
    "city": "IZON",
    "dept": "33",
    "metro": "bordeaux",
-   "lat": null,
-   "lng": null,
+   "lat": 44.9164553,
+   "lng": -0.3783722,
    "website": "https://padel-club-izon.fr/"
   }
  },
@@ -4953,8 +5327,8 @@
   "slug": "doinsport-91215007-74ce-4f12-85cb-15ce68e0b3c9",
   "source": "doinsport",
   "name": "Padel Collection",
-  "cp": "13626",
-  "city": "Aix-en-Provence",
+  "cp": "13650",
+  "city": "Meyrargues",
   "dept": "13",
   "metro": "marseille",
   "lat": 43.571871,
@@ -4962,8 +5336,8 @@
   "raw": {
    "id": "91215007-74ce-4f12-85cb-15ce68e0b3c9",
    "name": "Padel Collection",
-   "cp": "13626",
-   "city": "Aix-en-Provence",
+   "cp": "13650",
+   "city": "Meyrargues",
    "dept": "13",
    "metro": "marseille",
    "lat": 43.571871,
@@ -4979,8 +5353,8 @@
   "city": "Châtillon-sur-Chalaronne",
   "dept": "01",
   "metro": "lyon",
-  "lat": null,
-  "lng": null,
+  "lat": 46.1297233,
+  "lng": 4.9665842,
   "raw": {
    "id": "048d455f-7010-4fa3-a90f-9038a1d8c9fe",
    "name": "Padel de la Flèche",
@@ -4988,8 +5362,8 @@
    "city": "Châtillon-sur-Chalaronne",
    "dept": "01",
    "metro": "lyon",
-   "lat": null,
-   "lng": null,
+   "lat": 46.1297233,
+   "lng": 4.9665842,
    "website": "https://padeldelafleche.com/"
   }
  },
@@ -5045,8 +5419,8 @@
   "city": "Redon",
   "dept": "35",
   "metro": "nantes-rennes",
-  "lat": null,
-  "lng": null,
+  "lat": 47.666393,
+  "lng": -2.0738636,
   "raw": {
    "id": "21e39af4-977b-4fbc-9296-585b2ca0c89e",
    "name": "Padel des Copains",
@@ -5054,8 +5428,8 @@
    "city": "Redon",
    "dept": "35",
    "metro": "nantes-rennes",
-   "lat": null,
-   "lng": null,
+   "lat": 47.666393,
+   "lng": -2.0738636,
    "website": null
   }
  },
@@ -5111,8 +5485,8 @@
   "city": "Val De Livre",
   "dept": "51",
   "metro": "strasbourg",
-  "lat": null,
-  "lng": null,
+  "lat": 49.1209683,
+  "lng": 4.1098081,
   "raw": {
    "id": "19b85c43-4b34-4f2c-8514-17e55d3d246a",
    "name": "Padel Farm",
@@ -5120,8 +5494,8 @@
    "city": "Val De Livre",
    "dept": "51",
    "metro": "strasbourg",
-   "lat": null,
-   "lng": null,
+   "lat": 49.1209683,
+   "lng": 4.1098081,
    "website": "https://padelfarm.fr"
   }
  },
@@ -5199,8 +5573,8 @@
   "city": "LESCAR",
   "dept": "64",
   "metro": "bordeaux",
-  "lat": 43.3175625,
-  "lng": 0,
+  "lat": 43.3240542,
+  "lng": -0.4376033,
   "raw": {
    "id": "9a3f194d-15c8-4fe5-b83c-51ebf3a388ce",
    "name": "PADEL GROUND Lescar",
@@ -5208,8 +5582,8 @@
    "city": "LESCAR",
    "dept": "64",
    "metro": "bordeaux",
-   "lat": 43.3175625,
-   "lng": 0,
+   "lat": 43.3240542,
+   "lng": -0.4376033,
    "website": "https://www.padel-ground-lescar.fr/"
   }
  },
@@ -5276,6 +5650,28 @@
    "metro": "lille",
    "lat": 50.6543078,
    "lng": 2.9874484,
+   "website": null
+  }
+ },
+ {
+  "slug": "doinsport-80b286a3-bad1-4f8d-ae2b-60b61d3b4891",
+  "source": "doinsport",
+  "name": "Padel La Calade",
+  "cp": "34970",
+  "city": "Lattes",
+  "dept": "34",
+  "metro": "toulouse",
+  "lat": 43.5761287,
+  "lng": 3.8970223,
+  "raw": {
+   "id": "80b286a3-bad1-4f8d-ae2b-60b61d3b4891",
+   "name": "Padel La Calade",
+   "cp": "34970",
+   "city": "Lattes",
+   "dept": "34",
+   "metro": "toulouse",
+   "lat": 43.5761287,
+   "lng": 3.8970223,
    "website": null
   }
  },
@@ -5353,8 +5749,8 @@
   "city": "Pont-l’Évêque",
   "dept": "14",
   "metro": "normandie",
-  "lat": null,
-  "lng": null,
+  "lat": 49.2849832,
+  "lng": 0.1832571,
   "raw": {
    "id": "15bd3510-7d64-4fff-86ab-e8820018359a",
    "name": "Padel Pont-l'Évêque",
@@ -5362,8 +5758,8 @@
    "city": "Pont-l’Évêque",
    "dept": "14",
    "metro": "normandie",
-   "lat": null,
-   "lng": null,
+   "lat": 49.2849832,
+   "lng": 0.1832571,
    "website": "https://www.padelpontleveque.fr/"
   }
  },
@@ -5529,8 +5925,8 @@
   "city": "Saint-bauzille-de-montmel",
   "dept": "34",
   "metro": "toulouse",
-  "lat": null,
-  "lng": null,
+  "lat": 43.7707441,
+  "lng": 3.9570777,
   "raw": {
    "id": "04e70b80-cb40-4f6c-9bfd-74b1e6314345",
    "name": "Padel St Bo Family",
@@ -5538,8 +5934,8 @@
    "city": "Saint-bauzille-de-montmel",
    "dept": "34",
    "metro": "toulouse",
-   "lat": null,
-   "lng": null,
+   "lat": 43.7707441,
+   "lng": 3.9570777,
    "website": null
   }
  },
@@ -5612,7 +6008,7 @@
  {
   "slug": "doinsport-48d16ab3-db01-4f0d-94e5-5eedd35f8903",
   "source": "doinsport",
-  "name": "Padel Vercival",
+  "name": "Padel VERCIVAL",
   "cp": "86320",
   "city": "Civaux",
   "dept": "86",
@@ -5621,14 +6017,14 @@
   "lng": 0.6647805,
   "raw": {
    "id": "48d16ab3-db01-4f0d-94e5-5eedd35f8903",
-   "name": "Padel Vercival",
+   "name": "Padel VERCIVAL",
    "cp": "86320",
    "city": "Civaux",
    "dept": "86",
    "metro": "limousin",
    "lat": 46.4441922,
    "lng": 0.6647805,
-   "website": null
+   "website": "https://vercivaltc.clubeo.com/"
   }
  },
  {
@@ -5639,8 +6035,8 @@
   "city": "Menton",
   "dept": "06",
   "metro": "marseille",
-  "lat": null,
-  "lng": null,
+  "lat": 43.7667425,
+  "lng": 7.4885834,
   "raw": {
    "id": "6faccc67-bfe1-4f98-87a9-dd152e0d6e92",
    "name": "Parc Koaland",
@@ -5648,9 +6044,31 @@
    "city": "Menton",
    "dept": "06",
    "metro": "marseille",
-   "lat": null,
-   "lng": null,
+   "lat": 43.7667425,
+   "lng": 7.4885834,
    "website": "https://koaland.fr/"
+  }
+ },
+ {
+  "slug": "doinsport-7e197041-86cb-4fdb-9dd6-5682fe1c60fc",
+  "source": "doinsport",
+  "name": "PARIS EST (Champigny)",
+  "cp": "94500",
+  "city": "Champigny sur Marne",
+  "dept": "94",
+  "metro": "idf",
+  "lat": 45.7405264,
+  "lng": 4.4563965,
+  "raw": {
+   "id": "7e197041-86cb-4fdb-9dd6-5682fe1c60fc",
+   "name": "PARIS EST (Champigny)",
+   "cp": "94500",
+   "city": "Champigny sur Marne",
+   "dept": "94",
+   "metro": "idf",
+   "lat": 45.7405264,
+   "lng": 4.4563965,
+   "website": "https://escapad.fr/"
   }
  },
  {
@@ -5749,8 +6167,8 @@
   "city": "VIGNES",
   "dept": "64",
   "metro": "bordeaux",
-  "lat": null,
-  "lng": null,
+  "lat": 43.528965,
+  "lng": -0.4005111,
   "raw": {
    "id": "1634d812-0142-4f29-9964-ce84e06eb0c2",
    "name": "Pau Padel Club",
@@ -5758,8 +6176,8 @@
    "city": "VIGNES",
    "dept": "64",
    "metro": "bordeaux",
-   "lat": null,
-   "lng": null,
+   "lat": 43.528965,
+   "lng": -0.4005111,
    "website": null
   }
  },
@@ -5837,8 +6255,8 @@
   "city": "Peyrolles-en-provence",
   "dept": "13",
   "metro": "marseille",
-  "lat": null,
-  "lng": null,
+  "lat": 43.6465639,
+  "lng": 5.5836164,
   "raw": {
    "id": "ec61e39f-248d-4fb0-aabb-302be5432065",
    "name": "Platinium Padel",
@@ -5846,8 +6264,8 @@
    "city": "Peyrolles-en-provence",
    "dept": "13",
    "metro": "marseille",
-   "lat": null,
-   "lng": null,
+   "lat": 43.6465639,
+   "lng": 5.5836164,
    "website": "https://www.platinium-padel.fr/"
   }
  },
@@ -5859,8 +6277,8 @@
   "city": "Alfortville",
   "dept": "94",
   "metro": "idf",
-  "lat": null,
-  "lng": null,
+  "lat": 48.7791592,
+  "lng": 2.4263561,
   "raw": {
    "id": "59044915-a142-4f27-a8f4-433b199d73d5",
    "name": "Play Padel Alfortville",
@@ -5868,8 +6286,8 @@
    "city": "Alfortville",
    "dept": "94",
    "metro": "idf",
-   "lat": null,
-   "lng": null,
+   "lat": 48.7791592,
+   "lng": 2.4263561,
    "website": "https://play-padel.fr/"
   }
  },
@@ -5903,8 +6321,8 @@
   "city": "Vineuil",
   "dept": "41",
   "metro": "centre",
-  "lat": null,
-  "lng": null,
+  "lat": 47.5656877,
+  "lng": 1.378281,
   "raw": {
    "id": "9fb1d565-f86d-4ff7-8ead-18d62aed2629",
    "name": "Punto de Oro Padel Club",
@@ -5912,8 +6330,8 @@
    "city": "Vineuil",
    "dept": "41",
    "metro": "centre",
-   "lat": null,
-   "lng": null,
+   "lat": 47.5656877,
+   "lng": 1.378281,
    "website": null
   }
  },
@@ -6050,6 +6468,28 @@
   }
  },
  {
+  "slug": "doinsport-88165ffb-e9eb-4fa8-ace8-00d7e135970a",
+  "source": "doinsport",
+  "name": "Romans tennis & padel",
+  "cp": "26750",
+  "city": "Saint Paul Les Romans",
+  "dept": "26",
+  "metro": "lyon",
+  "lat": 45.0672206,
+  "lng": 5.1324053,
+  "raw": {
+   "id": "88165ffb-e9eb-4fa8-ace8-00d7e135970a",
+   "name": "Romans tennis & padel",
+   "cp": "26750",
+   "city": "Saint Paul Les Romans",
+   "dept": "26",
+   "metro": "lyon",
+   "lat": 45.0672206,
+   "lng": 5.1324053,
+   "website": "https://www.romanstennisclub.com/"
+  }
+ },
+ {
   "slug": "doinsport-43a719c3-658b-4f0a-be53-87d77398b896",
   "source": "doinsport",
   "name": "ROYAL BOXING CLUB",
@@ -6145,8 +6585,8 @@
   "city": "Sautron",
   "dept": "44",
   "metro": "nantes-rennes",
-  "lat": null,
-  "lng": null,
+  "lat": 47.2632611,
+  "lng": -1.6683537,
   "raw": {
    "id": "037870c5-4df7-4f44-abc8-f71c362747dc",
    "name": "Sautron",
@@ -6154,8 +6594,8 @@
    "city": "Sautron",
    "dept": "44",
    "metro": "nantes-rennes",
-   "lat": null,
-   "lng": null,
+   "lat": 47.2632611,
+   "lng": -1.6683537,
    "website": "https://latribupadel.fr/"
   }
  },
@@ -6277,8 +6717,8 @@
   "city": "Montastruc la Conseillère",
   "dept": "31",
   "metro": "toulouse",
-  "lat": null,
-  "lng": null,
+  "lat": 43.7355303,
+  "lng": 1.5724067,
   "raw": {
    "id": "ff7a90ae-a70c-4f56-b089-a08f485dfb84",
    "name": "Smart Padel Club",
@@ -6286,8 +6726,8 @@
    "city": "Montastruc la Conseillère",
    "dept": "31",
    "metro": "toulouse",
-   "lat": null,
-   "lng": null,
+   "lat": 43.7355303,
+   "lng": 1.5724067,
    "website": null
   }
  },
@@ -6343,8 +6783,8 @@
   "city": "LE MANS",
   "dept": "72",
   "metro": "nantes-rennes",
-  "lat": null,
-  "lng": null,
+  "lat": 48.0169407,
+  "lng": 0.149514,
   "raw": {
    "id": "89c8ad58-25e5-4f86-b4d8-e0286c13ed42",
    "name": "SMASH ZONE",
@@ -6352,8 +6792,8 @@
    "city": "LE MANS",
    "dept": "72",
    "metro": "nantes-rennes",
-   "lat": null,
-   "lng": null,
+   "lat": 48.0169407,
+   "lng": 0.149514,
    "website": "https://smashzone-lemans.fr/"
   }
  },
@@ -6717,8 +7157,8 @@
   "city": "Joinville-le-pont",
   "dept": "94",
   "metro": "idf",
-  "lat": null,
-  "lng": null,
+  "lat": 48.8129896,
+  "lng": 2.4657367,
   "raw": {
    "id": "45389e85-e7ed-4fe9-a018-cbd87257a2cc",
    "name": "SQUASH CLUB JOINVILLE (SCJ)",
@@ -6726,8 +7166,8 @@
    "city": "Joinville-le-pont",
    "dept": "94",
    "metro": "idf",
-   "lat": null,
-   "lng": null,
+   "lat": 48.8129896,
+   "lng": 2.4657367,
    "website": "https://squash-joinville.fr"
   }
  },
@@ -6739,8 +7179,8 @@
   "city": "Saint-cloud",
   "dept": "92",
   "metro": "idf",
-  "lat": null,
-  "lng": null,
+  "lat": 48.8406338,
+  "lng": 2.2195737,
   "raw": {
    "id": "5dea4296-2239-4f8c-a74f-cd290ba898b8",
    "name": "Squash Club Saint Cloud",
@@ -6748,8 +7188,8 @@
    "city": "Saint-cloud",
    "dept": "92",
    "metro": "idf",
-   "lat": null,
-   "lng": null,
+   "lat": 48.8406338,
+   "lng": 2.2195737,
    "website": "https://www.squash-st-cloud.fr/"
   }
  },
@@ -6911,8 +7351,8 @@
   "slug": "doinsport-34753113-8304-4f00-b81e-b01cd1cb4e08",
   "source": "doinsport",
   "name": "STELLA PADEL SOCIETY",
-  "cp": "69760",
-  "city": "Limonest",
+  "cp": "69770",
+  "city": "Dardilly",
   "dept": "69",
   "metro": "lyon",
   "lat": 45.835006,
@@ -6920,13 +7360,13 @@
   "raw": {
    "id": "34753113-8304-4f00-b81e-b01cd1cb4e08",
    "name": "STELLA PADEL SOCIETY",
-   "cp": "69760",
-   "city": "Limonest",
+   "cp": "69770",
+   "city": "Dardilly",
    "dept": "69",
    "metro": "lyon",
    "lat": 45.835006,
    "lng": 4.766858,
-   "website": null
+   "website": "https://stellapadel.com/padel-club-dardilly/"
   }
  },
  {
@@ -7128,6 +7568,94 @@
   }
  },
  {
+  "slug": "doinsport-d29b727f-ebc9-4f07-8736-2c2a357169de",
+  "source": "doinsport",
+  "name": "Teams 5 - Amiens",
+  "cp": "80000",
+  "city": "Amiens",
+  "dept": "80",
+  "metro": "lille",
+  "lat": 49.9254122,
+  "lng": 2.2993179,
+  "raw": {
+   "id": "d29b727f-ebc9-4f07-8736-2c2a357169de",
+   "name": "Teams 5 - Amiens",
+   "cp": "80000",
+   "city": "Amiens",
+   "dept": "80",
+   "metro": "lille",
+   "lat": 49.9254122,
+   "lng": 2.2993179,
+   "website": "https://teams5-amiens.fr/"
+  }
+ },
+ {
+  "slug": "doinsport-9772422f-ad61-4f20-bd2e-89fd804692a8",
+  "source": "doinsport",
+  "name": "Tennis & Padel La Couarde",
+  "cp": "17670",
+  "city": "La Couarde-sur-Mer",
+  "dept": "17",
+  "metro": "limousin",
+  "lat": 46.2013996,
+  "lng": -1.4364478,
+  "raw": {
+   "id": "9772422f-ad61-4f20-bd2e-89fd804692a8",
+   "name": "Tennis & Padel La Couarde",
+   "cp": "17670",
+   "city": "La Couarde-sur-Mer",
+   "dept": "17",
+   "metro": "limousin",
+   "lat": 46.2013996,
+   "lng": -1.4364478,
+   "website": "https://www.tennisiledere.fr/"
+  }
+ },
+ {
+  "slug": "doinsport-e9c76c29-e8f7-4f3d-85c7-717a08cb7678",
+  "source": "doinsport",
+  "name": "Tennis & Padel Saint-Palais-sur-Mer",
+  "cp": "17420",
+  "city": "Saint-Palais-sur-Mer",
+  "dept": "17",
+  "metro": "limousin",
+  "lat": 45.6578817,
+  "lng": -1.1011489,
+  "raw": {
+   "id": "e9c76c29-e8f7-4f3d-85c7-717a08cb7678",
+   "name": "Tennis & Padel Saint-Palais-sur-Mer",
+   "cp": "17420",
+   "city": "Saint-Palais-sur-Mer",
+   "dept": "17",
+   "metro": "limousin",
+   "lat": 45.6578817,
+   "lng": -1.1011489,
+   "website": "https://www.saintpalaistennis.fr/"
+  }
+ },
+ {
+  "slug": "doinsport-d7686591-1f6b-4f31-95d5-6ef976574a67",
+  "source": "doinsport",
+  "name": "Tennis & Squash Loix",
+  "cp": "17111",
+  "city": "Loix",
+  "dept": "17",
+  "metro": "limousin",
+  "lat": 46.2240177,
+  "lng": -1.4364756,
+  "raw": {
+   "id": "d7686591-1f6b-4f31-95d5-6ef976574a67",
+   "name": "Tennis & Squash Loix",
+   "cp": "17111",
+   "city": "Loix",
+   "dept": "17",
+   "metro": "limousin",
+   "lat": 46.2240177,
+   "lng": -1.4364756,
+   "website": "https://www.tennisiledere.fr/"
+  }
+ },
+ {
   "slug": "doinsport-510d1c9c-2f14-4fe7-b42a-48629e4651dc",
   "source": "doinsport",
   "name": "TENNIS CLUB CARROS",
@@ -7216,6 +7744,28 @@
   }
  },
  {
+  "slug": "doinsport-88c97e68-7f28-4fcd-ba11-3282bfda51a5",
+  "source": "doinsport",
+  "name": "Tennis club de Chamonix - Site des Houches",
+  "cp": "74310",
+  "city": "Les Houches",
+  "dept": "74",
+  "metro": "lyon",
+  "lat": 45.8957347,
+  "lng": 6.7790058,
+  "raw": {
+   "id": "88c97e68-7f28-4fcd-ba11-3282bfda51a5",
+   "name": "Tennis club de Chamonix - Site des Houches",
+   "cp": "74310",
+   "city": "Les Houches",
+   "dept": "74",
+   "metro": "lyon",
+   "lat": 45.8957347,
+   "lng": 6.7790058,
+   "website": "https://www.tennisclubchamonix.com/"
+  }
+ },
+ {
   "slug": "doinsport-d016516b-15a9-4f04-a359-53c6be5395ac",
   "source": "doinsport",
   "name": "Tennis Club de la Chataigneraie",
@@ -7289,8 +7839,8 @@
   "city": "Paris",
   "dept": "75",
   "metro": "idf",
-  "lat": null,
-  "lng": null,
+  "lat": 48.8356156,
+  "lng": 2.2602283,
   "raw": {
    "id": "5a2b4593-660d-4f02-ab13-42898b5c0778",
    "name": "Tennis Club du seizième",
@@ -7298,8 +7848,8 @@
    "city": "Paris",
    "dept": "75",
    "metro": "idf",
-   "lat": null,
-   "lng": null,
+   "lat": 48.8356156,
+   "lng": 2.2602283,
    "website": "https://www.tc16.fr/"
   }
  },
@@ -7311,8 +7861,8 @@
   "city": "Bandol",
   "dept": "83",
   "metro": "marseille",
-  "lat": null,
-  "lng": null,
+  "lat": 43.1351451,
+  "lng": 5.743462,
   "raw": {
    "id": "51d96c3f-f00e-4f8a-b33c-f386415c69cc",
    "name": "Tennis Club Munic De Bandol",
@@ -7320,8 +7870,8 @@
    "city": "Bandol",
    "dept": "83",
    "metro": "marseille",
-   "lat": null,
-   "lng": null,
+   "lat": 43.1351451,
+   "lng": 5.743462,
    "website": null
   }
  },
@@ -7487,8 +8037,8 @@
   "city": "Bron",
   "dept": "69",
   "metro": "lyon",
-  "lat": null,
-  "lng": null,
+  "lat": 45.7337532,
+  "lng": 4.9092352,
   "raw": {
    "id": "f638437a-48a8-4fce-bcb5-87435d955217",
    "name": "The Clubhouse",
@@ -7496,8 +8046,8 @@
    "city": "Bron",
    "dept": "69",
    "metro": "lyon",
-   "lat": null,
-   "lng": null,
+   "lat": 45.7337532,
+   "lng": 4.9092352,
    "website": null
   }
  },
@@ -7543,6 +8093,28 @@
    "lat": 48.6482879,
    "lng": -1.3503185,
    "website": "https://todopadel.fr/"
+  }
+ },
+ {
+  "slug": "doinsport-02831da9-b093-4fcf-b7d6-8784c5cb9da8",
+  "source": "doinsport",
+  "name": "TSB Jarville",
+  "cp": "54180",
+  "city": "Heillecourt",
+  "dept": "54",
+  "metro": "strasbourg",
+  "lat": 48.6576206,
+  "lng": 6.2091282,
+  "raw": {
+   "id": "02831da9-b093-4fcf-b7d6-8784c5cb9da8",
+   "name": "TSB Jarville",
+   "cp": "54180",
+   "city": "Heillecourt",
+   "dept": "54",
+   "metro": "strasbourg",
+   "lat": 48.6576206,
+   "lng": 6.2091282,
+   "website": "https://www.tsbjarville.com"
   }
  },
  {
@@ -7685,8 +8257,8 @@
   "city": "Valgelon-La Rochette.",
   "dept": "73",
   "metro": "lyon",
-  "lat": null,
-  "lng": null,
+  "lat": 45.461343,
+  "lng": 6.114082,
   "raw": {
    "id": "9a49209f-40e6-4f6c-b3db-e176796db90d",
    "name": "VAL PADEL",
@@ -7694,8 +8266,8 @@
    "city": "Valgelon-La Rochette.",
    "dept": "73",
    "metro": "lyon",
-   "lat": null,
-   "lng": null,
+   "lat": 45.461343,
+   "lng": 6.114082,
    "website": null
   }
  },
@@ -7722,6 +8294,28 @@
   }
  },
  {
+  "slug": "doinsport-98bf3ebc-d9d8-4f2b-a1bc-f9e39a8a7f70",
+  "source": "doinsport",
+  "name": "Ventoux Indoor Padel",
+  "cp": "84800",
+  "city": "Saumane-de-Vaucluse",
+  "dept": "84",
+  "metro": "marseille",
+  "lat": 43.9216578,
+  "lng": 5.0848493,
+  "raw": {
+   "id": "98bf3ebc-d9d8-4f2b-a1bc-f9e39a8a7f70",
+   "name": "Ventoux Indoor Padel",
+   "cp": "84800",
+   "city": "Saumane-de-Vaucluse",
+   "dept": "84",
+   "metro": "marseille",
+   "lat": 43.9216578,
+   "lng": 5.0848493,
+   "website": null
+  }
+ },
+ {
   "slug": "doinsport-d20ad63e-9286-4f6f-b002-922e5d6012fe",
   "source": "doinsport",
   "name": "WA Padel",
@@ -7741,28 +8335,6 @@
    "lat": 43.238862,
    "lng": 0.063704,
    "website": "https://wa-padel.fr/"
-  }
- },
- {
-  "slug": "doinsport-7b55e61d-dc05-4f9f-ae8f-44d8a9040fad",
-  "source": "doinsport",
-  "name": "Wellputt Training Center",
-  "cp": "64990",
-  "city": "Lahonce",
-  "dept": "64",
-  "metro": "bordeaux",
-  "lat": 43.490696,
-  "lng": -1.4297332,
-  "raw": {
-   "id": "7b55e61d-dc05-4f9f-ae8f-44d8a9040fad",
-   "name": "Wellputt Training Center",
-   "cp": "64990",
-   "city": "Lahonce",
-   "dept": "64",
-   "metro": "bordeaux",
-   "lat": 43.490696,
-   "lng": -1.4297332,
-   "website": "https://eu.wellputt.com/fr/"
   }
  },
  {
