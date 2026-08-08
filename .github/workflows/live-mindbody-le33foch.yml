@@ -43,10 +43,12 @@ jobs:
             echo "Aucun changement."
           else
             git commit -m "Scrap Le 33 Foch ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            ok=0
             for i in 1 2 3 4; do
-              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && { ok=1; break; }
               echo "retry push $i"; sleep 5
             done
+            [ "$ok" = 1 ] || { echo "::error::push rejeté 4 fois — les données de ce run ne sont PAS persistées"; exit 1; }
           fi
       - name: Healthcheck ping (si HEALTHCHECK_URL défini)
         if: always()

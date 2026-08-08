@@ -49,7 +49,7 @@ jobs:
         run: python3 padel_national_from_supabase.py
         continue-on-error: true
 
-      - name: Prune sessions > 30j (limite taille repo)
+      - name: Archive + élague le store (fenêtre 7j passé / 14j futur)
         run: python3 prune_padel_live.py
         continue-on-error: true
 
@@ -57,7 +57,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add padel_national_data.json \
+          # padel_national_history.json.gz est OBLIGATOIRE : l'élagage y déplace
+          # les créneaux hors fenêtre. Sans ce commit ils partiraient avec le
+          # runner, alors que le store élagué serait committé — donc perdus.
+          git add padel_national_data.json padel_national_history.json.gz \
                   padel_national_anybuddy.json padel_national_doinsport.json \
                   padel_national_playtomic.json padel_national_urbanpadel.json \
                   padel_national_clubs.json
@@ -65,10 +68,12 @@ jobs:
             echo "Aucun changement national."
           else
             git commit -m "Padel national scrape ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            ok=0
             for i in 1 2 3 4; do
-              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && { ok=1; break; }
               echo "retry push $i"; sleep 5
             done
+            [ "$ok" = 1 ] || { echo "::error::push rejeté 4 fois — les données de ce run ne sont PAS persistées"; exit 1; }
           fi
 
       - name: Healthcheck ping (si HEALTHCHECK_URL défini)
