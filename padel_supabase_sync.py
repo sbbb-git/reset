@@ -64,6 +64,34 @@ def upsert(table, rows, on_conflict=None):
     return n_ok
 
 
+# Clé métier de padel_slots. duree en fait partie : 21 % des créneaux
+# existent en plusieurs durées (60/90/120 min) sur le même terrain à la
+# même heure, les fusionner perdrait des réservations.
+SLOT_KEY = "club_slug,date,heure,court_id,duree"
+
+
+def upsert_slots(rows):
+    """Upsert de padel_slots, compatible avant et après la migration de PK.
+
+    Le schéma migré (PK bigint + index unique métier) et l'ancien (PK texte
+    concaténée) coexistent le temps que le SQL soit appliqué. On tente la clé
+    métier ; si Postgres répond qu'aucune contrainte ne correspond (42P10),
+    on retombe sur l'ancienne clé en réinjectant les `_legacy_id`.
+    Sans ce filet, pousser ce fichier avant le SQL casserait le sync, qui
+    tourne toutes les 30 min.
+    """
+    clean = [{k: v for k, v in r.items() if k != "_legacy_id"} for r in rows]
+    try:
+        return upsert("padel_slots", clean, on_conflict=SLOT_KEY)
+    except urllib.error.HTTPError as e:
+        if e.code != 400:
+            raise
+        print("  ↩︎ clé métier refusée (schéma pas encore migré) — repli sur l'id texte",
+              file=sys.stderr)
+        legacy = [{**r, "id": r["_legacy_id"]} for r in rows if r.get("_legacy_id")]
+        return upsert("padel_slots", legacy, on_conflict="id")
+
+
 def main():
     if not os.path.exists(STORE):
         print(f"❌ {STORE} introuvable", file=sys.stderr); sys.exit(1)
@@ -100,7 +128,10 @@ def main():
     for slug, b in store.items():
         for sid, s in (b.get("sessions") or {}).items():
             slots_rows.append({
-                "id": f"{slug}|{sid}",  # globalement unique
+                # Pas d'"id" : la PK est un bigint généré par Postgres et
+                # l'unicité vient de la clé métier. `_legacy_id` n'est gardé
+                # que pour le repli sur l'ancien schéma (cf. upsert_slots).
+                "_legacy_id": f"{slug}|{sid}",
                 "club_slug": slug,
                 "date": s.get("date"),
                 "heure": s.get("heure"),
@@ -122,7 +153,7 @@ def main():
     print(f"À syncer : {len(clubs_rows)} clubs, {len(slots_rows)} slots → Supabase")
     n_clubs = upsert("padel_clubs", clubs_rows, on_conflict="slug")
     print(f"  ✅ padel_clubs : {n_clubs} upserts")
-    n_slots = upsert("padel_slots", slots_rows, on_conflict="id")
+    n_slots = upsert_slots(slots_rows)
     print(f"  ✅ padel_slots : {n_slots} upserts")
     print("Sync OK.")
 

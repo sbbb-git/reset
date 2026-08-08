@@ -23,6 +23,8 @@ import time
 import urllib.error
 import urllib.request
 
+from padel_supabase_sync import upsert_slots
+
 STORE = "padel_national_data.json"
 UNIFIED = "padel_club_unified.json"
 URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
@@ -134,7 +136,9 @@ def main():
         default_source = derive_source(slug, meta)
         for sid, s in (b.get("sessions") or {}).items():
             slots_rows.append({
-                "id": f"{slug}|{sid}",
+                # Cf. padel_supabase_sync.upsert_slots : `_legacy_id` sert
+                # uniquement au repli tant que le SQL n'est pas appliqué.
+                "_legacy_id": f"{slug}|{sid}",
                 "club_slug": slug,
                 "date": s.get("date"),
                 "heure": s.get("heure"),
@@ -153,7 +157,7 @@ def main():
     print(f"À syncer (national) : {len(clubs_rows)} clubs, {len(slots_rows)} slots → Supabase")
     n_clubs = upsert("padel_clubs", clubs_rows, on_conflict="slug")
     print(f"  ✅ padel_clubs : {n_clubs} upserts")
-    n_slots = upsert("padel_slots", slots_rows, on_conflict="id")
+    n_slots = upsert_slots(slots_rows)
     print(f"  ✅ padel_slots : {n_slots} upserts")
     print("Sync national OK.")
 

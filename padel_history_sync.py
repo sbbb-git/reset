@@ -85,7 +85,8 @@ def main():
     for slug, b in store.items():
         for sid, s in (b.get("sessions") or {}).items():
             slots_rows.append({
-                "id": f"{slug}|{sid}",
+                # PK bigint générée côté Postgres : plus d'id fourni.
+                # Unicité portée par padel_slots_metier_uidx.
                 "club_slug": slug,
                 "date": s.get("date"),
                 "heure": s.get("heure"),
@@ -104,7 +105,8 @@ def main():
     print(f"Sync : {len(clubs_rows)} clubs, {len(slots_rows)} slots historiques → Supabase")
     n_c = upsert("padel_clubs", clubs_rows, on_conflict="slug")
     print(f"✅ padel_clubs : {n_c} upserts")
-    n_s = upsert("padel_slots", slots_rows, on_conflict="id")
+    n_s = upsert("padel_slots", slots_rows,
+                     on_conflict="club_slug,date,heure,court_id,duree")
     print(f"✅ padel_slots : {n_s} upserts (~{n_s/1000:.0f}k lignes)")
     print("Sync historique terminée.")
 
