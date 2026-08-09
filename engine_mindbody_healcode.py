@@ -418,12 +418,16 @@ def _calendar_last_day(payload):
 
 # ------------------------------------------------------------------ fetch --
 def fetch_widget(widget_id, referer=None, lieu="", start_date=None,
-                 days=56, location=None, max_windows=8):
+                 days=56, location=None, max_windows=14):
     """Balaie l'horizon d'un widget healcode fenêtre par fenêtre.
 
-    load_markup ne rend qu'une quinzaine de jours autour de start_date ; on
-    enchaîne les fenêtres en repartant du lendemain du dernier jour couvert
-    (lu dans le calendrier renvoyé), avec un repli à +7 jours.
+    load_markup ne rend qu'une semaine environ à partir de start_date ; on
+    enchaîne les fenêtres en repartant du lendemain de la dernière séance
+    réellement rendue, avec un repli à +7 jours si la fenêtre est vide.
+
+    max_windows tient compte de ce pas d'une semaine : 56 jours d'horizon
+    demandent 8 fenêtres, on en autorise 14 pour absorber les semaines creuses
+    qui n'avancent que de 7 jours sans rien rapporter.
     """
     start = dt.date.fromisoformat(start_date) if start_date else dt.date.today()
     horizon = start + dt.timedelta(days=days)
@@ -432,15 +436,32 @@ def fetch_widget(widget_id, referer=None, lieu="", start_date=None,
         if cursor > horizon:
             break
         payload = load_markup(widget_id, cursor.isoformat(), location, referer)
-        fresh = 0
-        for s in parse_sessions(payload.get("class_sessions"), lieu):
+        parsed = parse_sessions(payload.get("class_sessions"), lieu)
+        for s in parsed:
             if s["id"] not in seen:
                 s["widget"] = widget_id
                 seen[s["id"]] = s
-                fresh += 1
-        last = _calendar_last_day(payload)
-        nxt = (dt.date.fromisoformat(last) + dt.timedelta(days=1)) if last \
-            else cursor + dt.timedelta(days=7)
+
+        # Avancée du curseur : les deux signaux disponibles sont bons, mais
+        # chacun dans un cas précis.
+        #   · fenêtre PLEINE -> dernier jour réellement rendu + 1. Le
+        #     mini-calendrier annonce couramment deux semaines là où
+        #     class_sessions n'en rend qu'une ; s'y fier saute une semaine sur
+        #     deux (mesuré sur DNA : 494 séances au lieu de 1096, trou net du
+        #     2026-08-16 au 08-22).
+        #   · fenêtre VIDE -> là, et seulement là, le calendrier fait foi : il
+        #     dit jusqu'où le widget sait qu'il n'y a rien, ce qui permet
+        #     d'enjamber une fermeture d'un bond. Avancer de 7 jours à
+        #     l'aveugle ferait manquer le jour de réouverture (mesuré sur
+        #     banote, fermé du 08-10 au 08-22 et rouvert le 08-23).
+        vus = [s["start"][:10] for s in parsed if len(s.get("start") or "") >= 10]
+        cal = _calendar_last_day(payload)
+        if vus:
+            nxt = dt.date.fromisoformat(max(vus)) + dt.timedelta(days=1)
+        elif cal:
+            nxt = dt.date.fromisoformat(cal) + dt.timedelta(days=1)
+        else:
+            nxt = cursor + dt.timedelta(days=7)
         if nxt <= cursor:                          # garde anti-boucle infinie
             nxt = cursor + dt.timedelta(days=7)
         cursor = nxt
