@@ -42,6 +42,51 @@
 -- ============================================================================
 -- BLOC 1 — MESURE (lecture seule, rien n'est modifié)
 -- ============================================================================
+-- Version « un seul copier-coller » : l'éditeur SQL de Supabase n'affiche que
+-- le dernier résultat quand on enchaîne plusieurs SELECT, donc tout est
+-- rassemblé en une table (metrique, valeur). Les requêtes détaillées 1a/1b/1c
+-- restent en dessous si tu veux les jouer séparément.
+--
+-- LA SEULE LIGNE QUI DÉCIDE :
+--   « >>> DOUBLONS SUR LA CLÉ MÉTIER » doit valoir 0.
+--   Si elle vaut autre chose, NE PAS lancer le bloc 2 : la contrainte UNIQUE
+--   échouerait. Me l'envoyer, on tranchera lequel garder.
+
+WITH tailles AS (
+    SELECT c.relname AS objet, pg_relation_size(c.oid) AS octets
+    FROM pg_class c
+    JOIN pg_namespace n ON n.oid = c.relnamespace
+    WHERE n.nspname = 'public' AND c.relname LIKE 'padel_slots%'
+), cle AS (
+    SELECT count(*)                    AS lignes,
+           round(avg(length(id)))      AS id_moyen,
+           max(length(id))             AS id_max,
+           sum(length(id) + 1)::bigint AS poids_id
+    FROM public.padel_slots
+), doublons AS (
+    SELECT count(*) AS n FROM (
+        SELECT 1 FROM public.padel_slots
+        GROUP BY club_slug, date, heure, court_id, duree
+        HAVING count(*) > 1
+    ) x
+)
+SELECT '1. base totale'                  AS metrique, pg_size_pretty(pg_database_size(current_database())) AS valeur
+UNION ALL SELECT '2. objet · ' || objet, pg_size_pretty(octets) FROM tailles
+UNION ALL SELECT '3. lignes padel_slots', to_char(lignes, 'FM999G999G999') FROM cle
+UNION ALL SELECT '4. id : longueur moyenne (car)', id_moyen::text FROM cle
+UNION ALL SELECT '5. id : longueur max (car)', id_max::text FROM cle
+UNION ALL SELECT '6. id : poids de la colonne', pg_size_pretty(poids_id) FROM cle
+UNION ALL SELECT '7. id : poids si bigint', pg_size_pretty(lignes * 8) FROM cle
+UNION ALL SELECT '>>> DOUBLONS SUR LA CLÉ MÉTIER (doit valoir 0)', n::text FROM doublons
+ORDER BY 1;
+
+-- Si la requête ci-dessus dépasse le statement_timeout, jouer le compte de
+-- doublons seul — c'est lui qui coûte (GROUP BY sur toute la table) :
+--   SELECT count(*) FROM (SELECT 1 FROM public.padel_slots
+--     GROUP BY club_slug, date, heure, court_id, duree HAVING count(*) > 1) x;
+
+
+-- --- variantes détaillées (facultatif) --------------------------------------
 
 -- 1a. Poids actuel de chaque objet
 SELECT c.relname AS objet,
