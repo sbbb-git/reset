@@ -308,16 +308,18 @@
  "atelier_marais_republique": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://atelier-marais.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:43",
+  "checked_at": "2026-08-09 05:08",
   "url": "https://atelier-marais.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "pyra_yoga": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://pyra.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:44",
+  "platform": "sportigo",
+  "slug": "pyra",
+  "booking_url": "https://pyra.sportigo.club/",
+  "detected_via": "https://pyra.paris/",
+  "checked_at": "2026-08-09 05:08",
   "url": "https://pyra.paris/",
-  "attempts": 1
+  "attempts": 2
  },
  "hera_club": {
   "platform": "mindbody",
@@ -331,37 +333,37 @@
  "yoga_by_muriel": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yogabymuriel.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:44",
+  "checked_at": "2026-08-09 05:09",
   "url": "https://www.yogabymuriel.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "espace_perinat": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://espace-perinat-nation.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:45",
+  "checked_at": "2026-08-09 05:10",
   "url": "https://espace-perinat-nation.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "studiolo": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yoganita.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:45",
+  "checked_at": "2026-08-09 05:10",
   "url": "https://www.yoganita.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "lomey": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.lomey-yoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:45",
+  "checked_at": "2026-08-09 05:11",
   "url": "https://www.lomey-yoga.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "cmonyoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://cmonyoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:46",
+  "checked_at": "2026-08-09 05:11",
   "url": "https://cmonyoga.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "byo_yoga": {
   "platform": "bsport",
@@ -388,9 +390,9 @@
  "mirz_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.mirz-yoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:46",
+  "checked_at": "2026-08-09 05:12",
   "url": "https://www.mirz-yoga.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "m_yoga_boulogne": {
   "platform": "bsport",
@@ -417,18 +419,20 @@
   "attempts": 1
  },
  "studio_air_yoga": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.studioairyoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:47",
+  "platform": "bsport",
+  "company_id": null,
+  "note": "bsport detected mais ID introuvable",
+  "detected_via": "https://www.studioairyoga.fr/",
+  "checked_at": "2026-08-09 05:12",
   "url": "https://www.studioairyoga.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "yoga_sphinx": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yogasphinx.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:47",
+  "checked_at": "2026-08-09 05:12",
   "url": "https://www.yogasphinx.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "mon_studio_yoga": {
   "platform": "bsport",
@@ -441,16 +445,16 @@
  "studio_palloy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studiopalloy.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:48",
+  "checked_at": "2026-08-09 05:13",
   "url": "https://studiopalloy.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "le_studio_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.lestudio.yoga/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:48",
+  "checked_at": "2026-08-09 05:13",
   "url": "https://www.lestudio.yoga/",
-  "attempts": 1
+  "attempts": 2
  },
  "the_new_cool": {
   "platform": "bsport",
@@ -462,44 +466,46 @@
  "louve_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.louveyoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:48",
+  "checked_at": "2026-08-09 05:14",
   "url": "https://www.louveyoga.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "deeply_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://deeplyyoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:49",
+  "checked_at": "2026-08-09 05:14",
   "url": "https://deeplyyoga.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "yoga_culture": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yoga-et-culture.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:49",
+  "checked_at": "2026-08-09 05:15",
   "url": "https://yoga-et-culture.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "genesis_yoga": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.genesisyoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:49",
+  "platform": "bsport",
+  "company_id": null,
+  "note": "bsport detected mais ID introuvable",
+  "detected_via": "https://www.genesisyoga.fr/",
+  "checked_at": "2026-08-09 05:15",
   "url": "https://www.genesisyoga.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "yoga_saint_mande": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yogasaintmande94160.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:50",
+  "checked_at": "2026-08-09 05:15",
   "url": "https://www.yogasaintmande94160.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "shamash_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.shamashyoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:50",
+  "checked_at": "2026-08-09 05:16",
   "url": "https://www.shamashyoga.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "studio_perche": {
   "platform": "mindbody",
@@ -513,114 +519,114 @@
  "subtil_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.subtil-yoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:39",
+  "checked_at": "2026-08-09 05:16",
   "url": "https://www.subtil-yoga.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "yogattitude_nogent": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yoga-nogent.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:39",
+  "checked_at": "2026-08-09 05:17",
   "url": "https://yoga-nogent.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "casa_studio_aubervilliers": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://casastudio.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:40",
+  "checked_at": "2026-08-09 05:17",
   "url": "https://casastudio.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "atelier_gokko": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://ateliergokko.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:40",
+  "checked_at": "2026-08-09 05:18",
   "url": "https://ateliergokko.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "atelier_ml": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.atelier-ml.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:40",
+  "checked_at": "2026-08-09 05:18",
   "url": "https://www.atelier-ml.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "yoga_6bis": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yoga6bis.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:40",
+  "checked_at": "2026-08-09 05:18",
   "url": "https://yoga6bis.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "club_67": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://club67.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:41",
+  "checked_at": "2026-08-09 05:19",
   "url": "https://club67.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "warrior_yoga_stgermain": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://warrioryoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:42",
+  "checked_at": "2026-08-09 05:20",
   "url": "https://warrioryoga.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "warrior_yoga_versailles": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://warrioryoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:42",
+  "checked_at": "2026-08-09 05:20",
   "url": "https://warrioryoga.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "yoga_shala_poissy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yogashalapoissy.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:42",
+  "checked_at": "2026-08-09 05:20",
   "url": "https://yogashalapoissy.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "sp_studio_conflans": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.s-pilatesstudio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:42",
+  "checked_at": "2026-08-09 05:21",
   "url": "https://www.s-pilatesstudio.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "mudra_massy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.mudrayoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:43",
+  "checked_at": "2026-08-09 05:21",
   "url": "https://www.mudrayoga.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "mudra_palaiseau": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.mudrayoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:43",
+  "checked_at": "2026-08-09 05:22",
   "url": "https://www.mudrayoga.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "arkose_massy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://lestudio.arkose.com/massy/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:44",
+  "checked_at": "2026-08-09 05:22",
   "url": "https://lestudio.arkose.com/massy/",
-  "attempts": 1
+  "attempts": 2
  },
  "active_flow_montmorency": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yoga-activeflow.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:44",
+  "checked_at": "2026-08-09 05:23",
   "url": "https://www.yoga-activeflow.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "yoga_cergy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yogacergy.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:44",
+  "checked_at": "2026-08-09 05:23",
   "url": "https://yogacergy.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "le_studio_fontainebleau": {
   "platform": "bsport",
@@ -633,30 +639,32 @@
  "bleausard": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://bleausard-studio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:45",
+  "checked_at": "2026-08-09 05:24",
   "url": "https://bleausard-studio.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "wellness_fontainebleau": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://wellness-studio.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:45",
+  "checked_at": "2026-08-09 05:25",
   "url": "https://wellness-studio.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "studio_tk_melun": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studiotkyoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:46",
+  "checked_at": "2026-08-09 05:25",
   "url": "https://studiotkyoga.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "le_rempart_melun": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.le-rempart.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:47",
+  "platform": "bsport",
+  "company_id": null,
+  "note": "bsport detected mais ID introuvable",
+  "detected_via": "https://www.le-rempart.fr/tarifs",
+  "checked_at": "2026-08-09 05:26",
   "url": "https://www.le-rempart.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "sweet_om_meaux": {
   "platform": "unknown",

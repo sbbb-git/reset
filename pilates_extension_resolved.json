@@ -507,51 +507,60 @@
  "le_studio_lagree_neuilly": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://lestudiolagree.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:24",
+  "checked_at": "2026-08-09 04:50",
   "url": "https://lestudiolagree.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "playground_pilates_studio": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.playgroundpilatesstudio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:24",
+  "checked_at": "2026-08-09 04:50",
   "url": "https://www.playgroundpilatesstudio.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "origyn_puteaux": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://origynandco.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:25",
+  "platform": "deciplus",
+  "slug": "origyn",
+  "booking_url": "https://member-app.deciplus.pro/origyn/calendar",
+  "detected_via": "https://origynandco.com/",
+  "checked_at": "2026-08-09 04:50",
   "url": "https://origynandco.com/",
-  "attempts": 2
+  "attempts": 3
  },
  "pilates_performer": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://pilatesperformer.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:25",
+  "checked_at": "2026-08-09 04:50",
   "url": "https://pilatesperformer.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "panache_holiformer": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://panacheholiformerpilates.squarespace.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:25",
+  "platform": "calendly",
+  "slug": "panacheholiformer",
+  "note": "Calendly = rendez-vous individuel, pas de planning de cours exploitable — aucun engine, marque taguée pour arrêter de la resonder",
+  "detected_via": "https://panacheholiformerpilates.squarespace.com/",
+  "checked_at": "2026-08-09 04:50",
   "url": "https://panacheholiformerpilates.squarespace.com/",
-  "attempts": 2
+  "attempts": 3
  },
  "annec_pilates": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://annecpilates.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:26",
+  "checked_at": "2026-08-09 04:51",
   "url": "https://annecpilates.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "pilates_nanterre": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.pilates-nanterre.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:26",
+  "checked_at": "2026-08-09 04:51",
   "url": "https://www.pilates-nanterre.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "vybes_reformer_more": {
   "platform": "bsport",
@@ -572,25 +581,30 @@
   "attempts": 2
  },
  "pilates_en_apart": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://pilatesenaparte.helloresa.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:26",
+  "platform": "helloresa",
+  "slug": "pilatesenaparte",
+  "booking_url": "https://pilatesenaparte.helloresa.com/",
+  "detected_via": "https://pilatesenaparte.helloresa.com/",
+  "checked_at": "2026-08-09 04:51",
   "url": "https://pilatesenaparte.helloresa.com/",
-  "attempts": 2
+  "attempts": 3
  },
  "my_sweet_pilates": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.mysweetpilates.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:27",
+  "platform": "simplybook",
+  "slug": "mysweetpilates",
+  "booking_url": "https://mysweetpilates.simplybook.it/v2/",
+  "detected_via": "https://www.mysweetpilates.com/",
+  "checked_at": "2026-08-09 04:51",
   "url": "https://www.mysweetpilates.com/",
-  "attempts": 2
+  "attempts": 3
  },
  "in_m_pilates_clamart": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://inampilates.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:27",
+  "checked_at": "2026-08-09 04:52",
   "url": "https://inampilates.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "mlm_pilates_sceaux": {
   "platform": "bsport",
@@ -604,30 +618,34 @@
  "cours_pilates_antony": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://cours-pilates.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:27",
+  "checked_at": "2026-08-09 04:52",
   "url": "https://cours-pilates.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "impact_studio_antony": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://impact-pilates.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:27",
+  "checked_at": "2026-08-09 04:52",
   "url": "https://impact-pilates.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "studio_svb": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studiosvb.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:28",
+  "checked_at": "2026-08-09 04:52",
   "url": "https://studiosvb.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "atelier_ml_montreuil": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.atelierml.fr/pilates-montreuil/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:28",
+  "checked_at": "2026-08-09 04:53",
   "url": "https://www.atelierml.fr/pilates-montreuil/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "perspectives_studio": {
   "platform": "bsport",
@@ -639,11 +657,13 @@
   "attempts": 2
  },
  "studio_forme_vincennes": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://studioforme.fr/pilates-reformer/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:28",
+  "platform": "deciplus",
+  "slug": "resa-studioforme",
+  "booking_url": "https://resa-studioforme.deciplus.pro/",
+  "detected_via": "https://studioforme.fr/pilates-reformer/",
+  "checked_at": "2026-08-09 04:53",
   "url": "https://studioforme.fr/pilates-reformer/",
-  "attempts": 2
+  "attempts": 3
  },
  "nava_pilates": {
   "platform": "bsport",
@@ -657,16 +677,18 @@
  "pilates_saint_mand": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://pilates-saint-mande.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:33",
+  "checked_at": "2026-08-09 04:59",
   "url": "https://pilates-saint-mande.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "vital_house_gym_charenton": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.vitalhousegym.com/services (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:33",
+  "checked_at": "2026-08-09 04:59",
   "url": "https://www.vitalhousegym.com/services",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "lm_studio_joinville": {
   "platform": "bsport",
@@ -678,11 +700,12 @@
   "attempts": 1
  },
  "flow_pilates_maisons_alfort": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://flowpilatesstudio.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:33",
+  "platform": "eversports",
+  "widget_id": "ce65b7b2-fa93-4269-9e5f-955f712efb7b",
+  "detected_via": "https://flowpilatesstudio.fr/reservation/",
+  "checked_at": "2026-08-09 04:59",
   "url": "https://flowpilatesstudio.fr/",
-  "attempts": 2
+  "attempts": 3
  },
  "nyou_studio_maisons_alfort": {
   "platform": "bsport",
@@ -696,16 +719,18 @@
  "l_atelier_gambetta": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.lateliergambetta.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:33",
+  "checked_at": "2026-08-09 04:59",
   "url": "https://www.lateliergambetta.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "reformyou_saint_maur": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://reformyou-pilates-st-maur.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:34",
+  "checked_at": "2026-08-09 05:00",
   "url": "https://reformyou-pilates-st-maur.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "myo_pilates_saint_maur": {
   "platform": "bsport",
@@ -716,18 +741,21 @@
   "attempts": 1
  },
  "atelier_r_pilates": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://pilates-saintmaur.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:34",
+  "platform": "acuity",
+  "club_id": "19993835",
+  "booking_url": "https://app.acuityscheduling.com/schedule.php?owner=19993835",
+  "detected_via": "https://pilates-saintmaur.fr/horaires",
+  "checked_at": "2026-08-09 05:00",
   "url": "https://pilates-saintmaur.fr/",
-  "attempts": 2
+  "attempts": 3
  },
  "house_of_pilates_saint_maur": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://houseofpilates.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:34",
+  "checked_at": "2026-08-09 05:01",
   "url": "https://houseofpilates.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "l_atelier_reformer_cr_teil": {
   "platform": "mindbody",
@@ -759,25 +787,29 @@
   "attempts": 1
  },
  "pilates_ouest": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.pilates-ouest.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:36",
+  "platform": "calendly",
+  "slug": "beth-pilates-ouest",
+  "note": "Calendly = rendez-vous individuel, pas de planning de cours exploitable — aucun engine, marque taguée pour arrêter de la resonder",
+  "detected_via": "https://www.pilates-ouest.com/",
+  "checked_at": "2026-08-09 05:01",
   "url": "https://www.pilates-ouest.com/",
-  "attempts": 2
+  "attempts": 3
  },
  "masami_miyauchi": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.masamimiyauchi.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:36",
+  "checked_at": "2026-08-09 05:01",
   "url": "https://www.masamimiyauchi.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "sculpt_club_saint_germain": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://gymlib.com/fr/gym/sculpt-pilates (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:36",
+  "checked_at": "2026-08-09 05:01",
   "url": "https://gymlib.com/fr/gym/sculpt-pilates",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "halo_studio_v_sinet": {
   "platform": "bsport",
@@ -799,9 +831,10 @@
  "m_pilates_flow_argenteuil": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studios-pilates.fr/studio-de-pilates-argenteuil-95.html (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:36",
+  "checked_at": "2026-08-09 05:02",
   "url": "https://studios-pilates.fr/studio-de-pilates-argenteuil-95.html",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "si_le_pilates_pontoise": {
   "platform": "bsport",
@@ -815,9 +848,10 @@
  "cergy_pilates": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.cergypilates.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:37",
+  "checked_at": "2026-08-09 05:02",
   "url": "https://www.cergypilates.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "studio_linea_meaux": {
   "platform": "bsport",
@@ -831,16 +865,18 @@
  "harmony_pilates_val_d_europe": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.studioharmonypilates.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:37",
+  "checked_at": "2026-08-09 05:03",
   "url": "https://www.studioharmonypilates.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "espace_pilates_fontainebleau": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.espace-pilates.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:37",
+  "checked_at": "2026-08-09 05:03",
   "url": "https://www.espace-pilates.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "bliss_pilates_fontainebleau": {
   "platform": "bsport",
@@ -854,16 +890,18 @@
  "eden_by_chlo_melun": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.edenbychloe.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:38",
+  "checked_at": "2026-08-09 05:04",
   "url": "https://www.edenbychloe.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "reformyou_bussy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://reformyou.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:38",
+  "checked_at": "2026-08-09 05:04",
   "url": "https://reformyou.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "moove_studio_bi_vres": {
   "platform": "bsport",
@@ -894,16 +932,20 @@
  "pilates_en_seine_etiolles": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.pilates-en-seine.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:38",
+  "checked_at": "2026-08-09 05:05",
   "url": "https://www.pilates-en-seine.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "now_reformer_neuilly": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://nowreformer.com/neuilly/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:39",
+  "platform": "mindbody",
+  "widget_id": null,
+  "note": "Mindbody detected mais widget_id introuvable — probablement SPA, Playwright requis",
+  "needs_playwright": true,
+  "detected_via": "https://nowreformer.com/neuilly/tarifs",
+  "checked_at": "2026-08-09 05:05",
   "url": "https://nowreformer.com/neuilly/",
-  "attempts": 2
+  "attempts": 3
  },
  "l_acad_mie_34": {
   "platform": "mindbody",
@@ -918,9 +960,10 @@
  "studio_toile_pilates": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.studioetoilepilates.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:38",
+  "checked_at": "2026-08-09 05:05",
   "url": "https://www.studioetoilepilates.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "social_reformers": {
   "platform": "bsport",
@@ -942,9 +985,10 @@
  "reformer_raum": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://reformerraum.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:38",
+  "checked_at": "2026-08-09 05:06",
   "url": "https://reformerraum.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "harmonie_studio_pilates": {
   "platform": "bsport",
@@ -957,9 +1001,10 @@
  "studio_rituel_pilates": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.studio-rituel.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:39",
+  "checked_at": "2026-08-09 05:06",
   "url": "https://www.studio-rituel.paris/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "aja_house": {
   "platform": "mindbody",
@@ -984,16 +1029,18 @@
  "studio_biopilates": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.biopilates.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:39",
+  "checked_at": "2026-08-09 05:07",
   "url": "https://www.biopilates.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "apog_e_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://apogee-paris.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:39",
+  "checked_at": "2026-08-09 05:07",
   "url": "https://apogee-paris.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "pilatestudio_paris_15": {
   "platform": "bsport",
@@ -1006,9 +1053,10 @@
  "inam_pilates_gagny": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://inampilates.com/gagny/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:39",
+  "checked_at": "2026-08-09 05:08",
   "url": "https://inampilates.com/gagny/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "studio_air_pilates_maisons_alfort": {
   "platform": "unknown",
