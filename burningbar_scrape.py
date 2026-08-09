@@ -3,11 +3,25 @@
 
 Burning Bar utilise le widget Mindbody standard (pas de proxy maison comme
 Punch), qui n'expose QUE le statut (Réserver / Complet / Il reste X places),
-jamais le nombre exact. On rend le widget des 2 salles (Playwright via
+jamais le nombre exact. On rend le widget des 2 adresses (Playwright via
 burningbar_fetch.cjs) et on fige le statut ~10 min avant chaque séance.
 
 Génère : burningbar_seances.csv et burningbar.html
+
+MISE À JOUR 2026-08-09
+----------------------
+Le studio est passé de 2 salles (Hot Room / Reformer Room) à 2 adresses
+(Paris 16 / Paris 7) : les widgets ont changé d'id, dont un qui n'existait
+plus du tout côté site — voir l'en-tête de burningbar_fetch.cjs. Les lignes
+déjà en base gardent leurs anciens libellés de salle, aucune n'est réécrite.
+
+On ajoute aussi un garde-fou : un passage à 0 séance n'est plus muet. Le
+2026-08-08, la journée entière est passée à 0 après 16 jours à 11-25 séances
+et personne n'a rien vu, parce que le scraper imprimait « OK » et sortait 0.
+Désormais on compare aux derniers même-jours-de-semaine et on annote en
+::error:: si l'écart n'est pas explicable.
 """
+import collections
 import csv
 import dashboard_meta
 from template_common import meta_panel_html
@@ -34,6 +48,12 @@ def fetch_today():
     except Exception as e:  # noqa: BLE001
         print(f"  (fetch échoué : {e})", file=sys.stderr)
         return []
+    # Le .cjs raconte sur stderr ce qu'il a vu widget par widget (nb de
+    # séances, ou échantillon du texte rendu quand il n'en trouve aucune).
+    # Sans ce relais, « page vide » et « gabarit changé » sont indiscernables
+    # dans les logs Actions.
+    if res.stderr.strip():
+        print(res.stderr.strip(), file=sys.stderr)
     if res.returncode != 0 or not res.stdout.strip():
         print("  (fetch Mindbody vide/erreur)", file=sys.stderr)
         return []
@@ -41,6 +61,40 @@ def fetch_today():
         return json.loads(res.stdout)
     except ValueError:
         return []
+
+
+def attendu_ce_jour(store, jour, today_iso, n=3):
+    """Nb de séances relevées les derniers même-jours-de-semaine passés.
+
+    Sert à qualifier un 0 : un samedi vide alors que les 3 samedis précédents
+    tenaient 15-21 séances est une panne, pas un planning creux.
+    """
+    par_date = collections.Counter()
+    for v in store.values():
+        d = v.get("date") or ""
+        if v.get("jour") == jour and d < today_iso:
+            par_date[d] += 1
+    return [par_date[d] for d in sorted(par_date, reverse=True)[:n]]
+
+
+def alerte_si_muet(store, sessions, jour, today_iso):
+    """Annonce franchement un passage à 0 séance. Renvoie True si c'est louche."""
+    if sessions:
+        return False
+    hist = attendu_ce_jour(store, jour, today_iso)
+    ref = sorted(hist)[len(hist) // 2] if hist else 0     # médiane
+    if ref >= 3:
+        print(f"::error::[burningbar] 0 séance capturée ce {jour} alors que les "
+              f"{len(hist)} derniers {jour.lower()}s en comptaient {hist} "
+              f"(médiane {ref}). Causes à départager : widget déplacé sur "
+              f"burningbar.fr/planning/, gabarit du bouton modifié, ou "
+              f"fermeture du studio — le détail par widget est juste au-dessus.",
+              file=sys.stderr)
+        return True
+    print(f"::warning::[burningbar] 0 séance capturée ce {jour} "
+          f"(historique des {jour.lower()}s : {hist or 'aucun'}) — "
+          f"planning probablement vide.", file=sys.stderr)
+    return False
 
 
 def normalize(brut):
@@ -69,6 +123,7 @@ def capture():
     jour = JOURS_FR[today.weekday()]
     store = load_store()
     sessions = fetch_today()
+    muet = alerte_si_muet(store, sessions, jour, today.isoformat())
     locked_now = 0
     for s in sessions:
         heure = s.get("heure", "")
@@ -115,7 +170,7 @@ def capture():
     save_store(store)
     print(f"[burningbar] {now:%Y-%m-%d %H:%M} : {len(sessions)} séances vues, "
           f"{locked_now} verrouillées, {len(store)} au total.")
-    return store
+    return store, muet
 
 
 FIELDS = ["date", "jour", "heure", "salle", "lieu", "cours", "statut",
@@ -394,13 +449,19 @@ render();
 
 
 def main():
-    store = capture()
+    store, muet = capture()
     rows = sorted(store.values(), key=lambda r: (r["date"], r["heure"], r.get("salle", "")))
+    # On écrit CSV/HTML même en cas de passage muet : le store n'a pas bougé,
+    # les livrables restent cohérents avec lui, et rien n'est perdu.
     write_csv(rows, "burningbar_seances.csv")
     write_html(rows, "burningbar.html")
     locked = [r for r in rows if r.get("locked")]
     print(f"OK [burningbar]: {len(rows)} séances en base, {len(locked)} figées.")
+    # Sortie non nulle sur un 0 inexpliqué : le step est marqué en échec dans
+    # l'UI Actions. Il garde son continue-on-error, sinon l'échec sauterait
+    # aussi le commit de Sense-Club, qui partage ce job et n'y est pour rien.
+    return 1 if muet else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

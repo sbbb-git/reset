@@ -39,7 +39,14 @@ YOGA_BRANDS = {
         "type": "Hot Power Yoga",
         "plateforme": "Mindbody",
         "lieux": [{"nom": "Burning Bar — Hot Room", "cp": "75008", "lat": 48.8744, "lng": 2.3056}],
-        "filter_salle_contains": ["hot"],
+        # Le studio est passé de 2 salles (Hot / Reformer) à 2 adresses
+        # (Paris 16 / Paris 7) : « hot » a disparu des libellés de salle, donc
+        # filter_salle_contains ne rendait plus rien. On prend le complément du
+        # reformer, ce qui reproduit l'intention d'origine (« tout ce qui se
+        # passe en salle chaude ») en s'appuyant sur le cours, seul champ
+        # resté stable. Corrige au passage 237 séances de reformer qui étaient
+        # comptées ici en Hot Yoga.
+        "filter_cours_exclut": ["reformer"],
     },
 }
 
@@ -52,9 +59,14 @@ def is_yoga_session(brand_cfg, row):
     salle = (row.get("salle") or row.get("lieu") or "").lower()
     flt_c = brand_cfg.get("filter_cours_contains")
     flt_s = brand_cfg.get("filter_salle_contains")
+    # Exclusion par cours : sert aux studios mixtes où c'est l'intitulé du
+    # cours, et non la salle, qui sépare les disciplines (cf. burningbar).
+    excl_c = brand_cfg.get("filter_cours_exclut")
     if flt_c and not any(k in cours for k in flt_c):
         return False
     if flt_s and not any(k in salle for k in flt_s):
+        return False
+    if excl_c and any(k in cours for k in excl_c):
         return False
     return True
 

@@ -158,13 +158,28 @@ def load_extension_brands():
 
 
 def is_reformer_session(brand, row):
-    """Pour burningbar : ne garder que les séances de la Reformer Room."""
+    """Pour burningbar : ne garder que les séances de reformer.
+
+    Le discriminant est le COURS, pas la salle. Deux raisons :
+
+    1. Le nom de salle n'a jamais été fiable — « Semi - private reformer »
+       apparaît sous « The Hot Room » aussi bien que sous « The Reformer
+       Room ». Filtrer sur la salle laissait donc 237 séances de reformer
+       hors du Pilates, et yoga_idf_compute les comptait en Hot Yoga.
+    2. Burning Bar est passé de 2 salles (Hot / Reformer) à 2 adresses
+       (Paris 16 / Paris 7) : les libellés de salle d'origine ont disparu
+       du site, donc un filtre qui s'y accroche ne rendrait plus rien.
+
+    On teste toujours la salle en plus du cours, pour que les séances déjà
+    en base sous l'ancien libellé restent reconnues.
+    """
     cfg = PILATES_BRANDS[brand]
     flt = cfg.get("filter_salle")
     if not flt:
         return True
     salle = (row.get("salle") or row.get("lieu") or "").lower()
-    return any(k in salle for k in flt)
+    cours = (row.get("cours") or "").lower()
+    return any(k in salle or k in cours for k in flt)
 
 
 def load_brand_sessions(brand_key, cfg):
