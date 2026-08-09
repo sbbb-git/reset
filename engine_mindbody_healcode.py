@@ -36,7 +36,7 @@ pour coller au comportement du widget, et le parseur accepte les DEUX formes.
 Trois pièges observés en production (2026-08-09) :
   · THROTTLING. Mindbody limite le débit par IP : en rafale, l'endpoint rend
     des HTTP 500 (voire 405) intermittents sur des widgets pourtant valides,
-    puis reredevient normal une fois le rythme calmé. C'est ce qui fait rendre
+    puis redevient normal une fois le rythme calmé. C'est ce qui fait rendre
     « 0 séance » aux scrapers Mindbody sur les runners GitHub quand ils
     s'enchaînent. D'où : une pause entre chaque fenêtre (PACE_SECONDS) et un
     backoff exponentiel sur retry. Ne pas conclure trop vite qu'un widget est
@@ -65,6 +65,7 @@ import ssl
 import sys
 import time
 import unicodedata
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -160,10 +161,18 @@ def http_get(url, referer=None, accept="text/html,*/*", retries=3, timeout=45):
             ctx = _LAX_SSL if attempt else None   # 1er essai = vérif normale
             with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
                 return r.read().decode("utf-8", "ignore")
+        except urllib.error.HTTPError as e:
+            last = e
+            # 404/410 : le chemin n'existe pas, insister ne sert à rien (et la
+            # discovery en teste beaucoup). Les 5xx/429, eux, valent un retry.
+            if e.code in (404, 410, 403, 401):
+                break
+            if attempt < retries - 1:
+                time.sleep(2 ** (attempt + 1))
         except Exception as e:                    # noqa: BLE001
             last = e
             if attempt < retries - 1:
-                # Backoff 2s, 4s, 8s… Mindbody throttle les IP de CI.
+                # Backoff 2s, 4s… TLS capricieux, timeouts, connexions coupées.
                 time.sleep(2 ** (attempt + 1))
     print(f"  (GET échoué {url} : {last})", file=sys.stderr)
     return None
@@ -224,7 +233,7 @@ def discover_widgets(url, extra_paths=(), max_pages=8):
             followed, queue = True, hinted[:4]
         cand = queue.pop(0)
         budget -= 1
-        html_str = http_get(cand, referer=root + "/", retries=1)
+        html_str = http_get(cand, referer=root + "/", retries=3)
         if not html_str:
             continue
         out["pages"].append(cand)
@@ -285,7 +294,8 @@ def _strip_jsonp(body, cb):
     body = (body or "").strip()
     if body.startswith("{"):
         return json.loads(body)
-    if body.startswith(cb) and "(" in body and body.endswith(")"):
+    # JSONP : `cb({...})`, parfois suivi d'un `;` ou d'un retour ligne.
+    if body.startswith(cb) and "(" in body and ")" in body:
         return json.loads(body[body.index("(") + 1: body.rindex(")")])
     head = _visible_text(body)
     for marker in _ERROR_MARKERS:

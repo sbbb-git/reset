@@ -107,10 +107,11 @@ def store_mindbody_sessions(key, label, sessions):
 def scrape_mindbody_http(key, label, widget_id):
     """Engine HTTP pour widgets BW classiques (banote / le33foch-style).
 
-    On passe par engine_mindbody_healcode : c'est le même endpoint
-    load_markup, mais l'engine envoie le paramètre `callback` que Mindbody
-    exige désormais (sans lui : HTTP 500). Repli sur le33foch_fetch si
-    l'engine ne rend rien, pour ne rien perdre en cas de régression.
+    On passe par engine_mindbody_healcode : même endpoint load_markup, mais
+    l'engine balaie plusieurs fenêtres (2 semaines par appel), espace ses
+    requêtes pour ne pas déclencher le throttling Mindbody, et clé les séances
+    sur le ClassID stable plutôt que sur l'id de DOM. Repli sur le33foch_fetch
+    si l'engine ne rend rien, pour ne rien perdre en cas de régression.
     """
     sessions = []
     try:
