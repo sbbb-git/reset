@@ -56,7 +56,7 @@ import re
 import ssl
 import sys
 import time
-import urllib.error
+import unicodedata
 import urllib.parse
 import urllib.request
 
@@ -495,6 +495,32 @@ def fetch_sessions(site_id, widget_id=None, referer=None, lieu=None,
     return sessions
 
 
+def _fold(s):
+    """Minuscules sans accents, pour comparer un libellé de marque à un lieu."""
+    s = unicodedata.normalize("NFKD", s or "")
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+
+
+def filter_by_label(sessions, label):
+    """Ne garde que le studio de la marque quand un widget couvre plusieurs lieux.
+
+    Un même widget healcode sert souvent tout un réseau : celui de Bikram Yoga
+    Paris rend Marais ET Grands Boulevards, qui sont deux marques distinctes du
+    catalogue. Sans filtre, chaque store récupérerait les séances de l'autre et
+    l'agrégat compterait double. On ne garde que les séances dont le lieu est
+    cité dans le libellé de la marque — et seulement si ça matche vraiment,
+    sinon on rend tout (cas YUJ : « YUJ Paris » vs « YUJ Paris 7ème »).
+    """
+    lieux = {s.get("lieu") for s in sessions if s.get("lieu")}
+    if len(lieux) < 2 or not label:
+        return sessions
+    folded = _fold(label)
+    keep = [s for s in sessions
+            if _fold(s.get("lieu")) and _fold(s["lieu"]) in folded]
+    return keep or sessions
+
+
 def fetch_sessions_for_brand(res, label="", days=56):
     """Adaptateur pour une entrée de *_extension_resolved.json.
 
@@ -504,19 +530,24 @@ def fetch_sessions_for_brand(res, label="", days=56):
     site_id = res.get("site_id") or res.get("mb_site_id")
     widget_id = (res.get("healcode_widget_ids") or res.get("schedules_widget_id")
                  or res.get("widget_id"))
-    return fetch_sessions(
+    sessions = fetch_sessions(
         site_id,
         widget_id=widget_id or None,
         lieu=label,
         url=res.get("booking_url") or res.get("url"),
         days=days,
     )
+    return filter_by_label(sessions, label)
 
 
 # -------------------------------------------------------------------- CLI --
+USAGE = ("usage: engine_mindbody_healcode.py "
+         "{discover <url>|widget <widget_id> [lieu]|fetch <site_id> [lieu]}")
+
+
 def _main(argv):
     if len(argv) < 2:
-        print(__doc__.strip().splitlines()[-4], file=sys.stderr)
+        print(USAGE, file=sys.stderr)
         return 2
     cmd = argv[1]
     if cmd == "discover" and len(argv) > 2:
@@ -528,8 +559,7 @@ def _main(argv):
         json.dump(fetch_sessions(argv[2], lieu=argv[3] if len(argv) > 3 else None),
                   sys.stdout, ensure_ascii=False)
     else:
-        print("usage: engine_mindbody_healcode.py {discover <url>|widget <id>"
-              "|fetch <site_id>}", file=sys.stderr)
+        print(USAGE, file=sys.stderr)
         return 2
     return 0
 

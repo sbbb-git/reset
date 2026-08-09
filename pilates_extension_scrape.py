@@ -153,8 +153,9 @@ def scrape_mindbody_healcode(key, label, res):
     if not sessions:
         print(f"  → 0 séance pour {key} (voir stderr : widget absent, "
               f"Branded Web V2, ou plateforme changée)", file=sys.stderr)
-        return
+        return False
     store_mindbody_sessions(key, label, sessions)
+    return True
 
 
 def scrape_resamania(key, label, res):
@@ -263,11 +264,16 @@ def scrape_brand(key, brand_cfg, resolved):
         return
 
     # Mindbody healcode → engine dédié (widget <healcode-widget data-type="schedules">)
-    if platform in ("mindbody_healcode", "mindbody") and (res.get("mb_site_id") or res.get("site_id")):
+    # On y envoie aussi les mindbody « needs_playwright » : la discovery du
+    # discover ne cherchait que le widget BW, pas la balise <healcode-widget>,
+    # et une partie de ces marques a en réalité un planning healcode lisible en
+    # HTTP (ex. Bikram Yoga Paris). Si l'engine ne trouve rien, on retombe sur
+    # le message needs_playwright plus bas — aucune marque n'est perdue.
+    if platform in ("mindbody_healcode", "mindbody"):
         site = res.get("site_id") or res.get("mb_site_id")
-        print(f"→ {key:30s} mindbody healcode site={site}")
-        scrape_mindbody_healcode(key, label, res)
-        return
+        print(f"→ {key:30s} mindbody healcode site={site or '?'}")
+        if scrape_mindbody_healcode(key, label, res):
+            return
 
     # Resamania (Resamania II / Stadline) → engine dédié
     if platform == "resamania":

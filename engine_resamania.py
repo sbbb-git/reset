@@ -480,7 +480,7 @@ _OZ_EVENT = re.compile(
     r'(?P<rest>.*?)(?=event__time"|\Z)', re.S)
 
 
-def ozenhit_sessions(days=14, **_kw):
+def ozenhit_sessions(days=14, club=None, **_kw):  # noqa: ARG001 (signature commune)
     """Planning OZEN HIT. Le nom du cours n'est publié que sous forme de logo
     image -> `cours` reste None (on ne l'invente pas)."""
     status, page = _request(OZEN_PLANNING)
@@ -558,13 +558,6 @@ def _resolve_day_of_month(today, dom):
 # --------------------------------------------------------------------------
 # Registre des sources
 # --------------------------------------------------------------------------
-def _api_source(client_token, **kw):
-    def _run(days=14, **kwargs):
-        return api_sessions(client_token, days=days, **kwargs)
-    _run.client_token = client_token
-    return _run
-
-
 SOURCES = {
     # Cercles de la Forme : API tenant `cdf` (membre requis) + proxy WP public.
     "cdf": {"client_token": "cdf", "fallback": cdf_wp_sessions,
@@ -632,8 +625,7 @@ def fetch_sessions(slug_or_id, days=14, club=None, prefer="auto", **kwargs):
             raise ResamaniaAuthRequired(f"{key} — {' | '.join(errors)}")
 
     if prefer in ("auto", "public") and fallback:
-        return fallback(days=days, club=club) if fallback is cdf_wp_sessions \
-            else fallback(days=days)
+        return fallback(days=days, club=club)
 
     note = src.get("note") or ""
     raise ResamaniaAuthRequired(
