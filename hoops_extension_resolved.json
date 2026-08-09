@@ -1,146 +1,161 @@
 {
  "hoops_factory_paris_15": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.hoopsfactory.com/paris-15/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:30",
+  "platform": "defunct",
+  "note": "Aucun centre Hoops Factory à cette adresse : le seul centre IDF est HF Paris, 3 rue Pierre Larousse, 93300 Aubervilliers (voir hoops_factory_aubervilliers). www.hoopsfactory.com/<ville>/ rend le même shell PWA de 10 148 octets pour n'importe quelle ville, d'où l'absence de signature détectable.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.hoopsfactory.com/paris-15/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "hoops_factory_aubervilliers": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.hoopsfactory.com/aubervilliers/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:30",
+  "platform": "extraclub",
+  "note": "Hoops Factory tourne sur Extraclub (contenu : EventFactory). Créneaux INACCESSIBLES : GET hoopsfactory-paris.extraclub.fr/api/reservation/new/search exige un person_id de COMPTE CLIENT enregistré (la route /booking du front est derrière getIsConnected()) ET un en-tête X-WSSE dérivé d'identifiants de service. Vérifié : sans credentials, le corps rendu est \"Connexion avec C_PROJECT_NAME [DEFAULT] inconnue.\" — zéro donnée. Débloquer demande un compte fourni par le client. ALERTE : les ex_login/ex_password de 5 instances Extraclub fuitent en clair dans hoopsfactory.com/assets/custom/js/hoops.min.js — à signaler au client ; ils n'ont volontairement pas été rejoués.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.hoopsfactory.com/aubervilliers/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "blocked",
+  "instance": "hoopsfactory-paris",
+  "content_api": "https://eventfactory.ovh/api/centers",
+  "booking_api": "https://hoopsfactory-paris.extraclub.fr/api/reservation/new/search",
+  "blocker": "person_id (compte client) + en-tête X-WSSE (secret de service)"
  },
  "hoops_factory_courbevoie": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.hoopsfactory.com/courbevoie/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:30",
+  "platform": "defunct",
+  "note": "Aucun centre Hoops Factory à cette adresse : le seul centre IDF est HF Paris, 3 rue Pierre Larousse, 93300 Aubervilliers (voir hoops_factory_aubervilliers). www.hoopsfactory.com/<ville>/ rend le même shell PWA de 10 148 octets pour n'importe quelle ville, d'où l'absence de signature détectable.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.hoopsfactory.com/courbevoie/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "hoops_factory_montigny": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.hoopsfactory.com/montigny/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:30",
+  "platform": "defunct",
+  "note": "Aucun centre Hoops Factory à cette adresse : le seul centre IDF est HF Paris, 3 rue Pierre Larousse, 93300 Aubervilliers (voir hoops_factory_aubervilliers). www.hoopsfactory.com/<ville>/ rend le même shell PWA de 10 148 octets pour n'importe quelle ville, d'où l'absence de signature détectable.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.hoopsfactory.com/montigny/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "hoops_factory_orly": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.hoopsfactory.com/orly/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:31",
+  "platform": "defunct",
+  "note": "Aucun centre Hoops Factory à cette adresse : le seul centre IDF est HF Paris, 3 rue Pierre Larousse, 93300 Aubervilliers (voir hoops_factory_aubervilliers). www.hoopsfactory.com/<ville>/ rend le même shell PWA de 10 148 octets pour n'importe quelle ville, d'où l'absence de signature détectable.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.hoopsfactory.com/orly/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "hoops_factory_thiais": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.hoopsfactory.com/thiais/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:31",
+  "platform": "defunct",
+  "note": "Aucun centre Hoops Factory à cette adresse : le seul centre IDF est HF Paris, 3 rue Pierre Larousse, 93300 Aubervilliers (voir hoops_factory_aubervilliers). www.hoopsfactory.com/<ville>/ rend le même shell PWA de 10 148 octets pour n'importe quelle ville, d'où l'absence de signature détectable.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.hoopsfactory.com/thiais/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "hoops_factory_villepinte": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.hoopsfactory.com/villepinte/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:31",
+  "platform": "defunct",
+  "note": "Aucun centre Hoops Factory à cette adresse : le seul centre IDF est HF Paris, 3 rue Pierre Larousse, 93300 Aubervilliers (voir hoops_factory_aubervilliers). www.hoopsfactory.com/<ville>/ rend le même shell PWA de 10 148 octets pour n'importe quelle ville, d'où l'absence de signature détectable.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.hoopsfactory.com/villepinte/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "hoops_factory_argenteuil": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.hoopsfactory.com/argenteuil/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:31",
+  "platform": "defunct",
+  "note": "Aucun centre Hoops Factory à cette adresse : le seul centre IDF est HF Paris, 3 rue Pierre Larousse, 93300 Aubervilliers (voir hoops_factory_aubervilliers). www.hoopsfactory.com/<ville>/ rend le même shell PWA de 10 148 octets pour n'importe quelle ville, d'où l'absence de signature détectable.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.hoopsfactory.com/argenteuil/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "le_five_basket_bercy": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/basketball/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:31",
+  "platform": "defunct",
+  "note": "Le Five n'a pas de centre à Bercy, et son unique salle de basket IDF est à Carrières-sous-Poissy (78955) : voir le_five_basket_carrieres.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/basketball/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "le_five_basket_clichy": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/basketball/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:32",
+  "platform": "defunct",
+  "note": "Le Five n'a pas de centre à Clichy, et son unique salle de basket IDF est à Carrières-sous-Poissy (78955) : voir le_five_basket_carrieres.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/basketball/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "urban_basketball_montrouge": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.urbanfootball.fr/montrouge/basketball/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:32",
+  "platform": "defunct",
+  "note": "urbanfootball.fr est mort (certificat TLS invalide + HTTP 404). L'enseigne a été absorbée par UrbanSoccer, qui n'a aucun centre à cette adresse. UrbanSoccer ne propose pas de basket.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.urbanfootball.fr/montrouge/basketball/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "hoopscity_villejuif": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://hoopscity.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:33",
+  "platform": "defunct",
+  "note": "DNS inexistant (hoopscity.fr).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://hoopscity.fr/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "basketball_factory_creteil": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://basketballfactory.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:33",
+  "platform": "defunct",
+  "note": "DNS inexistant (basketballfactory.fr).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://basketballfactory.fr/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "fun_basket_paris": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://funbasket.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:33",
+  "platform": "defunct",
+  "note": "DNS inexistant (funbasket.fr).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://funbasket.fr/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "5tonik_basket": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://5tonik.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:34",
+  "platform": "defunct",
+  "note": "DNS inexistant (5tonik.fr).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://5tonik.fr/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "ballin_paris": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://ballin.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:34",
+  "platform": "defunct",
+  "note": "DNS inexistant (ballin.paris).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://ballin.paris/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "shoot_again_basket": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://shootagain.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:35",
+  "platform": "not_live",
+  "note": "shootagain.fr est un WordPress vitrine : aucune réservation en ligne.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://shootagain.fr/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "skip"
  },
  "we_are_basket_paris": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://wearebasket.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:35",
+  "platform": "not_live",
+  "note": "wearebasket.com rend une page de 114 octets : site vide.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://wearebasket.com/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "skip"
+ },
+ "le_five_basket_carrieres": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json. Sport « Basket » (sportType 17) — terrains nommés d'après des joueurs NBA.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 4,
+  "sport": "Basket",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
  }
 }

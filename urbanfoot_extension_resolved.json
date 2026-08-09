@@ -1,210 +1,458 @@
 {
  "le_five_bercy": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/centre/bercy/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:19",
+  "platform": "defunct",
+  "note": "Aucun centre à cette adresse dans le catalogue officiel Le Five (GET lefive.fr/content/centers.json) et lefive.fr/centre/<slug>/ renvoie 404 : le slug du catalogue d'origine a été inventé. Le Five compte 13 centres IDF, tous présents dans le catalogue sous leur clé réelle (le_five_paris_13, le_five_creteil, …).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/centre/bercy/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "le_five_porte_saint_cloud": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/centre/porte-de-saint-cloud/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:20",
+  "platform": "defunct",
+  "note": "Aucun centre à cette adresse dans le catalogue officiel Le Five (GET lefive.fr/content/centers.json) et lefive.fr/centre/<slug>/ renvoie 404 : le slug du catalogue d'origine a été inventé. Le Five compte 13 centres IDF, tous présents dans le catalogue sous leur clé réelle (le_five_paris_13, le_five_creteil, …).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/centre/porte-de-saint-cloud/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "le_five_clichy": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/centre/clichy/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:21",
+  "platform": "defunct",
+  "note": "Aucun centre à cette adresse dans le catalogue officiel Le Five (GET lefive.fr/content/centers.json) et lefive.fr/centre/<slug>/ renvoie 404 : le slug du catalogue d'origine a été inventé. Le Five compte 13 centres IDF, tous présents dans le catalogue sous leur clé réelle (le_five_paris_13, le_five_creteil, …).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/centre/clichy/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "le_five_arcueil": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/centre/arcueil/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:21",
+  "platform": "defunct",
+  "note": "Aucun centre à cette adresse dans le catalogue officiel Le Five (GET lefive.fr/content/centers.json) et lefive.fr/centre/<slug>/ renvoie 404 : le slug du catalogue d'origine a été inventé. Le Five compte 13 centres IDF, tous présents dans le catalogue sous leur clé réelle (le_five_paris_13, le_five_creteil, …).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/centre/arcueil/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "le_five_aubervilliers": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/centre/aubervilliers/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:22",
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json. Ce centre porte l'enseigne « Le Five Villette » ; il est bien au 25 rue Sadi Carnot, 93300 Aubervilliers.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/centre/aubervilliers/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "center_id": 39,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
  },
  "le_five_villepinte": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/centre/villepinte/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:22",
+  "platform": "defunct",
+  "note": "Aucun centre à cette adresse dans le catalogue officiel Le Five (GET lefive.fr/content/centers.json) et lefive.fr/centre/<slug>/ renvoie 404 : le slug du catalogue d'origine a été inventé. Le Five compte 13 centres IDF, tous présents dans le catalogue sous leur clé réelle (le_five_paris_13, le_five_creteil, …).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/centre/villepinte/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "le_five_thiais": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/centre/thiais/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:23",
+  "platform": "defunct",
+  "note": "Aucun centre à cette adresse dans le catalogue officiel Le Five (GET lefive.fr/content/centers.json) et lefive.fr/centre/<slug>/ renvoie 404 : le slug du catalogue d'origine a été inventé. Le Five compte 13 centres IDF, tous présents dans le catalogue sous leur clé réelle (le_five_paris_13, le_five_creteil, …).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/centre/thiais/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "le_five_carrieres": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/centre/carrieres-sur-seine/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:23",
+  "platform": "defunct",
+  "note": "Aucun centre à cette adresse dans le catalogue officiel Le Five (GET lefive.fr/content/centers.json) et lefive.fr/centre/<slug>/ renvoie 404 : le slug du catalogue d'origine a été inventé. Le Five compte 13 centres IDF, tous repris ci-dessus. Le centre réel le plus proche est Carrières-SOUS-POISSY (78955), pas Carrières-sur-Seine (78420) : voir le_five_carrieres_sous_poissy.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/centre/carrieres-sur-seine/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "urban_football_montrouge": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.urbanfootball.fr/montrouge/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:24",
+  "platform": "defunct",
+  "note": "urbanfootball.fr est mort (certificat TLS invalide + HTTP 404). L'enseigne a été absorbée par UrbanSoccer, qui n'a aucun centre à cette adresse.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.urbanfootball.fr/montrouge/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "urban_football_chevilly": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.urbanfootball.fr/chevilly-larue/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:24",
+  "platform": "defunct",
+  "note": "urbanfootball.fr est mort (certificat TLS invalide + HTTP 404). L'enseigne a été absorbée par UrbanSoccer, qui n'a aucun centre à cette adresse.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.urbanfootball.fr/chevilly-larue/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "urban_football_chevreuse": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.urbanfootball.fr/chevreuse/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:25",
+  "platform": "defunct",
+  "note": "urbanfootball.fr est mort (certificat TLS invalide + HTTP 404). L'enseigne a été absorbée par UrbanSoccer, qui n'a aucun centre à cette adresse.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.urbanfootball.fr/chevreuse/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "urban_football_montigny": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.urbanfootball.fr/montigny/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:25",
+  "platform": "defunct",
+  "note": "urbanfootball.fr est mort (certificat TLS invalide + HTTP 404). L'enseigne a été absorbée par UrbanSoccer, qui n'a aucun centre à cette adresse. Le centre UrbanSoccer le plus proche est Guyancourt (78280), commune voisine mais distincte : voir urbansoccer_guyancourt.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.urbanfootball.fr/montigny/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "urban_football_pierrefitte": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.urbanfootball.fr/pierrefitte/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:25",
+  "platform": "defunct",
+  "note": "urbanfootball.fr est mort (certificat TLS invalide + HTTP 404). L'enseigne a été absorbée par UrbanSoccer, qui n'a aucun centre à cette adresse.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.urbanfootball.fr/pierrefitte/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "foot_5_creteil": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.foot5.fr/creteil/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:26",
+  "platform": "defunct",
+  "note": "foot5.fr est un domaine parké en vente (Dovendi) : la marque Foot 5 n'existe plus. À Créteil (94000) le centre ouvert est Le Five : voir le_five_creteil.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.foot5.fr/creteil/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "foot_5_orly": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.foot5.fr/orly/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:26",
+  "platform": "defunct",
+  "note": "foot5.fr est un domaine parké en vente (Dovendi) : la marque Foot 5 n'existe plus.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.foot5.fr/orly/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "soccer_park_paris": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.soccerpark.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:26",
+  "platform": "defunct",
+  "note": "DNS inexistant (soccerpark.com).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.soccerpark.com/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "soccerinside": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://soccerinside.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:26",
+  "platform": "defunct",
+  "note": "DNS inexistant (soccerinside.fr).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://soccerinside.fr/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "footcenter_paris": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.footcenter.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:27",
+  "note": "HTTP 403 sur toutes les pages (WAF). Plateforme non déterminable sans contournement du pare-feu : non tenté, et donc non conclu.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.footcenter.fr/",
-  "attempts": 3,
+  "attempts": 4,
   "status": "gave_up"
  },
  "my_foot_paris": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.myfoot.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:27",
+  "note": "Certificat TLS invalide sur myfoot.com : site injoignable en HTTPS, plateforme non déterminable.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.myfoot.com/",
-  "attempts": 3,
+  "attempts": 4,
   "status": "gave_up"
  },
  "city_sport_foot": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.citysport-foot.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:27",
+  "platform": "defunct",
+  "note": "DNS inexistant (citysport-foot.com).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.citysport-foot.com/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "powerleague_villeneuve": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://powerleague.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:28",
+  "platform": "not_live",
+  "note": "Structure associative : la billetterie passe par HelloAsso, aucun terrain réservable en ligne — rien à relever.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://powerleague.fr/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "skip"
  },
  "indoor_sport_palaiseau": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://indoorsport-palaiseau.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:28",
+  "platform": "defunct",
+  "note": "DNS inexistant (indoorsport-palaiseau.com).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://indoorsport-palaiseau.com/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "foot_park_franconville": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.footpark.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:29",
+  "platform": "not_live",
+  "note": "footpark.fr redirige vers ospot16.fr, où l'activité foot a disparu : plus de réservation de terrain en ligne.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://www.footpark.fr/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "skip"
  },
  "kappa_foot_argenteuil": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://kappafoot.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:29",
+  "platform": "defunct",
+  "note": "DNS inexistant (kappafoot.fr).",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://kappafoot.fr/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
  },
  "le_five_morangis": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/centre/morangis/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:29",
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/centre/morangis/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "center_id": 59,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
  },
  "le_five_marne_la_vallee": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://lefive.fr/centre/marne-la-vallee/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:30",
+  "platform": "defunct",
+  "note": "Aucun centre à cette adresse dans le catalogue officiel Le Five (GET lefive.fr/content/centers.json) et lefive.fr/centre/<slug>/ renvoie 404 : le slug du catalogue d'origine a été inventé. Le Five compte 13 centres IDF, tous repris ci-dessus. À Marne-la-Vallée c'est UrbanSoccer qui est implanté (Lognes, 77185) : voir urbansoccer_marne_la_vallee.",
+  "checked_at": "2026-08-09 01:37",
   "url": "https://lefive.fr/centre/marne-la-vallee/",
-  "attempts": 3,
-  "status": "gave_up"
+  "attempts": 4,
+  "status": "defunct"
+ },
+ "le_five_paris_13": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 51,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
+ },
+ "le_five_paris_17": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 63,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
+ },
+ "le_five_paris_18": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 69,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
+ },
+ "le_five_carrieres_sous_poissy": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 4,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
+ },
+ "le_five_colombes": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 107,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
+ },
+ "le_five_bobigny": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 19,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
+ },
+ "le_five_montreuil": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 73,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
+ },
+ "le_five_marville": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 65,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
+ },
+ "le_five_creteil": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 25,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
+ },
+ "le_five_champigny": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 5,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
+ },
+ "le_five_bezons": {
+  "platform": "lefive",
+  "note": "Backend propriétaire SPLF (groupe Players), PAS Doinsport. POST api-front.lefive.fr/splf/v1/bookingrules/allFields, sans auth. Renvoie la grille complète du jour : un créneau sans terrain libre est rendu avec fields=[] → occupation observée, pas déduite. center_id lu dans GET lefive.fr/content/centers.json.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.lefive.fr/",
+  "attempts": 1,
+  "center_id": 18,
+  "sport": "Foot",
+  "status": "resolved",
+  "detected_via": "https://www.lefive.fr/content/centers.json"
+ },
+ "urbansoccer_marne_la_vallee": {
+  "platform": "urbansoccer",
+  "note": "Backend myurban.fr (Soccer 5 France) — même API que urbanpadel_scrape.py, en-tête activity:1 (foot) au lieu de 2 (padel), sans auth. Ne rend que le disponible : l'occupation se déduit des disparitions entre relevés. center_id lu dans GET myurban.fr/api/read/us/centers.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.urbansoccer.fr/centres/marne-la-vallee/",
+  "attempts": 1,
+  "center_id": 16,
+  "sport": "Foot à 5",
+  "status": "resolved",
+  "detected_via": "https://myurban.fr/api/read/us/centers"
+ },
+ "urbansoccer_guyancourt": {
+  "platform": "urbansoccer",
+  "note": "Backend myurban.fr (Soccer 5 France) — même API que urbanpadel_scrape.py, en-tête activity:1 (foot) au lieu de 2 (padel), sans auth. Ne rend que le disponible : l'occupation se déduit des disparitions entre relevés. center_id lu dans GET myurban.fr/api/read/us/centers.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.urbansoccer.fr/centres/guyancourt/",
+  "attempts": 1,
+  "center_id": 14,
+  "sport": "Foot à 5",
+  "status": "resolved",
+  "detected_via": "https://myurban.fr/api/read/us/centers"
+ },
+ "urbansoccer_evry": {
+  "platform": "urbansoccer",
+  "note": "Backend myurban.fr (Soccer 5 France) — même API que urbanpadel_scrape.py, en-tête activity:1 (foot) au lieu de 2 (padel), sans auth. Ne rend que le disponible : l'occupation se déduit des disparitions entre relevés. center_id lu dans GET myurban.fr/api/read/us/centers.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.urbansoccer.fr/centres/evry-courcouronnes/",
+  "attempts": 1,
+  "center_id": 10,
+  "sport": "Foot à 5",
+  "status": "resolved",
+  "detected_via": "https://myurban.fr/api/read/us/centers"
+ },
+ "urbansoccer_orsay": {
+  "platform": "urbansoccer",
+  "note": "Backend myurban.fr (Soccer 5 France) — même API que urbanpadel_scrape.py, en-tête activity:1 (foot) au lieu de 2 (padel), sans auth. Ne rend que le disponible : l'occupation se déduit des disparitions entre relevés. center_id lu dans GET myurban.fr/api/read/us/centers.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.urbansoccer.fr/centres/orsay/",
+  "attempts": 1,
+  "center_id": 4,
+  "sport": "Foot à 5",
+  "status": "resolved",
+  "detected_via": "https://myurban.fr/api/read/us/centers"
+ },
+ "urbansoccer_la_defense": {
+  "platform": "urbansoccer",
+  "note": "Backend myurban.fr (Soccer 5 France) — même API que urbanpadel_scrape.py, en-tête activity:1 (foot) au lieu de 2 (padel), sans auth. Ne rend que le disponible : l'occupation se déduit des disparitions entre relevés. center_id lu dans GET myurban.fr/api/read/us/centers.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.urbansoccer.fr/centres/la-defense/",
+  "attempts": 1,
+  "center_id": 12,
+  "sport": "Foot à 5",
+  "status": "resolved",
+  "detected_via": "https://myurban.fr/api/read/us/centers"
+ },
+ "urbansoccer_asnieres": {
+  "platform": "urbansoccer",
+  "note": "Backend myurban.fr (Soccer 5 France) — même API que urbanpadel_scrape.py, en-tête activity:1 (foot) au lieu de 2 (padel), sans auth. Ne rend que le disponible : l'occupation se déduit des disparitions entre relevés. center_id lu dans GET myurban.fr/api/read/us/centers.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.urbansoccer.fr/centres/asnieres-gennevilliers/",
+  "attempts": 1,
+  "center_id": 7,
+  "sport": "Foot à 5",
+  "status": "resolved",
+  "detected_via": "https://myurban.fr/api/read/us/centers"
+ },
+ "urbansoccer_meudon": {
+  "platform": "urbansoccer",
+  "note": "Backend myurban.fr (Soccer 5 France) — même API que urbanpadel_scrape.py, en-tête activity:1 (foot) au lieu de 2 (padel), sans auth. Ne rend que le disponible : l'occupation se déduit des disparitions entre relevés. center_id lu dans GET myurban.fr/api/read/us/centers.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.urbansoccer.fr/centres/meudon/",
+  "attempts": 1,
+  "center_id": 3,
+  "sport": "Foot à 5",
+  "status": "resolved",
+  "detected_via": "https://myurban.fr/api/read/us/centers"
+ },
+ "urbansoccer_puteaux_ile": {
+  "platform": "urbansoccer",
+  "note": "Backend myurban.fr (Soccer 5 France) — même API que urbanpadel_scrape.py, en-tête activity:1 (foot) au lieu de 2 (padel), sans auth. Ne rend que le disponible : l'occupation se déduit des disparitions entre relevés. center_id lu dans GET myurban.fr/api/read/us/centers.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.urbansoccer.fr/centres/ile-puteaux/",
+  "attempts": 1,
+  "center_id": 49,
+  "sport": "Foot à 5",
+  "status": "resolved",
+  "detected_via": "https://myurban.fr/api/read/us/centers"
+ },
+ "urbansoccer_puteaux_republique": {
+  "platform": "urbansoccer",
+  "note": "Backend myurban.fr (Soccer 5 France) — même API que urbanpadel_scrape.py, en-tête activity:1 (foot) au lieu de 2 (padel), sans auth. Ne rend que le disponible : l'occupation se déduit des disparitions entre relevés. center_id lu dans GET myurban.fr/api/read/us/centers.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.urbansoccer.fr/centres/puteaux/",
+  "attempts": 1,
+  "center_id": 2,
+  "sport": "Foot à 5",
+  "status": "resolved",
+  "detected_via": "https://myurban.fr/api/read/us/centers"
+ },
+ "urbansoccer_porte_aubervilliers": {
+  "platform": "urbansoccer",
+  "note": "Backend myurban.fr (Soccer 5 France) — même API que urbanpadel_scrape.py, en-tête activity:1 (foot) au lieu de 2 (padel), sans auth. Ne rend que le disponible : l'occupation se déduit des disparitions entre relevés. center_id lu dans GET myurban.fr/api/read/us/centers.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.urbansoccer.fr/centres/porte-daubervilliers/",
+  "attempts": 1,
+  "center_id": 9,
+  "sport": "Foot à 5",
+  "status": "resolved",
+  "detected_via": "https://myurban.fr/api/read/us/centers"
+ },
+ "urbansoccer_quai_ivry": {
+  "platform": "urbansoccer",
+  "note": "Backend myurban.fr (Soccer 5 France) — même API que urbanpadel_scrape.py, en-tête activity:1 (foot) au lieu de 2 (padel), sans auth. Ne rend que le disponible : l'occupation se déduit des disparitions entre relevés. center_id lu dans GET myurban.fr/api/read/us/centers.",
+  "checked_at": "2026-08-09 01:37",
+  "url": "https://www.urbansoccer.fr/centres/porte-divry/",
+  "attempts": 1,
+  "center_id": 13,
+  "sport": "Foot à 5",
+  "status": "resolved",
+  "detected_via": "https://myurban.fr/api/read/us/centers"
  }
 }

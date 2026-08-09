@@ -21,5 +21,8 @@
  "5tonik_basket": {"label": "5tonik Basket Massy", "url": "https://5tonik.fr/", "cp": ["91300"], "type": "Basketball indoor", "platform_guess": "unknown", "priorite": "basse"},
  "ballin_paris": {"label": "Ballin' Paris", "url": "https://ballin.paris/", "cp": ["75010"], "type": "Basketball training", "platform_guess": "unknown", "priorite": "basse"},
  "shoot_again_basket": {"label": "Shoot Again Basket", "url": "https://shootagain.fr/", "cp": ["93200"], "type": "Basketball training", "platform_guess": "unknown", "priorite": "basse"},
- "we_are_basket_paris": {"label": "We Are Basket", "url": "https://wearebasket.com/", "cp": ["75011"], "type": "Basketball training", "platform_guess": "unknown", "priorite": "basse"}
+ "we_are_basket_paris": {"label": "We Are Basket", "url": "https://wearebasket.com/", "cp": ["75011"], "type": "Basketball training", "platform_guess": "unknown", "priorite": "basse"},
+
+ "_note_2026_08": "Sur les 18 entrées ci-dessus, aucune n'est scrapable : 16 ne correspondent à aucun centre ouvert, et Hoops Factory (1 seul centre IDF réel) est verrouillé derrière un compte client Extraclub — voir hoops_extension_resolved.json. Le seul basket indoor IDF réellement relevable est celui du Five, ci-dessous.",
+ "le_five_basket_carrieres": {"label": "Le Five Basket Carrières-sous-Poissy", "url": "https://www.lefive.fr/", "cp": ["78955"], "type": "Basketball indoor", "platform_guess": "lefive", "priorite": "haute"}
 }
