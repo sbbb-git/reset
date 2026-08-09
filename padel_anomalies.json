@@ -1,32 +1,80 @@
 {
- "generated_at": "2026-07-27T04:26:01.779000",
+ "generated_at": "2026-08-09T02:00:18.526184",
  "idle_24h": [
   {
-   "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
+   "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
    "source": "doinsport",
-   "name": "Padel Futur Dammarie",
-   "cp": "77190",
-   "last_seen": "2026-07-13 08:57",
-   "hours_idle": 331.5
+   "name": "Padel Pulsion",
+   "cp": "91570",
+   "last_seen": "2026-07-27 06:23",
+   "hours_idle": 307.6
   },
   {
-   "slug": "4padel-cao-saint-denis",
-   "source": "anybuddy",
-   "name": "4padel-cao-saint-denis",
-   "cp": "93200",
-   "last_seen": "2026-07-25 07:46",
-   "hours_idle": 44.7
+   "slug": "doinsport-b92e567b-e393-4f48-9e88-f36cdae6dd5b",
+   "source": "doinsport",
+   "name": "Tennis Club de Paris",
+   "cp": "75016",
+   "last_seen": "2026-07-27 06:23",
+   "hours_idle": 307.6
+  },
+  {
+   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "source": "doinsport",
+   "name": "FIVE ARENA",
+   "cp": "77100",
+   "last_seen": "2026-07-27 06:23",
+   "hours_idle": 307.6
   }
  ],
  "price_shifts": [
+  {
+   "slug": "play-padel-alfortville",
+   "source": "anybuddy",
+   "name": "play-padel-alfortville",
+   "cp": "94140",
+   "prix_30j": 72.0,
+   "prix_recent": 27.0,
+   "delta_pct": -62.5,
+   "direction": "baisse"
+  },
+  {
+   "slug": "wrc-trappes",
+   "source": "anybuddy",
+   "name": "wrc-trappes",
+   "cp": "78190",
+   "prix_30j": 48.0,
+   "prix_recent": 72.0,
+   "delta_pct": 50.0,
+   "direction": "hausse"
+  },
+  {
+   "slug": "4-padel-montreuil",
+   "source": "anybuddy",
+   "name": "4-padel-montreuil",
+   "cp": "93100",
+   "prix_30j": 84.0,
+   "prix_recent": 48.0,
+   "delta_pct": -42.9,
+   "direction": "baisse"
+  },
+  {
+   "slug": "4padel-paris-20",
+   "source": "anybuddy",
+   "name": "4padel-paris-20",
+   "cp": "75020",
+   "prix_30j": 84.0,
+   "prix_recent": 48.0,
+   "delta_pct": -42.9,
+   "direction": "baisse"
+  },
   {
    "slug": "4padel-epinay-sur-seine",
    "source": "anybuddy",
    "name": "4padel-epinay-sur-seine",
    "cp": "93800",
    "prix_30j": 78.0,
-   "prix_recent": 54.0,
-   "delta_pct": -30.8,
+   "prix_recent": 48.0,
+   "delta_pct": -38.5,
    "direction": "baisse"
   },
   {
@@ -35,27 +83,88 @@
    "name": "le-five-marville-la-courneuve",
    "cp": "93120",
    "prix_30j": 78.0,
-   "prix_recent": 54.0,
-   "delta_pct": -30.8,
+   "prix_recent": 48.0,
+   "delta_pct": -38.5,
+   "direction": "baisse"
+  },
+  {
+   "slug": "4-padel-saint-ouen-saint-ouen-sur-seine",
+   "source": "anybuddy",
+   "name": "4-padel-saint-ouen-saint-ouen-sur-seine",
+   "cp": "93400",
+   "prix_30j": 77.3,
+   "prix_recent": 48.0,
+   "delta_pct": -37.9,
+   "direction": "baisse"
+  },
+  {
+   "slug": "4padel-antony-morangis",
+   "source": "anybuddy",
+   "name": "4padel-antony-morangis",
+   "cp": "92160",
+   "prix_30j": 72.0,
+   "prix_recent": 48.0,
+   "delta_pct": -33.3,
+   "direction": "baisse"
+  },
+  {
+   "slug": "4padel-argenteuil",
+   "source": "anybuddy",
+   "name": "4padel-argenteuil",
+   "cp": "95100",
+   "prix_30j": 72.0,
+   "prix_recent": 48.0,
+   "delta_pct": -33.3,
+   "direction": "baisse"
+  },
+  {
+   "slug": "4padel-creteil",
+   "source": "anybuddy",
+   "name": "4padel-creteil",
+   "cp": "94000",
+   "prix_30j": 72.0,
+   "prix_recent": 48.0,
+   "delta_pct": -33.3,
+   "direction": "baisse"
+  },
+  {
+   "slug": "4padel-torcy-vaires-sur-marne",
+   "source": "anybuddy",
+   "name": "4padel-torcy-vaires-sur-marne",
+   "cp": "77360",
+   "prix_30j": 72.0,
+   "prix_recent": 48.0,
+   "delta_pct": -33.3,
+   "direction": "baisse"
+  },
+  {
+   "slug": "padel-15-paris",
+   "source": "anybuddy",
+   "name": "padel-15-paris",
+   "cp": "75015",
+   "prix_30j": 90.0,
+   "prix_recent": 60.0,
+   "delta_pct": -33.3,
+   "direction": "baisse"
+  },
+  {
+   "slug": "padel-95-pontoise",
+   "source": "anybuddy",
+   "name": "padel-95-pontoise",
+   "cp": "95300",
+   "prix_30j": 72.0,
+   "prix_recent": 50.0,
+   "delta_pct": -30.6,
    "direction": "baisse"
   }
  ],
  "volume_drops": [],
- "new_clubs": [
-  {
-   "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
-   "source": "doinsport",
-   "name": "Padel Futur Dammarie",
-   "cp": "77190",
-   "first_seen": "2026-07-13 01:59",
-   "days_since": 14
-  }
- ],
+ "new_clubs": [],
  "summary": {
-  "total_anomalies": 4,
-  "idle_24h": 2,
-  "price_shifts": 2,
+  "total_anomalies": 16,
+  "idle_24h": 3,
+  "price_shifts": 13,
   "volume_drops": 0,
-  "new_clubs_14d": 1
+  "new_clubs_14d": 0
  }
 }
