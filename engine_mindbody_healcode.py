@@ -22,17 +22,25 @@ ENDPOINT RÉEL (lu dans le bundle officiel .../widgets/schedule/load_markup-*.js
         ?options[start_date]=YYYY-MM-DD
         &options[location]=<id>     (facultatif)
         &preview=false
-        &callback=<nom js>          ← OBLIGATOIRE
-    -> <nom js>({"class_sessions":"<html>","calendar":"<html>","filters":{…}})
+        &callback=<nom js>          (facultatif : voir plus bas)
+    -> {"class_sessions":"<html>","calendar":"<html>","filters":{…}}
+       ou <nom js>({…}) si callback est fourni
 
-C'est le MÊME endpoint que banote_fetch/le33foch_fetch, à un détail près qui
-change tout : jQuery l'appelle en `dataType: "jsonp"`, donc avec un paramètre
-`callback`. Sans lui l'endpoint répond aujourd'hui **HTTP 500** (vérifié le
-2026-08-09 sur les widgets banote 2d207237ef5e et le33foch 071882500180, qui
-sont pourtant valides). On envoie donc toujours un callback et on retire
-l'enrobage `nom(...)` avant de parser le JSON.
+C'est le MÊME endpoint que banote_fetch / le33foch_fetch / dna_scrape : le
+healcode ne se distingue pas par son URL mais par la façon dont on trouve le
+widget_id (balise <healcode-widget> au lieu d'un id en dur dans le script).
+Le bundle officiel l'appelle en `dataType: "jsonp"`, donc avec un `callback` ;
+l'appel sans callback marche aussi et rend du JSON brut. On envoie le callback
+pour coller au comportement du widget, et le parseur accepte les DEUX formes.
 
-Deux pièges observés en production :
+Trois pièges observés en production (2026-08-09) :
+  · THROTTLING. Mindbody limite le débit par IP : en rafale, l'endpoint rend
+    des HTTP 500 (voire 405) intermittents sur des widgets pourtant valides,
+    puis reredevient normal une fois le rythme calmé. C'est ce qui fait rendre
+    « 0 séance » aux scrapers Mindbody sur les runners GitHub quand ils
+    s'enchaînent. D'où : une pause entre chaque fenêtre (PACE_SECONDS) et un
+    backoff exponentiel sur retry. Ne pas conclure trop vite qu'un widget est
+    mort sur un seul 500.
   · widget inconnu / mal configuré -> réponse 200 mais page HTML Branded Web
     (« Business owner: There is an issue with the Branded Web widget »).
     On la détecte et on lève WidgetUnavailable au lieu de rendre 0 séance.
@@ -63,6 +71,19 @@ import urllib.request
 BASE = "https://widgets.mindbodyonline.com/widgets"
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/121.0 Safari/537.36")
+
+# Pause entre deux appels load_markup. Mindbody rend des 500/405 intermittents
+# quand on enchaîne les requêtes sans respirer ; 1,5 s a suffi à tenir 6 appels
+# d'affilée sans une seule erreur là où la rafale en produisait à chaque tour.
+PACE_SECONDS = 1.5
+_last_call = [0.0]
+
+
+def _pace():
+    delta = time.time() - _last_call[0]
+    if 0 < delta < PACE_SECONDS:
+        time.sleep(PACE_SECONDS - delta)
+    _last_call[0] = time.time()
 
 # Contexte SSL tolérant, comme banote_fetch : la sandbox a parfois une horloge
 # décalée -> certificat « not yet valid ». Utilisé seulement en repli.
@@ -256,16 +277,21 @@ def _callback_name():
 
 
 def _strip_jsonp(body, cb):
-    """Retire l'enrobage `cb(...)` et renvoie le dict JSON."""
+    """Renvoie le dict JSON, que la réponse soit du JSONP ou du JSON brut.
+
+    L'endpoint rend du JSON nu quand on n'envoie pas de callback, et du
+    `cb({...})` quand on en envoie un — on ne suppose ni l'un ni l'autre.
+    """
     body = (body or "").strip()
-    if not body.startswith(cb):
-        head = _visible_text(body)
-        for marker in _ERROR_MARKERS:
-            if marker in body:
-                raise WidgetUnavailable(f"widget refusé par Mindbody ({head[:140]})")
-        raise WidgetUnavailable(f"réponse non-JSONP ({head[:140]})")
-    inner = body[body.index("(") + 1: body.rindex(")")]
-    return json.loads(inner)
+    if body.startswith("{"):
+        return json.loads(body)
+    if body.startswith(cb) and "(" in body and body.endswith(")"):
+        return json.loads(body[body.index("(") + 1: body.rindex(")")])
+    head = _visible_text(body)
+    for marker in _ERROR_MARKERS:
+        if marker in body:
+            raise WidgetUnavailable(f"widget refusé par Mindbody ({head[:140]})")
+    raise WidgetUnavailable(f"réponse inattendue ({head[:140]})")
 
 
 def load_markup(widget_id, start_date=None, location=None, referer=None,
@@ -290,6 +316,7 @@ def load_markup(widget_id, start_date=None, location=None, referer=None,
     last = None
     for attempt in range(retries):
         try:
+            _pace()
             req = urllib.request.Request(url, headers=headers)
             ctx = _LAX_SSL if attempt else None
             with urllib.request.urlopen(req, timeout=60, context=ctx) as r:
