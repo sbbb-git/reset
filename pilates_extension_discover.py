@@ -369,6 +369,14 @@ MAX_SECONDS = 18 * 60
 MAX_ATTEMPTS = 3
 
 
+# Statuts dont il n'y a rien à tirer d'un nouveau sondage. Les y laisser
+# coûtait cher : la discovery a un budget de 18 min par catégorie, et une URL
+# morte le consomme aussi bien qu'une vivante. 60 marques ont une URL de
+# catalogue qui ne résout pas en DNS, 35 sont défuntes — soit près d'un tiers
+# du budget dépensé pour rien à chaque passage.
+TERMINAUX = ("skip", "gave_up", "defunct", "blocked", "not_live", "url_invalide")
+
+
 def _todo(brands, resolved):
     """Marques à sonder, jamais-testées d'abord puis unknown les plus anciens.
 
@@ -384,8 +392,8 @@ def _todo(brands, resolved):
             continue
         if res.get("platform") not in (None, "unknown"):
             continue                      # déjà résolu
-        if res.get("status") in ("skip", "gave_up"):
-            continue                      # abandonné, inutile d'insister
+        if res.get("status") in TERMINAUX:
+            continue                      # rien à gagner à réessayer
         retry.append(key)
     retry.sort(key=lambda k: resolved[k].get("checked_at") or "")
     return never + retry

@@ -136,13 +136,14 @@
  },
  "chita_studio": {
   "label": "Chita Studio (Aérien)",
-  "url": "https://chitastudio.fr/",
+  "url": "https://chitastudio.com/",
   "cp": [
    "75116"
   ],
   "type": "Aérien+Restorative",
   "platform_guess": "bsport",
-  "priorite": "basse"
+  "priorite": "basse",
+  "url_corrigee_le": "2026-08-09 09:50"
  },
  "my_golden_hour": {
   "label": "My Golden Hour",
@@ -645,23 +646,25 @@
  },
  "deeply_yoga": {
   "label": "Deeply Yoga Châtenay-Malabry",
-  "url": "https://deeplyyoga.fr/",
+  "url": "https://deeplyyoga.com/",
   "cp": [
    "92290"
   ],
   "type": "Mixte",
   "platform_guess": "bsport",
-  "priorite": "basse"
+  "priorite": "basse",
+  "url_corrigee_le": "2026-08-09 09:50"
  },
  "yoga_culture": {
   "label": "Yoga et Culture Antony",
-  "url": "https://yoga-et-culture.fr/",
+  "url": "https://yogaetculture.fr/",
   "cp": [
    "92160"
   ],
   "type": "Hatha",
   "platform_guess": "wordpress",
-  "priorite": "basse"
+  "priorite": "basse",
+  "url_corrigee_le": "2026-08-09 09:50"
  },
  "genesis_yoga": {
   "label": "Genesis Yoga Saint-Mandé",
@@ -835,13 +838,14 @@
  },
  "arkose_massy": {
   "label": "Studio Arkose Massy (Yoga)",
-  "url": "https://lestudio.arkose.com/massy/",
+  "url": "https://arkose.com/",
   "cp": [
    "91300"
   ],
   "type": "Hatha+Vinyasa",
   "platform_guess": "bsport",
-  "priorite": "basse"
+  "priorite": "basse",
+  "url_corrigee_le": "2026-08-09 09:50"
  },
  "active_flow_montmorency": {
   "label": "Yoga Active Flow Montmorency",
@@ -1305,13 +1309,14 @@
  },
  "connecting_yoga_aubervilliers": {
   "label": "Connecting Yoga Aubervilliers",
-  "url": "https://www.connectingyoga.fr/",
+  "url": "https://connectingyoga.com/",
   "cp": [
    "93300"
   ],
   "type": "Vinyasa",
   "platform_guess": "unknown",
-  "priorite": "moyenne"
+  "priorite": "moyenne",
+  "url_corrigee_le": "2026-08-09 09:50"
  },
  "maison_amara_versailles": {
   "label": "Maison Amara Versailles",
@@ -1675,13 +1680,14 @@
  },
  "atha_yoga_meudon": {
   "label": "ATHA Yoga Meudon",
-  "url": "https://atha-yoga.fr/",
+  "url": "https://athayoga.fr/",
   "cp": [
    "92190"
   ],
   "type": "Hatha/Pilates",
   "platform_guess": "unknown",
-  "priorite": "moyenne"
+  "priorite": "moyenne",
+  "url_corrigee_le": "2026-08-09 09:50"
  },
  "yoga_and_co_paris_19": {
   "label": "Yoga and Co Paris 19",

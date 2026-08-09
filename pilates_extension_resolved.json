@@ -186,30 +186,23 @@
  },
  "keana": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://keana-studio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:48",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://keana-studio.com/",
-  "attempts": 2
+  "checked_at": "2026-08-09 09:50"
  },
  "culte_reformer": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://culte.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:48",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://culte.paris/",
-  "attempts": 2
+  "checked_at": "2026-08-09 09:50"
  },
  "club_lulu": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://clublulu.fr/ (homepage + 5 paths)",
   "checked_at": "2026-08-08 04:48",
   "url": "https://clublulu.fr/",
-  "attempts": 2
- },
- "chez_simone": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://chezsimone.club/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:49",
-  "url": "https://chezsimone.club/",
   "attempts": 2
  },
  "ozenhit": {
@@ -221,17 +214,17 @@
  },
  "fit_room": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://fitroom.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:49",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://fitroom.paris/",
-  "attempts": 2
+  "checked_at": "2026-08-09 09:50"
  },
  "carbonne": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://carbonne.club/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:49",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://carbonne.club/",
-  "attempts": 2
+  "checked_at": "2026-08-09 09:50"
  },
  "slowe": {
   "platform": "unknown",
@@ -249,10 +242,10 @@
  },
  "ateliers_ground_control": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://ateliersgroundcontrol.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:50",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://ateliersgroundcontrol.com/",
-  "attempts": 2
+  "checked_at": "2026-08-09 09:50"
  },
  "caudalie_studio": {
   "platform": "unknown",
@@ -279,10 +272,10 @@
  },
  "silo_paris": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://silo.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:51",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://silo.paris/",
-  "attempts": 2
+  "checked_at": "2026-08-09 09:50"
  },
  "cercles_forme": {
   "platform": "resamania",
@@ -333,10 +326,10 @@
  },
  "studio_pilates_neuilly": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://studiopilatesneuilly.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:51",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://studiopilatesneuilly.com/",
-  "attempts": 2
+  "checked_at": "2026-08-09 09:50"
  },
  "l_atelier_de_la_forme": {
   "platform": "bsport",
@@ -641,11 +634,10 @@
  },
  "atelier_ml_montreuil": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.atelierml.fr/pilates-montreuil/ (homepage + 5 paths)",
-  "checked_at": "2026-08-09 04:53",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.atelierml.fr/pilates-montreuil/",
-  "attempts": 3,
-  "status": "gave_up"
+  "checked_at": "2026-08-09 09:50"
  },
  "perspectives_studio": {
   "platform": "bsport",

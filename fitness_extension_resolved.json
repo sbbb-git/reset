@@ -85,10 +85,10 @@
  },
  "cenvint_paris_13": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.cenvint.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:21",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.cenvint.fr/",
-  "attempts": 2
+  "checked_at": "2026-08-09 09:50"
  },
  "storm_cycling_club": {
   "platform": "unknown",
@@ -319,13 +319,6 @@
   "url": "https://studionode.fr/",
   "attempts": 2
  },
- "sore_studio": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://sorestudio.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-05 07:04",
-  "url": "https://sorestudio.fr/",
-  "attempts": 1
- },
  "elite_stimulation": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.elite-stimulation.com/ (homepage + 5 paths)",
@@ -419,10 +412,10 @@
  },
  "club_jean_de_beauvais": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.jeandebeauvais.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 06:53",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.jeandebeauvais.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "apollo_sporting_club_paris_3": {
   "platform": "unknown",
@@ -605,59 +598,59 @@
  },
  "hyrox_france_training_club_vend_me": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://hyroxfrancetc.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:00",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://hyroxfrancetc.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "squash_lecourbe": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.squashlecourbe.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:00",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.squashlecourbe.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "squash_issy": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.squash-issy.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:00",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.squash-issy.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "squash_saint_quentin": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.squash-sqy.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:01",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.squash-sqy.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "squash_stadium": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.stadium-squash.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:01",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.stadium-squash.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "forest_hill_squash_la_marche": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.foresthillclubs.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:01",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.foresthillclubs.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "squash_aubervilliers": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.squash93.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:02",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.squash93.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "squash_yvelines": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.squash-yvelines.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:02",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.squash-yvelines.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "le_five_squash": {
   "platform": "unknown",
@@ -673,13 +666,6 @@
   "url": "https://fiveirongolf.com/locations/paris/",
   "attempts": 1
  },
- "pure_golf_paris": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.pure-golf.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:03",
-  "url": "https://www.pure-golf.fr/",
-  "attempts": 1
- },
  "golf_in_the_city_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.golfinthecity.fr/ (homepage + 5 paths)",
@@ -689,10 +675,10 @@
  },
  "magnus_golf_centre": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://magnusgolfcentre.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:04",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://magnusgolfcentre.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "topgolf_venir": {
   "platform": "unknown",
@@ -703,17 +689,17 @@
  },
  "golf_acad_mie_paris_16": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://golf-academie-paris.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:05",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://golf-academie-paris.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "bluegolf_paris": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.bluegolf-paris.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:05",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.bluegolf-paris.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "golfy_paris_garage_indoor": {
   "platform": "unknown",
@@ -724,37 +710,30 @@
  },
  "krav_maga_paris_sud": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.kravmaga-parissud.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:05",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.kravmaga-parissud.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "krav_maga_acad_mie_paris": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.kravmagaacademie.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:06",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.kravmagaacademie.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "eyal_yanilov_krav_maga": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.krav-maga-yanilov.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:06",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.krav-maga-yanilov.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "krav_maga_pro_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.kravmagapro.com/ (homepage + 5 paths)",
   "checked_at": "2026-08-07 06:06",
   "url": "https://www.kravmagapro.com/",
-  "attempts": 1
- },
- "studio_harmonic": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.studio-harmonic.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:06",
-  "url": "https://www.studio-harmonic.fr/",
   "attempts": 1
  },
  "centre_du_marais": {
@@ -769,13 +748,6 @@
   "note": "Aucune signature détectée sur https://www.studiodesarts.fr/ (homepage + 5 paths)",
   "checked_at": "2026-08-07 06:07",
   "url": "https://www.studiodesarts.fr/",
-  "attempts": 1
- },
- "studio_7_paris": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.studio7-paris.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:08",
-  "url": "https://www.studio7-paris.com/",
   "attempts": 1
  },
  "movement": {
@@ -801,17 +773,17 @@
  },
  "club_360": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.club360-paris.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:10",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.club360-paris.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "studio_pulse": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.studiopulseparis.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:10",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.studiopulseparis.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "pickleball_paris": {
   "platform": "unknown",
@@ -834,61 +806,54 @@
   "url": "https://www.academie-fratellini.com/",
   "attempts": 1
  },
- "cirqu_volution_pantin": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.cirquevolution.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:11",
-  "url": "https://www.cirquevolution.com/",
-  "attempts": 1
- },
  "aqua_studio_paris": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://aquastudio-paris.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:12",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://aquastudio-paris.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "bluezen": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://bluezen.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:12",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://bluezen.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "aquasport_concept": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.aquasport-concept.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:12",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.aquasport-concept.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "city_tennis_paris": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.citytennis.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:12",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.citytennis.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "tennis_plus_paris": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.tennisplus.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:13",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.tennisplus.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "casa_tennis_paris": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.casatennis.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:13",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.casatennis.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "trib3_paris": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.trib3.com/paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:13",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.trib3.com/paris/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "p4p_performance_for_pleasure": {
   "platform": "unknown",
@@ -906,37 +871,30 @@
  },
  "r30_paris_rowing": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.r30.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:14",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.r30.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "forme_bain_vapeur": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.formebainvapeur.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:15",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.formebainvapeur.com/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "cryo_body": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.cryobody.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:15",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://www.cryobody.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  },
  "cryotonik": {
   "platform": "unknown",
-  "note": "Aucune signature détectée sur https://cryotonik.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:15",
+  "status": "url_invalide",
+  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
   "url": "https://cryotonik.fr/",
-  "attempts": 1
- },
- "recovery_studio_paris": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.recovery-studio.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:16",
-  "url": "https://www.recovery-studio.fr/",
-  "attempts": 1
+  "checked_at": "2026-08-09 09:50"
  }
 }

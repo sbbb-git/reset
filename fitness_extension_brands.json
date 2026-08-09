@@ -446,13 +446,14 @@
  },
  "sore_studio": {
   "label": "SORE Studio",
-  "url": "https://sorestudio.fr/",
+  "url": "https://sorestudio.com/",
   "cp": [
    "75002"
   ],
   "type": "Stretching",
   "platform_guess": "unknown",
-  "priorite": "moyenne"
+  "priorite": "moyenne",
+  "url_corrigee_le": "2026-08-09 09:50"
  },
  "elite_stimulation": {
   "label": "Elite Stimulation",
@@ -946,13 +947,14 @@
  },
  "pure_golf_paris": {
   "label": "Pure Golf Paris",
-  "url": "https://www.pure-golf.fr/",
+  "url": "https://pure-golf.com/",
   "cp": [
    "75017"
   ],
   "type": "Golf indoor",
   "platform_guess": "unknown",
-  "priorite": "moyenne"
+  "priorite": "moyenne",
+  "url_corrigee_le": "2026-08-09 09:50"
  },
  "golf_in_the_city_paris": {
   "label": "Golf in the City Paris",
@@ -1056,13 +1058,14 @@
  },
  "studio_harmonic": {
   "label": "Studio Harmonic",
-  "url": "https://www.studio-harmonic.fr/",
+  "url": "https://studioharmonic.fr/",
   "cp": [
    "75011"
   ],
   "type": "Danse boutique",
   "platform_guess": "unknown",
-  "priorite": "moyenne"
+  "priorite": "moyenne",
+  "url_corrigee_le": "2026-08-09 09:50"
  },
  "centre_du_marais": {
   "label": "Centre du Marais",
@@ -1086,13 +1089,14 @@
  },
  "studio_7_paris": {
   "label": "Studio 7 Paris",
-  "url": "https://www.studio7-paris.com/",
+  "url": "https://studio7paris.com/",
   "cp": [
    "75017"
   ],
   "type": "Danse boutique",
   "platform_guess": "unknown",
-  "priorite": "moyenne"
+  "priorite": "moyenne",
+  "url_corrigee_le": "2026-08-09 09:50"
  },
  "movement": {
   "label": "Movement",
@@ -1176,13 +1180,14 @@
  },
  "cirqu_volution_pantin": {
   "label": "Cirqu'évolution Pantin",
-  "url": "https://www.cirquevolution.com/",
+  "url": "https://cirquevolution.fr/",
   "cp": [
    "93500"
   ],
   "type": "Cirque",
   "platform_guess": "unknown",
-  "priorite": "moyenne"
+  "priorite": "moyenne",
+  "url_corrigee_le": "2026-08-09 09:50"
  },
  "aqua_studio_paris": {
   "label": "Aqua Studio Paris",
@@ -1316,12 +1321,13 @@
  },
  "recovery_studio_paris": {
   "label": "Recovery Studio Paris",
-  "url": "https://www.recovery-studio.fr/",
+  "url": "https://recovery-studio.com/",
   "cp": [
    "75009"
   ],
   "type": "Recovery",
   "platform_guess": "unknown",
-  "priorite": "moyenne"
+  "priorite": "moyenne",
+  "url_corrigee_le": "2026-08-09 09:50"
  }
 }
