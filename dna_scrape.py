@@ -18,6 +18,36 @@ Schéma dna_data.json (compatible comparateur) :
              finie, statut, releve}}.
 
 Génère : dna_data.json, dna_seances.csv, dna.html.
+
+CE QUI A CHANGÉ (2026-08-09) — trois pannes, une seule cause visible
+--------------------------------------------------------------------
+1. HTTP 500 SILENCIEUX, CAUSE NON ÉTABLIE. Depuis le 2026-08-08 15:55 le
+   scraper voyait « 0 séance » à chaque passage (3 × HTTP 500 sur
+   .../load_markup) tout en imprimant « OK [dna] » et en sortant 0 —
+   workflow vert, store figé à 25 550 entrées.
+   Deux explications ont été avancées puis RÉFUTÉES, autant les écrire pour
+   que personne ne les reprenne :
+     · « le paramètre JSONP `callback` est devenu obligatoire » — faux :
+       load_markup sans callback répond HTTP 200 avec 1,18 Mo de JSON valide
+       (vérifié le 2026-08-09 sur ce widget même) ;
+     · « le widget DNA a été désactivé » — faux : il rend 1 096 séances.
+   L'hypothèse restante est une limitation de débit par IP côté Mindbody,
+   qui frapperait les runners GitHub et pas ce poste — plausible mais NON
+   reproduite ici. Le correctif ne prétend donc pas supprimer la cause : il
+   la rend survivable (pacing, backoff, retries) et surtout bruyante (§2).
+   On passe par engine_mindbody_healcode, qui espace les appels et balaie
+   l'horizon fenêtre par fenêtre ; le chemin local reste en repli et accepte
+   les DEUX formats de réponse (JSON brut et JSONP).
+2. ÉCHEC BRUYANT. capture() lève désormais StaleFetch quand un passage ne
+   rapporte aucune séance alors que le store contient encore des séances à
+   venir : rien n'est réécrit, le script sort en erreur et le run devient
+   rouge au lieu de commiter un store inchangé.
+3. CLÉ STABLE. On clé sur `data-bw-widget-mbo-class-id` et plus sur
+   `data-bw-widget-id`, qui est un id de DOM régénéré à chaque rendu : les 3
+   ancres de fetch_all() renvoyaient 3 ids différents pour la MÊME séance, et
+   le store avait accumulé 25 550 entrées pour 3 282 séances réelles (jusqu'à
+   22 doublons pour un seul cours). Les entrées héritées ne sont pas touchées
+   (aucune perte) : elles se figent d'elles-mêmes quand leur heure passe.
 """
 import csv
 import dashboard_meta
@@ -47,7 +77,19 @@ ACCENT2 = "#bfa46f"      # accent doré subtil
 
 WIDGET_ID = "712164001d62"
 BASE = "https://widgets.mindbodyonline.com/widgets/schedules"
+REFERER = "https://dnapilatesparis.com/"
+HORIZON_JOURS = 21       # le widget rend ~2 semaines par fenêtre, on en couvre 3
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15"
+
+try:
+    import engine_mindbody_healcode as healcode
+except ImportError:      # repli autonome si l'engine n'est pas déployé
+    healcode = None
+
+
+class StaleFetch(RuntimeError):
+    """Un passage n'a rien rapporté alors que le store attend des séances."""
+
 
 # Mapping location id -> libellé court
 LIEU_MAP = {
@@ -63,18 +105,42 @@ FIELDS = ["id", "date", "jour", "heure", "fin", "lieu", "cours", "coach",
           "capacite", "presents", "finie", "statut", "releve"]
 
 
+def _parse_payload(body, cb):
+    """Décode la réponse de load_markup, JSONP ou JSON brut.
+
+    Mindbody rend `cb({...})` quand on envoie un `callback` et `{...}` quand on
+    n'en envoie pas. On accepte les deux : si l'endpoint revenait au JSON nu,
+    le scraper continuerait de tourner sans nouvelle intervention.
+    """
+    body = (body or "").strip()
+    if body.startswith("{"):
+        return json.loads(body)
+    if body.startswith(cb) and "(" in body and ")" in body:
+        return json.loads(body[body.index("(") + 1: body.rindex(")")])
+    raise ValueError(f"réponse inattendue ({body[:120]!r})")
+
+
 def load_markup(start_date, retries=5):
-    params = {"options[start_date]": start_date, "preview": "false"}
+    """Une fenêtre de planning du widget DNA.
+
+    On envoie `callback` parce que le widget officiel le fait (dataType
+    jsonp), pas parce qu'il serait requis : l'appel sans callback répond
+    HTTP 200 avec du JSON brut (vérifié le 2026-08-09). Le parseur accepte
+    donc les deux formes, et l'absence de callback n'explique PAS les 500
+    du 2026-08-08 — voir l'en-tête du module.
+    """
+    cb = "hcjq%d" % int(time.time() * 1000 % 10_000_000_000)
+    params = {"options[start_date]": start_date, "preview": "false",
+              "callback": cb}
     url = f"{BASE}/{WIDGET_ID}/load_markup?" + urllib.parse.urlencode(params)
     last = None
     for attempt in range(retries):
         try:
             req = urllib.request.Request(url, headers={
-                "User-Agent": UA, "Accept": "application/json",
-                "Referer": "https://dnapilatesparis.com/"})
+                "User-Agent": UA, "Accept": "*/*", "Referer": REFERER})
             ctx = _LAX_SSL if attempt else None
             with urllib.request.urlopen(req, timeout=60, context=ctx) as r:
-                return json.loads(r.read().decode("utf-8"))
+                return _parse_payload(r.read().decode("utf-8", "ignore"), cb)
         except Exception as e:  # noqa: BLE001
             last = e
             # Backoff exponentiel 3s,6s,12s,24s,48s. Mindbody throttle parfois
@@ -95,7 +161,12 @@ def parse_sessions(html_str):
     for block in re.split(r'(?=<div class="bw-session" )', html_str):
         if 'class="bw-session"' not in block:
             continue
-        sid = re.search(r'data-bw-widget-id="(\d+)"', block)
+        # Clé = ClassID Mindbody. `data-bw-widget-id` est un id de DOM
+        # régénéré à chaque rendu (la même séance en porte un différent selon
+        # la fenêtre demandée) : s'en servir gonflait le store de doublons.
+        # On le garde en repli pour rester compatible avec un markup ancien.
+        sid = (re.search(r'data-bw-widget-mbo-class-id="(\d+)"', block)
+               or re.search(r'data-bw-widget-id="(\d+)"', block))
         sdt = re.search(r'<time class="hc_starttime" datetime="([^"]+)"', block)
         edt = re.search(r'<time class="hc_endtime" datetime="([^"]+)"', block)
         if not sid or not sdt:
@@ -121,11 +192,25 @@ def parse_sessions(html_str):
     return out
 
 
-def fetch_all():
+def norm_lieu(raw):
+    """Ramène le libellé de studio sur les 2 valeurs historiques du store.
+
+    Le markup dit « DNA Pilates Yvon Villarceau », le store dit « DNA Yvon
+    Villarceau » depuis le premier relevé : on garde la forme du store pour ne
+    pas casser les filtres du dashboard ni scinder l'historique en deux.
+    """
+    low = (raw or "").lower()
+    if "villarceau" in low:
+        return LIEU_MAP["1"]
+    if "victor" in low or "hugo" in low:
+        return LIEU_MAP["2"]
+    return (raw or "").strip() or "DNA"
+
+
+def _fetch_legacy():
+    """Balayage maison : 3 ancres d'une semaine. Repli si l'engine manque."""
     today = dt.date.today()
     seen, sessions = set(), []
-    # le widget renvoie ~2 semaines à partir de start_date ; on couvre 3
-    # ancres pour balayer 2-3 semaines complètes.
     for off in (0, 7, 14):
         d = (today + dt.timedelta(days=off)).isoformat()
         try:
@@ -138,6 +223,28 @@ def fetch_all():
                 continue
             seen.add(s["id"])
             sessions.append(s)
+    return sessions
+
+
+def fetch_all():
+    """Séances du widget DNA sur ~3 semaines.
+
+    Chemin principal : engine_mindbody_healcode (callback JSONP, pacing
+    anti-throttle, fenêtres enchaînées d'après le calendrier renvoyé). Repli
+    sur le balayage maison si l'engine est absent ou ne rend rien — aucune
+    régression possible pour un markup qui marcherait encore à l'ancienne.
+    """
+    sessions = []
+    if healcode is not None:
+        try:
+            sessions = healcode.fetch_widget(
+                WIDGET_ID, referer=REFERER, days=HORIZON_JOURS)
+        except Exception as e:  # noqa: BLE001
+            print(f"  (engine healcode indisponible : {e})", file=sys.stderr)
+    if not sessions:
+        sessions = _fetch_legacy()
+    for s in sessions:
+        s["lieu"] = norm_lieu(s.get("lieu"))
     return sessions
 
 
@@ -166,14 +273,33 @@ def save_store(store):
     safestore.save(store, STORE)
 
 
+def _attendues(store, now):
+    """Séances déjà en base qui n'ont pas encore eu lieu.
+
+    S'il y en a, un passage qui ne rapporte RIEN est forcément une panne :
+    le widget devrait au minimum rendre ces mêmes séances.
+    """
+    today = now.date().isoformat()
+    return sum(1 for v in store.values()
+               if not v.get("finie") and (v.get("date") or "") >= today)
+
+
 def capture():
     now = dt.datetime.now(PARIS)
     store = load_store()
-    try:
-        sessions = fetch_all()
-    except Exception as e:  # noqa: BLE001
-        print(f"  (fetch DNA échoué : {e})", file=sys.stderr)
-        return store
+    sessions = fetch_all()
+    if not sessions:
+        # Ne JAMAIS retomber sur un « OK » silencieux : c'est exactement ce qui
+        # a laissé la panne du 2026-08-08 passer inaperçue pendant des heures.
+        attendues = _attendues(store, now)
+        msg = (f"aucune séance rapportée par le widget {WIDGET_ID} "
+               f"({attendues} séances à venir pourtant déjà en base)")
+        if attendues:
+            print(f"::error::[dna] {msg}", file=sys.stderr)
+            raise StaleFetch(msg)
+        print(f"::warning::[dna] aucune séance rapportée par le widget "
+              f"{WIDGET_ID} et rien à venir en base — planning vide ?",
+              file=sys.stderr)
     locked_now = 0
     for s in sessions:
         sid = str(s["id"])
@@ -568,7 +694,13 @@ render();
 
 
 def main():
-    store = capture()
+    try:
+        store = capture()
+    except StaleFetch as e:
+        # Sortie non nulle : le step devient rouge, rien n'est réécrit, donc le
+        # workflow ne commite pas un store inchangé en faisant croire au succès.
+        print(f"ÉCHEC [dna] : {e}", file=sys.stderr)
+        return 1
     rows = sorted(store.values(), key=lambda r: (r["date"], r["heure"], r.get("lieu", "")))
     write_csv(rows)
     write_html(rows)
@@ -576,7 +708,8 @@ def main():
     lieux = sorted({r["lieu"] for r in rows})
     print(f"OK [dna]: {len(rows)} séances en base, {len(fin)} figées. Studios: {lieux}",
           file=sys.stderr)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

@@ -25,9 +25,13 @@ jobs:
         with:
           python-version: "3.12"
 
+      # PAS de continue-on-error : dna_scrape.py ne sort en erreur que sur une
+      # panne prouvée (0 séance rapportée alors que le store en attend encore),
+      # jamais sur un planning simplement vide. C'est exactement le signal
+      # qu'on veut voir rouge — le run vert de 597 passages muets a coûté
+      # une journée de données.
       - name: DNA Pilates (Mindbody, statut)
         run: python3 dna_scrape.py
-        continue-on-error: true
 
       - name: Commit si changement
         run: |
