@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-09T23:36:20.229405",
+ "generated_at": "2026-08-10T02:04:37.372367",
  "heatmap": {
   "days": [
    "Lundi",
@@ -74,7 +74,7 @@
     },
     {
      "heure": 17,
-     "offered": 4209,
+     "offered": 4210,
      "demand": 2556,
      "occupation_pct": 61
     },
@@ -92,8 +92,8 @@
     },
     {
      "heure": 20,
-     "offered": 4186,
-     "demand": 3009,
+     "offered": 4187,
+     "demand": 3011,
      "occupation_pct": 72
     },
     {
@@ -319,8 +319,8 @@
     {
      "heure": 23,
      "offered": 288,
-     "demand": 168,
-     "occupation_pct": 58
+     "demand": 169,
+     "occupation_pct": 59
     }
    ],
    "Jeudi": [
@@ -638,105 +638,105 @@
    "Dimanche": [
     {
      "heure": 7,
-     "offered": 333,
+     "offered": 354,
      "demand": 123,
-     "occupation_pct": 37
+     "occupation_pct": 35
     },
     {
      "heure": 8,
-     "offered": 962,
+     "offered": 1054,
      "demand": 521,
-     "occupation_pct": 54
+     "occupation_pct": 49
     },
     {
      "heure": 9,
-     "offered": 4575,
+     "offered": 4839,
      "demand": 3409,
-     "occupation_pct": 75
+     "occupation_pct": 70
     },
     {
      "heure": 10,
-     "offered": 3739,
+     "offered": 3986,
      "demand": 2768,
-     "occupation_pct": 74
-    },
-    {
-     "heure": 11,
-     "offered": 4613,
-     "demand": 3401,
-     "occupation_pct": 74
-    },
-    {
-     "heure": 12,
-     "offered": 4485,
-     "demand": 2622,
-     "occupation_pct": 58
-    },
-    {
-     "heure": 13,
-     "offered": 4165,
-     "demand": 2300,
-     "occupation_pct": 55
-    },
-    {
-     "heure": 14,
-     "offered": 4812,
-     "demand": 3039,
-     "occupation_pct": 63
-    },
-    {
-     "heure": 15,
-     "offered": 5050,
-     "demand": 3357,
-     "occupation_pct": 66
-    },
-    {
-     "heure": 16,
-     "offered": 4842,
-     "demand": 3290,
-     "occupation_pct": 68
-    },
-    {
-     "heure": 17,
-     "offered": 5048,
-     "demand": 3489,
      "occupation_pct": 69
     },
     {
+     "heure": 11,
+     "offered": 4876,
+     "demand": 3401,
+     "occupation_pct": 70
+    },
+    {
+     "heure": 12,
+     "offered": 4782,
+     "demand": 2622,
+     "occupation_pct": 55
+    },
+    {
+     "heure": 13,
+     "offered": 4445,
+     "demand": 2300,
+     "occupation_pct": 52
+    },
+    {
+     "heure": 14,
+     "offered": 5078,
+     "demand": 3039,
+     "occupation_pct": 60
+    },
+    {
+     "heure": 15,
+     "offered": 5335,
+     "demand": 3357,
+     "occupation_pct": 63
+    },
+    {
+     "heure": 16,
+     "offered": 5121,
+     "demand": 3290,
+     "occupation_pct": 64
+    },
+    {
+     "heure": 17,
+     "offered": 5350,
+     "demand": 3489,
+     "occupation_pct": 65
+    },
+    {
      "heure": 18,
-     "offered": 5500,
+     "offered": 5804,
      "demand": 3912,
-     "occupation_pct": 71
+     "occupation_pct": 67
     },
     {
      "heure": 19,
-     "offered": 4008,
+     "offered": 4288,
      "demand": 2506,
-     "occupation_pct": 63
+     "occupation_pct": 58
     },
     {
      "heure": 20,
-     "offered": 3929,
+     "offered": 4179,
      "demand": 2599,
-     "occupation_pct": 66
+     "occupation_pct": 62
     },
     {
      "heure": 21,
-     "offered": 2636,
+     "offered": 2837,
      "demand": 1656,
-     "occupation_pct": 63
+     "occupation_pct": 58
     },
     {
      "heure": 22,
-     "offered": 1129,
+     "offered": 1202,
      "demand": 749,
-     "occupation_pct": 66
+     "occupation_pct": 62
     },
     {
      "heure": 23,
-     "offered": 469,
+     "offered": 477,
      "demand": 395,
-     "occupation_pct": 84
+     "occupation_pct": 83
     }
    ]
   },
@@ -839,7 +839,7 @@
    [
     "Lundi",
     20,
-    3009
+    3011
    ]
   ]
  },
@@ -3765,7 +3765,7 @@
    {
     "chain": "Sportfield",
     "n_clubs": 4,
-    "median_sessions_per_club": 361.5,
+    "median_sessions_per_club": 412.5,
     "median_price_90": 82.5
    },
    {
@@ -3777,7 +3777,7 @@
    {
     "chain": "Le Five",
     "n_clubs": 3,
-    "median_sessions_per_club": 444,
+    "median_sessions_per_club": 500,
     "median_price_90": 56.0
    },
    {
@@ -3795,25 +3795,25 @@
    {
     "chain": "UCPA",
     "n_clubs": 3,
-    "median_sessions_per_club": 42,
+    "median_sessions_per_club": 46,
     "median_price_90": 54.0
    },
    {
     "chain": "Aldea",
     "n_clubs": 2,
-    "median_sessions_per_club": 1552.0,
+    "median_sessions_per_club": 1669.0,
     "median_price_90": 72.0
    },
    {
     "chain": "Padel Camp",
     "n_clubs": 2,
-    "median_sessions_per_club": 104.0,
+    "median_sessions_per_club": 117.0,
     "median_price_90": 60.0
    },
    {
     "chain": "Play Padel",
     "n_clubs": 2,
-    "median_sessions_per_club": 457.5,
+    "median_sessions_per_club": 498.5,
     "median_price_90": 49.5
    },
    {
@@ -3825,13 +3825,13 @@
    {
     "chain": "PadelShot",
     "n_clubs": 2,
-    "median_sessions_per_club": 1998.5,
+    "median_sessions_per_club": 2223.5,
     "median_price_90": 72.0
    },
    {
     "chain": "Carre Padel",
     "n_clubs": 1,
-    "median_sessions_per_club": 2718,
+    "median_sessions_per_club": 3132,
     "median_price_90": 69.0
    },
    {
@@ -3843,7 +3843,7 @@
    {
     "chain": "Trinquet",
     "n_clubs": 1,
-    "median_sessions_per_club": 762,
+    "median_sessions_per_club": 883,
     "median_price_90": 81.0
    }
   ],
@@ -3915,66 +3915,66 @@
  "multi_vs_mono": {
   "n_multi_platforms": 19,
   "n_mono": 102,
-  "median_sessions_multi": 290,
+  "median_sessions_multi": 295,
   "median_sessions_mono": 13,
-  "avg_sessions_multi": 1071,
-  "avg_sessions_mono": 249,
+  "avg_sessions_multi": 1178,
+  "avg_sessions_mono": 266,
   "clusters": [
    {
     "unified_id": "unif_015",
     "canonical_name": "padelshot-saint-quentin-en-yvelines-trappes",
     "cp": "78190",
     "n_platforms": 2,
-    "total_sessions": 4204
+    "total_sessions": 4690
    },
    {
     "unified_id": "unif_005",
     "canonical_name": "Home Padel - Meaux",
     "cp": "77100",
     "n_platforms": 2,
-    "total_sessions": 4139
+    "total_sessions": 4613
    },
    {
     "unified_id": "unif_001",
     "canonical_name": "aldea-padel-villabe",
     "cp": "91100",
     "n_platforms": 2,
-    "total_sessions": 3104
+    "total_sessions": 3338
    },
    {
     "unified_id": "unif_004",
     "canonical_name": "senart-padel-combs-la-ville",
     "cp": "77380",
     "n_platforms": 2,
-    "total_sessions": 2893
+    "total_sessions": 3288
    },
    {
     "unified_id": "unif_013",
     "canonical_name": "Padel Horizon - Sucy en Brie",
     "cp": "94370",
     "n_platforms": 2,
-    "total_sessions": 1352
+    "total_sessions": 1502
    },
    {
     "unified_id": "unif_002",
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 1148
+    "total_sessions": 1154
    },
    {
     "unified_id": "unif_008",
     "canonical_name": "Play Padel Alfortville",
     "cp": "94140",
     "n_platforms": 2,
-    "total_sessions": 915
+    "total_sessions": 997
    },
    {
     "unified_id": "unif_017",
     "canonical_name": "Sportfield Paris 16 ",
     "cp": "75016",
     "n_platforms": 2,
-    "total_sessions": 650
+    "total_sessions": 759
    },
    {
     "unified_id": "unif_009",
@@ -3988,7 +3988,7 @@
     "canonical_name": "padel-95-pontoise",
     "cp": "95300",
     "n_platforms": 2,
-    "total_sessions": 290
+    "total_sessions": 295
    },
    {
     "unified_id": "unif_018",
@@ -4002,14 +4002,14 @@
     "canonical_name": "padel-camp-acheres",
     "cp": "78260",
     "n_platforms": 2,
-    "total_sessions": 208
+    "total_sessions": 234
    },
    {
     "unified_id": "unif_014",
     "canonical_name": "mairie-croissy-beaubourg-croissy-beaubourg",
     "cp": "77183",
     "n_platforms": 2,
-    "total_sessions": 196
+    "total_sessions": 222
    },
    {
     "unified_id": "unif_010",
@@ -4023,14 +4023,14 @@
     "canonical_name": "tennis-du-golf-de-la-boulie-versailles",
     "cp": "78000",
     "n_platforms": 2,
-    "total_sessions": 144
+    "total_sessions": 156
    },
    {
     "unified_id": "unif_016",
     "canonical_name": "paris-padel",
     "cp": "75020",
     "n_platforms": 2,
-    "total_sessions": 79
+    "total_sessions": 112
    },
    {
     "unified_id": "unif_012",
