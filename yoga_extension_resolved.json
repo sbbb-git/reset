@@ -641,9 +641,9 @@
  "sweet_om_meaux": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://sweetom.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:47",
+  "checked_at": "2026-08-10 05:25",
   "url": "https://sweetom.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "espace_yoga_13": {
   "platform": "unknown",
@@ -655,9 +655,10 @@
  "yoga_soin": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yoga-soin.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:47",
+  "checked_at": "2026-08-10 05:26",
   "url": "https://www.yoga-soin.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "yuj_yoga_station_f": {
   "platform": "mindbody",
@@ -672,9 +673,10 @@
  "yoga_daguerre": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yogadaguerre.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:48",
+  "checked_at": "2026-08-10 05:26",
   "url": "https://www.yogadaguerre.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "ateliers_de_yoga": {
   "platform": "bsport",
@@ -687,44 +689,51 @@
  "climbing_district_buttes": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://fitness.climbingdistrict.com/salle-fitness/paris-19-buttes-chaumont/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:48",
+  "checked_at": "2026-08-10 05:27",
   "url": "https://fitness.climbingdistrict.com/salle-fitness/paris-19-buttes-chaumont/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "anjaliom": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yoga.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:48",
+  "checked_at": "2026-08-10 05:27",
   "url": "https://www.yoga.paris/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "penser_yoga": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.penseryoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:49",
+  "platform": "calendly",
+  "slug": "penseryoga",
+  "note": "Calendly = rendez-vous individuel, pas de planning de cours exploitable — aucun engine, marque taguée pour arrêter de la resonder",
+  "detected_via": "https://www.penseryoga.com/",
+  "checked_at": "2026-08-10 05:27",
   "url": "https://www.penseryoga.com/",
-  "attempts": 2
+  "attempts": 3
  },
  "ataum_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.ataum.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:49",
+  "checked_at": "2026-08-10 05:28",
   "url": "https://www.ataum.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "aux_plateaux_sauvages": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://lesplateauxsauvages.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:50",
+  "checked_at": "2026-08-10 05:28",
   "url": "https://lesplateauxsauvages.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "gym_studio_pix_r_court": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.gymstudio.fr/yoga-paris-20.html (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:50",
+  "checked_at": "2026-08-10 05:29",
   "url": "https://www.gymstudio.fr/yoga-paris-20.html",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "the_space_yoga_belleville": {
   "platform": "bsport",
@@ -754,23 +763,26 @@
  "body_yoga_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.body-yoga-paris.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:50",
+  "checked_at": "2026-08-10 05:29",
   "url": "https://www.body-yoga-paris.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "studio_district_batignolles": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studiodistrict.fr/salle-fitness/paris-17-batignolles/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:51",
+  "checked_at": "2026-08-10 05:30",
   "url": "https://studiodistrict.fr/salle-fitness/paris-17-batignolles/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "mama_yoga_batignolles": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://mamayoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:51",
+  "platform": "bsport",
+  "company_id": "1700",
+  "detected_via": "https://mamayoga.fr/tarifs",
+  "checked_at": "2026-08-10 05:30",
   "url": "https://mamayoga.fr/",
-  "attempts": 2
+  "attempts": 3
  },
  "yoga_room_paris_17": {
   "platform": "unknown",
@@ -808,11 +820,12 @@
   "attempts": 1
  },
  "sagesse_harmonie": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://sagesse-harmonie.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:52",
+  "platform": "eversports",
+  "slug": "bZ0IBw",
+  "detected_via": "https://sagesse-harmonie.fr/",
+  "checked_at": "2026-08-10 05:30",
   "url": "https://sagesse-harmonie.fr/",
-  "attempts": 2
+  "attempts": 3
  },
  "jeen_plus_paris_15": {
   "platform": "bsport",
@@ -825,9 +838,10 @@
  "baba_yoga_social_club": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.babayoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:52",
+  "checked_at": "2026-08-10 05:31",
   "url": "https://www.babayoga.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "living_being_paris": {
   "platform": "unknown",
@@ -839,23 +853,26 @@
  "bandha_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.bandhayoga.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:53",
+  "checked_at": "2026-08-10 05:31",
   "url": "https://www.bandhayoga.paris/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "yoga_colibri": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yoga-colibri.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:53",
+  "checked_at": "2026-08-10 05:31",
   "url": "https://www.yoga-colibri.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "kadampa_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://meditation-paris.org/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:54",
+  "checked_at": "2026-08-10 05:32",
   "url": "https://meditation-paris.org/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "healthy_warriors_boulogne": {
   "platform": "bsport",
@@ -881,25 +898,30 @@
   "checked_at": "2026-08-09 09:50"
  },
  "origyn_puteaux": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://origynandco.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:54",
+  "platform": "deciplus",
+  "slug": "origyn",
+  "booking_url": "https://member-app.deciplus.pro/origyn/calendar",
+  "detected_via": "https://origynandco.com/",
+  "checked_at": "2026-08-10 05:32",
   "url": "https://origynandco.com/",
-  "attempts": 2
+  "attempts": 3
  },
  "moi_aussi_yoga": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.moiaussiyoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:55",
+  "platform": "bsport",
+  "company_id": null,
+  "note": "bsport detected mais ID introuvable",
+  "detected_via": "https://www.moiaussiyoga.fr/tarifs",
+  "checked_at": "2026-08-10 05:33",
   "url": "https://www.moiaussiyoga.fr/",
-  "attempts": 2
+  "attempts": 3
  },
  "muses_yoga_montreuil": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.musesyoga.org/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:55",
+  "checked_at": "2026-08-10 05:33",
   "url": "https://www.musesyoga.org/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "la_clairi_re_pantin": {
   "platform": "bsport",
@@ -912,23 +934,26 @@
  "i_flow_arcueil": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.i-flow.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:55",
+  "checked_at": "2026-08-10 05:33",
   "url": "https://www.i-flow.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "fushan_kwoon_vanves": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.fushankwoon.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:55",
+  "checked_at": "2026-08-10 05:34",
   "url": "https://www.fushankwoon.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "le_dojo_de_montreuil": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.ledojodemontreuil.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:56",
+  "checked_at": "2026-08-10 05:34",
   "url": "https://www.ledojodemontreuil.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "maison_amara_versailles": {
   "platform": "bsport",
@@ -939,18 +964,20 @@
   "attempts": 1
  },
  "dharma_yoga_saint_germain": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://www.dharmayoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:56",
+  "platform": "eversports",
+  "slug": "M4JGO2",
+  "detected_via": "https://www.dharmayoga.fr/",
+  "checked_at": "2026-08-10 05:34",
   "url": "https://www.dharmayoga.fr/",
-  "attempts": 2
+  "attempts": 3
  },
  "equi_libre_yoga_rambouillet": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.equi-libre-yoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:57",
+  "checked_at": "2026-08-10 05:35",
   "url": "https://www.equi-libre-yoga.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "my_bb_yogi": {
   "platform": "unknown",
@@ -962,9 +989,10 @@
  "pole_hit_yoga_a_rien": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.polehit.fr/yoga-aerien-valdoise-95-osny/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:57",
+  "checked_at": "2026-08-10 05:36",
   "url": "https://www.polehit.fr/yoga-aerien-valdoise-95-osny/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "ashtanga_argenteuil": {
   "platform": "unknown",
@@ -976,9 +1004,10 @@
  "mudit_yoga_melun": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.muditayoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:58",
+  "checked_at": "2026-08-10 05:36",
   "url": "https://www.muditayoga.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "le_studio_de_hem": {
   "platform": "bsport",
@@ -991,9 +1020,10 @@
  "centre_du_yoga_marais": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yogamarais.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:58",
+  "checked_at": "2026-08-10 05:37",
   "url": "https://www.yogamarais.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "la_canop_e_atelier": {
   "platform": "bsport",
@@ -1014,9 +1044,10 @@
  "myfitness_studio_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://myfitness-studio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:58",
+  "checked_at": "2026-08-10 05:37",
   "url": "https://myfitness-studio.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "espace_jaya": {
   "platform": "unknown",
@@ -1037,23 +1068,26 @@
  "maison_n_paris_12": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.maison-ne.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:59",
+  "checked_at": "2026-08-10 05:38",
   "url": "https://www.maison-ne.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "maison_n_paris_14": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.maison-ne.com/paris-14/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 04:59",
+  "checked_at": "2026-08-10 05:38",
   "url": "https://www.maison-ne.com/paris-14/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "sceaux_yoga_studio": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.sceaux-yoga-studio.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:00",
+  "checked_at": "2026-08-10 05:39",
   "url": "https://www.sceaux-yoga-studio.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "yoga_born_vincennes": {
   "platform": "unknown",
@@ -1063,18 +1097,20 @@
   "checked_at": "2026-08-09 09:50"
  },
  "shala_omm_versailles": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://shalaomm.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:01",
+  "platform": "eversports",
+  "widget_id": "3cf54a47-4a97-493a-a912-5c6a3df825d2",
+  "detected_via": "https://shalaomm.com/",
+  "checked_at": "2026-08-10 05:39",
   "url": "https://shalaomm.com/",
-  "attempts": 2
+  "attempts": 3
  },
  "dharma_yoga_sgel": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.dharma-yoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:01",
+  "checked_at": "2026-08-10 05:40",
   "url": "https://www.dharma-yoga.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "nalaya_yoga_maisons_laffitte": {
   "platform": "unknown",
@@ -1202,6 +1238,48 @@
   "detected_via": "https://yogainparis.com/reservation/",
   "checked_at": "2026-08-06 06:37",
   "url": "https://yogainparis.com/",
+  "attempts": 1
+ },
+ "chita_studio": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://chitastudio.com/ (homepage + 5 paths)",
+  "checked_at": "2026-08-10 05:22",
+  "url": "https://chitastudio.com/",
+  "attempts": 1
+ },
+ "deeply_yoga": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://deeplyyoga.com/ (homepage + 5 paths)",
+  "checked_at": "2026-08-10 05:23",
+  "url": "https://deeplyyoga.com/",
+  "attempts": 1
+ },
+ "yoga_culture": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://yogaetculture.fr/ (homepage + 5 paths)",
+  "checked_at": "2026-08-10 05:23",
+  "url": "https://yogaetculture.fr/",
+  "attempts": 1
+ },
+ "arkose_massy": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://arkose.com/ (homepage + 5 paths)",
+  "checked_at": "2026-08-10 05:24",
+  "url": "https://arkose.com/",
+  "attempts": 1
+ },
+ "connecting_yoga_aubervilliers": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://connectingyoga.com/ (homepage + 5 paths)",
+  "checked_at": "2026-08-10 05:24",
+  "url": "https://connectingyoga.com/",
+  "attempts": 1
+ },
+ "atha_yoga_meudon": {
+  "platform": "unknown",
+  "note": "Aucune signature détectée sur https://athayoga.fr/ (homepage + 5 paths)",
+  "checked_at": "2026-08-10 05:25",
+  "url": "https://athayoga.fr/",
   "attempts": 1
  }
 }
