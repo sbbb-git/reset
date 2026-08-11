@@ -282,76 +282,98 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-07,Vendredi,19:30,20:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Kateline C,20,0,True,2026-08-10 02:43
 2026-08-07,Vendredi,20:00,20:45,Le Hyve,Pilates - Reformer,Léna G,8,4,True,2026-08-10 02:43
 2026-08-07,Vendredi,20:30,21:15,Le Hyve,Hot Pilates,Kateline C,20,0,True,2026-08-10 02:43
-2026-08-08,Samedi,10:00,10:45,Le Hyve,Pilates - Reformer,Thibaud B.,8,6,True,2026-08-10 02:43
-2026-08-08,Samedi,10:15,11:00,Le Hyve,Bootcamp - Surge,Marina B,24,0,True,2026-08-10 02:43
-2026-08-08,Samedi,11:00,11:45,Le Hyve,Pilates - Reformer,Thibaud B.,8,6,True,2026-08-10 02:43
-2026-08-08,Samedi,11:15,12:00,Le Hyve,Bootcamp - Blast,Marina B,24,0,True,2026-08-10 02:43
-2026-08-08,Samedi,12:00,12:45,Le Hyve,Pilates - Reformer,Cara G,8,5,True,2026-08-10 02:43
-2026-08-08,Samedi,12:15,13:00,Le Hyve,Bootcamp - Metcon,Jean B.,24,7,True,2026-08-10 02:43
-2026-08-08,Samedi,13:00,13:45,Le Hyve,Pilates - Reformer,Cara G,8,5,True,2026-08-10 02:43
-2026-08-08,Samedi,13:15,14:15,Le Hyve,HYROX,Jean B.,16,0,True,2026-08-10 02:43
-2026-08-08,Samedi,14:30,15:30,Le Hyve,HYROX,Jean B.,16,0,True,2026-08-10 02:43
-2026-08-09,Dimanche,10:15,11:00,Le Hyve,Pilates - Reformer,COACH NEUTRE,8,5,True,2026-08-10 02:43
-2026-08-09,Dimanche,11:15,12:00,Le Hyve,Pilates - Reformer,COACH NEUTRE,8,7,True,2026-08-10 02:43
-2026-08-09,Dimanche,11:15,12:00,Le Hyve,Bootcamp - Metcon,Marina B,24,3,True,2026-08-10 02:43
-2026-08-09,Dimanche,12:15,13:00,Le Hyve,Pilates - Reformer,COACH NEUTRE,8,7,True,2026-08-10 02:43
-2026-08-09,Dimanche,12:15,13:00,Le Hyve,Bootcamp - Surge,Marina B,24,8,True,2026-08-10 02:43
-2026-08-10,Lundi,07:15,08:00,Le Hyve,Pilates - Reformer,Kateline C,8,0,False,2026-08-10 02:43
-2026-08-10,Lundi,07:15,08:00,Le Hyve,Hot Pilates - The Burn,Marina B,20,0,False,2026-08-10 02:43
-2026-08-10,Lundi,08:15,09:00,Le Hyve,Pilates - Reformer,Kateline C,8,0,False,2026-08-10 02:43
-2026-08-10,Lundi,08:15,09:00,Le Hyve,Hot Pilates - The Method,Marina B,20,0,False,2026-08-10 02:43
-2026-08-10,Lundi,09:15,10:00,Le Hyve,Pilates - Reformer,Kateline C,8,0,False,2026-08-10 02:43
-2026-08-10,Lundi,10:15,11:00,Le Hyve,Pilates - Reformer,Kateline C,8,0,False,2026-08-10 02:43
-2026-08-10,Lundi,12:00,12:45,Le Hyve,Bootcamp - Metcon,Joel M.,24,5,False,2026-08-10 02:43
-2026-08-10,Lundi,12:10,12:55,Le Hyve,Pilates - Reformer,Audrey K,8,0,False,2026-08-10 02:43
-2026-08-10,Lundi,12:55,13:40,Le Hyve,Bootcamp - Blast,Joel M.,24,4,False,2026-08-10 02:43
-2026-08-10,Lundi,13:05,13:50,Le Hyve,Pilates - Reformer,Audrey K,8,0,False,2026-08-10 02:43
-2026-08-10,Lundi,17:00,17:45,Le Hyve,Pilates - Reformer,Marina B,8,0,False,2026-08-10 02:43
-2026-08-10,Lundi,18:00,18:45,Le Hyve,Pilates - Reformer,Marina B,8,5,False,2026-08-10 02:43
-2026-08-10,Lundi,18:10,18:55,Le Hyve,Bootcamp - Surge,Jean B.,24,7,False,2026-08-10 02:43
-2026-08-10,Lundi,18:30,19:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Aurore D,20,0,False,2026-08-10 02:43
-2026-08-10,Lundi,19:00,19:45,Le Hyve,Pilates - Reformer,Candice L,8,8,False,2026-08-10 02:43
-2026-08-10,Lundi,19:05,19:50,Le Hyve,Bootcamp - Metcon,Jean B.,24,12,False,2026-08-10 02:43
-2026-08-10,Lundi,19:30,20:15,Le Hyve,Hot Pilates - The Method,Aurore D,20,0,False,2026-08-10 02:43
-2026-08-10,Lundi,20:00,21:00,Le Hyve,HYROX,Jean B.,16,10,False,2026-08-10 02:43
-2026-08-10,Lundi,20:00,20:45,Le Hyve,Pilates - Reformer,Marina B,8,0,False,2026-08-10 02:43
-2026-08-10,Lundi,20:30,21:15,Le Hyve,Hot Pilates - The Burn,Aurore D,20,0,False,2026-08-10 02:43
-2026-08-11,Mardi,07:15,08:00,Le Hyve,Pilates - Reformer,Chloé D,8,0,False,2026-08-10 02:43
-2026-08-11,Mardi,07:15,08:00,Le Hyve,Hot Pilates - The Burn,Marina B,20,0,False,2026-08-10 02:43
-2026-08-11,Mardi,08:15,09:00,Le Hyve,Pilates - Reformer,Chloé D,8,0,False,2026-08-10 02:43
-2026-08-11,Mardi,08:15,09:00,Le Hyve,Hot Pilates - The Burn,Marina B,20,0,False,2026-08-10 02:43
-2026-08-11,Mardi,11:45,12:30,Le Hyve,Pilates - Reformer,Thibaud B.,8,5,False,2026-08-10 02:43
-2026-08-11,Mardi,11:50,12:35,Le Hyve,Hot Pilates - The Burn,Eva B,20,0,False,2026-08-10 02:43
-2026-08-11,Mardi,12:00,12:45,Le Hyve,Bootcamp - Surge,Jean B.,24,3,False,2026-08-10 02:43
-2026-08-11,Mardi,12:45,13:30,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Eva B,20,0,False,2026-08-10 02:43
-2026-08-11,Mardi,12:45,13:30,Le Hyve,Pilates - Reformer,Thibaud B.,8,8,False,2026-08-10 02:43
-2026-08-11,Mardi,12:55,13:40,Le Hyve,Bootcamp - Metcon,Jean B.,24,3,False,2026-08-10 02:43
-2026-08-11,Mardi,17:00,17:45,Le Hyve,Pilates - Reformer,Kateline C,8,1,False,2026-08-10 02:43
-2026-08-11,Mardi,18:00,18:45,Le Hyve,Pilates - Reformer,Kateline C,8,5,False,2026-08-10 02:43
-2026-08-11,Mardi,18:10,18:55,Le Hyve,Bootcamp - Surge,Joel M.,24,3,False,2026-08-10 02:43
-2026-08-11,Mardi,18:30,19:15,Le Hyve,Hot Pilates - The Burn,Léna G,20,4,False,2026-08-10 02:43
-2026-08-11,Mardi,19:00,19:45,Le Hyve,Pilates - Reformer,Kateline C,8,7,False,2026-08-10 02:43
-2026-08-11,Mardi,19:05,19:50,Le Hyve,Bootcamp - Metcon,Joel M.,24,9,False,2026-08-10 02:43
-2026-08-11,Mardi,19:30,20:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Léna G,20,3,False,2026-08-10 02:43
-2026-08-11,Mardi,20:00,21:00,Le Hyve,HYROX,Joel M.,16,12,False,2026-08-10 02:43
-2026-08-11,Mardi,20:00,20:45,Le Hyve,Pilates - Reformer,Kateline C,8,2,False,2026-08-10 02:43
-2026-08-11,Mardi,20:30,21:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Léna G,20,1,False,2026-08-10 02:43
-2026-08-12,Mercredi,07:30,08:15,Le Hyve,Pilates - Reformer,Aurore D,8,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,08:30,09:15,Le Hyve,Pilates - Reformer,Aurore D,8,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,09:30,10:15,Le Hyve,Pilates - Reformer,Aurore D,8,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,10:45,11:30,Le Hyve,Pilates - Reformer  Booty Peach,Marina B,8,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,11:45,12:30,Le Hyve,Pilates - Reformer,Marina B,8,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,12:00,12:45,Le Hyve,Bootcamp - Metcon,Nicolas G,24,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,12:45,13:30,Le Hyve,Pilates - Reformer,Candice L,8,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,12:55,13:40,Le Hyve,Bootcamp - Surge,Nicolas G,24,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,16:00,16:45,Le Hyve,Pilates - Reformer,Thibaud B.,8,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,17:00,17:45,Le Hyve,Pilates - Reformer,Thibaud B.,8,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,18:00,18:45,Le Hyve,Pilates - Reformer,Cara G,8,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,18:10,18:55,Le Hyve,Bootcamp - Metcon,Marina B,24,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,18:30,19:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Léna G,20,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,19:00,19:45,Le Hyve,Pilates - Reformer,Cara G,8,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,19:05,19:50,Le Hyve,Bootcamp - Surge,Marina B,24,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,19:30,20:15,Le Hyve,Hot Pilates - The Burn,Léna G,20,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,20:00,20:45,Le Hyve,Bootcamp - Metcon,Marina B,24,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,20:00,20:45,Le Hyve,Pilates - Reformer,Cara G,8,0,False,2026-08-10 02:43
-2026-08-12,Mercredi,20:30,21:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Léna G,20,0,False,2026-08-10 02:43
+2026-08-08,Samedi,10:00,10:45,Le Hyve,Pilates - Reformer,Thibaud B.,8,6,True,2026-08-11 02:43
+2026-08-08,Samedi,10:15,11:00,Le Hyve,Bootcamp - Surge,Marina B,24,0,True,2026-08-11 02:43
+2026-08-08,Samedi,11:00,11:45,Le Hyve,Pilates - Reformer,Thibaud B.,8,6,True,2026-08-11 02:43
+2026-08-08,Samedi,11:15,12:00,Le Hyve,Bootcamp - Blast,Marina B,24,0,True,2026-08-11 02:43
+2026-08-08,Samedi,12:00,12:45,Le Hyve,Pilates - Reformer,Cara G,8,5,True,2026-08-11 02:43
+2026-08-08,Samedi,12:15,13:00,Le Hyve,Bootcamp - Metcon,Jean B.,24,7,True,2026-08-11 02:43
+2026-08-08,Samedi,13:00,13:45,Le Hyve,Pilates - Reformer,Cara G,8,5,True,2026-08-11 02:43
+2026-08-08,Samedi,13:15,14:15,Le Hyve,HYROX,Jean B.,16,0,True,2026-08-11 02:43
+2026-08-08,Samedi,14:30,15:30,Le Hyve,HYROX,Jean B.,16,0,True,2026-08-11 02:43
+2026-08-09,Dimanche,10:15,11:00,Le Hyve,Pilates - Reformer,COACH NEUTRE,8,5,True,2026-08-11 02:43
+2026-08-09,Dimanche,11:15,12:00,Le Hyve,Pilates - Reformer,COACH NEUTRE,8,7,True,2026-08-11 02:43
+2026-08-09,Dimanche,11:15,12:00,Le Hyve,Bootcamp - Metcon,Marina B,24,3,True,2026-08-11 02:43
+2026-08-09,Dimanche,12:15,13:00,Le Hyve,Pilates - Reformer,COACH NEUTRE,8,7,True,2026-08-11 02:43
+2026-08-09,Dimanche,12:15,13:00,Le Hyve,Bootcamp - Surge,Marina B,24,8,True,2026-08-11 02:43
+2026-08-10,Lundi,07:15,08:00,Le Hyve,Pilates - Reformer,Kateline C,8,0,True,2026-08-11 02:43
+2026-08-10,Lundi,07:15,08:00,Le Hyve,Hot Pilates - The Burn,Marina B,20,0,True,2026-08-11 02:43
+2026-08-10,Lundi,08:15,09:00,Le Hyve,Pilates - Reformer,Kateline C,8,0,True,2026-08-11 02:43
+2026-08-10,Lundi,08:15,09:00,Le Hyve,Hot Pilates - The Method,Marina B,20,0,True,2026-08-11 02:43
+2026-08-10,Lundi,09:15,10:00,Le Hyve,Pilates - Reformer,Kateline C,8,0,True,2026-08-11 02:43
+2026-08-10,Lundi,10:15,11:00,Le Hyve,Pilates - Reformer,Kateline C,8,0,True,2026-08-11 02:43
+2026-08-10,Lundi,12:00,12:45,Le Hyve,Bootcamp - Metcon,Joel M.,24,7,True,2026-08-11 02:43
+2026-08-10,Lundi,12:10,12:55,Le Hyve,Pilates - Reformer,Audrey K,8,0,True,2026-08-11 02:43
+2026-08-10,Lundi,12:55,13:40,Le Hyve,Bootcamp - Blast,Joel M.,24,4,True,2026-08-11 02:43
+2026-08-10,Lundi,13:05,13:50,Le Hyve,Pilates - Reformer,Audrey K,8,0,True,2026-08-11 02:43
+2026-08-10,Lundi,17:00,17:45,Le Hyve,Pilates - Reformer,Marina B,8,0,True,2026-08-11 02:43
+2026-08-10,Lundi,18:00,18:45,Le Hyve,Pilates - Reformer,Marina B,8,8,True,2026-08-11 02:43
+2026-08-10,Lundi,18:10,18:55,Le Hyve,Bootcamp - Surge,Jean B.,24,9,True,2026-08-11 02:43
+2026-08-10,Lundi,18:30,19:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Aurore D,20,0,True,2026-08-11 02:43
+2026-08-10,Lundi,19:00,19:45,Le Hyve,Pilates - Reformer,Candice L,8,8,True,2026-08-11 02:43
+2026-08-10,Lundi,19:05,19:50,Le Hyve,Bootcamp - Metcon,Jean B.,24,14,True,2026-08-11 02:43
+2026-08-10,Lundi,19:30,20:15,Le Hyve,Hot Pilates - The Method,Aurore D,20,0,True,2026-08-11 02:43
+2026-08-10,Lundi,20:00,21:00,Le Hyve,HYROX,Jean B.,16,11,True,2026-08-11 02:43
+2026-08-10,Lundi,20:00,20:45,Le Hyve,Pilates - Reformer,Marina B,8,0,True,2026-08-11 02:43
+2026-08-10,Lundi,20:30,21:15,Le Hyve,Hot Pilates - The Burn,Aurore D,20,0,True,2026-08-11 02:43
+2026-08-11,Mardi,07:15,08:00,Le Hyve,Pilates - Reformer,Chloé D,8,0,False,2026-08-11 02:43
+2026-08-11,Mardi,07:15,08:00,Le Hyve,Hot Pilates - The Burn,Marina B,20,0,False,2026-08-11 02:43
+2026-08-11,Mardi,08:15,09:00,Le Hyve,Pilates - Reformer,Chloé D,8,0,False,2026-08-11 02:43
+2026-08-11,Mardi,08:15,09:00,Le Hyve,Hot Pilates - The Burn,Marina B,20,0,False,2026-08-11 02:43
+2026-08-11,Mardi,11:45,12:30,Le Hyve,Pilates - Reformer,Thibaud B.,8,7,False,2026-08-11 02:43
+2026-08-11,Mardi,11:50,12:35,Le Hyve,Hot Pilates - The Burn,Eva B,20,0,False,2026-08-11 02:43
+2026-08-11,Mardi,12:00,12:45,Le Hyve,Bootcamp - Surge,Jean B.,24,6,False,2026-08-11 02:43
+2026-08-11,Mardi,12:45,13:30,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Eva B,20,0,False,2026-08-11 02:43
+2026-08-11,Mardi,12:45,13:30,Le Hyve,Pilates - Reformer,Thibaud B.,8,6,False,2026-08-11 02:43
+2026-08-11,Mardi,12:55,13:40,Le Hyve,Bootcamp - Metcon,Jean B.,24,1,False,2026-08-11 02:43
+2026-08-11,Mardi,17:00,17:45,Le Hyve,Pilates - Reformer,Kateline C,8,3,False,2026-08-11 02:43
+2026-08-11,Mardi,18:00,18:45,Le Hyve,Pilates - Reformer,Kateline C,8,5,False,2026-08-11 02:43
+2026-08-11,Mardi,18:10,18:55,Le Hyve,Bootcamp - Surge,Joel M.,24,8,False,2026-08-11 02:43
+2026-08-11,Mardi,18:30,19:15,Le Hyve,Hot Pilates - The Burn,Léna G,20,3,False,2026-08-11 02:43
+2026-08-11,Mardi,19:00,19:45,Le Hyve,Pilates - Reformer,Kateline C,8,8,False,2026-08-11 02:43
+2026-08-11,Mardi,19:05,19:50,Le Hyve,Bootcamp - Metcon,Joel M.,24,6,False,2026-08-11 02:43
+2026-08-11,Mardi,19:30,20:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Léna G,20,6,False,2026-08-11 02:43
+2026-08-11,Mardi,20:00,21:00,Le Hyve,HYROX,Joel M.,16,15,False,2026-08-11 02:43
+2026-08-11,Mardi,20:00,20:45,Le Hyve,Pilates - Reformer,Kateline C,8,4,False,2026-08-11 02:43
+2026-08-11,Mardi,20:30,21:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Léna G,20,2,False,2026-08-11 02:43
+2026-08-12,Mercredi,07:30,08:15,Le Hyve,Pilates - Reformer,Aurore D,8,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,08:30,09:15,Le Hyve,Pilates - Reformer,Aurore D,8,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,09:30,10:15,Le Hyve,Pilates - Reformer,Aurore D,8,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,10:45,11:30,Le Hyve,Pilates - Reformer  Booty Peach,Marina B,8,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,11:45,12:30,Le Hyve,Pilates - Reformer,Marina B,8,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,12:00,12:45,Le Hyve,Bootcamp - Metcon,Nicolas G,24,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,12:45,13:30,Le Hyve,Pilates - Reformer,Candice L,8,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,12:55,13:40,Le Hyve,Bootcamp - Surge,Nicolas G,24,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,16:00,16:45,Le Hyve,Pilates - Reformer,Thibaud B.,8,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,17:00,17:45,Le Hyve,Pilates - Reformer,Thibaud B.,8,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,18:00,18:45,Le Hyve,Pilates - Reformer,Cara G,8,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,18:10,18:55,Le Hyve,Bootcamp - Metcon,Marina B,24,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,18:30,19:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Léna G,20,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,19:00,19:45,Le Hyve,Pilates - Reformer,Cara G,8,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,19:05,19:50,Le Hyve,Bootcamp - Surge,Marina B,24,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,19:30,20:15,Le Hyve,Hot Pilates - The Burn,Léna G,20,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,20:00,20:45,Le Hyve,Pilates - Reformer,Cara G,8,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,20:00,20:45,Le Hyve,Bootcamp - Metcon,Marina B,24,0,False,2026-08-11 02:43
+2026-08-12,Mercredi,20:30,21:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Léna G,20,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,07:15,08:00,Le Hyve,Pilates - Reformer,Kateline C,8,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,07:15,08:00,Le Hyve,Bootcamp - Blast,Mamadou T,24,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,07:15,08:00,Le Hyve,Hot Pilates,Marina B,20,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,08:15,09:00,Le Hyve,Bootcamp - Metcon,Mamadou T,24,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,08:15,09:00,Le Hyve,Hot Pilates,Marina B,20,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,08:15,09:00,Le Hyve,Pilates - Reformer,Kateline C,8,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,09:15,10:00,Le Hyve,Pilates - Reformer,Kateline C,8,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,11:45,12:30,Le Hyve,Pilates - Reformer,Curtis A,8,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,12:00,12:45,Le Hyve,Bootcamp - Surge,Ange K,24,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,12:45,13:30,Le Hyve,Pilates - Reformer,Curtis A,8,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,12:45,13:30,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Pauline R.,20,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,12:55,13:40,Le Hyve,Bootcamp - Metcon,Ange K,24,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,17:00,17:45,Le Hyve,Pilates - Reformer,Camille  T,8,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,18:00,18:45,Le Hyve,Pilates - Reformer,Camille  T,8,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,18:10,18:55,Le Hyve,Bootcamp - Surge,Curtis A,24,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,18:30,19:15,Le Hyve,Hot Pilates - The Method,Léna G,20,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,19:00,19:45,Le Hyve,Pilates - Reformer,Eva B,8,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,19:05,19:50,Le Hyve,Bootcamp - Metcon,Curtis A,24,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,19:30,20:15,Le Hyve,Hot Pilates - The Burn,Marina B,20,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,20:00,21:00,Le Hyve,HYROX,Curtis A,16,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,20:00,20:45,Le Hyve,Pilates - Reformer,Eva B,8,0,False,2026-08-11 02:43
+2026-08-13,Jeudi,20:30,21:15,Le Hyve,Hot Pilates - BBL (Booty Burn Lab),Marina B,20,0,False,2026-08-11 02:43
