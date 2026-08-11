@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-11T17:31:27.938374",
+ "generated_at": "2026-08-11T18:30:57.257117",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -89,16 +89,6 @@
    "cp": "77360",
    "prix_30j": 72.0,
    "prix_recent": 48.0,
-   "delta_pct": -33.3,
-   "direction": "baisse"
-  },
-  {
-   "slug": "padel-15-paris",
-   "source": "anybuddy",
-   "name": "padel-15-paris",
-   "cp": "75015",
-   "prix_30j": 90.0,
-   "prix_recent": 60.0,
    "delta_pct": -33.3,
    "direction": "baisse"
   },
@@ -1526,9 +1516,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 106,
+  "total_anomalies": 105,
   "idle_24h": 0,
-  "price_shifts": 11,
+  "price_shifts": 10,
   "volume_drops": 95,
   "new_clubs_14d": 81
  }
