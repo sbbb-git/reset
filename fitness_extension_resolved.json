@@ -448,16 +448,16 @@
  "apollo_sporting_club_paris_19": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.apollosportingclub.com/paris-19/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:03",
+  "checked_at": "2026-08-11 05:11",
   "url": "https://www.apollosportingclub.com/paris-19/",
-  "attempts": 1
+  "attempts": 2
  },
  "studio_punch_team_zeitoun": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.teamzeitoun.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:03",
+  "checked_at": "2026-08-11 05:11",
   "url": "https://www.teamzeitoun.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "la_belle_quipe": {
   "platform": "bsport",
@@ -471,121 +471,126 @@
  "phenix_muay_thai": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://phenixmuaythai.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:04",
+  "checked_at": "2026-08-11 05:12",
   "url": "https://phenixmuaythai.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "shiwata_boxing": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.shiwatai.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:04",
+  "checked_at": "2026-08-11 05:13",
   "url": "https://www.shiwatai.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "maccabi_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://maccabiparis.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:05",
+  "checked_at": "2026-08-11 05:13",
   "url": "https://maccabiparis.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "muay_tha_france": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://muaythai-france.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:05",
+  "checked_at": "2026-08-11 05:14",
   "url": "https://muaythai-france.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "crossfit_rebirth": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.crossfitrebirth.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:05",
+  "checked_at": "2026-08-11 05:15",
   "url": "https://www.crossfitrebirth.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "crossfit_rive_gauche": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://crossfitrg.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:06",
+  "checked_at": "2026-08-11 05:15",
   "url": "https://crossfitrg.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "crossfit_original_addicts": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://crossfitoriginaladdicts.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:06",
+  "platform": "bsport",
+  "company_id": "5413",
+  "detected_via": "https://crossfitoriginaladdicts.com/horaires",
+  "checked_at": "2026-08-11 05:16",
   "url": "https://crossfitoriginaladdicts.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "bodyhit_jussieu": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://bodyhit.fr/bodyhit-club-jussieu-paris-5/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:07",
+  "platform": "deciplus",
+  "slug": "bodyhit",
+  "booking_url": "https://member-app.deciplus.pro/bodyhit/calendar",
+  "detected_via": "https://bodyhit.fr/bodyhit-club-jussieu-paris-5/",
+  "checked_at": "2026-08-11 05:16",
   "url": "https://bodyhit.fr/bodyhit-club-jussieu-paris-5/",
-  "attempts": 1
+  "attempts": 2
  },
  "bodyhit_bonne_nouvelle": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://bodyhit.fr/bodyhit-club-paris-10-bonne-nouvelle/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:07",
+  "platform": "deciplus",
+  "slug": "bodyhit",
+  "booking_url": "https://member-app.deciplus.pro/bodyhit/calendar",
+  "detected_via": "https://bodyhit.fr/bodyhit-club-paris-10-bonne-nouvelle/",
+  "checked_at": "2026-08-11 05:16",
   "url": "https://bodyhit.fr/bodyhit-club-paris-10-bonne-nouvelle/",
-  "attempts": 1
+  "attempts": 2
  },
  "bodyhit_paris_16": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://bodyhit.fr/paris-16/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:08",
+  "checked_at": "2026-08-11 05:16",
   "url": "https://bodyhit.fr/paris-16/",
-  "attempts": 1
+  "attempts": 2
  },
  "bodytech_vip_pereire": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.bodytech-vip.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-06 07:08",
+  "checked_at": "2026-08-11 05:17",
   "url": "https://www.bodytech-vip.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "my_big_bang_paris_11": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.my-big-bang.fr/studios/paris11/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:57",
+  "checked_at": "2026-08-11 05:18",
   "url": "https://www.my-big-bang.fr/studios/paris11/",
-  "attempts": 1
+  "attempts": 2
  },
  "myfitness_studio_paris_20": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://myfitness-studio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:58",
+  "checked_at": "2026-08-11 05:18",
   "url": "https://myfitness-studio.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "arkose_massy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://arkose.com/massy (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:58",
+  "checked_at": "2026-08-11 05:19",
   "url": "https://arkose.com/massy",
-  "attempts": 1
+  "attempts": 2
  },
  "fit_ballet": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.fitballet.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:59",
+  "checked_at": "2026-08-11 05:20",
   "url": "https://www.fitballet.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "studio_rituel": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.studio-rituel.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 05:59",
+  "checked_at": "2026-08-11 05:20",
   "url": "https://www.studio-rituel.paris/",
-  "attempts": 1
+  "attempts": 2
  },
  "the_dailey_method_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.thedaileymethod.com/paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:00",
+  "checked_at": "2026-08-11 05:21",
   "url": "https://www.thedaileymethod.com/paris/",
-  "attempts": 1
+  "attempts": 2
  },
  "jumpman_paris": {
   "platform": "bsport",
@@ -655,23 +660,23 @@
  "le_five_squash": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://lefive.fr/squash/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:03",
+  "checked_at": "2026-08-11 05:22",
   "url": "https://lefive.fr/squash/",
-  "attempts": 1
+  "attempts": 2
  },
  "five_iron_golf_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://fiveirongolf.com/locations/paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:03",
+  "checked_at": "2026-08-11 05:22",
   "url": "https://fiveirongolf.com/locations/paris/",
-  "attempts": 1
+  "attempts": 2
  },
  "golf_in_the_city_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.golfinthecity.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:04",
+  "checked_at": "2026-08-11 05:23",
   "url": "https://www.golfinthecity.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "magnus_golf_centre": {
   "platform": "unknown",
@@ -683,9 +688,9 @@
  "topgolf_venir": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://topgolf.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:04",
+  "checked_at": "2026-08-11 05:23",
   "url": "https://topgolf.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "golf_acad_mie_paris_16": {
   "platform": "unknown",
@@ -704,9 +709,9 @@
  "golfy_paris_garage_indoor": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://golfy.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:05",
+  "checked_at": "2026-08-11 05:23",
   "url": "https://golfy.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "krav_maga_paris_sud": {
   "platform": "unknown",
@@ -732,44 +737,44 @@
  "krav_maga_pro_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.kravmagapro.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:06",
+  "checked_at": "2026-08-11 05:23",
   "url": "https://www.kravmagapro.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "centre_du_marais": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://parismarais.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:07",
+  "checked_at": "2026-08-11 05:24",
   "url": "https://parismarais.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "studio_des_arts": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.studiodesarts.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:07",
+  "checked_at": "2026-08-11 05:24",
   "url": "https://www.studiodesarts.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "movement": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://movementparis.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:08",
+  "checked_at": "2026-08-11 05:25",
   "url": "https://movementparis.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "mademoiselle_b": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.mademoiselleb.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:09",
+  "checked_at": "2026-08-11 05:26",
   "url": "https://www.mademoiselleb.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "pole_position": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://poleposition.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:09",
+  "checked_at": "2026-08-11 05:27",
   "url": "https://poleposition.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "club_360": {
   "platform": "unknown",
@@ -788,23 +793,23 @@
  "pickleball_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.pickleballparis.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:10",
+  "checked_at": "2026-08-11 05:27",
   "url": "https://www.pickleballparis.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "pickle_up_boulogne": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.pickleup.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:10",
+  "checked_at": "2026-08-11 05:28",
   "url": "https://www.pickleup.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "cole_nationale_des_arts_du_cirque_annie_": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.academie-fratellini.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:11",
+  "checked_at": "2026-08-11 05:28",
   "url": "https://www.academie-fratellini.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "aqua_studio_paris": {
   "platform": "unknown",
@@ -858,9 +863,9 @@
  "p4p_performance_for_pleasure": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.p4paris.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-07 06:22",
+  "checked_at": "2026-08-11 05:29",
   "url": "https://www.p4paris.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "forge_studio": {
   "platform": "unknown",

@@ -81,30 +81,34 @@
  "fly_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.fly-yoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:08",
+  "checked_at": "2026-08-11 04:58",
   "url": "https://www.fly-yoga.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "studio_massaro": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studio-massaro.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:08",
+  "checked_at": "2026-08-11 04:59",
   "url": "https://studio-massaro.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "aeroyoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.aeroyoga-paris.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:09",
+  "checked_at": "2026-08-11 04:59",
   "url": "https://www.aeroyoga-paris.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "my_golden_hour": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.mygoldenhour.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:09",
+  "checked_at": "2026-08-11 04:59",
   "url": "https://www.mygoldenhour.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "ashtanga_yoga_paris": {
   "platform": "bsport",
@@ -117,9 +121,10 @@
  "yoga_searcher": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yogasearcher.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:10",
+  "checked_at": "2026-08-11 05:00",
   "url": "https://yogasearcher.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "casa_yoga_paradis": {
   "platform": "bsport",
@@ -140,9 +145,10 @@
  "tigre_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.tigre-yoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:10",
+  "checked_at": "2026-08-11 05:00",
   "url": "https://www.tigre-yoga.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "yoga_village": {
   "platform": "bsport",
@@ -168,23 +174,27 @@
  "centre_anima": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://centreanima.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:11",
+  "checked_at": "2026-08-11 05:01",
   "url": "https://centreanima.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "home_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.homeyogaparis.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:11",
+  "checked_at": "2026-08-11 05:02",
   "url": "https://www.homeyogaparis.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "iyengar_paris": {
-  "platform": "unknown",
-  "note": "Aucune signature détectée sur https://centreiyengar-paris.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:12",
+  "platform": "deciplus",
+  "slug": "sfbiria",
+  "booking_url": "https://member-app.deciplus.pro/sfbiria/calendar",
+  "detected_via": "https://centreiyengar-paris.fr/cours/",
+  "checked_at": "2026-08-11 05:02",
   "url": "https://centreiyengar-paris.fr/",
-  "attempts": 2
+  "attempts": 3
  },
  "yoga_republique": {
   "platform": "bsport",
@@ -212,9 +222,10 @@
  "trini_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://triniyoga.paris/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:12",
+  "checked_at": "2026-08-11 05:03",
   "url": "https://triniyoga.paris/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "montgolfiere_toudic": {
   "platform": "resamania",
@@ -240,9 +251,10 @@
  "kayastha_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://kayastha-yoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:12",
+  "checked_at": "2026-08-11 05:03",
   "url": "https://kayastha-yoga.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "studio_marga": {
   "platform": "bsport",
@@ -280,30 +292,34 @@
  "riise_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://riise.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:13",
+  "checked_at": "2026-08-11 05:07",
   "url": "https://riise.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "omm_studio": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://ommstudio.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:13",
+  "checked_at": "2026-08-11 05:07",
   "url": "https://ommstudio.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "atelier_marais_charlot": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://atelier-marais.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:14",
+  "checked_at": "2026-08-11 05:07",
   "url": "https://atelier-marais.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "atelier_marais_republique": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://atelier-marais.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-09 05:08",
+  "checked_at": "2026-08-11 05:08",
   "url": "https://atelier-marais.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "pyra_yoga": {
   "platform": "sportigo",
@@ -326,37 +342,42 @@
  "yoga_by_muriel": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yogabymuriel.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-09 05:09",
+  "checked_at": "2026-08-11 05:08",
   "url": "https://www.yogabymuriel.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "espace_perinat": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://espace-perinat-nation.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-09 05:10",
+  "checked_at": "2026-08-11 05:09",
   "url": "https://espace-perinat-nation.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "studiolo": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.yoganita.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-09 05:10",
+  "checked_at": "2026-08-11 05:09",
   "url": "https://www.yoganita.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "lomey": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.lomey-yoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-09 05:11",
+  "checked_at": "2026-08-11 05:10",
   "url": "https://www.lomey-yoga.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "cmonyoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://cmonyoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-09 05:11",
+  "checked_at": "2026-08-11 05:10",
   "url": "https://cmonyoga.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "byo_yoga": {
   "platform": "bsport",
@@ -1115,79 +1136,90 @@
  "nalaya_yoga_maisons_laffitte": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://nalaya-yoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:01",
+  "checked_at": "2026-08-11 04:52",
   "url": "https://nalaya-yoga.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "taraka_yoga_studio": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.eversports.fr/s/taraka-yoga-studio (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:02",
+  "checked_at": "2026-08-11 04:53",
   "url": "https://www.eversports.fr/s/taraka-yoga-studio",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "espace_yoga_sartrouville": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.nathalie-labbe.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:02",
+  "checked_at": "2026-08-11 04:54",
   "url": "https://www.nathalie-labbe.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "pure_yoga_enghien": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.eversports.fr/s/pure-yoga-studio (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:03",
+  "checked_at": "2026-08-11 04:54",
   "url": "https://www.eversports.fr/s/pure-yoga-studio",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "yogabhyasa_mantes": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur http://www.yogamantes.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:03",
+  "checked_at": "2026-08-11 04:55",
   "url": "http://www.yogamantes.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "yoga_nepita_pantin": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yoganepita.com/pantin/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:03",
+  "checked_at": "2026-08-11 04:55",
   "url": "https://yoganepita.com/pantin/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "yoga_nepita_les_lilas": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yoganepita.com/lilas/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:04",
+  "checked_at": "2026-08-11 04:55",
   "url": "https://yoganepita.com/lilas/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "yoga_nepita_romainville": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yoganepita.com/romainville/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:04",
+  "checked_at": "2026-08-11 04:56",
   "url": "https://yoganepita.com/romainville/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "superbanane_yoga_chaville": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yogachaville.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:04",
+  "checked_at": "2026-08-11 04:56",
   "url": "https://yogachaville.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "anahata_yoga_s_vres": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.anahata-paris.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:05",
+  "checked_at": "2026-08-11 04:57",
   "url": "https://www.anahata-paris.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "anahata_studio_montrouge": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://anahatastudio.net/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:05",
+  "checked_at": "2026-08-11 04:58",
   "url": "https://anahatastudio.net/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "esprit_anahata_paris_18": {
   "platform": "unknown",
@@ -1220,9 +1252,10 @@
  "yo_shi_vanves": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yo-shi.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:07",
+  "checked_at": "2026-08-11 04:58",
   "url": "https://yo-shi.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "yoga_and_co_paris_19": {
   "platform": "bsport",
