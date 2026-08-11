@@ -4640,18 +4640,18 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-10,Lundi,20:30,21:20,Levallois Reformer Studio Reformer,Reformer,Hélin frédéric,0,0,True,2026-08-08 11:50
 2026-08-10,Lundi,20:30,21:30,République Studio Athletic,Athletic ATHX,Andy,0,0,True,2026-08-08 11:50
 2026-08-10,Lundi,20:30,21:15,République Studio Bootcamp,Bootcamp Strong,Tommy,0,0,True,2026-08-08 11:50
-2026-08-11,Mardi,07:15,08:15,Nation Studio Athletic,Athletic Hyrox,Tristan,0,0,False,2026-08-08 12:46
-2026-08-11,Mardi,07:15,08:05,Pigalle Studio Reformer,Reformer,Solène,0,0,False,2026-08-08 12:46
-2026-08-11,Mardi,07:15,08:15,République Studio Athletic,Athletic Training,ALEXANDRE A.,0,0,False,2026-08-08 12:46
-2026-08-11,Mardi,07:15,08:05,République Studio Reformer,Reformer,Soukaïna,0,0,False,2026-08-08 11:50
-2026-08-11,Mardi,07:30,08:15,Bourse Studio Bootcamp,Bootcamp,Laura,28,7,False,2026-08-11 07:18
-2026-08-11,Mardi,07:30,08:15,Bourse Studio Boxing,Boxing,Boramy,30,6,False,2026-08-11 07:18
-2026-08-11,Mardi,07:30,08:20,Levallois Reformer Studio Reformer,Reformer,Olivier,0,0,False,2026-08-08 12:46
-2026-08-11,Mardi,07:30,08:15,Louvre Studio Cycling,Cycling,Marwa,35,4,False,2026-08-11 07:18
-2026-08-11,Mardi,07:30,08:20,Louvre Studio Heat,Heat Tone,Sasha,20,4,False,2026-08-11 07:18
-2026-08-11,Mardi,07:30,08:20,Louvre Studio Reformer,Reformer,Leila B.,20,3,False,2026-08-11 07:18
-2026-08-11,Mardi,07:30,08:15,Nation Studio Bootcamp,Bootcamp Strong,Marion,20,10,False,2026-08-11 07:18
-2026-08-11,Mardi,07:30,08:15,Nation Studio Cycling,Cycling,Nagui,30,4,False,2026-08-11 07:18
+2026-08-11,Mardi,07:15,08:15,Nation Studio Athletic,Athletic Hyrox,Tristan,0,0,True,2026-08-08 12:46
+2026-08-11,Mardi,07:15,08:05,Pigalle Studio Reformer,Reformer,Solène,0,0,True,2026-08-08 12:46
+2026-08-11,Mardi,07:15,08:15,République Studio Athletic,Athletic Training,ALEXANDRE A.,0,0,True,2026-08-08 12:46
+2026-08-11,Mardi,07:15,08:05,République Studio Reformer,Reformer,Soukaïna,0,0,True,2026-08-08 11:50
+2026-08-11,Mardi,07:30,08:15,Bourse Studio Bootcamp,Bootcamp,Laura,28,7,True,2026-08-11 07:18
+2026-08-11,Mardi,07:30,08:15,Bourse Studio Boxing,Boxing,Boramy,30,6,True,2026-08-11 07:18
+2026-08-11,Mardi,07:30,08:20,Levallois Reformer Studio Reformer,Reformer,Olivier,0,0,True,2026-08-08 12:46
+2026-08-11,Mardi,07:30,08:15,Louvre Studio Cycling,Cycling,Marwa,35,4,True,2026-08-11 07:18
+2026-08-11,Mardi,07:30,08:20,Louvre Studio Heat,Heat Tone,Sasha,20,4,True,2026-08-11 07:18
+2026-08-11,Mardi,07:30,08:20,Louvre Studio Reformer,Reformer,Leila B.,20,3,True,2026-08-11 07:18
+2026-08-11,Mardi,07:30,08:15,Nation Studio Bootcamp,Bootcamp Strong,Marion,20,10,True,2026-08-11 07:18
+2026-08-11,Mardi,07:30,08:15,Nation Studio Cycling,Cycling,Nagui,30,4,True,2026-08-11 07:18
 2026-08-11,Mardi,07:45,08:30,République Studio Boxing,Boxing,Mélanie,0,0,False,2026-08-08 12:46
 2026-08-11,Mardi,07:45,08:30,République Studio Cycling,Cycling,Michael,0,0,False,2026-08-08 12:46
 2026-08-11,Mardi,08:15,09:00,Bourse Studio Bootcamp,Bootcamp Strong,Laura,0,0,False,2026-08-08 12:46
@@ -4896,4 +4896,22 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-13,Jeudi,07:30,08:20,République Studio Reformer,Reformer,Zoé,0,0,False,2026-08-10 21:37
 2026-08-13,Jeudi,07:45,08:30,Nation Studio Boxing,Boxing Prime,Nagui,0,0,False,2026-08-10 21:37
 2026-08-13,Jeudi,07:45,08:30,République Studio Boxing,Boxing,Mélanie,0,0,False,2026-08-10 21:37
+2026-08-13,Jeudi,08:00,08:45,Nation Studio Bootcamp,Lifting,Nicolas,0,0,False,2026-08-11 08:31
 2026-08-13,Jeudi,08:00,08:45,République Studio Bootcamp,Bootcamp,Jeson,0,0,False,2026-08-10 22:19
+2026-08-13,Jeudi,08:15,09:00,Bourse Studio Bootcamp,Bootcamp Hyrox,Louis,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,08:15,09:05,Pigalle Studio Reformer,Reformer,Soukaïna,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,08:30,09:20,Levallois Reformer Studio Reformer,Reformer,Leila B.,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,08:30,09:20,Louvre Studio Heat,Heat Core,Charlène,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,08:30,09:20,Louvre Studio Reformer,Reformer,Léa,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,08:30,09:20,République Studio Lift,Lift ATHX,ALEXANDRE A.,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,08:30,09:20,République Studio Reformer,Reformer,Zoé,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,09:15,10:05,Pigalle Studio Reformer,Reformer,Soukaïna,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,09:30,10:20,Louvre Studio Reformer,Reformer,Léa,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,11:15,12:05,Levallois Reformer Studio Reformer,Reformer,Leila B.,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,11:30,12:20,Louvre Studio Heat,Hot Pilates,Sasha,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,11:30,12:20,Louvre Studio Reformer,Reformer,Marion,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,11:30,12:20,Pigalle Studio Reformer,Reformer,Vincent,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,11:30,12:20,République Studio Reformer,Reformer,Julia,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,12:00,13:00,Bourse Studio Yoga,Pilates,Thibaut,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,12:00,12:50,République Studio Lift,Lift,Andy,0,0,False,2026-08-11 08:31
+2026-08-13,Jeudi,12:00,13:00,République Studio Yoga,Pilates,Zoé,0,0,False,2026-08-11 08:31
