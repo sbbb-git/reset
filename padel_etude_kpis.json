@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-11T01:59:37.047366",
+ "generated_at": "2026-08-11T03:52:53.607732",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,12 +9,12 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 48140,
-   "doinsport": 1315,
+   "anybuddy": 48238,
+   "doinsport": 1277,
    "urbanpadel": 3998
   },
-  "n_sessions_live": 53453,
-  "n_sessions_history": 359569,
+  "n_sessions_live": 53513,
+  "n_sessions_history": 359607,
   "pop_idf": 12258660
  },
  "dept": {
@@ -270,7 +270,7 @@
   ],
   [
    "2026-08",
-   8774
+   8812
   ]
  ],
  "top_ca": [
@@ -296,7 +296,7 @@
    "slug": "doinsport-d016516b-15a9-4f04-a359-53c6be5395ac",
    "name": "Tennis Club de la Chataigneraie",
    "cp": "92500",
-   "bookings": 17353,
+   "bookings": 17357,
    "ca": 1056935,
    "first": "2023-09",
    "last": "2026-08"
@@ -314,8 +314,8 @@
    "slug": "doinsport-efd176fa-cf39-4f7f-bf2d-5c7d9412148a",
    "name": "Padel Horizon - Sucy en Brie",
    "cp": "94370",
-   "bookings": 18134,
-   "ca": 952678,
+   "bookings": 18141,
+   "ca": 952958,
    "first": "2023-01",
    "last": "2026-08"
   },
@@ -323,7 +323,7 @@
    "slug": "doinsport-81d36fb8-553b-4fe5-87f4-ab76a12acbaf",
    "name": "Padel A.C",
    "cp": "95700",
-   "bookings": 17430,
+   "bookings": 17438,
    "ca": 843347,
    "first": "2024-12",
    "last": "2026-08"
@@ -359,7 +359,7 @@
    "slug": "doinsport-46006260-0a24-4f36-b27b-a489ed46a9c3",
    "name": "Padel Camp",
    "cp": "78260",
-   "bookings": 12260,
+   "bookings": 12263,
    "ca": 603025,
    "first": "2024-04",
    "last": "2026-08"
@@ -404,8 +404,8 @@
    "slug": "doinsport-f73b2bef-eedd-4fba-9d72-15595ac723fa",
    "name": "B14",
    "cp": "91070",
-   "bookings": 14277,
-   "ca": 511197,
+   "bookings": 14279,
+   "ca": 511329,
    "first": "2025-08",
    "last": "2026-08"
   },
@@ -413,8 +413,8 @@
    "slug": "doinsport-5f3c10f2-e0fa-4fd6-a707-04f7ea53deb9",
    "name": "Bad Pad",
    "cp": "91420",
-   "bookings": 6996,
-   "ca": 474341,
+   "bookings": 7001,
+   "ca": 474391,
    "first": "2025-03",
    "last": "2026-08"
   },
@@ -431,8 +431,8 @@
    "slug": "doinsport-f7defd74-40b0-4fd2-be0f-69d69c4b4bd6",
    "name": "Planète Raquettes",
    "cp": "77870",
-   "bookings": 8011,
-   "ca": 456851,
+   "bookings": 8012,
+   "ca": 456899,
    "first": "2024-03",
    "last": "2026-08"
   },
