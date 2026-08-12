@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-12T16:03:46.240018",
+ "generated_at": "2026-08-12T17:33:12.962033",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -867,11 +867,27 @@
  ],
  "new_clubs": [
   {
+   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "source": "doinsport",
+   "name": "FIVE ARENA",
+   "cp": "77100",
+   "first_seen": "2026-08-12 19:31",
+   "days_since": 0
+  },
+  {
    "slug": "sartrouville-tc",
    "source": "anybuddy",
    "name": "sartrouville-tc",
    "cp": "78500",
    "first_seen": "2026-08-12 11:14",
+   "days_since": 0
+  },
+  {
+   "slug": "ucpa-montigny-club-le-village-montigny-le-bretonneux",
+   "source": "anybuddy",
+   "name": "ucpa-montigny-club-le-village-montigny-le-bretonneux",
+   "cp": "78180",
+   "first_seen": "2026-08-12 19:30",
    "days_since": 0
   },
   {
@@ -1528,6 +1544,6 @@
   "idle_24h": 0,
   "price_shifts": 10,
   "volume_drops": 95,
-  "new_clubs_14d": 82
+  "new_clubs_14d": 84
  }
 }
