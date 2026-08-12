@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-12T07:45:03.513287",
+ "generated_at": "2026-08-12T09:17:32.656531",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -867,6 +867,14 @@
  ],
  "new_clubs": [
   {
+   "slug": "sartrouville-tc",
+   "source": "anybuddy",
+   "name": "sartrouville-tc",
+   "cp": "78500",
+   "first_seen": "2026-08-12 11:14",
+   "days_since": 0
+  },
+  {
    "slug": "wtc-wissous",
    "source": "anybuddy",
    "name": "wtc-wissous",
@@ -1520,6 +1528,6 @@
   "idle_24h": 0,
   "price_shifts": 10,
   "volume_drops": 95,
-  "new_clubs_14d": 81
+  "new_clubs_14d": 82
  }
 }
