@@ -354,100 +354,114 @@
  "studio_node": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studionode.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-08 05:32",
+  "checked_at": "2026-08-13 05:25",
   "url": "https://studionode.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "elite_stimulation": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.elite-stimulation.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:43",
+  "checked_at": "2026-08-13 05:28",
   "url": "https://www.elite-stimulation.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "pulse_training_studio": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://pulsetraining.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:44",
+  "checked_at": "2026-08-13 05:29",
   "url": "https://pulsetraining.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "jumpcity_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.jumpcity.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:44",
+  "checked_at": "2026-08-13 05:30",
   "url": "https://www.jumpcity.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "nikito_rosny": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://nikito.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:45",
+  "checked_at": "2026-08-13 05:30",
   "url": "https://nikito.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "smile_world_bercy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://smileworld.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:45",
+  "checked_at": "2026-08-13 05:30",
   "url": "https://smileworld.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "you_jump_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.youjump.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:46",
+  "checked_at": "2026-08-13 05:31",
   "url": "https://www.youjump.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "l_usine_op_ra": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.usinesportsclub.com/paris-opera (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:46",
+  "checked_at": "2026-08-13 05:31",
   "url": "https://www.usinesportsclub.com/paris-opera",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "l_usine_saint_lazare": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.usinesportsclub.com/paris-saint-lazare (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:46",
+  "checked_at": "2026-08-13 05:31",
   "url": "https://www.usinesportsclub.com/paris-saint-lazare",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "l_usine_beaubourg": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.usinesportsclub.com/paris-beaubourg (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:46",
+  "checked_at": "2026-08-13 05:31",
   "url": "https://www.usinesportsclub.com/paris-beaubourg",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "blanche": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.blanche.club/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:47",
+  "checked_at": "2026-08-13 05:32",
   "url": "https://www.blanche.club/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "klay_club": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.klay.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:47",
+  "checked_at": "2026-08-13 05:32",
   "url": "https://www.klay.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "ken_club": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.kenclub.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:48",
+  "checked_at": "2026-08-13 05:33",
   "url": "https://www.kenclub.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "triomphe_fitness_club": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://triomphe-fitness.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:48",
+  "checked_at": "2026-08-13 05:33",
   "url": "https://triomphe-fitness.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "club_jean_de_beauvais": {
   "platform": "unknown",
@@ -459,30 +473,34 @@
  "apollo_sporting_club_paris_3": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.apollosportingclub.com/paris-3/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:49",
+  "checked_at": "2026-08-13 05:34",
   "url": "https://www.apollosportingclub.com/paris-3/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "apollo_sporting_club_paris_9": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.apollosportingclub.com/paris-9/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:49",
+  "checked_at": "2026-08-13 05:34",
   "url": "https://www.apollosportingclub.com/paris-9/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "apollo_sporting_club_paris_11": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.apollosportingclub.com/paris-11/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:53",
+  "checked_at": "2026-08-13 05:40",
   "url": "https://www.apollosportingclub.com/paris-11/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "apollo_sporting_club_paris_17": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://www.apollosportingclub.com/paris-17/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:59",
+  "checked_at": "2026-08-13 05:45",
   "url": "https://www.apollosportingclub.com/paris-17/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "apollo_sporting_club_paris_19": {
   "platform": "unknown",
@@ -944,43 +962,43 @@
  "sore_studio": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://sorestudio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:40",
+  "checked_at": "2026-08-13 05:26",
   "url": "https://sorestudio.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "pure_golf_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://pure-golf.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:40",
+  "checked_at": "2026-08-13 05:26",
   "url": "https://pure-golf.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "studio_harmonic": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studioharmonic.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:41",
+  "checked_at": "2026-08-13 05:26",
   "url": "https://studioharmonic.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "studio_7_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://studio7paris.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:41",
+  "checked_at": "2026-08-13 05:27",
   "url": "https://studio7paris.com/",
-  "attempts": 1
+  "attempts": 2
  },
  "cirqu_volution_pantin": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://cirquevolution.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:42",
+  "checked_at": "2026-08-13 05:28",
   "url": "https://cirquevolution.fr/",
-  "attempts": 1
+  "attempts": 2
  },
  "recovery_studio_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://recovery-studio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-10 05:43",
+  "checked_at": "2026-08-13 05:29",
   "url": "https://recovery-studio.com/",
-  "attempts": 1
+  "attempts": 2
  }
 }

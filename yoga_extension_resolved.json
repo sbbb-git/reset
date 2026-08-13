@@ -1295,43 +1295,49 @@
  "chita_studio": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://chitastudio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-12 05:26",
+  "checked_at": "2026-08-13 05:22",
   "url": "https://chitastudio.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "deeply_yoga": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://deeplyyoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-12 05:27",
+  "checked_at": "2026-08-13 05:22",
   "url": "https://deeplyyoga.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "yoga_culture": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://yogaetculture.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-12 05:27",
+  "checked_at": "2026-08-13 05:23",
   "url": "https://yogaetculture.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "arkose_massy": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://arkose.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-12 05:28",
+  "checked_at": "2026-08-13 05:23",
   "url": "https://arkose.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "connecting_yoga_aubervilliers": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://connectingyoga.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-12 05:28",
+  "checked_at": "2026-08-13 05:24",
   "url": "https://connectingyoga.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "atha_yoga_meudon": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://athayoga.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-12 05:29",
+  "checked_at": "2026-08-13 05:24",
   "url": "https://athayoga.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  }
 }
