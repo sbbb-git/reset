@@ -1,6 +1,15 @@
 {
- "generated_at": "2026-08-13T18:32:43.344723",
- "idle_24h": [],
+ "generated_at": "2026-08-13T19:40:42.486789",
+ "idle_24h": [
+  {
+   "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
+   "source": "doinsport",
+   "name": "ASS TENNIS CLUB SARCELLOIS",
+   "cp": "95200",
+   "last_seen": "2026-08-12 13:50",
+   "hours_idle": 29.8
+  }
+ ],
  "price_shifts": [
   {
    "slug": "play-padel-alfortville",
@@ -1550,8 +1559,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 106,
-  "idle_24h": 0,
+  "total_anomalies": 107,
+  "idle_24h": 1,
   "price_shifts": 11,
   "volume_drops": 95,
   "new_clubs_14d": 84
