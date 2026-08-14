@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-14T04:25:18.202808",
+ "generated_at": "2026-08-14T05:59:38.919575",
  "idle_24h": [
   {
    "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
@@ -7,7 +7,7 @@
    "name": "ASS TENNIS CLUB SARCELLOIS",
    "cp": "95200",
    "last_seen": "2026-08-12 13:50",
-   "hours_idle": 38.6
+   "hours_idle": 40.2
   }
  ],
  "price_shifts": [
@@ -26,6 +26,16 @@
    "source": "anybuddy",
    "name": "4-padel-montreuil",
    "cp": "93100",
+   "prix_30j": 84.0,
+   "prix_recent": 48.0,
+   "delta_pct": -42.9,
+   "direction": "baisse"
+  },
+  {
+   "slug": "4padel-cao-saint-denis",
+   "source": "anybuddy",
+   "name": "4padel-cao-saint-denis",
+   "cp": "93200",
    "prix_30j": 84.0,
    "prix_recent": 48.0,
    "delta_pct": -42.9,
@@ -876,6 +886,14 @@
  ],
  "new_clubs": [
   {
+   "slug": "4padel-cao-saint-denis",
+   "source": "anybuddy",
+   "name": "4padel-cao-saint-denis",
+   "cp": "93200",
+   "first_seen": "2026-08-14 07:56",
+   "days_since": 0
+  },
+  {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
    "source": "doinsport",
    "name": "FIVE ARENA",
@@ -1549,10 +1567,10 @@
   }
  ],
  "summary": {
-  "total_anomalies": 106,
+  "total_anomalies": 107,
   "idle_24h": 1,
-  "price_shifts": 10,
+  "price_shifts": 11,
   "volume_drops": 95,
-  "new_clubs_14d": 84
+  "new_clubs_14d": 85
  }
 }

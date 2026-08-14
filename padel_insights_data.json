@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-14T04:25:18.045594",
+ "generated_at": "2026-08-14T05:59:38.693758",
  "heatmap": {
   "days": [
    "Lundi",
@@ -14,7 +14,7 @@
    "Lundi": [
     {
      "heure": 7,
-     "offered": 304,
+     "offered": 310,
      "demand": 37,
      "occupation_pct": 12
     },
@@ -326,9 +326,9 @@
    "Jeudi": [
     {
      "heure": 7,
-     "offered": 280,
+     "offered": 296,
      "demand": 72,
-     "occupation_pct": 26
+     "occupation_pct": 24
     },
     {
      "heure": 8,
@@ -612,8 +612,8 @@
     },
     {
      "heure": 20,
-     "offered": 3177,
-     "demand": 1470,
+     "offered": 3178,
+     "demand": 1471,
      "occupation_pct": 46
     },
     {
@@ -3783,7 +3783,7 @@
    {
     "chain": "Forest Hill",
     "n_clubs": 3,
-    "median_sessions_per_club": 819,
+    "median_sessions_per_club": 824,
     "median_price_90": 85.5
    },
    {
@@ -3917,7 +3917,7 @@
   "n_mono": 102,
   "median_sessions_multi": 500,
   "median_sessions_mono": 43,
-  "avg_sessions_multi": 1703,
+  "avg_sessions_multi": 1704,
   "avg_sessions_mono": 445,
   "clusters": [
    {
@@ -3960,7 +3960,7 @@
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 1816
+    "total_sessions": 1827
    },
    {
     "unified_id": "unif_008",
@@ -4037,7 +4037,7 @@
     "canonical_name": "4padel-cao-saint-denis",
     "cp": "93200",
     "n_platforms": 2,
-    "total_sessions": 0
+    "total_sessions": 6
    },
    {
     "unified_id": "unif_003",
