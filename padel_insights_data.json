@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-14T22:29:16.314234",
+ "generated_at": "2026-08-14T22:54:28.190138",
  "heatmap": {
   "days": [
    "Lundi",
@@ -197,7 +197,7 @@
     {
      "heure": 20,
      "offered": 4657,
-     "demand": 3336,
+     "demand": 3337,
      "occupation_pct": 72
     },
     {
@@ -589,7 +589,7 @@
     {
      "heure": 16,
      "offered": 4708,
-     "demand": 2712,
+     "demand": 2713,
      "occupation_pct": 58
     },
     {
@@ -651,19 +651,19 @@
     {
      "heure": 9,
      "offered": 4995,
-     "demand": 3527,
+     "demand": 3528,
      "occupation_pct": 71
     },
     {
      "heure": 10,
-     "offered": 4141,
-     "demand": 2937,
+     "offered": 4142,
+     "demand": 2939,
      "occupation_pct": 71
     },
     {
      "heure": 11,
      "offered": 5036,
-     "demand": 3569,
+     "demand": 3570,
      "occupation_pct": 71
     },
     {
@@ -799,12 +799,12 @@
    [
     "Dimanche",
     11,
-    3569
+    3570
    ],
    [
     "Dimanche",
     9,
-    3527
+    3528
    ],
    [
     "Dimanche",
@@ -824,7 +824,7 @@
    [
     "Mardi",
     20,
-    3336
+    3337
    ],
    [
     "Jeudi",
@@ -3917,7 +3917,7 @@
   "n_mono": 102,
   "median_sessions_multi": 1197,
   "median_sessions_mono": 48,
-  "avg_sessions_multi": 1820,
+  "avg_sessions_multi": 1821,
   "avg_sessions_mono": 481,
   "clusters": [
    {
@@ -3995,7 +3995,7 @@
     "canonical_name": "padel-95-pontoise",
     "cp": "95300",
     "n_platforms": 2,
-    "total_sessions": 529
+    "total_sessions": 530
    },
    {
     "unified_id": "unif_016",
