@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-15T19:26:23.249000",
+ "generated_at": "2026-08-15T19:49:01.554439",
  "heatmap": {
   "days": [
    "Lundi",
@@ -202,8 +202,8 @@
     },
     {
      "heure": 21,
-     "offered": 4210,
-     "demand": 3021,
+     "offered": 4214,
+     "demand": 3023,
      "occupation_pct": 72
     },
     {
@@ -514,19 +514,19 @@
     },
     {
      "heure": 21,
-     "offered": 3562,
+     "offered": 3566,
      "demand": 2388,
      "occupation_pct": 67
     },
     {
      "heure": 22,
      "offered": 2475,
-     "demand": 1493,
+     "demand": 1495,
      "occupation_pct": 60
     },
     {
      "heure": 23,
-     "offered": 569,
+     "offered": 571,
      "demand": 342,
      "occupation_pct": 60
     }
@@ -600,8 +600,8 @@
     },
     {
      "heure": 18,
-     "offered": 5300,
-     "demand": 3321,
+     "offered": 5301,
+     "demand": 3322,
      "occupation_pct": 63
     },
     {
@@ -625,13 +625,13 @@
     {
      "heure": 22,
      "offered": 1840,
-     "demand": 912,
+     "demand": 913,
      "occupation_pct": 50
     },
     {
      "heure": 23,
-     "offered": 416,
-     "demand": 255,
+     "offered": 417,
+     "demand": 256,
      "occupation_pct": 61
     }
    ],
@@ -651,19 +651,19 @@
     {
      "heure": 9,
      "offered": 5020,
-     "demand": 3575,
+     "demand": 3576,
      "occupation_pct": 71
     },
     {
      "heure": 10,
      "offered": 4156,
-     "demand": 2994,
+     "demand": 2995,
      "occupation_pct": 72
     },
     {
      "heure": 11,
      "offered": 5050,
-     "demand": 3636,
+     "demand": 3637,
      "occupation_pct": 72
     },
     {
@@ -680,8 +680,8 @@
     },
     {
      "heure": 14,
-     "offered": 5371,
-     "demand": 3261,
+     "offered": 5372,
+     "demand": 3262,
      "occupation_pct": 61
     },
     {
@@ -693,25 +693,25 @@
     {
      "heure": 16,
      "offered": 5411,
-     "demand": 3526,
+     "demand": 3529,
      "occupation_pct": 65
     },
     {
      "heure": 17,
-     "offered": 5630,
-     "demand": 3711,
+     "offered": 5631,
+     "demand": 3713,
      "occupation_pct": 66
     },
     {
      "heure": 18,
      "offered": 6113,
-     "demand": 4145,
+     "demand": 4149,
      "occupation_pct": 68
     },
     {
      "heure": 19,
      "offered": 4509,
-     "demand": 2691,
+     "demand": 2692,
      "occupation_pct": 60
     },
     {
@@ -722,7 +722,7 @@
     },
     {
      "heure": 21,
-     "offered": 2933,
+     "offered": 2934,
      "demand": 1757,
      "occupation_pct": 60
     },
@@ -744,7 +744,7 @@
    [
     "Dimanche",
     18,
-    4145
+    4149
    ],
    [
     "Vendredi",
@@ -779,7 +779,7 @@
    [
     "Dimanche",
     17,
-    3711
+    3713
    ],
    [
     "Lundi",
@@ -794,7 +794,7 @@
    [
     "Dimanche",
     11,
-    3636
+    3637
    ],
    [
     "Mercredi",
@@ -809,7 +809,7 @@
    [
     "Dimanche",
     9,
-    3575
+    3576
    ],
    [
     "Mardi",
@@ -819,7 +819,7 @@
    [
     "Dimanche",
     16,
-    3526
+    3529
    ],
    [
     "Mardi",
@@ -829,7 +829,7 @@
    [
     "Samedi",
     18,
-    3321
+    3322
    ],
    [
     "Lundi",
@@ -3801,7 +3801,7 @@
    {
     "chain": "Aldea",
     "n_clubs": 2,
-    "median_sessions_per_club": 2561.0,
+    "median_sessions_per_club": 2561.5,
     "median_price_90": 72.0
    },
    {
@@ -3939,7 +3939,7 @@
     "canonical_name": "aldea-padel-villabe",
     "cp": "91100",
     "n_platforms": 2,
-    "total_sessions": 5122
+    "total_sessions": 5123
    },
    {
     "unified_id": "unif_004",
@@ -3953,7 +3953,7 @@
     "canonical_name": "Padel Horizon - Sucy en Brie",
     "cp": "94370",
     "n_platforms": 2,
-    "total_sessions": 2247
+    "total_sessions": 2249
    },
    {
     "unified_id": "unif_002",
@@ -4044,7 +4044,7 @@
     "canonical_name": "Royal Padel Club - Versailles",
     "cp": "78000",
     "n_platforms": 2,
-    "total_sessions": 12
+    "total_sessions": 13
    },
    {
     "unified_id": "unif_003",
