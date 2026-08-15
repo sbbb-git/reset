@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-15T12:44:51.309028",
+ "generated_at": "2026-08-15T13:35:39.848072",
  "idle_24h": [
   {
    "slug": "wtc-wissous",
@@ -7,7 +7,7 @@
    "name": "wtc-wissous",
    "cp": "91320",
    "last_seen": "2026-08-14 12:33",
-   "hours_idle": 24.2
+   "hours_idle": 25.0
   }
  ],
  "price_shifts": [
@@ -19,6 +19,16 @@
    "prix_30j": 72.0,
    "prix_recent": 27.0,
    "delta_pct": -62.5,
+   "direction": "baisse"
+  },
+  {
+   "slug": "doinsport-59044915-a142-4f27-a8f4-433b199d73d5",
+   "source": "doinsport",
+   "name": "Play Padel Alfortville",
+   "cp": "94140",
+   "prix_30j": 72.0,
+   "prix_recent": 36.0,
+   "delta_pct": -50.0,
    "direction": "baisse"
   },
   {
@@ -1575,9 +1585,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 107,
+  "total_anomalies": 108,
   "idle_24h": 1,
-  "price_shifts": 11,
+  "price_shifts": 12,
   "volume_drops": 95,
   "new_clubs_14d": 86
  }
