@@ -1026,15 +1026,17 @@
  "cirqu_volution_pantin": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://cirquevolution.fr/ (homepage + 5 paths)",
-  "checked_at": "2026-08-13 05:28",
+  "checked_at": "2026-08-15 04:07",
   "url": "https://cirquevolution.fr/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  },
  "recovery_studio_paris": {
   "platform": "unknown",
   "note": "Aucune signature détectée sur https://recovery-studio.com/ (homepage + 5 paths)",
-  "checked_at": "2026-08-13 05:29",
+  "checked_at": "2026-08-15 04:07",
   "url": "https://recovery-studio.com/",
-  "attempts": 2
+  "attempts": 3,
+  "status": "gave_up"
  }
 }
