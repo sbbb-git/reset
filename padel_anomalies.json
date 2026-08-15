@@ -1,13 +1,21 @@
 {
- "generated_at": "2026-08-15T14:52:48.275420",
+ "generated_at": "2026-08-15T15:26:45.076278",
  "idle_24h": [
+  {
+   "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
+   "source": "doinsport",
+   "name": "ASS TENNIS CLUB SARCELLOIS",
+   "cp": "95200",
+   "last_seen": "2026-08-12 13:50",
+   "hours_idle": 73.6
+  },
   {
    "slug": "wtc-wissous",
    "source": "anybuddy",
    "name": "wtc-wissous",
    "cp": "91320",
    "last_seen": "2026-08-14 12:33",
-   "hours_idle": 26.3
+   "hours_idle": 26.9
   }
  ],
  "price_shifts": [
@@ -1585,8 +1593,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 108,
-  "idle_24h": 1,
+  "total_anomalies": 109,
+  "idle_24h": 2,
   "price_shifts": 12,
   "volume_drops": 95,
   "new_clubs_14d": 86
