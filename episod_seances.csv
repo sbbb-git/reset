@@ -5137,9 +5137,9 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-15,Samedi,11:00,11:50,République Studio Lift,Lift,Jeson,0,0,True,2026-08-12 20:05
 2026-08-15,Samedi,11:00,11:50,République Studio Reformer,Reformer,Zoé,18,15,True,2026-08-15 10:40
 2026-08-15,Samedi,11:00,12:00,République Studio Yoga,Pilates,Sophie,35,28,True,2026-08-15 10:40
-2026-08-15,Samedi,11:30,12:15,Bourse Studio Bootcamp,Bootcamp Strong,Nicolas,0,0,False,2026-08-13 07:45
-2026-08-15,Samedi,11:30,12:15,Bourse Studio Boxing,Boxing,Mélanie,0,0,False,2026-08-13 07:45
-2026-08-15,Samedi,11:30,12:15,Pigalle Studio Bootcamp,Bootcamp,Samy,0,0,False,2026-08-13 07:45
+2026-08-15,Samedi,11:30,12:15,Bourse Studio Bootcamp,Bootcamp Strong,Nicolas,0,0,True,2026-08-13 07:45
+2026-08-15,Samedi,11:30,12:15,Bourse Studio Boxing,Boxing,Mélanie,0,0,True,2026-08-13 07:45
+2026-08-15,Samedi,11:30,12:15,Pigalle Studio Bootcamp,Bootcamp,Samy,0,0,True,2026-08-13 07:45
 2026-08-15,Samedi,11:45,12:30,Nation Studio Bootcamp,Bootcamp Strong,ALEXANDRE A.,20,17,False,2026-08-15 11:35
 2026-08-15,Samedi,11:45,12:30,Nation Studio Cycling,Cycling,Flora,30,6,False,2026-08-15 11:35
 2026-08-15,Samedi,12:00,12:45,Levallois Bootcamp Studio Bootcamp,Bootcamp,Solène,30,8,False,2026-08-15 11:54
@@ -5164,7 +5164,7 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-15,Samedi,14:15,15:05,Louvre Studio Heat,Hot Pilates,Charlène,0,0,False,2026-08-13 11:21
 2026-08-15,Samedi,15:00,15:50,Louvre Studio Reformer,Reformer,Astrid,0,0,False,2026-08-13 11:21
 2026-08-15,Samedi,15:15,16:15,Nation Studio Athletic,Athletic Training,Samy,0,0,False,2026-08-13 11:21
-2026-08-15,Samedi,15:30,16:15,Nation Studio Bootcamp,Bootcamp,Marwa,0,0,False,2026-08-13 11:21
+2026-08-15,Samedi,15:30,16:15,Nation Studio Bootcamp,Bootcamp,Samy,0,0,False,2026-08-13 11:21
 2026-08-15,Samedi,15:30,16:20,République Studio Reformer,Reformer,Coline,0,0,False,2026-08-13 11:21
 2026-08-15,Samedi,15:45,16:30,République Studio Cycling,Cycling,Flora,0,0,False,2026-08-13 12:40
 2026-08-15,Samedi,16:00,16:45,Bourse Studio Bootcamp,Bootcamp,Michael,0,0,False,2026-08-13 12:40
@@ -5395,5 +5395,20 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-17,Lundi,20:15,21:05,Pigalle Studio Reformer,Reformer,Aurélie,0,0,False,2026-08-15 11:35
 2026-08-17,Lundi,20:15,21:05,République Studio Reformer,Reformer,Emma,0,0,False,2026-08-15 11:35
 2026-08-17,Lundi,20:30,21:15,Bourse Studio Bootcamp,Bootcamp,Ange,0,0,False,2026-08-15 11:35
+2026-08-17,Lundi,20:30,21:15,Levallois Bootcamp Studio Bootcamp,Bootcamp,Soukaïna,0,0,False,2026-08-15 12:34
+2026-08-17,Lundi,20:30,21:20,Levallois Reformer Studio Reformer,Reformer,Zoé,0,0,False,2026-08-15 12:34
+2026-08-17,Lundi,20:30,21:15,Place de Clichy Studio Cycling,Cycling,Harold,0,0,False,2026-08-15 12:34
 2026-08-17,Lundi,20:30,21:30,République Studio Athletic,Athletic ATHX,Andy,0,0,False,2026-08-15 11:35
+2026-08-17,Lundi,20:30,21:15,République Studio Bootcamp,Bootcamp Strong,Tommy,0,0,False,2026-08-15 12:34
 2026-08-17,Lundi,20:30,21:15,République Studio Boxing,Boxing,Dody,0,0,False,2026-08-15 11:35
+2026-08-18,Mardi,07:15,08:05,Pigalle Studio Reformer,Reformer,Solène,0,0,False,2026-08-15 12:34
+2026-08-18,Mardi,07:15,08:00,Place de Clichy Studio Cycling,Cycling,Yassine,0,0,False,2026-08-15 12:34
+2026-08-18,Mardi,07:15,08:15,République Studio Athletic,Athletic Training,ALEXANDRE A.,0,0,False,2026-08-15 12:34
+2026-08-18,Mardi,07:15,08:05,République Studio Reformer,Reformer,Soukaïna,0,0,False,2026-08-15 12:34
+2026-08-18,Mardi,07:30,08:15,Bourse Studio Bootcamp,Bootcamp,Laura B.,0,0,False,2026-08-15 12:34
+2026-08-18,Mardi,07:30,08:15,Bourse Studio Boxing,Boxing,Boramy,0,0,False,2026-08-15 12:34
+2026-08-18,Mardi,07:30,08:20,Levallois Reformer Studio Reformer,Reformer,Olivier,0,0,False,2026-08-15 12:34
+2026-08-18,Mardi,07:30,08:20,Louvre Studio Heat,Heat Tone,Sasha,0,0,False,2026-08-15 12:34
+2026-08-18,Mardi,07:30,08:20,Louvre Studio Reformer,Reformer,Leila B.,0,0,False,2026-08-15 12:34
+2026-08-18,Mardi,07:30,08:30,Nation Studio Athletic,Athletic Training,Ousmane,0,0,False,2026-08-15 12:34
+2026-08-18,Mardi,07:30,08:15,Nation Studio Bootcamp,Bootcamp Strong,Marion,0,0,False,2026-08-15 12:34
