@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-15T03:44:21.623023",
+ "generated_at": "2026-08-15T04:37:14.142173",
  "heatmap": {
   "days": [
    "Lundi",
@@ -197,7 +197,7 @@
     {
      "heure": 20,
      "offered": 4657,
-     "demand": 3337,
+     "demand": 3338,
      "occupation_pct": 72
     },
     {
@@ -375,13 +375,13 @@
     {
      "heure": 15,
      "offered": 4643,
-     "demand": 2092,
+     "demand": 2094,
      "occupation_pct": 45
     },
     {
      "heure": 16,
      "offered": 4477,
-     "demand": 2225,
+     "demand": 2227,
      "occupation_pct": 50
     },
     {
@@ -473,7 +473,7 @@
     {
      "heure": 14,
      "offered": 5166,
-     "demand": 2388,
+     "demand": 2389,
      "occupation_pct": 46
     },
     {
@@ -565,13 +565,13 @@
     {
      "heure": 12,
      "offered": 4815,
-     "demand": 2717,
+     "demand": 2718,
      "occupation_pct": 56
     },
     {
      "heure": 13,
      "offered": 3859,
-     "demand": 1907,
+     "demand": 1909,
      "occupation_pct": 49
     },
     {
@@ -601,7 +601,7 @@
     {
      "heure": 18,
      "offered": 5288,
-     "demand": 3178,
+     "demand": 3179,
      "occupation_pct": 60
     },
     {
@@ -662,25 +662,25 @@
     },
     {
      "heure": 11,
-     "offered": 5036,
+     "offered": 5038,
      "demand": 3570,
      "occupation_pct": 71
     },
     {
      "heure": 12,
-     "offered": 5042,
-     "demand": 2774,
+     "offered": 5045,
+     "demand": 2775,
      "occupation_pct": 55
     },
     {
      "heure": 13,
-     "offered": 4705,
+     "offered": 4707,
      "demand": 2447,
      "occupation_pct": 52
     },
     {
      "heure": 14,
-     "offered": 5338,
+     "offered": 5339,
      "demand": 3168,
      "occupation_pct": 59
     },
@@ -824,7 +824,7 @@
    [
     "Mardi",
     20,
-    3337
+    3338
    ],
    [
     "Jeudi",
@@ -839,7 +839,7 @@
    [
     "Samedi",
     18,
-    3178
+    3179
    ]
   ]
  },
@@ -3915,9 +3915,9 @@
  "multi_vs_mono": {
   "n_multi_platforms": 19,
   "n_mono": 102,
-  "median_sessions_multi": 1313,
+  "median_sessions_multi": 1321,
   "median_sessions_mono": 48,
-  "avg_sessions_multi": 1957,
+  "avg_sessions_multi": 1958,
   "avg_sessions_mono": 500,
   "clusters": [
    {
@@ -3988,7 +3988,7 @@
     "canonical_name": "Sportfield Paris 16 ",
     "cp": "75016",
     "n_platforms": 2,
-    "total_sessions": 1313
+    "total_sessions": 1321
    },
    {
     "unified_id": "unif_011",
