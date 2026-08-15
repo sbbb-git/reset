@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-15T21:26:36.020212",
+ "generated_at": "2026-08-15T21:50:06.084297",
  "heatmap": {
   "days": [
    "Lundi",
@@ -319,7 +319,7 @@
     {
      "heure": 23,
      "offered": 324,
-     "demand": 178,
+     "demand": 179,
      "occupation_pct": 55
     }
    ],
@@ -503,13 +503,13 @@
     {
      "heure": 19,
      "offered": 4382,
-     "demand": 3042,
+     "demand": 3043,
      "occupation_pct": 69
     },
     {
      "heure": 20,
      "offered": 4485,
-     "demand": 3139,
+     "demand": 3140,
      "occupation_pct": 70
     },
     {
@@ -526,9 +526,9 @@
     },
     {
      "heure": 23,
-     "offered": 577,
+     "offered": 582,
      "demand": 344,
-     "occupation_pct": 60
+     "occupation_pct": 59
     }
    ],
    "Samedi": [
@@ -681,49 +681,49 @@
     {
      "heure": 14,
      "offered": 5373,
-     "demand": 3272,
+     "demand": 3273,
      "occupation_pct": 61
     },
     {
      "heure": 15,
      "offered": 5619,
-     "demand": 3643,
+     "demand": 3644,
      "occupation_pct": 65
     },
     {
      "heure": 16,
-     "offered": 5412,
-     "demand": 3552,
+     "offered": 5413,
+     "demand": 3557,
      "occupation_pct": 66
     },
     {
      "heure": 17,
      "offered": 5633,
-     "demand": 3743,
-     "occupation_pct": 66
+     "demand": 3750,
+     "occupation_pct": 67
     },
     {
      "heure": 18,
      "offered": 6114,
-     "demand": 4180,
+     "demand": 4184,
      "occupation_pct": 68
     },
     {
      "heure": 19,
      "offered": 4509,
-     "demand": 2715,
+     "demand": 2718,
      "occupation_pct": 60
     },
     {
      "heure": 20,
      "offered": 4396,
-     "demand": 2778,
+     "demand": 2779,
      "occupation_pct": 63
     },
     {
      "heure": 21,
      "offered": 2934,
-     "demand": 1774,
+     "demand": 1775,
      "occupation_pct": 60
     },
     {
@@ -744,7 +744,7 @@
    [
     "Dimanche",
     18,
-    4180
+    4184
    ],
    [
     "Jeudi",
@@ -774,7 +774,7 @@
    [
     "Dimanche",
     17,
-    3743
+    3750
    ],
    [
     "Mercredi",
@@ -793,12 +793,12 @@
    ],
    [
     "Dimanche",
-    11,
-    3643
+    15,
+    3644
    ],
    [
     "Dimanche",
-    15,
+    11,
     3643
    ],
    [
@@ -814,7 +814,7 @@
    [
     "Dimanche",
     16,
-    3552
+    3557
    ],
    [
     "Mardi",
@@ -3960,7 +3960,7 @@
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 2140
+    "total_sessions": 2145
    },
    {
     "unified_id": "unif_018",
