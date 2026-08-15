@@ -1,6 +1,15 @@
 {
- "generated_at": "2026-08-15T11:49:17.773282",
- "idle_24h": [],
+ "generated_at": "2026-08-15T12:44:51.309028",
+ "idle_24h": [
+  {
+   "slug": "wtc-wissous",
+   "source": "anybuddy",
+   "name": "wtc-wissous",
+   "cp": "91320",
+   "last_seen": "2026-08-14 12:33",
+   "hours_idle": 24.2
+  }
+ ],
  "price_shifts": [
   {
    "slug": "play-padel-alfortville",
@@ -1566,8 +1575,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 106,
-  "idle_24h": 0,
+  "total_anomalies": 107,
+  "idle_24h": 1,
   "price_shifts": 11,
   "volume_drops": 95,
   "new_clubs_14d": 86
