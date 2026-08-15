@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-15T05:30:36.165367",
+ "generated_at": "2026-08-15T05:56:13.155642",
  "heatmap": {
   "days": [
    "Lundi",
@@ -14,9 +14,9 @@
    "Lundi": [
     {
      "heure": 7,
-     "offered": 310,
+     "offered": 325,
      "demand": 42,
-     "occupation_pct": 14
+     "occupation_pct": 13
     },
     {
      "heure": 8,
@@ -118,7 +118,7 @@
    "Mardi": [
     {
      "heure": 7,
-     "offered": 295,
+     "offered": 307,
      "demand": 57,
      "occupation_pct": 19
     },
@@ -559,7 +559,7 @@
     {
      "heure": 11,
      "offered": 3950,
-     "demand": 2610,
+     "demand": 2611,
      "occupation_pct": 66
     },
     {
@@ -3759,7 +3759,7 @@
    {
     "chain": "4PADEL",
     "n_clubs": 10,
-    "median_sessions_per_club": 1277.5,
+    "median_sessions_per_club": 1285.0,
     "median_price_90": 48.0
    },
    {
@@ -3917,7 +3917,7 @@
   "n_mono": 102,
   "median_sessions_multi": 1321,
   "median_sessions_mono": 48,
-  "avg_sessions_multi": 1958,
+  "avg_sessions_multi": 1959,
   "avg_sessions_mono": 500,
   "clusters": [
    {
@@ -4037,7 +4037,7 @@
     "canonical_name": "4padel-cao-saint-denis",
     "cp": "93200",
     "n_platforms": 2,
-    "total_sessions": 56
+    "total_sessions": 68
    },
    {
     "unified_id": "unif_012",
