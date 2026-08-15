@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-15T05:56:13.155642",
+ "generated_at": "2026-08-15T06:45:12.542874",
  "heatmap": {
   "days": [
    "Lundi",
@@ -20,9 +20,9 @@
     },
     {
      "heure": 8,
-     "offered": 1273,
+     "offered": 1302,
      "demand": 546,
-     "occupation_pct": 43
+     "occupation_pct": 42
     },
     {
      "heure": 9,
@@ -51,31 +51,31 @@
     {
      "heure": 13,
      "offered": 4062,
-     "demand": 1330,
+     "demand": 1331,
      "occupation_pct": 33
     },
     {
      "heure": 14,
      "offered": 4929,
-     "demand": 2112,
+     "demand": 2115,
      "occupation_pct": 43
     },
     {
      "heure": 15,
      "offered": 4797,
-     "demand": 2058,
+     "demand": 2063,
      "occupation_pct": 43
     },
     {
      "heure": 16,
      "offered": 4404,
-     "demand": 2052,
+     "demand": 2056,
      "occupation_pct": 47
     },
     {
      "heure": 17,
      "offered": 4694,
-     "demand": 2748,
+     "demand": 2749,
      "occupation_pct": 59
     },
     {
@@ -124,7 +124,7 @@
     },
     {
      "heure": 8,
-     "offered": 1289,
+     "offered": 1292,
      "demand": 580,
      "occupation_pct": 45
     },
@@ -332,9 +332,9 @@
     },
     {
      "heure": 8,
-     "offered": 1305,
+     "offered": 1317,
      "demand": 622,
-     "occupation_pct": 48
+     "occupation_pct": 47
     },
     {
      "heure": 9,
@@ -436,9 +436,9 @@
     },
     {
      "heure": 8,
-     "offered": 1178,
+     "offered": 1205,
      "demand": 515,
-     "occupation_pct": 44
+     "occupation_pct": 43
     },
     {
      "heure": 9,
@@ -558,8 +558,8 @@
     },
     {
      "heure": 11,
-     "offered": 3950,
-     "demand": 2611,
+     "offered": 3951,
+     "demand": 2612,
      "occupation_pct": 66
     },
     {
@@ -644,7 +644,7 @@
     },
     {
      "heure": 8,
-     "offered": 1108,
+     "offered": 1109,
      "demand": 575,
      "occupation_pct": 52
     },
@@ -3759,7 +3759,7 @@
    {
     "chain": "4PADEL",
     "n_clubs": 10,
-    "median_sessions_per_club": 1285.0,
+    "median_sessions_per_club": 1299.5,
     "median_price_90": 48.0
    },
    {
@@ -3783,7 +3783,7 @@
    {
     "chain": "Forest Hill",
     "n_clubs": 3,
-    "median_sessions_per_club": 902,
+    "median_sessions_per_club": 907,
     "median_price_90": 85.5
    },
    {
@@ -3917,7 +3917,7 @@
   "n_mono": 102,
   "median_sessions_multi": 1321,
   "median_sessions_mono": 48,
-  "avg_sessions_multi": 1959,
+  "avg_sessions_multi": 1960,
   "avg_sessions_mono": 500,
   "clusters": [
    {
@@ -3960,7 +3960,7 @@
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 1994
+    "total_sessions": 2005
    },
    {
     "unified_id": "unif_018",
