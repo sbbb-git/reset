@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-16T02:48:13.487491",
+ "generated_at": "2026-08-16T03:58:09.256535",
  "heatmap": {
   "days": [
    "Lundi",
@@ -45,44 +45,44 @@
     {
      "heure": 12,
      "offered": 5128,
-     "demand": 1985,
+     "demand": 1986,
      "occupation_pct": 39
     },
     {
      "heure": 13,
      "offered": 4201,
-     "demand": 1351,
+     "demand": 1354,
      "occupation_pct": 32
     },
     {
      "heure": 14,
      "offered": 5003,
-     "demand": 2142,
+     "demand": 2145,
      "occupation_pct": 43
     },
     {
      "heure": 15,
      "offered": 4868,
-     "demand": 2092,
+     "demand": 2094,
      "occupation_pct": 43
     },
     {
      "heure": 16,
      "offered": 4460,
-     "demand": 2092,
+     "demand": 2096,
      "occupation_pct": 47
     },
     {
      "heure": 17,
      "offered": 4814,
-     "demand": 2795,
+     "demand": 2797,
      "occupation_pct": 58
     },
     {
      "heure": 18,
      "offered": 5370,
-     "demand": 3838,
-     "occupation_pct": 71
+     "demand": 3843,
+     "occupation_pct": 72
     },
     {
      "heure": 19,
@@ -92,8 +92,8 @@
     },
     {
      "heure": 20,
-     "offered": 4696,
-     "demand": 3317,
+     "offered": 4697,
+     "demand": 3319,
      "occupation_pct": 71
     },
     {
@@ -651,79 +651,79 @@
     {
      "heure": 9,
      "offered": 5023,
-     "demand": 3581,
+     "demand": 3582,
      "occupation_pct": 71
     },
     {
      "heure": 10,
      "offered": 4160,
-     "demand": 3007,
+     "demand": 3009,
      "occupation_pct": 72
     },
     {
      "heure": 11,
      "offered": 5052,
-     "demand": 3645,
+     "demand": 3650,
      "occupation_pct": 72
     },
     {
      "heure": 12,
      "offered": 5071,
-     "demand": 2878,
+     "demand": 2886,
      "occupation_pct": 57
     },
     {
      "heure": 13,
      "offered": 4727,
-     "demand": 2555,
+     "demand": 2561,
      "occupation_pct": 54
     },
     {
      "heure": 14,
      "offered": 5373,
-     "demand": 3282,
+     "demand": 3288,
      "occupation_pct": 61
     },
     {
      "heure": 15,
      "offered": 5624,
-     "demand": 3656,
+     "demand": 3662,
      "occupation_pct": 65
     },
     {
      "heure": 16,
      "offered": 5415,
-     "demand": 3567,
+     "demand": 3575,
      "occupation_pct": 66
     },
     {
      "heure": 17,
      "offered": 5634,
-     "demand": 3752,
+     "demand": 3756,
      "occupation_pct": 67
     },
     {
      "heure": 18,
      "offered": 6124,
-     "demand": 4195,
+     "demand": 4199,
      "occupation_pct": 69
     },
     {
      "heure": 19,
      "offered": 4509,
-     "demand": 2718,
+     "demand": 2722,
      "occupation_pct": 60
     },
     {
      "heure": 20,
      "offered": 4410,
-     "demand": 2794,
+     "demand": 2797,
      "occupation_pct": 63
     },
     {
      "heure": 21,
      "offered": 2935,
-     "demand": 1776,
+     "demand": 1777,
      "occupation_pct": 61
     },
     {
@@ -744,7 +744,7 @@
    [
     "Dimanche",
     18,
-    4195
+    4199
    ],
    [
     "Jeudi",
@@ -764,7 +764,7 @@
    [
     "Lundi",
     18,
-    3838
+    3843
    ],
    [
     "Jeudi",
@@ -774,7 +774,7 @@
    [
     "Dimanche",
     17,
-    3752
+    3756
    ],
    [
     "Mercredi",
@@ -789,7 +789,7 @@
    [
     "Dimanche",
     15,
-    3656
+    3662
    ],
    [
     "Jeudi",
@@ -799,7 +799,7 @@
    [
     "Dimanche",
     11,
-    3645
+    3650
    ],
    [
     "Mercredi",
@@ -809,12 +809,12 @@
    [
     "Dimanche",
     9,
-    3581
+    3582
    ],
    [
     "Dimanche",
     16,
-    3567
+    3575
    ],
    [
     "Mardi",
@@ -834,7 +834,7 @@
    [
     "Lundi",
     20,
-    3317
+    3319
    ],
    [
     "Jeudi",
@@ -4009,7 +4009,7 @@
     "canonical_name": "O.S. Sannois",
     "cp": "95110",
     "n_platforms": 2,
-    "total_sessions": 390
+    "total_sessions": 391
    },
    {
     "unified_id": "unif_014",
