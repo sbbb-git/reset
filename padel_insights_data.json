@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-16T03:58:09.256535",
+ "generated_at": "2026-08-16T04:41:03.369231",
  "heatmap": {
   "days": [
    "Lundi",
@@ -137,7 +137,7 @@
     {
      "heure": 10,
      "offered": 4702,
-     "demand": 1851,
+     "demand": 1852,
      "occupation_pct": 39
     },
     {
@@ -252,8 +252,8 @@
     },
     {
      "heure": 12,
-     "offered": 5183,
-     "demand": 2279,
+     "offered": 5184,
+     "demand": 2280,
      "occupation_pct": 44
     },
     {
@@ -514,7 +514,7 @@
     },
     {
      "heure": 21,
-     "offered": 3567,
+     "offered": 3568,
      "demand": 2388,
      "occupation_pct": 67
     },
@@ -3915,7 +3915,7 @@
  "multi_vs_mono": {
   "n_multi_platforms": 19,
   "n_mono": 102,
-  "median_sessions_multi": 1421,
+  "median_sessions_multi": 1422,
   "median_sessions_mono": 56,
   "avg_sessions_multi": 2101,
   "avg_sessions_mono": 548,
@@ -3988,14 +3988,14 @@
     "canonical_name": "Sportfield Paris 16 ",
     "cp": "75016",
     "n_platforms": 2,
-    "total_sessions": 1421
+    "total_sessions": 1422
    },
    {
     "unified_id": "unif_011",
     "canonical_name": "padel-95-pontoise",
     "cp": "95300",
     "n_platforms": 2,
-    "total_sessions": 679
+    "total_sessions": 680
    },
    {
     "unified_id": "unif_016",
