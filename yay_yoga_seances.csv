@@ -539,132 +539,158 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-12,Mercredi,20:15,21:15,Studio Douai,Hatha Yoga,Louise Lemaire,11,0,True,2026-08-15 02:34
 2026-08-12,Mercredi,20:30,21:45,Studio Cardinet,Hatha Yoga Niveau Intermédiaire,Hervé Leonard,12,0,True,2026-08-15 02:34
 2026-08-12,Mercredi,20:30,21:45,Studio Joseph de Maistre,Hatha Yoga,Edlyn Leonard,9,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,07:45,09:00,Studio Cardinet,Vinyasa Morning,Federica Petti,12,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,07:45,09:00,Studio en ligne,Vinyasa Morning Online,Federica Petti,100,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,08:30,09:30,Studio Joseph de Maistre,Vinyasa Morning,Maria Shaknova,9,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,08:30,09:45,Studio Vinaigriers,Nâtha Yoga,Reza Elaidi,20,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,10:00,11:00,Studio Cardinet,Yoga Doux,Cécile Rusterholz,12,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,10:00,11:00,Studio Douai,Yin Yoga,Anne Marie Boisvert,11,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,10:00,11:00,Studio Joseph de Maistre,Yoga Prénatal,Marianne Poulichot,9,5,True,2026-08-15 02:34
-2026-08-13,Jeudi,10:45,11:45,Studio Vinaigriers,Yoga Prénatal,Elodie Prou,20,10,True,2026-08-15 02:34
-2026-08-13,Jeudi,10:45,11:45,Studio en ligne,Yoga Prénatal Online,Elodie Prou,100,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,11:15,12:15,Studio Cardinet,Vinyasa Flow,Cécile Rusterholz,12,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,11:15,12:15,Studio Joseph de Maistre,Hatha Yoga,Marianne Poulichot,9,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,12:30,13:45,Studio Cardinet,Hatha Yoga,Louise Lemaire,12,2,True,2026-08-15 02:34
-2026-08-13,Jeudi,12:30,13:30,Studio Douai,Vinyasa Flow,Jessica Khawam,11,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,12:30,13:45,Studio Joseph de Maistre,Hatha Yoga Intégral,Marianne Poulichot,9,3,True,2026-08-15 02:34
-2026-08-13,Jeudi,12:30,13:30,Studio Vinaigriers,Vinyasa Flow,Elodie Prou,20,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,12:30,13:45,Studio en ligne,Hatha Yoga Online,Louise Lemaire,100,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,14:00,15:00,Studio Vinaigriers,Yoga Postnatal,Annabelle Bonnaud,12,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,16:30,17:30,Studio Cardinet,Yoga Postnatal,lenora krief,12,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,17:00,18:00,Studio Joseph de Maistre,Yin  et Bain sonore,Coline Pedroche,9,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,17:45,18:45,Studio Cardinet,Yoga Prénatal,lenora krief,12,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,17:45,18:45,Studio Vinaigriers,Yoga Thérapie et Bien-être,Karin Sitbon,17,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,18:30,19:30,Studio Douai,Slow Flow,Anne Gleizes,11,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,18:30,19:45,Studio Joseph de Maistre,Vinyasa Flow,Reza Elaidi,9,6,True,2026-08-15 02:34
-2026-08-13,Jeudi,19:00,20:15,Studio Cardinet,Vinyasa Flow,Noemie Vaissaire,12,7,True,2026-08-15 02:34
-2026-08-13,Jeudi,19:00,20:15,Studio Vinaigriers,Vinyasa Flow et Nidra,Millie Deniset,17,5,True,2026-08-15 02:34
-2026-08-13,Jeudi,19:45,21:00,Studio Douai,Vinyasa Flow,Jessica Khawam,11,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,20:00,21:15,Studio Joseph de Maistre,Hatha Yoga,Patrycja Krok,9,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,20:30,21:30,Studio Cardinet,Hatha Doux et Relaxation,Sabine Bouchoul,12,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,20:30,21:30,Studio Vinaigriers,Yoga Doux,Karin Sitbon,20,0,True,2026-08-15 02:34
-2026-08-13,Jeudi,20:30,21:30,Studio en ligne,Yoga Doux Online,Karin Sitbon,100,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,08:30,09:30,Studio Cardinet,Vinyasa Morning,Marie Renault,12,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,08:30,09:30,Studio Douai,Vinyasa Flow,Federica Petti,11,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,08:30,09:30,Studio Joseph de Maistre,Hatha Flow,Edlyn Leonard,9,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,08:30,09:30,Studio en ligne,Vinyasa Yoga Online,Federica Petti,100,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,09:45,11:00,Studio Douai,Hatha Yoga,Federica Petti,11,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,09:45,11:00,Studio Joseph de Maistre,Yoga Doux,Reza Elaidi,9,3,True,2026-08-15 02:34
-2026-08-14,Vendredi,09:45,11:00,Studio en ligne,Hatha Yoga Online,Federica Petti,100,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,10:00,11:00,Studio Cardinet,Yoga Doux,Marianne Poulichot,12,2,True,2026-08-15 02:34
-2026-08-14,Vendredi,10:00,11:30,Studio Vinaigriers,Vinyasa Flow,Millie Deniset,20,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,11:15,12:15,Studio Cardinet,Hatha Yoga,Patrycja Krok,12,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,11:15,12:15,Studio Joseph de Maistre,Hatha Yoga,Heloise Amilcar,9,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,12:30,13:30,Studio Cardinet,Vinyasa Flow,Jessica Khawam,12,4,True,2026-08-15 02:34
-2026-08-14,Vendredi,12:30,13:30,Studio Douai,Yin Yoga, ,11,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,12:30,13:30,Studio Joseph de Maistre,Vinyasa Flow,Millie Deniset,9,6,True,2026-08-15 02:34
-2026-08-14,Vendredi,12:30,13:30,Studio en ligne,Yin Yoga Online, ,100,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,17:00,18:00,Studio Joseph de Maistre,Hatha Yoga,Marianne Poulichot,9,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,17:45,18:45,Studio Cardinet,Yin  et Bain sonore,Jessica Khawam,12,3,True,2026-08-15 02:34
-2026-08-14,Vendredi,17:45,18:45,Studio Vinaigriers,Vinyasa Flow,Victorien Colin,20,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,18:00,19:00,Studio Douai,Vinyasa Aligné,Emmanuelle GLE,11,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,18:10,19:10,Studio Joseph de Maistre,Yoga Prénatal,Marianne Poulichot,9,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,19:00,20:00,Studio Cardinet,Vinyasa Flow,Fanny Marinho,12,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,19:00,20:15,Studio Vinaigriers,Yin Yoga, ,20,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,19:00,20:15,Studio en ligne,Yin Yoga Online, ,100,0,True,2026-08-15 02:34
-2026-08-14,Vendredi,19:15,20:15,Studio Douai,Hatha Yoga,Théo Lussato,11,5,True,2026-08-15 02:34
-2026-08-14,Vendredi,19:15,20:30,Studio Joseph de Maistre,Yin Yoga,Anne Marie Boisvert,9,9,True,2026-08-15 02:34
-2026-08-15,Samedi,09:00,10:00,Studio Joseph de Maistre,Vinyasa Flow,Mila Furie,9,0,False,2026-08-15 02:34
-2026-08-15,Samedi,09:30,11:00,Studio Vinaigriers,Vinyasa Doux,Elodie Prou,20,1,False,2026-08-15 02:34
-2026-08-15,Samedi,09:30,11:00,Studio en ligne,Vinyasa Doux En ligne,Elodie Prou,100,1,False,2026-08-15 02:34
-2026-08-15,Samedi,10:00,11:15,Studio Cardinet,Vinyasa Aligné,Sabine Bouchoul,12,3,False,2026-08-15 02:34
-2026-08-15,Samedi,10:00,11:15,Studio Douai,Vinyasa Flow,Théo Lussato,11,4,False,2026-08-15 02:34
-2026-08-15,Samedi,10:15,11:15,Studio Joseph de Maistre,Hatha Yoga,Mila Furie,9,0,False,2026-08-15 02:34
-2026-08-15,Samedi,11:15,12:15,Studio Vinaigriers,Yoga Prénatal,Elodie Prou,20,14,False,2026-08-15 02:34
-2026-08-15,Samedi,11:30,12:45,Studio Cardinet,Hatha Yoga,Sabine Bouchoul,12,5,False,2026-08-15 02:34
-2026-08-15,Samedi,11:30,12:45,Studio Douai,Hatha Yoga,Jessica Khawam,11,3,False,2026-08-15 02:34
-2026-08-15,Samedi,11:30,12:45,Studio Joseph de Maistre,Vinyasa Flow,Millie Deniset,9,9,False,2026-08-15 02:34
-2026-08-15,Samedi,11:30,12:45,Studio en ligne,Hatha Yoga Online,Sabine Bouchoul,100,0,False,2026-08-15 02:34
-2026-08-15,Samedi,12:30,13:45,Studio Vinaigriers,Vinyasa Flow,Elodie Prou,20,6,False,2026-08-15 02:34
-2026-08-15,Samedi,13:00,14:00,Studio Douai,Yoga Doux,Johanna Saini,11,0,False,2026-08-15 02:34
-2026-08-15,Samedi,13:00,14:15,Studio Joseph de Maistre,Hatha Yoga,Millie Deniset,9,1,False,2026-08-15 02:34
-2026-08-15,Samedi,13:30,14:30,Studio Cardinet,Vinyasa Flow,Marion Paolantonacci,12,0,False,2026-08-15 02:34
-2026-08-15,Samedi,14:30,15:30,Studio Joseph de Maistre,Vinyasa Flow,Heloise Amilcar,9,0,False,2026-08-15 02:34
-2026-08-15,Samedi,17:00,18:00,Studio Cardinet,Vinyasa  et Bain sonore,Fanny Marinho,12,0,False,2026-08-15 02:34
-2026-08-15,Samedi,17:00,18:00,Studio Douai,Vinyasa  et Bain sonore,Eleonore Constance,11,0,False,2026-08-15 02:34
-2026-08-15,Samedi,17:00,18:15,Studio Joseph de Maistre,Vinyasa Flow,Heloise Amilcar,9,0,False,2026-08-15 02:34
-2026-08-15,Samedi,18:00,19:00,Studio Vinaigriers,Vinyasa Flow,Carla Orlandi,20,0,False,2026-08-15 02:34
-2026-08-15,Samedi,18:15,19:15,Studio Cardinet,Yin  et Bain sonore,Fanny Marinho,12,0,False,2026-08-15 02:34
-2026-08-15,Samedi,18:15,19:15,Studio Douai,Yin Yoga et Méditation,Lyla Morel,11,0,False,2026-08-15 02:34
-2026-08-15,Samedi,18:30,19:30,Studio Joseph de Maistre,Yoga Doux,Heloise Amilcar,9,0,False,2026-08-15 02:34
-2026-08-16,Dimanche,10:00,11:15,Studio Cardinet,Hatha Yoga,Jessica Khawam,12,4,False,2026-08-15 02:34
-2026-08-16,Dimanche,10:00,11:15,Studio Douai,Vinyasa Flow,Oulena Magomedova,11,3,False,2026-08-15 02:34
-2026-08-16,Dimanche,10:00,11:15,Studio Joseph de Maistre,Hatha Yoga,Sabine Bouchoul,9,6,False,2026-08-15 02:34
-2026-08-16,Dimanche,10:00,11:15,Studio Vinaigriers,Vinyasa Flow,Anne Marie Boisvert,20,1,False,2026-08-15 02:34
-2026-08-16,Dimanche,10:00,11:15,Studio en ligne,Hatha Yoga Online,Sabine Bouchoul,100,0,False,2026-08-15 02:34
-2026-08-16,Dimanche,11:30,12:45,Studio Cardinet,Vinyasa Flow,Louise Lemaire,12,4,False,2026-08-15 02:34
-2026-08-16,Dimanche,11:30,12:45,Studio Douai,Hatha Yoga,Reza Elaidi,11,3,False,2026-08-15 02:34
-2026-08-16,Dimanche,11:30,12:45,Studio Joseph de Maistre,Vinyasa Aligné,Sabine Bouchoul,9,5,False,2026-08-15 02:34
-2026-08-16,Dimanche,11:30,12:45,Studio Vinaigriers,Yin Yoga,Anne Marie Boisvert,20,7,False,2026-08-15 02:34
-2026-08-16,Dimanche,11:30,12:45,Studio en ligne,Vinyasa Aligné En ligne,Sabine Bouchoul,100,0,False,2026-08-15 02:34
-2026-08-16,Dimanche,13:00,14:15,Studio Cardinet,Yoga Prénatal,Sarah Claux,12,7,False,2026-08-15 02:34
-2026-08-16,Dimanche,13:00,14:00,Studio Douai,Yoga Prénatal, ,11,4,False,2026-08-15 02:34
-2026-08-16,Dimanche,13:00,14:15,Studio Joseph de Maistre,Hatha Yoga Intégral,Anna Guégan,9,0,False,2026-08-15 02:34
-2026-08-16,Dimanche,13:00,14:00,Studio Vinaigriers,Yoga Prénatal,Valentine Peltier,20,0,False,2026-08-15 02:34
-2026-08-16,Dimanche,15:00,16:00,Studio Joseph de Maistre,Yoga Prénatal,Delphine St-gal,9,0,False,2026-08-15 02:34
-2026-08-16,Dimanche,16:45,17:45,Studio Cardinet,Yoga Doux,Louise Lemaire,12,1,False,2026-08-15 02:34
-2026-08-16,Dimanche,17:00,18:15,Studio Douai,Vinyasa Flow,Jessica Khawam,11,1,False,2026-08-15 02:34
-2026-08-16,Dimanche,17:00,18:00,Studio Joseph de Maistre,Yin Yoga,Anne Marie Boisvert,9,5,False,2026-08-15 02:34
-2026-08-16,Dimanche,18:00,19:00,Studio Cardinet,Hatha Yoga et Nidra,Anna Guégan,12,0,False,2026-08-15 02:34
-2026-08-16,Dimanche,18:00,19:30,Studio Vinaigriers,Vinyasa Flow,Elodie Prou,17,0,False,2026-08-15 02:34
-2026-08-16,Dimanche,18:00,19:00,Studio en ligne,Hatha Yoga et Nidra Online,Anna Guégan,100,0,False,2026-08-15 02:34
-2026-08-16,Dimanche,18:15,19:15,Studio Joseph de Maistre,Hatha Yoga et Nidra,Annabelle LE CAM,9,0,False,2026-08-15 02:34
-2026-08-16,Dimanche,18:30,19:45,Studio Douai,Slow Flow,Cécile Rusterholz,11,0,False,2026-08-15 02:34
-2026-08-17,Lundi,10:00,11:00,Studio Cardinet,Yoga Doux,Louise Lemaire,12,1,False,2026-08-15 02:34
-2026-08-17,Lundi,10:00,11:00,Studio Douai,Yoga Doux,Caroline Pereira,11,0,False,2026-08-15 02:34
-2026-08-17,Lundi,10:00,11:00,Studio Joseph de Maistre,Yoga Prénatal, ,9,0,False,2026-08-15 02:34
-2026-08-17,Lundi,10:00,11:00,Studio Vinaigriers,Vinyasa Doux,Annabelle Bonnaud,20,0,False,2026-08-15 02:34
-2026-08-17,Lundi,11:15,12:15,Studio Cardinet,Hatha Fondations,Marianne Poulichot,12,0,False,2026-08-15 02:34
-2026-08-17,Lundi,11:15,12:15,Studio Douai,Yoga Prénatal, ,9,0,False,2026-08-15 02:34
-2026-08-17,Lundi,11:15,12:15,Studio Joseph de Maistre,Yoga Doux,Anne Marie Boisvert,9,0,False,2026-08-15 02:34
-2026-08-17,Lundi,12:30,13:30,Studio Cardinet,Hatha Yoga,Théo Lussato,12,4,False,2026-08-15 02:34
-2026-08-17,Lundi,12:30,13:30,Studio Douai,Vinyasa Flow,Louise Lemaire,11,0,False,2026-08-15 02:34
-2026-08-17,Lundi,12:30,13:30,Studio Joseph de Maistre,Vinyasa Flow,Jessica Khawam,9,2,False,2026-08-15 02:34
-2026-08-17,Lundi,12:30,13:30,Studio Vinaigriers,Vinyasa Flow,Monica Fricano,20,2,False,2026-08-15 02:34
-2026-08-17,Lundi,12:30,13:30,Studio en ligne,Hatha Yoga Online,Théo Lussato,100,0,False,2026-08-15 02:34
-2026-08-17,Lundi,14:30,15:30,Studio Vinaigriers,Yoga Prénatal,Marianne Poulichot,20,0,False,2026-08-15 02:34
-2026-08-17,Lundi,17:00,18:00,Studio Douai,Hatha Yoga,Eric Zaoui,11,0,False,2026-08-15 02:34
-2026-08-17,Lundi,17:15,18:15,Studio Joseph de Maistre,Yin Yoga,Anne Marie Boisvert,9,0,False,2026-08-15 02:34
-2026-08-17,Lundi,17:45,18:45,Studio Cardinet,Yoga Ados 12-16 ans,Pauline Pedexes,12,0,False,2026-08-15 02:34
-2026-08-17,Lundi,17:45,18:45,Studio Vinaigriers,Yin Yoga,Anne Marie Boisvert,20,1,False,2026-08-15 02:34
-2026-08-17,Lundi,17:45,18:45,Studio en ligne,Yin Yoga Online,Anne Marie Boisvert,100,0,False,2026-08-15 02:34
-2026-08-17,Lundi,18:45,19:45,Studio Douai,Hatha Yoga,Monica Fricano,11,11,False,2026-08-15 02:34
-2026-08-17,Lundi,18:45,20:00,Studio Joseph de Maistre,Vinyasa Flow,Chiara benvenuto,9,4,False,2026-08-15 02:34
-2026-08-17,Lundi,18:45,19:45,Studio en ligne,Hatha Yoga Online,Monica Fricano,100,1,False,2026-08-15 02:34
-2026-08-17,Lundi,19:00,20:30,L'Annexe,Vinyasa Yoga Niveau Intermédiaire  - Premium,Federica Petti,6,0,False,2026-08-15 02:34
-2026-08-17,Lundi,19:00,20:15,Studio Cardinet,Hatha Yoga,Patrice Bensimon,12,3,False,2026-08-15 02:34
-2026-08-17,Lundi,19:00,20:15,Studio Vinaigriers,Vinyasa Flow,Millie Deniset,20,2,False,2026-08-15 02:34
-2026-08-17,Lundi,20:15,21:30,Studio Douai,Vinyasa Flow,Monica Fricano,11,0,False,2026-08-15 02:34
-2026-08-17,Lundi,20:15,21:30,Studio Joseph de Maistre,Hatha Yoga,Eric Zaoui,9,0,False,2026-08-15 02:34
-2026-08-17,Lundi,20:30,21:45,Studio Cardinet,Vinyasa Aligné,Edlyn Leonard,12,0,False,2026-08-15 02:34
-2026-08-17,Lundi,20:30,21:30,Studio Vinaigriers,Yin Yoga  et Nidra,Carla Orlandi,20,0,False,2026-08-15 02:34
+2026-08-13,Jeudi,07:45,09:00,Studio Cardinet,Vinyasa Morning,Federica Petti,12,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,07:45,09:00,Studio en ligne,Vinyasa Morning Online,Federica Petti,100,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,08:30,09:30,Studio Joseph de Maistre,Vinyasa Morning,Maria Shaknova,9,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,08:30,09:45,Studio Vinaigriers,Nâtha Yoga,Reza Elaidi,20,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,10:00,11:00,Studio Cardinet,Yoga Doux,Cécile Rusterholz,12,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,10:00,11:00,Studio Douai,Yin Yoga,Anne Marie Boisvert,11,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,10:00,11:00,Studio Joseph de Maistre,Yoga Prénatal,Marianne Poulichot,9,5,True,2026-08-16 02:34
+2026-08-13,Jeudi,10:45,11:45,Studio Vinaigriers,Yoga Prénatal,Elodie Prou,20,10,True,2026-08-16 02:34
+2026-08-13,Jeudi,10:45,11:45,Studio en ligne,Yoga Prénatal Online,Elodie Prou,100,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,11:15,12:15,Studio Cardinet,Vinyasa Flow,Cécile Rusterholz,12,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,11:15,12:15,Studio Joseph de Maistre,Hatha Yoga,Marianne Poulichot,9,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,12:30,13:45,Studio Cardinet,Hatha Yoga,Louise Lemaire,12,2,True,2026-08-16 02:34
+2026-08-13,Jeudi,12:30,13:30,Studio Douai,Vinyasa Flow,Jessica Khawam,11,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,12:30,13:45,Studio Joseph de Maistre,Hatha Yoga Intégral,Marianne Poulichot,9,3,True,2026-08-16 02:34
+2026-08-13,Jeudi,12:30,13:30,Studio Vinaigriers,Vinyasa Flow,Elodie Prou,20,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,12:30,13:45,Studio en ligne,Hatha Yoga Online,Louise Lemaire,100,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,14:00,15:00,Studio Vinaigriers,Yoga Postnatal,Annabelle Bonnaud,12,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,16:30,17:30,Studio Cardinet,Yoga Postnatal,lenora krief,12,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,17:00,18:00,Studio Joseph de Maistre,Yin  et Bain sonore,Coline Pedroche,9,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,17:45,18:45,Studio Cardinet,Yoga Prénatal,lenora krief,12,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,17:45,18:45,Studio Vinaigriers,Yoga Thérapie et Bien-être,Karin Sitbon,17,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,18:30,19:30,Studio Douai,Slow Flow,Anne Gleizes,11,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,18:30,19:45,Studio Joseph de Maistre,Vinyasa Flow,Reza Elaidi,9,6,True,2026-08-16 02:34
+2026-08-13,Jeudi,19:00,20:15,Studio Cardinet,Vinyasa Flow,Noemie Vaissaire,12,7,True,2026-08-16 02:34
+2026-08-13,Jeudi,19:00,20:15,Studio Vinaigriers,Vinyasa Flow et Nidra,Millie Deniset,17,5,True,2026-08-16 02:34
+2026-08-13,Jeudi,19:45,21:00,Studio Douai,Vinyasa Flow,Jessica Khawam,11,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,20:00,21:15,Studio Joseph de Maistre,Hatha Yoga,Patrycja Krok,9,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,20:30,21:30,Studio Cardinet,Hatha Doux et Relaxation,Sabine Bouchoul,12,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,20:30,21:30,Studio Vinaigriers,Yoga Doux,Karin Sitbon,20,0,True,2026-08-16 02:34
+2026-08-13,Jeudi,20:30,21:30,Studio en ligne,Yoga Doux Online,Karin Sitbon,100,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,08:30,09:30,Studio Cardinet,Vinyasa Morning,Marie Renault,12,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,08:30,09:30,Studio Douai,Vinyasa Flow,Federica Petti,11,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,08:30,09:30,Studio Joseph de Maistre,Hatha Flow,Edlyn Leonard,9,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,08:30,09:30,Studio en ligne,Vinyasa Yoga Online,Federica Petti,100,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,09:45,11:00,Studio Douai,Hatha Yoga,Federica Petti,11,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,09:45,11:00,Studio Joseph de Maistre,Yoga Doux,Reza Elaidi,9,3,True,2026-08-16 02:34
+2026-08-14,Vendredi,09:45,11:00,Studio en ligne,Hatha Yoga Online,Federica Petti,100,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,10:00,11:00,Studio Cardinet,Yoga Doux,Marianne Poulichot,12,2,True,2026-08-16 02:34
+2026-08-14,Vendredi,10:00,11:30,Studio Vinaigriers,Vinyasa Flow,Millie Deniset,20,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,11:15,12:15,Studio Cardinet,Hatha Yoga,Patrycja Krok,12,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,11:15,12:15,Studio Joseph de Maistre,Hatha Yoga,Heloise Amilcar,9,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,12:30,13:30,Studio Cardinet,Vinyasa Flow,Jessica Khawam,12,4,True,2026-08-16 02:34
+2026-08-14,Vendredi,12:30,13:30,Studio Douai,Yin Yoga, ,11,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,12:30,13:30,Studio Joseph de Maistre,Vinyasa Flow,Millie Deniset,9,6,True,2026-08-16 02:34
+2026-08-14,Vendredi,12:30,13:30,Studio en ligne,Yin Yoga Online, ,100,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,17:00,18:00,Studio Joseph de Maistre,Hatha Yoga,Marianne Poulichot,9,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,17:45,18:45,Studio Cardinet,Yin  et Bain sonore,Jessica Khawam,12,3,True,2026-08-16 02:34
+2026-08-14,Vendredi,17:45,18:45,Studio Vinaigriers,Vinyasa Flow,Victorien Colin,20,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,18:00,19:00,Studio Douai,Vinyasa Aligné,Emmanuelle GLE,11,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,18:10,19:10,Studio Joseph de Maistre,Yoga Prénatal,Marianne Poulichot,9,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,19:00,20:00,Studio Cardinet,Vinyasa Flow,Fanny Marinho,12,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,19:00,20:15,Studio Vinaigriers,Yin Yoga, ,20,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,19:00,20:15,Studio en ligne,Yin Yoga Online, ,100,0,True,2026-08-16 02:34
+2026-08-14,Vendredi,19:15,20:15,Studio Douai,Hatha Yoga,Théo Lussato,11,5,True,2026-08-16 02:34
+2026-08-14,Vendredi,19:15,20:30,Studio Joseph de Maistre,Yin Yoga,Anne Marie Boisvert,9,9,True,2026-08-16 02:34
+2026-08-15,Samedi,09:00,10:00,Studio Joseph de Maistre,Vinyasa Flow,Mila Furie,9,0,True,2026-08-16 02:34
+2026-08-15,Samedi,09:30,11:00,Studio Vinaigriers,Vinyasa Doux,Elodie Prou,20,0,True,2026-08-16 02:34
+2026-08-15,Samedi,09:30,11:00,Studio en ligne,Vinyasa Doux En ligne,Elodie Prou,100,0,True,2026-08-16 02:34
+2026-08-15,Samedi,10:00,11:15,Studio Cardinet,Vinyasa Aligné,Sabine Bouchoul,12,3,True,2026-08-16 02:34
+2026-08-15,Samedi,10:00,11:15,Studio Douai,Vinyasa Flow,Théo Lussato,11,4,True,2026-08-16 02:34
+2026-08-15,Samedi,10:15,11:15,Studio Joseph de Maistre,Hatha Yoga,Mila Furie,9,0,True,2026-08-16 02:34
+2026-08-15,Samedi,11:15,12:15,Studio Vinaigriers,Yoga Prénatal,Elodie Prou,20,13,True,2026-08-16 02:34
+2026-08-15,Samedi,11:30,12:45,Studio Cardinet,Hatha Yoga,Sabine Bouchoul,12,5,True,2026-08-16 02:34
+2026-08-15,Samedi,11:30,12:45,Studio Douai,Hatha Yoga,Jessica Khawam,11,4,True,2026-08-16 02:34
+2026-08-15,Samedi,11:30,12:45,Studio Joseph de Maistre,Vinyasa Flow,Millie Deniset,9,9,True,2026-08-16 02:34
+2026-08-15,Samedi,11:30,12:45,Studio en ligne,Hatha Yoga Online,Sabine Bouchoul,100,0,True,2026-08-16 02:34
+2026-08-15,Samedi,12:30,13:45,Studio Vinaigriers,Vinyasa Flow,Elodie Prou,20,11,True,2026-08-16 02:34
+2026-08-15,Samedi,13:00,14:00,Studio Douai,Yoga Doux,Johanna Saini,11,0,True,2026-08-16 02:34
+2026-08-15,Samedi,13:00,14:15,Studio Joseph de Maistre,Hatha Yoga,Millie Deniset,9,2,True,2026-08-16 02:34
+2026-08-15,Samedi,13:30,14:30,Studio Cardinet,Vinyasa Flow,Marion Paolantonacci,12,0,True,2026-08-16 02:34
+2026-08-15,Samedi,14:30,15:30,Studio Joseph de Maistre,Vinyasa Flow,Heloise Amilcar,9,0,True,2026-08-16 02:34
+2026-08-15,Samedi,17:00,18:00,Studio Cardinet,Vinyasa  et Bain sonore,Fanny Marinho,12,0,True,2026-08-16 02:34
+2026-08-15,Samedi,17:00,18:00,Studio Douai,Vinyasa  et Bain sonore,Eleonore Constance,11,0,True,2026-08-16 02:34
+2026-08-15,Samedi,17:00,18:15,Studio Joseph de Maistre,Vinyasa Flow,Heloise Amilcar,9,0,True,2026-08-16 02:34
+2026-08-15,Samedi,18:00,19:00,Studio Vinaigriers,Vinyasa Flow,Carla Orlandi,20,0,True,2026-08-16 02:34
+2026-08-15,Samedi,18:15,19:15,Studio Cardinet,Yin  et Bain sonore,Fanny Marinho,12,0,True,2026-08-16 02:34
+2026-08-15,Samedi,18:15,19:15,Studio Douai,Yin Yoga et Méditation,Lyla Morel,11,0,True,2026-08-16 02:34
+2026-08-15,Samedi,18:30,19:30,Studio Joseph de Maistre,Yoga Doux,Heloise Amilcar,9,0,True,2026-08-16 02:34
+2026-08-16,Dimanche,10:00,11:15,Studio Cardinet,Hatha Yoga,Jessica Khawam,12,6,False,2026-08-16 02:34
+2026-08-16,Dimanche,10:00,11:15,Studio Douai,Vinyasa Flow,Oulena Magomedova,11,3,False,2026-08-16 02:34
+2026-08-16,Dimanche,10:00,11:15,Studio Joseph de Maistre,Hatha Yoga,Sabine Bouchoul,9,5,False,2026-08-16 02:34
+2026-08-16,Dimanche,10:00,11:15,Studio Vinaigriers,Vinyasa Flow,Anne Marie Boisvert,20,1,False,2026-08-16 02:34
+2026-08-16,Dimanche,10:00,11:15,Studio en ligne,Hatha Yoga Online,Sabine Bouchoul,100,0,False,2026-08-16 02:34
+2026-08-16,Dimanche,11:30,12:45,Studio Cardinet,Vinyasa Flow,Louise Lemaire,12,5,False,2026-08-16 02:34
+2026-08-16,Dimanche,11:30,12:45,Studio Douai,Hatha Yoga,Reza Elaidi,11,4,False,2026-08-16 02:34
+2026-08-16,Dimanche,11:30,12:45,Studio Joseph de Maistre,Vinyasa Aligné,Sabine Bouchoul,9,8,False,2026-08-16 02:34
+2026-08-16,Dimanche,11:30,12:45,Studio Vinaigriers,Yin Yoga,Anne Marie Boisvert,20,7,False,2026-08-16 02:34
+2026-08-16,Dimanche,11:30,12:45,Studio en ligne,Vinyasa Aligné En ligne,Sabine Bouchoul,100,0,False,2026-08-16 02:34
+2026-08-16,Dimanche,13:00,14:15,Studio Cardinet,Yoga Prénatal,Sarah Claux,12,8,False,2026-08-16 02:34
+2026-08-16,Dimanche,13:00,14:00,Studio Douai,Yoga Prénatal, ,11,4,False,2026-08-16 02:34
+2026-08-16,Dimanche,13:00,14:15,Studio Joseph de Maistre,Hatha Yoga Intégral,Anna Guégan,9,0,False,2026-08-16 02:34
+2026-08-16,Dimanche,13:00,14:00,Studio Vinaigriers,Yoga Prénatal,Valentine Peltier,20,0,False,2026-08-16 02:34
+2026-08-16,Dimanche,15:00,16:00,Studio Joseph de Maistre,Yoga Prénatal,Delphine St-gal,9,0,False,2026-08-16 02:34
+2026-08-16,Dimanche,16:45,17:45,Studio Cardinet,Yoga Doux,Louise Lemaire,12,3,False,2026-08-16 02:34
+2026-08-16,Dimanche,17:00,18:15,Studio Douai,Vinyasa Flow,Jessica Khawam,11,3,False,2026-08-16 02:34
+2026-08-16,Dimanche,17:00,18:00,Studio Joseph de Maistre,Yin Yoga,Anne Marie Boisvert,9,6,False,2026-08-16 02:34
+2026-08-16,Dimanche,18:00,19:00,Studio Cardinet,Hatha Yoga et Nidra,Anna Guégan,12,0,False,2026-08-16 02:34
+2026-08-16,Dimanche,18:00,19:30,Studio Vinaigriers,Vinyasa Flow,Elodie Prou,17,0,False,2026-08-16 02:34
+2026-08-16,Dimanche,18:00,19:00,Studio en ligne,Hatha Yoga et Nidra Online,Anna Guégan,100,0,False,2026-08-16 02:34
+2026-08-16,Dimanche,18:15,19:15,Studio Joseph de Maistre,Hatha Yoga et Nidra,Annabelle LE CAM,9,0,False,2026-08-16 02:34
+2026-08-16,Dimanche,18:30,19:45,Studio Douai,Slow Flow,Cécile Rusterholz,11,0,False,2026-08-16 02:34
+2026-08-17,Lundi,10:00,11:00,Studio Cardinet,Yoga Doux,Louise Lemaire,12,1,False,2026-08-16 02:34
+2026-08-17,Lundi,10:00,11:00,Studio Douai,Yoga Doux,Caroline Pereira,11,0,False,2026-08-16 02:34
+2026-08-17,Lundi,10:00,11:00,Studio Joseph de Maistre,Yoga Prénatal, ,9,0,False,2026-08-16 02:34
+2026-08-17,Lundi,10:00,11:00,Studio Vinaigriers,Vinyasa Doux,Annabelle Bonnaud,20,0,False,2026-08-16 02:34
+2026-08-17,Lundi,11:15,12:15,Studio Cardinet,Hatha Fondations,Marianne Poulichot,12,0,False,2026-08-16 02:34
+2026-08-17,Lundi,11:15,12:15,Studio Douai,Yoga Prénatal, ,9,0,False,2026-08-16 02:34
+2026-08-17,Lundi,11:15,12:15,Studio Joseph de Maistre,Yoga Doux,Anne Marie Boisvert,9,0,False,2026-08-16 02:34
+2026-08-17,Lundi,12:30,13:30,Studio Cardinet,Hatha Yoga,Théo Lussato,12,4,False,2026-08-16 02:34
+2026-08-17,Lundi,12:30,13:30,Studio Douai,Vinyasa Flow,Louise Lemaire,11,0,False,2026-08-16 02:34
+2026-08-17,Lundi,12:30,13:30,Studio Joseph de Maistre,Vinyasa Flow,Jessica Khawam,9,3,False,2026-08-16 02:34
+2026-08-17,Lundi,12:30,13:30,Studio Vinaigriers,Vinyasa Flow,Monica Fricano,20,1,False,2026-08-16 02:34
+2026-08-17,Lundi,12:30,13:30,Studio en ligne,Hatha Yoga Online,Théo Lussato,100,0,False,2026-08-16 02:34
+2026-08-17,Lundi,14:30,15:30,Studio Vinaigriers,Yoga Prénatal,Marianne Poulichot,20,0,False,2026-08-16 02:34
+2026-08-17,Lundi,17:00,18:00,Studio Douai,Hatha Yoga,Eric Zaoui,11,0,False,2026-08-16 02:34
+2026-08-17,Lundi,17:15,18:15,Studio Joseph de Maistre,Yin Yoga,Anne Marie Boisvert,9,0,False,2026-08-16 02:34
+2026-08-17,Lundi,17:45,18:45,Studio Cardinet,Yoga Ados 12-16 ans,Pauline Pedexes,12,0,False,2026-08-16 02:34
+2026-08-17,Lundi,17:45,18:45,Studio Vinaigriers,Yin Yoga,Anne Marie Boisvert,20,2,False,2026-08-16 02:34
+2026-08-17,Lundi,17:45,18:45,Studio en ligne,Yin Yoga Online,Anne Marie Boisvert,100,1,False,2026-08-16 02:34
+2026-08-17,Lundi,18:45,19:45,Studio Douai,Hatha Yoga,Monica Fricano,11,11,False,2026-08-16 02:34
+2026-08-17,Lundi,18:45,20:00,Studio Joseph de Maistre,Vinyasa Flow,Chiara benvenuto,9,5,False,2026-08-16 02:34
+2026-08-17,Lundi,18:45,19:45,Studio en ligne,Hatha Yoga Online,Monica Fricano,100,1,False,2026-08-16 02:34
+2026-08-17,Lundi,19:00,20:30,L'Annexe,Vinyasa Yoga Niveau Intermédiaire  - Premium,Federica Petti,6,0,False,2026-08-16 02:34
+2026-08-17,Lundi,19:00,20:15,Studio Cardinet,Hatha Yoga,Patrice Bensimon,12,4,False,2026-08-16 02:34
+2026-08-17,Lundi,19:00,20:15,Studio Vinaigriers,Vinyasa Flow,Millie Deniset,20,1,False,2026-08-16 02:34
+2026-08-17,Lundi,20:15,21:30,Studio Douai,Vinyasa Flow,Monica Fricano,11,0,False,2026-08-16 02:34
+2026-08-17,Lundi,20:15,21:30,Studio Joseph de Maistre,Hatha Yoga,Eric Zaoui,9,0,False,2026-08-16 02:34
+2026-08-17,Lundi,20:30,21:45,Studio Cardinet,Vinyasa Aligné,Edlyn Leonard,12,0,False,2026-08-16 02:34
+2026-08-17,Lundi,20:30,21:30,Studio Vinaigriers,Yin Yoga  et Nidra,Carla Orlandi,20,0,False,2026-08-16 02:34
+2026-08-18,Mardi,07:45,08:45,Studio Cardinet,Vinyasa Morning,Anne Gleizes,12,0,False,2026-08-16 02:34
+2026-08-18,Mardi,09:30,10:45,Studio Vinaigriers,Vinyasa Doux et Relaxation,Victorien Colin,20,0,False,2026-08-16 02:34
+2026-08-18,Mardi,10:00,11:00,Studio Cardinet,Hatha Yoga,Louise Lemaire,12,0,False,2026-08-16 02:34
+2026-08-18,Mardi,10:00,11:00,Studio Joseph de Maistre,Yoga Doux,Heloise Amilcar,9,0,False,2026-08-16 02:34
+2026-08-18,Mardi,11:00,12:00,Studio Vinaigriers,Yoga Somatique,Anne Marie Boisvert,20,4,False,2026-08-16 02:34
+2026-08-18,Mardi,11:15,12:15,Studio Cardinet,Yoga Prénatal,Millie Deniset,12,4,False,2026-08-16 02:34
+2026-08-18,Mardi,12:30,13:30,Studio Cardinet,Vinyasa Aligné,Millie Deniset,12,2,False,2026-08-16 02:34
+2026-08-18,Mardi,12:30,13:30,Studio Douai,Vinyasa Flow,Jessica Khawam,11,1,False,2026-08-16 02:34
+2026-08-18,Mardi,12:30,13:30,Studio Joseph de Maistre,Hatha Yoga, ,9,0,False,2026-08-16 02:34
+2026-08-18,Mardi,12:30,13:30,Studio Vinaigriers,Hatha Yoga,Patrice Bensimon,20,2,False,2026-08-16 02:34
+2026-08-18,Mardi,12:30,13:30,Studio en ligne,Hatha Yoga Online,Patrice Bensimon,100,2,False,2026-08-16 02:34
+2026-08-18,Mardi,15:00,16:00,Studio Vinaigriers,Yoga Maman Bébé,Annabelle Bonnaud,12,0,False,2026-08-16 02:34
+2026-08-18,Mardi,15:30,16:30,Studio Joseph de Maistre,Yoga Postnatal,Marianne Poulichot,9,0,False,2026-08-16 02:34
+2026-08-18,Mardi,17:00,18:00,Studio Joseph de Maistre,Yin Yoga,Laëtitia Leite,9,0,False,2026-08-16 02:34
+2026-08-18,Mardi,17:45,18:45,Studio Cardinet,Hatha Doux et Relaxation,Marianne Poulichot,12,0,False,2026-08-16 02:34
+2026-08-18,Mardi,17:45,18:45,Studio Vinaigriers,Yoga Prénatal,Annabelle Bonnaud,20,0,False,2026-08-16 02:34
+2026-08-18,Mardi,18:30,19:45,Studio Douai,Hatha Yoga,Patrycja Krok,11,0,False,2026-08-16 02:34
+2026-08-18,Mardi,18:30,19:45,Studio Joseph de Maistre,Slow Flow,Lyla Morel,9,0,False,2026-08-16 02:34
+2026-08-18,Mardi,18:30,19:45,Studio en ligne,Hatha Yoga Online,Patrycja Krok,100,0,False,2026-08-16 02:34
+2026-08-18,Mardi,19:00,20:15,Studio Cardinet,Vinyasa Flow,Monica Fricano,12,2,False,2026-08-16 02:34
+2026-08-18,Mardi,19:00,20:15,Studio Vinaigriers,Vinyasa Aligné,Eleonore Constance,20,2,False,2026-08-16 02:34
+2026-08-18,Mardi,20:00,21:15,Studio Douai,Vinyasa Flow,Chiara benvenuto,11,1,False,2026-08-16 02:34
+2026-08-18,Mardi,20:00,21:15,Studio Joseph de Maistre,Vinyasa Flow,Millie Deniset,9,5,False,2026-08-16 02:34
+2026-08-18,Mardi,20:00,21:15,Studio en ligne,Vinyasa Yoga Online,Chiara benvenuto,100,0,False,2026-08-16 02:34
+2026-08-18,Mardi,20:30,21:45,Studio Cardinet,Hatha Yoga,Hervé Leonard,12,0,False,2026-08-16 02:34
+2026-08-18,Mardi,20:30,21:30,Studio Vinaigriers,Hatha Yoga,Marie Renault,20,0,False,2026-08-16 02:34
