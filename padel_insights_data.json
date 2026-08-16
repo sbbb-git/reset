@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-16T04:41:03.369231",
+ "generated_at": "2026-08-16T05:34:24.917137",
  "heatmap": {
   "days": [
    "Lundi",
@@ -118,9 +118,9 @@
    "Mardi": [
     {
      "heure": 7,
-     "offered": 307,
+     "offered": 322,
      "demand": 57,
-     "occupation_pct": 19
+     "occupation_pct": 18
     },
     {
      "heure": 8,
@@ -222,9 +222,9 @@
    "Mercredi": [
     {
      "heure": 7,
-     "offered": 312,
+     "offered": 324,
      "demand": 71,
-     "occupation_pct": 23
+     "occupation_pct": 22
     },
     {
      "heure": 8,
@@ -247,13 +247,13 @@
     {
      "heure": 11,
      "offered": 4254,
-     "demand": 1547,
+     "demand": 1548,
      "occupation_pct": 36
     },
     {
      "heure": 12,
      "offered": 5184,
-     "demand": 2280,
+     "demand": 2281,
      "occupation_pct": 44
     },
     {
@@ -534,9 +534,9 @@
    "Samedi": [
     {
      "heure": 7,
-     "offered": 405,
+     "offered": 421,
      "demand": 105,
-     "occupation_pct": 26
+     "occupation_pct": 25
     },
     {
      "heure": 8,
@@ -651,67 +651,67 @@
     {
      "heure": 9,
      "offered": 5023,
-     "demand": 3582,
+     "demand": 3583,
      "occupation_pct": 71
     },
     {
      "heure": 10,
      "offered": 4160,
-     "demand": 3009,
+     "demand": 3011,
      "occupation_pct": 72
     },
     {
      "heure": 11,
      "offered": 5052,
-     "demand": 3650,
+     "demand": 3654,
      "occupation_pct": 72
     },
     {
      "heure": 12,
      "offered": 5071,
-     "demand": 2886,
+     "demand": 2890,
      "occupation_pct": 57
     },
     {
      "heure": 13,
      "offered": 4727,
-     "demand": 2561,
+     "demand": 2565,
      "occupation_pct": 54
     },
     {
      "heure": 14,
      "offered": 5373,
-     "demand": 3288,
+     "demand": 3295,
      "occupation_pct": 61
     },
     {
      "heure": 15,
      "offered": 5624,
-     "demand": 3662,
+     "demand": 3664,
      "occupation_pct": 65
     },
     {
      "heure": 16,
      "offered": 5415,
-     "demand": 3575,
+     "demand": 3579,
      "occupation_pct": 66
     },
     {
      "heure": 17,
      "offered": 5634,
-     "demand": 3756,
+     "demand": 3759,
      "occupation_pct": 67
     },
     {
      "heure": 18,
      "offered": 6124,
-     "demand": 4199,
+     "demand": 4202,
      "occupation_pct": 69
     },
     {
      "heure": 19,
      "offered": 4509,
-     "demand": 2722,
+     "demand": 2723,
      "occupation_pct": 60
     },
     {
@@ -744,7 +744,7 @@
    [
     "Dimanche",
     18,
-    4199
+    4202
    ],
    [
     "Jeudi",
@@ -774,7 +774,7 @@
    [
     "Dimanche",
     17,
-    3756
+    3759
    ],
    [
     "Mercredi",
@@ -789,17 +789,17 @@
    [
     "Dimanche",
     15,
-    3662
+    3664
+   ],
+   [
+    "Dimanche",
+    11,
+    3654
    ],
    [
     "Jeudi",
     20,
     3651
-   ],
-   [
-    "Dimanche",
-    11,
-    3650
    ],
    [
     "Mercredi",
@@ -809,12 +809,12 @@
    [
     "Dimanche",
     9,
-    3582
+    3583
    ],
    [
     "Dimanche",
     16,
-    3575
+    3579
    ],
    [
     "Mardi",
@@ -3759,7 +3759,7 @@
    {
     "chain": "4PADEL",
     "n_clubs": 10,
-    "median_sessions_per_club": 1511.5,
+    "median_sessions_per_club": 1519.0,
     "median_price_90": 48.0
    },
    {
@@ -3783,7 +3783,7 @@
    {
     "chain": "Forest Hill",
     "n_clubs": 3,
-    "median_sessions_per_club": 975,
+    "median_sessions_per_club": 980,
     "median_price_90": 85.5
    },
    {
@@ -3917,7 +3917,7 @@
   "n_mono": 102,
   "median_sessions_multi": 1422,
   "median_sessions_mono": 56,
-  "avg_sessions_multi": 2101,
+  "avg_sessions_multi": 2102,
   "avg_sessions_mono": 548,
   "clusters": [
    {
@@ -3960,7 +3960,7 @@
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 2151
+    "total_sessions": 2162
    },
    {
     "unified_id": "unif_018",
@@ -4037,7 +4037,7 @@
     "canonical_name": "4padel-cao-saint-denis",
     "cp": "93200",
     "n_platforms": 2,
-    "total_sessions": 192
+    "total_sessions": 204
    },
    {
     "unified_id": "unif_012",
