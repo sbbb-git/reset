@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-16T23:48:50.219966",
+ "generated_at": "2026-08-17T01:27:47.185259",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,11 +9,11 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 89352,
-   "doinsport": 3055,
+   "anybuddy": 93098,
+   "doinsport": 3057,
    "urbanpadel": 7468
   },
-  "n_sessions_live": 99875,
+  "n_sessions_live": 103623,
   "n_sessions_history": 359607,
   "pop_idf": 12258660
  },
@@ -86,7 +86,7 @@
    "revenu_median_uc": 23560,
    "clubs_padel": 9,
    "hab_par_club": 156672,
-   "prix_median_90min": 44.0
+   "prix_median_90min": 48.0
   },
   "95": {
    "nom": "Val-d'Oise",
@@ -476,28 +476,28 @@
  "weather_period": "2024-01-01 → 2026-05-31",
  "maturity": {
   "anybuddy": {
+   "days_elapsed": 79,
+   "target_days": 180,
+   "pct": 44,
+   "note": "79j sur 180j (6 mois)"
+  },
+  "urbanpadel": {
    "days_elapsed": 78,
    "target_days": 180,
    "pct": 43,
    "note": "78j sur 180j (6 mois)"
   },
-  "urbanpadel": {
-   "days_elapsed": 77,
-   "target_days": 180,
-   "pct": 43,
-   "note": "77j sur 180j (6 mois)"
-  },
   "doinsport": {
-   "days_elapsed": 958,
+   "days_elapsed": 959,
    "target_days": 180,
    "pct": 100,
    "note": "historique rétroactif disponible"
   },
   "playtomic": {
-   "days_elapsed": 77,
+   "days_elapsed": 78,
    "target_days": 180,
    "pct": 43,
-   "note": "77j sur 180j (6 mois)"
+   "note": "78j sur 180j (6 mois)"
   },
   "_global_pct": 65
  }
