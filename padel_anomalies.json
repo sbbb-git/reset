@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-17T15:54:50.001546",
+ "generated_at": "2026-08-17T16:33:53.643233",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -101,6 +101,16 @@
    "prix_recent": 48.0,
    "delta_pct": -33.3,
    "direction": "baisse"
+  },
+  {
+   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "source": "doinsport",
+   "name": "FIVE ARENA",
+   "cp": "77100",
+   "prix_30j": 48.0,
+   "prix_recent": 64.0,
+   "delta_pct": 33.3,
+   "direction": "hausse"
   },
   {
    "slug": "padel-15-paris",
@@ -1542,9 +1552,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 103,
+  "total_anomalies": 104,
   "idle_24h": 0,
-  "price_shifts": 11,
+  "price_shifts": 12,
   "volume_drops": 92,
   "new_clubs_14d": 86
  }
