@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-18T04:41:21.109359",
+ "generated_at": "2026-08-18T05:35:15.602192",
  "heatmap": {
   "days": [
    "Lundi",
@@ -14,7 +14,7 @@
    "Lundi": [
     {
      "heure": 7,
-     "offered": 347,
+     "offered": 362,
      "demand": 43,
      "occupation_pct": 12
     },
@@ -161,7 +161,7 @@
     {
      "heure": 14,
      "offered": 4960,
-     "demand": 2030,
+     "demand": 2031,
      "occupation_pct": 41
     },
     {
@@ -185,13 +185,13 @@
     {
      "heure": 18,
      "offered": 5582,
-     "demand": 4150,
+     "demand": 4151,
      "occupation_pct": 74
     },
     {
      "heure": 19,
      "offered": 5004,
-     "demand": 3765,
+     "demand": 3766,
      "occupation_pct": 75
     },
     {
@@ -326,9 +326,9 @@
    "Jeudi": [
     {
      "heure": 7,
-     "offered": 308,
+     "offered": 322,
      "demand": 75,
-     "occupation_pct": 24
+     "occupation_pct": 23
     },
     {
      "heure": 8,
@@ -430,9 +430,9 @@
    "Vendredi": [
     {
      "heure": 7,
-     "offered": 316,
+     "offered": 328,
      "demand": 79,
-     "occupation_pct": 25
+     "occupation_pct": 24
     },
     {
      "heure": 8,
@@ -749,7 +749,7 @@
    [
     "Mardi",
     18,
-    4150
+    4151
    ],
    [
     "Jeudi",
@@ -789,7 +789,7 @@
    [
     "Mardi",
     19,
-    3765
+    3766
    ],
    [
     "Mercredi",
@@ -3759,7 +3759,7 @@
    {
     "chain": "4PADEL",
     "n_clubs": 10,
-    "median_sessions_per_club": 1609.0,
+    "median_sessions_per_club": 1616.0,
     "median_price_90": 48.0
    },
    {
@@ -3783,7 +3783,7 @@
    {
     "chain": "Forest Hill",
     "n_clubs": 3,
-    "median_sessions_per_club": 962,
+    "median_sessions_per_club": 966,
     "median_price_90": 85.5
    },
    {
@@ -3917,7 +3917,7 @@
   "n_mono": 102,
   "median_sessions_multi": 1636,
   "median_sessions_mono": 63,
-  "avg_sessions_multi": 2186,
+  "avg_sessions_multi": 2187,
   "avg_sessions_mono": 572,
   "clusters": [
    {
@@ -3967,7 +3967,7 @@
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 2164
+    "total_sessions": 2175
    },
    {
     "unified_id": "unif_008",
@@ -4002,7 +4002,7 @@
     "canonical_name": "4padel-cao-saint-denis",
     "cp": "93200",
     "n_platforms": 2,
-    "total_sessions": 646
+    "total_sessions": 658
    },
    {
     "unified_id": "unif_016",
