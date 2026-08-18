@@ -1,6 +1,15 @@
 {
- "generated_at": "2026-08-18T17:32:29.544318",
- "idle_24h": [],
+ "generated_at": "2026-08-18T17:59:58.113472",
+ "idle_24h": [
+  {
+   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "source": "doinsport",
+   "name": "FIVE ARENA",
+   "cp": "77100",
+   "last_seen": "2026-08-17 17:52",
+   "hours_idle": 24.1
+  }
+ ],
  "price_shifts": [
   {
    "slug": "play-padel-alfortville",
@@ -1512,8 +1521,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 100,
-  "idle_24h": 0,
+  "total_anomalies": 101,
+  "idle_24h": 1,
   "price_shifts": 8,
   "volume_drops": 92,
   "new_clubs_14d": 86
