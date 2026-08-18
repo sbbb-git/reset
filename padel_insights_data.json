@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-18T03:50:06.723530",
+ "generated_at": "2026-08-18T04:41:21.109359",
  "heatmap": {
   "days": [
    "Lundi",
@@ -131,49 +131,49 @@
     {
      "heure": 9,
      "offered": 3552,
-     "demand": 1623,
+     "demand": 1625,
      "occupation_pct": 46
     },
     {
      "heure": 10,
      "offered": 4785,
-     "demand": 1939,
+     "demand": 1947,
      "occupation_pct": 41
     },
     {
      "heure": 11,
      "offered": 4271,
-     "demand": 1606,
+     "demand": 1611,
      "occupation_pct": 38
     },
     {
      "heure": 12,
      "offered": 5400,
-     "demand": 2323,
+     "demand": 2331,
      "occupation_pct": 43
     },
     {
      "heure": 13,
      "offered": 4447,
-     "demand": 1578,
-     "occupation_pct": 35
+     "demand": 1592,
+     "occupation_pct": 36
     },
     {
      "heure": 14,
      "offered": 4960,
-     "demand": 2017,
+     "demand": 2030,
      "occupation_pct": 41
     },
     {
      "heure": 15,
      "offered": 4845,
-     "demand": 2064,
+     "demand": 2071,
      "occupation_pct": 43
     },
     {
      "heure": 16,
      "offered": 4614,
-     "demand": 2202,
+     "demand": 2204,
      "occupation_pct": 48
     },
     {
@@ -184,8 +184,8 @@
     },
     {
      "heure": 18,
-     "offered": 5581,
-     "demand": 4149,
+     "offered": 5582,
+     "demand": 4150,
      "occupation_pct": 74
     },
     {
@@ -345,13 +345,13 @@
     {
      "heure": 10,
      "offered": 4544,
-     "demand": 1736,
+     "demand": 1738,
      "occupation_pct": 38
     },
     {
      "heure": 11,
      "offered": 4133,
-     "demand": 1473,
+     "demand": 1475,
      "occupation_pct": 36
     },
     {
@@ -589,36 +589,36 @@
     {
      "heure": 16,
      "offered": 5128,
-     "demand": 2881,
+     "demand": 2883,
      "occupation_pct": 56
     },
     {
      "heure": 17,
      "offered": 5581,
-     "demand": 3256,
+     "demand": 3261,
      "occupation_pct": 58
     },
     {
      "heure": 18,
      "offered": 5710,
-     "demand": 3347,
+     "demand": 3354,
      "occupation_pct": 59
     },
     {
      "heure": 19,
      "offered": 4097,
-     "demand": 1912,
+     "demand": 1918,
      "occupation_pct": 47
     },
     {
      "heure": 20,
      "offered": 3561,
-     "demand": 1674,
+     "demand": 1676,
      "occupation_pct": 47
     },
     {
      "heure": 21,
-     "offered": 2593,
+     "offered": 2594,
      "demand": 1246,
      "occupation_pct": 48
     },
@@ -749,7 +749,7 @@
    [
     "Mardi",
     18,
-    4149
+    4150
    ],
    [
     "Jeudi",
@@ -3915,7 +3915,7 @@
  "multi_vs_mono": {
   "n_multi_platforms": 19,
   "n_mono": 102,
-  "median_sessions_multi": 1635,
+  "median_sessions_multi": 1636,
   "median_sessions_mono": 63,
   "avg_sessions_multi": 2186,
   "avg_sessions_mono": 572,
@@ -3988,7 +3988,7 @@
     "canonical_name": "padel-15-paris",
     "cp": "75015",
     "n_platforms": 3,
-    "total_sessions": 1635
+    "total_sessions": 1636
    },
    {
     "unified_id": "unif_011",
