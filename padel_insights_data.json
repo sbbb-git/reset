@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-19T03:51:50.834310",
+ "generated_at": "2026-08-19T04:42:16.396221",
  "heatmap": {
   "days": [
    "Lundi",
@@ -259,25 +259,25 @@
     {
      "heure": 13,
      "offered": 4466,
-     "demand": 1702,
+     "demand": 1703,
      "occupation_pct": 38
     },
     {
      "heure": 14,
      "offered": 5306,
-     "demand": 2334,
+     "demand": 2335,
      "occupation_pct": 44
     },
     {
      "heure": 15,
      "offered": 5193,
-     "demand": 2391,
+     "demand": 2394,
      "occupation_pct": 46
     },
     {
      "heure": 16,
      "offered": 4892,
-     "demand": 2532,
+     "demand": 2533,
      "occupation_pct": 52
     },
     {
@@ -289,31 +289,31 @@
     {
      "heure": 18,
      "offered": 5231,
-     "demand": 3997,
+     "demand": 4000,
      "occupation_pct": 76
     },
     {
      "heure": 19,
      "offered": 4874,
-     "demand": 3894,
+     "demand": 3898,
      "occupation_pct": 80
     },
     {
      "heure": 20,
      "offered": 4429,
-     "demand": 3398,
+     "demand": 3405,
      "occupation_pct": 77
     },
     {
      "heure": 21,
      "offered": 4295,
-     "demand": 3277,
+     "demand": 3279,
      "occupation_pct": 76
     },
     {
      "heure": 22,
      "offered": 2258,
-     "demand": 1445,
+     "demand": 1446,
      "occupation_pct": 64
     },
     {
@@ -345,25 +345,25 @@
     {
      "heure": 10,
      "offered": 4610,
-     "demand": 1780,
+     "demand": 1781,
      "occupation_pct": 39
     },
     {
      "heure": 11,
      "offered": 4192,
-     "demand": 1506,
+     "demand": 1511,
      "occupation_pct": 36
     },
     {
      "heure": 12,
      "offered": 5280,
-     "demand": 2284,
+     "demand": 2290,
      "occupation_pct": 43
     },
     {
      "heure": 13,
      "offered": 4336,
-     "demand": 1616,
+     "demand": 1619,
      "occupation_pct": 37
     },
     {
@@ -417,7 +417,7 @@
     {
      "heure": 22,
      "offered": 2701,
-     "demand": 1724,
+     "demand": 1725,
      "occupation_pct": 64
     },
     {
@@ -485,38 +485,38 @@
     {
      "heure": 16,
      "offered": 5370,
-     "demand": 2967,
+     "demand": 2968,
      "occupation_pct": 55
     },
     {
      "heure": 17,
      "offered": 4883,
-     "demand": 2992,
+     "demand": 2995,
      "occupation_pct": 61
     },
     {
      "heure": 18,
      "offered": 5542,
-     "demand": 4108,
+     "demand": 4113,
      "occupation_pct": 74
     },
     {
      "heure": 19,
      "offered": 4424,
-     "demand": 3121,
+     "demand": 3127,
      "occupation_pct": 71
     },
     {
      "heure": 20,
      "offered": 4528,
-     "demand": 3196,
+     "demand": 3199,
      "occupation_pct": 71
     },
     {
      "heure": 21,
      "offered": 3592,
-     "demand": 2423,
-     "occupation_pct": 67
+     "demand": 2425,
+     "occupation_pct": 68
     },
     {
      "heure": 22,
@@ -583,19 +583,19 @@
     {
      "heure": 15,
      "offered": 5491,
-     "demand": 3285,
+     "demand": 3289,
      "occupation_pct": 60
     },
     {
      "heure": 16,
      "offered": 5134,
-     "demand": 2927,
+     "demand": 2930,
      "occupation_pct": 57
     },
     {
      "heure": 17,
      "offered": 5587,
-     "demand": 3292,
+     "demand": 3293,
      "occupation_pct": 59
     },
     {
@@ -651,13 +651,13 @@
     {
      "heure": 9,
      "offered": 5367,
-     "demand": 3608,
+     "demand": 3609,
      "occupation_pct": 67
     },
     {
      "heure": 10,
      "offered": 4483,
-     "demand": 3061,
+     "demand": 3062,
      "occupation_pct": 68
     },
     {
@@ -759,7 +759,7 @@
    [
     "Vendredi",
     18,
-    4108
+    4113
    ],
    [
     "Lundi",
@@ -769,7 +769,7 @@
    [
     "Mercredi",
     18,
-    3997
+    4000
    ],
    [
     "Jeudi",
@@ -782,14 +782,14 @@
     3952
    ],
    [
+    "Mercredi",
+    19,
+    3898
+   ],
+   [
     "Dimanche",
     17,
     3895
-   ],
-   [
-    "Mercredi",
-    19,
-    3894
    ],
    [
     "Mardi",
@@ -824,7 +824,7 @@
    [
     "Dimanche",
     9,
-    3608
+    3609
    ],
    [
     "Lundi",
@@ -839,7 +839,7 @@
    [
     "Mercredi",
     20,
-    3398
+    3405
    ]
   ]
  },
