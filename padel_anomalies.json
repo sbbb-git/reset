@@ -1,21 +1,13 @@
 {
- "generated_at": "2026-08-19T15:37:32.618054",
+ "generated_at": "2026-08-19T16:37:20.293762",
  "idle_24h": [
-  {
-   "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
-   "source": "doinsport",
-   "name": "ASS TENNIS CLUB SARCELLOIS",
-   "cp": "95200",
-   "last_seen": "2026-08-12 13:50",
-   "hours_idle": 169.8
-  },
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
    "source": "doinsport",
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-08-17 17:52",
-   "hours_idle": 45.8
+   "hours_idle": 46.8
   }
  ],
  "price_shifts": [
@@ -1435,8 +1427,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 91,
-  "idle_24h": 2,
+  "total_anomalies": 90,
+  "idle_24h": 1,
   "price_shifts": 5,
   "volume_drops": 84,
   "new_clubs_14d": 86
