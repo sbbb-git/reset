@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-19T04:42:16.396221",
+ "generated_at": "2026-08-19T05:35:53.480505",
  "heatmap": {
   "days": [
    "Lundi",
@@ -86,8 +86,8 @@
     },
     {
      "heure": 19,
-     "offered": 5463,
-     "demand": 3952,
+     "offered": 5464,
+     "demand": 3953,
      "occupation_pct": 72
     },
     {
@@ -118,9 +118,9 @@
    "Mardi": [
     {
      "heure": 7,
-     "offered": 342,
+     "offered": 357,
      "demand": 65,
-     "occupation_pct": 19
+     "occupation_pct": 18
     },
     {
      "heure": 8,
@@ -252,8 +252,8 @@
     },
     {
      "heure": 12,
-     "offered": 5445,
-     "demand": 2489,
+     "offered": 5446,
+     "demand": 2490,
      "occupation_pct": 46
     },
     {
@@ -277,7 +277,7 @@
     {
      "heure": 16,
      "offered": 4892,
-     "demand": 2533,
+     "demand": 2534,
      "occupation_pct": 52
     },
     {
@@ -288,8 +288,8 @@
     },
     {
      "heure": 18,
-     "offered": 5231,
-     "demand": 4000,
+     "offered": 5232,
+     "demand": 4001,
      "occupation_pct": 76
     },
     {
@@ -307,13 +307,13 @@
     {
      "heure": 21,
      "offered": 4295,
-     "demand": 3279,
+     "demand": 3282,
      "occupation_pct": 76
     },
     {
      "heure": 22,
-     "offered": 2258,
-     "demand": 1446,
+     "offered": 2259,
+     "demand": 1448,
      "occupation_pct": 64
     },
     {
@@ -345,13 +345,13 @@
     {
      "heure": 10,
      "offered": 4610,
-     "demand": 1781,
+     "demand": 1782,
      "occupation_pct": 39
     },
     {
      "heure": 11,
      "offered": 4192,
-     "demand": 1511,
+     "demand": 1512,
      "occupation_pct": 36
     },
     {
@@ -369,19 +369,19 @@
     {
      "heure": 14,
      "offered": 4910,
-     "demand": 2171,
+     "demand": 2175,
      "occupation_pct": 44
     },
     {
      "heure": 15,
      "offered": 4841,
-     "demand": 2221,
+     "demand": 2226,
      "occupation_pct": 46
     },
     {
      "heure": 16,
      "offered": 4648,
-     "demand": 2365,
+     "demand": 2367,
      "occupation_pct": 51
     },
     {
@@ -430,9 +430,9 @@
    "Vendredi": [
     {
      "heure": 7,
-     "offered": 328,
+     "offered": 343,
      "demand": 82,
-     "occupation_pct": 25
+     "occupation_pct": 24
     },
     {
      "heure": 8,
@@ -546,7 +546,7 @@
     },
     {
      "heure": 9,
-     "offered": 4827,
+     "offered": 4828,
      "demand": 3109,
      "occupation_pct": 64
     },
@@ -564,7 +564,7 @@
     },
     {
      "heure": 12,
-     "offered": 5233,
+     "offered": 5236,
      "demand": 2821,
      "occupation_pct": 54
     },
@@ -769,7 +769,7 @@
    [
     "Mercredi",
     18,
-    4000
+    4001
    ],
    [
     "Jeudi",
@@ -779,7 +779,7 @@
    [
     "Lundi",
     19,
-    3952
+    3953
    ],
    [
     "Mercredi",
@@ -3759,7 +3759,7 @@
    {
     "chain": "4PADEL",
     "n_clubs": 10,
-    "median_sessions_per_club": 1614.0,
+    "median_sessions_per_club": 1621.5,
     "median_price_90": 48.0
    },
    {
@@ -3771,7 +3771,7 @@
    {
     "chain": "UrbanPadel",
     "n_clubs": 4,
-    "median_sessions_per_club": 1591.5,
+    "median_sessions_per_club": 1592.0,
     "median_price_90": 75.0
    },
    {
@@ -3783,7 +3783,7 @@
    {
     "chain": "Forest Hill",
     "n_clubs": 3,
-    "median_sessions_per_club": 945,
+    "median_sessions_per_club": 949,
     "median_price_90": 85.5
    },
    {
@@ -3807,13 +3807,13 @@
    {
     "chain": "Padel Camp",
     "n_clubs": 2,
-    "median_sessions_per_club": 160.5,
+    "median_sessions_per_club": 161.0,
     "median_price_90": 68.0
    },
    {
     "chain": "Play Padel",
     "n_clubs": 2,
-    "median_sessions_per_club": 826.0,
+    "median_sessions_per_club": 826.5,
     "median_price_90": 31.5
    },
    {
@@ -3917,7 +3917,7 @@
   "n_mono": 102,
   "median_sessions_multi": 1635,
   "median_sessions_mono": 63,
-  "avg_sessions_multi": 2248,
+  "avg_sessions_multi": 2249,
   "avg_sessions_mono": 575,
   "clusters": [
    {
@@ -3967,7 +3967,7 @@
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 2165
+    "total_sessions": 2176
    },
    {
     "unified_id": "unif_017",
@@ -3981,7 +3981,7 @@
     "canonical_name": "Play Padel Alfortville",
     "cp": "94140",
     "n_platforms": 2,
-    "total_sessions": 1652
+    "total_sessions": 1653
    },
    {
     "unified_id": "unif_009",
@@ -4030,7 +4030,7 @@
     "canonical_name": "padel-camp-acheres",
     "cp": "78260",
     "n_platforms": 2,
-    "total_sessions": 321
+    "total_sessions": 322
    },
    {
     "unified_id": "unif_006",
