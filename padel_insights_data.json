@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-19T19:31:12.301653",
+ "generated_at": "2026-08-19T19:55:10.464415",
  "heatmap": {
   "days": [
    "Lundi",
@@ -44,8 +44,8 @@
     },
     {
      "heure": 12,
-     "offered": 5683,
-     "demand": 2143,
+     "offered": 5684,
+     "demand": 2144,
      "occupation_pct": 38
     },
     {
@@ -137,7 +137,7 @@
     {
      "heure": 10,
      "offered": 5277,
-     "demand": 2023,
+     "demand": 2024,
      "occupation_pct": 38
     },
     {
@@ -196,13 +196,13 @@
     },
     {
      "heure": 20,
-     "offered": 5215,
-     "demand": 3720,
+     "offered": 5216,
+     "demand": 3721,
      "occupation_pct": 71
     },
     {
      "heure": 21,
-     "offered": 4633,
+     "offered": 4637,
      "demand": 3272,
      "occupation_pct": 71
     },
@@ -312,14 +312,14 @@
     },
     {
      "heure": 22,
-     "offered": 2291,
-     "demand": 1521,
-     "occupation_pct": 66
+     "offered": 2292,
+     "demand": 1528,
+     "occupation_pct": 67
     },
     {
      "heure": 23,
      "offered": 324,
-     "demand": 182,
+     "demand": 183,
      "occupation_pct": 56
     }
    ],
@@ -356,62 +356,62 @@
     },
     {
      "heure": 12,
-     "offered": 5388,
-     "demand": 2400,
+     "offered": 5389,
+     "demand": 2402,
      "occupation_pct": 45
     },
     {
      "heure": 13,
      "offered": 4431,
-     "demand": 1704,
+     "demand": 1705,
      "occupation_pct": 38
     },
     {
      "heure": 14,
      "offered": 4950,
-     "demand": 2254,
+     "demand": 2256,
      "occupation_pct": 46
     },
     {
      "heure": 15,
      "offered": 4863,
-     "demand": 2319,
+     "demand": 2320,
      "occupation_pct": 48
     },
     {
      "heure": 16,
      "offered": 4671,
-     "demand": 2454,
+     "demand": 2458,
      "occupation_pct": 53
     },
     {
      "heure": 17,
      "offered": 4854,
-     "demand": 3016,
+     "demand": 3024,
      "occupation_pct": 62
     },
     {
      "heure": 18,
      "offered": 5475,
-     "demand": 4273,
+     "demand": 4287,
      "occupation_pct": 78
     },
     {
      "heure": 19,
-     "offered": 4955,
-     "demand": 4047,
+     "offered": 4956,
+     "demand": 4059,
      "occupation_pct": 82
     },
     {
      "heure": 20,
-     "offered": 4926,
-     "demand": 3889,
+     "offered": 4930,
+     "demand": 3896,
      "occupation_pct": 79
     },
     {
      "heure": 21,
-     "offered": 4609,
-     "demand": 3460,
+     "offered": 4616,
+     "demand": 3466,
      "occupation_pct": 75
     },
     {
@@ -472,20 +472,20 @@
     },
     {
      "heure": 14,
-     "offered": 5458,
-     "demand": 2519,
+     "offered": 5459,
+     "demand": 2521,
      "occupation_pct": 46
     },
     {
      "heure": 15,
      "offered": 5453,
-     "demand": 2687,
+     "demand": 2691,
      "occupation_pct": 49
     },
     {
      "heure": 16,
      "offered": 5444,
-     "demand": 3030,
+     "demand": 3034,
      "occupation_pct": 56
     },
     {
@@ -497,19 +497,19 @@
     {
      "heure": 18,
      "offered": 5656,
-     "demand": 4195,
+     "demand": 4196,
      "occupation_pct": 74
     },
     {
      "heure": 19,
      "offered": 4508,
-     "demand": 3186,
+     "demand": 3187,
      "occupation_pct": 71
     },
     {
      "heure": 20,
      "offered": 4615,
-     "demand": 3250,
+     "demand": 3251,
      "occupation_pct": 70
     },
     {
@@ -547,19 +547,19 @@
     {
      "heure": 9,
      "offered": 4862,
-     "demand": 3134,
+     "demand": 3135,
      "occupation_pct": 64
     },
     {
      "heure": 10,
-     "offered": 4310,
-     "demand": 2682,
+     "offered": 4311,
+     "demand": 2684,
      "occupation_pct": 62
     },
     {
      "heure": 11,
-     "offered": 4315,
-     "demand": 2733,
+     "offered": 4316,
+     "demand": 2737,
      "occupation_pct": 63
     },
     {
@@ -618,7 +618,7 @@
     },
     {
      "heure": 21,
-     "offered": 2608,
+     "offered": 2611,
      "demand": 1270,
      "occupation_pct": 49
     },
@@ -754,12 +754,12 @@
    [
     "Jeudi",
     18,
-    4273
+    4287
    ],
    [
     "Vendredi",
     18,
-    4195
+    4196
    ],
    [
     "Lundi",
@@ -774,7 +774,7 @@
    [
     "Jeudi",
     19,
-    4047
+    4059
    ],
    [
     "Lundi",
@@ -799,7 +799,7 @@
    [
     "Jeudi",
     20,
-    3889
+    3896
    ],
    [
     "Dimanche",
@@ -819,7 +819,7 @@
    [
     "Mardi",
     20,
-    3720
+    3721
    ],
    [
     "Dimanche",
@@ -839,7 +839,7 @@
    [
     "Jeudi",
     21,
-    3460
+    3466
    ]
   ]
  },
@@ -3771,7 +3771,7 @@
    {
     "chain": "UrbanPadel",
     "n_clubs": 4,
-    "median_sessions_per_club": 1597.5,
+    "median_sessions_per_club": 1599.0,
     "median_price_90": 75.0
    },
    {
@@ -3807,13 +3807,13 @@
    {
     "chain": "Padel Camp",
     "n_clubs": 2,
-    "median_sessions_per_club": 164.5,
+    "median_sessions_per_club": 165.0,
     "median_price_90": 68.0
    },
    {
     "chain": "Play Padel",
     "n_clubs": 2,
-    "median_sessions_per_club": 844.5,
+    "median_sessions_per_club": 845.0,
     "median_price_90": 31.5
    },
    {
@@ -3831,7 +3831,7 @@
    {
     "chain": "Carre Padel",
     "n_clubs": 1,
-    "median_sessions_per_club": 5433,
+    "median_sessions_per_club": 5434,
     "median_price_90": 69.0
    },
    {
@@ -3918,7 +3918,7 @@
   "median_sessions_multi": 1665,
   "median_sessions_mono": 64,
   "avg_sessions_multi": 2294,
-  "avg_sessions_mono": 595,
+  "avg_sessions_mono": 596,
   "clusters": [
    {
     "unified_id": "unif_005",
@@ -3981,7 +3981,7 @@
     "canonical_name": "Play Padel Alfortville",
     "cp": "94140",
     "n_platforms": 2,
-    "total_sessions": 1689
+    "total_sessions": 1690
    },
    {
     "unified_id": "unif_017",
@@ -3995,7 +3995,7 @@
     "canonical_name": "4padel-cao-saint-denis",
     "cp": "93200",
     "n_platforms": 2,
-    "total_sessions": 955
+    "total_sessions": 959
    },
    {
     "unified_id": "unif_011",
@@ -4030,7 +4030,7 @@
     "canonical_name": "padel-camp-acheres",
     "cp": "78260",
     "n_platforms": 2,
-    "total_sessions": 329
+    "total_sessions": 330
    },
    {
     "unified_id": "unif_006",
