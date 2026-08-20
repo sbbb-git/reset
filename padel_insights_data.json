@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-20T22:33:10.015437",
+ "generated_at": "2026-08-20T23:01:34.723621",
  "heatmap": {
   "days": [
    "Lundi",
@@ -288,26 +288,26 @@
     },
     {
      "heure": 18,
-     "offered": 5603,
+     "offered": 5604,
      "demand": 4138,
      "occupation_pct": 74
     },
     {
      "heure": 19,
-     "offered": 5227,
+     "offered": 5229,
      "demand": 4032,
      "occupation_pct": 77
     },
     {
      "heure": 20,
-     "offered": 4798,
-     "demand": 3549,
+     "offered": 4800,
+     "demand": 3550,
      "occupation_pct": 74
     },
     {
      "heure": 21,
      "offered": 4662,
-     "demand": 3405,
+     "demand": 3406,
      "occupation_pct": 73
     },
     {
@@ -496,8 +496,8 @@
     },
     {
      "heure": 18,
-     "offered": 5740,
-     "demand": 4327,
+     "offered": 5741,
+     "demand": 4329,
      "occupation_pct": 75
     },
     {
@@ -759,7 +759,7 @@
    [
     "Vendredi",
     18,
-    4327
+    4329
    ],
    [
     "Lundi",
@@ -839,7 +839,7 @@
    [
     "Mercredi",
     20,
-    3549
+    3550
    ]
   ]
  },
@@ -3915,7 +3915,7 @@
  "multi_vs_mono": {
   "n_multi_platforms": 19,
   "n_mono": 102,
-  "median_sessions_multi": 1646,
+  "median_sessions_multi": 1651,
   "median_sessions_mono": 70,
   "avg_sessions_multi": 2331,
   "avg_sessions_mono": 602,
@@ -3988,7 +3988,7 @@
     "canonical_name": "Sportfield Paris 16 ",
     "cp": "75016",
     "n_platforms": 2,
-    "total_sessions": 1646
+    "total_sessions": 1651
    },
    {
     "unified_id": "unif_000",
