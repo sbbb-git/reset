@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-19T23:51:29.229166",
+ "generated_at": "2026-08-20T01:25:29.476522",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,11 +9,11 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 93966,
-   "doinsport": 3207,
+   "anybuddy": 98283,
+   "doinsport": 3211,
    "urbanpadel": 8086
   },
-  "n_sessions_live": 105259,
+  "n_sessions_live": 109580,
   "n_sessions_history": 379552,
   "pop_idf": 12258660
  },
@@ -56,7 +56,7 @@
    "revenu_median_uc": 24370,
    "clubs_padel": 13,
    "hab_par_club": 101303,
-   "prix_median_90min": 66.0
+   "prix_median_90min": 70.0
   },
   "92": {
    "nom": "Hauts-de-Seine",
@@ -86,7 +86,7 @@
    "revenu_median_uc": 23560,
    "clubs_padel": 9,
    "hab_par_club": 156672,
-   "prix_median_90min": 48.0
+   "prix_median_90min": 44.0
   },
   "95": {
    "nom": "Val-d'Oise",
@@ -476,28 +476,28 @@
  "weather_period": "2024-01-01 → 2026-05-31",
  "maturity": {
   "anybuddy": {
+   "days_elapsed": 82,
+   "target_days": 180,
+   "pct": 46,
+   "note": "82j sur 180j (6 mois)"
+  },
+  "urbanpadel": {
    "days_elapsed": 81,
    "target_days": 180,
    "pct": 45,
    "note": "81j sur 180j (6 mois)"
   },
-  "urbanpadel": {
-   "days_elapsed": 80,
-   "target_days": 180,
-   "pct": 44,
-   "note": "80j sur 180j (6 mois)"
-  },
   "doinsport": {
-   "days_elapsed": 961,
+   "days_elapsed": 962,
    "target_days": 180,
    "pct": 100,
    "note": "historique rétroactif disponible"
   },
   "playtomic": {
-   "days_elapsed": 80,
+   "days_elapsed": 81,
    "target_days": 180,
-   "pct": 44,
-   "note": "80j sur 180j (6 mois)"
+   "pct": 45,
+   "note": "81j sur 180j (6 mois)"
   },
   "_global_pct": 66
  }
