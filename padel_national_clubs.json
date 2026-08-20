@@ -2596,28 +2596,6 @@
   }
  },
  {
-  "slug": "doinsport-d84c9152-be56-4f36-8433-8bd52009fdbd",
-  "source": "doinsport",
-  "name": "Garden Tennis & Padel Royan",
-  "cp": "17200",
-  "city": "Royan",
-  "dept": "17",
-  "metro": "limousin",
-  "lat": 45.6186822,
-  "lng": -1.040518,
-  "raw": {
-   "id": "d84c9152-be56-4f36-8433-8bd52009fdbd",
-   "name": "Garden Tennis & Padel Royan",
-   "cp": "17200",
-   "city": "Royan",
-   "dept": "17",
-   "metro": "limousin",
-   "lat": 45.6186822,
-   "lng": -1.040518,
-   "website": null
-  }
- },
- {
   "slug": "doinsport-187de55e-8eb9-4f11-b989-63a95cfd03e8",
   "source": "doinsport",
   "name": "Génération Foot Indoor",
@@ -7612,72 +7590,6 @@
   }
  },
  {
-  "slug": "doinsport-9772422f-ad61-4f20-bd2e-89fd804692a8",
-  "source": "doinsport",
-  "name": "Tennis & Padel La Couarde",
-  "cp": "17670",
-  "city": "La Couarde-sur-Mer",
-  "dept": "17",
-  "metro": "limousin",
-  "lat": 46.2013996,
-  "lng": -1.4364478,
-  "raw": {
-   "id": "9772422f-ad61-4f20-bd2e-89fd804692a8",
-   "name": "Tennis & Padel La Couarde",
-   "cp": "17670",
-   "city": "La Couarde-sur-Mer",
-   "dept": "17",
-   "metro": "limousin",
-   "lat": 46.2013996,
-   "lng": -1.4364478,
-   "website": "https://www.tennisiledere.fr/"
-  }
- },
- {
-  "slug": "doinsport-e9c76c29-e8f7-4f3d-85c7-717a08cb7678",
-  "source": "doinsport",
-  "name": "Tennis & Padel Saint-Palais-sur-Mer",
-  "cp": "17420",
-  "city": "Saint-Palais-sur-Mer",
-  "dept": "17",
-  "metro": "limousin",
-  "lat": 45.6578817,
-  "lng": -1.1011489,
-  "raw": {
-   "id": "e9c76c29-e8f7-4f3d-85c7-717a08cb7678",
-   "name": "Tennis & Padel Saint-Palais-sur-Mer",
-   "cp": "17420",
-   "city": "Saint-Palais-sur-Mer",
-   "dept": "17",
-   "metro": "limousin",
-   "lat": 45.6578817,
-   "lng": -1.1011489,
-   "website": "https://www.saintpalaistennis.fr/"
-  }
- },
- {
-  "slug": "doinsport-d7686591-1f6b-4f31-95d5-6ef976574a67",
-  "source": "doinsport",
-  "name": "Tennis & Squash Loix",
-  "cp": "17111",
-  "city": "Loix",
-  "dept": "17",
-  "metro": "limousin",
-  "lat": 46.2240177,
-  "lng": -1.4364756,
-  "raw": {
-   "id": "d7686591-1f6b-4f31-95d5-6ef976574a67",
-   "name": "Tennis & Squash Loix",
-   "cp": "17111",
-   "city": "Loix",
-   "dept": "17",
-   "metro": "limousin",
-   "lat": 46.2240177,
-   "lng": -1.4364756,
-   "website": "https://www.tennisiledere.fr/"
-  }
- },
- {
   "slug": "doinsport-510d1c9c-2f14-4fe7-b42a-48629e4651dc",
   "source": "doinsport",
   "name": "TENNIS CLUB CARROS",
@@ -8159,6 +8071,94 @@
    "lat": 50.3486591,
    "lng": 3.5286475,
    "website": "http://www.tsbvalenciennes.com"
+  }
+ },
+ {
+  "slug": "doinsport-d84c9152-be56-4f36-8433-8bd52009fdbd",
+  "source": "doinsport",
+  "name": "TSL COTE DE BEAUTE - Garden Tennis & Padel Royan",
+  "cp": "17200",
+  "city": "Royan",
+  "dept": "17",
+  "metro": "limousin",
+  "lat": 45.6186822,
+  "lng": -1.040518,
+  "raw": {
+   "id": "d84c9152-be56-4f36-8433-8bd52009fdbd",
+   "name": "TSL COTE DE BEAUTE - Garden Tennis & Padel Royan",
+   "cp": "17200",
+   "city": "Royan",
+   "dept": "17",
+   "metro": "limousin",
+   "lat": 45.6186822,
+   "lng": -1.040518,
+   "website": null
+  }
+ },
+ {
+  "slug": "doinsport-e9c76c29-e8f7-4f3d-85c7-717a08cb7678",
+  "source": "doinsport",
+  "name": "TSL COTE DE BEAUTE - Tennis & Padel Saint-Palais-sur-Mer",
+  "cp": "17420",
+  "city": "Saint-Palais-sur-Mer",
+  "dept": "17",
+  "metro": "limousin",
+  "lat": 45.6578817,
+  "lng": -1.1011489,
+  "raw": {
+   "id": "e9c76c29-e8f7-4f3d-85c7-717a08cb7678",
+   "name": "TSL COTE DE BEAUTE - Tennis & Padel Saint-Palais-sur-Mer",
+   "cp": "17420",
+   "city": "Saint-Palais-sur-Mer",
+   "dept": "17",
+   "metro": "limousin",
+   "lat": 45.6578817,
+   "lng": -1.1011489,
+   "website": "https://www.saintpalaistennis.fr/"
+  }
+ },
+ {
+  "slug": "doinsport-9772422f-ad61-4f20-bd2e-89fd804692a8",
+  "source": "doinsport",
+  "name": "TSL ILE DE RE - Tennis & Padel La Couarde",
+  "cp": "17670",
+  "city": "La Couarde-sur-Mer",
+  "dept": "17",
+  "metro": "limousin",
+  "lat": 46.2013996,
+  "lng": -1.4364478,
+  "raw": {
+   "id": "9772422f-ad61-4f20-bd2e-89fd804692a8",
+   "name": "TSL ILE DE RE - Tennis & Padel La Couarde",
+   "cp": "17670",
+   "city": "La Couarde-sur-Mer",
+   "dept": "17",
+   "metro": "limousin",
+   "lat": 46.2013996,
+   "lng": -1.4364478,
+   "website": "https://www.tennisiledere.fr/"
+  }
+ },
+ {
+  "slug": "doinsport-d7686591-1f6b-4f31-95d5-6ef976574a67",
+  "source": "doinsport",
+  "name": "TSL ILE DE RE - Tennis & Squash Loix",
+  "cp": "17111",
+  "city": "Loix",
+  "dept": "17",
+  "metro": "limousin",
+  "lat": 46.2240177,
+  "lng": -1.4364756,
+  "raw": {
+   "id": "d7686591-1f6b-4f31-95d5-6ef976574a67",
+   "name": "TSL ILE DE RE - Tennis & Squash Loix",
+   "cp": "17111",
+   "city": "Loix",
+   "dept": "17",
+   "metro": "limousin",
+   "lat": 46.2240177,
+   "lng": -1.4364756,
+   "website": "https://www.tennisiledere.fr/"
   }
  },
  {
