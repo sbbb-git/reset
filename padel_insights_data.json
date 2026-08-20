@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-20T04:43:06.812230",
+ "generated_at": "2026-08-20T05:36:44.378420",
  "heatmap": {
   "days": [
    "Lundi",
@@ -45,13 +45,13 @@
     {
      "heure": 12,
      "offered": 5684,
-     "demand": 2144,
+     "demand": 2145,
      "occupation_pct": 38
     },
     {
      "heure": 13,
      "offered": 4713,
-     "demand": 1525,
+     "demand": 1527,
      "occupation_pct": 32
     },
     {
@@ -222,9 +222,9 @@
    "Mercredi": [
     {
      "heure": 7,
-     "offered": 359,
+     "offered": 374,
      "demand": 79,
-     "occupation_pct": 22
+     "occupation_pct": 21
     },
     {
      "heure": 8,
@@ -368,7 +368,7 @@
     },
     {
      "heure": 14,
-     "offered": 4956,
+     "offered": 4958,
      "demand": 2286,
      "occupation_pct": 46
     },
@@ -392,14 +392,14 @@
     },
     {
      "heure": 18,
-     "offered": 5484,
-     "demand": 4321,
+     "offered": 5485,
+     "demand": 4322,
      "occupation_pct": 79
     },
     {
      "heure": 19,
      "offered": 4967,
-     "demand": 4091,
+     "demand": 4092,
      "occupation_pct": 82
     },
     {
@@ -502,13 +502,13 @@
     },
     {
      "heure": 19,
-     "offered": 4520,
+     "offered": 4522,
      "demand": 3195,
      "occupation_pct": 71
     },
     {
      "heure": 20,
-     "offered": 4628,
+     "offered": 4629,
      "demand": 3262,
      "occupation_pct": 70
     },
@@ -546,8 +546,8 @@
     },
     {
      "heure": 9,
-     "offered": 4862,
-     "demand": 3135,
+     "offered": 4863,
+     "demand": 3136,
      "occupation_pct": 64
     },
     {
@@ -749,7 +749,7 @@
    [
     "Jeudi",
     18,
-    4321
+    4322
    ],
    [
     "Mardi",
@@ -769,7 +769,7 @@
    [
     "Jeudi",
     19,
-    4091
+    4092
    ],
    [
     "Mercredi",
@@ -3783,7 +3783,7 @@
    {
     "chain": "Forest Hill",
     "n_clubs": 3,
-    "median_sessions_per_club": 930,
+    "median_sessions_per_club": 934,
     "median_price_90": 85.5
    },
    {
@@ -3843,7 +3843,7 @@
    {
     "chain": "Trinquet",
     "n_clubs": 1,
-    "median_sessions_per_club": 1553,
+    "median_sessions_per_club": 1556,
     "median_price_90": 71.0
    }
   ],
@@ -3953,7 +3953,7 @@
     "canonical_name": "Padel Horizon - Sucy en Brie",
     "cp": "94370",
     "n_platforms": 2,
-    "total_sessions": 2602
+    "total_sessions": 2604
    },
    {
     "unified_id": "unif_018",
@@ -3967,7 +3967,7 @@
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 2165
+    "total_sessions": 2176
    },
    {
     "unified_id": "unif_008",
