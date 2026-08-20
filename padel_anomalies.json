@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-20T06:54:00.954309",
+ "generated_at": "2026-08-20T07:46:25.278503",
  "idle_24h": [
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -7,7 +7,7 @@
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-08-17 17:52",
-   "hours_idle": 61.0
+   "hours_idle": 61.9
   }
  ],
  "price_shifts": [
@@ -30,6 +30,16 @@
    "prix_recent": 48.0,
    "delta_pct": -42.9,
    "direction": "baisse"
+  },
+  {
+   "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
+   "source": "doinsport",
+   "name": "O.S. Sannois",
+   "cp": "95110",
+   "prix_30j": 27.0,
+   "prix_recent": 36.0,
+   "delta_pct": 33.3,
+   "direction": "hausse"
   },
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -1401,9 +1411,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 87,
+  "total_anomalies": 88,
   "idle_24h": 1,
-  "price_shifts": 4,
+  "price_shifts": 5,
   "volume_drops": 82,
   "new_clubs_14d": 86
  }
