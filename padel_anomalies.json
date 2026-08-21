@@ -1,6 +1,15 @@
 {
- "generated_at": "2026-08-21T19:30:33.523905",
- "idle_24h": [],
+ "generated_at": "2026-08-21T19:52:42.933503",
+ "idle_24h": [
+  {
+   "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
+   "source": "doinsport",
+   "name": "ASS TENNIS CLUB SARCELLOIS",
+   "cp": "95200",
+   "last_seen": "2026-08-19 20:40",
+   "hours_idle": 47.2
+  }
+ ],
  "price_shifts": [
   {
    "slug": "doinsport-59044915-a142-4f27-a8f4-433b199d73d5",
@@ -1402,8 +1411,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 87,
-  "idle_24h": 0,
+  "total_anomalies": 88,
+  "idle_24h": 1,
   "price_shifts": 5,
   "volume_drops": 82,
   "new_clubs_14d": 86
