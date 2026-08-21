@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T04:43:40.334584",
+ "generated_at": "2026-08-21T05:37:54.310463",
  "heatmap": {
   "days": [
    "Lundi",
@@ -14,7 +14,7 @@
    "Lundi": [
     {
      "heure": 7,
-     "offered": 362,
+     "offered": 372,
      "demand": 43,
      "occupation_pct": 12
     },
@@ -326,9 +326,9 @@
    "Jeudi": [
     {
      "heure": 7,
-     "offered": 343,
+     "offered": 358,
      "demand": 80,
-     "occupation_pct": 23
+     "occupation_pct": 22
     },
     {
      "heure": 8,
@@ -455,7 +455,7 @@
     {
      "heure": 11,
      "offered": 4360,
-     "demand": 1827,
+     "demand": 1828,
      "occupation_pct": 42
     },
     {
@@ -491,7 +491,7 @@
     {
      "heure": 17,
      "offered": 5085,
-     "demand": 3211,
+     "demand": 3212,
      "occupation_pct": 63
     },
     {
@@ -520,8 +520,8 @@
     },
     {
      "heure": 22,
-     "offered": 2529,
-     "demand": 1568,
+     "offered": 2530,
+     "demand": 1570,
      "occupation_pct": 62
     },
     {
@@ -3783,7 +3783,7 @@
    {
     "chain": "Forest Hill",
     "n_clubs": 3,
-    "median_sessions_per_club": 888,
+    "median_sessions_per_club": 892,
     "median_price_90": 85.5
    },
    {
@@ -3917,7 +3917,7 @@
   "n_mono": 102,
   "median_sessions_multi": 1579,
   "median_sessions_mono": 70,
-  "avg_sessions_multi": 2325,
+  "avg_sessions_multi": 2326,
   "avg_sessions_mono": 577,
   "clusters": [
    {
@@ -3967,7 +3967,7 @@
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 2163
+    "total_sessions": 2174
    },
    {
     "unified_id": "unif_017",
@@ -3995,7 +3995,7 @@
     "canonical_name": "4padel-cao-saint-denis",
     "cp": "93200",
     "n_platforms": 2,
-    "total_sessions": 1103
+    "total_sessions": 1113
    },
    {
     "unified_id": "unif_016",
