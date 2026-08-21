@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T14:41:04.897304",
+ "generated_at": "2026-08-21T15:39:29.215057",
  "idle_24h": [
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -7,7 +7,7 @@
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-08-17 17:52",
-   "hours_idle": 92.8
+   "hours_idle": 93.8
   }
  ],
  "price_shifts": [
@@ -38,16 +38,6 @@
    "cp": "95110",
    "prix_30j": 27.0,
    "prix_recent": 36.0,
-   "delta_pct": 33.3,
-   "direction": "hausse"
-  },
-  {
-   "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
-   "source": "doinsport",
-   "name": "Domaine de Lassy",
-   "cp": "95270",
-   "prix_30j": 54.0,
-   "prix_recent": 72.0,
    "delta_pct": 33.3,
    "direction": "hausse"
   },
@@ -1411,9 +1401,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 88,
+  "total_anomalies": 87,
   "idle_24h": 1,
-  "price_shifts": 5,
+  "price_shifts": 4,
   "volume_drops": 82,
   "new_clubs_14d": 86
  }
