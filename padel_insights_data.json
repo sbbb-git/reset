@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-22T21:27:17.771048",
+ "generated_at": "2026-08-22T21:50:45.943169",
  "heatmap": {
   "days": [
    "Lundi",
@@ -301,7 +301,7 @@
     {
      "heure": 20,
      "offered": 4815,
-     "demand": 3613,
+     "demand": 3614,
      "occupation_pct": 75
     },
     {
@@ -526,9 +526,9 @@
     },
     {
      "heure": 23,
-     "offered": 639,
+     "offered": 644,
      "demand": 376,
-     "occupation_pct": 59
+     "occupation_pct": 58
     }
    ],
    "Samedi": [
@@ -669,7 +669,7 @@
     {
      "heure": 12,
      "offered": 5675,
-     "demand": 3202,
+     "demand": 3203,
      "occupation_pct": 56
     },
     {
@@ -693,25 +693,25 @@
     {
      "heure": 16,
      "offered": 6013,
-     "demand": 3945,
+     "demand": 3946,
      "occupation_pct": 66
     },
     {
      "heure": 17,
      "offered": 6270,
-     "demand": 4171,
+     "demand": 4172,
      "occupation_pct": 67
     },
     {
      "heure": 18,
-     "offered": 6750,
-     "demand": 4619,
+     "offered": 6751,
+     "demand": 4621,
      "occupation_pct": 68
     },
     {
      "heure": 19,
      "offered": 5047,
-     "demand": 3048,
+     "demand": 3051,
      "occupation_pct": 60
     },
     {
@@ -723,7 +723,7 @@
     {
      "heure": 21,
      "offered": 3216,
-     "demand": 1941,
+     "demand": 1942,
      "occupation_pct": 60
     },
     {
@@ -744,7 +744,7 @@
    [
     "Dimanche",
     18,
-    4619
+    4621
    ],
    [
     "Jeudi",
@@ -779,7 +779,7 @@
    [
     "Dimanche",
     17,
-    4171
+    4172
    ],
    [
     "Lundi",
@@ -814,7 +814,7 @@
    [
     "Dimanche",
     16,
-    3945
+    3946
    ],
    [
     "Dimanche",
@@ -3967,7 +3967,7 @@
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 2313
+    "total_sessions": 2318
    },
    {
     "unified_id": "unif_000",
