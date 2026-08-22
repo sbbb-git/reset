@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-22T19:49:59.539993",
+ "generated_at": "2026-08-22T20:29:04.557090",
  "idle_24h": [
   {
    "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
@@ -7,7 +7,7 @@
    "name": "ASS TENNIS CLUB SARCELLOIS",
    "cp": "95200",
    "last_seen": "2026-08-19 20:40",
-   "hours_idle": 71.2
+   "hours_idle": 71.8
   }
  ],
  "price_shifts": [
@@ -40,16 +40,6 @@
    "prix_recent": 48.0,
    "delta_pct": -42.9,
    "direction": "baisse"
-  },
-  {
-   "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
-   "source": "doinsport",
-   "name": "Domaine de Lassy",
-   "cp": "95270",
-   "prix_30j": 54.0,
-   "prix_recent": 72.0,
-   "delta_pct": 33.3,
-   "direction": "hausse"
   },
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -1429,9 +1419,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 90,
+  "total_anomalies": 89,
   "idle_24h": 1,
-  "price_shifts": 6,
+  "price_shifts": 5,
   "volume_drops": 83,
   "new_clubs_14d": 86
  }
