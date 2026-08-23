@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-23T01:38:31.179135",
+ "generated_at": "2026-08-23T03:11:36.567254",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,12 +9,12 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 98538,
-   "doinsport": 3460,
-   "urbanpadel": 8548
+   "anybuddy": 91789,
+   "doinsport": 3160,
+   "urbanpadel": 8160
   },
-  "n_sessions_live": 110546,
-  "n_sessions_history": 403479,
+  "n_sessions_live": 103109,
+  "n_sessions_history": 410918,
   "pop_idf": 12258660
  },
  "dept": {
@@ -56,7 +56,7 @@
    "revenu_median_uc": 24370,
    "clubs_padel": 13,
    "hab_par_club": 101303,
-   "prix_median_90min": 66.0
+   "prix_median_90min": 63
   },
   "92": {
    "nom": "Hauts-de-Seine",
@@ -270,7 +270,7 @@
   ],
   [
    "2026-08",
-   52684
+   60123
   ]
  ],
  "top_ca": [
@@ -278,8 +278,8 @@
    "slug": "doinsport-9814afd2-c0d3-4f0f-a80e-fc62be89bc38",
    "name": "Padel 95",
    "cp": "95300",
-   "bookings": 26832,
-   "ca": 1528227,
+   "bookings": 26857,
+   "ca": 1530020,
    "first": "2024-03",
    "last": "2026-08"
   },
@@ -287,8 +287,8 @@
    "slug": "padelshot-saint-quentin-en-yvelines-trappes",
    "name": "?",
    "cp": "78190",
-   "bookings": 17417,
-   "ca": 1235242,
+   "bookings": 17867,
+   "ca": 1270582,
    "first": "2026-06",
    "last": "2026-08"
   },
@@ -305,7 +305,7 @@
    "slug": "doinsport-d016516b-15a9-4f04-a359-53c6be5395ac",
    "name": "Tennis Club de la Chataigneraie",
    "cp": "92500",
-   "bookings": 17381,
+   "bookings": 17385,
    "ca": 1056935,
    "first": "2023-09",
    "last": "2026-08"
@@ -314,26 +314,17 @@
    "slug": "doinsport-efd176fa-cf39-4f7f-bf2d-5c7d9412148a",
    "name": "Padel Horizon - Sucy en Brie",
    "cp": "94370",
-   "bookings": 18359,
-   "ca": 961032,
+   "bookings": 18394,
+   "ca": 961428,
    "first": "2023-01",
-   "last": "2026-08"
-  },
-  {
-   "slug": "doinsport-81d36fb8-553b-4fe5-87f4-ab76a12acbaf",
-   "name": "Padel A.C",
-   "cp": "95700",
-   "bookings": 17735,
-   "ca": 852445,
-   "first": "2024-12",
    "last": "2026-08"
   },
   {
    "slug": "home-padel-meaux",
    "name": "?",
    "cp": "77100",
-   "bookings": 16644,
-   "ca": 846659,
+   "bookings": 17241,
+   "ca": 874135,
    "first": "2026-06",
    "last": "2026-08"
   },
@@ -341,17 +332,26 @@
    "slug": "senart-padel-combs-la-ville",
    "name": "?",
    "cp": "77380",
-   "bookings": 10868,
-   "ca": 824064,
+   "bookings": 11267,
+   "ca": 857472,
    "first": "2026-06",
+   "last": "2026-08"
+  },
+  {
+   "slug": "doinsport-81d36fb8-553b-4fe5-87f4-ab76a12acbaf",
+   "name": "Padel A.C",
+   "cp": "95700",
+   "bookings": 17781,
+   "ca": 853989,
+   "first": "2024-12",
    "last": "2026-08"
   },
   {
    "slug": "aldea-padel-villabe",
    "name": "?",
    "cp": "91100",
-   "bookings": 13314,
-   "ca": 744140,
+   "bookings": 13584,
+   "ca": 760124,
    "first": "2026-06",
    "last": "2026-08"
   },
@@ -368,8 +368,8 @@
    "slug": "padel-max-95-persan",
    "name": "?",
    "cp": "95340",
-   "bookings": 10398,
-   "ca": 655084,
+   "bookings": 10833,
+   "ca": 684664,
    "first": "2026-07",
    "last": "2026-08"
   },
@@ -377,8 +377,8 @@
    "slug": "4padel-argenteuil",
    "name": "?",
    "cp": "95100",
-   "bookings": 9014,
-   "ca": 631842,
+   "bookings": 9369,
+   "ca": 651666,
    "first": "2026-07",
    "last": "2026-08"
   },
@@ -386,8 +386,8 @@
    "slug": "doinsport-46006260-0a24-4f36-b27b-a489ed46a9c3",
    "name": "Padel Camp",
    "cp": "78260",
-   "bookings": 12369,
-   "ca": 605305,
+   "bookings": 12377,
+   "ca": 605409,
    "first": "2024-04",
    "last": "2026-08"
   },
@@ -395,8 +395,8 @@
    "slug": "padel-versaille-versailles",
    "name": "?",
    "cp": "78000",
-   "bookings": 7196,
-   "ca": 583800,
+   "bookings": 7412,
+   "ca": 602340,
    "first": "2026-06",
    "last": "2026-08"
   },
@@ -413,8 +413,8 @@
    "slug": "urbanpadel-puteaux-ile",
    "name": "UrbanPadel Puteaux-Île",
    "cp": "92800",
-   "bookings": 7062,
-   "ca": 518936,
+   "bookings": 7267,
+   "ca": 535355,
    "first": "2026-06",
    "last": "2026-08"
   },
@@ -422,8 +422,8 @@
    "slug": "doinsport-f73b2bef-eedd-4fba-9d72-15595ac723fa",
    "name": "B14",
    "cp": "91070",
-   "bookings": 14502,
-   "ca": 518900,
+   "bookings": 14553,
+   "ca": 520856,
    "first": "2025-08",
    "last": "2026-08"
   },
@@ -431,26 +431,26 @@
    "slug": "doinsport-5f3c10f2-e0fa-4fd6-a707-04f7ea53deb9",
    "name": "Bad Pad",
    "cp": "91420",
-   "bookings": 7088,
-   "ca": 478120,
+   "bookings": 7098,
+   "ca": 479456,
    "first": "2025-03",
-   "last": "2026-08"
-  },
-  {
-   "slug": "doinsport-f7defd74-40b0-4fd2-be0f-69d69c4b4bd6",
-   "name": "Planète Raquettes",
-   "cp": "77870",
-   "bookings": 8057,
-   "ca": 459439,
-   "first": "2024-03",
    "last": "2026-08"
   },
   {
    "slug": "forest-hill-marnes-la-coquette",
    "name": "?",
    "cp": "92430",
-   "bookings": 7738,
-   "ca": 458827,
+   "bookings": 8001,
+   "ca": 475828,
+   "first": "2026-06",
+   "last": "2026-08"
+  },
+  {
+   "slug": "carre-padel-moissy-cramayel",
+   "name": "?",
+   "cp": "77550",
+   "bookings": 6541,
+   "ca": 466875,
    "first": "2026-06",
    "last": "2026-08"
   }
