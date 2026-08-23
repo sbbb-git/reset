@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-23T21:27:02.254753",
+ "generated_at": "2026-08-23T21:50:48.951670",
  "heatmap": {
   "days": [
    "Lundi",
@@ -27,7 +27,7 @@
     {
      "heure": 9,
      "offered": 4127,
-     "demand": 1920,
+     "demand": 1921,
      "occupation_pct": 47
     },
     {
@@ -74,8 +74,8 @@
     },
     {
      "heure": 17,
-     "offered": 5483,
-     "demand": 3248,
+     "offered": 5484,
+     "demand": 3249,
      "occupation_pct": 59
     },
     {
@@ -93,19 +93,19 @@
     {
      "heure": 20,
      "offered": 5312,
-     "demand": 3840,
+     "demand": 3842,
      "occupation_pct": 72
     },
     {
      "heure": 21,
      "offered": 4904,
-     "demand": 3515,
+     "demand": 3516,
      "occupation_pct": 72
     },
     {
      "heure": 22,
      "offered": 2673,
-     "demand": 1559,
+     "demand": 1560,
      "occupation_pct": 58
     },
     {
@@ -179,7 +179,7 @@
     {
      "heure": 17,
      "offered": 5243,
-     "demand": 2984,
+     "demand": 2985,
      "occupation_pct": 57
     },
     {
@@ -190,8 +190,8 @@
     },
     {
      "heure": 19,
-     "offered": 5511,
-     "demand": 4094,
+     "offered": 5512,
+     "demand": 4096,
      "occupation_pct": 74
     },
     {
@@ -202,8 +202,8 @@
     },
     {
      "heure": 21,
-     "offered": 4703,
-     "demand": 3407,
+     "offered": 4704,
+     "demand": 3409,
      "occupation_pct": 72
     },
     {
@@ -520,8 +520,8 @@
     },
     {
      "heure": 22,
-     "offered": 2765,
-     "demand": 1672,
+     "offered": 2766,
+     "demand": 1673,
      "occupation_pct": 60
     },
     {
@@ -630,9 +630,9 @@
     },
     {
      "heure": 23,
-     "offered": 473,
+     "offered": 478,
      "demand": 269,
-     "occupation_pct": 57
+     "occupation_pct": 56
     }
    ],
    "Dimanche": [
@@ -804,7 +804,7 @@
    [
     "Mardi",
     19,
-    4094
+    4096
    ],
    [
     "Dimanche",
@@ -829,7 +829,7 @@
    [
     "Lundi",
     20,
-    3840
+    3842
    ],
    [
     "Dimanche",
@@ -3968,14 +3968,14 @@
     "canonical_name": "Padel Horizon - Sucy en Brie",
     "cp": "94370",
     "n_platforms": 2,
-    "total_sessions": 2712
+    "total_sessions": 2713
    },
    {
     "unified_id": "unif_002",
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 2313
+    "total_sessions": 2318
    },
    {
     "unified_id": "unif_000",
