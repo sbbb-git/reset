@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-23T20:54:07.260172",
+ "generated_at": "2026-08-23T21:27:02.254753",
  "heatmap": {
   "days": [
    "Lundi",
@@ -32,8 +32,8 @@
     },
     {
      "heure": 10,
-     "offered": 5284,
-     "demand": 2041,
+     "offered": 5285,
+     "demand": 2042,
      "occupation_pct": 39
     },
     {
@@ -51,25 +51,25 @@
     {
      "heure": 13,
      "offered": 4919,
-     "demand": 1741,
+     "demand": 1742,
      "occupation_pct": 35
     },
     {
      "heure": 14,
      "offered": 5693,
-     "demand": 2560,
+     "demand": 2564,
      "occupation_pct": 45
     },
     {
      "heure": 15,
      "offered": 5570,
-     "demand": 2502,
+     "demand": 2506,
      "occupation_pct": 45
     },
     {
      "heure": 16,
      "offered": 5124,
-     "demand": 2514,
+     "demand": 2518,
      "occupation_pct": 49
     },
     {
@@ -99,7 +99,7 @@
     {
      "heure": 21,
      "offered": 4904,
-     "demand": 3514,
+     "demand": 3515,
      "occupation_pct": 72
     },
     {
@@ -137,61 +137,61 @@
     {
      "heure": 10,
      "offered": 5475,
-     "demand": 2160,
+     "demand": 2161,
      "occupation_pct": 39
     },
     {
      "heure": 11,
      "offered": 4900,
-     "demand": 1821,
+     "demand": 1822,
      "occupation_pct": 37
     },
     {
      "heure": 12,
      "offered": 6074,
-     "demand": 2532,
+     "demand": 2535,
      "occupation_pct": 42
     },
     {
      "heure": 13,
      "offered": 5086,
-     "demand": 1803,
+     "demand": 1805,
      "occupation_pct": 35
     },
     {
      "heure": 14,
      "offered": 5632,
-     "demand": 2225,
+     "demand": 2229,
      "occupation_pct": 40
     },
     {
      "heure": 15,
      "offered": 5492,
-     "demand": 2299,
+     "demand": 2303,
      "occupation_pct": 42
     },
     {
      "heure": 16,
      "offered": 5268,
-     "demand": 2483,
+     "demand": 2484,
      "occupation_pct": 47
     },
     {
      "heure": 17,
      "offered": 5243,
-     "demand": 2981,
+     "demand": 2984,
      "occupation_pct": 57
     },
     {
      "heure": 18,
      "offered": 6131,
-     "demand": 4468,
+     "demand": 4469,
      "occupation_pct": 73
     },
     {
      "heure": 19,
-     "offered": 5510,
-     "demand": 4091,
+     "offered": 5511,
+     "demand": 4094,
      "occupation_pct": 74
     },
     {
@@ -203,7 +203,7 @@
     {
      "heure": 21,
      "offered": 4703,
-     "demand": 3406,
+     "demand": 3407,
      "occupation_pct": 72
     },
     {
@@ -283,19 +283,19 @@
     {
      "heure": 17,
      "offered": 5165,
-     "demand": 3216,
+     "demand": 3217,
      "occupation_pct": 62
     },
     {
      "heure": 18,
      "offered": 5651,
-     "demand": 4238,
+     "demand": 4240,
      "occupation_pct": 75
     },
     {
      "heure": 19,
      "offered": 5260,
-     "demand": 4135,
+     "demand": 4136,
      "occupation_pct": 79
     },
     {
@@ -307,7 +307,7 @@
     {
      "heure": 21,
      "offered": 4678,
-     "demand": 3510,
+     "demand": 3511,
      "occupation_pct": 75
     },
     {
@@ -630,9 +630,9 @@
     },
     {
      "heure": 23,
-     "offered": 467,
+     "offered": 473,
      "demand": 269,
-     "occupation_pct": 58
+     "occupation_pct": 57
     }
    ],
    "Dimanche": [
@@ -759,7 +759,7 @@
    [
     "Mardi",
     18,
-    4468
+    4469
    ],
    [
     "Lundi",
@@ -784,7 +784,7 @@
    [
     "Mercredi",
     18,
-    4238
+    4240
    ],
    [
     "Dimanche",
@@ -799,12 +799,12 @@
    [
     "Mercredi",
     19,
-    4135
+    4136
    ],
    [
     "Mardi",
     19,
-    4091
+    4094
    ],
    [
     "Dimanche",
@@ -3925,7 +3925,7 @@
   "n_mono": 102,
   "median_sessions_multi": 1527,
   "median_sessions_mono": 78,
-  "avg_sessions_multi": 2377,
+  "avg_sessions_multi": 2378,
   "avg_sessions_mono": 599,
   "clusters": [
    {
@@ -3947,7 +3947,7 @@
     "canonical_name": "senart-padel-combs-la-ville",
     "cp": "77380",
     "n_platforms": 2,
-    "total_sessions": 5304
+    "total_sessions": 5305
    },
    {
     "unified_id": "unif_001",
@@ -3975,7 +3975,7 @@
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 2307
+    "total_sessions": 2313
    },
    {
     "unified_id": "unif_000",
