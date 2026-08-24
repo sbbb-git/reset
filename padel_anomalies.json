@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-24T10:15:23.393459",
+ "generated_at": "2026-08-24T11:06:13.663512",
  "idle_24h": [
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -7,7 +7,7 @@
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-08-17 17:52",
-   "hours_idle": 160.4
+   "hours_idle": 161.2
   },
   {
    "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
@@ -15,7 +15,7 @@
    "name": "ASS TENNIS CLUB SARCELLOIS",
    "cp": "95200",
    "last_seen": "2026-08-19 20:40",
-   "hours_idle": 109.6
+   "hours_idle": 110.4
   }
  ],
  "price_shifts": [
@@ -738,6 +738,14 @@
  ],
  "new_clubs": [
   {
+   "slug": "doinsport-af5c97a7-390f-4f23-afca-6d10c0d117cd",
+   "source": "doinsport",
+   "name": "Le Padel Wellness",
+   "cp": "95500",
+   "first_seen": "2026-08-24 13:04",
+   "days_since": 0
+  },
+  {
    "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
    "source": "doinsport",
    "name": "ASS TENNIS CLUB SARCELLOIS",
@@ -1431,6 +1439,6 @@
   "idle_24h": 2,
   "price_shifts": 5,
   "volume_drops": 83,
-  "new_clubs_14d": 86
+  "new_clubs_14d": 87
  }
 }
