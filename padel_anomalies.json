@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-24T09:27:03.103660",
+ "generated_at": "2026-08-24T10:15:23.393459",
  "idle_24h": [
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -7,7 +7,7 @@
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-08-17 17:52",
-   "hours_idle": 159.6
+   "hours_idle": 160.4
   },
   {
    "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
@@ -15,7 +15,7 @@
    "name": "ASS TENNIS CLUB SARCELLOIS",
    "cp": "95200",
    "last_seen": "2026-08-19 20:40",
-   "hours_idle": 108.8
+   "hours_idle": 109.6
   }
  ],
  "price_shifts": [
@@ -50,16 +50,6 @@
    "direction": "baisse"
   },
   {
-   "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
-   "source": "doinsport",
-   "name": "O.S. Sannois",
-   "cp": "95110",
-   "prix_30j": 27.0,
-   "prix_recent": 40.5,
-   "delta_pct": 50.0,
-   "direction": "hausse"
-  },
-  {
    "slug": "4padel-cao-saint-denis",
    "source": "anybuddy",
    "name": "4padel-cao-saint-denis",
@@ -68,6 +58,16 @@
    "prix_recent": 48.0,
    "delta_pct": -42.9,
    "direction": "baisse"
+  },
+  {
+   "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
+   "source": "doinsport",
+   "name": "O.S. Sannois",
+   "cp": "95110",
+   "prix_30j": 27.0,
+   "prix_recent": 38.2,
+   "delta_pct": 41.7,
+   "direction": "hausse"
   }
  ],
  "volume_drops": [
