@@ -62,10 +62,15 @@
     "seances": 1
    },
    {
+    "name": "Offre d'essai duo",
+    "prix": 29.0,
+    "seances": 1
+   },
+   {
     "name": "Offre de bienvenue 3 séances",
-    "prix": 54.0,
+    "prix": 49.0,
     "seances": 3,
-    "prix_unitaire": 18.0
+    "prix_unitaire": 16.33
    }
   ],
   "note": "Grille Monday Group factuelle depuis /wp-json/mindbody/v1/sale/services"
@@ -133,10 +138,15 @@
     "seances": 1
    },
    {
+    "name": "Offre d'essai duo",
+    "prix": 29.0,
+    "seances": 1
+   },
+   {
     "name": "Offre de bienvenue 3 séances",
-    "prix": 54.0,
+    "prix": 49.0,
     "seances": 3,
-    "prix_unitaire": 18.0
+    "prix_unitaire": 16.33
    }
   ],
   "note": "Grille Monday Group factuelle depuis /wp-json/mindbody/v1/sale/services"
@@ -199,15 +209,20 @@
   ],
   "offres": [
    {
-    "name": "Offre d'essai riise",
+    "name": "Offre d'essai riise Mat",
+    "prix": 15.0,
+    "seances": 1
+   },
+   {
+    "name": "Offre d'essai riise  Reformer",
     "prix": 19.0,
     "seances": 1
    },
    {
     "name": "Offre de bienvenue 3 séances",
-    "prix": 54.0,
+    "prix": 49.0,
     "seances": 3,
-    "prix_unitaire": 18.0
+    "prix_unitaire": 16.33
    }
   ],
   "note": "Grille Monday Group factuelle depuis /wp-json/mindbody/v1/sale/services"
