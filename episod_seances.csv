@@ -6135,12 +6135,12 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-24,Lundi,08:30,09:20,République Studio Lift,Lift,Leila A.,0,0,True,2026-08-21 18:47
 2026-08-24,Lundi,09:15,10:05,Pigalle Studio Reformer,Reformer,Emma,0,0,True,2026-08-21 18:47
 2026-08-24,Lundi,09:30,10:20,Louvre Studio Reformer,Reformer Athletic,Léa G.,20,5,True,2026-08-24 09:15
-2026-08-24,Lundi,10:15,11:05,Levallois Reformer Studio Reformer,Reformer,Astrid,0,0,False,2026-08-21 18:47
+2026-08-24,Lundi,10:15,11:05,Levallois Reformer Studio Reformer,Reformer,Astrid,0,0,True,2026-08-21 18:47
 2026-08-24,Lundi,11:15,12:05,Levallois Reformer Studio Reformer,Reformer,Astrid,0,0,False,2026-08-21 19:39
 2026-08-24,Lundi,11:30,12:20,Louvre Studio Reformer,Reformer,Zoé,0,0,False,2026-08-21 19:39
-2026-08-24,Lundi,11:30,12:20,Pigalle Studio Reformer,Reformer,Laura B.,0,0,False,2026-08-21 19:39
-2026-08-24,Lundi,11:30,12:20,République Studio Reformer,Reformer,Olivier,0,0,False,2026-08-21 19:39
-2026-08-24,Lundi,11:45,12:30,Place de Clichy Studio Cycling,Cycling,Yoann,0,0,False,2026-08-21 19:39
+2026-08-24,Lundi,11:30,12:20,Pigalle Studio Reformer,Reformer,Laura B.,18,8,False,2026-08-24 11:27
+2026-08-24,Lundi,11:30,12:20,République Studio Reformer,Reformer,Olivier,18,15,False,2026-08-24 11:27
+2026-08-24,Lundi,11:45,12:30,Place de Clichy Studio Cycling,Cycling,Yoann,34,9,False,2026-08-24 11:27
 2026-08-24,Lundi,12:00,12:45,Bourse Studio Bootcamp,Bootcamp,Jeremy,0,0,False,2026-08-21 19:39
 2026-08-24,Lundi,12:00,12:45,Bourse Studio Boxing,Boxing,Steven,0,0,False,2026-08-21 19:39
 2026-08-24,Lundi,12:00,13:00,Bourse Studio Yoga,Pilates,Charlène,0,0,False,2026-08-21 19:39
@@ -6387,3 +6387,7 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-25,Mardi,20:30,21:15,Pigalle Studio Bootcamp,Bootcamp Strong,Andy,0,0,False,2026-08-24 10:23
 2026-08-25,Mardi,20:30,21:15,Place de Clichy Studio Cycling,Cycling,Louis,0,0,False,2026-08-24 09:15
 2026-08-25,Mardi,20:45,21:30,Place de Clichy Studio Bootcamp,Bootcamp,Yoann,0,0,False,2026-08-24 10:23
+2026-08-25,Mardi,20:45,21:30,République Studio Bootcamp,Bootcamp,Inès,0,0,False,2026-08-24 11:27
+2026-08-26,Mercredi,07:15,08:05,Pigalle Studio Reformer,Reformer,Emma,0,0,False,2026-08-24 11:27
+2026-08-26,Mercredi,07:15,08:00,Place de Clichy Studio Bootcamp,Bootcamp,Martin L.,0,0,False,2026-08-24 11:27
+2026-08-26,Mercredi,07:15,08:05,République Studio Reformer,Reformer,Inès,0,0,False,2026-08-24 11:27
