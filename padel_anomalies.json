@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-24T13:00:07.486944",
+ "generated_at": "2026-08-24T13:59:03.450594",
  "idle_24h": [
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -7,7 +7,7 @@
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-08-17 17:52",
-   "hours_idle": 163.1
+   "hours_idle": 164.1
   }
  ],
  "price_shifts": [
@@ -42,6 +42,16 @@
    "direction": "baisse"
   },
   {
+   "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
+   "source": "doinsport",
+   "name": "O.S. Sannois",
+   "cp": "95110",
+   "prix_30j": 27.0,
+   "prix_recent": 39.0,
+   "delta_pct": 44.4,
+   "direction": "hausse"
+  },
+  {
    "slug": "4padel-cao-saint-denis",
    "source": "anybuddy",
    "name": "4padel-cao-saint-denis",
@@ -50,16 +60,6 @@
    "prix_recent": 48.0,
    "delta_pct": -42.9,
    "direction": "baisse"
-  },
-  {
-   "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
-   "source": "doinsport",
-   "name": "O.S. Sannois",
-   "cp": "95110",
-   "prix_30j": 27.0,
-   "prix_recent": 36.0,
-   "delta_pct": 33.3,
-   "direction": "hausse"
   }
  ],
  "volume_drops": [
