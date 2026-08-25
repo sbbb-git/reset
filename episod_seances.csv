@@ -6274,9 +6274,9 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-25,Mardi,08:30,09:20,Louvre Studio Heat,Hot Pilates,Leila A.,0,0,True,2026-08-23 11:37
 2026-08-25,Mardi,08:30,09:20,Louvre Studio Reformer,Reformer Athletic,Leila B.,0,0,True,2026-08-23 11:37
 2026-08-25,Mardi,08:45,09:35,République Studio Lift,Lift,Tristan,0,0,True,2026-08-23 11:37
-2026-08-25,Mardi,09:15,10:05,Pigalle Studio Reformer,Reformer,Solène,18,15,False,2026-08-25 09:04
-2026-08-25,Mardi,09:30,10:20,Louvre Studio Reformer,Reformer Athletic,Leila B.,0,0,False,2026-08-23 11:37
-2026-08-25,Mardi,11:15,12:05,Levallois Reformer Studio Reformer,Reformer Traditional,Thibaut,0,0,False,2026-08-23 11:37
+2026-08-25,Mardi,09:15,10:05,Pigalle Studio Reformer,Reformer,Solène,18,15,True,2026-08-25 09:04
+2026-08-25,Mardi,09:30,10:20,Louvre Studio Reformer,Reformer Athletic,Leila B.,0,0,True,2026-08-23 11:37
+2026-08-25,Mardi,11:15,12:05,Levallois Reformer Studio Reformer,Reformer Traditional,Thibaut,20,9,False,2026-08-25 10:55
 2026-08-25,Mardi,11:30,12:20,Louvre Studio Heat,Hot Pilates,Charlène,0,0,False,2026-08-23 11:37
 2026-08-25,Mardi,11:30,12:20,Louvre Studio Reformer,Reformer,Inès,0,0,False,2026-08-23 11:37
 2026-08-25,Mardi,11:30,12:20,Pigalle Studio Reformer,Reformer,Anaïs,0,0,False,2026-08-23 11:37
@@ -6524,6 +6524,7 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-26,Mercredi,20:00,20:50,Louvre Studio Reformer,Reformer Athletic,Leila B.,0,0,False,2026-08-25 09:04
 2026-08-26,Mercredi,20:00,20:50,Pigalle Studio Athletic,Lift,Ange,0,0,False,2026-08-25 09:04
 2026-08-26,Mercredi,20:15,21:00,Bourse Studio Bootcamp,Bootcamp Hyrox,Tristan,0,0,False,2026-08-25 09:04
+2026-08-26,Mercredi,20:15,21:05,Levallois Reformer Studio Reformer,Reformer,Aurélie,0,0,False,2026-08-25 10:55
 2026-08-26,Mercredi,20:15,21:05,Louvre Studio Heat,Hot Pilates,Astrid,0,0,False,2026-08-25 09:04
 2026-08-26,Mercredi,20:15,21:15,République Studio Athletic,Athletic Hyrox,Laura B.,0,0,False,2026-08-25 09:53
 2026-08-26,Mercredi,20:15,21:05,République Studio Reformer,Reformer Traditional,Géraldine,0,0,False,2026-08-25 09:04
