@@ -1038,5 +1038,15 @@
   "url": "https://recovery-studio.com/",
   "attempts": 3,
   "status": "gave_up"
+ },
+ "contrast_club": {
+  "platform": "bsport",
+  "company_id": "5870",
+  "establishment_id": "19865",
+  "detected_via": "https://contrast-club.com/planning",
+  "note": "companyId lu dans le bundle JS (assets/index-*.js, config du widget bsport) — il n'est PAS dans le HTML, les deux ids visibles bsport-widget-203449 / -563999 sont des ids de widget, pas de company. Établissement confirmé par l'API : 19865 « Contrast Club », 7 rue Notre Dame de Bonne Nouvelle 75002, 11 coachs. L'API /book/v1/offer/ renvoie 0 offre sur 18 mois (2026-02 -> 2027-08) : le club est configuré mais son planning n'est pas encore publié. Le scrape le prendra automatiquement dès la première offre.",
+  "url": "https://contrast-club.com/",
+  "checked_at": "2026-08-26 15:43",
+  "attempts": 1
  }
 }

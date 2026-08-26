@@ -38,22 +38,85 @@ def http_get(url, retries=2):
     return None
 
 
-def detect_bsport(html):
-    """Cherche un company_id bsport dans le HTML.
-    Patterns : company=NNNN, companyId":NNNN, data-company-id="NNNN".
+_BSPORT_ID_PATTERNS = [
+    r"company[_-]?[iI]d['\"]?\s*[:=]\s*['\"]?(\d{3,6})",
+    r"company=(\d{3,6})",
+    r"bsport\.io/[^'\"]+company=(\d{3,6})",
+    r"data-company-id=['\"]?(\d{3,6})",
+    r"production\.bsport\.io[^'\"]*company['\":\s]+(\d{3,6})",
+]
+
+# Scripts de page à ne pas suivre : ni bundles applicatifs, ni utiles à chercher.
+_SCRIPT_IGNORE = re.compile(
+    r"(gtag|gtm|analytics|hotjar|sentry|cookie|consent|recaptcha|stripe|"
+    r"polyfill|jquery|bootstrap|widget\.js)", re.I)
+
+
+def _page_origin(html):
+    """Origine de la page, lue dans le canonical ou l'og:url."""
+    for pat in (r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\'](https?://[^"\']+)',
+                r'<meta[^>]+property=["\']og:url["\'][^>]+content=["\'](https?://[^"\']+)'):
+        m = re.search(pat, html, re.I)
+        if m:
+            u = m.group(1)
+            mm = re.match(r"(https?://[^/]+)", u)
+            if mm:
+                return mm.group(1)
+    return None
+
+
+def _bsport_id_in_bundles(html):
+    """Cherche le companyId dans les bundles JS de même origine.
+
+    Les sites générés par Vite/Lovable ne mettent plus rien dans le HTML : le
+    div ne porte qu'un id de WIDGET (bsport-widget-203449), et la config réelle
+    — companyId compris — vit dans /assets/index-<hash>.js. Sans ce saut, la
+    marque ressort en « bsport detected mais ID introuvable » et reste unknown
+    indéfiniment. Cas rencontré sur contrast-club.com (companyId 5870).
     """
-    for pat in [
-        r"company[_-]?[iI]d['\"]?\s*[:=]\s*['\"]?(\d{3,6})",
-        r"company=(\d{3,6})",
-        r"bsport\.io/[^'\"]+company=(\d{3,6})",
-        r"data-company-id=['\"]?(\d{3,6})",
-        r"production\.bsport\.io[^'\"]*company['\":\s]+(\d{3,6})",
-    ]:
+    origin = _page_origin(html)
+    if not origin:
+        return None
+    srcs = re.findall(r'<script[^>]+src=["\']([^"\']+)["\']', html, re.I)
+    for s in srcs[:6]:
+        if _SCRIPT_IGNORE.search(s):
+            continue
+        if s.startswith("//"):
+            url = "https:" + s
+        elif s.startswith("http"):
+            url = s
+        else:
+            url = origin.rstrip("/") + "/" + s.lstrip("/")
+        if not url.startswith(origin):      # même origine seulement
+            continue
+        js = http_get(url)
+        if not js:
+            continue
+        for pat in _BSPORT_ID_PATTERNS:
+            m = re.search(pat, js)
+            if m:
+                return m.group(1)
+    return None
+
+
+def detect_bsport(html):
+    """Cherche un company_id bsport dans le HTML, puis dans ses bundles JS.
+
+    Patterns : company=NNNN, companyId":NNNN, data-company-id="NNNN".
+    Attention : sur les pages bsport, `bsport-widget-NNNNNN` est un identifiant
+    de widget, jamais une company — l'API répond 0 offre si on le confond.
+    """
+    for pat in _BSPORT_ID_PATTERNS:
         m = re.search(pat, html)
         if m:
             return {"platform": "bsport", "company_id": m.group(1)}
     if "bsport" in html.lower():
-        return {"platform": "bsport", "company_id": None, "note": "bsport detected mais ID introuvable"}
+        cid = _bsport_id_in_bundles(html)
+        if cid:
+            return {"platform": "bsport", "company_id": cid,
+                    "detected_in": "bundle_js"}
+        return {"platform": "bsport", "company_id": None,
+                "note": "bsport detected mais ID introuvable (ni HTML ni bundles JS)"}
     return None
 
 
