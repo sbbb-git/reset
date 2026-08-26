@@ -1,0 +1,60 @@
+name: Veille · nouveaux lieux IDF (bsport)
+
+# Recense l'espace des companies bsport et signale les enseignes d'Île-de-France
+# qu'on ne scrape pas encore. Deux temps dans chaque passage : la frontière
+# (les identifiants les plus hauts, donc les inscriptions récentes — c'est la
+# veille proprement dite), puis un lot de rattrapage sur le reste de l'espace.
+# Hebdomadaire : les ouvertures ne se comptent pas en heures, et le balayage
+# fait quelques milliers d'appels.
+
+on:
+  schedule:
+    - cron: "20 5 * * 1"   # lundi 5h20 UTC, hors des pics de scrape
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: veille-lieux
+  cancel-in-progress: false
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Balayage bsport (frontière + rattrapage)
+        run: python3 veille_lieux_discover.py
+
+      - name: Commit si changement
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add veille_lieux_etat.json veille_nouveaux_lieux.json veille.html
+          if git diff --cached --quiet; then
+            echo "Aucun nouveau lieu."
+          else
+            git commit -m "Veille lieux IDF ($(date -u +%Y-%m-%dT%H:%M)Z)"
+            ok=0
+            for i in 1 2 3 4; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && { ok=1; break; }
+              echo "retry push $i"; sleep 5
+            done
+            [ "$ok" = 1 ] || { echo "::error::push rejeté 4 fois — les données de ce run ne sont PAS persistées"; exit 1; }
+          fi
+
+      - name: Healthcheck ping
+        if: always()
+        env:
+          HC_URL: ${{ secrets.HEALTHCHECK_URL }}
+          WF: veille-lieux
+        run: |
+          if [ -n "$HC_URL" ]; then
+            curl -fsSL --max-time 10 "$HC_URL/$WF?status=${{ job.status }}" || true
+          fi
