@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-29T17:51:20.538757",
+ "generated_at": "2026-08-29T20:42:29.936325",
  "idle_24h": [
   {
    "slug": "doinsport-af5c97a7-390f-4f23-afca-6d10c0d117cd",
@@ -7,7 +7,15 @@
    "name": "Le Padel Wellness",
    "cp": "95500",
    "last_seen": "2026-08-25 23:31",
-   "hours_idle": 90.3
+   "hours_idle": 93.2
+  },
+  {
+   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "source": "doinsport",
+   "name": "FIVE ARENA",
+   "cp": "77100",
+   "last_seen": "2026-08-27 13:01",
+   "hours_idle": 55.7
   }
  ],
  "price_shifts": [
@@ -1417,8 +1425,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 88,
-  "idle_24h": 1,
+  "total_anomalies": 89,
+  "idle_24h": 2,
   "price_shifts": 4,
   "volume_drops": 83,
   "new_clubs_14d": 87
