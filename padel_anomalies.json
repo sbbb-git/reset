@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-29T08:48:41.364505",
+ "generated_at": "2026-08-29T14:17:46.485649",
  "idle_24h": [
   {
    "slug": "doinsport-af5c97a7-390f-4f23-afca-6d10c0d117cd",
@@ -7,15 +7,7 @@
    "name": "Le Padel Wellness",
    "cp": "95500",
    "last_seen": "2026-08-25 23:31",
-   "hours_idle": 81.3
-  },
-  {
-   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
-   "source": "doinsport",
-   "name": "FIVE ARENA",
-   "cp": "77100",
-   "last_seen": "2026-08-27 13:01",
-   "hours_idle": 43.8
+   "hours_idle": 86.8
   }
  ],
  "price_shifts": [
@@ -45,8 +37,8 @@
    "name": "O.S. Sannois",
    "cp": "95110",
    "prix_30j": 27.0,
-   "prix_recent": 36.0,
-   "delta_pct": 33.3,
+   "prix_recent": 37.5,
+   "delta_pct": 38.9,
    "direction": "hausse"
   },
   {
@@ -55,8 +47,8 @@
    "name": "B14",
    "cp": "91070",
    "prix_30j": 49.5,
-   "prix_recent": 65.5,
-   "delta_pct": 32.3,
+   "prix_recent": 66.0,
+   "delta_pct": 33.3,
    "direction": "hausse"
   }
  ],
@@ -1425,8 +1417,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 89,
-  "idle_24h": 2,
+  "total_anomalies": 88,
+  "idle_24h": 1,
   "price_shifts": 4,
   "volume_drops": 83,
   "new_clubs_14d": 87
