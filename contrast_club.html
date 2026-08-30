@@ -67,7 +67,7 @@
 <body>
 <header>
   <h1>CONTRAST CLUB &middot; Fréquentation</h1>
-  <div class="sub">généré le 29/08/2026 17:57 &middot; réservations validées (bsport)</div>
+  <div class="sub">généré le 30/08/2026 04:01 &middot; réservations validées (bsport)</div>
 </header>
 <div class="wrap">
   <div class="meta-panel" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:18px 0 4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px">
@@ -82,14 +82,14 @@
   <div>
     <div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">📡 État du scrap</div>
     <div style="font-size:13px;color:var(--text);line-height:1.4">
-      <span id="meta-freshness" style="font-weight:700">…</span> &middot; <b>0</b> entrées
+      <span id="meta-freshness" style="font-weight:700">…</span> &middot; <b>2</b> entrées
       <div style="font-size:11.5px;color:var(--muted);margin-top:2px">Fréquence : 2× / jour (~11h et 21h Paris)</div>
     </div>
   </div>
 </div>
 <script>
 (function(){
-  const last = "";
+  const last = "2026-08-30T04:01:00+02:00";
   if(!last) return;
   const el = document.getElementById('meta-freshness'); if(!el) return;
   const ago = (Date.now() - new Date(last).getTime()) / 36e5;
@@ -157,7 +157,7 @@
   <div class="foot">Source : extension (bsport) &middot; mise à jour auto ~5 min avant chaque séance.</div>
 </div>
 <script>
-const ALL=[];
+const ALL=[{"id": "41561269", "date": "2026-09-01", "jour": "Mardi", "heure": "18:30", "fin": "19:40", "lieu": "Contrast Club", "cours": "Slow Down", "coach": "Salomé Monchatre", "capacite": 12, "presents": 1, "finie": false, "releve": "2026-08-30 04:01"}, {"id": "41787823", "date": "2026-09-01", "jour": "Mardi", "heure": "20:15", "fin": "21:25", "lieu": "Contrast Club", "cours": "Session libre", "coach": "Accès Libre", "capacite": 12, "presents": 3, "finie": false, "releve": "2026-08-30 04:01"}];
 const API="https://api.production.bsport.io",COMPANIES=[5870],EST={"19865": "Contrast Club"},COACHES={"249573": "Accès Libre", "146950": "Accès Libre", "249448": "Alix Odendahl", "146868": "Alix Odendahl", "243900": "Bianca Guez", "143242": "Bianca Guez", "243902": "Charlène Zahed", "122993": "Charlène Zahed", "215568": "Charlène Zahed", "249610": "Charlène  Zahed", "146971": "Charlène  Zahed", "243897": "Claire Savatte", "79998": "Claire Savatte", "158656": "Claire Savatte", "191828": "Claire Savatte", "220886": "Claire Savatte", "185262": "Claire Savatte", "217488": "Claire Savatte", "178466": "Claire Savatte", "215216": "Claire Savatte", "214922": "Claire Savatte", "214355": "Claire Savatte", "210126": "Claire Savatte", "196568": "Claire Savatte", "190067": "Claire Savatte", "157116": "Claire Savatte", "249300": "Flo Bringue", "146762": "Flo Bringue", "238991": "Jacques Zwickert", "139721": "Jacques Zwickert", "243903": "Manon BROUILLARD", "45526": "Manon BROUILLARD", "229612": "Manon BROUILLARD", "60488": "Manon BROUILLARD", "189440": "Manon BROUILLARD", "184429": "Manon BROUILLARD", "50750": "Manon BROUILLARD", "243898": "Mathilde Durand", "94609": "Mathilde Durand", "217350": "Mathilde Durand", "187147": "Mathilde Durand", "217555": "Mathilde Durand", "231156": "Mathilde Durand", "177771": "Mathilde Durand", "218707": "Mathilde Durand", "185236": "Mathilde Durand", "194963": "Mathilde Durand", "190066": "Mathilde Durand", "192708": "Mathilde Durand", "188273": "Mathilde Durand", "185339": "Mathilde Durand", "179942": "Mathilde Durand", "176545": "Mathilde Durand", "243901": "Salomé Monchatre", "105093": "Salomé Monchatre", "248214": "Salomé Monchatre", "239357": "Salomé Monchatre", "199013": "Salomé Monchatre", "191549": "Salomé Monchatre"};
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const lkey=r=>r.date+'|'+r.heure+'|'+r.lieu+'|'+r.cours+'|'+(r.coach||'');
