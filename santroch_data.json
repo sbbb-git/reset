@@ -263,7 +263,7 @@
 "jour": "Lundi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 3,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10093": {
 "capacite": 20,
@@ -333,7 +333,7 @@
 "jour": "Lundi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 11,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10098": {
 "capacite": 38,
@@ -403,7 +403,7 @@
 "jour": "Lundi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
 "presents": 34,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10103": {
 "capacite": 39,
@@ -473,7 +473,7 @@
 "jour": "Lundi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
 "presents": 28,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10108": {
 "capacite": 38,
@@ -711,7 +711,7 @@
 "jour": "Mardi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
 "presents": 14,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10125": {
 "capacite": 38,
@@ -724,8 +724,8 @@
 "id": "10125",
 "jour": "Mercredi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
-"presents": 21,
-"releve": "2026-09-01 20:01"
+"presents": 24,
+"releve": "2026-09-01 23:00"
 },
 "10126": {
 "capacite": 38,
@@ -738,8 +738,8 @@
 "id": "10126",
 "jour": "Jeudi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
-"presents": 9,
-"releve": "2026-09-01 20:01"
+"presents": 10,
+"releve": "2026-09-01 23:00"
 },
 "10128": {
 "capacite": 10,
@@ -809,7 +809,7 @@
 "jour": "Mardi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 3,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10133": {
 "capacite": 20,
@@ -879,7 +879,7 @@
 "jour": "Mardi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 5,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10138": {
 "capacite": 38,
@@ -1117,7 +1117,7 @@
 "jour": "Mardi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
 "presents": 31,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10155": {
 "capacite": 38,
@@ -1131,7 +1131,7 @@
 "jour": "Mercredi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
 "presents": 11,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10156": {
 "capacite": 38,
@@ -1145,7 +1145,7 @@
 "jour": "Jeudi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
 "presents": 18,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10158": {
 "capacite": 10,
@@ -1209,13 +1209,13 @@
 "cours": "Rituel Libre",
 "date": "2026-09-01",
 "fin": "21:00",
-"finie": false,
+"finie": true,
 "heure": "19:45",
 "id": "10162",
 "jour": "Mardi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 10,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10168": {
 "capacite": 10,
@@ -1279,13 +1279,13 @@
 "cours": "Rituel Libre",
 "date": "2026-09-01",
 "fin": "21:15",
-"finie": false,
+"finie": true,
 "heure": "20:00",
 "id": "10172",
 "jour": "Mardi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 10,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10173": {
 "capacite": 15,
@@ -1349,13 +1349,13 @@
 "cours": "Rituel Libre",
 "date": "2026-09-01",
 "fin": "21:30",
-"finie": false,
+"finie": true,
 "heure": "20:15",
 "id": "10177",
 "jour": "Mardi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 10,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10178": {
 "capacite": 10,
@@ -1424,8 +1424,8 @@
 "id": "10182",
 "jour": "Jeudi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
-"presents": 4,
-"releve": "2026-09-01 20:01"
+"presents": 5,
+"releve": "2026-09-01 23:00"
 },
 "10183": {
 "capacite": 20,
@@ -1649,7 +1649,7 @@
 "jour": "Jeudi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 2,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10203": {
 "capacite": 15,
@@ -1775,7 +1775,7 @@
 "jour": "Jeudi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 1,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10213": {
 "capacite": 10,
@@ -1985,7 +1985,7 @@
 "jour": "Samedi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
 "presents": 38,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10230": {
 "capacite": 38,
@@ -1999,7 +1999,7 @@
 "jour": "Dimanche",
 "lieu": "Sant Roch Paris — Rituel Guidé",
 "presents": 38,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10233": {
 "capacite": 10,
@@ -2097,7 +2097,7 @@
 "jour": "Samedi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 9,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10243": {
 "capacite": 10,
@@ -2195,7 +2195,7 @@
 "jour": "Samedi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 8,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10253": {
 "capacite": 10,
@@ -2293,7 +2293,7 @@
 "jour": "Samedi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 6,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10263": {
 "capacite": 20,
@@ -2349,7 +2349,7 @@
 "jour": "Samedi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 17,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10268": {
 "capacite": 10,
@@ -2405,7 +2405,7 @@
 "jour": "Samedi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 10,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10273": {
 "capacite": 38,
@@ -2503,7 +2503,7 @@
 "jour": "Samedi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
 "presents": 20,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10280": {
 "capacite": 38,
@@ -2517,7 +2517,7 @@
 "jour": "Dimanche",
 "lieu": "Sant Roch Paris — Rituel Guidé",
 "presents": 38,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10283": {
 "capacite": 10,
@@ -2573,7 +2573,7 @@
 "jour": "Dimanche",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 10,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10288": {
 "capacite": 10,
@@ -2629,7 +2629,7 @@
 "jour": "Dimanche",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 10,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10293": {
 "capacite": 12,
@@ -2685,7 +2685,7 @@
 "jour": "Dimanche",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 12,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10298": {
 "capacite": 10,
@@ -2769,7 +2769,7 @@
 "jour": "Mardi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 6,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10307": {
 "capacite": 20,
@@ -2797,7 +2797,7 @@
 "jour": "Mardi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 4,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10309": {
 "capacite": 38,
@@ -2824,8 +2824,8 @@
 "id": "10310",
 "jour": "Mercredi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
-"presents": 17,
-"releve": "2026-09-01 20:01"
+"presents": 20,
+"releve": "2026-09-01 23:00"
 },
 "10311": {
 "capacite": 10,
@@ -2853,7 +2853,7 @@
 "jour": "Jeudi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 7,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10313": {
 "capacite": 15,
@@ -2881,7 +2881,7 @@
 "jour": "Jeudi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 5,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10315": {
 "capacite": 15,
@@ -2909,7 +2909,7 @@
 "jour": "Jeudi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 0,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10317": {
 "capacite": 10,
@@ -2937,7 +2937,7 @@
 "jour": "Jeudi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 2,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10335": {
 "capacite": 38,
@@ -2951,7 +2951,7 @@
 "jour": "Dimanche",
 "lieu": "Sant Roch Paris — Rituel Guidé",
 "presents": 22,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10413": {
 "capacite": 20,
@@ -2965,7 +2965,7 @@
 "jour": "Lundi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 6,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10425": {
 "capacite": 38,
@@ -2993,7 +2993,7 @@
 "jour": "Mardi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 6,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10441": {
 "capacite": 10,
@@ -3006,8 +3006,8 @@
 "id": "10441",
 "jour": "Mercredi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
-"presents": 3,
-"releve": "2026-09-01 20:01"
+"presents": 4,
+"releve": "2026-09-01 23:00"
 },
 "10462": {
 "capacite": 20,
@@ -3020,8 +3020,8 @@
 "id": "10462",
 "jour": "Mercredi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
-"presents": 14,
-"releve": "2026-09-01 20:01"
+"presents": 15,
+"releve": "2026-09-01 23:00"
 },
 "10494": {
 "capacite": 10,
@@ -3035,7 +3035,7 @@
 "jour": "Mercredi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 3,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10507": {
 "capacite": 20,
@@ -3048,8 +3048,8 @@
 "id": "10507",
 "jour": "Mercredi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
-"presents": 5,
-"releve": "2026-09-01 20:01"
+"presents": 6,
+"releve": "2026-09-01 23:00"
 },
 "10516": {
 "capacite": 38,
@@ -3062,8 +3062,8 @@
 "id": "10516",
 "jour": "Jeudi",
 "lieu": "Sant Roch Paris — Rituel Guidé",
-"presents": 8,
-"releve": "2026-09-01 20:01"
+"presents": 9,
+"releve": "2026-09-01 23:00"
 },
 "10523": {
 "capacite": 20,
@@ -3077,7 +3077,7 @@
 "jour": "Jeudi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 1,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10569": {
 "capacite": 20,
@@ -3091,7 +3091,7 @@
 "jour": "Mardi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 6,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "10783": {
 "capacite": 10,
@@ -3119,7 +3119,7 @@
 "jour": "Lundi",
 "lieu": "Sant Roch Paris — Sauna & Bath",
 "presents": 7,
-"releve": "2026-09-01 20:01"
+"releve": "2026-09-01 23:00"
 },
 "8160": {
 "capacite": 20,
