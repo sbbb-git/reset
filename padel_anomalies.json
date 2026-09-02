@@ -1,6 +1,15 @@
 {
- "generated_at": "2026-09-02T05:00:51.135246",
- "idle_24h": [],
+ "generated_at": "2026-09-02T09:30:24.392715",
+ "idle_24h": [
+  {
+   "slug": "tennis-padel-bois-colombes-bois-colombes",
+   "source": "anybuddy",
+   "name": "tennis-padel-bois-colombes-bois-colombes",
+   "cp": "92700",
+   "last_seen": "2026-09-01 08:38",
+   "hours_idle": 24.9
+  }
+ ],
  "price_shifts": [
   {
    "slug": "play-padel-alfortville",
@@ -1398,8 +1407,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 86,
-  "idle_24h": 0,
+  "total_anomalies": 87,
+  "idle_24h": 1,
   "price_shifts": 3,
   "volume_drops": 83,
   "new_clubs_14d": 87
