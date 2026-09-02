@@ -126,56 +126,64 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-08-30,Dimanche,10:00,10:55,Salle Verte - Reformer,Pilates Reformer,Alessia Magni,6,6,True,2026-09-02 21:05
 2026-08-30,Dimanche,11:00,11:55,Salle Orange - Tapis,Pilates Tapis,Alessia Magni,12,11,True,2026-09-02 21:05
 2026-08-30,Dimanche,12:00,12:55,Salle Verte - Reformer,Pilates Reformer,Alessia Magni,6,6,True,2026-09-02 21:05
-2026-08-31,Lundi,09:00,09:55,Salle Verte - Reformer,Pilates Reformer,Alessia Magni,6,0,True,2026-09-02 21:05
-2026-08-31,Lundi,10:00,10:55,Salle Verte - Reformer,Pilates Reformer,Alessia Magni,6,2,True,2026-09-02 21:05
-2026-08-31,Lundi,11:00,11:55,Salle Orange - Tapis,Total Body Workout,Laura Fassino,12,10,True,2026-09-02 21:05
-2026-08-31,Lundi,11:00,11:55,Salle Verte - Reformer,Pilates Reformer Santé,Alessia Magni,5,3,True,2026-09-02 21:05
-2026-08-31,Lundi,12:15,13:10,Salle Orange - Tapis,Pilates Spine Corrector,Laura Fassino,10,3,True,2026-09-02 21:05
-2026-08-31,Lundi,12:30,13:25,Salle Verte - Reformer,Pilates Reformer,Amelie Lamarque,6,2,True,2026-09-02 21:05
-2026-08-31,Lundi,13:30,14:25,Salle Verte - Reformer,Pilates Reformer,Amelie Lamarque,6,0,True,2026-09-02 21:05
-2026-08-31,Lundi,17:30,18:25,Salle Verte - Reformer,Pilates Reformer,Philippe Rousselle,6,6,True,2026-09-02 21:05
-2026-08-31,Lundi,18:00,18:55,Salle Orange - Tapis,Pilates Tapis,Marie Daric,12,11,True,2026-09-02 21:05
-2026-08-31,Lundi,18:30,19:25,Salle Verte - Reformer,Pilates Reformer Jump,Eléonore Saveri,6,0,True,2026-09-02 21:05
-2026-08-31,Lundi,19:00,19:55,Salle Orange - Tapis,Pilates Tapis,Marie Daric,12,7,True,2026-09-02 21:05
-2026-08-31,Lundi,19:30,20:25,Salle Verte - Reformer,Pilates Reformer,Eléonore Saveri,6,5,True,2026-09-02 21:05
-2026-08-31,Lundi,20:00,20:55,Salle Orange - Tapis,Pilates Tapis,Marie Daric,12,11,True,2026-09-02 21:05
-2026-09-01,Mardi,08:30,09:25,Salle Verte - Reformer,Pilates Tower,Alessia Magni,6,2,True,2026-09-02 21:05
-2026-09-01,Mardi,09:30,10:25,Salle Orange - Tapis,Pilates Tapis,Alessia Magni,12,6,True,2026-09-02 21:05
-2026-09-01,Mardi,11:00,11:55,Salle Verte - Reformer,Pilates Tower,Sandra Caristan,6,0,True,2026-09-02 21:05
-2026-09-01,Mardi,11:15,12:10,Salle Orange - Tapis,Postural & Mobility,Alessia Magni,10,6,True,2026-09-02 21:05
-2026-09-01,Mardi,12:30,13:25,Salle Orange - Tapis,Pilates Tapis,Alessia Magni,8,2,True,2026-09-02 21:05
-2026-09-01,Mardi,12:30,13:25,Salle Verte - Reformer,Pilates Reformer,Sandra Caristan,6,6,True,2026-09-02 21:05
-2026-09-01,Mardi,17:30,18:25,Salle Orange - Tapis,Pilates Tapis,Estelle Aubertot,12,0,True,2026-09-02 21:05
-2026-09-01,Mardi,17:30,18:25,Salle Verte - Reformer,Pilates Reformer,Marie Daric,6,2,True,2026-09-02 21:05
-2026-09-01,Mardi,18:30,19:30,Salle Orange - Tapis,Yoga,Estelle Aubertot,12,0,True,2026-09-02 21:05
-2026-09-01,Mardi,18:30,19:25,Salle Verte - Reformer,Pilates Reformer,Marie Daric,6,6,True,2026-09-02 21:05
-2026-09-01,Mardi,19:30,20:25,Salle Orange - Tapis,Pilates Tapis,Marie Daric,12,13,True,2026-09-02 21:05
-2026-09-01,Mardi,20:30,21:25,Salle Verte - Reformer,Pilates Multi Appareils,Marie Daric,6,5,True,2026-09-02 21:05
-2026-09-02,Mercredi,08:00,08:55,Salle Verte - Reformer,Pilates Multi Appareils,Alessia Magni,6,0,True,2026-09-02 21:05
-2026-09-02,Mercredi,08:30,09:30,Salle Orange - Tapis,Yoga,Chris Lefrançois,12,4,True,2026-09-02 21:05
-2026-09-02,Mercredi,10:00,10:55,Salle Verte - Reformer,Pilates Reformer,Laura Fassino,6,0,True,2026-09-02 21:05
-2026-09-02,Mercredi,11:00,11:55,Salle Verte - Reformer,Pilates Reformer,Laura Fassino,6,6,True,2026-09-02 21:05
-2026-09-02,Mercredi,12:15,13:10,Salle Verte - Reformer,Pilates Tower,Laura Fassino,6,4,True,2026-09-02 21:05
-2026-09-02,Mercredi,13:30,14:25,Salle Orange - Tapis,Total Body Workout,Laura Fassino,12,3,True,2026-09-02 21:05
-2026-09-02,Mercredi,18:30,19:25,Salle Orange - Tapis,Pilates Tapis,Alessia Magni,12,11,True,2026-09-02 21:05
-2026-09-02,Mercredi,18:30,19:25,Salle Verte - Reformer,Pilates Reformer,Philippe Rousselle,6,5,True,2026-09-02 21:05
-2026-09-02,Mercredi,19:30,20:25,Salle Orange - Tapis,Yoga,Marie Coisnon,12,11,True,2026-09-02 21:05
-2026-09-02,Mercredi,19:30,20:25,Salle Verte - Reformer,Pilates Multi Appareils,Philippe Rousselle,6,6,True,2026-09-02 21:05
-2026-09-03,Jeudi,07:30,08:25,Salle Verte - Reformer,Pilates Multi Appareils,Amelie Lamarque,6,5,False,2026-09-02 21:05
-2026-09-03,Jeudi,09:00,09:55,Salle Verte - Reformer,Pilates Multi Appareils,Amelie Lamarque,6,3,False,2026-09-02 21:05
-2026-09-03,Jeudi,10:15,11:10,Salle Verte - Reformer,Pilates Reformer,Amelie Lamarque,6,1,False,2026-09-02 21:05
-2026-09-03,Jeudi,11:15,12:10,Salle Verte - Reformer,Pilates Reformer,Amelie Lamarque,6,1,False,2026-09-02 21:05
-2026-09-03,Jeudi,12:30,13:25,Salle Orange - Tapis,Pilates Tapis,Amelie Lamarque,12,10,False,2026-09-02 21:05
-2026-09-03,Jeudi,17:45,18:40,Salle Verte - Reformer,Pilates Reformer,Sandra Caristan,6,2,False,2026-09-02 21:05
-2026-09-03,Jeudi,18:30,19:25,Salle Orange - Tapis,Total Body Workout,Philippe Rousselle,12,5,False,2026-09-02 21:05
-2026-09-03,Jeudi,19:00,19:55,Salle Verte - Reformer,Pilates Reformer,Chloé Decoster,6,6,False,2026-09-02 21:05
-2026-09-03,Jeudi,19:30,20:25,Salle Orange - Tapis,Pilates Tapis,Philippe Rousselle,12,12,False,2026-09-02 21:05
-2026-09-03,Jeudi,20:00,20:55,Salle Verte - Reformer,Pilates Reformer,Chloé Decoster,6,5,False,2026-09-02 21:05
-2026-09-04,Vendredi,09:00,09:55,Salle Verte - Reformer,Pilates Reformer,Alessia Magni,6,5,False,2026-09-02 21:05
-2026-09-04,Vendredi,10:00,10:55,Salle Verte - Reformer,Pilates Multi Appareils,Alessia Magni,6,3,False,2026-09-02 21:05
-2026-09-04,Vendredi,11:00,11:55,Salle Orange - Tapis,Postural & Mobility,Alessia Magni,10,6,False,2026-09-02 21:05
-2026-09-04,Vendredi,11:30,12:25,Salle Verte - Reformer,Pilates Tower,Amelie Lamarque,6,3,False,2026-09-02 21:05
-2026-09-04,Vendredi,12:30,13:25,Salle Orange - Tapis,Pilates Tapis,Amelie Lamarque,10,9,False,2026-09-02 21:05
-2026-09-04,Vendredi,12:30,13:25,Salle Verte - Reformer,Pilates Reformer,Sandra Caristan,6,6,False,2026-09-02 21:05
-2026-09-04,Vendredi,13:30,14:25,Salle Verte - Reformer,Pilates Reformer,Amelie Lamarque,6,1,False,2026-09-02 21:05
-2026-09-04,Vendredi,18:00,18:55,Salle Verte - Reformer,Pilates Multi Appareils,Alessia Magni,6,4,False,2026-09-02 21:05
+2026-08-31,Lundi,09:00,09:55,Salle Verte - Reformer,Pilates Reformer,Alessia Magni,6,0,True,2026-09-03 00:07
+2026-08-31,Lundi,10:00,10:55,Salle Verte - Reformer,Pilates Reformer,Alessia Magni,6,2,True,2026-09-03 00:07
+2026-08-31,Lundi,11:00,11:55,Salle Orange - Tapis,Total Body Workout,Laura Fassino,12,10,True,2026-09-03 00:07
+2026-08-31,Lundi,11:00,11:55,Salle Verte - Reformer,Pilates Reformer Santé,Alessia Magni,5,3,True,2026-09-03 00:07
+2026-08-31,Lundi,12:15,13:10,Salle Orange - Tapis,Pilates Spine Corrector,Laura Fassino,10,3,True,2026-09-03 00:07
+2026-08-31,Lundi,12:30,13:25,Salle Verte - Reformer,Pilates Reformer,Amelie Lamarque,6,2,True,2026-09-03 00:07
+2026-08-31,Lundi,13:30,14:25,Salle Verte - Reformer,Pilates Reformer,Amelie Lamarque,6,0,True,2026-09-03 00:07
+2026-08-31,Lundi,17:30,18:25,Salle Verte - Reformer,Pilates Reformer,Philippe Rousselle,6,6,True,2026-09-03 00:07
+2026-08-31,Lundi,18:00,18:55,Salle Orange - Tapis,Pilates Tapis,Marie Daric,12,11,True,2026-09-03 00:07
+2026-08-31,Lundi,18:30,19:25,Salle Verte - Reformer,Pilates Reformer Jump,Eléonore Saveri,6,0,True,2026-09-03 00:07
+2026-08-31,Lundi,19:00,19:55,Salle Orange - Tapis,Pilates Tapis,Marie Daric,12,7,True,2026-09-03 00:07
+2026-08-31,Lundi,19:30,20:25,Salle Verte - Reformer,Pilates Reformer,Eléonore Saveri,6,5,True,2026-09-03 00:07
+2026-08-31,Lundi,20:00,20:55,Salle Orange - Tapis,Pilates Tapis,Marie Daric,12,11,True,2026-09-03 00:07
+2026-09-01,Mardi,08:30,09:25,Salle Verte - Reformer,Pilates Tower,Alessia Magni,6,2,True,2026-09-03 00:07
+2026-09-01,Mardi,09:30,10:25,Salle Orange - Tapis,Pilates Tapis,Alessia Magni,12,6,True,2026-09-03 00:07
+2026-09-01,Mardi,11:00,11:55,Salle Verte - Reformer,Pilates Tower,Sandra Caristan,6,0,True,2026-09-03 00:07
+2026-09-01,Mardi,11:15,12:10,Salle Orange - Tapis,Postural & Mobility,Alessia Magni,10,6,True,2026-09-03 00:07
+2026-09-01,Mardi,12:30,13:25,Salle Orange - Tapis,Pilates Tapis,Alessia Magni,8,2,True,2026-09-03 00:07
+2026-09-01,Mardi,12:30,13:25,Salle Verte - Reformer,Pilates Reformer,Sandra Caristan,6,6,True,2026-09-03 00:07
+2026-09-01,Mardi,17:30,18:25,Salle Orange - Tapis,Pilates Tapis,Estelle Aubertot,12,0,True,2026-09-03 00:07
+2026-09-01,Mardi,17:30,18:25,Salle Verte - Reformer,Pilates Reformer,Marie Daric,6,2,True,2026-09-03 00:07
+2026-09-01,Mardi,18:30,19:30,Salle Orange - Tapis,Yoga,Estelle Aubertot,12,0,True,2026-09-03 00:07
+2026-09-01,Mardi,18:30,19:25,Salle Verte - Reformer,Pilates Reformer,Marie Daric,6,6,True,2026-09-03 00:07
+2026-09-01,Mardi,19:30,20:25,Salle Orange - Tapis,Pilates Tapis,Marie Daric,12,13,True,2026-09-03 00:07
+2026-09-01,Mardi,20:30,21:25,Salle Verte - Reformer,Pilates Multi Appareils,Marie Daric,6,5,True,2026-09-03 00:07
+2026-09-02,Mercredi,08:00,08:55,Salle Verte - Reformer,Pilates Multi Appareils,Alessia Magni,6,0,True,2026-09-03 00:07
+2026-09-02,Mercredi,08:30,09:30,Salle Orange - Tapis,Yoga,Chris Lefrançois,12,4,True,2026-09-03 00:07
+2026-09-02,Mercredi,10:00,10:55,Salle Verte - Reformer,Pilates Reformer,Laura Fassino,6,0,True,2026-09-03 00:07
+2026-09-02,Mercredi,11:00,11:55,Salle Verte - Reformer,Pilates Reformer,Laura Fassino,6,6,True,2026-09-03 00:07
+2026-09-02,Mercredi,12:15,13:10,Salle Verte - Reformer,Pilates Tower,Laura Fassino,6,4,True,2026-09-03 00:07
+2026-09-02,Mercredi,13:30,14:25,Salle Orange - Tapis,Total Body Workout,Laura Fassino,12,3,True,2026-09-03 00:07
+2026-09-02,Mercredi,18:30,19:25,Salle Orange - Tapis,Pilates Tapis,Alessia Magni,12,11,True,2026-09-03 00:07
+2026-09-02,Mercredi,18:30,19:25,Salle Verte - Reformer,Pilates Reformer,Philippe Rousselle,6,5,True,2026-09-03 00:07
+2026-09-02,Mercredi,19:30,20:25,Salle Orange - Tapis,Yoga,Marie Coisnon,12,11,True,2026-09-03 00:07
+2026-09-02,Mercredi,19:30,20:25,Salle Verte - Reformer,Pilates Multi Appareils,Philippe Rousselle,6,6,True,2026-09-03 00:07
+2026-09-03,Jeudi,07:30,08:25,Salle Verte - Reformer,Pilates Multi Appareils,Amelie Lamarque,6,5,False,2026-09-03 00:07
+2026-09-03,Jeudi,09:00,09:55,Salle Verte - Reformer,Pilates Multi Appareils,Amelie Lamarque,6,3,False,2026-09-03 00:07
+2026-09-03,Jeudi,10:15,11:10,Salle Verte - Reformer,Pilates Reformer,Amelie Lamarque,6,0,False,2026-09-03 00:07
+2026-09-03,Jeudi,11:15,12:10,Salle Verte - Reformer,Pilates Reformer,Amelie Lamarque,6,2,False,2026-09-03 00:07
+2026-09-03,Jeudi,12:30,13:25,Salle Orange - Tapis,Pilates Tapis,Amelie Lamarque,12,10,False,2026-09-03 00:07
+2026-09-03,Jeudi,17:45,18:40,Salle Verte - Reformer,Pilates Reformer,Sandra Caristan,6,3,False,2026-09-03 00:07
+2026-09-03,Jeudi,18:30,19:25,Salle Orange - Tapis,Total Body Workout,Philippe Rousselle,12,5,False,2026-09-03 00:07
+2026-09-03,Jeudi,19:00,19:55,Salle Verte - Reformer,Pilates Reformer,Chloé Decoster,6,6,False,2026-09-03 00:07
+2026-09-03,Jeudi,19:30,20:25,Salle Orange - Tapis,Pilates Tapis,Philippe Rousselle,12,12,False,2026-09-03 00:07
+2026-09-03,Jeudi,20:00,20:55,Salle Verte - Reformer,Pilates Reformer,Chloé Decoster,6,5,False,2026-09-03 00:07
+2026-09-04,Vendredi,09:00,09:55,Salle Verte - Reformer,Pilates Reformer,Alessia Magni,6,5,False,2026-09-03 00:07
+2026-09-04,Vendredi,10:00,10:55,Salle Verte - Reformer,Pilates Multi Appareils,Alessia Magni,6,3,False,2026-09-03 00:07
+2026-09-04,Vendredi,11:00,11:55,Salle Orange - Tapis,Postural & Mobility,Alessia Magni,10,6,False,2026-09-03 00:07
+2026-09-04,Vendredi,11:30,12:25,Salle Verte - Reformer,Pilates Tower,Amelie Lamarque,6,3,False,2026-09-03 00:07
+2026-09-04,Vendredi,12:30,13:25,Salle Orange - Tapis,Pilates Tapis,Amelie Lamarque,10,9,False,2026-09-03 00:07
+2026-09-04,Vendredi,12:30,13:25,Salle Verte - Reformer,Pilates Reformer,Sandra Caristan,6,6,False,2026-09-03 00:07
+2026-09-04,Vendredi,13:30,14:25,Salle Verte - Reformer,Pilates Reformer,Amelie Lamarque,6,1,False,2026-09-03 00:07
+2026-09-04,Vendredi,18:00,18:55,Salle Verte - Reformer,Pilates Multi Appareils,Alessia Magni,6,4,False,2026-09-03 00:07
+2026-09-05,Samedi,09:30,10:25,Salle Verte - Reformer,Pilates Reformer,Alessia Magni,6,6,False,2026-09-03 00:07
+2026-09-05,Samedi,10:00,11:00,Salle Orange - Tapis,Yoga,Chris Lefrançois,12,7,False,2026-09-03 00:07
+2026-09-05,Samedi,10:30,11:25,Salle Verte - Reformer,Pilates Reformer,Alessia Magni,6,4,False,2026-09-03 00:07
+2026-09-05,Samedi,11:30,12:25,Salle Orange - Tapis,Pilates Tapis,Philippe Rousselle,12,12,False,2026-09-03 00:07
+2026-09-05,Samedi,11:30,12:25,Salle Verte - Reformer,Pilates Reformer,Alessia Magni,6,5,False,2026-09-03 00:07
+2026-09-05,Samedi,12:30,13:25,Salle Orange - Tapis,Total Body Workout,Alessia Magni,12,6,False,2026-09-03 00:07
+2026-09-05,Samedi,12:30,13:25,Salle Verte - Reformer,Pilates Reformer,Philippe Rousselle,6,6,False,2026-09-03 00:07
+2026-09-05,Samedi,14:00,14:55,Salle Verte - Reformer,Pilates Tower,Philippe Rousselle,6,3,False,2026-09-03 00:07
