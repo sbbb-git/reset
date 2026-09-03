@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-03T16:06:28.506028",
+ "generated_at": "2026-09-03T19:25:39.352622",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -28,8 +28,18 @@
    "name": "Play Padel Alfortville",
    "cp": "94140",
    "prix_30j": 36.0,
-   "prix_recent": 54.0,
-   "delta_pct": 50.0,
+   "prix_recent": 57.0,
+   "delta_pct": 58.3,
+   "direction": "hausse"
+  },
+  {
+   "slug": "4-padel-saint-ouen-saint-ouen-sur-seine",
+   "source": "anybuddy",
+   "name": "4-padel-saint-ouen-saint-ouen-sur-seine",
+   "cp": "93400",
+   "prix_30j": 48.0,
+   "prix_recent": 64.0,
+   "delta_pct": 33.3,
    "direction": "hausse"
   },
   {
@@ -1434,9 +1444,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 90,
+  "total_anomalies": 91,
   "idle_24h": 0,
-  "price_shifts": 5,
+  "price_shifts": 6,
   "volume_drops": 85,
   "new_clubs_14d": 87
  }
