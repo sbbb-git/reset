@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-04T17:01:17.907209",
+ "generated_at": "2026-09-04T19:27:47.447895",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -31,16 +31,6 @@
    "prix_recent": 34.5,
    "delta_pct": 53.2,
    "direction": "hausse"
-  },
-  {
-   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
-   "source": "doinsport",
-   "name": "FIVE ARENA",
-   "cp": "77100",
-   "prix_30j": 48.0,
-   "prix_recent": 24.0,
-   "delta_pct": -50.0,
-   "direction": "baisse"
   },
   {
    "slug": "4-padel-saint-ouen-saint-ouen-sur-seine",
@@ -1454,9 +1444,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 92,
+  "total_anomalies": 91,
   "idle_24h": 0,
-  "price_shifts": 7,
+  "price_shifts": 6,
   "volume_drops": 85,
   "new_clubs_14d": 87
  }
