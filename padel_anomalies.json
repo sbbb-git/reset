@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-04T19:27:47.447895",
+ "generated_at": "2026-09-04T21:44:30.928037",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -61,6 +61,16 @@
    "prix_recent": 72.0,
    "delta_pct": 33.3,
    "direction": "hausse"
+  },
+  {
+   "slug": "doinsport-af5c97a7-390f-4f23-afca-6d10c0d117cd",
+   "source": "doinsport",
+   "name": "Le Padel Wellness",
+   "cp": "95500",
+   "prix_30j": 60.0,
+   "prix_recent": 40.0,
+   "delta_pct": -33.3,
+   "direction": "baisse"
   }
  ],
  "volume_drops": [
@@ -1444,9 +1454,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 91,
+  "total_anomalies": 92,
   "idle_24h": 0,
-  "price_shifts": 6,
+  "price_shifts": 7,
   "volume_drops": 85,
   "new_clubs_14d": 87
  }
