@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-05T17:31:50.205616",
+ "generated_at": "2026-09-05T19:25:42.018753",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -30,6 +30,16 @@
    "prix_30j": 22.5,
    "prix_recent": 34.5,
    "delta_pct": 53.2,
+   "direction": "hausse"
+  },
+  {
+   "slug": "4-padel-montreuil",
+   "source": "anybuddy",
+   "name": "4-padel-montreuil",
+   "cp": "93100",
+   "prix_30j": 48.0,
+   "prix_recent": 68.0,
+   "delta_pct": 41.7,
    "direction": "hausse"
   },
   {
@@ -1474,9 +1484,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 94,
+  "total_anomalies": 95,
   "idle_24h": 0,
-  "price_shifts": 9,
+  "price_shifts": 10,
   "volume_drops": 85,
   "new_clubs_14d": 87
  }
