@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-06T08:31:43.475986",
+ "generated_at": "2026-09-06T12:20:44.452214",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -23,23 +23,13 @@
    "direction": "hausse"
   },
   {
-   "slug": "4-padel-montreuil",
-   "source": "anybuddy",
-   "name": "4-padel-montreuil",
-   "cp": "93100",
-   "prix_30j": 48.0,
-   "prix_recent": 68.0,
-   "delta_pct": 41.7,
-   "direction": "hausse"
-  },
-  {
    "slug": "4-padel-saint-ouen-saint-ouen-sur-seine",
    "source": "anybuddy",
    "name": "4-padel-saint-ouen-saint-ouen-sur-seine",
    "cp": "93400",
    "prix_30j": 48.0,
-   "prix_recent": 64.0,
-   "delta_pct": 33.3,
+   "prix_recent": 70.7,
+   "delta_pct": 47.2,
    "direction": "hausse"
   },
   {
@@ -48,8 +38,18 @@
    "name": "4padel-cao-saint-denis",
    "cp": "93200",
    "prix_30j": 48.0,
-   "prix_recent": 64.0,
-   "delta_pct": 33.3,
+   "prix_recent": 70.7,
+   "delta_pct": 47.2,
+   "direction": "hausse"
+  },
+  {
+   "slug": "4-padel-montreuil",
+   "source": "anybuddy",
+   "name": "4-padel-montreuil",
+   "cp": "93100",
+   "prix_30j": 48.0,
+   "prix_recent": 68.0,
+   "delta_pct": 41.7,
    "direction": "hausse"
   },
   {
