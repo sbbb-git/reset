@@ -7948,11 +7948,11 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-09-05,Samedi,18:30,19:20,Etoile Studio Reformer,Reformer Athletic,Kevin,0,0,True,2026-09-04 10:48
 2026-09-05,Samedi,18:45,19:30,Pigalle Studio Bootcamp,Bootcamp Strong,Flora,0,0,True,2026-09-04 10:48
 2026-09-05,Samedi,19:00,19:50,Louvre Studio Reformer,Reformer,Celia,0,0,True,2026-09-04 10:48
-2026-09-06,Dimanche,09:30,10:20,Bourse Studio Flow,Barre Sculpt,Zoé,0,0,False,2026-09-04 10:48
-2026-09-06,Dimanche,09:30,10:20,Etoile Studio Reformer,Reformer Traditional,Vincent,0,0,False,2026-09-04 10:48
-2026-09-06,Dimanche,09:30,10:20,Pigalle Studio Reformer,Reformer,Eloïse,0,0,False,2026-09-04 10:48
-2026-09-06,Dimanche,09:30,10:15,Place de Clichy Studio Bootcamp,Bootcamp,Inès,0,0,False,2026-09-04 10:48
-2026-09-06,Dimanche,09:45,10:45,Nation Studio Athletic,Athletic Strong,Stephane,0,0,False,2026-09-04 10:48
+2026-09-06,Dimanche,09:30,10:20,Bourse Studio Flow,Barre Sculpt,Zoé,0,0,True,2026-09-04 10:48
+2026-09-06,Dimanche,09:30,10:20,Etoile Studio Reformer,Reformer Traditional,Vincent,0,0,True,2026-09-04 10:48
+2026-09-06,Dimanche,09:30,10:20,Pigalle Studio Reformer,Reformer,Eloïse,0,0,True,2026-09-04 10:48
+2026-09-06,Dimanche,09:30,10:15,Place de Clichy Studio Bootcamp,Bootcamp,Inès,0,0,True,2026-09-04 10:48
+2026-09-06,Dimanche,09:45,10:45,Nation Studio Athletic,Athletic Strong,Stephane,0,0,True,2026-09-04 10:48
 2026-09-06,Dimanche,10:00,10:45,Levallois Bootcamp Studio Bootcamp,Bootcamp,Guilherme,0,0,False,2026-09-04 15:26
 2026-09-06,Dimanche,10:00,10:50,Levallois Reformer Studio Reformer,Reformer,Laura E.,0,0,False,2026-09-04 15:26
 2026-09-06,Dimanche,10:00,10:50,Louvre Studio Reformer,Reformer Athletic,Dody,0,0,False,2026-09-04 10:48
@@ -7974,9 +7974,9 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-09-06,Dimanche,10:30,11:20,Pigalle Studio Reformer,Reformer,Eloïse,0,0,False,2026-09-04 15:26
 2026-09-06,Dimanche,10:30,11:15,Place de Clichy Studio Cycling,Cycling,Inès,0,0,False,2026-09-04 15:26
 2026-09-06,Dimanche,10:45,11:45,Nation Studio Athletic,Athletic Training,Stephane,0,0,False,2026-09-04 15:26
-2026-09-06,Dimanche,10:45,11:30,Pigalle Studio Bootcamp,Bootcamp,Soukaïna,0,0,False,2026-09-04 15:26
-2026-09-06,Dimanche,10:45,11:30,Place de Clichy Studio Bootcamp,Lifting,Ousmane,0,0,False,2026-09-04 15:26
-2026-09-06,Dimanche,10:45,11:30,République Studio Boxing,Boxing,Kevin,0,0,False,2026-09-04 15:26
+2026-09-06,Dimanche,10:45,11:30,Pigalle Studio Bootcamp,Bootcamp,Soukaïna,32,23,False,2026-09-06 10:37
+2026-09-06,Dimanche,10:45,11:30,Place de Clichy Studio Bootcamp,Lifting,Ousmane,30,25,False,2026-09-06 10:37
+2026-09-06,Dimanche,10:45,11:30,République Studio Boxing,Boxing,Kevin,30,9,False,2026-09-06 10:37
 2026-09-06,Dimanche,11:00,11:45,Levallois Bootcamp Studio Bootcamp,Bootcamp,Guilherme,0,0,False,2026-09-04 15:26
 2026-09-06,Dimanche,11:00,11:50,Levallois Reformer Studio Reformer,Reformer,Laura E.,0,0,False,2026-09-04 15:26
 2026-09-06,Dimanche,11:00,11:45,Louvre Studio Cycling,Cycling,Tommy,0,0,False,2026-09-04 15:26
@@ -8200,4 +8200,22 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-09-07,Lundi,19:00,19:50,République Studio Flow,Signature Pilates,Julie,0,0,False,2026-09-05 19:17
 2026-09-07,Lundi,19:15,20:00,Louvre Studio Cycling,Cycling,Inès,0,0,False,2026-09-05 19:17
 2026-09-07,Lundi,19:15,20:00,Louvre Studio Heat,Hot Pilates,Leila A.,0,0,False,2026-09-05 19:17
+2026-09-07,Lundi,19:15,20:05,Nation Studio Flow,Barre Power,Thibaut,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:15,20:05,Pigalle Studio Reformer,Reformer,Aurélie,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:15,20:05,République Studio Lift,Lift,Tommy,0,0,False,2026-09-06 10:37
 2026-09-07,Lundi,19:15,20:05,République Studio Reformer,Reformer,Zoé,0,0,False,2026-09-05 21:26
+2026-09-07,Lundi,19:30,20:15,Bourse Studio Bootcamp,Bootcamp,Olivier,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:30,20:15,Bourse Studio Boxing,Boxing,Bouba,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:30,20:30,Etoile Studio Athletic,Athletic Hyrox,Nhick,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:30,20:15,Levallois Bootcamp Studio Bootcamp,Bootcamp,Soukaïna,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:30,20:20,Levallois Reformer Studio Reformer,Reformer,Hélin frédéric,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:30,20:15,Nation Studio Boxing,Boxing,Steven,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:30,20:15,Pigalle Studio Bootcamp,Bootcamp,Jean-yves,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:30,20:20,Pigalle Studio Lift,Lift,Rahim,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:30,20:15,Place de Clichy Studio Cycling,Cycling,Harold,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:30,20:15,République Studio Athletic,Athletic Strong,Andy,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:30,20:15,République Studio Bootcamp,Bootcamp Hyrox,Laura B.,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:30,20:15,République Studio Boxing,Boxing,Ousmane,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:45,20:45,Nation Studio Athletic,Athletic Hyrox,Flora,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:45,20:30,Nation Studio Bootcamp,Bootcamp,ABI,0,0,False,2026-09-06 10:37
+2026-09-07,Lundi,19:45,20:30,République Studio Cycling,Cycling,Martin L.,0,0,False,2026-09-06 10:37
