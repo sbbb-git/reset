@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-06T22:50:13.333881",
+ "generated_at": "2026-09-07T00:49:27.106313",
  "heatmap": {
   "days": [
    "Lundi",
@@ -68,8 +68,8 @@
     },
     {
      "heure": 16,
-     "offered": 6293,
-     "demand": 2878,
+     "offered": 6294,
+     "demand": 2879,
      "occupation_pct": 46
     },
     {
@@ -80,8 +80,8 @@
     },
     {
      "heure": 18,
-     "offered": 7108,
-     "demand": 5077,
+     "offered": 7109,
+     "demand": 5079,
      "occupation_pct": 71
     },
     {
@@ -166,25 +166,25 @@
     },
     {
      "heure": 15,
-     "offered": 6853,
+     "offered": 6854,
      "demand": 2778,
      "occupation_pct": 41
     },
     {
      "heure": 16,
-     "offered": 6470,
+     "offered": 6471,
      "demand": 2992,
      "occupation_pct": 46
     },
     {
      "heure": 17,
-     "offered": 6373,
+     "offered": 6374,
      "demand": 3565,
      "occupation_pct": 56
     },
     {
      "heure": 18,
-     "offered": 7215,
+     "offered": 7216,
      "demand": 5237,
      "occupation_pct": 73
     },
@@ -229,55 +229,55 @@
     {
      "heure": 8,
      "offered": 1727,
-     "demand": 590,
+     "demand": 591,
      "occupation_pct": 34
     },
     {
      "heure": 9,
      "offered": 5040,
-     "demand": 1888,
+     "demand": 1889,
      "occupation_pct": 37
     },
     {
      "heure": 10,
      "offered": 6745,
-     "demand": 2206,
+     "demand": 2207,
      "occupation_pct": 33
     },
     {
      "heure": 11,
      "offered": 6294,
-     "demand": 2256,
+     "demand": 2257,
      "occupation_pct": 36
     },
     {
      "heure": 12,
      "offered": 7443,
-     "demand": 3163,
-     "occupation_pct": 42
+     "demand": 3164,
+     "occupation_pct": 43
     },
     {
      "heure": 13,
      "offered": 6286,
-     "demand": 2351,
+     "demand": 2352,
      "occupation_pct": 37
     },
     {
      "heure": 14,
      "offered": 7273,
-     "demand": 3012,
+     "demand": 3013,
      "occupation_pct": 41
     },
     {
      "heure": 15,
      "offered": 7099,
-     "demand": 3134,
+     "demand": 3135,
      "occupation_pct": 44
     },
     {
      "heure": 16,
      "offered": 6627,
-     "demand": 3348,
+     "demand": 3349,
      "occupation_pct": 51
     },
     {
@@ -381,13 +381,13 @@
     {
      "heure": 16,
      "offered": 6364,
-     "demand": 3136,
+     "demand": 3137,
      "occupation_pct": 49
     },
     {
      "heure": 17,
      "offered": 6392,
-     "demand": 3890,
+     "demand": 3891,
      "occupation_pct": 61
     },
     {
@@ -417,7 +417,7 @@
     {
      "heure": 22,
      "offered": 3541,
-     "demand": 2240,
+     "demand": 2242,
      "occupation_pct": 63
     },
     {
@@ -497,19 +497,19 @@
     {
      "heure": 18,
      "offered": 7134,
-     "demand": 5232,
+     "demand": 5233,
      "occupation_pct": 73
     },
     {
      "heure": 19,
      "offered": 5832,
-     "demand": 4207,
+     "demand": 4208,
      "occupation_pct": 72
     },
     {
      "heure": 20,
      "offered": 5938,
-     "demand": 4276,
+     "demand": 4279,
      "occupation_pct": 72
     },
     {
@@ -521,7 +521,7 @@
     {
      "heure": 22,
      "offered": 3346,
-     "demand": 1928,
+     "demand": 1931,
      "occupation_pct": 58
     },
     {
@@ -553,13 +553,13 @@
     {
      "heure": 10,
      "offered": 5511,
-     "demand": 3433,
+     "demand": 3434,
      "occupation_pct": 62
     },
     {
      "heure": 11,
      "offered": 5451,
-     "demand": 3454,
+     "demand": 3455,
      "occupation_pct": 63
     },
     {
@@ -638,105 +638,105 @@
    "Dimanche": [
     {
      "heure": 7,
-     "offered": 479,
+     "offered": 491,
      "demand": 169,
-     "occupation_pct": 35
+     "occupation_pct": 34
     },
     {
      "heure": 8,
-     "offered": 1546,
+     "offered": 1621,
      "demand": 751,
-     "occupation_pct": 49
+     "occupation_pct": 46
     },
     {
      "heure": 9,
-     "offered": 6458,
+     "offered": 6655,
      "demand": 4440,
-     "occupation_pct": 69
+     "occupation_pct": 67
     },
     {
      "heure": 10,
-     "offered": 5453,
+     "offered": 5620,
      "demand": 4004,
-     "occupation_pct": 73
+     "occupation_pct": 71
     },
     {
      "heure": 11,
-     "offered": 6375,
+     "offered": 6558,
      "demand": 4670,
-     "occupation_pct": 73
+     "occupation_pct": 71
     },
     {
      "heure": 12,
-     "offered": 6781,
+     "offered": 7070,
      "demand": 3807,
-     "occupation_pct": 56
-    },
-    {
-     "heure": 13,
-     "offered": 6357,
-     "demand": 3443,
      "occupation_pct": 54
     },
     {
+     "heure": 13,
+     "offered": 6627,
+     "demand": 3443,
+     "occupation_pct": 52
+    },
+    {
      "heure": 14,
-     "offered": 7069,
+     "offered": 7328,
      "demand": 4353,
-     "occupation_pct": 62
-    },
-    {
-     "heure": 15,
-     "offered": 7383,
-     "demand": 4876,
-     "occupation_pct": 66
-    },
-    {
-     "heure": 16,
-     "offered": 7147,
-     "demand": 4906,
-     "occupation_pct": 69
-    },
-    {
-     "heure": 17,
-     "offered": 7474,
-     "demand": 5190,
-     "occupation_pct": 69
-    },
-    {
-     "heure": 18,
-     "offered": 7972,
-     "demand": 5602,
-     "occupation_pct": 70
-    },
-    {
-     "heure": 19,
-     "offered": 6155,
-     "demand": 3841,
-     "occupation_pct": 62
-    },
-    {
-     "heure": 20,
-     "offered": 5939,
-     "demand": 3834,
-     "occupation_pct": 65
-    },
-    {
-     "heure": 21,
-     "offered": 3882,
-     "demand": 2339,
-     "occupation_pct": 60
-    },
-    {
-     "heure": 22,
-     "offered": 1656,
-     "demand": 970,
      "occupation_pct": 59
     },
     {
+     "heure": 15,
+     "offered": 7642,
+     "demand": 4876,
+     "occupation_pct": 64
+    },
+    {
+     "heure": 16,
+     "offered": 7406,
+     "demand": 4906,
+     "occupation_pct": 66
+    },
+    {
+     "heure": 17,
+     "offered": 7769,
+     "demand": 5190,
+     "occupation_pct": 67
+    },
+    {
+     "heure": 18,
+     "offered": 8286,
+     "demand": 5602,
+     "occupation_pct": 68
+    },
+    {
+     "heure": 19,
+     "offered": 6436,
+     "demand": 3841,
+     "occupation_pct": 60
+    },
+    {
+     "heure": 20,
+     "offered": 6181,
+     "demand": 3834,
+     "occupation_pct": 62
+    },
+    {
+     "heure": 21,
+     "offered": 4065,
+     "demand": 2339,
+     "occupation_pct": 58
+    },
+    {
+     "heure": 22,
+     "offered": 1747,
+     "demand": 970,
+     "occupation_pct": 56
+    },
+    {
      "heure": 23,
-     "offered": 562,
+     "offered": 576,
      "demand": 429,
-     "occupation_pct": 76
+     "occupation_pct": 74
     }
    ]
   },
@@ -759,7 +759,7 @@
    [
     "Vendredi",
     18,
-    5232
+    5233
    ],
    [
     "Dimanche",
@@ -774,7 +774,7 @@
    [
     "Lundi",
     18,
-    5077
+    5079
    ],
    [
     "Mercredi",
@@ -3781,7 +3781,7 @@
    {
     "chain": "Sportfield",
     "n_clubs": 4,
-    "median_sessions_per_club": 646.0,
+    "median_sessions_per_club": 685.5,
     "median_price_90": 82.5
    },
    {
@@ -3793,7 +3793,7 @@
    {
     "chain": "Le Five",
     "n_clubs": 3,
-    "median_sessions_per_club": 784,
+    "median_sessions_per_club": 840,
     "median_price_90": 56.0
    },
    {
@@ -3811,25 +3811,25 @@
    {
     "chain": "UCPA",
     "n_clubs": 3,
-    "median_sessions_per_club": 192,
+    "median_sessions_per_club": 195,
     "median_price_90": 54.0
    },
    {
     "chain": "Aldea",
     "n_clubs": 2,
-    "median_sessions_per_club": 2643.0,
+    "median_sessions_per_club": 2748.0,
     "median_price_90": 72.0
    },
    {
     "chain": "Padel Camp",
     "n_clubs": 2,
-    "median_sessions_per_club": 220.5,
+    "median_sessions_per_club": 233.0,
     "median_price_90": 68.0
    },
    {
     "chain": "Play Padel",
     "n_clubs": 2,
-    "median_sessions_per_club": 771.5,
+    "median_sessions_per_club": 813.0,
     "median_price_90": 72.0
    },
    {
@@ -3841,13 +3841,13 @@
    {
     "chain": "PadelShot",
     "n_clubs": 2,
-    "median_sessions_per_club": 3510.0,
+    "median_sessions_per_club": 3676.5,
     "median_price_90": 72.0
    },
    {
     "chain": "Carre Padel",
     "n_clubs": 1,
-    "median_sessions_per_club": 5728,
+    "median_sessions_per_club": 6142,
     "median_price_90": 69.0
    },
    {
@@ -3859,7 +3859,7 @@
    {
     "chain": "Trinquet",
     "n_clubs": 1,
-    "median_sessions_per_club": 1254,
+    "median_sessions_per_club": 1316,
     "median_price_90": 71.0
    }
   ],
@@ -3931,59 +3931,59 @@
  "multi_vs_mono": {
   "n_multi_platforms": 19,
   "n_mono": 102,
-  "median_sessions_multi": 1087,
-  "median_sessions_mono": 84,
-  "avg_sessions_multi": 2111,
-  "avg_sessions_mono": 557,
+  "median_sessions_multi": 1104,
+  "median_sessions_mono": 86,
+  "avg_sessions_multi": 2212,
+  "avg_sessions_mono": 572,
   "clusters": [
    {
     "unified_id": "unif_015",
     "canonical_name": "padelshot-saint-quentin-en-yvelines-trappes",
     "cp": "78190",
     "n_platforms": 2,
-    "total_sessions": 7540
+    "total_sessions": 7913
    },
    {
     "unified_id": "unif_005",
     "canonical_name": "Home Padel - Meaux",
     "cp": "77100",
     "n_platforms": 2,
-    "total_sessions": 6339
+    "total_sessions": 6800
    },
    {
     "unified_id": "unif_001",
     "canonical_name": "aldea-padel-villabe",
     "cp": "91100",
     "n_platforms": 2,
-    "total_sessions": 5286
+    "total_sessions": 5496
    },
    {
     "unified_id": "unif_004",
     "canonical_name": "senart-padel-combs-la-ville",
     "cp": "77380",
     "n_platforms": 2,
-    "total_sessions": 4864
+    "total_sessions": 5217
    },
    {
     "unified_id": "unif_018",
     "canonical_name": "tennis-melun",
     "cp": "77000",
     "n_platforms": 2,
-    "total_sessions": 3263
+    "total_sessions": 3499
    },
    {
     "unified_id": "unif_013",
     "canonical_name": "Padel Horizon - Sucy en Brie",
     "cp": "94370",
     "n_platforms": 2,
-    "total_sessions": 3106
+    "total_sessions": 3213
    },
    {
     "unified_id": "unif_002",
     "canonical_name": "aquaboulevard-de-paris",
     "cp": "75015",
     "n_platforms": 2,
-    "total_sessions": 2040
+    "total_sessions": 2046
    },
    {
     "unified_id": "unif_000",
@@ -3997,21 +3997,21 @@
     "canonical_name": "Play Padel Alfortville",
     "cp": "94140",
     "n_platforms": 2,
-    "total_sessions": 1543
+    "total_sessions": 1626
    },
    {
     "unified_id": "unif_017",
     "canonical_name": "Sportfield Paris 16 ",
     "cp": "75016",
     "n_platforms": 2,
-    "total_sessions": 1087
+    "total_sessions": 1104
    },
    {
     "unified_id": "unif_011",
     "canonical_name": "padel-95-pontoise",
     "cp": "95300",
     "n_platforms": 2,
-    "total_sessions": 888
+    "total_sessions": 893
    },
    {
     "unified_id": "unif_009",
@@ -4025,7 +4025,7 @@
     "canonical_name": "padel-camp-acheres",
     "cp": "78260",
     "n_platforms": 2,
-    "total_sessions": 441
+    "total_sessions": 466
    },
    {
     "unified_id": "unif_010",
@@ -4039,21 +4039,21 @@
     "canonical_name": "mairie-croissy-beaubourg-croissy-beaubourg",
     "cp": "77183",
     "n_platforms": 2,
-    "total_sessions": 384
+    "total_sessions": 412
    },
    {
     "unified_id": "unif_016",
     "canonical_name": "paris-padel",
     "cp": "75020",
     "n_platforms": 2,
-    "total_sessions": 294
+    "total_sessions": 295
    },
    {
     "unified_id": "unif_006",
     "canonical_name": "tennis-du-golf-de-la-boulie-versailles",
     "cp": "78000",
     "n_platforms": 2,
-    "total_sessions": 256
+    "total_sessions": 268
    },
    {
     "unified_id": "unif_012",
