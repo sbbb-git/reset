@@ -1,13 +1,21 @@
 {
- "generated_at": "2026-09-13T05:16:56.892317",
+ "generated_at": "2026-09-13T10:33:46.418404",
  "idle_24h": [
+  {
+   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "source": "doinsport",
+   "name": "FIVE ARENA",
+   "cp": "77100",
+   "last_seen": "2026-09-10 21:59",
+   "hours_idle": 60.6
+  },
   {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
    "source": "anybuddy",
    "name": "tennis-padel-bois-colombes-bois-colombes",
    "cp": "92700",
    "last_seen": "2026-09-11 19:50",
-   "hours_idle": 33.4
+   "hours_idle": 38.7
   }
  ],
  "price_shifts": [
@@ -62,23 +70,13 @@
    "direction": "hausse"
   },
   {
-   "slug": "4padel-epinay-sur-seine",
-   "source": "anybuddy",
-   "name": "4padel-epinay-sur-seine",
-   "cp": "93800",
-   "prix_30j": 48.0,
-   "prix_recent": 70.0,
-   "delta_pct": 45.8,
-   "direction": "hausse"
-  },
-  {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
    "source": "doinsport",
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "prix_30j": 34.5,
-   "prix_recent": 47.5,
-   "delta_pct": 37.8,
+   "prix_recent": 50.0,
+   "delta_pct": 45.0,
    "direction": "hausse"
   },
   {
@@ -1560,8 +1558,8 @@
  ],
  "summary": {
   "total_anomalies": 103,
-  "idle_24h": 1,
-  "price_shifts": 15,
+  "idle_24h": 2,
+  "price_shifts": 14,
   "volume_drops": 87,
   "new_clubs_14d": 87
  }
