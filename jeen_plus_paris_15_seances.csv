@@ -357,51 +357,66 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-09-09,Mercredi,18:00,19:00,Jeen+ Paris15,Yoga prénatal,Jenny Reuillard,10,5,True,2026-09-12 23:51
 2026-09-09,Mercredi,19:15,20:15,Jeen+ Montreuil,Pilates,Carla Hirzel,16,15,True,2026-09-12 23:51
 2026-09-09,Mercredi,19:15,20:15,Jeen+ Paris11,Yoga prénatal,Louise Horkay,8,7,True,2026-09-12 23:51
-2026-09-10,Jeudi,11:00,12:00,Jeen+ Montreuil,Yoga post-partum baby-friendly,Sophie Nassiet,10,10,True,2026-09-12 23:51
-2026-09-10,Jeudi,12:30,13:30,Jeen+ Montreuil,Yoga prénatal,Sophie Nassiet,16,8,True,2026-09-12 23:51
-2026-09-10,Jeudi,13:30,15:00,Jeen+ Paris15,Thalasso bain bébé,Nannecy Hovine,1,1,True,2026-09-12 23:51
-2026-09-10,Jeudi,14:30,15:30,Jeen+ Paris11,Yoga post-partum baby-friendly,Hélène Charbit,8,8,True,2026-09-12 23:51
-2026-09-10,Jeudi,15:00,16:30,Jeen+ Paris15,Thalasso bain bébé,Nannecy Hovine,1,0,True,2026-09-12 23:51
-2026-09-10,Jeudi,16:30,18:00,Jeen+ Paris15,Thalasso bain bébé,Nannecy Hovine,1,1,True,2026-09-12 23:51
-2026-09-10,Jeudi,17:30,18:30,Jeen+ Paris11,Pilates prénatal,Lydia Laurent,8,7,True,2026-09-12 23:51
-2026-09-10,Jeudi,18:15,19:15,Jeen+ Montreuil,Yoga dynamique,Claire Baron,16,0,True,2026-09-12 23:51
-2026-09-10,Jeudi,18:30,19:30,Jeen+ Paris11,Pilates prénatal,Lydia Laurent,8,4,True,2026-09-12 23:51
-2026-09-10,Jeudi,19:30,20:30,Jeen+ Montreuil,Yoga dynamique,Claire Baron,16,0,True,2026-09-12 23:51
-2026-09-10,Jeudi,19:30,20:30,Jeen+ Paris11,Pilates,Lydia Laurent,8,4,True,2026-09-12 23:51
-2026-09-10,Jeudi,19:30,20:30,Jeen+ Paris15,Renforcement musculaire et cardio santé,Maëlis Bellanger,15,4,True,2026-09-12 23:51
-2026-09-11,Vendredi,08:15,09:15,Jeen+ Montreuil,Yoga dynamique,Lucie CRETIN,16,7,True,2026-09-12 23:51
-2026-09-11,Vendredi,09:30,11:00,Jeen+ Montreuil,Yoga dynamique,Lucie CRETIN,16,4,True,2026-09-12 23:51
-2026-09-11,Vendredi,12:00,13:00,Jeen+ Paris15,Pilates prénatal,Melissa Paulmier,10,0,True,2026-09-12 23:51
-2026-09-11,Vendredi,12:30,13:30,Jeen+ Montreuil,Pilates,Sarah Maurice,16,16,True,2026-09-12 23:51
-2026-09-11,Vendredi,12:45,13:45,Jeen+ Paris11,Yoga prénatal,Louise Horkay,8,7,True,2026-09-12 23:51
-2026-09-11,Vendredi,13:00,14:00,Jeen+ Paris15,Pilates,Melissa Paulmier,15,0,True,2026-09-12 23:51
-2026-09-11,Vendredi,14:30,15:30,Jeen+ Paris15,Yoga post-partum baby-friendly,Maria Shakhnova,8,4,True,2026-09-12 23:51
-2026-09-11,Vendredi,18:30,19:30,Jeen+ Montreuil,Pilates,Marta Havlicek,16,8,True,2026-09-12 23:51
-2026-09-12,Samedi,09:30,10:30,Jeen+ Montreuil,Pilates prénatal,Suzanne Groazil,16,0,True,2026-09-12 23:51
-2026-09-12,Samedi,10:00,11:00,Jeen+ Paris15,Yoga dynamique,Melissa Paulmier,15,10,True,2026-09-12 23:51
-2026-09-12,Samedi,10:30,11:30,Jeen+ Montreuil,Pilates,Suzanne Groazil,16,0,True,2026-09-12 23:51
-2026-09-12,Samedi,11:00,12:00,Jeen+ Paris11,Yoga prénatal,Sophie Colombié,8,8,True,2026-09-12 23:51
-2026-09-12,Samedi,11:00,12:00,Jeen+ Paris15,Pilates,Melissa Paulmier,15,0,True,2026-09-12 23:51
-2026-09-12,Samedi,12:00,13:00,Jeen+ Paris15,Yoga prénatal,Melissa Paulmier,10,8,True,2026-09-12 23:51
-2026-09-13,Dimanche,10:00,11:00,Jeen+ Montreuil,Pilates,Clémence Pérochon,16,9,False,2026-09-12 23:51
-2026-09-13,Dimanche,10:30,11:30,Jeen+ Paris11,Renforcement musculaire et cardio santé,Roxane Ledoux,8,8,False,2026-09-12 23:51
-2026-09-13,Dimanche,11:00,12:00,Jeen+ Montreuil,Pilates,Clémence Pérochon,16,5,False,2026-09-12 23:51
-2026-09-13,Dimanche,11:30,12:30,Jeen+ Paris11,Renforcement musculaire et cardio santé,Roxane Ledoux,8,8,False,2026-09-12 23:51
-2026-09-13,Dimanche,12:00,13:00,Jeen+ Montreuil,Pilates,Clémence Pérochon,16,2,False,2026-09-12 23:51
-2026-09-13,Dimanche,16:00,17:00,Jeen+ Montreuil,Yoga prénatal,Jenny Reuillard,16,6,False,2026-09-12 23:51
-2026-09-13,Dimanche,16:00,17:00,Jeen+ Paris15,Yoga dynamique,Maria Shakhnova,15,4,False,2026-09-12 23:51
-2026-09-13,Dimanche,17:00,18:00,Jeen+ Montreuil,Yoga dynamique,Jenny Reuillard,16,10,False,2026-09-12 23:51
-2026-09-13,Dimanche,17:00,18:00,Jeen+ Paris15,Yoga prénatal,Maria Shakhnova,10,9,False,2026-09-12 23:51
-2026-09-13,Dimanche,18:00,19:00,Jeen+ Montreuil,Yoga assouplissement et relaxation,Jenny Reuillard,16,8,False,2026-09-12 23:51
-2026-09-13,Dimanche,18:00,19:00,Jeen+ Paris11,Yoga dynamique,Camille Le Jossec,8,4,False,2026-09-12 23:51
-2026-09-13,Dimanche,18:00,19:00,Jeen+ Paris15,Yoga assouplissement et relaxation,Maria Shakhnova,15,9,False,2026-09-12 23:51
-2026-09-13,Dimanche,19:00,20:00,Jeen+ Paris11,Yoga assouplissement et relaxation,Camille Le Jossec,8,8,False,2026-09-12 23:51
-2026-09-14,Lundi,12:10,13:00,Jeen+ Montreuil,Pilates,Noëllie Roselier,16,4,False,2026-09-12 23:51
-2026-09-14,Lundi,12:30,13:30,Jeen+ Paris15,Renforcement musculaire et cardio santé,Maëlis Bellanger,15,3,False,2026-09-12 23:51
-2026-09-14,Lundi,12:45,13:45,Jeen+ Paris11,Yoga prénatal,Hélène Charbit,8,6,False,2026-09-12 23:51
-2026-09-14,Lundi,18:00,19:00,Jeen+ Paris11,Pilates,Clémentine Piel,8,7,False,2026-09-12 23:51
-2026-09-14,Lundi,18:30,19:30,Jeen+ Montreuil,Pilates prénatal,Suzanne Groazil,16,6,False,2026-09-12 23:51
-2026-09-14,Lundi,18:30,19:30,Jeen+ Paris15,Yoga dynamique,Faustine Cressot,15,6,False,2026-09-12 23:51
-2026-09-14,Lundi,19:00,20:00,Jeen+ Paris11,Pilates,Clémentine Piel,8,8,False,2026-09-12 23:51
-2026-09-14,Lundi,19:30,20:30,Jeen+ Montreuil,Pilates,Suzanne Groazil,16,7,False,2026-09-12 23:51
-2026-09-14,Lundi,19:30,20:30,Jeen+ Paris15,Yoga prénatal,Faustine Cressot,10,8,False,2026-09-12 23:51
+2026-09-10,Jeudi,11:00,12:00,Jeen+ Montreuil,Yoga post-partum baby-friendly,Sophie Nassiet,10,10,True,2026-09-13 03:45
+2026-09-10,Jeudi,12:30,13:30,Jeen+ Montreuil,Yoga prénatal,Sophie Nassiet,16,8,True,2026-09-13 03:45
+2026-09-10,Jeudi,13:30,15:00,Jeen+ Paris15,Thalasso bain bébé,Nannecy Hovine,1,1,True,2026-09-13 03:45
+2026-09-10,Jeudi,14:30,15:30,Jeen+ Paris11,Yoga post-partum baby-friendly,Hélène Charbit,8,8,True,2026-09-13 03:45
+2026-09-10,Jeudi,15:00,16:30,Jeen+ Paris15,Thalasso bain bébé,Nannecy Hovine,1,0,True,2026-09-13 03:45
+2026-09-10,Jeudi,16:30,18:00,Jeen+ Paris15,Thalasso bain bébé,Nannecy Hovine,1,1,True,2026-09-13 03:45
+2026-09-10,Jeudi,17:30,18:30,Jeen+ Paris11,Pilates prénatal,Lydia Laurent,8,7,True,2026-09-13 03:45
+2026-09-10,Jeudi,18:15,19:15,Jeen+ Montreuil,Yoga dynamique,Claire Baron,16,0,True,2026-09-13 03:45
+2026-09-10,Jeudi,18:30,19:30,Jeen+ Paris11,Pilates prénatal,Lydia Laurent,8,4,True,2026-09-13 03:45
+2026-09-10,Jeudi,19:30,20:30,Jeen+ Montreuil,Yoga dynamique,Claire Baron,16,0,True,2026-09-13 03:45
+2026-09-10,Jeudi,19:30,20:30,Jeen+ Paris11,Pilates,Lydia Laurent,8,4,True,2026-09-13 03:45
+2026-09-10,Jeudi,19:30,20:30,Jeen+ Paris15,Renforcement musculaire et cardio santé,Maëlis Bellanger,15,4,True,2026-09-13 03:45
+2026-09-11,Vendredi,08:15,09:15,Jeen+ Montreuil,Yoga dynamique,Lucie CRETIN,16,7,True,2026-09-13 03:45
+2026-09-11,Vendredi,09:30,11:00,Jeen+ Montreuil,Yoga dynamique,Lucie CRETIN,16,4,True,2026-09-13 03:45
+2026-09-11,Vendredi,12:00,13:00,Jeen+ Paris15,Pilates prénatal,Melissa Paulmier,10,0,True,2026-09-13 03:45
+2026-09-11,Vendredi,12:30,13:30,Jeen+ Montreuil,Pilates,Sarah Maurice,16,16,True,2026-09-13 03:45
+2026-09-11,Vendredi,12:45,13:45,Jeen+ Paris11,Yoga prénatal,Louise Horkay,8,7,True,2026-09-13 03:45
+2026-09-11,Vendredi,13:00,14:00,Jeen+ Paris15,Pilates,Melissa Paulmier,15,0,True,2026-09-13 03:45
+2026-09-11,Vendredi,14:30,15:30,Jeen+ Paris15,Yoga post-partum baby-friendly,Maria Shakhnova,8,4,True,2026-09-13 03:45
+2026-09-11,Vendredi,18:30,19:30,Jeen+ Montreuil,Pilates,Marta Havlicek,16,8,True,2026-09-13 03:45
+2026-09-12,Samedi,09:30,10:30,Jeen+ Montreuil,Pilates prénatal,Suzanne Groazil,16,0,True,2026-09-13 03:45
+2026-09-12,Samedi,10:00,11:00,Jeen+ Paris15,Yoga dynamique,Melissa Paulmier,15,10,True,2026-09-13 03:45
+2026-09-12,Samedi,10:30,11:30,Jeen+ Montreuil,Pilates,Suzanne Groazil,16,0,True,2026-09-13 03:45
+2026-09-12,Samedi,11:00,12:00,Jeen+ Paris11,Yoga prénatal,Sophie Colombié,8,8,True,2026-09-13 03:45
+2026-09-12,Samedi,11:00,12:00,Jeen+ Paris15,Pilates,Melissa Paulmier,15,0,True,2026-09-13 03:45
+2026-09-12,Samedi,12:00,13:00,Jeen+ Paris15,Yoga prénatal,Melissa Paulmier,10,8,True,2026-09-13 03:45
+2026-09-13,Dimanche,10:00,11:00,Jeen+ Montreuil,Pilates,Clémence Pérochon,16,9,False,2026-09-13 03:45
+2026-09-13,Dimanche,10:30,11:30,Jeen+ Paris11,Renforcement musculaire et cardio santé,Roxane Ledoux,8,8,False,2026-09-13 03:45
+2026-09-13,Dimanche,11:00,12:00,Jeen+ Montreuil,Pilates,Clémence Pérochon,16,5,False,2026-09-13 03:45
+2026-09-13,Dimanche,11:30,12:30,Jeen+ Paris11,Renforcement musculaire et cardio santé,Roxane Ledoux,8,8,False,2026-09-13 03:45
+2026-09-13,Dimanche,12:00,13:00,Jeen+ Montreuil,Pilates,Clémence Pérochon,16,2,False,2026-09-13 03:45
+2026-09-13,Dimanche,16:00,17:00,Jeen+ Montreuil,Yoga prénatal,Jenny Reuillard,16,6,False,2026-09-13 03:45
+2026-09-13,Dimanche,16:00,17:00,Jeen+ Paris15,Yoga dynamique,Maria Shakhnova,15,4,False,2026-09-13 03:45
+2026-09-13,Dimanche,17:00,18:00,Jeen+ Montreuil,Yoga dynamique,Jenny Reuillard,16,10,False,2026-09-13 03:45
+2026-09-13,Dimanche,17:00,18:00,Jeen+ Paris15,Yoga prénatal,Maria Shakhnova,10,9,False,2026-09-13 03:45
+2026-09-13,Dimanche,18:00,19:00,Jeen+ Montreuil,Yoga assouplissement et relaxation,Jenny Reuillard,16,8,False,2026-09-13 03:45
+2026-09-13,Dimanche,18:00,19:00,Jeen+ Paris11,Yoga dynamique,Camille Le Jossec,8,4,False,2026-09-13 03:45
+2026-09-13,Dimanche,18:00,19:00,Jeen+ Paris15,Yoga assouplissement et relaxation,Maria Shakhnova,15,9,False,2026-09-13 03:45
+2026-09-13,Dimanche,19:00,20:00,Jeen+ Paris11,Yoga assouplissement et relaxation,Camille Le Jossec,8,8,False,2026-09-13 03:45
+2026-09-14,Lundi,12:10,13:00,Jeen+ Montreuil,Pilates,Noëllie Roselier,16,4,False,2026-09-13 03:45
+2026-09-14,Lundi,12:30,13:30,Jeen+ Paris15,Renforcement musculaire et cardio santé,Maëlis Bellanger,15,3,False,2026-09-13 03:45
+2026-09-14,Lundi,12:45,13:45,Jeen+ Paris11,Yoga prénatal,Hélène Charbit,8,6,False,2026-09-13 03:45
+2026-09-14,Lundi,18:00,19:00,Jeen+ Paris11,Pilates,Clémentine Piel,8,8,False,2026-09-13 03:45
+2026-09-14,Lundi,18:30,19:30,Jeen+ Montreuil,Pilates prénatal,Suzanne Groazil,16,6,False,2026-09-13 03:45
+2026-09-14,Lundi,18:30,19:30,Jeen+ Paris15,Yoga dynamique,Faustine Cressot,15,6,False,2026-09-13 03:45
+2026-09-14,Lundi,19:00,20:00,Jeen+ Paris11,Pilates,Clémentine Piel,8,8,False,2026-09-13 03:45
+2026-09-14,Lundi,19:30,20:30,Jeen+ Montreuil,Pilates,Suzanne Groazil,16,7,False,2026-09-13 03:45
+2026-09-14,Lundi,19:30,20:30,Jeen+ Paris15,Yoga prénatal,Faustine Cressot,10,8,False,2026-09-13 03:45
+2026-09-15,Mardi,09:15,10:15,Jeen+ Montreuil,Pilates prénatal,Suzanne Groazil,15,1,False,2026-09-13 03:45
+2026-09-15,Mardi,10:30,11:30,Jeen+ Montreuil,Pilates post-partum baby-friendly,Suzanne Groazil,10,4,False,2026-09-13 03:45
+2026-09-15,Mardi,11:15,12:15,Jeen+ Paris11,Yoga prénatal,Sophie Nassiet,8,4,False,2026-09-13 03:45
+2026-09-15,Mardi,12:10,13:00,Jeen+ Montreuil,Renforcement musculaire et cardio santé,Noëllie Roselier,12,0,False,2026-09-13 03:45
+2026-09-15,Mardi,12:30,13:30,Jeen+ Paris11,Yoga doux restauratif,Sophie Nassiet,8,3,False,2026-09-13 03:45
+2026-09-15,Mardi,12:30,13:30,Jeen+ Paris15,Yoga prénatal,Faustine Cressot,10,1,False,2026-09-13 03:45
+2026-09-15,Mardi,14:30,15:30,Jeen+ Paris11,Yoga post-partum baby-friendly,Sophie Nassiet,8,6,False,2026-09-13 03:45
+2026-09-15,Mardi,14:30,15:30,Jeen+ Paris15,Yoga post-partum baby-friendly,Faustine Cressot,8,5,False,2026-09-13 03:45
+2026-09-15,Mardi,17:30,18:30,Jeen+ Paris15,Yoga prénatal,Melissa Paulmier,10,5,False,2026-09-13 03:45
+2026-09-15,Mardi,18:15,19:15,Jeen+ Montreuil,Yoga prénatal,Noëllie Roselier,16,4,False,2026-09-13 03:45
+2026-09-15,Mardi,18:30,19:30,Jeen+ Paris11,Yoga dynamique,Cécile Pochet,8,1,False,2026-09-13 03:45
+2026-09-15,Mardi,18:30,19:30,Jeen+ Paris15,Pilates,Melissa Paulmier,15,8,False,2026-09-13 03:45
+2026-09-15,Mardi,19:30,20:30,Jeen+ Montreuil,Yoga dynamique,Claire Baron,16,2,False,2026-09-13 03:45
+2026-09-15,Mardi,19:30,20:30,Jeen+ Paris11,Yoga dynamique,Cécile Pochet,8,0,False,2026-09-13 03:45
+2026-09-15,Mardi,19:30,20:30,Jeen+ Paris15,Pilates,Melissa Paulmier,15,4,False,2026-09-13 03:45

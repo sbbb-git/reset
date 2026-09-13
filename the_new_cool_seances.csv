@@ -286,42 +286,49 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-09-09,Mercredi,13:15,14:10,La Maison The New Cool / RDC,Pilates Reformer,Nada Ourabah,4,0,True,2026-09-12 23:50
 2026-09-09,Mercredi,18:45,19:45,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Alice Jouchoux,18,9,True,2026-09-12 23:50
 2026-09-09,Mercredi,20:00,21:00,La Maison The New Cool / Salle de Yoga,Slow Flow,Alice Jouchoux,18,6,True,2026-09-12 23:50
-2026-09-10,Jeudi,09:30,10:30,La Maison The New Cool / Salle de Yoga,Yoga Débutants,Clara Autuly,17,0,True,2026-09-12 23:50
-2026-09-10,Jeudi,11:00,12:15,La Maison The New Cool / Salle de Yoga,Hatha Yoga,Claire Héricourt,18,6,True,2026-09-12 23:50
-2026-09-10,Jeudi,12:00,12:55,La Maison The New Cool / RDC,Pilates Reformer,Nada Ourabah,4,0,True,2026-09-12 23:50
-2026-09-10,Jeudi,12:30,13:25,La Maison The New Cool / RDC,Pilates Reformer,Daria Surikova,4,0,True,2026-09-12 23:50
-2026-09-10,Jeudi,12:30,13:30,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Caroline Perrineau,18,9,True,2026-09-12 23:50
-2026-09-10,Jeudi,18:45,19:45,La Maison The New Cool / Salle de Yoga,Pilates,Camille Vuillemin,18,8,True,2026-09-12 23:50
-2026-09-10,Jeudi,20:00,20:55,La Maison The New Cool / RDC,Pilates Reformer,Camille Vuillemin,4,0,True,2026-09-12 23:50
-2026-09-10,Jeudi,20:00,21:00,La Maison The New Cool / Salle de Yoga,Yoga Ashtanga,Laure Sarah Thonier,18,8,True,2026-09-12 23:50
-2026-09-11,Vendredi,09:00,10:00,La Maison The New Cool / Salle de Yoga,Pilates,Alyssa Naudin,18,8,True,2026-09-12 23:50
-2026-09-11,Vendredi,12:30,13:30,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Laure Sarah Thonier,18,10,True,2026-09-12 23:50
-2026-09-11,Vendredi,17:00,18:00,La Maison The New Cool / Salle de Yoga,Yoga Prénatal,Claire Héricourt,16,3,True,2026-09-12 23:50
-2026-09-11,Vendredi,18:15,19:15,La Maison The New Cool / Salle de Yoga,Pilates,François A,18,16,True,2026-09-12 23:50
-2026-09-12,Samedi,09:15,10:15,La Maison The New Cool / Salle de Yoga,Pilates,Alyssa Naudin,18,12,True,2026-09-12 23:50
-2026-09-12,Samedi,10:30,11:30,La Maison The New Cool / Salle de Yoga,Yoga Fondations,Ines MEZNI,18,14,True,2026-09-12 23:50
-2026-09-12,Samedi,10:45,11:40,La Maison The New Cool / RDC,Pilates Reformer,Daria Surikova,4,4,True,2026-09-12 23:50
-2026-09-12,Samedi,11:45,12:40,La Maison The New Cool / RDC,Pilates Reformer,Daria Surikova,4,4,True,2026-09-12 23:50
-2026-09-12,Samedi,11:45,12:45,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Jenia Voiment,18,18,True,2026-09-12 23:50
-2026-09-12,Samedi,13:00,14:00,La Maison The New Cool / Salle de Yoga,Yoga Souplesse,Olivia Dessolin,18,18,True,2026-09-12 23:50
-2026-09-12,Samedi,14:15,15:15,La Maison The New Cool / Salle de Yoga,Yoga Doux,Amélie Annoni,18,6,True,2026-09-12 23:50
-2026-09-12,Samedi,15:30,16:30,La Maison The New Cool / Salle de Yoga,Hatha Yoga,Claire Héricourt,18,5,True,2026-09-12 23:50
-2026-09-12,Samedi,16:00,16:50,La Maison The New Cool / RDC,Pilates Reformer,Nada Ourabah,4,2,True,2026-09-12 23:50
-2026-09-12,Samedi,17:00,17:50,La Maison The New Cool / RDC,Pilates Reformer,Nada Ourabah,4,3,True,2026-09-12 23:50
-2026-09-12,Samedi,17:00,18:00,La Maison The New Cool / Salle de Yoga,Yoga Ashtanga,Laure Sarah Thonier,18,12,True,2026-09-12 23:50
-2026-09-12,Samedi,18:15,19:15,La Maison The New Cool / Salle de Yoga,Vinyasa Flow,Caroline Perrineau,15,6,True,2026-09-12 23:50
-2026-09-13,Dimanche,09:00,10:00,La Maison The New Cool / Salle de Yoga,Hatha Yoga,Marie Renault,18,4,False,2026-09-12 23:50
-2026-09-13,Dimanche,10:15,11:05,La Maison The New Cool / RDC,Pilates Reformer,Laurie Delmond,4,4,False,2026-09-12 23:50
-2026-09-13,Dimanche,10:15,11:15,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Alice Jouchoux,18,6,False,2026-09-12 23:50
-2026-09-13,Dimanche,11:15,12:05,La Maison The New Cool / RDC,Pilates Reformer,Laurie Delmond,4,4,False,2026-09-12 23:50
-2026-09-13,Dimanche,11:30,12:30,La Maison The New Cool / Salle de Yoga,Pilates,François A,18,18,False,2026-09-12 23:50
-2026-09-13,Dimanche,12:15,13:05,La Maison The New Cool / RDC,Pilates Reformer,Laurie Delmond,4,4,False,2026-09-12 23:50
-2026-09-13,Dimanche,14:30,15:30,La Maison The New Cool / Salle de Yoga,Yoga Débutants,Clara Autuly,18,6,False,2026-09-12 23:50
-2026-09-13,Dimanche,16:00,17:00,La Maison The New Cool / Salle de Yoga,Handstand,Jordane Tremaud,18,8,False,2026-09-12 23:50
-2026-09-13,Dimanche,17:15,18:30,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Amicie Halgand,18,17,False,2026-09-12 23:50
-2026-09-13,Dimanche,18:45,19:45,La Maison The New Cool / Salle de Yoga,Yin Yoga,Sasha How Choong,17,16,False,2026-09-12 23:50
-2026-09-14,Lundi,10:00,11:00,La Maison The New Cool / Salle de Yoga,Hatha Yoga,Amélie Annoni,18,1,False,2026-09-12 23:50
-2026-09-14,Lundi,12:30,13:30,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Jenia Voiment,18,5,False,2026-09-12 23:50
-2026-09-14,Lundi,18:45,19:45,La Maison The New Cool / Salle de Yoga,Pilates,Laurie Delmond,18,6,False,2026-09-12 23:50
-2026-09-14,Lundi,20:00,20:55,La Maison The New Cool / RDC,Pilates Reformer,Laurie Delmond,4,0,False,2026-09-12 23:50
-2026-09-14,Lundi,20:00,21:00,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Amicie Halgand,18,0,False,2026-09-12 23:50
+2026-09-10,Jeudi,09:30,10:30,La Maison The New Cool / Salle de Yoga,Yoga Débutants,Clara Autuly,17,0,True,2026-09-13 03:44
+2026-09-10,Jeudi,11:00,12:15,La Maison The New Cool / Salle de Yoga,Hatha Yoga,Claire Héricourt,18,6,True,2026-09-13 03:44
+2026-09-10,Jeudi,12:00,12:55,La Maison The New Cool / RDC,Pilates Reformer,Nada Ourabah,4,0,True,2026-09-13 03:44
+2026-09-10,Jeudi,12:30,13:25,La Maison The New Cool / RDC,Pilates Reformer,Daria Surikova,4,0,True,2026-09-13 03:44
+2026-09-10,Jeudi,12:30,13:30,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Caroline Perrineau,18,9,True,2026-09-13 03:44
+2026-09-10,Jeudi,18:45,19:45,La Maison The New Cool / Salle de Yoga,Pilates,Camille Vuillemin,18,8,True,2026-09-13 03:44
+2026-09-10,Jeudi,20:00,20:55,La Maison The New Cool / RDC,Pilates Reformer,Camille Vuillemin,4,0,True,2026-09-13 03:44
+2026-09-10,Jeudi,20:00,21:00,La Maison The New Cool / Salle de Yoga,Yoga Ashtanga,Laure Sarah Thonier,18,8,True,2026-09-13 03:44
+2026-09-11,Vendredi,09:00,10:00,La Maison The New Cool / Salle de Yoga,Pilates,Alyssa Naudin,18,8,True,2026-09-13 03:44
+2026-09-11,Vendredi,12:30,13:30,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Laure Sarah Thonier,18,10,True,2026-09-13 03:44
+2026-09-11,Vendredi,17:00,18:00,La Maison The New Cool / Salle de Yoga,Yoga Prénatal,Claire Héricourt,16,3,True,2026-09-13 03:44
+2026-09-11,Vendredi,18:15,19:15,La Maison The New Cool / Salle de Yoga,Pilates,François A,18,16,True,2026-09-13 03:44
+2026-09-12,Samedi,09:15,10:15,La Maison The New Cool / Salle de Yoga,Pilates,Alyssa Naudin,18,12,True,2026-09-13 03:44
+2026-09-12,Samedi,10:30,11:30,La Maison The New Cool / Salle de Yoga,Yoga Fondations,Ines MEZNI,18,14,True,2026-09-13 03:44
+2026-09-12,Samedi,10:45,11:40,La Maison The New Cool / RDC,Pilates Reformer,Daria Surikova,4,4,True,2026-09-13 03:44
+2026-09-12,Samedi,11:45,12:40,La Maison The New Cool / RDC,Pilates Reformer,Daria Surikova,4,4,True,2026-09-13 03:44
+2026-09-12,Samedi,11:45,12:45,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Jenia Voiment,18,18,True,2026-09-13 03:44
+2026-09-12,Samedi,13:00,14:00,La Maison The New Cool / Salle de Yoga,Yoga Souplesse,Olivia Dessolin,18,18,True,2026-09-13 03:44
+2026-09-12,Samedi,14:15,15:15,La Maison The New Cool / Salle de Yoga,Yoga Doux,Amélie Annoni,18,6,True,2026-09-13 03:44
+2026-09-12,Samedi,15:30,16:30,La Maison The New Cool / Salle de Yoga,Hatha Yoga,Claire Héricourt,18,5,True,2026-09-13 03:44
+2026-09-12,Samedi,16:00,16:50,La Maison The New Cool / RDC,Pilates Reformer,Nada Ourabah,4,2,True,2026-09-13 03:44
+2026-09-12,Samedi,17:00,17:50,La Maison The New Cool / RDC,Pilates Reformer,Nada Ourabah,4,3,True,2026-09-13 03:44
+2026-09-12,Samedi,17:00,18:00,La Maison The New Cool / Salle de Yoga,Yoga Ashtanga,Laure Sarah Thonier,18,12,True,2026-09-13 03:44
+2026-09-12,Samedi,18:15,19:15,La Maison The New Cool / Salle de Yoga,Vinyasa Flow,Caroline Perrineau,15,6,True,2026-09-13 03:44
+2026-09-13,Dimanche,09:00,10:00,La Maison The New Cool / Salle de Yoga,Hatha Yoga,Marie Renault,18,4,False,2026-09-13 03:44
+2026-09-13,Dimanche,10:15,11:05,La Maison The New Cool / RDC,Pilates Reformer,Laurie Delmond,4,4,False,2026-09-13 03:44
+2026-09-13,Dimanche,10:15,11:15,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Alice Jouchoux,18,6,False,2026-09-13 03:44
+2026-09-13,Dimanche,11:15,12:05,La Maison The New Cool / RDC,Pilates Reformer,Laurie Delmond,4,4,False,2026-09-13 03:44
+2026-09-13,Dimanche,11:30,12:30,La Maison The New Cool / Salle de Yoga,Pilates,François A,18,18,False,2026-09-13 03:44
+2026-09-13,Dimanche,12:15,13:05,La Maison The New Cool / RDC,Pilates Reformer,Laurie Delmond,4,4,False,2026-09-13 03:44
+2026-09-13,Dimanche,14:30,15:30,La Maison The New Cool / Salle de Yoga,Yoga Débutants,Clara Autuly,18,6,False,2026-09-13 03:44
+2026-09-13,Dimanche,16:00,17:00,La Maison The New Cool / Salle de Yoga,Handstand,Jordane Tremaud,18,8,False,2026-09-13 03:44
+2026-09-13,Dimanche,17:15,18:30,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Amicie Halgand,18,17,False,2026-09-13 03:44
+2026-09-13,Dimanche,18:45,19:45,La Maison The New Cool / Salle de Yoga,Yin Yoga,Sasha How Choong,17,16,False,2026-09-13 03:44
+2026-09-14,Lundi,10:00,11:00,La Maison The New Cool / Salle de Yoga,Hatha Yoga,Amélie Annoni,18,1,False,2026-09-13 03:44
+2026-09-14,Lundi,12:30,13:30,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Jenia Voiment,18,5,False,2026-09-13 03:44
+2026-09-14,Lundi,18:45,19:45,La Maison The New Cool / Salle de Yoga,Pilates,Laurie Delmond,18,6,False,2026-09-13 03:44
+2026-09-14,Lundi,20:00,20:55,La Maison The New Cool / RDC,Pilates Reformer,Laurie Delmond,4,0,False,2026-09-13 03:44
+2026-09-14,Lundi,20:00,21:00,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Amicie Halgand,18,0,False,2026-09-13 03:44
+2026-09-15,Mardi,07:45,08:45,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Sasha How Choong,18,0,False,2026-09-13 03:44
+2026-09-15,Mardi,09:00,10:15,La Maison The New Cool / Salle de Yoga,Hatha Yoga,Claire Héricourt,18,2,False,2026-09-13 03:44
+2026-09-15,Mardi,12:30,13:25,La Maison The New Cool / RDC,Pilates Reformer,Marie Maimone,4,1,False,2026-09-13 03:44
+2026-09-15,Mardi,12:30,13:30,La Maison The New Cool / Salle de Yoga,Pilates,François A,18,5,False,2026-09-13 03:44
+2026-09-15,Mardi,13:30,14:25,La Maison The New Cool / RDC,Pilates Reformer,Marie Maimone,4,0,False,2026-09-13 03:44
+2026-09-15,Mardi,18:30,19:30,La Maison The New Cool / Salle de Yoga,Handstand,Jordane Tremaud,16,4,False,2026-09-13 03:44
+2026-09-15,Mardi,20:00,21:00,La Maison The New Cool / Salle de Yoga,Yoga Vinyasa,Sasha How Choong,18,7,False,2026-09-13 03:44

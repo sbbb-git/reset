@@ -67,7 +67,7 @@
 <body>
 <header>
   <h1>LE STUDIO DE HEM &middot; Fréquentation</h1>
-  <div class="sub">généré le 12/09/2026 23:51 &middot; réservations validées (bsport)</div>
+  <div class="sub">généré le 13/09/2026 03:45 &middot; réservations validées (bsport)</div>
 </header>
 <div class="wrap">
   <div class="meta-panel" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:18px 0 4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px">
@@ -82,14 +82,14 @@
   <div>
     <div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">📡 État du scrap</div>
     <div style="font-size:13px;color:var(--text);line-height:1.4">
-      <span id="meta-freshness" style="font-weight:700">…</span> &middot; <b>1</b> entrées
+      <span id="meta-freshness" style="font-weight:700">…</span> &middot; <b>2</b> entrées
       <div style="font-size:11.5px;color:var(--muted);margin-top:2px">Fréquence : 2× / jour (~11h et 21h Paris)</div>
     </div>
   </div>
 </div>
 <script>
 (function(){
-  const last = "2026-09-11T20:55:00+02:00";
+  const last = "2026-09-13T03:45:00+02:00";
   if(!last) return;
   const el = document.getElementById('meta-freshness'); if(!el) return;
   const ago = (Date.now() - new Date(last).getTime()) / 36e5;
@@ -157,7 +157,7 @@
   <div class="foot">Source : extension (bsport) &middot; mise à jour auto ~5 min avant chaque séance.</div>
 </div>
 <script>
-const ALL=[{"capacite": 8, "coach": "Manuel …", "cours": "Doux", "date": "2026-09-08", "fin": "20:00", "finie": true, "heure": "19:00", "id": "42772053", "jour": "Mardi", "lieu": "Le studio de Hém", "presents": 0, "releve": "2026-09-11 20:55"}];
+const ALL=[{"capacite": 8, "coach": "Manuel …", "cours": "Doux", "date": "2026-09-08", "fin": "20:00", "finie": true, "heure": "19:00", "id": "42772053", "jour": "Mardi", "lieu": "Le studio de Hém", "presents": 0, "releve": "2026-09-11 20:55"}, {"id": "42772054", "date": "2026-09-15", "jour": "Mardi", "heure": "19:00", "fin": "20:00", "lieu": "Le studio de Hém", "cours": "Doux", "coach": "Manuel …", "capacite": 8, "presents": 0, "finie": false, "releve": "2026-09-13 03:45"}];
 const API="https://api.production.bsport.io",COMPANIES=[364],EST={"994": "Abbaye de Lanvaux", "5092": "Cours privé", "1246": "en ligne", "992": "en ligne de chez Manuel", "1040": "Jardin des rosiers – Le marais", "1292": "Le studio de Hém", "1247": "passage du Grand-Cerf", "1024": "Streaming de chez Christine", "968": "Streaming de chez Hém", "993": "Streaming de chez Monique", "5840": "Sur les quais, en bas du studio"},COACHES={"7746": "Aline  ", "7519": "Aline  ", "173855": "Aline  ", "173854": "Aline  ", "173853": "Aline  ", "173852": "Aline  ", "173851": "Aline  ", "173850": "Aline  ", "173849": "Aline  ", "173848": "Aline  ", "173847": "Aline  ", "173846": "Aline  ", "173845": "Aline  ", "7924": "Christine …", "7694": "Christine …", "7743": "Hém …", "3953": "Hém …", "4098": "Hém …", "26609": "Henriette Schopfer", "24975": "Henriette Schopfer", "7828": "Manuel …", "7598": "Manuel …", "7744": "Monique …", "7517": "Monique …", "10776": "Nandi …", "918": "Nandi …", "29542": "Nandi …", "885": "Nandi …"};
 const JOURS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const lkey=r=>r.date+'|'+r.heure+'|'+r.lieu+'|'+r.cours+'|'+(r.coach||'');
