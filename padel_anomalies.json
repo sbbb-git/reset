@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-13T14:54:06.523873",
+ "generated_at": "2026-09-13T18:02:35.413850",
  "idle_24h": [
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -7,15 +7,7 @@
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-09-10 21:59",
-   "hours_idle": 64.9
-  },
-  {
-   "slug": "tennis-padel-bois-colombes-bois-colombes",
-   "source": "anybuddy",
-   "name": "tennis-padel-bois-colombes-bois-colombes",
-   "cp": "92700",
-   "last_seen": "2026-09-11 16:10",
-   "hours_idle": 46.7
+   "hours_idle": 68.1
   }
  ],
  "price_shifts": [
@@ -60,6 +52,16 @@
    "direction": "hausse"
   },
   {
+   "slug": "4padel-torcy-vaires-sur-marne",
+   "source": "anybuddy",
+   "name": "4padel-torcy-vaires-sur-marne",
+   "cp": "77360",
+   "prix_30j": 48.0,
+   "prix_recent": 72.0,
+   "delta_pct": 50.0,
+   "direction": "hausse"
+  },
+  {
    "slug": "4-padel-saint-ouen-saint-ouen-sur-seine",
    "source": "anybuddy",
    "name": "4-padel-saint-ouen-saint-ouen-sur-seine",
@@ -94,16 +96,6 @@
    "source": "anybuddy",
    "name": "4padel-le-five-champigny-sur-marne",
    "cp": "94500",
-   "prix_30j": 48.0,
-   "prix_recent": 66.0,
-   "delta_pct": 37.5,
-   "direction": "hausse"
-  },
-  {
-   "slug": "4padel-torcy-vaires-sur-marne",
-   "source": "anybuddy",
-   "name": "4padel-torcy-vaires-sur-marne",
-   "cp": "77360",
    "prix_30j": 48.0,
    "prix_recent": 66.0,
    "delta_pct": 37.5,
@@ -1557,8 +1549,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 103,
-  "idle_24h": 2,
+  "total_anomalies": 102,
+  "idle_24h": 1,
   "price_shifts": 14,
   "volume_drops": 87,
   "new_clubs_14d": 87
