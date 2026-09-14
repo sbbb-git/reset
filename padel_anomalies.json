@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-14T18:52:34.516685",
+ "generated_at": "2026-09-14T22:24:04.986907",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -80,6 +80,16 @@
    "prix_30j": 48.0,
    "prix_recent": 66.0,
    "delta_pct": 37.5,
+   "direction": "hausse"
+  },
+  {
+   "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
+   "source": "doinsport",
+   "name": "Domaine de Lassy",
+   "cp": "95270",
+   "prix_30j": 54.0,
+   "prix_recent": 72.0,
+   "delta_pct": 33.3,
    "direction": "hausse"
   },
   {
@@ -1498,9 +1508,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 96,
+  "total_anomalies": 97,
   "idle_24h": 0,
-  "price_shifts": 9,
+  "price_shifts": 10,
   "volume_drops": 87,
   "new_clubs_14d": 88
  }
