@@ -73,13 +73,38 @@ jobs:
           echo "OK : $FICHIER"
 
       - name: Vérifier le secret
+        env:
+          PGURL: ${{ secrets.SUPABASE_DB_URL }}
         run: |
-          if [ -z "${{ secrets.SUPABASE_DB_URL }}" ]; then
+          if [ -z "$PGURL" ]; then
             echo "::error::secret SUPABASE_DB_URL absent. Supabase -> Project"
             echo "::error::Settings -> Database -> Connection string (URI),"
             echo "::error::à ajouter dans les secrets Actions du dépôt."
             exit 1
           fi
+          # L'hôte direct db.<ref>.supabase.co ne résout qu'en IPv6, et les
+          # runners GitHub n'en ont pas : la connexion échoue avec « Network is
+          # unreachable » avant d'avoir rien exécuté. Le pooler (Supavisor) est
+          # joignable en IPv4. On le vérifie ici plutôt que de laisser psql
+          # échouer avec un message qui n'oriente vers rien.
+          case "$PGURL" in
+            *db.*.supabase.co*)
+              echo "::error::SUPABASE_DB_URL pointe sur l'hôte DIRECT"
+              echo "::error::(db.<ref>.supabase.co), qui est IPv6 uniquement —"
+              echo "::error::les runners GitHub n'ont pas d'IPv6."
+              echo "::error::Reprendre la chaîne « Session pooler » dans"
+              echo "::error::Supabase -> Project Settings -> Database :"
+              echo "::error::  postgresql://postgres.<ref>:<mdp>@aws-0-<region>.pooler.supabase.com:5432/postgres"
+              echo "::error::Bien prendre le port 5432 (session), PAS 6543"
+              echo "::error::(transaction) : VACUUM et le DDL y sont refusés."
+              exit 1 ;;
+            *pooler.supabase.com:6543*)
+              echo "::error::le port 6543 est le pooler en mode TRANSACTION :"
+              echo "::error::VACUUM FULL et certains DDL y sont impossibles."
+              echo "::error::Utiliser le port 5432 (mode session)."
+              exit 1 ;;
+          esac
+          echo "Chaîne de connexion : forme attendue."
 
       - name: Taille AVANT
         env:
