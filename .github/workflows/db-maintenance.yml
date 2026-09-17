@@ -34,12 +34,12 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Rollup padel (agrégation + purge)
+      - name: Rollup padel (agrégation + purge, jour par jour)
         env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_API || secrets.SUPABASE_ACCESS_TOKEN }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           JOURS_GARDES: ${{ github.event.inputs.jours_gardes || '30' }}
-        run: python3 padel_supabase_rollup.py
+        run: python3 supabase_rollup_run.py
 
       - name: Healthcheck ping
         if: always()

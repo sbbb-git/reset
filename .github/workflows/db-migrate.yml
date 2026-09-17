@@ -31,6 +31,7 @@ on:
         type: choice
         options:
           - supabase_diagnostic.sql
+          - supabase_rollup_jour.sql
           - supabase_levier3_rollup.sql
           - supabase_levier1_vacuum.sql
           - supabase_levier2a_preparation.sql
@@ -68,6 +69,7 @@ jobs:
             echo "::error::confirmation manquante — taper JOUER"; exit 1
           fi
           autorises="supabase_diagnostic.sql
+          supabase_rollup_jour.sql
           supabase_levier1_vacuum.sql
           supabase_levier2a_preparation.sql
           supabase_levier2b_bascule.sql
