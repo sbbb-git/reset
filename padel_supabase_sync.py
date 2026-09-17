@@ -17,6 +17,7 @@ Stratégie idempotente :
 Bonus : annote chaque club avec son unified_id (cluster cross-plateforme)
 si présent dans padel_club_unified.json.
 """
+import hashlib
 import json
 import os
 import sys
@@ -62,6 +63,34 @@ def upsert(table, rows, on_conflict=None):
                 if attempt == 2: raise
                 time.sleep(2 ** attempt)
     return n_ok
+
+
+
+# ---------------------------------------------------------------- incrémental
+# Le sync renvoyait le store ENTIER à chaque passage : 93 k lignes toutes les
+# 30 min côté IDF, 85 k toutes les 2 h côté national, soit 5,5 millions de
+# réécritures par jour. Chaque upsert crée une version de ligne en Postgres et
+# marque l'ancienne morte : ~1,1 GB de tuples morts brassés quotidiennement,
+# que l'autovacuum recycle sans jamais rendre l'espace au disque. C'est la
+# cause principale des 559 MB constatés, très au-dessus des ~200 MB de donnée
+# réelle.
+#
+# On n'envoie donc plus que ce qui a changé. L'empreinte est stockée dans le
+# store lui-même (`_sync_h`), qui est déjà committé : pas de fichier d'état
+# supplémentaire à maintenir.
+#
+# `dernier_vu` est volontairement arrondi au JOUR dans l'empreinte. Un créneau
+# qui reste simplement disponible ne repart donc qu'une fois par jour au lieu
+# de 48, tandis qu'un changement de statut — le signal qui porte toute la
+# valeur analytique — part au passage suivant.
+SYNC_FIELDS = ("date", "heure", "fin", "duree", "terrain", "court_id",
+               "prix", "statut", "finie", "source", "premier_vu")
+
+
+def empreinte(s):
+    base = "|".join(str(s.get(k)) for k in SYNC_FIELDS)
+    base += "|" + str(s.get("dernier_vu") or "")[:10]
+    return hashlib.blake2s(base.encode("utf-8"), digest_size=8).hexdigest()
 
 
 # Clé métier de padel_slots. duree en fait partie : 21 % des créneaux
@@ -123,10 +152,14 @@ def main():
             "meta": {k: v for k, v in meta.items() if k not in {"name","cp","city","lat","lng","source","slug"}},
         })
 
-    # 3. Préparer rows padel_slots
-    slots_rows = []
+    # 3. Préparer rows padel_slots — seulement ce qui a changé
+    slots_rows, marquer, inchanges = [], [], 0
     for slug, b in store.items():
         for sid, s in (b.get("sessions") or {}).items():
+            h = empreinte(s)
+            if s.get("_sync_h") == h:
+                inchanges += 1
+                continue
             slots_rows.append({
                 # Pas d'"id" : la PK est un bigint généré par Postgres et
                 # l'unicité vient de la clé métier. `_legacy_id` n'est gardé
@@ -149,12 +182,26 @@ def main():
                 "premier_vu": s.get("premier_vu"),
                 "dernier_vu": s.get("dernier_vu"),
             })
+            marquer.append((s, h))
 
-    print(f"À syncer : {len(clubs_rows)} clubs, {len(slots_rows)} slots → Supabase")
+    total = len(slots_rows) + inchanges
+    print(f"À syncer : {len(clubs_rows)} clubs, {len(slots_rows)} slots modifiés "
+          f"sur {total} ({inchanges} inchangés, non renvoyés) → Supabase")
     n_clubs = upsert("padel_clubs", clubs_rows, on_conflict="slug")
     print(f"  ✅ padel_clubs : {n_clubs} upserts")
     n_slots = upsert_slots(slots_rows)
     print(f"  ✅ padel_slots : {n_slots} upserts")
+
+    # L'empreinte n'est posée QU'APRÈS un upsert réussi : si le sync casse,
+    # rien n'est marqué et le passage suivant renvoie tout ce qui manquait.
+    if marquer:
+        for s, h in marquer:
+            s["_sync_h"] = h
+        tmp = STORE + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(store, f, ensure_ascii=False, separators=(",", ":"))
+        os.replace(tmp, STORE)
+        print(f"  ↳ {len(marquer)} empreintes mises à jour dans {STORE}")
     print("Sync OK.")
 
 

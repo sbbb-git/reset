@@ -23,7 +23,9 @@ import time
 import urllib.error
 import urllib.request
 
-from padel_supabase_sync import upsert_slots
+# Même politique incrémentale que le sync IDF : une seule définition d'empreinte
+# pour les deux, sinon elles divergent au premier patch.
+from padel_supabase_sync import empreinte, upsert_slots
 
 STORE = "padel_national_data.json"
 UNIFIED = "padel_club_unified.json"
@@ -129,12 +131,16 @@ def main():
                      if k not in {"name", "cp", "city", "lat", "lng", "source", "slug", "metro"}},
         })
 
-    # 3. Préparer rows padel_slots
-    slots_rows = []
+    # 3. Préparer rows padel_slots — seulement ce qui a changé
+    slots_rows, marquer, inchanges = [], [], 0
     for slug, b in store.items():
         meta = b.get("meta") or {}
         default_source = derive_source(slug, meta)
         for sid, s in (b.get("sessions") or {}).items():
+            h = empreinte(s)
+            if s.get("_sync_h") == h:
+                inchanges += 1
+                continue
             slots_rows.append({
                 # Cf. padel_supabase_sync.upsert_slots : `_legacy_id` sert
                 # uniquement au repli tant que le SQL n'est pas appliqué.
@@ -153,12 +159,25 @@ def main():
                 "premier_vu": s.get("premier_vu"),
                 "dernier_vu": s.get("dernier_vu"),
             })
+            marquer.append((s, h))
 
-    print(f"À syncer (national) : {len(clubs_rows)} clubs, {len(slots_rows)} slots → Supabase")
+    total = len(slots_rows) + inchanges
+    print(f"À syncer (national) : {len(clubs_rows)} clubs, {len(slots_rows)} slots "
+          f"modifiés sur {total} ({inchanges} inchangés) → Supabase")
     n_clubs = upsert("padel_clubs", clubs_rows, on_conflict="slug")
     print(f"  ✅ padel_clubs : {n_clubs} upserts")
     n_slots = upsert_slots(slots_rows)
     print(f"  ✅ padel_slots : {n_slots} upserts")
+
+    # Empreintes posées seulement après un upsert réussi.
+    if marquer:
+        for s, h in marquer:
+            s["_sync_h"] = h
+        tmp = STORE + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(store, f, ensure_ascii=False, separators=(",", ":"))
+        os.replace(tmp, STORE)
+        print(f"  ↳ {len(marquer)} empreintes mises à jour dans {STORE}")
     print("Sync national OK.")
 
 
