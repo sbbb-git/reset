@@ -160,10 +160,10 @@ def main():
             print(f"   ❌ {type(e).__name__} : {e}", file=sys.stderr)
             sys.exit(1)
         if isinstance(res, list) and res:
-            for ligne in res[:5]:
+            for ligne in res[:25]:
                 print(f"   → {json.dumps(ligne, ensure_ascii=False)[:200]}")
-            if len(res) > 5:
-                print(f"   → … {len(res) - 5} lignes de plus")
+            if len(res) > 25:
+                print(f"   → … {len(res) - 25} lignes de plus")
         else:
             print("   ok")
 

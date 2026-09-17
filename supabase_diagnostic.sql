@@ -33,12 +33,14 @@ SELECT relname,
 FROM pg_class
 WHERE relname IN ('padel_slots', 'padel_stats_horaire', 'sessions');
 
--- 5. Étendue des dates, via les statistiques du planificateur (instantané).
-SELECT attname, n_distinct,
-       (most_common_vals::text)[1:120] AS extrait_valeurs_frequentes
-FROM pg_stats
-WHERE schemaname = 'public' AND tablename = 'padel_slots'
-  AND attname IN ('date', 'statut');
+-- 5. Type exact de `date`, et étendue via l'index (bornes instantanées).
+SELECT column_name, data_type
+FROM information_schema.columns
+WHERE table_schema = 'public' AND table_name = 'padel_slots'
+  AND column_name IN ('date', 'heure', 'statut', 'duree', 'club_slug', 'court_id');
+
+SELECT min(date) AS plus_ancienne, max(date) AS plus_recente
+FROM public.padel_slots;
 
 -- 6. Plan de la requête qui a expiré, SANS l'exécuter.
 EXPLAIN SELECT count(*) FROM public.padel_slots
