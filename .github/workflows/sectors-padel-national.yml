@@ -42,12 +42,14 @@ jobs:
         run: python3 padel_national_supabase_sync.py
         continue-on-error: true
 
-      - name: Reconstruct local JSON depuis Supabase (backward-compat)
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: python3 padel_national_from_supabase.py
-        continue-on-error: true
+      # Le step « Reconstruct local JSON depuis Supabase » a été retiré.
+      # Il rapatriait TOUT l'historique national (~700 k lignes, sans aucun
+      # filtre de date) juste avant que prune_padel_live.py n'en jette 95 % au
+      # step suivant : le store repartait à 21 jours dans tous les cas. Coût
+      # pur, effet nul. Le store vit désormais dans git avec son archive .gz,
+      # donc le repli que ce rapatriement assurait n'a plus d'objet — et après
+      # le rollup, Supabase ne détient de toute façon plus que la fenêtre
+      # courante.
 
       - name: Archive + élague le store (fenêtre 7j passé / 14j futur)
         run: python3 prune_padel_live.py

@@ -1,0 +1,52 @@
+name: Base · rollup padel + entretien
+
+# Agrège l'historique padel au-delà de la fenêtre de rétention et purge le
+# brut. Quotidien : après le premier passage il n'y a qu'un jour à replier,
+# donc c'est quasi instantané.
+#
+# La fonction padel_rollup() fait tout côté serveur, avec un contrôle bloquant
+# avant suppression : si la somme des créneaux agrégés ne retrouve pas le
+# nombre de lignes brutes de la période, elle lève et rien n'est supprimé.
+
+on:
+  schedule:
+    - cron: "10 4 * * *"   # 4h10 UTC, hors des pics de scrape
+  workflow_dispatch:
+    inputs:
+      jours_gardes:
+        description: "Jours de brut à conserver"
+        default: "30"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: db-maintenance
+  cancel-in-progress: false
+
+jobs:
+  rollup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rollup padel (agrégation + purge)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          JOURS_GARDES: ${{ github.event.inputs.jours_gardes || '30' }}
+        run: python3 padel_supabase_rollup.py
+
+      - name: Healthcheck ping
+        if: always()
+        env:
+          HC_URL: ${{ secrets.HEALTHCHECK_URL }}
+          WF: db-maintenance
+        run: |
+          if [ -n "$HC_URL" ]; then
+            curl -fsSL --max-time 10 "$HC_URL/$WF?status=${{ job.status }}" || true
+          fi
