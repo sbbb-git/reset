@@ -81,7 +81,7 @@ jobs:
       - name: Choisir la voie
         id: voie
         env:
-          JETON: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          JETON: ${{ secrets.SUPABASE_API || secrets.SUPABASE_ACCESS_TOKEN }}
           PGURL: ${{ secrets.SUPABASE_DB_URL }}
         run: |
           if [ -n "$JETON" ]; then
@@ -118,7 +118,7 @@ jobs:
       - name: Exécuter via l'API Management
         if: steps.voie.outputs.methode == 'api'
         env:
-          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_API || secrets.SUPABASE_ACCESS_TOKEN }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SQL_FILE: ${{ github.event.inputs.fichier }}
         run: python3 supabase_exec_sql.py
@@ -133,7 +133,7 @@ jobs:
       - name: Taille après
         if: always()
         env:
-          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_API || secrets.SUPABASE_ACCESS_TOKEN }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
         run: |
           if [ -n "$SUPABASE_ACCESS_TOKEN" ]; then
