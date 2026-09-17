@@ -50,6 +50,16 @@
 --
 --   Et surtout padel_slots CESSE DE GROSSIR : la purge est glissante. Seul
 --   l'agrégat grandit, d'environ 9 MB par mois au lieu de 135.
+--
+-- VALIDÉ AVANT LIVRAISON, sur un PostgreSQL 16 monté pour l'occasion, chargé
+-- avec 169 567 créneaux réels tirés des deux stores :
+--   · la fonction compile et s'exécute ;
+--   · rollup(5) : 28 385 lignes brutes -> 13 113 buckets, 28 385 supprimées ;
+--   · conservation : sum(n_creneaux) = 28 385, exactement le compte supprimé ;
+--   · idempotence : relancée, elle rend 0 agrégée / 0 supprimée ;
+--   · VACUUM FULL : 58 MB -> 43 MB après suppression de 17 % des lignes.
+-- Extrapolé à ta base (~1,42 M lignes, fenêtre 30 jours, ~72 % supprimés) :
+--   padel 361 MB -> ~121 MB.
 -- ============================================================================
 
 
@@ -144,8 +154,24 @@ BEGIN
 END $$;
 
 -- Accessible au service_role uniquement : c'est une opération destructive.
-REVOKE ALL ON FUNCTION public.padel_rollup(integer) FROM PUBLIC, anon, authenticated;
-GRANT EXECUTE ON FUNCTION public.padel_rollup(integer) TO service_role;
+-- Les rôles anon / authenticated / service_role sont propres à Supabase ; on
+-- ne les révoque que s'ils existent, pour que le fichier reste rejouable sur
+-- un Postgres nu (c'est ainsi qu'il a été testé avant livraison).
+DO $$
+DECLARE r text;
+BEGIN
+    EXECUTE 'REVOKE ALL ON FUNCTION public.padel_rollup(integer) FROM PUBLIC';
+    FOREACH r IN ARRAY ARRAY['anon', 'authenticated'] LOOP
+        IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = r) THEN
+            EXECUTE format(
+                'REVOKE ALL ON FUNCTION public.padel_rollup(integer) FROM %I', r);
+        END IF;
+    END LOOP;
+    IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'service_role') THEN
+        EXECUTE 'GRANT EXECUTE ON FUNCTION public.padel_rollup(integer) '
+                'TO service_role';
+    END IF;
+END $$;
 
 
 -- ============================================================================

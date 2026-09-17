@@ -1,0 +1,114 @@
+name: Base · exécuter une migration SQL
+
+# Joue un fichier SQL du dépôt contre Supabase, via psql.
+#
+# POURQUOI CE WORKFLOW EXISTE
+# Deux choses étaient impossibles autrement :
+#   · le DDL (CREATE TABLE / CREATE FUNCTION) — la service_key est une clé
+#     PostgREST, elle ne fait pas de DDL ;
+#   · VACUUM FULL et REINDEX — l'éditeur SQL de Supabase enveloppe les scripts
+#     multi-instructions dans une transaction, où VACUUM est interdit. psql
+#     exécute chaque instruction séparément, donc le problème disparaît.
+#
+# Il faut un secret SUPABASE_DB_URL :
+#   Supabase -> Project Settings -> Database -> Connection string -> URI
+#   (celle qui commence par postgresql://postgres:...). À coller dans
+#   GitHub -> Settings -> Secrets and variables -> Actions -> New secret.
+#
+# Déclenchement MANUEL uniquement, et seuls les fichiers de la liste
+# ci-dessous sont acceptés : ce workflow ne doit jamais pouvoir exécuter du
+# SQL arbitraire, ni partir tout seul sur un schedule.
+
+on:
+  workflow_dispatch:
+    inputs:
+      fichier:
+        description: "Fichier SQL à exécuter"
+        required: true
+        type: choice
+        options:
+          - supabase_levier3_rollup.sql
+          - supabase_levier1_vacuum.sql
+          - supabase_levier2a_preparation.sql
+          - supabase_levier2b_bascule.sql
+          - supabase_indexes.sql
+          - supabase_migration_padel_slots.sql
+      confirmer:
+        description: "Taper JOUER pour confirmer (certains fichiers suppriment des lignes)"
+        required: true
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: db-migrate
+  cancel-in-progress: false
+
+jobs:
+  migrer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Garde-fous
+        env:
+          FICHIER: ${{ github.event.inputs.fichier }}
+          CONFIRMER: ${{ github.event.inputs.confirmer }}
+        run: |
+          if [ "$CONFIRMER" != "JOUER" ]; then
+            echo "::error::confirmation manquante — taper JOUER"; exit 1
+          fi
+          autorises="supabase_levier1_vacuum.sql
+          supabase_levier2a_preparation.sql
+          supabase_levier2b_bascule.sql
+          supabase_levier3_rollup.sql
+          supabase_indexes.sql
+          supabase_migration_padel_slots.sql"
+          if ! echo "$autorises" | tr -d ' ' | grep -qx "$FICHIER"; then
+            echo "::error::fichier hors liste : $FICHIER"; exit 1
+          fi
+          test -f "$FICHIER" || { echo "::error::$FICHIER introuvable"; exit 1; }
+          echo "OK : $FICHIER"
+
+      - name: Vérifier le secret
+        run: |
+          if [ -z "${{ secrets.SUPABASE_DB_URL }}" ]; then
+            echo "::error::secret SUPABASE_DB_URL absent. Supabase -> Project"
+            echo "::error::Settings -> Database -> Connection string (URI),"
+            echo "::error::à ajouter dans les secrets Actions du dépôt."
+            exit 1
+          fi
+
+      - name: Taille AVANT
+        env:
+          PGURL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          psql "$PGURL" -v ON_ERROR_STOP=1 -c \
+            "SELECT pg_size_pretty(pg_database_size(current_database())) AS avant;"
+
+      - name: Exécuter le SQL
+        env:
+          PGURL: ${{ secrets.SUPABASE_DB_URL }}
+          FICHIER: ${{ github.event.inputs.fichier }}
+        run: |
+          # -v ON_ERROR_STOP=1 : on s'arrête à la première erreur au lieu de
+          # continuer sur un état à moitié migré.
+          # Pas de -1 (single transaction) : VACUUM FULL l'interdit, et les
+          # fichiers gèrent eux-mêmes leurs BEGIN/COMMIT là où c'est utile.
+          psql "$PGURL" -v ON_ERROR_STOP=1 --echo-errors -f "$FICHIER"
+
+      - name: Taille APRÈS
+        if: always()
+        env:
+          PGURL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          psql "$PGURL" -c \
+            "SELECT pg_size_pretty(pg_database_size(current_database())) AS apres;"
+          psql "$PGURL" -c "
+            SELECT c.relname AS objet,
+                   pg_size_pretty(pg_total_relation_size(c.oid)) AS total
+            FROM pg_class c JOIN pg_namespace n ON n.oid = c.relnamespace
+            WHERE n.nspname = 'public' AND c.relkind = 'r'
+            ORDER BY pg_total_relation_size(c.oid) DESC LIMIT 8;"

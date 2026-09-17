@@ -1,5 +1,5 @@
 -- ============================================================================
--- LEVIER 2 — remplacer les clés texte par des entiers
+-- LEVIER 2b — BASCULE (destructif)
 -- ============================================================================
 --
 -- MESURÉ SUR LES DONNÉES RÉELLES (93 157 créneaux IDF, 2026-09-17)
@@ -44,85 +44,13 @@
 -- ============================================================================
 
 
--- ============================================================================
--- BLOC 1 — correspondances et backfill (rien n'est supprimé)
--- ============================================================================
-
--- 1a. Un identifiant numérique stable par club.
-ALTER TABLE public.padel_clubs
-    ADD COLUMN IF NOT EXISTS club_id smallint;
-
-CREATE SEQUENCE IF NOT EXISTS public.padel_clubs_club_id_seq AS smallint;
-
-UPDATE public.padel_clubs
-   SET club_id = nextval('public.padel_clubs_club_id_seq')
- WHERE club_id IS NULL;
-
-ALTER TABLE public.padel_clubs
-    ALTER COLUMN club_id SET DEFAULT nextval('public.padel_clubs_club_id_seq');
-
-CREATE UNIQUE INDEX IF NOT EXISTS padel_clubs_club_id_uidx
-    ON public.padel_clubs (club_id);
-
--- 1b. Un identifiant numérique stable par terrain, dans son club.
-CREATE TABLE IF NOT EXISTS public.padel_courts (
-    id         integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    club_slug  text NOT NULL,
-    court_ref  text NOT NULL,
-    UNIQUE (club_slug, court_ref)
-);
-
-INSERT INTO public.padel_courts (club_slug, court_ref)
-SELECT DISTINCT club_slug, coalesce(court_id, '')
-FROM public.padel_slots
-ON CONFLICT (club_slug, court_ref) DO NOTHING;
-
--- 1c. Les nouvelles colonnes de padel_slots, backfillées.
-ALTER TABLE public.padel_slots
-    ADD COLUMN IF NOT EXISTS club_id   smallint,
-    ADD COLUMN IF NOT EXISTS court_num integer;
-
-UPDATE public.padel_slots s
-   SET club_id = c.club_id
-  FROM public.padel_clubs c
- WHERE c.slug = s.club_slug AND s.club_id IS DISTINCT FROM c.club_id;
-
-UPDATE public.padel_slots s
-   SET court_num = t.id
-  FROM public.padel_courts t
- WHERE t.club_slug = s.club_slug
-   AND t.court_ref = coalesce(s.court_id, '')
-   AND s.court_num IS DISTINCT FROM t.id;
-
--- 1d. VÉRIFICATION BLOQUANTE — doit renvoyer 0. Si non, ne pas continuer :
---     des lignes n'ont pas trouvé leur correspondance et la bascule les
---     perdrait.
-SELECT count(*) AS lignes_non_resolues
-FROM public.padel_slots
-WHERE club_id IS NULL OR court_num IS NULL;
-
--- 1e. Contrôle d'unicité sur la NOUVELLE clé. Doit renvoyer 0 ligne, sinon
---     l'index unique du bloc 2 échouerait.
-SELECT club_id, date, heure, court_num, duree, count(*) AS n
-FROM public.padel_slots
-GROUP BY club_id, date, heure, court_num, duree
-HAVING count(*) > 1
-LIMIT 20;
-
-
--- ============================================================================
--- BLOC 2 — nouvel index unique (hors transaction, une instruction à la fois)
--- ============================================================================
-
-CREATE UNIQUE INDEX CONCURRENTLY IF NOT EXISTS padel_slots_metier2_uidx
-    ON public.padel_slots (club_id, date, heure, court_num, duree);
-
-SELECT indexrelid::regclass AS index, indisvalid AS valide
-FROM pg_index WHERE indexrelid = 'padel_slots_metier2_uidx'::regclass;
-
--- >>> ARRÊT ICI. Pousser le sync qui envoie club_id / court_num, vérifier un
--- >>> run vert, PUIS seulement le bloc 3.
-
+-- ⚠️ NE JOUER QU'APRÈS levier2a, ET après avoir poussé le sync qui envoie
+-- club_id / court_num, ET vérifié qu'un run de sectors-padel passe au
+-- vert. Ce fichier supprime les colonnes texte : si le sync les envoie
+-- encore, il casse.
+-- Contrôle préalable obligatoire (doit renvoyer 0) :
+--   SELECT count(*) FROM public.padel_slots
+--    WHERE club_id IS NULL OR court_num IS NULL;
 
 -- ============================================================================
 -- BLOC 3 — bascule et libération de l'espace
