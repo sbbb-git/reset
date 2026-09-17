@@ -79,17 +79,34 @@ def upsert(table, rows, on_conflict=None):
 # store lui-même (`_sync_h`), qui est déjà committé : pas de fichier d'état
 # supplémentaire à maintenir.
 #
-# `dernier_vu` est volontairement arrondi au JOUR dans l'empreinte. Un créneau
-# qui reste simplement disponible ne repart donc qu'une fois par jour au lieu
-# de 48, tandis qu'un changement de statut — le signal qui porte toute la
-# valeur analytique — part au passage suivant.
+# `dernier_vu` est volontairement HORS empreinte : voir empreinte() pour le
+# raisonnement. En résumé, toute transition qui compte passe par `statut` ou
+# `finie`, donc la ligne est renvoyée au bon moment sans qu'un horodatage qui
+# bouge à chaque passage ne déclenche un renvoi général.
 SYNC_FIELDS = ("date", "heure", "fin", "duree", "terrain", "court_id",
                "prix", "statut", "finie", "source", "premier_vu")
 
 
 def empreinte(s):
+    """Empreinte des champs qui portent du sens, `dernier_vu` EXCLU.
+
+    Première version : `dernier_vu` arrondi au jour. Défaut découvert en
+    relisant le comportement réel — tous les créneaux changent d'empreinte au
+    passage de minuit, donc un run par jour renvoyait quand même les ~93 k
+    lignes. 48× moins qu'avant, mais un pic quotidien inutile.
+
+    `dernier_vu` est donc hors empreinte. Ce qu'on perd : sa valeur en base ne
+    se rafraîchit plus tant que rien d'autre ne bouge. Ce qu'on ne perd pas,
+    et c'est ce qui compte : chaque transition qui a du sens passe par
+    `statut` ou `finie`, tous deux DANS l'empreinte — la ligne est donc
+    renvoyée au moment précis où le créneau est réservé ou se termine, en
+    emportant le `dernier_vu` courant. La valeur finale est exacte ; seules
+    les valeurs intermédiaires sont figées, et rien ne les lit.
+
+    Résultat : on n'envoie plus que les créneaux vraiment nouveaux et ceux qui
+    changent d'état, soit ~7 k lignes par jour au lieu de 4,47 M.
+    """
     base = "|".join(str(s.get(k)) for k in SYNC_FIELDS)
-    base += "|" + str(s.get("dernier_vu") or "")[:10]
     return hashlib.blake2s(base.encode("utf-8"), digest_size=8).hexdigest()
 
 
