@@ -30,6 +30,7 @@ on:
         required: true
         type: choice
         options:
+          - supabase_diagnostic.sql
           - supabase_levier3_rollup.sql
           - supabase_levier1_vacuum.sql
           - supabase_levier2a_preparation.sql
@@ -66,7 +67,8 @@ jobs:
           if [ "$CONFIRMER" != "JOUER" ]; then
             echo "::error::confirmation manquante — taper JOUER"; exit 1
           fi
-          autorises="supabase_levier1_vacuum.sql
+          autorises="supabase_diagnostic.sql
+          supabase_levier1_vacuum.sql
           supabase_levier2a_preparation.sql
           supabase_levier2b_bascule.sql
           supabase_levier3_rollup.sql
