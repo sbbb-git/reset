@@ -1,23 +1,26 @@
 name: Base · exécuter une migration SQL
 
-# Joue un fichier SQL du dépôt contre Supabase, via psql.
+# Joue un fichier SQL du dépôt contre Supabase.
 #
-# POURQUOI CE WORKFLOW EXISTE
-# Deux choses étaient impossibles autrement :
-#   · le DDL (CREATE TABLE / CREATE FUNCTION) — la service_key est une clé
-#     PostgREST, elle ne fait pas de DDL ;
-#   · VACUUM FULL et REINDEX — l'éditeur SQL de Supabase enveloppe les scripts
-#     multi-instructions dans une transaction, où VACUUM est interdit. psql
-#     exécute chaque instruction séparément, donc le problème disparaît.
+# DEUX VOIES, dans cet ordre de préférence :
 #
-# Il faut un secret SUPABASE_DB_URL :
-#   Supabase -> Project Settings -> Database -> Connection string -> URI
-#   (celle qui commence par postgresql://postgres:...). À coller dans
-#   GitHub -> Settings -> Secrets and variables -> Actions -> New secret.
+#  1. API Management (secret SUPABASE_ACCESS_TOKEN) — du HTTPS ordinaire vers
+#     api.supabase.com. Rien à trouver dans l'interface : un jeton se crée sur
+#     supabase.com/dashboard/account/tokens, et l'identifiant du projet est
+#     déduit de SUPABASE_URL, déjà en secret. Les instructions partent une par
+#     une, ce qui permet VACUUM (qu'on ne peut pas grouper) et dit exactement
+#     laquelle casse en cas d'erreur.
 #
-# Déclenchement MANUEL uniquement, et seuls les fichiers de la liste
-# ci-dessous sont acceptés : ce workflow ne doit jamais pouvoir exécuter du
-# SQL arbitraire, ni partir tout seul sur un schedule.
+#  2. psql (secret SUPABASE_DB_URL) — plus direct, mais l'hôte
+#     db.<ref>.supabase.co ne résout qu'en IPv6 et les runners GitHub n'en ont
+#     pas. Il faut donc la chaîne du pooler en port 5432 (mode session).
+#
+# La voie 1 suffit et demande moins. La voie 2 reste là si le jeton n'est pas
+# souhaité.
+#
+# Déclenchement MANUEL uniquement, jamais de schedule, et seuls les fichiers
+# de la liste ci-dessous sont acceptés : ce workflow ne doit jamais pouvoir
+# exécuter du SQL arbitraire.
 
 on:
   workflow_dispatch:
@@ -51,6 +54,9 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
       - name: Garde-fous
         env:
@@ -72,68 +78,67 @@ jobs:
           test -f "$FICHIER" || { echo "::error::$FICHIER introuvable"; exit 1; }
           echo "OK : $FICHIER"
 
-      - name: Vérifier le secret
+      - name: Choisir la voie
+        id: voie
         env:
+          JETON: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
           PGURL: ${{ secrets.SUPABASE_DB_URL }}
         run: |
-          if [ -z "$PGURL" ]; then
-            echo "::error::secret SUPABASE_DB_URL absent. Supabase -> Project"
-            echo "::error::Settings -> Database -> Connection string (URI),"
-            echo "::error::à ajouter dans les secrets Actions du dépôt."
-            exit 1
+          if [ -n "$JETON" ]; then
+            echo "methode=api" >> "$GITHUB_OUTPUT"
+            echo "Voie retenue : API Management."
+            exit 0
           fi
-          # L'hôte direct db.<ref>.supabase.co ne résout qu'en IPv6, et les
-          # runners GitHub n'en ont pas : la connexion échoue avec « Network is
-          # unreachable » avant d'avoir rien exécuté. Le pooler (Supavisor) est
-          # joignable en IPv4. On le vérifie ici plutôt que de laisser psql
-          # échouer avec un message qui n'oriente vers rien.
-          case "$PGURL" in
-            *db.*.supabase.co*)
-              echo "::error::SUPABASE_DB_URL pointe sur l'hôte DIRECT"
-              echo "::error::(db.<ref>.supabase.co), qui est IPv6 uniquement —"
-              echo "::error::les runners GitHub n'ont pas d'IPv6."
-              echo "::error::Reprendre la chaîne « Session pooler » dans"
-              echo "::error::Supabase -> Project Settings -> Database :"
-              echo "::error::  postgresql://postgres.<ref>:<mdp>@aws-0-<region>.pooler.supabase.com:5432/postgres"
-              echo "::error::Bien prendre le port 5432 (session), PAS 6543"
-              echo "::error::(transaction) : VACUUM et le DDL y sont refusés."
-              exit 1 ;;
-            *pooler.supabase.com:6543*)
-              echo "::error::le port 6543 est le pooler en mode TRANSACTION :"
-              echo "::error::VACUUM FULL et certains DDL y sont impossibles."
-              echo "::error::Utiliser le port 5432 (mode session)."
-              exit 1 ;;
-          esac
-          echo "Chaîne de connexion : forme attendue."
+          if [ -n "$PGURL" ]; then
+            case "$PGURL" in
+              *db.*.supabase.co*)
+                echo "::error::SUPABASE_DB_URL pointe sur l'hôte DIRECT, qui"
+                echo "::error::est IPv6 uniquement — inaccessible depuis un"
+                echo "::error::runner GitHub. Deux issues :"
+                echo "::error:: · plus simple : créer un jeton sur"
+                echo "::error::   supabase.com/dashboard/account/tokens et"
+                echo "::error::   l'ajouter en secret SUPABASE_ACCESS_TOKEN ;"
+                echo "::error:: · ou reprendre la chaîne du pooler en port 5432."
+                exit 1 ;;
+              *pooler.supabase.com:6543*)
+                echo "::error::port 6543 = pooler en mode TRANSACTION, où"
+                echo "::error::VACUUM et une partie du DDL sont refusés."
+                echo "::error::Utiliser le port 5432 (mode session)."
+                exit 1 ;;
+            esac
+            echo "methode=psql" >> "$GITHUB_OUTPUT"
+            echo "Voie retenue : psql."
+            exit 0
+          fi
+          echo "::error::aucun secret utilisable. Le plus simple : créer un"
+          echo "::error::jeton sur supabase.com/dashboard/account/tokens et"
+          echo "::error::l'ajouter en secret SUPABASE_ACCESS_TOKEN."
+          exit 1
 
-      - name: Taille AVANT
+      - name: Exécuter via l'API Management
+        if: steps.voie.outputs.methode == 'api'
         env:
-          PGURL: ${{ secrets.SUPABASE_DB_URL }}
-        run: |
-          psql "$PGURL" -v ON_ERROR_STOP=1 -c \
-            "SELECT pg_size_pretty(pg_database_size(current_database())) AS avant;"
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SQL_FILE: ${{ github.event.inputs.fichier }}
+        run: python3 supabase_exec_sql.py
 
-      - name: Exécuter le SQL
+      - name: Exécuter via psql
+        if: steps.voie.outputs.methode == 'psql'
         env:
           PGURL: ${{ secrets.SUPABASE_DB_URL }}
           FICHIER: ${{ github.event.inputs.fichier }}
-        run: |
-          # -v ON_ERROR_STOP=1 : on s'arrête à la première erreur au lieu de
-          # continuer sur un état à moitié migré.
-          # Pas de -1 (single transaction) : VACUUM FULL l'interdit, et les
-          # fichiers gèrent eux-mêmes leurs BEGIN/COMMIT là où c'est utile.
-          psql "$PGURL" -v ON_ERROR_STOP=1 --echo-errors -f "$FICHIER"
+        run: psql "$PGURL" -v ON_ERROR_STOP=1 --echo-errors -f "$FICHIER"
 
-      - name: Taille APRÈS
+      - name: Taille après
         if: always()
         env:
-          PGURL: ${{ secrets.SUPABASE_DB_URL }}
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
         run: |
-          psql "$PGURL" -c \
-            "SELECT pg_size_pretty(pg_database_size(current_database())) AS apres;"
-          psql "$PGURL" -c "
-            SELECT c.relname AS objet,
-                   pg_size_pretty(pg_total_relation_size(c.oid)) AS total
-            FROM pg_class c JOIN pg_namespace n ON n.oid = c.relnamespace
-            WHERE n.nspname = 'public' AND c.relkind = 'r'
-            ORDER BY pg_total_relation_size(c.oid) DESC LIMIT 8;"
+          if [ -n "$SUPABASE_ACCESS_TOKEN" ]; then
+            printf '%s\n' \
+              "SELECT pg_size_pretty(pg_database_size(current_database())) AS base_totale;" \
+              > /tmp/taille.sql
+            SQL_FILE=/tmp/taille.sql python3 supabase_exec_sql.py || true
+          fi
