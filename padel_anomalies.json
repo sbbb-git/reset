@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-16T23:48:10.707118",
+ "generated_at": "2026-09-17T04:09:27.319173",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -13,6 +13,16 @@
    "direction": "hausse"
   },
   {
+   "slug": "4padel-cao-saint-denis",
+   "source": "anybuddy",
+   "name": "4padel-cao-saint-denis",
+   "cp": "93200",
+   "prix_30j": 48.0,
+   "prix_recent": 77.3,
+   "delta_pct": 61.1,
+   "direction": "hausse"
+  },
+  {
    "slug": "4-padel-montreuil",
    "source": "anybuddy",
    "name": "4-padel-montreuil",
@@ -23,20 +33,20 @@
    "direction": "hausse"
   },
   {
+   "slug": "4padel-torcy-vaires-sur-marne",
+   "source": "anybuddy",
+   "name": "4padel-torcy-vaires-sur-marne",
+   "cp": "77360",
+   "prix_30j": 48.0,
+   "prix_recent": 72.0,
+   "delta_pct": 50.0,
+   "direction": "hausse"
+  },
+  {
    "slug": "4-padel-saint-ouen-saint-ouen-sur-seine",
    "source": "anybuddy",
    "name": "4-padel-saint-ouen-saint-ouen-sur-seine",
    "cp": "93400",
-   "prix_30j": 48.0,
-   "prix_recent": 70.7,
-   "delta_pct": 47.2,
-   "direction": "hausse"
-  },
-  {
-   "slug": "4padel-cao-saint-denis",
-   "source": "anybuddy",
-   "name": "4padel-cao-saint-denis",
-   "cp": "93200",
    "prix_30j": 48.0,
    "prix_recent": 70.7,
    "delta_pct": 47.2,
@@ -63,16 +73,6 @@
    "direction": "hausse"
   },
   {
-   "slug": "4padel-torcy-vaires-sur-marne",
-   "source": "anybuddy",
-   "name": "4padel-torcy-vaires-sur-marne",
-   "cp": "77360",
-   "prix_30j": 48.0,
-   "prix_recent": 66.0,
-   "delta_pct": 37.5,
-   "direction": "hausse"
-  },
-  {
    "slug": "coquelicot-padel-boissy-saint-leger",
    "source": "anybuddy",
    "name": "coquelicot-padel-boissy-saint-leger",
@@ -83,22 +83,22 @@
    "direction": "hausse"
   },
   {
-   "slug": "doinsport-59044915-a142-4f27-a8f4-433b199d73d5",
-   "source": "doinsport",
-   "name": "Play Padel Alfortville",
-   "cp": "94140",
-   "prix_30j": 54.0,
-   "prix_recent": 72.0,
-   "delta_pct": 33.3,
-   "direction": "hausse"
-  },
-  {
    "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
    "source": "doinsport",
    "name": "Domaine de Lassy",
    "cp": "95270",
    "prix_30j": 54.0,
    "prix_recent": 72.0,
+   "delta_pct": 33.3,
+   "direction": "hausse"
+  },
+  {
+   "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
+   "source": "doinsport",
+   "name": "FIVE ARENA",
+   "cp": "77100",
+   "prix_30j": 48.0,
+   "prix_recent": 64.0,
    "delta_pct": 33.3,
    "direction": "hausse"
   },
@@ -119,7 +119,7 @@
    "name": null,
    "cp": "95240",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 241.5,
+   "bookings_moyenne_hebdo_30j": 233.1,
    "delta_pct": -100.0
   },
   {
@@ -127,7 +127,7 @@
    "name": null,
    "cp": "93100",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 286.8,
+   "bookings_moyenne_hebdo_30j": 260.9,
    "delta_pct": -100.0
   },
   {
@@ -135,7 +135,7 @@
    "name": null,
    "cp": "93400",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 759.5,
+   "bookings_moyenne_hebdo_30j": 701.4,
    "delta_pct": -100.0
   },
   {
@@ -143,7 +143,7 @@
    "name": null,
    "cp": "92160",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 1008.0,
+   "bookings_moyenne_hebdo_30j": 948.7,
    "delta_pct": -100.0
   },
   {
@@ -151,7 +151,7 @@
    "name": null,
    "cp": "95100",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 1798.1,
+   "bookings_moyenne_hebdo_30j": 1704.3,
    "delta_pct": -100.0
   },
   {
@@ -159,7 +159,7 @@
    "name": null,
    "cp": "93200",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 1043.5,
+   "bookings_moyenne_hebdo_30j": 1008.5,
    "delta_pct": -100.0
   },
   {
@@ -167,7 +167,7 @@
    "name": null,
    "cp": "94000",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 519.6,
+   "bookings_moyenne_hebdo_30j": 483.9,
    "delta_pct": -100.0
   },
   {
@@ -175,7 +175,7 @@
    "name": null,
    "cp": "93800",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 1429.4,
+   "bookings_moyenne_hebdo_30j": 1366.4,
    "delta_pct": -100.0
   },
   {
@@ -183,7 +183,7 @@
    "name": null,
    "cp": "94500",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 349.5,
+   "bookings_moyenne_hebdo_30j": 335.8,
    "delta_pct": -100.0
   },
   {
@@ -191,7 +191,7 @@
    "name": null,
    "cp": "75020",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 656.6,
+   "bookings_moyenne_hebdo_30j": 614.1,
    "delta_pct": -100.0
   },
   {
@@ -199,7 +199,7 @@
    "name": null,
    "cp": "77360",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 600.4,
+   "bookings_moyenne_hebdo_30j": 554.6,
    "delta_pct": -100.0
   },
   {
@@ -215,7 +215,7 @@
    "name": null,
    "cp": "91100",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 2018.3,
+   "bookings_moyenne_hebdo_30j": 1940.6,
    "delta_pct": -100.0
   },
   {
@@ -223,7 +223,7 @@
    "name": null,
    "cp": "75015",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 869.4,
+   "bookings_moyenne_hebdo_30j": 830.2,
    "delta_pct": -100.0
   },
   {
@@ -231,7 +231,7 @@
    "name": null,
    "cp": "78200",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 147.7,
+   "bookings_moyenne_hebdo_30j": 140.7,
    "delta_pct": -100.0
   },
   {
@@ -239,7 +239,7 @@
    "name": null,
    "cp": "77550",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 2187.3,
+   "bookings_moyenne_hebdo_30j": 2090.7,
    "delta_pct": -100.0
   },
   {
@@ -247,7 +247,7 @@
    "name": null,
    "cp": "94470",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 625.1,
+   "bookings_moyenne_hebdo_30j": 602.2,
    "delta_pct": -100.0
   },
   {
@@ -255,7 +255,7 @@
    "name": "ASS TENNIS CLUB SARCELLOIS",
    "cp": "95200",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 21.2,
+   "bookings_moyenne_hebdo_30j": 20.8,
    "delta_pct": -100.0
   },
   {
@@ -263,7 +263,7 @@
    "name": "Senart Padel",
    "cp": "77380",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 119.9,
+   "bookings_moyenne_hebdo_30j": 116.9,
    "delta_pct": -100.0
   },
   {
@@ -271,7 +271,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 110.1,
+   "bookings_moyenne_hebdo_30j": 109.4,
    "delta_pct": -100.0
   },
   {
@@ -279,7 +279,7 @@
    "name": "Padel Camp",
    "cp": "78260",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 75.8,
+   "bookings_moyenne_hebdo_30j": 73.0,
    "delta_pct": -100.0
   },
   {
@@ -287,7 +287,7 @@
    "name": "Play Padel Alfortville",
    "cp": "94140",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 162.2,
+   "bookings_moyenne_hebdo_30j": 158.2,
    "delta_pct": -100.0
   },
   {
@@ -295,7 +295,7 @@
    "name": "Bad Pad",
    "cp": "91420",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 83.8,
+   "bookings_moyenne_hebdo_30j": 81.2,
    "delta_pct": -100.0
   },
   {
@@ -303,7 +303,7 @@
    "name": "O.S. Sannois",
    "cp": "95110",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 104.3,
+   "bookings_moyenne_hebdo_30j": 101.3,
    "delta_pct": -100.0
   },
   {
@@ -311,7 +311,7 @@
    "name": "Padel A.C",
    "cp": "95700",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 330.4,
+   "bookings_moyenne_hebdo_30j": 321.3,
    "delta_pct": -100.0
   },
   {
@@ -319,7 +319,7 @@
    "name": "Padel Pulsion",
    "cp": "91570",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 8.6,
+   "bookings_moyenne_hebdo_30j": 8.4,
    "delta_pct": -100.0
   },
   {
@@ -327,7 +327,7 @@
    "name": "Padel 95",
    "cp": "95300",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 205.1,
+   "bookings_moyenne_hebdo_30j": 200.4,
    "delta_pct": -100.0
   },
   {
@@ -335,7 +335,7 @@
    "name": "Domaine de Lassy",
    "cp": "95270",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 70.0,
+   "bookings_moyenne_hebdo_30j": 69.1,
    "delta_pct": -100.0
   },
   {
@@ -343,7 +343,7 @@
    "name": "Royal Padel Club",
    "cp": "78000",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 30.3,
+   "bookings_moyenne_hebdo_30j": 29.6,
    "delta_pct": -100.0
   },
   {
@@ -359,7 +359,7 @@
    "name": "Tennis Club de Paris",
    "cp": "75016",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 16.8,
+   "bookings_moyenne_hebdo_30j": 16.6,
    "delta_pct": -100.0
   },
   {
@@ -367,7 +367,7 @@
    "name": "Tennis Club de la Chataigneraie",
    "cp": "92500",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 68.6,
+   "bookings_moyenne_hebdo_30j": 67.7,
    "delta_pct": -100.0
   },
   {
@@ -375,7 +375,7 @@
    "name": "Padel Horizon - Sucy en Brie",
    "cp": "94370",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 287.9,
+   "bookings_moyenne_hebdo_30j": 280.5,
    "delta_pct": -100.0
   },
   {
@@ -383,7 +383,7 @@
    "name": "FOOTBALL 5 CLUB",
    "cp": "78710",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 29.2,
+   "bookings_moyenne_hebdo_30j": 27.5,
    "delta_pct": -100.0
   },
   {
@@ -391,7 +391,7 @@
    "name": "Big Five & Padel",
    "cp": "95350",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 27.1,
+   "bookings_moyenne_hebdo_30j": 24.5,
    "delta_pct": -100.0
   },
   {
@@ -399,7 +399,7 @@
    "name": "Aldea Padel",
    "cp": "91100",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 93.8,
+   "bookings_moyenne_hebdo_30j": 90.8,
    "delta_pct": -100.0
   },
   {
@@ -407,7 +407,7 @@
    "name": "B14",
    "cp": "91070",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 261.6,
+   "bookings_moyenne_hebdo_30j": 256.0,
    "delta_pct": -100.0
   },
   {
@@ -415,7 +415,7 @@
    "name": "Planète Raquettes",
    "cp": "77870",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 52.0,
+   "bookings_moyenne_hebdo_30j": 50.4,
    "delta_pct": -100.0
   },
   {
@@ -423,7 +423,7 @@
    "name": "FIVE ARENA",
    "cp": "77100",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 8.4,
+   "bookings_moyenne_hebdo_30j": 7.9,
    "delta_pct": -100.0
   },
   {
@@ -431,7 +431,7 @@
    "name": null,
    "cp": "91300",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 68.4,
+   "bookings_moyenne_hebdo_30j": 65.3,
    "delta_pct": -100.0
   },
   {
@@ -439,7 +439,7 @@
    "name": null,
    "cp": "77100",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 300.5,
+   "bookings_moyenne_hebdo_30j": 287.5,
    "delta_pct": -100.0
   },
   {
@@ -447,7 +447,7 @@
    "name": null,
    "cp": "92430",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 1294.1,
+   "bookings_moyenne_hebdo_30j": 1228.5,
    "delta_pct": -100.0
   },
   {
@@ -455,7 +455,7 @@
    "name": null,
    "cp": "92000",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 327.4,
+   "bookings_moyenne_hebdo_30j": 311.5,
    "delta_pct": -100.0
   },
   {
@@ -463,7 +463,7 @@
    "name": null,
    "cp": "78000",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 230.3,
+   "bookings_moyenne_hebdo_30j": 220.5,
    "delta_pct": -100.0
   },
   {
@@ -471,7 +471,7 @@
    "name": null,
    "cp": "77100",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 2735.8,
+   "bookings_moyenne_hebdo_30j": 2628.0,
    "delta_pct": -100.0
   },
   {
@@ -479,7 +479,7 @@
    "name": null,
    "cp": "93120",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 1114.2,
+   "bookings_moyenne_hebdo_30j": 1060.0,
    "delta_pct": -100.0
   },
   {
@@ -487,7 +487,7 @@
    "name": null,
    "cp": "75012",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 96.8,
+   "bookings_moyenne_hebdo_30j": 92.2,
    "delta_pct": -100.0
   },
   {
@@ -495,7 +495,7 @@
    "name": null,
    "cp": "77183",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 149.3,
+   "bookings_moyenne_hebdo_30j": 142.8,
    "delta_pct": -100.0
   },
   {
@@ -503,7 +503,7 @@
    "name": null,
    "cp": "77186",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 60.2,
+   "bookings_moyenne_hebdo_30j": 57.4,
    "delta_pct": -100.0
   },
   {
@@ -511,7 +511,7 @@
    "name": null,
    "cp": "75015",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 457.6,
+   "bookings_moyenne_hebdo_30j": 422.8,
    "delta_pct": -100.0
   },
   {
@@ -519,7 +519,7 @@
    "name": null,
    "cp": "95300",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 177.8,
+   "bookings_moyenne_hebdo_30j": 168.7,
    "delta_pct": -100.0
   },
   {
@@ -527,7 +527,7 @@
    "name": null,
    "cp": "95700",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 453.6,
+   "bookings_moyenne_hebdo_30j": 434.5,
    "delta_pct": -100.0
   },
   {
@@ -535,7 +535,7 @@
    "name": null,
    "cp": "78260",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 76.5,
+   "bookings_moyenne_hebdo_30j": 74.2,
    "delta_pct": -100.0
   },
   {
@@ -543,7 +543,7 @@
    "name": null,
    "cp": "94370",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 900.9,
+   "bookings_moyenne_hebdo_30j": 870.3,
    "delta_pct": -100.0
   },
   {
@@ -551,7 +551,7 @@
    "name": null,
    "cp": "95340",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 2062.0,
+   "bookings_moyenne_hebdo_30j": 1987.8,
    "delta_pct": -100.0
   },
   {
@@ -559,7 +559,7 @@
    "name": null,
    "cp": "78000",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 1180.2,
+   "bookings_moyenne_hebdo_30j": 1125.6,
    "delta_pct": -100.0
   },
   {
@@ -567,7 +567,7 @@
    "name": null,
    "cp": "77410",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 333.7,
+   "bookings_moyenne_hebdo_30j": 319.0,
    "delta_pct": -100.0
   },
   {
@@ -575,7 +575,7 @@
    "name": null,
    "cp": "78190",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 2888.7,
+   "bookings_moyenne_hebdo_30j": 2739.6,
    "delta_pct": -100.0
   },
   {
@@ -583,7 +583,7 @@
    "name": null,
    "cp": "75020",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 234.3,
+   "bookings_moyenne_hebdo_30j": 220.0,
    "delta_pct": -100.0
   },
   {
@@ -591,7 +591,7 @@
    "name": null,
    "cp": "94140",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 498.6,
+   "bookings_moyenne_hebdo_30j": 468.8,
    "delta_pct": -100.0
   },
   {
@@ -599,7 +599,7 @@
    "name": null,
    "cp": "77680",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 104.5,
+   "bookings_moyenne_hebdo_30j": 100.3,
    "delta_pct": -100.0
   },
   {
@@ -607,7 +607,7 @@
    "name": null,
    "cp": "95110",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 88.7,
+   "bookings_moyenne_hebdo_30j": 84.0,
    "delta_pct": -100.0
   },
   {
@@ -615,7 +615,7 @@
    "name": null,
    "cp": "78500",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 43.6,
+   "bookings_moyenne_hebdo_30j": 41.3,
    "delta_pct": -100.0
   },
   {
@@ -623,7 +623,7 @@
    "name": null,
    "cp": "77380",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 1873.0,
+   "bookings_moyenne_hebdo_30j": 1785.2,
    "delta_pct": -100.0
   },
   {
@@ -631,7 +631,7 @@
    "name": null,
    "cp": "75012",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 256.4,
+   "bookings_moyenne_hebdo_30j": 246.2,
    "delta_pct": -100.0
   },
   {
@@ -639,7 +639,7 @@
    "name": null,
    "cp": "92400",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 288.4,
+   "bookings_moyenne_hebdo_30j": 276.5,
    "delta_pct": -100.0
   },
   {
@@ -647,7 +647,7 @@
    "name": null,
    "cp": "75016",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 538.5,
+   "bookings_moyenne_hebdo_30j": 508.0,
    "delta_pct": -100.0
   },
   {
@@ -655,7 +655,7 @@
    "name": null,
    "cp": "95190",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 74.4,
+   "bookings_moyenne_hebdo_30j": 70.9,
    "delta_pct": -100.0
   },
   {
@@ -663,7 +663,7 @@
    "name": null,
    "cp": "94320",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 1042.1,
+   "bookings_moyenne_hebdo_30j": 987.5,
    "delta_pct": -100.0
   },
   {
@@ -671,7 +671,7 @@
    "name": null,
    "cp": "78170",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 65.8,
+   "bookings_moyenne_hebdo_30j": 62.8,
    "delta_pct": -100.0
   },
   {
@@ -679,7 +679,7 @@
    "name": null,
    "cp": "78590",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 113.6,
+   "bookings_moyenne_hebdo_30j": 106.4,
    "delta_pct": -100.0
   },
   {
@@ -687,7 +687,7 @@
    "name": null,
    "cp": "78000",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 96.6,
+   "bookings_moyenne_hebdo_30j": 91.5,
    "delta_pct": -100.0
   },
   {
@@ -695,7 +695,7 @@
    "name": null,
    "cp": "95420",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 39.0,
+   "bookings_moyenne_hebdo_30j": 37.1,
    "delta_pct": -100.0
   },
   {
@@ -703,7 +703,7 @@
    "name": null,
    "cp": "77000",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 1288.0,
+   "bookings_moyenne_hebdo_30j": 1228.5,
    "delta_pct": -100.0
   },
   {
@@ -711,7 +711,7 @@
    "name": null,
    "cp": "92700",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 101.0,
+   "bookings_moyenne_hebdo_30j": 98.2,
    "delta_pct": -100.0
   },
   {
@@ -719,7 +719,7 @@
    "name": null,
    "cp": "78120",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 48.1,
+   "bookings_moyenne_hebdo_30j": 46.0,
    "delta_pct": -100.0
   },
   {
@@ -727,7 +727,7 @@
    "name": null,
    "cp": "75016",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 567.7,
+   "bookings_moyenne_hebdo_30j": 538.3,
    "delta_pct": -100.0
   },
   {
@@ -743,7 +743,7 @@
    "name": null,
    "cp": "75019",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 98.7,
+   "bookings_moyenne_hebdo_30j": 94.0,
    "delta_pct": -100.0
   },
   {
@@ -751,7 +751,7 @@
    "name": null,
    "cp": "92360",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 100.8,
+   "bookings_moyenne_hebdo_30j": 96.8,
    "delta_pct": -100.0
   },
   {
@@ -759,7 +759,7 @@
    "name": "UrbanPadel Évry-Courcouronnes",
    "cp": "91080",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 632.6,
+   "bookings_moyenne_hebdo_30j": 604.3,
    "delta_pct": -100.0
   },
   {
@@ -767,7 +767,7 @@
    "name": "UrbanPadel Marne la Vallée (Lognes)",
    "cp": "77185",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 870.8,
+   "bookings_moyenne_hebdo_30j": 832.8,
    "delta_pct": -100.0
   },
   {
@@ -775,7 +775,7 @@
    "name": "UrbanPadel Porte d'Aubervilliers",
    "cp": "93300",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 541.8,
+   "bookings_moyenne_hebdo_30j": 522.2,
    "delta_pct": -100.0
   },
   {
@@ -783,7 +783,7 @@
    "name": "UrbanPadel Puteaux-Île",
    "cp": "92800",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 1138.2,
+   "bookings_moyenne_hebdo_30j": 1082.0,
    "delta_pct": -100.0
   },
   {
@@ -791,7 +791,7 @@
    "name": null,
    "cp": "78940",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 68.6,
+   "bookings_moyenne_hebdo_30j": 65.3,
    "delta_pct": -100.0
   },
   {
@@ -799,7 +799,7 @@
    "name": null,
    "cp": "78190",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 197.9,
+   "bookings_moyenne_hebdo_30j": 188.5,
    "delta_pct": -100.0
   },
   {
@@ -807,7 +807,7 @@
    "name": null,
    "cp": "91320",
    "bookings_7j": 0,
-   "bookings_moyenne_hebdo_30j": 325.5,
+   "bookings_moyenne_hebdo_30j": 307.3,
    "delta_pct": -100.0
   }
  ],
@@ -818,7 +818,7 @@
    "name": "tennis-palaiseau",
    "cp": "91120",
    "first_seen": "2026-09-14 20:49",
-   "days_since": 2
+   "days_since": 3
   },
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -826,7 +826,7 @@
    "name": "FIVE ARENA",
    "cp": "77100",
    "first_seen": "2026-09-08 15:25",
-   "days_since": 8
+   "days_since": 9
   },
   {
    "slug": "sartrouville-tc",
@@ -834,7 +834,7 @@
    "name": "sartrouville-tc",
    "cp": "78500",
    "first_seen": "2026-09-08 10:43",
-   "days_since": 8
+   "days_since": 9
   },
   {
    "slug": "tennis-bailly-noisy-le-roi",
@@ -842,7 +842,7 @@
    "name": "tennis-bailly-noisy-le-roi",
    "cp": "78590",
    "first_seen": "2026-09-08 10:43",
-   "days_since": 8
+   "days_since": 9
   },
   {
    "slug": "4-padel-montreuil",
@@ -850,7 +850,7 @@
    "name": "4-padel-montreuil",
    "cp": "93100",
    "first_seen": "2026-09-07 13:57",
-   "days_since": 9
+   "days_since": 10
   },
   {
    "slug": "4-padel-saint-ouen-saint-ouen-sur-seine",
@@ -858,7 +858,7 @@
    "name": "4-padel-saint-ouen-saint-ouen-sur-seine",
    "cp": "93400",
    "first_seen": "2026-09-07 13:57",
-   "days_since": 9
+   "days_since": 10
   },
   {
    "slug": "4padel-epinay-sur-seine",
@@ -866,7 +866,7 @@
    "name": "4padel-epinay-sur-seine",
    "cp": "93800",
    "first_seen": "2026-09-07 13:57",
-   "days_since": 9
+   "days_since": 10
   },
   {
    "slug": "as-mantaise-mantes-la-jolie",
@@ -874,7 +874,7 @@
    "name": "as-mantaise-mantes-la-jolie",
    "cp": "78200",
    "first_seen": "2026-09-07 13:57",
-   "days_since": 9
+   "days_since": 10
   },
   {
    "slug": "doinsport-06004879-0ab9-4f57-af7c-8d8e704f9efa",
@@ -882,7 +882,7 @@
    "name": "ASS TENNIS CLUB SARCELLOIS",
    "cp": "95200",
    "first_seen": "2026-09-07 13:57",
-   "days_since": 9
+   "days_since": 10
   },
   {
    "slug": "tennis-padel-bois-colombes-bois-colombes",
@@ -890,7 +890,7 @@
    "name": "tennis-padel-bois-colombes-bois-colombes",
    "cp": "92700",
    "first_seen": "2026-09-07 13:57",
-   "days_since": 9
+   "days_since": 10
   },
   {
    "slug": "4padel-antony-morangis",
@@ -898,7 +898,7 @@
    "name": "4padel-antony-morangis",
    "cp": "92160",
    "first_seen": "2026-09-06 10:28",
-   "days_since": 10
+   "days_since": 11
   },
   {
    "slug": "4padel-argenteuil",
@@ -906,7 +906,7 @@
    "name": "4padel-argenteuil",
    "cp": "95100",
    "first_seen": "2026-09-06 10:28",
-   "days_since": 10
+   "days_since": 11
   },
   {
    "slug": "4padel-cao-saint-denis",
@@ -914,7 +914,7 @@
    "name": "4padel-cao-saint-denis",
    "cp": "93200",
    "first_seen": "2026-09-06 10:28",
-   "days_since": 10
+   "days_since": 11
   },
   {
    "slug": "4padel-creteil",
@@ -922,7 +922,7 @@
    "name": "4padel-creteil",
    "cp": "94000",
    "first_seen": "2026-09-06 10:28",
-   "days_since": 10
+   "days_since": 11
   },
   {
    "slug": "4padel-le-five-champigny-sur-marne",
@@ -930,7 +930,7 @@
    "name": "4padel-le-five-champigny-sur-marne",
    "cp": "94500",
    "first_seen": "2026-09-06 10:28",
-   "days_since": 10
+   "days_since": 11
   },
   {
    "slug": "4padel-paris-20",
@@ -938,7 +938,7 @@
    "name": "4padel-paris-20",
    "cp": "75020",
    "first_seen": "2026-09-06 10:28",
-   "days_since": 10
+   "days_since": 11
   },
   {
    "slug": "4padel-torcy-vaires-sur-marne",
@@ -946,7 +946,7 @@
    "name": "4padel-torcy-vaires-sur-marne",
    "cp": "77360",
    "first_seen": "2026-09-06 10:28",
-   "days_since": 10
+   "days_since": 11
   },
   {
    "slug": "doinsport-af5c97a7-390f-4f23-afca-6d10c0d117cd",
@@ -954,7 +954,7 @@
    "name": "Le Padel Wellness",
    "cp": "95500",
    "first_seen": "2026-09-06 20:07",
-   "days_since": 10
+   "days_since": 11
   },
   {
    "slug": "le-five-marville-la-courneuve",
@@ -962,7 +962,7 @@
    "name": "le-five-marville-la-courneuve",
    "cp": "93120",
    "first_seen": "2026-09-06 10:28",
-   "days_since": 10
+   "days_since": 11
   },
   {
    "slug": "usy-la-queue-lez-yvelines",
@@ -970,7 +970,7 @@
    "name": "usy-la-queue-lez-yvelines",
    "cp": "78940",
    "first_seen": "2026-09-05 13:57",
-   "days_since": 11
+   "days_since": 12
   },
   {
    "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
@@ -978,7 +978,7 @@
    "name": "Padel Pulsion",
    "cp": "91570",
    "first_seen": "2026-09-04 18:59",
-   "days_since": 12
+   "days_since": 13
   },
   {
    "slug": "es-massy",
@@ -986,7 +986,7 @@
    "name": "es-massy",
    "cp": "91300",
    "first_seen": "2026-09-04 01:51",
-   "days_since": 12
+   "days_since": 13
   },
   {
    "slug": "noisiel-tc",
@@ -994,7 +994,7 @@
    "name": "noisiel-tc",
    "cp": "77186",
    "first_seen": "2026-09-04 01:51",
-   "days_since": 12
+   "days_since": 13
   },
   {
    "slug": "padel-15-paris",
@@ -1002,7 +1002,7 @@
    "name": "padel-15-paris",
    "cp": "75015",
    "first_seen": "2026-09-04 10:38",
-   "days_since": 12
+   "days_since": 13
   },
   {
    "slug": "tennis-magny-vexin",
@@ -1010,7 +1010,7 @@
    "name": "tennis-magny-vexin",
    "cp": "95420",
    "first_seen": "2026-09-04 01:51",
-   "days_since": 12
+   "days_since": 13
   },
   {
    "slug": "2v2-padel-club-cormeilles-en-parisis",
@@ -1018,7 +1018,7 @@
    "name": "2v2-padel-club-cormeilles-en-parisis",
    "cp": "95240",
    "first_seen": "2026-09-03 03:19",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "ace-padel-evry-courcouronnes",
@@ -1026,7 +1026,7 @@
    "name": "ace-padel-evry-courcouronnes",
    "cp": "91000",
    "first_seen": "2026-09-03 03:19",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "aldea-padel-villabe",
@@ -1034,7 +1034,7 @@
    "name": "aldea-padel-villabe",
    "cp": "91100",
    "first_seen": "2026-09-03 03:19",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "aquaboulevard-de-paris",
@@ -1042,7 +1042,7 @@
    "name": "aquaboulevard-de-paris",
    "cp": "75015",
    "first_seen": "2026-09-03 03:19",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "carre-padel-moissy-cramayel",
@@ -1050,7 +1050,7 @@
    "name": "carre-padel-moissy-cramayel",
    "cp": "77550",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "coquelicot-padel-boissy-saint-leger",
@@ -1058,7 +1058,7 @@
    "name": "coquelicot-padel-boissy-saint-leger",
    "cp": "94470",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -1066,7 +1066,7 @@
    "name": "Padel Futur Dammarie",
    "cp": "77190",
    "first_seen": "2026-09-03 01:07",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "doinsport-ad752496-c285-4ff2-9914-f7b9a2382ded",
@@ -1074,7 +1074,7 @@
    "name": "Royal Padel Club",
    "cp": "78000",
    "first_seen": "2026-09-03 01:07",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "five-arena-meaux",
@@ -1082,7 +1082,7 @@
    "name": "five-arena-meaux",
    "cp": "77100",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "forest-hill-marnes-la-coquette",
@@ -1090,7 +1090,7 @@
    "name": "forest-hill-marnes-la-coquette",
    "cp": "92430",
    "first_seen": "2026-09-03 13:34",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "forest-hill-nanterre-la-defense",
@@ -1098,7 +1098,7 @@
    "name": "forest-hill-nanterre-la-defense",
    "cp": "92000",
    "first_seen": "2026-09-03 08:17",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "forest-hill-versailles",
@@ -1106,7 +1106,7 @@
    "name": "forest-hill-versailles",
    "cp": "78000",
    "first_seen": "2026-09-03 08:17",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "home-padel-meaux",
@@ -1114,7 +1114,7 @@
    "name": "home-padel-meaux",
    "cp": "77100",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "les-padelistes-bercy-paris",
@@ -1122,7 +1122,7 @@
    "name": "les-padelistes-bercy-paris",
    "cp": "75012",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "mairie-croissy-beaubourg-croissy-beaubourg",
@@ -1130,7 +1130,7 @@
    "name": "mairie-croissy-beaubourg-croissy-beaubourg",
    "cp": "77183",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "padel-95-pontoise",
@@ -1138,7 +1138,7 @@
    "name": "padel-95-pontoise",
    "cp": "95300",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "padel-ac-tremblay-en-france",
@@ -1146,7 +1146,7 @@
    "name": "padel-ac-tremblay-en-france",
    "cp": "95700",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "padel-camp-acheres",
@@ -1154,7 +1154,7 @@
    "name": "padel-camp-acheres",
    "cp": "78260",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "padel-horizon-sucy-en-brie",
@@ -1162,7 +1162,7 @@
    "name": "padel-horizon-sucy-en-brie",
    "cp": "94370",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "padel-max-95-persan",
@@ -1170,7 +1170,7 @@
    "name": "padel-max-95-persan",
    "cp": "95340",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "padel-versaille-versailles",
@@ -1178,7 +1178,7 @@
    "name": "padel-versaille-versailles",
    "cp": "78000",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "padel4people-claye-souilly-claye-souilly",
@@ -1186,7 +1186,7 @@
    "name": "padel4people-claye-souilly-claye-souilly",
    "cp": "77410",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "padelshot-saint-quentin-en-yvelines-trappes",
@@ -1194,7 +1194,7 @@
    "name": "padelshot-saint-quentin-en-yvelines-trappes",
    "cp": "78190",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "paris-padel",
@@ -1202,7 +1202,7 @@
    "name": "paris-padel",
    "cp": "75020",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "play-padel-alfortville",
@@ -1210,7 +1210,7 @@
    "name": "play-padel-alfortville",
    "cp": "94140",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "roissy-en-brie-ast",
@@ -1218,7 +1218,7 @@
    "name": "roissy-en-brie-ast",
    "cp": "77680",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "sannois-oss",
@@ -1226,7 +1226,7 @@
    "name": "sannois-oss",
    "cp": "95110",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "senart-padel-combs-la-ville",
@@ -1234,7 +1234,7 @@
    "name": "senart-padel-combs-la-ville",
    "cp": "77380",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "sportfield-bercy-paris",
@@ -1242,7 +1242,7 @@
    "name": "sportfield-bercy-paris",
    "cp": "75012",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "sportfield-courbevoie-la-defense",
@@ -1250,7 +1250,7 @@
    "name": "sportfield-courbevoie-la-defense",
    "cp": "92400",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "sportfield-paris",
@@ -1258,7 +1258,7 @@
    "name": "sportfield-paris",
    "cp": "75016",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "sportoo-goussainville",
@@ -1266,7 +1266,7 @@
    "name": "sportoo-goussainville",
    "cp": "95190",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "stadium-thiais-thiais",
@@ -1274,7 +1274,7 @@
    "name": "stadium-thiais-thiais",
    "cp": "94320",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
@@ -1282,7 +1282,7 @@
    "name": "tc-la-celle-saint-cloud-la-celle-saint-cloud",
    "cp": "78170",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "tennis-du-golf-de-la-boulie-versailles",
@@ -1290,7 +1290,7 @@
    "name": "tennis-du-golf-de-la-boulie-versailles",
    "cp": "78000",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "tennis-melun",
@@ -1298,7 +1298,7 @@
    "name": "tennis-melun",
    "cp": "77000",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "tennis-rambouillet",
@@ -1306,7 +1306,7 @@
    "name": "tennis-rambouillet",
    "cp": "78120",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "trinquet-village-paris",
@@ -1314,7 +1314,7 @@
    "name": "trinquet-village-paris",
    "cp": "75016",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "ucpa-montigny-club-le-village-montigny-le-bretonneux",
@@ -1322,7 +1322,7 @@
    "name": "ucpa-montigny-club-le-village-montigny-le-bretonneux",
    "cp": "78180",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "ucpa-sport-station-a-paris-paris",
@@ -1330,7 +1330,7 @@
    "name": "ucpa-sport-station-a-paris-paris",
    "cp": "75019",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "ucpa-sport-station-meudon-meudon",
@@ -1338,7 +1338,7 @@
    "name": "ucpa-sport-station-meudon-meudon",
    "cp": "92360",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "urbanpadel-evry-courcouronnes",
@@ -1346,7 +1346,7 @@
    "name": "UrbanPadel Évry-Courcouronnes",
    "cp": "91080",
    "first_seen": "2026-09-03 01:07",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "urbanpadel-marne-la-vallee-lognes",
@@ -1354,7 +1354,7 @@
    "name": "UrbanPadel Marne la Vallée (Lognes)",
    "cp": "77185",
    "first_seen": "2026-09-03 01:07",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "urbanpadel-porte-aubervilliers",
@@ -1362,7 +1362,7 @@
    "name": "UrbanPadel Porte d'Aubervilliers",
    "cp": "93300",
    "first_seen": "2026-09-03 01:07",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "urbanpadel-puteaux-ile",
@@ -1370,7 +1370,7 @@
    "name": "UrbanPadel Puteaux-Île",
    "cp": "92800",
    "first_seen": "2026-09-03 01:07",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "wrc-trappes",
@@ -1378,7 +1378,7 @@
    "name": "wrc-trappes",
    "cp": "78190",
    "first_seen": "2026-09-03 03:20",
-   "days_since": 13
+   "days_since": 14
   },
   {
    "slug": "wtc-wissous",
@@ -1386,134 +1386,6 @@
    "name": "wtc-wissous",
    "cp": "91320",
    "first_seen": "2026-09-03 08:18",
-   "days_since": 13
-  },
-  {
-   "slug": "doinsport-27823ee9-57fe-4fbc-92ba-079443df934e",
-   "source": "doinsport",
-   "name": "Senart Padel",
-   "cp": "77380",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-46006260-0a24-4f36-b27b-a489ed46a9c3",
-   "source": "doinsport",
-   "name": "Padel Camp",
-   "cp": "78260",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-59044915-a142-4f27-a8f4-433b199d73d5",
-   "source": "doinsport",
-   "name": "Play Padel Alfortville",
-   "cp": "94140",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-5f3c10f2-e0fa-4fd6-a707-04f7ea53deb9",
-   "source": "doinsport",
-   "name": "Bad Pad",
-   "cp": "91420",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
-   "source": "doinsport",
-   "name": "O.S. Sannois",
-   "cp": "95110",
-   "first_seen": "2026-09-02 11:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-81d36fb8-553b-4fe5-87f4-ab76a12acbaf",
-   "source": "doinsport",
-   "name": "Padel A.C",
-   "cp": "95700",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-9814afd2-c0d3-4f0f-a80e-fc62be89bc38",
-   "source": "doinsport",
-   "name": "Padel 95",
-   "cp": "95300",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
-   "source": "doinsport",
-   "name": "Domaine de Lassy",
-   "cp": "95270",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-b92e567b-e393-4f48-9e88-f36cdae6dd5b",
-   "source": "doinsport",
-   "name": "Tennis Club de Paris",
-   "cp": "75016",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-d016516b-15a9-4f04-a359-53c6be5395ac",
-   "source": "doinsport",
-   "name": "Tennis Club de la Chataigneraie",
-   "cp": "92500",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-efd176fa-cf39-4f7f-bf2d-5c7d9412148a",
-   "source": "doinsport",
-   "name": "Padel Horizon - Sucy en Brie",
-   "cp": "94370",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-f52e0e2b-788f-4f0c-aa91-a8841c8d9d22",
-   "source": "doinsport",
-   "name": "FOOTBALL 5 CLUB",
-   "cp": "78710",
-   "first_seen": "2026-09-02 22:45",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-f592228c-faee-4fd9-93a9-83a651a0703b",
-   "source": "doinsport",
-   "name": "Big Five & Padel",
-   "cp": "95350",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-f67a973f-6bbb-4f01-9a9b-89d2e8c12c52",
-   "source": "doinsport",
-   "name": "Aldea Padel",
-   "cp": "91100",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-f73b2bef-eedd-4fba-9d72-15595ac723fa",
-   "source": "doinsport",
-   "name": "B14",
-   "cp": "91070",
-   "first_seen": "2026-09-02 00:28",
-   "days_since": 14
-  },
-  {
-   "slug": "doinsport-f7defd74-40b0-4fd2-be0f-69d69c4b4bd6",
-   "source": "doinsport",
-   "name": "Planète Raquettes",
-   "cp": "77870",
-   "first_seen": "2026-09-02 00:28",
    "days_since": 14
   }
  ],
@@ -1522,6 +1394,6 @@
   "idle_24h": 0,
   "price_shifts": 11,
   "volume_drops": 87,
-  "new_clubs_14d": 88
+  "new_clubs_14d": 72
  }
 }
