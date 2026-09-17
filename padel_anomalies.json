@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-17T14:49:09.044656",
+ "generated_at": "2026-09-17T18:55:26.448595",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -33,6 +33,16 @@
    "direction": "hausse"
   },
   {
+   "slug": "4padel-antony-morangis",
+   "source": "anybuddy",
+   "name": "4padel-antony-morangis",
+   "cp": "92160",
+   "prix_30j": 48.0,
+   "prix_recent": 72.0,
+   "delta_pct": 50.0,
+   "direction": "hausse"
+  },
+  {
    "slug": "4padel-torcy-vaires-sur-marne",
    "source": "anybuddy",
    "name": "4padel-torcy-vaires-sur-marne",
@@ -50,16 +60,6 @@
    "prix_30j": 48.0,
    "prix_recent": 70.7,
    "delta_pct": 47.2,
-   "direction": "hausse"
-  },
-  {
-   "slug": "4padel-antony-morangis",
-   "source": "anybuddy",
-   "name": "4padel-antony-morangis",
-   "cp": "92160",
-   "prix_30j": 48.0,
-   "prix_recent": 66.0,
-   "delta_pct": 37.5,
    "direction": "hausse"
   },
   {
