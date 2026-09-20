@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-20T05:17:55.022703",
+ "generated_at": "2026-09-20T10:03:20.016508",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -23,16 +23,6 @@
    "direction": "hausse"
   },
   {
-   "slug": "4padel-epinay-sur-seine",
-   "source": "anybuddy",
-   "name": "4padel-epinay-sur-seine",
-   "cp": "93800",
-   "prix_30j": 54.0,
-   "prix_recent": 78.0,
-   "delta_pct": 44.4,
-   "direction": "hausse"
-  },
-  {
    "slug": "coquelicot-padel-boissy-saint-leger",
    "source": "anybuddy",
    "name": "coquelicot-padel-boissy-saint-leger",
@@ -40,16 +30,6 @@
    "prix_30j": 32.0,
    "prix_recent": 44.0,
    "delta_pct": 37.5,
-   "direction": "hausse"
-  },
-  {
-   "slug": "4padel-antony-morangis",
-   "source": "anybuddy",
-   "name": "4padel-antony-morangis",
-   "cp": "92160",
-   "prix_30j": 54.0,
-   "prix_recent": 72.0,
-   "delta_pct": 33.3,
    "direction": "hausse"
   },
   {
@@ -1488,9 +1468,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 95,
+  "total_anomalies": 93,
   "idle_24h": 0,
-  "price_shifts": 8,
+  "price_shifts": 6,
   "volume_drops": 87,
   "new_clubs_14d": 88
  }
