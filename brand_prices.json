@@ -1,4 +1,92 @@
 {
+ "punch": {
+  "source_url": "https://punch-studios.com/reservation/#/tarifs",
+  "confiance": "haute",
+  "drop_in": 29.0,
+  "packs": [
+   {
+    "name": "5 séances Monday",
+    "size": 5,
+    "prix_total": 139.0,
+    "prix_unitaire": 27.8
+   },
+   {
+    "name": "10 Séances Monday",
+    "size": 10,
+    "prix_total": 249.0,
+    "prix_unitaire": 24.9
+   },
+   {
+    "name": "30 Séances Monday",
+    "size": 30,
+    "prix_total": 599.0,
+    "prix_unitaire": 19.97
+   },
+   {
+    "name": "50 Séances Monday",
+    "size": 50,
+    "prix_total": 949.0,
+    "prix_unitaire": 18.98
+   }
+  ],
+  "abos": [
+   {
+    "name": "Abonnement 16 séances / 12 mois",
+    "prix_mensuel": 269.0,
+    "seances_inclus": 16,
+    "engagement_mois": 12
+   },
+   {
+    "name": "Abonnement 16 séances / 3 mois",
+    "prix_mensuel": 299.0,
+    "seances_inclus": 16,
+    "engagement_mois": 3
+   },
+   {
+    "name": "Abonnement 4 séances / 12 mois",
+    "prix_mensuel": 89.0,
+    "seances_inclus": 4,
+    "engagement_mois": 12
+   },
+   {
+    "name": "Abonnement 4 séances / 3 mois",
+    "prix_mensuel": 99.0,
+    "seances_inclus": 4,
+    "engagement_mois": 3
+   },
+   {
+    "name": "Abonnement 8 séances / 12 mois",
+    "prix_mensuel": 159.0,
+    "seances_inclus": 8,
+    "engagement_mois": 12
+   },
+   {
+    "name": "Abonnement 8 séances / 3 mois",
+    "prix_mensuel": 179.0,
+    "seances_inclus": 8,
+    "engagement_mois": 3
+   }
+  ],
+  "offres": [
+   {
+    "name": "Offre d'essai punch",
+    "prix": 15.0,
+    "seances": 1
+   },
+   {
+    "name": "Offre d'essai duo",
+    "prix": 29.0,
+    "seances": 1
+   },
+   {
+    "name": "Offre de bienvenue 3 séances",
+    "prix": 49.0,
+    "seances": 3,
+    "prix_unitaire": 16.33
+   }
+  ],
+  "note": "Grille Monday Group factuelle depuis /wp-json/mindbody/v1/sale/services"
+ },
  "dynamo": {
   "source_url": "https://dynamo-cycling.com/reservation/#/tarifs",
   "confiance": "haute",
