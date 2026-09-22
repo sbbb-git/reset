@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-22T17:15:30.104518",
+ "generated_at": "2026-09-22T20:28:17.229218",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -10,6 +10,16 @@
    "prix_30j": 34.5,
    "prix_recent": 69.0,
    "delta_pct": 100.1,
+   "direction": "hausse"
+  },
+  {
+   "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
+   "source": "doinsport",
+   "name": "Padel Pulsion",
+   "cp": "91570",
+   "prix_30j": 30.0,
+   "prix_recent": 45.0,
+   "delta_pct": 50.0,
    "direction": "hausse"
   },
   {
@@ -1438,9 +1448,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 90,
+  "total_anomalies": 91,
   "idle_24h": 0,
-  "price_shifts": 3,
+  "price_shifts": 4,
   "volume_drops": 87,
   "new_clubs_14d": 88
  }
