@@ -172,7 +172,12 @@ def capture_club(club, store):
             price = round(price_cents / 100.0, 2)
             booking_uuid = b.get("id") or f"{start_raw}|{pg['id']}|{duration}"
             sid = f"{start_raw}|{pg['id']}"
-            bucket["sessions"][sid] = {
+            prev = bucket["sessions"].get(sid, {})
+            # Les clés privées (préfixe « _ ») appartiennent à d'autres étapes du
+            # pipeline — _sync_h au sync Supabase. Reconstruire le créneau sans
+            # elles effaçait l'empreinte de chaque créneau encore visible, et le
+            # sync renvoyait ~31 000 lignes inchangées à chaque passage.
+            bucket["sessions"][sid] = {**{k: v for k, v in prev.items() if k.startswith("_")},
                 "id": sid,
                 "start": sdt.replace(tzinfo=None).isoformat(),
                 "date": sdt.date().isoformat(),

@@ -125,7 +125,11 @@ def capture_club(slug, club_meta, store):
         sid = f"{sdt_raw}|{court_id}|{o['duration']}"
         edt = sdt + dt.timedelta(minutes=int(o["duration"]))
         prev = sessions.get(sid, {})
-        sessions[sid] = {
+        # Les clés privées (préfixe « _ ») appartiennent à d'autres étapes du
+        # pipeline — _sync_h au sync Supabase. Reconstruire le créneau sans
+        # elles effaçait l'empreinte de chaque créneau encore visible, et le
+        # sync renvoyait ~31 000 lignes inchangées à chaque passage.
+        sessions[sid] = {**{k: v for k, v in prev.items() if k.startswith("_")},
             "id": sid,
             "start": sdt_raw,
             "date": sdt.date().isoformat(),
