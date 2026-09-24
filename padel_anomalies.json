@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-24T14:23:11.885653",
+ "generated_at": "2026-09-24T18:39:13.729837",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -18,8 +18,18 @@
    "name": "Padel Pulsion",
    "cp": "91570",
    "prix_30j": 30.0,
-   "prix_recent": 45.0,
-   "delta_pct": 50.0,
+   "prix_recent": 60.0,
+   "delta_pct": 100.0,
+   "direction": "hausse"
+  },
+  {
+   "slug": "4padel-antony-morangis",
+   "source": "anybuddy",
+   "name": "4padel-antony-morangis",
+   "cp": "92160",
+   "prix_30j": 54.0,
+   "prix_recent": 72.0,
+   "delta_pct": 33.3,
    "direction": "hausse"
   },
   {
@@ -1450,9 +1460,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 92,
+  "total_anomalies": 93,
   "idle_24h": 0,
-  "price_shifts": 5,
+  "price_shifts": 6,
   "volume_drops": 87,
   "new_clubs_14d": 87
  }
