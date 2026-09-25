@@ -1,6 +1,15 @@
 {
- "generated_at": "2026-09-25T11:44:39.277306",
- "idle_24h": [],
+ "generated_at": "2026-09-25T16:54:18.752489",
+ "idle_24h": [
+  {
+   "slug": "tennis-magny-vexin",
+   "source": "anybuddy",
+   "name": "tennis-magny-vexin",
+   "cp": "95420",
+   "last_seen": "2026-09-24 16:20",
+   "hours_idle": 24.6
+  }
+ ],
  "price_shifts": [
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -30,6 +39,16 @@
    "prix_30j": 54.0,
    "prix_recent": 78.0,
    "delta_pct": 44.4,
+   "direction": "hausse"
+  },
+  {
+   "slug": "4-padel-montreuil",
+   "source": "anybuddy",
+   "name": "4-padel-montreuil",
+   "cp": "93100",
+   "prix_30j": 60.0,
+   "prix_recent": 84.0,
+   "delta_pct": 40.0,
    "direction": "hausse"
   },
   {
@@ -1460,9 +1479,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 93,
-  "idle_24h": 0,
-  "price_shifts": 6,
+  "total_anomalies": 95,
+  "idle_24h": 1,
+  "price_shifts": 7,
   "volume_drops": 87,
   "new_clubs_14d": 87
  }
