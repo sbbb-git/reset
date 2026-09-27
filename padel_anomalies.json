@@ -1,6 +1,15 @@
 {
- "generated_at": "2026-09-27T12:57:12.663581",
- "idle_24h": [],
+ "generated_at": "2026-09-27T17:38:38.359582",
+ "idle_24h": [
+  {
+   "slug": "tennis-magny-vexin",
+   "source": "anybuddy",
+   "name": "tennis-magny-vexin",
+   "cp": "95420",
+   "last_seen": "2026-09-24 16:20",
+   "hours_idle": 73.3
+  }
+ ],
  "price_shifts": [
   {
    "slug": "doinsport-359669b6-0b4e-4f43-9f15-04c0aa58af7b",
@@ -1430,8 +1439,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 90,
-  "idle_24h": 0,
+  "total_anomalies": 91,
+  "idle_24h": 1,
   "price_shifts": 3,
   "volume_drops": 87,
   "new_clubs_14d": 87
