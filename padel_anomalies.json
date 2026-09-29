@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29T17:00:50.251760",
+ "generated_at": "2026-09-29T21:23:48.347299",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -733,6 +733,14 @@
  ],
  "new_clubs": [
   {
+   "slug": "doinsport-37519119-7ddd-4f27-989c-c0130adb4f87",
+   "source": "doinsport",
+   "name": "PLAYER 77",
+   "cp": "93190",
+   "first_seen": "2026-09-29 23:21",
+   "days_since": 0
+  },
+  {
    "slug": "noisiel-tc",
    "source": "anybuddy",
    "name": "noisiel-tc",
@@ -1434,6 +1442,6 @@
   "idle_24h": 0,
   "price_shifts": 3,
   "volume_drops": 87,
-  "new_clubs_14d": 87
+  "new_clubs_14d": 88
  }
 }
