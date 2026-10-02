@@ -1,13 +1,21 @@
 {
- "generated_at": "2026-10-02T06:04:42.368519",
+ "generated_at": "2026-10-02T13:04:04.706708",
  "idle_24h": [
+  {
+   "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
+   "source": "doinsport",
+   "name": "Padel Pulsion",
+   "cp": "91570",
+   "last_seen": "2026-09-29 13:15",
+   "hours_idle": 71.8
+  },
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
    "source": "doinsport",
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-09-29 13:15",
-   "hours_idle": 64.8
+   "hours_idle": 71.8
   }
  ],
  "price_shifts": [
@@ -1447,8 +1455,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 91,
-  "idle_24h": 1,
+  "total_anomalies": 92,
+  "idle_24h": 2,
   "price_shifts": 3,
   "volume_drops": 87,
   "new_clubs_14d": 88
