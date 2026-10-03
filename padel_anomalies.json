@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-03T13:13:43.154584",
+ "generated_at": "2026-10-03T17:34:40.022783",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -20,16 +20,6 @@
    "prix_30j": 45.0,
    "prix_recent": 69.0,
    "delta_pct": 53.3,
-   "direction": "hausse"
-  },
-  {
-   "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
-   "source": "doinsport",
-   "name": "O.S. Sannois",
-   "cp": "95110",
-   "prix_30j": 18.0,
-   "prix_recent": 27.0,
-   "delta_pct": 50.0,
    "direction": "hausse"
   },
   {
@@ -1448,9 +1438,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 91,
+  "total_anomalies": 90,
   "idle_24h": 0,
-  "price_shifts": 4,
+  "price_shifts": 3,
   "volume_drops": 87,
   "new_clubs_14d": 88
  }
