@@ -1,15 +1,6 @@
 {
- "generated_at": "2026-10-05T07:34:29.880816",
- "idle_24h": [
-  {
-   "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
-   "source": "doinsport",
-   "name": "Padel Pulsion",
-   "cp": "91570",
-   "last_seen": "2026-10-02 20:37",
-   "hours_idle": 59.0
-  }
- ],
+ "generated_at": "2026-10-05T16:59:08.018065",
+ "idle_24h": [],
  "price_shifts": [
   {
    "slug": "doinsport-7df677c8-d89a-4f6f-bfe6-959235e45c40",
@@ -20,6 +11,16 @@
    "prix_recent": 27.0,
    "delta_pct": 50.0,
    "direction": "hausse"
+  },
+  {
+   "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
+   "source": "doinsport",
+   "name": "Padel Pulsion",
+   "cp": "91570",
+   "prix_30j": 30.0,
+   "prix_recent": 18.0,
+   "delta_pct": -40.0,
+   "direction": "baisse"
   },
   {
    "slug": "4padel-epinay-sur-seine",
@@ -1438,8 +1439,8 @@
  ],
  "summary": {
   "total_anomalies": 90,
-  "idle_24h": 1,
-  "price_shifts": 2,
+  "idle_24h": 0,
+  "price_shifts": 3,
   "volume_drops": 87,
   "new_clubs_14d": 88
  }
