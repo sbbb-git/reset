@@ -20,6 +20,7 @@ import datetime as dt
 import json
 import os
 import safestore
+from seance_cle import cle_seance
 import sys
 from zoneinfo import ZoneInfo
 
@@ -93,7 +94,6 @@ def capture():
     sessions = banote_fetch.fetch_all()
     locked_now = 0
     for s in sessions:
-        sid = str(s["id"])
         try:
             sdt = dt.datetime.fromisoformat(s["start"]).replace(tzinfo=PARIS)
         except ValueError:
@@ -102,6 +102,11 @@ def capture():
             edt = dt.datetime.fromisoformat(s["end"]).replace(tzinfo=PARIS) if s.get("end") else sdt
         except ValueError:
             edt = sdt
+        lieu_ = lieu_court(s.get("lieu"))
+        cours_ = (s.get("cours") or "").strip()
+        # Clé métier, PAS s["id"] (data-bw-widget-id, renouvelé par Mindbody à
+        # chaque affichage : 18 042 entrées pour 1 628 séances au 06/10).
+        sid = cle_seance(sdt.date().isoformat(), sdt.strftime("%H:%M"), lieu_, cours_)
         prev = store.get(sid)
         if prev and prev.get("finie"):
             continue  # déjà figé/terminé -> on ne touche plus
@@ -117,8 +122,8 @@ def capture():
             "jour": JOURS_FR[sdt.weekday()],
             "heure": sdt.strftime("%H:%M"),
             "fin": edt.strftime("%H:%M"),
-            "lieu": lieu_court(s.get("lieu")),
-            "cours": (s.get("cours") or "").strip(),
+            "lieu": lieu_,
+            "cours": cours_,
             "coach": (s.get("coach") or "").strip(),
             "capacite": 0 if statut == "annule" else cap,
             "presents": estim_presents(statut, cap),

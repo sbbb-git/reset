@@ -27,6 +27,7 @@ import json
 import os
 import re
 import safestore
+from seance_cle import cle_seance
 import sys
 from zoneinfo import ZoneInfo
 
@@ -125,7 +126,6 @@ def capture():
             print("  Playwright indispo, abandon", file=sys.stderr)
     locked_now = 0
     for s in sessions:
-        sid = str(s["id"])
         try:
             sdt = dt.datetime.fromisoformat(s["start"]).replace(tzinfo=PARIS)
         except ValueError:
@@ -134,6 +134,14 @@ def capture():
             edt = dt.datetime.fromisoformat(s["end"]).replace(tzinfo=PARIS) if s.get("end") else sdt
         except ValueError:
             edt = sdt
+        cours_raw = (s.get("cours") or "").strip()
+        lieu_ = lieu_court(s.get("lieu"), cours_raw)
+        cours_ = clean_cours(cours_raw)
+        # Clé métier, PAS s["id"] : c'est data-bw-widget-id, l'identifiant de
+        # l'élément HTML que Mindbody renouvelle à chaque affichage. Chaque
+        # passage créait une nouvelle entrée — 136 824 entrées pour 2 624
+        # séances réelles au 06/10. Cf. seance_cle.py.
+        sid = cle_seance(sdt.date().isoformat(), sdt.strftime("%H:%M"), lieu_, cours_)
         prev = store.get(sid)
         if prev and prev.get("finie"):
             continue  # déjà figé/terminé -> on ne touche plus
@@ -142,15 +150,14 @@ def capture():
             statut = prev["statut"]
         cap = CAP_DEFAUT
         lock = now >= sdt - dt.timedelta(minutes=LOCK_MIN)
-        cours_raw = (s.get("cours") or "").strip()
         store[sid] = {
             "id": sid,
             "date": sdt.date().isoformat(),
             "jour": JOURS_FR[sdt.weekday()],
             "heure": sdt.strftime("%H:%M"),
             "fin": edt.strftime("%H:%M"),
-            "lieu": lieu_court(s.get("lieu"), cours_raw),
-            "cours": clean_cours(cours_raw),
+            "lieu": lieu_,
+            "cours": cours_,
             "coach": (s.get("coach") or "").strip(),
             "capacite": cap if statut in ("complet", "presque complet") else 0,
             "presents": estim_presents(statut, cap),

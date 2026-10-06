@@ -79,6 +79,8 @@ import html
 import json
 import os
 import re
+
+from seance_cle import cle_seance
 import sys
 import time
 import urllib.error
@@ -445,13 +447,19 @@ def cdf_wp_sessions(days=14, club=None, max_pages=200):
         start = dt.datetime.combine(day, dt.time(hour=h % 24, minute=mi))
         end = start + dt.timedelta(minutes=duree) if duree else None
         club_lbl = clubs.get(str(e.get("club_id"))) or _strip_tags(e.get("clubtitle"))
+        cours = (e.get("titre") or "").strip() or None
+        lieu = (e.get("salle") or "").strip() or club_lbl or None
         out.append({
-            "id": f"cdf-{eve_id}-{day.isoformat()}",
+            # Clé métier et non f"cdf-{eve_id}-{jour}" : le proxy publie la
+            # même séance sous plusieurs eve_id (jusqu'à 18), d'où 55 513
+            # entrées pour 21 895 séances réelles au 06/10. Les salles sont
+            # qualifiées par club (« Salle 1 République »), pas de collision.
+            "id": "cdf|" + cle_seance(day.isoformat(), f"{h % 24:02d}:{mi:02d}", lieu, cours),
             "start": start.isoformat(timespec="seconds"),
             "end": end.isoformat(timespec="seconds") if end else None,
-            "cours": (e.get("titre") or "").strip() or None,
+            "cours": cours,
             "coach": None,
-            "lieu": (e.get("salle") or "").strip() or club_lbl or None,
+            "lieu": lieu,
             "capacite": None,
             "presents": None,
             "club": club_lbl or None,
