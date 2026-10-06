@@ -30,6 +30,8 @@ import sys
 import urllib.error
 import urllib.request
 
+import supabase_auth
+
 URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
 KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/120"
@@ -442,16 +444,15 @@ MANUAL = {
 
 
 def supabase_upsert(rows):
-    if not URL or not KEY:
-        print("(SUPABASE_URL / SUPABASE_SERVICE_KEY absents — sync ignorée)", file=sys.stderr)
+    if not URL:
+        print("(SUPABASE_URL absent — sync ignorée)", file=sys.stderr)
         return False
     try:
         req = urllib.request.Request(
             URL + "/rest/v1/brand_prices",
             data=json.dumps(rows, ensure_ascii=False).encode("utf-8"),
             headers={
-                "apikey": KEY,
-                "Authorization": f"Bearer {KEY}",
+                **supabase_auth.entetes(),   # repli API Management si clé périmée
                 "Content-Type": "application/json",
                 "Prefer": "resolution=merge-duplicates,return=minimal",
             },

@@ -4,7 +4,11 @@ on:
   schedule:
     # 2x/jour : ~14h et ~00h Paris (après les scrapes bsport et soir)
     - cron: "0 13,22 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      fenetre_jours:
+        description: "Jours de séances passées à renvoyer (0 = tout l'historique, après une panne)"
+        default: "7"
 
 permissions:
   contents: read
@@ -29,6 +33,8 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_API || secrets.SUPABASE_ACCESS_TOKEN }}
+          SYNC_FENETRE_JOURS: ${{ github.event.inputs.fenetre_jours || '7' }}
         run: python3 supabase_sync.py
 
       - name: Healthcheck ping (si HEALTHCHECK_URL défini)

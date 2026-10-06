@@ -36,9 +36,11 @@ jobs:
         continue-on-error: true
 
       - name: Push national → Supabase (source of truth)
+        id: sync_supabase
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_API || secrets.SUPABASE_ACCESS_TOKEN }}
         run: python3 padel_national_supabase_sync.py
         continue-on-error: true
 
@@ -61,6 +63,15 @@ jobs:
           # les créneaux hors fenêtre. Sans ce commit ils partiraient avec le
           # runner, alors que le store élagué serait committé — donc perdus.
           ./ci_push.sh "Padel national scrape ($(date -u +%Y-%m-%dT%H:%M)Z)" padel_national_data.json padel_national_history.json.gz padel_national_anybuddy.json padel_national_doinsport.json padel_national_playtomic.json padel_national_urbanpadel.json padel_national_clubs.json
+
+      # Le sync reste en continue-on-error pour que le commit du scrape ait
+      # lieu quoi qu'il arrive — mais le run doit finir ROUGE s'il a échoué.
+      # Sans ce step, 10 jours de 401 (27/09 -> 06/10) sont passés au vert.
+      - name: Échec du sync Supabase -> run en rouge
+        if: steps.sync_supabase.outcome == 'failure'
+        run: |
+          echo "::error::Le sync Supabase a échoué : les données de ce run ne sont PAS en base (voir le step de sync)."
+          exit 1
 
       - name: Healthcheck ping (si HEALTHCHECK_URL défini)
         if: always()

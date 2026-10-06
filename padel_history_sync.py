@@ -18,6 +18,8 @@ import time
 import urllib.error
 import urllib.request
 
+import supabase_auth
+
 HISTORY_GZ = "padel_idf_history.json.gz"
 URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
 KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
@@ -25,13 +27,13 @@ BATCH = 500
 
 
 def http_post(path, body):
-    if not URL or not KEY:
-        raise RuntimeError("SUPABASE_URL / SUPABASE_SERVICE_KEY non définis")
+    if not URL:
+        raise RuntimeError("SUPABASE_URL non défini")
     data = json.dumps(body, ensure_ascii=False).encode("utf-8")
     req = urllib.request.Request(
         URL + path, data=data,
         headers={
-            "apikey": KEY, "Authorization": f"Bearer {KEY}",
+            **supabase_auth.entetes(),   # repli API Management si clé périmée
             "Content-Type": "application/json",
             "Prefer": "resolution=merge-duplicates,return=minimal",
         }, method="POST")

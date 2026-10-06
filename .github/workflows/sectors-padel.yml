@@ -58,9 +58,11 @@ jobs:
 
       # ============== SYNC SUPABASE ==============
       - name: Sync vers Supabase (padel_clubs + padel_slots)
+        id: sync_supabase
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_API || secrets.SUPABASE_ACCESS_TOKEN }}
         run: python3 padel_supabase_sync.py
         continue-on-error: true
 
@@ -77,6 +79,15 @@ jobs:
           # archivés dans le runner puis jetés avec lui, alors que le store
           # vivant élagué, lui, serait committé — donc perdus en local.
           ./ci_push.sh "Padel IDF scrape + insights ($(date -u +%Y-%m-%dT%H:%M)Z)" padel_idf_data.json padel_idf_history.json.gz padel_idf_creneaux.csv padel_idf_clubs.json doinsport_idf_clubs.json playtomic_idf_clubs.json padel_club_unified.json padel_etude_kpis.json padel_insights_data.json padel_anomalies.json
+      # Le sync reste en continue-on-error pour que le commit du scrape ait
+      # lieu quoi qu'il arrive — mais le run doit finir ROUGE s'il a échoué.
+      # Sans ce step, 10 jours de 401 (27/09 -> 06/10) sont passés au vert.
+      - name: Échec du sync Supabase -> run en rouge
+        if: steps.sync_supabase.outcome == 'failure'
+        run: |
+          echo "::error::Le sync Supabase a échoué : les données de ce run ne sont PAS en base (voir le step de sync)."
+          exit 1
+
       - name: Healthcheck ping (si HEALTHCHECK_URL défini)
         if: always()
         env:

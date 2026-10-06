@@ -23,6 +23,8 @@ import time
 import urllib.error
 import urllib.request
 
+import supabase_auth
+
 # Même politique incrémentale que le sync IDF : une seule définition d'empreinte
 # pour les deux, sinon elles divergent au premier patch.
 from padel_supabase_sync import empreinte, upsert_slots
@@ -35,13 +37,16 @@ BATCH = 500  # nombre de rows par requête PostgREST upsert
 
 
 def http(path, body, prefer="resolution=merge-duplicates,return=minimal"):
-    if not URL or not KEY:
-        raise RuntimeError("SUPABASE_URL / SUPABASE_SERVICE_KEY non définis")
+    if not URL:
+        raise RuntimeError("SUPABASE_URL non défini")
     data = json.dumps(body, ensure_ascii=False).encode("utf-8")
+    # La clé passe par supabase_auth : si SUPABASE_SERVICE_KEY est périmée,
+    # il redemande la clé courante à l'API Management au lieu de laisser
+    # chaque requête tomber en 401 (panne réelle du 27/09 au 06/10).
     req = urllib.request.Request(
         URL + path, data=data,
         headers={
-            "apikey": KEY, "Authorization": f"Bearer {KEY}",
+            **supabase_auth.entetes(),
             "Content-Type": "application/json", "Prefer": prefer,
         }, method="POST")
     with urllib.request.urlopen(req, timeout=60) as r:

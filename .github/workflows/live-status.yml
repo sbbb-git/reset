@@ -49,12 +49,23 @@ jobs:
           ./ci_push.sh "Scrap live statut ($(date -u +%Y-%m-%dT%H:%M)Z)" barrys_data.json barrys_seances.csv barrys.html episod_data.json episod_seances.csv episod.html anybuddy_data.json anybuddy_creneaux.csv anybuddy.html banote_data.json banote_seances.csv banote.html santroch_data.json santroch_seances.csv santroch.html
 
       - name: Sync vers Supabase (graceful)
+        id: sync_supabase
         if: always()
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_API || secrets.SUPABASE_ACCESS_TOKEN }}
         run: python3 supabase_sync.py
         continue-on-error: true
+
+      # Le sync reste en continue-on-error pour que le commit du scrape ait
+      # lieu quoi qu'il arrive — mais le run doit finir ROUGE s'il a échoué.
+      # Sans ce step, 10 jours de 401 (27/09 -> 06/10) sont passés au vert.
+      - name: Échec du sync Supabase -> run en rouge
+        if: steps.sync_supabase.outcome == 'failure'
+        run: |
+          echo "::error::Le sync Supabase a échoué : les données de ce run ne sont PAS en base (voir le step de sync)."
+          exit 1
 
       - name: Healthcheck ping (si HEALTHCHECK_URL défini)
         if: always()

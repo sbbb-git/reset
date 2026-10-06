@@ -8,6 +8,7 @@ Graceful : si SUPABASE_URL ou SUPABASE_SERVICE_KEY manquent, on no-op.
 
 Lancé via un workflow dédié (supabase-sync.yml) après les scrapes du jour.
 """
+import datetime as dt
 import glob
 import json
 import os
@@ -15,8 +16,28 @@ import sys
 import urllib.error
 import urllib.request
 
+import supabase_auth
+
 URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
 KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
+
+# Fenêtre d'envoi, en jours avant aujourd'hui. Ce script est appelé par SIX
+# workflows et renvoyait à chaque fois les 292 405 séances des 22 marques :
+# chaque renvoi crée une version morte en base, d'où le ballonnement de la
+# table sessions. Or une séance terminée depuis plus d'une semaine ne change
+# plus jamais — le gel rétroactif de `finie` (boucle de DNA, par exemple)
+# intervient dans les heures qui suivent la fin. On n'envoie donc que les
+# séances datées d'au plus SYNC_FENETRE_JOURS jours, plus toutes les futures.
+#
+# Le critère est la DATE DE LA SÉANCE et non `releve` : certains scrapers
+# figent `finie` sans retoucher `releve`, un filtre sur `releve` raterait ces
+# mises à jour.
+#
+# SYNC_FENETRE_JOURS=0 -> tout envoyer. À faire après une panne plus longue
+# que la fenêtre (cf. supabase-sync.yml, déclenchement manuel).
+FENETRE_JOURS = int(os.environ.get("SYNC_FENETRE_JOURS", "7"))
+LIMITE = ((dt.date.today() - dt.timedelta(days=FENETRE_JOURS)).isoformat()
+          if FENETRE_JOURS > 0 else None)
 
 # Métadonnées des marques (miroir de comparateur.html).
 # Une seule source de vérité pour les couleurs / catégories / plateformes.
@@ -48,15 +69,14 @@ BRANDS = {
 
 def _post(path, body, prefer="resolution=merge-duplicates,return=minimal"):
     """POST upsert vers PostgREST. Retourne True/False (graceful)."""
-    if not URL or not KEY:
+    if not URL:
         return False
     try:
         req = urllib.request.Request(
             URL + path,
             data=json.dumps(body, ensure_ascii=False).encode("utf-8"),
             headers={
-                "apikey": KEY,
-                "Authorization": f"Bearer {KEY}",
+                **supabase_auth.entetes(),
                 "Content-Type": "application/json",
                 "Prefer": prefer,
             },
@@ -91,6 +111,8 @@ def upsert_sessions(brand_key, records):
         date = r.get("date") or r.get("Date")
         if not date or len(str(date)) < 10:
             continue
+        if LIMITE and str(date)[:10] < LIMITE:
+            continue                       # séance figée, déjà en base
         sid = str(r.get("id") or r.get("key") or i)[:240]
         rows.append({
             "brand_key": brand_key,
@@ -144,9 +166,16 @@ def sync_brand(path):
 
 
 def main():
-    if not URL or not KEY:
-        print("SUPABASE_URL / SUPABASE_SERVICE_KEY absents -> sync ignorée.", file=sys.stderr)
+    if not URL:
+        print("SUPABASE_URL absent -> sync ignorée.", file=sys.stderr)
         return
+    # Résoudre la clé UNE fois, avant de boucler : si aucune n'est acceptée,
+    # échouer net avec un message utile plutôt que 600 lignes de 401.
+    try:
+        supabase_auth.cle()
+    except supabase_auth.AccesSupabaseImpossible as e:
+        print(f"::error::{e}")
+        sys.exit(1)
     files = sorted(glob.glob("*_data.json"))
     total = 0
     failed = 0
@@ -155,7 +184,12 @@ def main():
         total += n
         if not ok:
             failed += 1
-    print(f"\nTotal : {total} séances synchronisées, {failed} fichiers en échec.")
+    portee = f"séances datées depuis le {LIMITE}" if LIMITE else "TOUTES les séances"
+    print(f"\nTotal : {total} {portee} synchronisées, {failed} fichiers en échec.")
+    if failed and LIMITE:
+        print("  (si la panne a duré plus de "
+              f"{FENETRE_JOURS} jours, relancer supabase-sync.yml à la main avec "
+              "fenetre_jours=0 pour rattraper tout l'historique)")
     sys.exit(1 if failed else 0)
 
 

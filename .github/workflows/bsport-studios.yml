@@ -60,12 +60,23 @@ jobs:
           ./ci_push.sh "Scrap bsport ($(date -u +%Y-%m-%dT%H:%M)Z)" thenewme_data.json thenewme_seances.csv thenewme.html lecercle_data.json lecercle_seances.csv lecercle.html spacecycle_data.json spacecycle_seances.csv spacecycle.html poses_data.json poses_seances.csv poses.html belly_data.json belly_seances.csv belly.html athletx_data.json athletx_seances.csv athletx.html snakeandtwist_data.json snakeandtwist_seances.csv snakeandtwist.html driphiit_data.json driphiit_seances.csv driphiit.html kore_data.json kore_seances.csv kore.html
 
       - name: Sync vers Supabase (graceful)
+        id: sync_supabase
         if: always()
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_API || secrets.SUPABASE_ACCESS_TOKEN }}
         run: python3 supabase_sync.py
         continue-on-error: true
+
+      # Le sync reste en continue-on-error pour que le commit du scrape ait
+      # lieu quoi qu'il arrive — mais le run doit finir ROUGE s'il a échoué.
+      # Sans ce step, 10 jours de 401 (27/09 -> 06/10) sont passés au vert.
+      - name: Échec du sync Supabase -> run en rouge
+        if: steps.sync_supabase.outcome == 'failure'
+        run: |
+          echo "::error::Le sync Supabase a échoué : les données de ce run ne sont PAS en base (voir le step de sync)."
+          exit 1
 
       - name: Healthcheck ping (si HEALTHCHECK_URL défini)
         if: always()
