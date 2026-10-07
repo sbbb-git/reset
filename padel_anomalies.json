@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-07T15:22:31.504692",
+ "generated_at": "2026-10-07T20:46:09.188554",
  "idle_24h": [
   {
    "slug": "doinsport-fe8883b8-dd75-4f72-96d8-1a448611a164",
@@ -7,7 +7,7 @@
    "name": "FIVE ARENA",
    "cp": "77100",
    "last_seen": "2026-10-04 21:20",
-   "hours_idle": 66.0
+   "hours_idle": 71.4
   },
   {
    "slug": "doinsport-8413039f-d6c4-4fe5-86d6-dc3c40ed2775",
@@ -15,7 +15,7 @@
    "name": "Padel Pulsion",
    "cp": "91570",
    "last_seen": "2026-10-05 18:56",
-   "hours_idle": 44.4
+   "hours_idle": 49.8
   }
  ],
  "price_shifts": [
@@ -37,6 +37,16 @@
    "prix_30j": 30.0,
    "prix_recent": 18.0,
    "delta_pct": -40.0,
+   "direction": "baisse"
+  },
+  {
+   "slug": "doinsport-a2b85d75-c742-4f63-af80-b3df9ed76ddd",
+   "source": "doinsport",
+   "name": "Domaine de Lassy",
+   "cp": "95270",
+   "prix_30j": 72.0,
+   "prix_recent": 48.0,
+   "delta_pct": -33.3,
    "direction": "baisse"
   }
  ],
@@ -1445,9 +1455,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 91,
+  "total_anomalies": 92,
   "idle_24h": 2,
-  "price_shifts": 2,
+  "price_shifts": 3,
   "volume_drops": 87,
   "new_clubs_14d": 88
  }
