@@ -522,7 +522,7 @@ def scrape_brand(key, brand_cfg, resolved):
     status = res.get("status", "")
 
     # Statuts terminaux : skip silencieux
-    if status in ("skip", "defunct"):
+    if status in ("skip", "defunct", "blocked"):
         return
     if platform in ("defunct", "not_live"):
         return

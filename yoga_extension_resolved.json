@@ -326,9 +326,11 @@
   "slug": "pyra",
   "booking_url": "https://pyra.sportigo.club/",
   "detected_via": "https://pyra.paris/",
-  "checked_at": "2026-08-09 05:08",
+  "checked_at": "2026-10-07 10:00",
   "url": "https://pyra.paris/",
-  "attempts": 2
+  "attempts": 2,
+  "status": "blocked",
+  "note": "Bloqué (audit 07/10) : pyra.sportigo.club redirige vers /public/auth/login et pyra.paris ne répond plus — planning derrière un login, pas de source publique."
  },
  "hera_club": {
   "platform": "mindbody",
@@ -703,12 +705,13 @@
  "yuj_yoga_station_f": {
   "platform": "mindbody",
   "widget_id": null,
-  "note": "Mindbody detected mais widget_id introuvable — probablement SPA, Playwright requis",
+  "note": "Bloqué (audit 07/10) : YUJ a migré sur un nouveau site Mindbody (613201). Le widget healcode du site (42787, 1020364318b6 / 1020694018b6) répond mais vide pour tous les studios et toutes les dates, et la marketplace Mindbody (prod-mkt-gateway, locationSlugs yuj-yoga-studio-*) ne publie aucun cours. Réservation via l'app uniquement. Dernier relevé utile : 23/08.",
   "needs_playwright": true,
   "detected_via": "https://www.yujparis.com/en/pages/yuj-yoga-studio-station-f",
-  "checked_at": "2026-08-05 06:29",
+  "checked_at": "2026-10-07 10:00",
   "url": "https://www.yujparis.com/en/pages/yuj-yoga-studio-station-f",
-  "attempts": 1
+  "attempts": 1,
+  "status": "blocked"
  },
  "yoga_daguerre": {
   "platform": "unknown",
@@ -834,12 +837,13 @@
  "yuj_yoga_wagram": {
   "platform": "mindbody",
   "widget_id": null,
-  "note": "Mindbody detected mais widget_id introuvable — probablement SPA, Playwright requis",
+  "note": "Bloqué (audit 07/10) : YUJ a migré sur un nouveau site Mindbody (613201). Le widget healcode du site (42787, 1020364318b6 / 1020694018b6) répond mais vide pour tous les studios et toutes les dates, et la marketplace Mindbody (prod-mkt-gateway, locationSlugs yuj-yoga-studio-*) ne publie aucun cours. Réservation via l'app uniquement. Dernier relevé utile : 23/08.",
   "needs_playwright": true,
   "detected_via": "https://www.yujparis.com/en/pages/yuj-yoga-studio-wagram",
-  "checked_at": "2026-08-05 06:34",
+  "checked_at": "2026-10-07 10:00",
   "url": "https://www.yujparis.com/en/pages/yuj-yoga-studio-wagram",
-  "attempts": 1
+  "attempts": 1,
+  "status": "blocked"
  },
  "my_ginger": {
   "platform": "bsport",

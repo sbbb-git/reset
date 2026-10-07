@@ -14,6 +14,11 @@ on:
       fin:
         description: "Dernière date (AAAA-MM-JJ) — vide = J-8, veille de la fenêtre vivante"
         default: ""
+      perimetre:
+        description: "Périmètre"
+        type: choice
+        default: idf
+        options: [idf, national, tous]
 
 permissions:
   contents: read
@@ -27,8 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -39,4 +44,5 @@ jobs:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_API || secrets.SUPABASE_ACCESS_TOKEN }}
           BACKFILL_DEBUT: ${{ github.event.inputs.debut }}
           BACKFILL_FIN: ${{ github.event.inputs.fin }}
+          BACKFILL_PERIMETRE: ${{ github.event.inputs.perimetre }}
         run: python3 padel_backfill_archive.py

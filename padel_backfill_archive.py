@@ -24,7 +24,8 @@ exemple), et un upsert les aurait écrasées par du vide.
 À lancer APRÈS qu'un sync normal a réussi (les clubs récents doivent exister).
 
 Usage : BACKFILL_DEBUT=2026-09-15 BACKFILL_FIN=2026-09-28 python3 padel_backfill_archive.py
-        (FIN par défaut : J-8, la veille de la fenêtre vivante)
+        (FIN par défaut : J-8, la veille de la fenêtre vivante ;
+         BACKFILL_PERIMETRE = idf (défaut) | national | tous)
 """
 import datetime as dt
 import gzip
@@ -34,11 +35,11 @@ import os
 import sys
 import tempfile
 
-SOURCES = (
-    # archive,                           store vivant,               module de sync
-    ("padel_idf_history.json.gz",      "padel_idf_data.json",      "padel_supabase_sync"),
-    ("padel_national_history.json.gz", "padel_national_data.json", "padel_national_supabase_sync"),
-)
+SOURCES = {
+    # périmètre: (archive,                   store vivant,               module de sync)
+    "idf":      ("padel_idf_history.json.gz",      "padel_idf_data.json",      "padel_supabase_sync"),
+    "national": ("padel_national_history.json.gz", "padel_national_data.json", "padel_national_supabase_sync"),
+}
 
 
 def _charger(chemin, gz=False):
@@ -56,10 +57,18 @@ def main():
     if not debut:
         print("::error::BACKFILL_DEBUT requis (AAAA-MM-JJ)")
         sys.exit(1)
-    print(f"Rattrapage padel : créneaux archivés du {debut} au {fin}\n")
+    # IDF par défaut : le national n'a jamais été en base avant le 07/10, et
+    # ~100 000 créneaux d'historique hors IDF pèseraient ~40 Mo sur un quota
+    # de 500 Mo pour un intérêt faible. BACKFILL_PERIMETRE=tous pour les deux.
+    perimetre = (os.environ.get("BACKFILL_PERIMETRE") or "idf").strip().lower()
+    choix = list(SOURCES) if perimetre == "tous" else [perimetre]
+    if any(c not in SOURCES for c in choix):
+        print(f"::error::BACKFILL_PERIMETRE inconnu : {perimetre} (idf | national | tous)")
+        sys.exit(1)
+    print(f"Rattrapage padel ({', '.join(choix)}) : créneaux archivés du {debut} au {fin}\n")
 
     echecs = 0
-    for archive, vivant, module in SOURCES:
+    for archive, vivant, module in (SOURCES[c] for c in choix):
         arch = _charger(archive, gz=True)
         live = _charger(vivant)
         sous_store, n = {}, 0
