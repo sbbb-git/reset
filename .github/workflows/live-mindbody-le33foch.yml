@@ -31,8 +31,10 @@ jobs:
           playwright install --with-deps chromium
 
       - name: Le 33 Foch (HTTP + fallback Playwright si throttle)
+        # Pas de continue-on-error, comme DNA : le script ne sort en erreur que
+        # sur une panne prouvée (0 séance alors que la base en attend). Le run
+        # est resté vert du 05/10 au 07/10 sans rien rapporter.
         run: python3 le33foch_scrape.py
-        continue-on-error: true
 
       - name: Commit si changement
         run: |

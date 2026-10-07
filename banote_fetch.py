@@ -116,7 +116,7 @@ def parse_sessions(html_str, fallback_lieu):
     return out
 
 
-def fetch_all():
+def _fetch_all_legacy():
     # Un seul appel par widget : load_markup renvoie déjà le planning courant
     # (semaine en cours + suivantes). 3 requêtes -> rapide.
     today = dt.date.today().isoformat()
@@ -134,6 +134,32 @@ def fetch_all():
             s["widget"] = widget_id
             sessions.append(s)
     return sessions
+
+
+
+# Depuis le 05/10 vers 13h25, l'appel direct à load_markup ci-dessous renvoie
+# HTTP 500 pour ce widget — le store n'a plus bougé, sans qu'aucun run ne
+# passe au rouge. Le moteur commun engine_mindbody_healcode, qui sert déjà
+# DNA, récupère le même widget sans erreur (pacing, backoff, balayage
+# fenêtre par fenêtre). On passe donc par lui, l'ancien code reste en repli.
+# Les deux appliquent le même nettoyage des intitulés (_clean + préfixe
+# « CATÉGORIE - »), si bien que les clés métier des séances ne changent pas.
+def fetch_all(days=21):
+    try:
+        import engine_mindbody_healcode as healcode
+        seen, sessions = set(), []
+        for widget_id, location, fallback in WIDGETS:
+            for s in healcode.fetch_widget(widget_id, referer="https://www.banoteclub.com/",
+                                           lieu=fallback, days=days, location=location):
+                if s["id"] not in seen:
+                    seen.add(s["id"])
+                    sessions.append(s)
+        if sessions:
+            return sessions
+        print("  (moteur healcode : 0 séance, repli sur l'appel direct)", file=sys.stderr)
+    except Exception as e:  # noqa: BLE001
+        print(f"  (moteur healcode indispo : {e} — repli)", file=sys.stderr)
+    return _fetch_all_legacy()
 
 
 if __name__ == "__main__":

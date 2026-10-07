@@ -36,6 +36,7 @@ jobs:
         run: python3 anybuddy_scrape.py
         continue-on-error: true
       - name: Banote (Mindbody, statut)
+        id: scrape_banote
         run: python3 banote_scrape.py
         continue-on-error: true
       # DNA + Le33Foch sortis dans live-mindbody-dna.yml / live-mindbody-le33foch.yml
@@ -61,6 +62,12 @@ jobs:
       # Le sync reste en continue-on-error pour que le commit du scrape ait
       # lieu quoi qu'il arrive — mais le run doit finir ROUGE s'il a échoué.
       # Sans ce step, 10 jours de 401 (27/09 -> 06/10) sont passés au vert.
+      - name: Échec du scrape Banote -> run en rouge
+        if: steps.scrape_banote.outcome == 'failure'
+        run: |
+          echo "::error::banote_scrape.py n'a rapporté aucune séance alors que la base en attend (fetch en panne)."
+          exit 1
+
       - name: Échec du sync Supabase -> run en rouge
         if: steps.sync_supabase.outcome == 'failure'
         run: |

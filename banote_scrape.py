@@ -92,6 +92,17 @@ def capture():
     now = dt.datetime.now(PARIS)
     store = load_store()
     sessions = banote_fetch.fetch_all()
+    if not sessions:
+        # Garde anti-panne silencieuse (comme dna_scrape) : 0 séance alors que
+        # la base en attend encore = fetch en panne, pas planning vide. Sans
+        # elle, ce scraper est resté vert du 05/10 au 07/10 sans rien rapporter.
+        a_venir = sum(1 for v in store.values() if isinstance(v, dict)
+                      and not v.get("finie")
+                      and (v.get("date") or "") >= now.date().isoformat())
+        if a_venir:
+            print(f"::error::[banote] aucune séance rapportée alors que {a_venir} "
+                  f"séances à venir sont en base — fetch en panne", file=sys.stderr)
+            sys.exit(1)
     locked_now = 0
     for s in sessions:
         try:
