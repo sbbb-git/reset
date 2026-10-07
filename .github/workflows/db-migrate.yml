@@ -33,6 +33,7 @@ on:
           - supabase_diagnostic.sql
           - supabase_purge_doublons.sql
           - supabase_rollup_jour.sql
+          - supabase_padel_metro.sql
           - supabase_levier3_rollup.sql
           - supabase_levier1_vacuum.sql
           - supabase_levier2a_preparation.sql
@@ -72,6 +73,7 @@ jobs:
           autorises="supabase_diagnostic.sql
           supabase_purge_doublons.sql
           supabase_rollup_jour.sql
+          supabase_padel_metro.sql
           supabase_levier1_vacuum.sql
           supabase_levier2a_preparation.sql
           supabase_levier2b_bascule.sql
