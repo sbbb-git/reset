@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T18:47:57.297726",
+ "generated_at": "2026-10-13T01:12:20.377302",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,11 +9,11 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 80618,
-   "doinsport": 6267,
-   "urbanpadel": 7431
+   "anybuddy": 84389,
+   "doinsport": 6446,
+   "urbanpadel": 7960
   },
-  "n_sessions_live": 94316,
+  "n_sessions_live": 98795,
   "n_sessions_history": 794572,
   "pop_idf": 12258660
  },
@@ -36,7 +36,7 @@
    "revenu_median_uc": 24820,
    "clubs_padel": 22,
    "hab_par_club": 66017,
-   "prix_median_90min": 54
+   "prix_median_90min": 54.0
   },
   "78": {
    "nom": "Yvelines",
@@ -484,29 +484,29 @@
  "weather_period": "2024-01-01 → 2026-05-31",
  "maturity": {
   "anybuddy": {
+   "days_elapsed": 136,
+   "target_days": 180,
+   "pct": 76,
+   "note": "136j sur 180j (6 mois)"
+  },
+  "urbanpadel": {
    "days_elapsed": 135,
    "target_days": 180,
    "pct": 75,
    "note": "135j sur 180j (6 mois)"
   },
-  "urbanpadel": {
-   "days_elapsed": 134,
-   "target_days": 180,
-   "pct": 74,
-   "note": "134j sur 180j (6 mois)"
-  },
   "doinsport": {
-   "days_elapsed": 1015,
+   "days_elapsed": 1016,
    "target_days": 180,
    "pct": 100,
    "note": "historique rétroactif disponible"
   },
   "playtomic": {
-   "days_elapsed": 134,
+   "days_elapsed": 135,
    "target_days": 180,
-   "pct": 74,
-   "note": "134j sur 180j (6 mois)"
+   "pct": 75,
+   "note": "135j sur 180j (6 mois)"
   },
-  "_global_pct": 84
+  "_global_pct": 85
  }
 }
