@@ -1,6 +1,6 @@
 {
- "avec_creneaux": 204,
- "couverture": "companies bsport 1 → 3200 (sur 8000), tour 0",
+ "avec_creneaux": 219,
+ "couverture": "companies bsport 1 → 3600 (sur 8000), tour 0",
  "enseignes": [
   {
    "company_id": "6944",
@@ -21,6 +21,66 @@
    "nb_lieux": 1,
    "premier_vu": "2026-10-12",
    "ville": "Bois-Colombes"
+  },
+  {
+   "company_id": "6935",
+   "cp": "93230",
+   "creneaux": true,
+   "enseigne": "SF Studio",
+   "lieux": [
+    {
+     "adresse": "12 Av. de Verdun, 93230 Romainville, France",
+     "cp": "93230",
+     "creneaux": true,
+     "lat": 48.8837009,
+     "lng": 2.4393346,
+     "nom": "SF Studio",
+     "ville": "Romainville"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-10-19",
+   "ville": "Romainville"
+  },
+  {
+   "company_id": "6918",
+   "cp": "93310",
+   "creneaux": true,
+   "enseigne": "ORA Studio",
+   "lieux": [
+    {
+     "adresse": "14 Rue Gabriel Péri, 93310 Le Pré-Saint-Gervais, France",
+     "cp": "93310",
+     "creneaux": true,
+     "lat": 48.8854854,
+     "lng": 2.4050541,
+     "nom": "ORA Studio",
+     "ville": "Le Pré-Saint-Gervais"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-10-19",
+   "ville": "Le Pré-Saint-Gervais"
+  },
+  {
+   "company_id": "6905",
+   "cp": "93360",
+   "creneaux": true,
+   "enseigne": "AMBERKOSSY REFORMER",
+   "lieux": [
+    {
+     "adresse": "7 Av. du Maréchal Foch, 93360 Neuilly-Plaisance, France",
+     "cp": "93360",
+     "creneaux": true,
+     "lat": 48.8637666,
+     "lng": 2.5006511,
+     "nom": "AMBERKOSSY REFORMER",
+     "ville": "Neuilly-Plaisance"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-10-12",
+   "ville": "Neuilly-Plaisance"
   },
   {
    "company_id": "6902",
@@ -633,27 +693,429 @@
    "ville": "Paris"
   },
   {
+   "company_id": "3592",
+   "cp": "75011",
+   "creneaux": true,
+   "enseigne": "Pullman Paris Tour Eiffel - Rooftop 10e ciel",
+   "lieux": [
+    {
+     "adresse": "17 R. Bréguet, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": false,
+     "lat": 48.8577641,
+     "lng": 2.3735641,
+     "nom": "CORPOZ STUDIO",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "18 Bis Rue de Villiers, 92300 Levallois-Perret, France",
+     "cp": "92300",
+     "creneaux": false,
+     "lat": 48.8879661,
+     "lng": 2.2823082,
+     "nom": "Morning Levallois",
+     "ville": "Levallois-Perret"
+    },
+    {
+     "adresse": "71 Rue de Miromesnil, 75008 Paris, France",
+     "cp": "75008",
+     "creneaux": false,
+     "lat": 48.87717749999999,
+     "lng": 2.3154409,
+     "nom": "Morning Miromesnil",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "179 Av. Charles de Gaulle, 92200 Neuilly-sur-Seine, France",
+     "cp": "92200",
+     "creneaux": true,
+     "lat": 48.8826709,
+     "lng": 2.268323,
+     "nom": "Morning Pont de Neuilly",
+     "ville": "Neuilly-sur-Seine"
+    },
+    {
+     "adresse": "91 Rue Alexandre Dumas, 75020 Paris, France",
+     "cp": "75020",
+     "creneaux": false,
+     "lat": 48.8540364,
+     "lng": 2.3947401,
+     "nom": "My fitness Studio",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "147 Rue Cardinet, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": false,
+     "lat": 48.8904777,
+     "lng": 2.3160004,
+     "nom": "Parc Clichy-Batignolles Martin Luther King",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "18 Av. de Suffren, 75015 Paris, France",
+     "cp": "75015",
+     "creneaux": true,
+     "lat": 48.8558546,
+     "lng": 2.2932682,
+     "nom": "Pullman Paris Tour Eiffel - Rooftop 10e ciel",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 7,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3469",
+   "cp": "75016",
+   "creneaux": true,
+   "enseigne": "5 - Bellini Yoga & HIIT",
+   "lieux": [
+    {
+     "adresse": "8 Rue Bellini, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.8608856,
+     "lng": 2.2822549,
+     "nom": "1 - Bellini Pilates 1",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "8 Rue Bellini, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.8608856,
+     "lng": 2.2822549,
+     "nom": "2 - Bellini Pilates 2",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "8 Rue Bellini, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.8608856,
+     "lng": 2.2822549,
+     "nom": "3 - Bellini Cycling",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "8 Rue Bellini, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.8608856,
+     "lng": 2.2822549,
+     "nom": "4 - Bellini Rameur",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "8 Rue Bellini, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.8608856,
+     "lng": 2.2822549,
+     "nom": "5 - Bellini Yoga & HIIT",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 5,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3451",
+   "cp": "75013",
+   "creneaux": true,
+   "enseigne": "Studio Naamasté",
+   "lieux": [
+    {
+     "adresse": "39-41 Rue de Croulebarbe, 75013 Paris, France",
+     "cp": "75013",
+     "creneaux": true,
+     "lat": 48.8322271,
+     "lng": 2.3505747,
+     "nom": "Studio Naamasté",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3448",
+   "cp": "75011",
+   "creneaux": true,
+   "enseigne": "Cycle de 3 séances",
+   "lieux": [
+    {
+     "adresse": "18 Bd Voltaire, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": true,
+     "lat": 48.8654121,
+     "lng": 2.3670016,
+     "nom": "Atelier",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "18 Bd Voltaire, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": true,
+     "lat": 48.8651894,
+     "lng": 2.3673472,
+     "nom": "Cycle de 3 séances",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "18 Bd Voltaire, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": true,
+     "lat": 48.8651894,
+     "lng": 2.3673472,
+     "nom": "Séance à l'unité",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "18 Bd Voltaire, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": false,
+     "lat": 48.8654121,
+     "lng": 2.3670016,
+     "nom": "Session de lecture",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 4,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3415",
+   "cp": "75009",
+   "creneaux": true,
+   "enseigne": "Salle 1 (Bonne-Nouvelle)",
+   "lieux": [
+    {
+     "adresse": "59 Rue Blanche, 75009 Paris, France",
+     "cp": "75009",
+     "creneaux": true,
+     "lat": 48.8817271,
+     "lng": 2.331543,
+     "nom": "Fit'Ballet (Blanche)",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "3 Rue d'Hauteville, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": true,
+     "lat": 48.871212,
+     "lng": 2.3493657,
+     "nom": "Salle 1 (Bonne-Nouvelle)",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "3 Rue d'Hauteville, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": true,
+     "lat": 48.871212,
+     "lng": 2.3493657,
+     "nom": "Salle 2 (Bonne-Nouvelle)",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 3,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3392",
+   "cp": "78000",
+   "creneaux": true,
+   "enseigne": "salle individuelle Pilates",
+   "lieux": [
+    {
+     "adresse": "40 Rue d'Angiviller, 78000 Versailles, France",
+     "cp": "78000",
+     "creneaux": true,
+     "lat": 48.8098545,
+     "lng": 2.133458,
+     "nom": "salle collective Pilates",
+     "ville": "Versailles"
+    },
+    {
+     "adresse": "40 Rue d'Angiviller, 78000 Versailles, France",
+     "cp": "78000",
+     "creneaux": false,
+     "lat": 48.8098545,
+     "lng": 2.133458,
+     "nom": "salle individuelle Pilates",
+     "ville": "Versailles"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-10-19",
+   "ville": "Versailles"
+  },
+  {
+   "company_id": "3346",
+   "cp": "75012",
+   "creneaux": true,
+   "enseigne": "Cerce (Espace Pratique)",
+   "lieux": [
+    {
+     "adresse": "7 Imp. Crozatier, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": true,
+     "lat": 48.8482116,
+     "lng": 2.3796263,
+     "nom": "Cerce (Espace Pratique)",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "7 Imp. Crozatier, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": false,
+     "lat": 48.8482116,
+     "lng": 2.3796263,
+     "nom": "Cerce (Espace RDV)",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "7 Imp. Crozatier, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": false,
+     "lat": 48.8482116,
+     "lng": 2.3796263,
+     "nom": "Espace Tatami",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 3,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3335",
+   "cp": "75018",
+   "creneaux": true,
+   "enseigne": "Studio Yogaismyland",
+   "lieux": [
+    {
+     "adresse": "20 Rue Tholozé, 75018 Paris, France",
+     "cp": "75018",
+     "creneaux": true,
+     "lat": 48.886729,
+     "lng": 2.3358802,
+     "nom": "Studio Yogaismyland",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3323",
+   "cp": "92600",
+   "creneaux": true,
+   "enseigne": "GoGain x CPadel Asnières",
+   "lieux": [
+    {
+     "adresse": "19 Rue du Jardin Modèle, 92600 Asnières-sur-Seine, France",
+     "cp": "92600",
+     "creneaux": true,
+     "lat": 48.91481,
+     "lng": 2.305717,
+     "nom": "GoGain x CPadel Asnières",
+     "ville": "Asnières-sur-Seine"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-10-19",
+   "ville": "Asnières-sur-Seine"
+  },
+  {
+   "company_id": "3255",
+   "cp": "78960",
+   "creneaux": true,
+   "enseigne": "Skin Pole Dance studio",
+   "lieux": [
+    {
+     "adresse": "30 Av. Robert Surcouf, 78960 Voisins-le-Bretonneux, France",
+     "cp": "78960",
+     "creneaux": true,
+     "lat": 48.7654752,
+     "lng": 2.0581686,
+     "nom": "Skin Pole Dance studio",
+     "ville": "Voisins-le-Bretonneux"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-10-19",
+   "ville": "Voisins-le-Bretonneux"
+  },
+  {
+   "company_id": "3232",
+   "cp": "75002",
+   "creneaux": true,
+   "enseigne": "Adrénaline Salle du haut",
+   "lieux": [
+    {
+     "adresse": "122 Rue d'Aboukir, 75002 Paris, France",
+     "cp": "75002",
+     "creneaux": true,
+     "lat": 48.8688164,
+     "lng": 2.3508432,
+     "nom": "Adrénaline Athletics",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "122 Rue d'Aboukir, 75002 Paris, France",
+     "cp": "75002",
+     "creneaux": false,
+     "lat": 48.8688164,
+     "lng": 2.3508432,
+     "nom": "Adrénaline Salle du haut",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3217",
+   "cp": "75002",
+   "creneaux": true,
+   "enseigne": "Mama yoga Sentier",
+   "lieux": [
+    {
+     "adresse": "10 Rue des Jeuneurs, 75002 Paris, France",
+     "cp": "75002",
+     "creneaux": true,
+     "lat": 48.8690538,
+     "lng": 2.3469124,
+     "nom": "Mama yoga Sentier",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
    "company_id": "3167",
-   "cp": "75001",
+   "cp": "75002",
    "creneaux": true,
    "enseigne": "EVÈNEMENT EXTERIEUR",
    "lieux": [
-    {
-     "adresse": "6 Rue Duphot, 75001 Paris, France",
-     "cp": "75001",
-     "creneaux": true,
-     "lat": 48.867888,
-     "lng": 2.32582,
-     "nom": "EVÈNEMENT EXTERIEUR",
-     "ville": "Paris"
-    },
     {
      "adresse": "59 Rue de Richelieu, 75002 Paris, France",
      "cp": "75002",
      "creneaux": true,
      "lat": 48.8669798,
      "lng": 2.3372496,
-     "nom": "Studio Beauté",
+     "nom": "Studio Santé",
      "ville": "Paris"
     },
     {
@@ -671,7 +1133,16 @@
      "creneaux": true,
      "lat": 48.8669798,
      "lng": 2.3372496,
-     "nom": "Studio Santé",
+     "nom": "Studio Beauté",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "6 Rue Duphot, 75001 Paris, France",
+     "cp": "75001",
+     "creneaux": true,
+     "lat": 48.867888,
+     "lng": 2.32582,
+     "nom": "EVÈNEMENT EXTERIEUR",
      "ville": "Paris"
     }
    ],
@@ -706,21 +1177,21 @@
    "enseigne": "Salle de Reformer/ Wall Unit",
    "lieux": [
     {
-     "adresse": "STUDIO PILATES  16               111 Rue de Longchamp, 75016 Paris, France",
-     "cp": "75016",
-     "creneaux": true,
-     "lat": 48.866673,
-     "lng": 2.279372,
-     "nom": "Salle de danse",
-     "ville": "Paris"
-    },
-    {
      "adresse": "STUDIO PILATES 16         111 Rue de Longchamp, 75016 Paris, France",
      "cp": "75016",
      "creneaux": true,
      "lat": 48.864831216174345,
      "lng": 2.2423267364501958,
      "nom": "Salle de Reformer/ Wall Unit",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "STUDIO PILATES  16               111 Rue de Longchamp, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.866673,
+     "lng": 2.279372,
+     "nom": "Salle de danse",
      "ville": "Paris"
     }
    ],
@@ -775,6 +1246,15 @@
     {
      "adresse": "3 Rue Campagne Première, 75014 Paris, France",
      "cp": "75014",
+     "creneaux": false,
+     "lat": 48.8401866,
+     "lng": 2.3334747,
+     "nom": "Salle 2 (tempérée)",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "3 Rue Campagne Première, 75014 Paris, France",
+     "cp": "75014",
      "creneaux": true,
      "lat": 48.8401866,
      "lng": 2.3334747,
@@ -788,15 +1268,6 @@
      "lat": 48.8401866,
      "lng": 2.3334747,
      "nom": "Salle 2 - Pilates Reformer",
-     "ville": "Paris"
-    },
-    {
-     "adresse": "3 Rue Campagne Première, 75014 Paris, France",
-     "cp": "75014",
-     "creneaux": false,
-     "lat": 48.8401866,
-     "lng": 2.3334747,
-     "nom": "Salle 2 (tempérée)",
      "ville": "Paris"
     }
    ],
@@ -829,15 +1300,6 @@
      "ville": "Nanterre"
     },
     {
-     "adresse": "200 Av. de la République, 92000 Nanterre, France",
-     "cp": "92000",
-     "creneaux": true,
-     "lat": 48.9032204,
-     "lng": 2.2113056,
-     "nom": "INFINITY NANTERRE UNIVERSITÉ - Centre sportive - SUAPS",
-     "ville": "Nanterre"
-    },
-    {
      "adresse": "5 Rue Eblé, 75007 Paris, France",
      "cp": "75007",
      "creneaux": true,
@@ -845,6 +1307,15 @@
      "lng": 2.314288700000001,
      "nom": "INFINITY PARIS @RACING CLUB DE FRANCE",
      "ville": "Paris"
+    },
+    {
+     "adresse": "200 Av. de la République, 92000 Nanterre, France",
+     "cp": "92000",
+     "creneaux": true,
+     "lat": 48.9032204,
+     "lng": 2.2113056,
+     "nom": "INFINITY NANTERRE UNIVERSITÉ - Centre sportive - SUAPS",
+     "ville": "Nanterre"
     }
    ],
    "nb_lieux": 4,
@@ -1018,19 +1489,10 @@
   },
   {
    "company_id": "2854",
-   "cp": "75007",
+   "cp": "75015",
    "creneaux": true,
    "enseigne": "Bonnotte Club",
    "lieux": [
-    {
-     "adresse": "Port de Suffren, 75007 Paris, France",
-     "cp": "75007",
-     "creneaux": false,
-     "lat": 48.858924,
-     "lng": 2.291863,
-     "nom": "Bonnotte Club",
-     "ville": "Paris"
-    },
     {
      "adresse": "105 Rue de Javel, 75015 Paris, France",
      "cp": "75015",
@@ -1038,6 +1500,15 @@
      "lat": 48.8439013,
      "lng": 2.286213,
      "nom": "Studio Else",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "Port de Suffren, 75007 Paris, France",
+     "cp": "75007",
+     "creneaux": false,
+     "lat": 48.858924,
+     "lng": 2.291863,
+     "nom": "Bonnotte Club",
      "ville": "Paris"
     }
    ],
@@ -8709,24 +9180,24 @@
    "ville": "A domicile"
   },
   {
-   "company_id": "6905",
-   "cp": "93360",
+   "company_id": "6937",
+   "cp": "92250",
    "creneaux": false,
-   "enseigne": "AMBERKOSSY REFORMER",
+   "enseigne": "Club Pilates La Garenne Colombes",
    "lieux": [
     {
-     "adresse": "7 Av. du Maréchal Foch, 93360 Neuilly-Plaisance, France",
-     "cp": "93360",
+     "adresse": "102 Bis Bd de la République, 92250 La Garenne-Colombes, France",
+     "cp": "92250",
      "creneaux": false,
-     "lat": 48.8637666,
-     "lng": 2.5006511,
-     "nom": "AMBERKOSSY REFORMER",
-     "ville": "Neuilly-Plaisance"
+     "lat": 48.9074767,
+     "lng": 2.24057,
+     "nom": "Club Pilates La Garenne Colombes",
+     "ville": "La Garenne-Colombes"
     }
    ],
    "nb_lieux": 1,
-   "premier_vu": "2026-10-12",
-   "ville": "Neuilly-Plaisance"
+   "premier_vu": "2026-10-19",
+   "ville": "La Garenne-Colombes"
   },
   {
    "company_id": "6868",
@@ -9099,6 +9570,319 @@
    "ville": "Paris"
   },
   {
+   "company_id": "3568",
+   "cp": "77600",
+   "creneaux": false,
+   "enseigne": "Chanteloup en Brie",
+   "lieux": [
+    {
+     "adresse": "3 Rue de la Découverte, 77600 Chanteloup-en-Brie, France",
+     "cp": "77600",
+     "creneaux": false,
+     "lat": 48.85953370000001,
+     "lng": 2.7488131,
+     "nom": "Chanteloup en Brie",
+     "ville": "Chanteloup-en-Brie"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-10-19",
+   "ville": "Chanteloup-en-Brie"
+  },
+  {
+   "company_id": "3531",
+   "cp": "75010",
+   "creneaux": false,
+   "enseigne": "LE STUDIO",
+   "lieux": [
+    {
+     "adresse": "2 Rue de Paradis, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": false,
+     "lat": 48.875142,
+     "lng": 2.3518678,
+     "nom": "LE STUDIO",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3524",
+   "cp": "75017",
+   "creneaux": false,
+   "enseigne": "Salle cours collectifs Pereire",
+   "lieux": [
+    {
+     "adresse": "28B Bd Pereire, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": false,
+     "lat": 48.8880653,
+     "lng": 2.3076441,
+     "nom": "Plateau technique Pereire",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "77 Rue Cardinet, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": false,
+     "lat": 48.884253,
+     "lng": 2.3090309,
+     "nom": "Salle Cardinet",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "28B Bd Pereire, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": false,
+     "lat": 48.8880653,
+     "lng": 2.3076441,
+     "nom": "Salle cours collectifs Pereire",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 3,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3445",
+   "cp": "91210",
+   "creneaux": false,
+   "enseigne": "L'institut",
+   "lieux": [
+    {
+     "adresse": "12 Rue de Mainville, 91210 Draveil, France",
+     "cp": "91210",
+     "creneaux": false,
+     "lat": 48.6858657,
+     "lng": 2.4118678,
+     "nom": "Le Studio",
+     "ville": "Draveil"
+    },
+    {
+     "adresse": "12 Rue de Mainville, 91210 Draveil, France",
+     "cp": "91210",
+     "creneaux": false,
+     "lat": 48.6858657,
+     "lng": 2.4118678,
+     "nom": "L'institut",
+     "ville": "Draveil"
+    },
+    {
+     "adresse": "36 Pl. de la République, 91210 Draveil, France",
+     "cp": "91210",
+     "creneaux": false,
+     "lat": 48.6856642,
+     "lng": 2.4107784,
+     "nom": "L'onglerie",
+     "ville": "Draveil"
+    }
+   ],
+   "nb_lieux": 3,
+   "premier_vu": "2026-10-19",
+   "ville": "Draveil"
+  },
+  {
+   "company_id": "3331",
+   "cp": "75007",
+   "creneaux": false,
+   "enseigne": "Om Vida",
+   "lieux": [
+    {
+     "adresse": "3 Rue Valadon, 75007 Paris, France",
+     "cp": "75007",
+     "creneaux": false,
+     "lat": 48.8573162,
+     "lng": 2.3056171,
+     "nom": "Om Vida",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "15 Rue de l'École de Médecine, 75006 Paris, France",
+     "cp": "75006",
+     "creneaux": false,
+     "lat": 48.8505903,
+     "lng": 2.3411616,
+     "nom": "Paris",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3320",
+   "cp": "93206",
+   "creneaux": false,
+   "enseigne": "GoGain x CPadel Saint Denis",
+   "lieux": [
+    {
+     "adresse": "103 Rue Charles Michels, 93206 Saint-Denis, France",
+     "cp": "93206",
+     "creneaux": false,
+     "lat": 48.9299749,
+     "lng": 2.343679,
+     "nom": "GoGain x CPadel Saint Denis",
+     "ville": "Saint-Denis"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-10-19",
+   "ville": "Saint-Denis"
+  },
+  {
+   "company_id": "3305",
+   "cp": "75012",
+   "creneaux": false,
+   "enseigne": "Alain mimoun - COURTS EXTERIEURS (4 ou 5)",
+   "lieux": [
+    {
+     "adresse": "15 Rue de la Nouvelle-Calédonie, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": false,
+     "lat": 48.8382699,
+     "lng": 2.4106674,
+     "nom": "Alain Mimoun - COURTS COUVERTS",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "Rue de la Nouvelle-Calédonie, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": false,
+     "lat": 48.8379578,
+     "lng": 2.4100004,
+     "nom": "Alain mimoun - COURTS EXTERIEURS (4 ou 5)",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "Bd Carnot, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": false,
+     "lat": 48.8440191,
+     "lng": 2.4130572,
+     "nom": "Carnot",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "32 Rue des Docteurs Dejerine, 75020 Paris, France",
+     "cp": "75020",
+     "creneaux": false,
+     "lat": 48.8564502,
+     "lng": 2.4122842,
+     "nom": "Docteur Dejerine",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "20 Rue Baudin, 93100 Montreuil, France",
+     "cp": "93100",
+     "creneaux": false,
+     "lat": 48.8679382,
+     "lng": 2.4478308,
+     "nom": "Montreuil - Club Tennis Energy",
+     "ville": "Montreuil"
+    },
+    {
+     "adresse": "13 Rue Alphonse Penaud, 75020 Paris, France",
+     "cp": "75020",
+     "creneaux": false,
+     "lat": 48.8679962,
+     "lng": 2.4071778,
+     "nom": "Porte de bagnolet (court EXTERIEUR)",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "3 Rue Max Jacob, 75013 Paris, France",
+     "cp": "75013",
+     "creneaux": false,
+     "lat": 48.8203238,
+     "lng": 2.3538166,
+     "nom": "Poterne des peupliers",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "7 Av. Paul Appell, 75014 Paris, France",
+     "cp": "75014",
+     "creneaux": false,
+     "lat": 48.8207846,
+     "lng": 2.3271251,
+     "nom": "Stade Elisabeth (terrain couvert N°8/9)",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 8,
+   "premier_vu": "2026-10-19",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "3226",
+   "cp": "93500",
+   "creneaux": false,
+   "enseigne": "Maison de quartier Courtillières",
+   "lieux": [
+    {
+     "adresse": "34 Rue Cartier Bresson, 93500 Pantin, France",
+     "cp": "93500",
+     "creneaux": false,
+     "lat": 48.9026955,
+     "lng": 2.3965943,
+     "nom": "Cantine Pas Si Loin",
+     "ville": "Pantin"
+    },
+    {
+     "adresse": "1 Rue Berthier, 93500 Pantin, France",
+     "cp": "93500",
+     "creneaux": false,
+     "lat": 48.90071320000001,
+     "lng": 2.3913478,
+     "nom": "L'atelier Pas Si Loin",
+     "ville": "Pantin"
+    },
+    {
+     "adresse": "37 Rue Magenta, 93500 Pantin, France",
+     "cp": "93500",
+     "creneaux": false,
+     "lat": 48.9005422,
+     "lng": 2.3942862,
+     "nom": "Les Toits de Pantin",
+     "ville": "Pantin"
+    },
+    {
+     "adresse": "1 Av. Aimé Césaire, 93500 Pantin, France",
+     "cp": "93500",
+     "creneaux": false,
+     "lat": 48.9135901,
+     "lng": 2.4083837,
+     "nom": "Maison de quartier Courtillières",
+     "ville": "Pantin"
+    },
+    {
+     "adresse": "12 Rue Scandicci, 93500 Pantin, France",
+     "cp": "93500",
+     "creneaux": false,
+     "lat": 48.8914286,
+     "lng": 2.3987356,
+     "nom": "Maison de Quartier Mairie Ourcq",
+     "ville": "Pantin"
+    },
+    {
+     "adresse": "31bis Rue Courtois Residence Aix Doré, 93500 Pantin, France",
+     "cp": "93500",
+     "creneaux": false,
+     "lat": 48.8903925,
+     "lng": 2.4171278,
+     "nom": "Salle HOME",
+     "ville": "Pantin"
+    }
+   ],
+   "nb_lieux": 6,
+   "premier_vu": "2026-10-19",
+   "ville": "Pantin"
+  },
+  {
    "company_id": "3168",
    "cp": "92500",
    "creneaux": false,
@@ -9247,19 +10031,10 @@
   },
   {
    "company_id": "2977",
-   "cp": "75016",
+   "cp": "93500",
    "creneaux": false,
    "enseigne": "STUDIO 12EME ARR",
    "lieux": [
-    {
-     "adresse": "26 Av. de New York, 75016 Paris, France",
-     "cp": "75016",
-     "creneaux": false,
-     "lat": 48.863404,
-     "lng": 2.2959242,
-     "nom": "CONSERVATOIRE",
-     "ville": "Paris"
-    },
     {
      "adresse": "100 Av. du Général Leclerc, 93500 Pantin, France",
      "cp": "93500",
@@ -9277,11 +10052,20 @@
      "lng": 2.3843472,
      "nom": "STUDIO 12EME ARR",
      "ville": "Paris"
+    },
+    {
+     "adresse": "26 Av. de New York, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": false,
+     "lat": 48.863404,
+     "lng": 2.2959242,
+     "nom": "CONSERVATOIRE",
+     "ville": "Paris"
     }
    ],
    "nb_lieux": 3,
    "premier_vu": "2026-10-12",
-   "ville": "Paris"
+   "ville": "Pantin"
   },
   {
    "company_id": "2922",
@@ -16353,7 +17137,7 @@
    "ville": "Paris"
   }
  ],
- "enseignes_non_suivies": 408,
- "genere": "2026-10-12 13:14",
- "total_idf_recenses": 1932
+ "enseignes_non_suivies": 431,
+ "genere": "2026-10-19 10:50",
+ "total_idf_recenses": 2003
 }
