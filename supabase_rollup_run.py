@@ -11,7 +11,7 @@ Avantage secondaire, et il compte : le traitement est REPRENABLE. Si le run
 est coupé, ce qui est déjà replié l'est ; le suivant repart du plus ancien
 jour restant, sans rien rejouer.
 
-Usage : JOURS_GARDES=30 python3 supabase_rollup_run.py
+Usage : JOURS_GARDES=7 python3 supabase_rollup_run.py
 """
 import datetime as dt
 import json
@@ -22,7 +22,7 @@ import urllib.error
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from supabase_exec_sql import executer, project_ref  # noqa: E402
 
-JOURS = int(os.environ.get("JOURS_GARDES", "30"))
+JOURS = int(os.environ.get("JOURS_GARDES", "7"))
 MAX_JOURS_PAR_RUN = int(os.environ.get("MAX_JOURS_PAR_RUN", "400"))
 
 

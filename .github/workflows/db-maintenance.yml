@@ -7,6 +7,11 @@ name: Base · rollup padel + entretien
 # La fonction padel_rollup() fait tout côté serveur, avec un contrôle bloquant
 # avant suppression : si la somme des créneaux agrégés ne retrouve pas le
 # nombre de lignes brutes de la période, elle lève et rien n'est supprimé.
+#
+# Rétention du brut : 7 jours (30 jusqu'au 21/10). Avec le padel national,
+# 30 jours de brut auraient porté padel_slots vers ~200 Mo ; 7 jours suffisent
+# puisque padel_stats_horaire garde tout l'historique agrégé, et c'est aussi
+# la fenêtre passée des stores locaux (7 j passé / 14 j futur).
 
 on:
   schedule:
@@ -15,7 +20,7 @@ on:
     inputs:
       jours_gardes:
         description: "Jours de brut à conserver"
-        default: "30"
+        default: "7"
 
 permissions:
   contents: read
@@ -38,7 +43,7 @@ jobs:
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_API || secrets.SUPABASE_ACCESS_TOKEN }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          JOURS_GARDES: ${{ github.event.inputs.jours_gardes || '30' }}
+          JOURS_GARDES: ${{ github.event.inputs.jours_gardes || '7' }}
         run: python3 supabase_rollup_run.py
 
       - name: Healthcheck ping
