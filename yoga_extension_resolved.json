@@ -413,11 +413,12 @@
  },
  "m_yoga_boulogne": {
   "platform": "bsport",
-  "company_id": null,
-  "note": "bsport detected mais ID introuvable",
+  "company_id": "175",
+  "note": "bsport company 175 (trouvé par la veille lieux). Historique importé depuis 01/2025 le 21/10.",
   "detected_via": "https://m-yoga.fr/",
-  "checked_at": "2026-06-16 12:10",
-  "url": "https://m-yoga.fr/"
+  "checked_at": "2026-10-21 22:23",
+  "url": "https://m-yoga.fr/",
+  "status": "resolved"
  },
  "yoga92": {
   "platform": "bsport",
