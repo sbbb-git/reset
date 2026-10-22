@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-22T10:32:10.895769",
+ "generated_at": "2026-10-22T15:36:15.685590",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -20,6 +20,16 @@
    "prix_30j": 18.0,
    "prix_recent": 27.0,
    "delta_pct": 50.0,
+   "direction": "hausse"
+  },
+  {
+   "slug": "sportoo-goussainville",
+   "source": "anybuddy",
+   "name": "sportoo-goussainville",
+   "cp": "95190",
+   "prix_30j": 52.0,
+   "prix_recent": 68.0,
+   "delta_pct": 30.8,
    "direction": "hausse"
   }
  ],
@@ -1428,9 +1438,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 89,
+  "total_anomalies": 90,
   "idle_24h": 0,
-  "price_shifts": 2,
+  "price_shifts": 3,
   "volume_drops": 87,
   "new_clubs_14d": 88
  }
