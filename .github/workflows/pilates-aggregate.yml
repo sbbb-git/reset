@@ -33,9 +33,12 @@ jobs:
       - name: Aggregate Pilates brands → pilates_idf_data.json
         run: python3 pilates_idf_compute.py
 
+      - name: Observatoire → observatoire_data.json (toutes marques, ~1 Mo)
+        run: python3 observatoire_build.py
+
       - name: Commit si changement
         run: |
-          ./ci_push.sh "Pilates IDF aggregate ($(date -u +%Y-%m-%dT%H:%M)Z)" pilates_idf_data.json
+          ./ci_push.sh "Pilates IDF aggregate ($(date -u +%Y-%m-%dT%H:%M)Z)" pilates_idf_data.json observatoire_data.json
 
       - name: Healthcheck ping (si HEALTHCHECK_URL défini)
         if: always()

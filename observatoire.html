@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<script>if(sessionStorage.getItem("auth_ok")!=="1")location.replace("login.html?next="+encodeURIComponent(location.pathname.split("/").pop()+location.hash));</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Observatoire</title>
+<style>
+:root{
+  color-scheme:light;
+  --page:#f9f9f7; --surface:#fcfcfb; --surface-2:#f3f2ef; --hover:#efeee9;
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --accent:#2a78d6; --accent-soft:#e3eefb;
+  --up:#006300; --down:#d03b3b;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100;
+  --seq-0:#f3f2ef; --seq-1:#cde2fb; --seq-2:#9ec5f4; --seq-3:#6da7ec; --seq-4:#3987e5; --seq-5:#256abf; --seq-6:#184f95;
+  --shadow:0 1px 2px rgba(11,11,11,.04),0 8px 24px rgba(11,11,11,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme:dark;
+    --page:#0d0d0d; --surface:#1a1a19; --surface-2:#232321; --hover:#262624;
+    --ink:#f0efec; --ink-2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+    --accent:#3987e5; --accent-soft:#1c2a3d;
+    --up:#0ca30c; --down:#e66767;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+    --seq-0:#232321; --seq-1:#0d366b; --seq-2:#104281; --seq-3:#184f95; --seq-4:#256abf; --seq-5:#3987e5; --seq-6:#6da7ec;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0d0d0d; --surface:#1a1a19; --surface-2:#232321; --hover:#262624;
+  --ink:#f0efec; --ink-2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --accent:#3987e5; --accent-soft:#1c2a3d;
+  --up:#0ca30c; --down:#e66767;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+  --seq-0:#232321; --seq-1:#0d366b; --seq-2:#104281; --seq-3:#184f95; --seq-4:#256abf; --seq-5:#3987e5; --seq-6:#6da7ec;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--page);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit;color:inherit}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- barre du haut ---------- */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--page) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--ring)}
+.top-in{max-width:1360px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:20px}
+.logo{font-weight:700;letter-spacing:-.01em;font-size:15px;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.logo i{width:18px;height:18px;border-radius:5px;background:var(--accent);display:inline-block}
+.tabs{display:flex;gap:2px}
+.tab{border:0;background:none;padding:7px 12px;border-radius:8px;color:var(--ink-2);cursor:pointer;font-weight:500;white-space:nowrap}
+.tab:hover{background:var(--hover);color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 0 0 1px var(--ring)}
+.tab .badge{display:inline-block;min-width:18px;padding:0 5px;margin-left:4px;border-radius:9px;background:var(--accent);color:#fff;font-size:11px;line-height:18px;text-align:center}
+.spacer{flex:1}
+.fresh{color:var(--muted);font-size:12px;white-space:nowrap}
+.icon-btn{border:0;background:none;width:32px;height:32px;border-radius:8px;cursor:pointer;color:var(--ink-2);display:grid;place-items:center}
+.icon-btn:hover{background:var(--hover);color:var(--ink)}
+
+/* ---------- filtres ---------- */
+.wrap{max-width:1360px;margin:0 auto;padding:20px 24px 64px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.seg{display:inline-flex;background:var(--surface-2);border-radius:9px;padding:2px;gap:2px}
+.seg button{border:0;background:none;padding:5px 11px;border-radius:7px;cursor:pointer;color:var(--ink-2);font-size:13px;white-space:nowrap}
+.seg button:hover{color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 0 0 1px var(--ring),0 1px 2px rgba(0,0,0,.05);font-weight:600}
+.sel{appearance:none;border:1px solid var(--ring);background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23898781' fill='none' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 10px center;padding:6px 28px 6px 10px;border-radius:8px;cursor:pointer;font-size:13px;max-width:220px}
+.sel.on{border-color:var(--accent);background-color:var(--accent-soft)}
+.search{border:1px solid var(--ring);background:var(--surface);padding:6px 10px;border-radius:8px;font-size:13px;width:170px}
+.search:focus,.sel:focus{outline:2px solid var(--accent);outline-offset:1px}
+.reset-f{border:0;background:none;color:var(--accent);cursor:pointer;font-size:13px;padding:6px 4px}
+.fsep{width:1px;height:22px;background:var(--ring);margin:0 4px}
+.flabel{color:var(--muted);font-size:12px;margin-right:-2px}
+
+/* ---------- KPI ---------- */
+.kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.card{background:var(--surface);border-radius:12px;box-shadow:0 0 0 1px var(--ring)}
+.kpi{padding:14px 16px}
+.kpi .l{color:var(--ink-2);font-size:12.5px;display:flex;gap:6px;align-items:center}
+.kpi .v{font-size:26px;font-weight:650;letter-spacing:-.02em;margin-top:4px;line-height:1.15}
+.kpi .d{font-size:12px;margin-top:4px;color:var(--muted)}
+.up{color:var(--up)} .down{color:var(--down)}
+.tip{display:inline-grid;place-items:center;width:15px;height:15px;border-radius:50%;border:1px solid var(--axis);color:var(--muted);font-size:10px;cursor:help;position:relative}
+.tip:hover::after{content:attr(data-t);position:absolute;left:50%;top:20px;transform:translateX(-50%);width:240px;background:var(--ink);color:var(--surface);padding:8px 10px;border-radius:8px;font-size:12px;line-height:1.4;z-index:50;white-space:normal;font-weight:400}
+
+/* ---------- graphique principal ---------- */
+.chart-card{padding:16px 16px 10px;margin-bottom:16px}
+.ch-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.ch-title{font-weight:600}
+.ch-sub{color:var(--muted);font-size:12.5px}
+.chart-box{position:relative;height:240px}
+
+/* ---------- tableau ---------- */
+.tbl-card{overflow:hidden}
+.tbl-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--ring)}
+.tbl-scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%}
+th,td{padding:10px 12px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--grid)}
+th{font-size:12px;font-weight:500;color:var(--muted);background:var(--surface);position:sticky;top:0;cursor:pointer;user-select:none}
+th:hover{color:var(--ink)}
+th.sorted{color:var(--ink)}
+th.l,td.l{text-align:left}
+tbody tr{cursor:pointer}
+tbody tr:hover td{background:var(--hover)}
+tbody tr:last-child td{border-bottom:0}
+td.name{min-width:220px;max-width:340px;white-space:normal}
+td.name b{font-weight:600}
+td.name .sub{color:var(--muted);font-size:12px;margin-top:1px}
+.first{position:sticky;left:0;background:var(--surface);z-index:1}
+tbody tr:hover td.first{background:var(--hover)}
+.pill{display:inline-block;padding:1px 7px;border-radius:10px;background:var(--surface-2);color:var(--ink-2);font-size:11px;margin-left:6px;vertical-align:1px;font-weight:500}
+.pill.warn{background:color-mix(in srgb,#fab219 22%,transparent);color:var(--ink)}
+.bar{display:inline-block;vertical-align:middle;width:64px;height:6px;border-radius:3px;background:var(--surface-2);margin-left:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--s1);border-radius:3px}
+.chk{width:16px;height:16px;accent-color:var(--accent);cursor:pointer;vertical-align:middle}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 16px;color:var(--muted);font-size:12px;border-top:1px solid var(--ring)}
+.more{border:0;background:none;color:var(--accent);cursor:pointer;font-size:13px}
+
+/* ---------- panneau détail ---------- */
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.28);z-index:40;opacity:0;pointer-events:none;transition:opacity .18s}
+.scrim.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(760px,100vw);background:var(--page);z-index:41;box-shadow:var(--shadow);transform:translateX(100%);transition:transform .22s ease;display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.dr-head{padding:18px 22px 14px;border-bottom:1px solid var(--ring);background:var(--surface)}
+.dr-crumb{color:var(--muted);font-size:12px;margin-bottom:4px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.dr-crumb button{border:0;background:none;color:var(--accent);cursor:pointer;padding:0;font-size:12px}
+.dr-title{font-size:21px;font-weight:650;letter-spacing:-.015em;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.dr-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.btn{border:1px solid var(--ring);background:var(--surface);padding:6px 12px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:var(--hover)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(1.08)}
+.dr-close{position:absolute;top:14px;right:14px}
+.dr-body{overflow-y:auto;padding:18px 22px 40px;display:flex;flex-direction:column;gap:16px}
+.mini-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.mini-kpis .kpi{padding:12px 14px}
+.mini-kpis .kpi .v{font-size:20px}
+.sec-title{font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+.sec{padding:14px 16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.small-chart{position:relative;height:170px}
+.list{width:100%}
+.list td,.list th{padding:7px 8px;font-size:13px}
+.list th{position:static;cursor:default}
+.list tbody tr{cursor:default}
+.list tbody tr.click{cursor:pointer}
+.note{color:var(--muted);font-size:12px;line-height:1.5}
+
+/* heatmap */
+.heat{display:grid;grid-template-columns:34px repeat(var(--cols),minmax(0,1fr));gap:2px;font-size:11px}
+.heat .hl{color:var(--muted);display:flex;align-items:center}
+.heat .hh{color:var(--muted);text-align:center}
+.heat .c{height:22px;border-radius:3px;background:var(--seq-0);position:relative}
+.heat .c:hover{outline:2px solid var(--ink);outline-offset:-1px;z-index:2}
+.legend-scale{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:11px;margin-top:8px}
+.legend-scale span{width:18px;height:8px;border-radius:2px;display:inline-block}
+
+/* comparaison */
+.cmp-chips{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 8px 6px 10px;border-radius:9px;background:var(--surface);box-shadow:0 0 0 1px var(--ring);font-weight:500}
+.chip i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.chip button{border:0;background:none;cursor:pointer;color:var(--muted);padding:0 2px;font-size:15px;line-height:1}
+.chip button:hover{color:var(--ink)}
+.cmp-add{position:relative}
+.dropdown{position:absolute;top:calc(100% + 4px);left:0;width:340px;max-height:360px;overflow:auto;background:var(--surface);border-radius:10px;box-shadow:var(--shadow),0 0 0 1px var(--ring);z-index:35;padding:6px;display:none}
+.dropdown.open{display:block}
+.dd-group{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding:8px 8px 4px}
+.dd-item{padding:7px 8px;border-radius:7px;cursor:pointer;display:flex;justify-content:space-between;gap:8px}
+.dd-item:hover,.dd-item.act{background:var(--hover)}
+.dd-item small{color:var(--muted)}
+.best{font-weight:650}
+.best::after{content:" ▲";color:var(--up);font-size:10px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:3px;border-radius:2px;display:inline-block}
+
+/* pages */
+.dir{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.dir a.card{display:block;padding:14px 16px;color:var(--ink)}
+.dir a.card:hover{text-decoration:none;box-shadow:0 0 0 1px var(--accent)}
+.dir .t{font-weight:600}
+.dir .s{color:var(--muted);font-size:12.5px;margin-top:2px}
+h2.h{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:24px 0 10px}
+
+.loading{padding:80px;text-align:center;color:var(--muted)}
+.hidden{display:none!important}
+
+@media (max-width:1100px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){
+  .top-in{padding:8px 16px;gap:10px;flex-wrap:wrap}
+  .tabs{order:3;width:100%;overflow-x:auto}
+  .fresh{display:none}
+  .wrap{padding:14px 16px 48px}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpi .v{font-size:21px}
+  .search{width:100%}
+  .fsep{display:none}
+  .two{grid-template-columns:1fr}
+  .mini-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dr-head,.dr-body{padding-left:16px;padding-right:16px}
+  .dropdown{width:min(340px,calc(100vw - 32px))}
+  td.name{min-width:170px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="logo"><i></i>Observatoire</div>
+    <nav class="tabs" role="tablist">
+      <button class="tab" role="tab" data-tab="vue" aria-selected="true">Vue d'ensemble</button>
+      <button class="tab" role="tab" data-tab="cmp">Comparer<span class="badge hidden" id="cmpCount">0</span></button>
+      <button class="tab" role="tab" data-tab="pages">Toutes les pages</button>
+    </nav>
+    <div class="spacer"></div>
+    <span class="fresh" id="fresh"></span>
+    <button class="icon-btn" id="theme" title="Thème clair / sombre" aria-label="Changer de thème">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="loading" class="loading">Chargement des données…</div>
+
+  <!-- filtres communs -->
+  <div class="filters hidden" id="filters">
+    <div class="seg" id="fPeriode"></div>
+    <span class="fsep"></span>
+    <div class="seg" id="fSecteur"></div>
+    <select class="sel" id="fGroupe" aria-label="Groupe"></select>
+    <select class="sel" id="fRegion" aria-label="Région"></select>
+    <select class="sel" id="fVille" aria-label="Ville"></select>
+    <input class="search" id="fSearch" type="search" placeholder="Rechercher…" aria-label="Rechercher">
+    <button class="reset-f hidden" id="fReset">Réinitialiser</button>
+  </div>
+
+  <!-- VUE D'ENSEMBLE -->
+  <section id="vVue" class="hidden">
+    <div class="kpis" id="kpis"></div>
+    <div class="card chart-card">
+      <div class="ch-head">
+        <span class="ch-title" id="chTitle">Évolution</span>
+        <span class="ch-sub" id="chSub"></span>
+        <span class="spacer"></span>
+        <div class="seg" id="fMetric"></div>
+      </div>
+      <div class="chart-box"><canvas id="mainChart"></canvas></div>
+    </div>
+    <div class="card tbl-card">
+      <div class="tbl-head">
+        <span class="flabel">Grouper par</span>
+        <div class="seg" id="fBy"></div>
+        <span class="spacer"></span>
+        <span class="ch-sub" id="tblSub"></span>
+      </div>
+      <div class="tbl-scroll"><table id="tbl"><thead></thead><tbody></tbody></table></div>
+      <div class="foot"><span id="tblNote"></span><button class="more hidden" id="tblMore">Tout afficher</button></div>
+    </div>
+  </section>
+
+  <!-- COMPARAISON -->
+  <section id="vCmp" class="hidden">
+    <div class="cmp-chips" id="cmpChips"></div>
+    <div id="cmpEmpty" class="card empty hidden">
+      Ajoute 2 à 4 éléments à comparer : marques, groupes, studios, villes ou régions.<br>
+      Depuis la vue d'ensemble, coche les lignes du tableau, ou utilise « + Ajouter » ci-dessus.
+    </div>
+    <div id="cmpBody" class="hidden">
+      <div class="card chart-card">
+        <div class="ch-head">
+          <span class="ch-title">Évolution</span>
+          <span class="spacer"></span>
+          <div class="seg" id="cMetric"></div>
+        </div>
+        <div class="legend" id="cmpLegend" style="margin:0 0 8px"></div>
+        <div class="chart-box" style="height:280px"><canvas id="cmpChart"></canvas></div>
+      </div>
+      <div class="card tbl-card">
+        <div class="tbl-head"><span class="ch-title">Indicateurs sur la période</span><span class="spacer"></span><span class="ch-sub">▲ meilleure valeur</span></div>
+        <div class="tbl-scroll"><table id="cmpTbl"><thead></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGES -->
+  <section id="vPages" class="hidden"></section>
+</main>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="dr-head">
+    <div class="dr-crumb" id="drCrumb"></div>
+    <div class="dr-title" id="drTitle"></div>
+    <div class="dr-actions" id="drActions"></div>
+    <button class="icon-btn dr-close" id="drClose" aria-label="Fermer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="dr-body" id="drBody"></div>
+</aside>
+
+<script src="vendor_chartjs.min.js"></script>
+<script>
+"use strict";
+/* =====================================================================
+   Observatoire — une seule page pour explorer toutes les marques.
+   Données : observatoire_data.json (observatoire_build.py).
+   ===================================================================== */
+const $ = s => document.querySelector(s);
+const fmt = new Intl.NumberFormat("fr-FR");
+const fmt1 = new Intl.NumberFormat("fr-FR", {maximumFractionDigits: 1, minimumFractionDigits: 1});
+const eur = v => v >= 1e6 ? fmt1.format(v / 1e6) + " M€" : v >= 1e4 ? fmt.format(Math.round(v / 1e3)) + " k€" : fmt.format(Math.round(v)) + " €";
+const pct = v => v == null || !isFinite(v) ? "—" : fmt1.format(v * 100) + " %";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const JOURS = ["Lun","Mar","Mer","Jeu","Ven","Sam","Dim"];
+const MOIS = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+
+const PERIODES = [["7","7 j"],["30","30 j"],["90","90 j"],["180","6 mois"],["365","12 mois"],["all","Tout"]];
+const SECTEURS = ["Tous","Fitness","Pilates","Yoga","Bien-être"];
+const BY = [["groupe","Groupe"],["marque","Marque"],["site","Studio"],["ville","Ville / arrondissement"],["region","Région"],["secteur","Secteur"]];
+const METRICS = [["presents","Présents"],["seances","Séances"],["remplissage","Remplissage"],["ca","CA estimé"]];
+const BY_LABEL = Object.fromEntries(BY);
+const SERIES = ["--s1","--s2","--s3","--s4"];
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+let D, M = {}, SITES = [], BASE, LAST = 0;
+const S = {                                  // état (synchronisé dans l'URL)
+  tab: "vue", per: "90", sec: "Tous", grp: "", reg: "", vil: "", q: "",
+  by: "groupe", met: "presents", cmet: "remplissage", sort: "presents", dir: -1,
+  cmp: [], all: false,
+};
+
+/* ---------------------------------------------------------- état / URL */
+function saveHash() {
+  const p = new URLSearchParams();
+  for (const k of ["tab","per","sec","grp","reg","vil","q","by","met","cmet","sort"]) if (S[k] !== DEF[k]) p.set(k, S[k]);
+  if (S.dir !== DEF.dir) p.set("dir", S.dir);
+  if (S.cmp.length) p.set("cmp", S.cmp.map(c => c.by + ":" + c.v).join("|"));
+  history.replaceState(null, "", "#" + p.toString());
+}
+function loadHash() {
+  const p = new URLSearchParams(location.hash.slice(1));
+  for (const k of ["tab","per","sec","grp","reg","vil","q","by","met","cmet","sort"]) if (p.has(k)) S[k] = p.get(k);
+  if (p.has("dir")) S.dir = +p.get("dir");
+  if (p.has("cmp")) S.cmp = p.get("cmp").split("|").map(x => { const i = x.indexOf(":"); return {by: x.slice(0, i), v: x.slice(i + 1)}; }).filter(c => c.v);
+}
+const DEF = JSON.parse(JSON.stringify(S));
+
+/* ------------------------------------------------------------ données */
+async function init() {
+  const r = await fetch("observatoire_data.json", {cache: "no-store"});
+  D = await r.json();
+  BASE = new Date(D.base + "T00:00:00");
+  for (const m of D.marques) { m.label = m.label.replace(/\s*\((?:chaîne|chaine)[^)]*\)\s*$/i, ""); M[m.key] = m; }
+  SITES = D.sites.filter(s => M[s.marque]).map(s => {
+    const m = M[s.marque];
+    const rows = D.jours[s.id] || [];
+    for (const r of rows) LAST = Math.max(LAST, r[0]);
+    return {...s, m, rows, first: rows.length ? rows[0][0] : 1e9, heat: D.heat[s.id] || [], label: m.label + " · " + s.nom};
+  });
+  loadHash();
+  const g = new Date(D.genere_le.replace(" ", "T"));
+  $("#fresh").textContent = "Données du " + g.toLocaleDateString("fr-FR", {day: "numeric", month: "long"}) + " à " + g.toLocaleTimeString("fr-FR", {hour: "2-digit", minute: "2-digit"});
+  buildControls();
+  $("#loading").classList.add("hidden");
+  $("#filters").classList.remove("hidden");
+  render();
+}
+
+function dayToDate(d) { const x = new Date(BASE); x.setDate(x.getDate() + d); return x; }
+function periodRange() {
+  if (S.per === "all") return [0, LAST, null];
+  const n = +S.per, d1 = LAST, d0 = Math.max(0, LAST - n + 1);
+  return [d0, d1, [d0 - n, d0 - 1]];
+}
+
+function key(s, by) {
+  switch (by) {
+    case "groupe": return s.m.groupe;
+    case "marque": return s.marque;
+    case "site": return String(s.id);
+    case "ville": return s.ville === "Paris" ? s.quartier : s.ville;
+    case "region": return s.region;
+    case "secteur": return s.m.secteur;
+  }
+}
+function entLabel(by, v) {
+  if (by === "marque") return M[v]?.label ?? v;
+  if (by === "site") { const s = SITES.find(x => String(x.id) === v); return s ? s.label : v; }
+  if (by === "ville" && /^Paris \d/.test(v)) return v;
+  return v;
+}
+
+function passFilters(s, ignoreQ) {
+  if (S.sec !== "Tous" && s.m.secteur !== S.sec) return false;
+  if (S.grp && s.m.groupe !== S.grp) return false;
+  if (S.reg && s.region !== S.reg) return false;
+  if (S.vil && s.ville !== S.vil) return false;
+  if (!ignoreQ && S.q) {
+    const q = S.q.toLowerCase();
+    if (!(s.label + " " + s.m.groupe + " " + s.ville + " " + s.quartier + " " + s.m.categorie).toLowerCase().includes(q)) return false;
+  }
+  return true;
+}
+
+function agg(sites, d0, d1) {
+  const a = {seances: 0, seancesCap: 0, cap: 0, presCap: 0, pres: 0, complets: 0, ca: 0, plancher: false, sites: new Set(), marques: new Set()};
+  for (const s of sites) {
+    let any = false;
+    for (const r of s.rows) {
+      if (r[0] < d0 || r[0] > d1) continue;
+      any = true;
+      a.seances += r[1]; a.seancesCap += r[2]; a.cap += r[3]; a.presCap += r[4]; a.pres += r[5]; a.complets += r[6];
+      a.ca += r[5] * s.m.prix;
+    }
+    if (any) { a.sites.add(s.id); a.marques.add(s.marque); if (s.m.fiabilite === "statut") a.plancher = true; }
+  }
+  a.remp = a.cap > 0 ? a.presCap / a.cap : null;
+  a.moy = a.seances ? a.pres / a.seances : null;
+  a.pComplet = a.seances ? a.complets / a.seances : null;
+  return a;
+}
+// Comparaison à périmètre constant : un studio n'entre dans la période
+// précédente (et dans la courbe) que s'il était déjà suivi à son début —
+// sinon l'arrivée de nouvelles marques passerait pour de la croissance.
+const TOL = 3;
+function prevAgg(sites, d0, d1, prev) {
+  if (!prev || prev[0] < 0) return null;
+  const ss = sites.filter(s => s.first <= prev[0] + TOL);
+  if (!ss.length) return null;
+  return {cur: agg(ss, d0, d1), prev: agg(ss, prev[0], prev[1]), n: ss.length};
+}
+const metricVal = (a, met) => met === "presents" ? a.pres : met === "seances" ? a.seances : met === "remplissage" ? a.remp : met === "ca" ? a.ca : null;
+
+function weekly(sites, d0, d1, met, forceWeek) {
+  // Pas de temps : le jour pour les périodes courtes (≤ 45 j), sinon la
+  // semaine lundi→dimanche. Les semaines partielles aux bords sont retirées.
+  const daily = !forceWeek && d1 - d0 <= 45;
+  const off = daily ? 0 : (BASE.getDay() + 6) % 7, size = daily ? 1 : 7;
+  const W = new Map();
+  for (const s of sites) for (const r of s.rows) {
+    if (r[0] < d0 || r[0] > d1) continue;
+    const w = Math.floor((r[0] + off) / size);
+    let a = W.get(w);
+    if (!a) W.set(w, a = {seances: 0, cap: 0, presCap: 0, pres: 0, ca: 0});
+    a.seances += r[1]; a.cap += r[3]; a.presCap += r[4]; a.pres += r[5]; a.ca += r[5] * s.m.prix;
+  }
+  const w0 = Math.floor((d0 + off) / size), w1 = Math.floor((d1 + off) / size);
+  const out = [];
+  for (let w = w0; w <= w1; w++) {
+    const a = W.get(w) || {seances: 0, cap: 0, presCap: 0, pres: 0, ca: 0};
+    const v = met === "remplissage" ? (a.cap ? a.presCap / a.cap * 100 : null) : met === "seances" ? a.seances : met === "ca" ? a.ca : a.pres;
+    out.push({w, date: dayToDate(w * size - off), v, daily});
+  }
+  if (daily && out.length > 2 && d1 === LAST) out.pop();      // aujourd'hui : journée en cours
+  if (!daily) {
+    if (out.length > 2 && (d1 + off) % 7 !== 6) out.pop();
+    if (out.length > 2 && (d0 + off) % 7 !== 0) out.shift();
+  }
+  return out;
+}
+
+/* ------------------------------------------------------------ contrôles */
+function seg(el, items, cur, on) {
+  el.innerHTML = items.map(([v, l]) => `<button data-v="${esc(v)}" aria-pressed="${v === cur}">${esc(l)}</button>`).join("");
+  el.onclick = e => { const b = e.target.closest("button"); if (b) on(b.dataset.v); };
+}
+function options(el, label, vals, cur) {
+  el.innerHTML = `<option value="">${label}</option>` + vals.map(v => `<option value="${esc(v)}"${v === cur ? " selected" : ""}>${esc(v)}</option>`).join("");
+  el.classList.toggle("on", !!cur);
+}
+function buildControls() {
+  document.querySelectorAll(".tab").forEach(t => t.onclick = () => { S.tab = t.dataset.tab; render(); });
+  $("#fGroupe").onchange = e => { S.grp = e.target.value; render(); };
+  $("#fRegion").onchange = e => { S.reg = e.target.value; S.vil = ""; render(); };
+  $("#fVille").onchange = e => { S.vil = e.target.value; render(); };
+  let t; $("#fSearch").oninput = e => { clearTimeout(t); t = setTimeout(() => { S.q = e.target.value.trim(); render(); }, 150); };
+  $("#fSearch").value = S.q;
+  $("#fReset").onclick = () => { Object.assign(S, {per: DEF.per, sec: "Tous", grp: "", reg: "", vil: "", q: ""}); $("#fSearch").value = ""; render(); };
+  $("#theme").onclick = () => {
+    const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("obs_theme", document.documentElement.dataset.theme); } catch (e) {}
+    render();
+  };
+  $("#scrim").onclick = closeDrawer; $("#drClose").onclick = closeDrawer;
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeDrawer(); });
+  $("#tblMore").onclick = () => { S.all = !S.all; renderTable(); };
+}
+try { const th = localStorage.getItem("obs_theme"); if (th) document.documentElement.dataset.theme = th; } catch (e) {}
+
+function renderFilters() {
+  seg($("#fPeriode"), PERIODES, S.per, v => { S.per = v; render(); });
+  seg($("#fSecteur"), SECTEURS.map(s => [s, s]), S.sec, v => { S.sec = v; render(); });
+  const base = SITES.filter(s => S.sec === "Tous" || s.m.secteur === S.sec);
+  const grp = [...new Set(base.map(s => s.m.groupe))].sort((a, b) => {
+    const ma = base.filter(s => s.m.groupe === a).map(s => s.marque), mb = base.filter(s => s.m.groupe === b).map(s => s.marque);
+    const multi = x => new Set(x).size > 1;
+    return (multi(mb) - multi(ma)) || a.localeCompare(b, "fr");
+  });
+  options($("#fGroupe"), "Tous les groupes", grp, S.grp);
+  const ORDRE = ["Paris", "Petite couronne", "Grande couronne", "Régions", "Belgique", "En ligne", "Non localisé"];
+  options($("#fRegion"), "Toutes les régions", ORDRE.filter(r => SITES.some(s => s.region === r)), S.reg);
+  const villes = [...new Set(SITES.filter(s => !S.reg || s.region === S.reg).map(s => s.ville))].sort((a, b) => a.localeCompare(b, "fr"));
+  options($("#fVille"), "Toutes les villes", villes, S.vil);
+  $("#fReset").classList.toggle("hidden", !(S.per !== DEF.per || S.sec !== "Tous" || S.grp || S.reg || S.vil || S.q));
+}
+
+/* ------------------------------------------------------------ rendu */
+function render() {
+  document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.tab === S.tab));
+  $("#cmpCount").textContent = S.cmp.length; $("#cmpCount").classList.toggle("hidden", !S.cmp.length);
+  $("#filters").classList.toggle("hidden", S.tab === "pages");
+  $("#vVue").classList.toggle("hidden", S.tab !== "vue");
+  $("#vCmp").classList.toggle("hidden", S.tab !== "cmp");
+  $("#vPages").classList.toggle("hidden", S.tab !== "pages");
+  renderFilters();
+  if (S.tab === "vue") renderVue();
+  if (S.tab === "cmp") renderCmp();
+  if (S.tab === "pages") renderPages();
+  saveHash();
+}
+
+function delta(cur, prev, isPct) {
+  if (prev == null || cur == null || !isFinite(prev) || prev === 0) return "";
+  const d = isPct ? (cur - prev) * 100 : (cur / prev - 1) * 100;
+  if (!isFinite(d)) return "";
+  const cls = Math.abs(d) < 0.5 ? "" : d > 0 ? "up" : "down";
+  const arrow = Math.abs(d) < 0.5 ? "→" : d > 0 ? "▲" : "▼";
+  return `<span class="${cls}">${arrow} ${fmt1.format(Math.abs(d))}${isPct ? " pt" : " %"}</span>`;
+}
+function perLabel() {
+  const [d0, d1] = periodRange();
+  const o = {day: "numeric", month: "short"};
+  return `du ${dayToDate(d0).toLocaleDateString("fr-FR", o)} au ${dayToDate(d1).toLocaleDateString("fr-FR", o)}`;
+}
+
+function kpiHTML(a, pc, compact) {
+  // pc = {cur, prev} à périmètre constant (voir prevAgg)
+  const c = pc && pc.cur, p = pc && pc.prev;
+  const prevTxt = p ? " vs période préc." : "";
+  const items = [
+    ["Séances", fmt.format(a.seances), p && delta(c.seances, p.seances), "Séances terminées sur la période."],
+    ["Présents" + (a.plancher ? " ≥" : ""), fmt.format(Math.round(a.pres)), p && delta(c.pres, p.pres), "Réservations validées (bsport, Mariana Tek…). Pour les marques en widget Mindbody, seul un statut est visible : le chiffre est un plancher."],
+    ["Taux de remplissage", pct(a.remp), p && delta(c.remp, p.remp, true), "Présents ÷ capacité, uniquement sur les séances dont la capacité est publiée. Les marques « statut seul » sont exclues de ce calcul."],
+    ["Séances complètes", pct(a.pComplet), p && delta(c.pComplet, p.pComplet, true), "Part des séances affichées complètes (ou présents = capacité)."],
+    ["CA estimé" + (a.plancher ? " ≥" : ""), eur(a.ca), p && delta(c.ca, p.ca), "Présents × prix moyen par visite de chaque marque (médiane des packs publiés). Ordre de grandeur, pas une comptabilité. Évolutions : à périmètre constant (studios déjà suivis au début de la période précédente)."],
+  ];
+  return items.slice(0, compact ? 4 : 5).map(([l, v, d, t]) =>
+    `<div class="card kpi"><div class="l">${l}<span class="tip" data-t="${esc(t)}">?</span></div><div class="v num">${v}</div><div class="d">${d ? d + prevTxt : "&nbsp;"}</div></div>`).join("");
+}
+
+let mainChart, cmpChart, drCharts = [];
+function lineChart(canvas, datasets, met, existing) {
+  if (existing) existing.destroy();
+  const ink2 = css("--ink-2"), muted = css("--muted"), grid = css("--grid");
+  const isPct = met === "remplissage", isEur = met === "ca";
+  return new Chart(canvas, {
+    type: "line",
+    data: {labels: datasets[0].pts.map(p => p.date), datasets: datasets.map(d => ({
+      label: d.label, data: d.pts.map(p => p.v), borderColor: d.color, backgroundColor: d.fill || "transparent",
+      fill: !!d.fill, borderWidth: 2, pointRadius: 0, pointHoverRadius: 4, pointHoverBorderWidth: 2,
+      pointHoverBackgroundColor: d.color, pointHoverBorderColor: css("--surface"), tension: .25, spanGaps: true,
+    }))},
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false,
+      interaction: {mode: "index", intersect: false},
+      plugins: {
+        legend: {display: false},
+        tooltip: {backgroundColor: css("--ink"), titleColor: css("--surface"), bodyColor: css("--surface"), padding: 10, boxPadding: 4, cornerRadius: 8,
+          callbacks: {
+            title: it => (datasets[0].pts[0]?.daily ? "" : "Semaine du ") + new Date(it[0].label).toLocaleDateString("fr-FR", {weekday: datasets[0].pts[0]?.daily ? "long" : undefined, day: "numeric", month: "long", year: "numeric"}),
+            label: c => " " + c.dataset.label + " : " + (c.parsed.y == null ? "—" : isPct ? fmt1.format(c.parsed.y) + " %" : isEur ? eur(c.parsed.y) : fmt.format(Math.round(c.parsed.y))),
+          }},
+      },
+      scales: {
+        x: {type: "category", grid: {display: false}, border: {color: css("--axis")}, ticks: {color: muted, maxRotation: 0, autoSkipPadding: 18,
+          callback(v) { const d = new Date(this.getLabelForValue(v)); return d.getDate() + " " + MOIS[d.getMonth()]; }}},
+        y: {beginAtZero: true, suggestedMax: isPct ? 100 : undefined, grid: {color: grid}, border: {display: false}, ticks: {color: muted, maxTicksLimit: 5,
+          callback: v => isPct ? v + " %" : isEur ? eur(v) : fmt.format(v)}},
+      },
+    },
+  });
+}
+
+function renderVue() {
+  const [d0, d1, prev] = periodRange();
+  const sites = SITES.filter(s => passFilters(s));
+  const a = agg(sites, d0, d1), pc = prevAgg(sites, d0, d1, prev);
+  $("#kpis").innerHTML = kpiHTML(a, pc);
+  seg($("#fMetric"), METRICS, S.met, v => { S.met = v; render(); });
+  const ml = Object.fromEntries(METRICS)[S.met];
+  $("#chTitle").textContent = ml + (periodRange()[1] - periodRange()[0] <= 45 ? " par jour" : " par semaine");
+  const constant = sites.filter(s => s.first <= d0 + TOL && s.rows.some(r => r[0] >= d0));
+  const useC = S.per !== "all" && constant.length >= 3;
+  const csites = useC ? constant : sites;
+  const nm = new Set(csites.map(s => s.marque)).size;
+  $("#chSub").textContent = perLabel() + " · " + (useC ? "périmètre constant : " : "") + fmt.format(nm) + " marques · " + fmt.format(csites.length) + " studios" + (useC && csites.length < a.sites.size ? " (sur " + fmt.format(a.sites.size) + ", les autres sont suivis depuis moins longtemps)" : "");
+  const pts = weekly(csites, d0, d1, S.met);
+  const c1 = css("--s1");
+  mainChart = lineChart($("#mainChart"), [{label: ml, pts, color: c1, fill: c1 + "1f"}], S.met, mainChart);
+  seg($("#fBy"), BY, S.by, v => { S.by = v; S.all = false; render(); });
+  renderTable();
+}
+
+function groupRows(sites, d0, d1, prev, by) {
+  const G = new Map();
+  for (const s of sites) { const k = key(s, by); (G.get(k) || G.set(k, []).get(k)).push(s); }
+  const rows = [];
+  for (const [k, ss] of G) {
+    const a = agg(ss, d0, d1);
+    if (!a.seances) continue;
+    const pc = prevAgg(ss, d0, d1, prev);
+    const spark = weekly(ss, Math.max(0, d1 - 7 * 12 + 1), d1, "presents", true).map(x => x.v);
+    rows.push({k, by, sites: ss, a, p: pc && pc.prev, pc, spark, label: entLabel(by, k)});
+  }
+  return rows;
+}
+
+function sub(r) {
+  const ss = r.sites, ms = [...new Set(ss.map(s => s.marque))];
+  if (r.by === "groupe") return ms.length > 1 ? ms.map(m => M[m].label).join(", ") : M[ms[0]].secteur + " · " + M[ms[0]].categorie;
+  if (r.by === "marque") { const m = M[r.k]; return (m.groupe !== m.label ? m.groupe + " · " : "") + m.secteur + " · " + m.categorie; }
+  if (r.by === "site") { const s = ss[0]; return s.quartier + (s.region !== "Paris" && s.quartier !== s.ville ? " · " + s.region : ""); }
+  return fmt.format(ms.length) + " marque" + (ms.length > 1 ? "s" : "");
+}
+
+function sparkSVG(vals) {
+  const v = vals.map(x => x || 0), max = Math.max(...v, 1), w = 84, h = 22;
+  if (v.length < 2) return "";
+  const pts = v.map((x, i) => `${(i / (v.length - 1) * w).toFixed(1)},${(h - 2 - x / max * (h - 4)).toFixed(1)}`).join(" ");
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-hidden="true"><polyline points="${pts}" fill="none" stroke="var(--s1)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
+}
+
+const COLS = [
+  {k: "label", l: "Nom", cls: "l", v: r => r.label.toLowerCase()},
+  {k: "sites", l: "Studios", v: r => r.a.sites.size},
+  {k: "seances", l: "Séances", v: r => r.a.seances},
+  {k: "presents", l: "Présents", v: r => r.a.pres},
+  {k: "moy", l: "Moy. / séance", v: r => r.a.moy},
+  {k: "remp", l: "Remplissage", v: r => r.a.remp},
+  {k: "complet", l: "% complet", v: r => r.a.pComplet},
+  {k: "ca", l: "CA estimé", v: r => r.a.ca},
+  {k: "evol", l: "Évol.", v: r => r.pc && r.pc.prev.pres ? r.pc.cur.pres / r.pc.prev.pres - 1 : null},
+  {k: "spark", l: "12 sem.", v: null},
+];
+
+function renderTable() {
+  const [d0, d1, prev] = periodRange();
+  const sites = SITES.filter(s => passFilters(s));
+  const rows = groupRows(sites, d0, d1, prev, S.by);
+  const col = COLS.find(c => c.k === S.sort) || COLS[3];
+  rows.sort((x, y) => {
+    const a = col.v(x), b = col.v(y);
+    if (a == null && b == null) return 0; if (a == null) return 1; if (b == null) return -1;
+    return (a < b ? -1 : a > b ? 1 : 0) * S.dir;
+  });
+  const LIM = 30, shown = S.all ? rows : rows.slice(0, LIM);
+  const maxRemp = 1;
+  $("#tbl thead").innerHTML = "<tr><th class='l first' style='width:28px' title='Ajouter à la comparaison'></th>" + COLS.map(c =>
+    c.v ? `<th class="${c.cls || ""} ${c.k === S.sort ? "sorted" : ""}" data-k="${c.k}">${c.l}${c.k === S.sort ? (S.dir < 0 ? " ↓" : " ↑") : ""}</th>` : `<th style="cursor:default">${c.l}</th>`).join("") + "</tr>";
+  $("#tbl thead").onclick = e => { const th = e.target.closest("th[data-k]"); if (!th) return; if (S.sort === th.dataset.k) S.dir *= -1; else { S.sort = th.dataset.k; S.dir = th.dataset.k === "label" ? 1 : -1; } render(); };
+  if (!rows.length) { $("#tbl tbody").innerHTML = `<tr><td colspan="${COLS.length + 1}" class="empty">Aucune donnée pour ces filtres.</td></tr>`; }
+  else $("#tbl tbody").innerHTML = shown.map((r, i) => {
+    const a = r.a, inCmp = S.cmp.some(c => c.by === r.by && c.v === r.k);
+    const stat = [...a.marques].every(m => M[m].fiabilite === "statut");
+    const partiel = !stat && a.seances && a.seancesCap / a.seances < 0.5;
+    const ev = COLS[8].v(r);
+    return `<tr data-i="${i}">
+      <td class="first l"><input type="checkbox" class="chk" data-i="${i}" ${inCmp ? "checked" : ""} aria-label="Comparer ${esc(r.label)}"></td>
+      <td class="l name"><b>${esc(r.label)}</b>${stat ? `<span class="pill warn" title="Statut seul : présents = plancher, remplissage non disponible">statut seul</span>` : ""}${partiel ? `<span class="pill warn" title="Capacité publiée pour moins de la moitié des séances : remplissage calculé sur ce sous-ensemble, présents sous-estimés">capacité partielle</span>` : ""}<div class="sub">${esc(sub(r))}</div></td>
+      <td class="num">${fmt.format(a.sites.size)}</td>
+      <td class="num">${fmt.format(a.seances)}</td>
+      <td class="num">${fmt.format(Math.round(a.pres))}</td>
+      <td class="num">${a.moy == null ? "—" : fmt1.format(a.moy)}</td>
+      <td class="num">${pct(a.remp)}${a.remp != null ? `<span class="bar"><i style="width:${Math.min(100, a.remp / maxRemp * 100)}%"></i></span>` : `<span class="bar" style="visibility:hidden"></span>`}</td>
+      <td class="num">${pct(a.pComplet)}</td>
+      <td class="num">${eur(a.ca)}</td>
+      <td class="num">${ev == null ? "—" : delta(r.pc.cur.pres, r.pc.prev.pres)}</td>
+      <td>${sparkSVG(r.spark)}</td></tr>`;
+  }).join("");
+  $("#tbl tbody").onclick = e => {
+    const tr = e.target.closest("tr[data-i]"); if (!tr) return;
+    const r = shown[+tr.dataset.i];
+    if (e.target.classList.contains("chk")) { toggleCmp(r.by, r.k, e.target.checked); return; }
+    openDrawer(r.by, r.k);
+  };
+  $("#tblSub").textContent = fmt.format(rows.length) + " " + BY_LABEL[S.by].toLowerCase() + (rows.length > 1 ? "s" : "") + " · " + perLabel();
+  $("#tblNote").textContent = "Clique sur une ligne pour le détail · coche pour comparer (4 max) · « Évol. » = présents vs période précédente de même durée.";
+  $("#tblMore").classList.toggle("hidden", rows.length <= LIM);
+  $("#tblMore").textContent = S.all ? "Réduire" : `Tout afficher (${rows.length})`;
+}
+
+/* ------------------------------------------------------------ comparaison */
+function toggleCmp(by, v, on) {
+  const i = S.cmp.findIndex(c => c.by === by && c.v === v);
+  if (on && i < 0) { if (S.cmp.length >= 4) { alert("4 éléments maximum dans la comparaison."); render(); return; } S.cmp.push({by, v}); }
+  if (!on && i >= 0) S.cmp.splice(i, 1);
+  render();
+}
+function cmpSites(c) { return SITES.filter(s => key(s, c.by) === c.v && passFilters(s, true)); }
+
+function renderCmp() {
+  const [d0, d1, prev] = periodRange();
+  const chips = S.cmp.map((c, i) => `<span class="chip"><i style="background:var(${SERIES[i]})"></i>${esc(entLabel(c.by, c.v))} <small style="color:var(--muted)">${BY_LABEL[c.by]}</small><button data-i="${i}" aria-label="Retirer">×</button></span>`).join("");
+  $("#cmpChips").innerHTML = chips + (S.cmp.length < 4 ? `<span class="cmp-add"><button class="btn" id="cmpAddBtn">+ Ajouter</button><div class="dropdown" id="cmpDD"><input class="search" id="cmpQ" placeholder="Marque, groupe, studio, ville…" style="width:100%;margin-bottom:4px"><div id="cmpList"></div></div></span>` : "") +
+    (S.cmp.length ? `<button class="reset-f" id="cmpClear">Tout retirer</button>` : "");
+  $("#cmpChips").onclick = e => {
+    const b = e.target.closest("button[data-i]"); if (b) { S.cmp.splice(+b.dataset.i, 1); render(); return; }
+    if (e.target.id === "cmpClear") { S.cmp = []; render(); return; }
+    if (e.target.id === "cmpAddBtn") { $("#cmpDD").classList.toggle("open"); $("#cmpQ").focus(); fillCmpList(""); }
+  };
+  if ($("#cmpQ")) $("#cmpQ").oninput = e => fillCmpList(e.target.value);
+  const ok = S.cmp.length >= 1;
+  $("#cmpEmpty").classList.toggle("hidden", ok);
+  $("#cmpBody").classList.toggle("hidden", !ok);
+  if (!ok) return;
+  seg($("#cMetric"), METRICS, S.cmet, v => { S.cmet = v; render(); });
+  const sets = S.cmp.map((c, i) => ({c, label: entLabel(c.by, c.v), color: css(SERIES[i]), sites: cmpSites(c)}));
+  const ml = Object.fromEntries(METRICS)[S.cmet];
+  cmpChart = lineChart($("#cmpChart"), sets.map(s => ({label: s.label, color: s.color, pts: weekly(s.sites, d0, d1, S.cmet)})), S.cmet, cmpChart);
+  $("#cmpLegend").innerHTML = sets.map(s => `<span><i style="background:${s.color}"></i>${esc(s.label)}</span>`).join("") + `<span style="color:var(--muted)">· ${ml} · ${perLabel()}</span>`;
+  const A = sets.map(s => ({...s, a: agg(s.sites, d0, d1), pc: prevAgg(s.sites, d0, d1, prev)}));
+  const lines = [
+    ["Studios", x => x.a.sites.size, v => fmt.format(v), false],
+    ["Séances", x => x.a.seances, v => fmt.format(v), true],
+    ["Présents", x => x.a.pres, v => fmt.format(Math.round(v)), true],
+    ["Présents / séance", x => x.a.moy, v => v == null ? "—" : fmt1.format(v), true],
+    ["Taux de remplissage", x => x.a.remp, pct, true],
+    ["% séances complètes", x => x.a.pComplet, pct, true],
+    ["CA estimé", x => x.a.ca, eur, true],
+    ["CA estimé / studio", x => x.a.sites.size ? x.a.ca / x.a.sites.size : null, v => v == null ? "—" : eur(v), true],
+    ["Évolution des présents", x => x.pc && x.pc.prev.pres ? x.pc.cur.pres / x.pc.prev.pres - 1 : null, v => v == null ? "—" : (v >= 0 ? "+" : "") + fmt1.format(v * 100) + " %", true],
+    ["Prix moyen / visite", x => { const ms = [...x.a.marques]; return ms.length ? ms.reduce((s, m) => s + M[m].prix, 0) / ms.length : null; }, v => v == null ? "—" : fmt.format(Math.round(v)) + " €", false],
+  ];
+  $("#cmpTbl thead").innerHTML = "<tr><th class='l' style='cursor:default'>Indicateur</th>" + A.map(x => `<th style="cursor:default"><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:${x.color};margin-right:6px;vertical-align:-1px"></span>${esc(x.label)}</th>`).join("") + "</tr>";
+  $("#cmpTbl tbody").innerHTML = lines.map(([l, f, fm, best]) => {
+    const vals = A.map(f), valid = vals.filter(v => v != null && isFinite(v));
+    const mx = best && valid.length > 1 ? Math.max(...valid) : null;
+    return `<tr style="cursor:default"><td class="l">${l}</td>` + vals.map(v => `<td class="num ${v != null && v === mx ? "best" : ""}">${fm(v)}</td>`).join("") + "</tr>";
+  }).join("");
+}
+
+function fillCmpList(q) {
+  q = q.toLowerCase().trim();
+  const groups = [["groupe", "Groupes"], ["marque", "Marques"], ["site", "Studios"], ["ville", "Villes"], ["region", "Régions"]];
+  let html = "";
+  for (const [by, title] of groups) {
+    const vals = [...new Set(SITES.map(s => key(s, by)))].map(v => ({v, l: entLabel(by, v)}))
+      .filter(x => !q || x.l.toLowerCase().includes(q)).sort((a, b) => a.l.localeCompare(b.l, "fr")).slice(0, q ? 12 : 6);
+    if (!vals.length) continue;
+    html += `<div class="dd-group">${title}</div>` + vals.map(x => `<div class="dd-item" data-by="${by}" data-v="${esc(x.v)}">${esc(x.l)}</div>`).join("");
+  }
+  $("#cmpList").innerHTML = html || `<div class="dd-item">Aucun résultat</div>`;
+  $("#cmpList").onclick = e => { const it = e.target.closest(".dd-item[data-by]"); if (it) toggleCmp(it.dataset.by, it.dataset.v, true); };
+}
+document.addEventListener("click", e => { const dd = $("#cmpDD"); if (dd && !e.target.closest(".cmp-add")) dd.classList.remove("open"); });
+
+/* ------------------------------------------------------------ détail */
+let DR = null;
+function closeDrawer() { $("#drawer").classList.remove("open"); $("#scrim").classList.remove("open"); $("#drawer").setAttribute("aria-hidden", "true"); DR = null; }
+
+function heatHTML(sites) {
+  const H = new Map(); let hMin = 23, hMax = 0;
+  for (const s of sites) for (const [wd, h, n, pr, cap] of s.heat) {
+    const k = wd * 24 + h; const a = H.get(k) || {n: 0, pr: 0, cap: 0};
+    a.n += n; a.pr += pr; a.cap += cap; H.set(k, a);
+    if (n) { hMin = Math.min(hMin, h); hMax = Math.max(hMax, h); }
+  }
+  if (!H.size) return "<div class='note'>Pas assez de données.</div>";
+  const parH = new Array(24).fill(0); let tot = 0;
+  for (const [k, a] of H) { parH[k % 24] += a.n; tot += a.n; }
+  let cum = 0; hMin = 0; while (hMin < 23 && (cum + parH[hMin]) / tot < 0.0025) cum += parH[hMin++];
+  cum = 0; hMax = 23; while (hMax > hMin && (cum + parH[hMax]) / tot < 0.0025) cum += parH[hMax--];
+  const useFill = [...H.values()].some(a => a.cap > 0);
+  const val = a => useFill ? (a.cap ? a.pr / a.cap : null) : a.n ? a.pr / a.n : null;
+  const vals = [...H.values()].map(val).filter(v => v != null);
+  const vmax = Math.max(...vals, 0.0001);
+  const cols = hMax - hMin + 1;
+  let html = `<div class="heat" style="--cols:${cols}"><div></div>`;
+  for (let h = hMin; h <= hMax; h++) html += `<div class="hh">${h % 2 === 0 || cols < 12 ? h + "h" : ""}</div>`;
+  for (let wd = 0; wd < 7; wd++) {
+    html += `<div class="hl">${JOURS[wd]}</div>`;
+    for (let h = hMin; h <= hMax; h++) {
+      const a = H.get(wd * 24 + h), v = a ? val(a) : null;
+      const step = v == null ? 0 : 1 + Math.min(5, Math.floor(v / vmax * 5.999));
+      const t = a ? `${JOURS[wd]} ${h}h · ${fmt.format(a.n)} séances · ${useFill ? "remplissage " + pct(v) : fmt1.format(v) + " présents / séance"}` : `${JOURS[wd]} ${h}h · aucune séance`;
+      html += `<div class="c" style="background:var(--seq-${step})" title="${esc(t)}"></div>`;
+    }
+  }
+  html += `</div><div class="legend-scale">${useFill ? "Remplissage" : "Présents / séance"} : faible ${[1,2,3,4,5,6].map(i => `<span style="background:var(--seq-${i})"></span>`).join("")} élevé · sur tout l'historique</div>`;
+  return html;
+}
+
+function openDrawer(by, v) {
+  DR = {by, v};
+  const [d0, d1, prev] = periodRange();
+  const sites = SITES.filter(s => key(s, by) === v && passFilters(s, true));
+  const a = agg(sites, d0, d1), pc = prevAgg(sites, d0, d1, prev);
+  const label = entLabel(by, v);
+  const marques = [...new Set(sites.map(s => s.marque))];
+  const m1 = marques.length === 1 ? M[marques[0]] : null;
+
+  // fil d'Ariane : groupe › marque › (élément courant)
+  const crumbs = [];
+  if (m1 && (by === "marque" || by === "site") && m1.groupe !== m1.label) crumbs.push(`<button data-by="groupe" data-v="${esc(m1.groupe)}">${esc(m1.groupe)}</button>`);
+  if (m1 && by === "site") crumbs.push(`<button data-by="marque" data-v="${m1.key}">${esc(m1.label)}</button>`);
+  crumbs.push(`<span>${BY_LABEL[by]}</span>`);
+  $("#drCrumb").innerHTML = crumbs.join(" <span>›</span> ");
+  $("#drCrumb").onclick = e => { const b = e.target.closest("button[data-by]"); if (b) openDrawer(b.dataset.by, b.dataset.v); };
+
+  const badges = [];
+  if (m1) badges.push(m1.secteur, m1.categorie);
+  if (marques.some(m => M[m].fiabilite === "statut")) badges.push("statut seul");
+  $("#drTitle").innerHTML = esc(by === "site" ? sites[0]?.nom ?? label : label) + badges.map(b => `<span class="pill ${b === "statut seul" ? "warn" : ""}">${esc(b)}</span>`).join("");
+
+  const inCmp = S.cmp.some(c => c.by === by && c.v === v);
+  $("#drActions").innerHTML = `<button class="btn primary" id="drCmp">${inCmp ? "✓ Dans la comparaison" : "+ Comparer"}</button>` +
+    (m1 && m1.page ? `<a class="btn" href="${esc(m1.page)}" target="_blank" rel="noopener">Séance par séance ↗</a>` : "") +
+    `<span class="note" style="align-self:center">${perLabel()}${S.reg || S.vil ? " · filtre " + esc(S.vil || S.reg) : ""}</span>`;
+  $("#drCmp").onclick = () => { toggleCmp(by, v, !inCmp); openDrawer(by, v); };
+
+  let html = `<div class="mini-kpis">${kpiHTML(a, pc, true)}</div>`;
+  html += `<div class="card sec" style="padding:12px 16px"><div class="note">CA estimé : <b class="num" style="color:var(--ink)">${eur(a.ca)}</b>${a.plancher ? " (plancher)" : ""} · ${fmt.format(a.sites.size)} studio${a.sites.size > 1 ? "s" : ""} · ${fmt.format(marques.length)} marque${marques.length > 1 ? "s" : ""}${m1 ? " · prix moyen retenu " + fmt.format(Math.round(m1.prix)) + " € / visite · plateforme : " + esc(m1.fiabilite === "statut" ? "statut seul (Mindbody & co)" : "réservations exactes") : ""}</div></div>`;
+  html += `<div class="two"><div class="card sec"><div class="sec-title">Présents</div><div class="small-chart"><canvas id="drC1"></canvas></div></div>
+           <div class="card sec"><div class="sec-title">Remplissage</div><div class="small-chart"><canvas id="drC2"></canvas></div></div></div>`;
+  html += `<div class="card sec"><div class="sec-title">Quand ça remplit</div>${heatHTML(sites)}</div>`;
+
+  // sous-éléments : marques d'un groupe / studios d'une marque / marques d'une ville
+  const childBy = by === "groupe" && marques.length > 1 ? "marque" : by === "site" ? null : (by === "marque" || by === "groupe") ? "site" : "marque";
+  if (childBy) {
+    const rows = groupRows(sites, d0, d1, prev, childBy).sort((x, y) => y.a.pres - x.a.pres);
+    html += `<div class="card sec"><div class="sec-title">${childBy === "site" ? "Studios" : "Marques"} <span class="ch-sub">${rows.length}</span></div><div class="tbl-scroll"><table class="list"><thead><tr><th class="l">Nom</th><th>Séances</th><th>Présents</th><th>Remplissage</th><th>CA estimé</th><th>Évol.</th></tr></thead><tbody>` +
+      rows.map(r => `<tr class="click" data-by="${childBy}" data-v="${esc(r.k)}"><td class="l"><b>${esc(childBy === "site" ? r.sites[0].nom : r.label)}</b> <span class="note">${esc(childBy === "site" ? (r.sites[0].quartier !== r.sites[0].nom ? r.sites[0].quartier : "") : M[r.k].categorie)}</span></td><td class="num">${fmt.format(r.a.seances)}</td><td class="num">${fmt.format(Math.round(r.a.pres))}</td><td class="num">${pct(r.a.remp)}</td><td class="num">${eur(r.a.ca)}</td><td class="num">${r.pc ? delta(r.pc.cur.pres, r.pc.prev.pres) : "—"}</td></tr>`).join("") +
+      `</tbody></table></div></div>`;
+  }
+  // top cours / coachs (sur tout l'historique de la ou des marques)
+  const tops = (src) => {
+    const map = new Map();
+    for (const mk of marques) for (const [nom, n, pr, cap, cpl] of (src[mk] || [])) {
+      const k = marques.length > 1 ? nom + " · " + M[mk].label : nom;
+      const x = map.get(k) || [0, 0, 0, 0]; x[0] += n; x[1] += pr; x[2] += cap; x[3] += cpl; map.set(k, x);
+    }
+    return [...map].filter(([, x]) => x[0] >= 5).sort((a, b) => b[1] - a[1]).slice(0, 10);
+  };
+  const tbl = (title, rows) => rows.length ? `<div class="card sec"><div class="sec-title">${title} <span class="ch-sub">par présents · tout l'historique</span></div><table class="list"><thead><tr><th class="l">Nom</th><th>Séances</th><th>Moy.</th><th>Rempl.</th></tr></thead><tbody>` +
+    rows.map(([k, x]) => `<tr><td class="l" style="white-space:normal">${esc(k)}</td><td class="num">${fmt.format(x[0])}</td><td class="num">${fmt1.format(x[1] / x[0])}</td><td class="num">${x[2] ? pct(x[1] / x[2]) : "—"}</td></tr>`).join("") + "</tbody></table></div>" : "";
+  if (by !== "site" && marques.length <= 8) html += `<div class="two">${tbl("Cours", tops(D.cours))}${tbl("Coachs", tops(D.coachs))}</div>`;
+  if (a.plancher) html += `<div class="note">« Statut seul » : la plateforme de cette marque n'affiche que complet / presque complet / disponible. Les présents sont un plancher estimé et le remplissage n'est pas calculable.</div>`;
+
+  $("#drBody").innerHTML = html;
+  $("#drBody").onclick = e => { const tr = e.target.closest("tr.click"); if (tr) openDrawer(tr.dataset.by, tr.dataset.v); };
+  drCharts.forEach(c => c.destroy()); drCharts = [];
+  const c1 = css("--s1");
+  drCharts.push(lineChart($("#drC1"), [{label: "Présents", pts: weekly(sites, d0, d1, "presents"), color: c1, fill: c1 + "1f"}], "presents"));
+  drCharts.push(lineChart($("#drC2"), [{label: "Remplissage", pts: weekly(sites, d0, d1, "remplissage"), color: c1}], "remplissage"));
+  $("#drawer").classList.add("open"); $("#scrim").classList.add("open"); $("#drawer").setAttribute("aria-hidden", "false");
+  $("#drBody").scrollTop = 0;
+}
+
+/* ------------------------------------------------------------ pages */
+function renderPages() {
+  const sec = {};
+  for (const m of D.marques) (sec[m.secteur] ||= []).push(m);
+  const card = (href, t, s) => `<a class="card" href="${esc(href)}"><div class="t">${esc(t)}</div><div class="s">${esc(s)}</div></a>`;
+  let html = `<h2 class="h">Analyses</h2><div class="dir">` +
+    card("padel_idf.html", "Padel Île-de-France", "143 clubs · 4 plateformes · temps réel") +
+    card("padel_national.html", "Padel national", "Clubs de France métropolitaine") +
+    card("padel_insights.html", "Padel · insights", "Heatmaps, prix, déserts, chaînes vs indépendants") +
+    card("padel_map.html", "Padel · carte", "Clubs sur la carte") +
+    card("padel_etude.html", "Padel · étude", "Synthèse marché padel") +
+    card("prix.html", "Grille de prix", "Drop-in, packs et abonnements par marque") +
+    card("etude.html", "Étude de marché", "Synthèse B2B") +
+    card("veille.html", "Veille nouveaux lieux", "Studios repérés sur bsport cette semaine") +
+    card("pilates_idf.html", "Carte Pilates IDF", "Toutes les marques Pilates sur une carte") +
+    card("yoga_idf.html", "Carte Yoga IDF", "Toutes les marques Yoga sur une carte") +
+    card("comparateur.html", "Ancien comparateur", "Version précédente (Supabase)") +
+    `</div>`;
+  for (const s of ["Fitness", "Pilates", "Yoga", "Bien-être"]) {
+    if (!sec[s]) continue;
+    html += `<h2 class="h">${s} · séance par séance</h2><div class="dir">` +
+      sec[s].filter(m => m.page).sort((a, b) => a.label.localeCompare(b.label, "fr")).map(m => card(m.page, m.label, (m.groupe !== m.label ? m.groupe + " · " : "") + m.categorie)).join("") + `</div>`;
+  }
+  $("#vPages").innerHTML = html;
+}
+
+init().catch(e => { $("#loading").textContent = "Impossible de charger les données : " + e.message; });
+</script>
+</body>
+</html>

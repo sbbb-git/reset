@@ -37,7 +37,7 @@ document.getElementById('f').addEventListener('submit', async e => {
   const h = await sha256(document.getElementById('p').value);
   if (h === currentHash()) {
     sessionStorage.setItem('auth_ok','1');
-    const next = new URLSearchParams(location.search).get('next') || 'hub.html';
+    const next = new URLSearchParams(location.search).get('next') || 'observatoire.html';
     location.replace(next);
   } else {
     msg.textContent = '✗';
@@ -46,7 +46,7 @@ document.getElementById('f').addEventListener('submit', async e => {
 });
 
 if (sessionStorage.getItem('auth_ok') === '1') {
-  const next = new URLSearchParams(location.search).get('next') || 'hub.html';
+  const next = new URLSearchParams(location.search).get('next') || 'observatoire.html';
   location.replace(next);
 }
 </script>
