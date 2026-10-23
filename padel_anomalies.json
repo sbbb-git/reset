@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-23T07:13:44.908935",
+ "generated_at": "2026-10-23T12:49:18.936607",
  "idle_24h": [],
  "price_shifts": [
   {
@@ -10,6 +10,16 @@
    "prix_30j": 40.0,
    "prix_recent": 68.0,
    "delta_pct": 70.0,
+   "direction": "hausse"
+  },
+  {
+   "slug": "4padel-paris-20",
+   "source": "anybuddy",
+   "name": "4padel-paris-20",
+   "cp": "75020",
+   "prix_30j": 60.0,
+   "prix_recent": 80.0,
+   "delta_pct": 33.3,
    "direction": "hausse"
   },
   {
@@ -1428,9 +1438,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 89,
+  "total_anomalies": 90,
   "idle_24h": 0,
-  "price_shifts": 2,
+  "price_shifts": 3,
   "volume_drops": 87,
   "new_clubs_14d": 88
  }
