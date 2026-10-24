@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-24T19:21:53.110455",
+ "generated_at": "2026-10-24T21:49:28.130739",
  "idle_24h": [
   {
    "slug": "ucpa-montigny-club-le-village-montigny-le-bretonneux",
@@ -7,7 +7,7 @@
    "name": "ucpa-montigny-club-le-village-montigny-le-bretonneux",
    "cp": "78180",
    "last_seen": "2026-10-23 14:46",
-   "hours_idle": 28.6
+   "hours_idle": 31.1
   },
   {
    "slug": "ucpa-sport-station-a-paris-paris",
@@ -15,7 +15,7 @@
    "name": "ucpa-sport-station-a-paris-paris",
    "cp": "75019",
    "last_seen": "2026-10-23 14:46",
-   "hours_idle": 28.6
+   "hours_idle": 31.1
   },
   {
    "slug": "ucpa-sport-station-meudon-meudon",
@@ -23,7 +23,7 @@
    "name": "ucpa-sport-station-meudon-meudon",
    "cp": "92360",
    "last_seen": "2026-10-23 14:46",
-   "hours_idle": 28.6
+   "hours_idle": 31.1
   }
  ],
  "price_shifts": [
@@ -35,6 +35,16 @@
    "prix_30j": 40.0,
    "prix_recent": 68.0,
    "delta_pct": 70.0,
+   "direction": "hausse"
+  },
+  {
+   "slug": "4padel-epinay-sur-seine",
+   "source": "anybuddy",
+   "name": "4padel-epinay-sur-seine",
+   "cp": "93800",
+   "prix_30j": 54.0,
+   "prix_recent": 78.0,
+   "delta_pct": 44.4,
    "direction": "hausse"
   },
   {
@@ -1463,9 +1473,9 @@
   }
  ],
  "summary": {
-  "total_anomalies": 93,
+  "total_anomalies": 94,
   "idle_24h": 3,
-  "price_shifts": 3,
+  "price_shifts": 4,
   "volume_drops": 87,
   "new_clubs_14d": 88
  }
