@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-24T13:13:55.998409",
- "idle_24h": [],
+ "generated_at": "2026-10-24T16:53:34.404613",
+ "idle_24h": [
+  {
+   "slug": "ucpa-montigny-club-le-village-montigny-le-bretonneux",
+   "source": "anybuddy",
+   "name": "ucpa-montigny-club-le-village-montigny-le-bretonneux",
+   "cp": "78180",
+   "last_seen": "2026-10-23 14:46",
+   "hours_idle": 26.1
+  },
+  {
+   "slug": "ucpa-sport-station-a-paris-paris",
+   "source": "anybuddy",
+   "name": "ucpa-sport-station-a-paris-paris",
+   "cp": "75019",
+   "last_seen": "2026-10-23 14:46",
+   "hours_idle": 26.1
+  },
+  {
+   "slug": "ucpa-sport-station-meudon-meudon",
+   "source": "anybuddy",
+   "name": "ucpa-sport-station-meudon-meudon",
+   "cp": "92360",
+   "last_seen": "2026-10-23 14:46",
+   "hours_idle": 26.1
+  }
+ ],
  "price_shifts": [
   {
    "slug": "doinsport-af5c97a7-390f-4f23-afca-6d10c0d117cd",
@@ -1438,8 +1463,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 90,
-  "idle_24h": 0,
+  "total_anomalies": 93,
+  "idle_24h": 3,
   "price_shifts": 3,
   "volume_drops": 87,
   "new_clubs_14d": 88
