@@ -1,31 +1,6 @@
 {
- "generated_at": "2026-10-25T20:37:22.948370",
- "idle_24h": [
-  {
-   "slug": "ucpa-montigny-club-le-village-montigny-le-bretonneux",
-   "source": "anybuddy",
-   "name": "ucpa-montigny-club-le-village-montigny-le-bretonneux",
-   "cp": "78180",
-   "last_seen": "2026-10-23 14:46",
-   "hours_idle": 53.9
-  },
-  {
-   "slug": "ucpa-sport-station-a-paris-paris",
-   "source": "anybuddy",
-   "name": "ucpa-sport-station-a-paris-paris",
-   "cp": "75019",
-   "last_seen": "2026-10-23 14:46",
-   "hours_idle": 53.9
-  },
-  {
-   "slug": "ucpa-sport-station-meudon-meudon",
-   "source": "anybuddy",
-   "name": "ucpa-sport-station-meudon-meudon",
-   "cp": "92360",
-   "last_seen": "2026-10-23 14:46",
-   "hours_idle": 53.9
-  }
- ],
+ "generated_at": "2026-10-25T23:07:27.729791",
+ "idle_24h": [],
  "price_shifts": [
   {
    "slug": "doinsport-af5c97a7-390f-4f23-afca-6d10c0d117cd",
@@ -758,6 +733,14 @@
  ],
  "new_clubs": [
   {
+   "slug": "padel-versaille-versailles",
+   "source": "anybuddy",
+   "name": "padel-versaille-versailles",
+   "cp": "78000",
+   "first_seen": "2026-10-26 00:04",
+   "days_since": -1
+  },
+  {
    "slug": "4-padel-montreuil",
    "source": "anybuddy",
    "name": "4-padel-montreuil",
@@ -1455,10 +1438,10 @@
   }
  ],
  "summary": {
-  "total_anomalies": 93,
-  "idle_24h": 3,
+  "total_anomalies": 90,
+  "idle_24h": 0,
   "price_shifts": 3,
   "volume_drops": 87,
-  "new_clubs_14d": 87
+  "new_clubs_14d": 88
  }
 }
