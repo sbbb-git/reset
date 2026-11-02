@@ -1,7 +1,36 @@
 {
- "avec_creneaux": 232,
- "couverture": "companies bsport 1 → 4000 (sur 8000), tour 0",
+ "avec_creneaux": 251,
+ "couverture": "companies bsport 1 → 4400 (sur 8000), tour 0",
  "enseignes": [
+  {
+   "company_id": "7021",
+   "cp": "92100",
+   "creneaux": true,
+   "enseigne": "My Studio — Salle collective",
+   "lieux": [
+    {
+     "adresse": "44 Rue Marcel Dassault, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": true,
+     "lat": 48.83543179999999,
+     "lng": 2.2524492,
+     "nom": "My Studio — Salle collective",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "44 Rue Marcel Dassault, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": false,
+     "lat": 48.83543179999999,
+     "lng": 2.2524492,
+     "nom": "My Studio — Salle solo",
+     "ville": "Boulogne-Billancourt"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-02",
+   "ville": "Boulogne-Billancourt"
+  },
   {
    "company_id": "7014",
    "cp": "75002",
@@ -14,7 +43,7 @@
      "creneaux": true,
      "lat": 48.8673273,
      "lng": 2.3521893,
-     "nom": "Hot Room",
+     "nom": "Lagree Room",
      "ville": "Paris"
     },
     {
@@ -23,7 +52,7 @@
      "creneaux": true,
      "lat": 48.8673273,
      "lng": 2.3521893,
-     "nom": "Lagree Room",
+     "nom": "Hot Room",
      "ville": "Paris"
     },
     {
@@ -128,6 +157,26 @@
    "nb_lieux": 2,
    "premier_vu": "2026-10-19",
    "ville": "Le Pré-Saint-Gervais"
+  },
+  {
+   "company_id": "6914",
+   "cp": "93700",
+   "creneaux": true,
+   "enseigne": "BB CENTER - STUDIO PILATES REFORMER",
+   "lieux": [
+    {
+     "adresse": "49 Av. Marceau, 93700 Drancy, France",
+     "cp": "93700",
+     "creneaux": true,
+     "lat": 48.9288727,
+     "lng": 2.4344377,
+     "nom": "BB CENTER - STUDIO PILATES REFORMER",
+     "ville": "Drancy"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-02",
+   "ville": "Drancy"
   },
   {
    "company_id": "6905",
@@ -760,6 +809,1030 @@
    "ville": "Paris"
   },
   {
+   "company_id": "4382",
+   "cp": "75010",
+   "creneaux": true,
+   "enseigne": "Passerelle DEBILLY - PARIS 75007",
+   "lieux": [
+    {
+     "adresse": "140 Rue du Faubourg Saint-Martin, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": true,
+     "lat": 48.8748289,
+     "lng": 2.3592477,
+     "nom": "En ligne",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "140 Rue du Faubourg Saint-Martin, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": true,
+     "lat": 48.8748464,
+     "lng": 2.359258,
+     "nom": "Espace Cuisine",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "140 Rue du Faubourg Saint-Martin, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": true,
+     "lat": 48.8748289,
+     "lng": 2.3592477,
+     "nom": "Grande Salle",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "Passerelle Debilly, 75007 Paris, France",
+     "cp": "75007",
+     "creneaux": false,
+     "lat": 48.8626413,
+     "lng": 2.2969258,
+     "nom": "Passerelle DEBILLY - PARIS 75007",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "140 Rue du Faubourg Saint-Martin, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": true,
+     "lat": 48.8748464,
+     "lng": 2.359258,
+     "nom": "Petite Salle",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "140 Rue du Faubourg Saint-Martin, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": false,
+     "lat": 48.8748464,
+     "lng": 2.359258,
+     "nom": "Salle 1er étage",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "140 Rue du Faubourg Saint-Martin, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": true,
+     "lat": 48.8748464,
+     "lng": 2.359258,
+     "nom": "Salle de Méditation",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 7,
+   "premier_vu": "2026-11-02",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "4355",
+   "cp": "91170",
+   "creneaux": true,
+   "enseigne": "Studio Spring Pilates",
+   "lieux": [
+    {
+     "adresse": "10 Pl. des Martyrs de Châteaubriand, 91170 Viry-Châtillon, France",
+     "cp": "91170",
+     "creneaux": true,
+     "lat": 48.6731547,
+     "lng": 2.375391,
+     "nom": "Studio Spring Pilates",
+     "ville": "Viry-Châtillon"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-02",
+   "ville": "Viry-Châtillon"
+  },
+  {
+   "company_id": "4326",
+   "cp": "75002",
+   "creneaux": true,
+   "enseigne": "Summit Cycle",
+   "lieux": [
+    {
+     "adresse": "24 Rue Feydeau, 75002 Paris, France",
+     "cp": "75002",
+     "creneaux": true,
+     "lat": 48.87013959999999,
+     "lng": 2.3404002,
+     "nom": "Summit Cycle",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-02",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "4325",
+   "cp": "94300",
+   "creneaux": true,
+   "enseigne": "Au Lagree Club",
+   "lieux": [
+    {
+     "adresse": "183 Rue de Fontenay, 94300 Vincennes, France",
+     "cp": "94300",
+     "creneaux": true,
+     "lat": 48.8485606,
+     "lng": 2.4291148,
+     "nom": "Au Lagree Club",
+     "ville": "Vincennes"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-02",
+   "ville": "Vincennes"
+  },
+  {
+   "company_id": "4287",
+   "cp": "78000",
+   "creneaux": true,
+   "enseigne": "The New Me Studio VERSAILLES",
+   "lieux": [
+    {
+     "adresse": "7 Bis Rue de la Paroisse, 78000 Versailles, France",
+     "cp": "78000",
+     "creneaux": true,
+     "lat": 48.8083056,
+     "lng": 2.1261051,
+     "nom": "The New Me Studio VERSAILLES",
+     "ville": "Versailles"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-02",
+   "ville": "Versailles"
+  },
+  {
+   "company_id": "4276",
+   "cp": "92300",
+   "creneaux": true,
+   "enseigne": "The New Me Studio LEVALLOIS",
+   "lieux": [
+    {
+     "adresse": "18 Bd Bineau, 92300 Levallois-Perret, France",
+     "cp": "92300",
+     "creneaux": true,
+     "lat": 48.8868342,
+     "lng": 2.2839146,
+     "nom": "The New Me Studio LEVALLOIS",
+     "ville": "Levallois-Perret"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-02",
+   "ville": "Levallois-Perret"
+  },
+  {
+   "company_id": "4267",
+   "cp": "75006",
+   "creneaux": true,
+   "enseigne": "MBO: Le Cercle Pilates",
+   "lieux": [
+    {
+     "adresse": "73 Rue du Cherche-Midi, 75006 Paris, France",
+     "cp": "75006",
+     "creneaux": false,
+     "lat": 48.8478687,
+     "lng": 2.3236567,
+     "nom": "MBO: Le Cercle Pilates",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "73 Rue du Cherche-Midi, 75006 Paris, France",
+     "cp": "75006",
+     "creneaux": true,
+     "lat": 48.8478687,
+     "lng": 2.3236567,
+     "nom": "Salle collective",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "73 Rue du Cherche-Midi, 75006 Paris, France",
+     "cp": "75006",
+     "creneaux": false,
+     "lat": 48.8478687,
+     "lng": 2.3236567,
+     "nom": "Salle privé",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 3,
+   "premier_vu": "2026-11-02",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "4255",
+   "cp": "75009",
+   "creneaux": true,
+   "enseigne": "HOTEL MAISON MERE",
+   "lieux": [
+    {
+     "adresse": "7 Rue Mayran, 75009 Paris, France",
+     "cp": "75009",
+     "creneaux": false,
+     "lat": 48.877151,
+     "lng": 2.3450941,
+     "nom": "HOTEL MAISON MERE",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "6 Rue Gambetta, 93400 Saint-Ouen-sur-Seine, France",
+     "cp": "93400",
+     "creneaux": true,
+     "lat": 48.9055725,
+     "lng": 2.3358291,
+     "nom": "MOB HOTEL",
+     "ville": "Saint-Ouen-sur-Seine"
+    },
+    {
+     "adresse": "70 Rue des Rosiers, 93400 Saint-Ouen-sur-Seine, France",
+     "cp": "93400",
+     "creneaux": true,
+     "lat": 48.9048814,
+     "lng": 2.3376201,
+     "nom": "MOB HOUSE",
+     "ville": "Saint-Ouen-sur-Seine"
+    }
+   ],
+   "nb_lieux": 3,
+   "premier_vu": "2026-11-02",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "4216",
+   "cp": "75011",
+   "creneaux": true,
+   "enseigne": "Atelier Bastille (salle modelage)",
+   "lieux": [
+    {
+     "adresse": "4 Pass. Josset, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": true,
+     "lat": 48.8529166,
+     "lng": 2.3765805,
+     "nom": "Atelier Bastille (salle modelage)",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "4 Pass. Josset, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": true,
+     "lat": 48.8529166,
+     "lng": 2.3765805,
+     "nom": "Atelier Bastille (salle tournage)",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "4 Pass. Josset, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": false,
+     "lat": 48.8529166,
+     "lng": 2.3765805,
+     "nom": "Atelier libre - Modelage",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "4 Pass. Josset, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": false,
+     "lat": 48.8529166,
+     "lng": 2.3765805,
+     "nom": "Atelier Libre Modelage - 2 places",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "4 Pass. Josset, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": false,
+     "lat": 48.8529166,
+     "lng": 2.3765805,
+     "nom": "Atelier libre - Tournage",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "4 Pass. Josset, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": false,
+     "lat": 48.8529166,
+     "lng": 2.3765805,
+     "nom": "Atelier libre Tournage - 2 places",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 6,
+   "premier_vu": "2026-11-02",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "4213",
+   "cp": "91300",
+   "creneaux": true,
+   "enseigne": "Délimarché du 102 (à l'étage)- SAFRAN",
+   "lieux": [
+    {
+     "adresse": "102 Av. de Paris, 91300 Massy, France",
+     "cp": "91300",
+     "creneaux": true,
+     "lat": 48.7236691,
+     "lng": 2.264358,
+     "nom": "Délimarché du 102 (à l'étage)- SAFRAN",
+     "ville": "Massy"
+    },
+    {
+     "adresse": "8 Rue Affre, 75018 Paris, France",
+     "cp": "75018",
+     "creneaux": false,
+     "lat": 48.88548249999999,
+     "lng": 2.3558756,
+     "nom": "Espace Dan Tian",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "28 Rue Jérôme Bonaparte, 91300 Massy, France",
+     "cp": "91300",
+     "creneaux": false,
+     "lat": 48.7331798,
+     "lng": 2.2510633,
+     "nom": "Parc street workout Vilgenis - Extérieur",
+     "ville": "Massy"
+    },
+    {
+     "adresse": "3 Rue René Razel, 91400 Saclay, France",
+     "cp": "91400",
+     "creneaux": true,
+     "lat": 48.73432,
+     "lng": 2.1650839,
+     "nom": "Razel Bec",
+     "ville": "Saclay"
+    },
+    {
+     "adresse": ", 91300 Massy, France",
+     "cp": "91300",
+     "creneaux": true,
+     "lat": 48.72546436469497,
+     "lng": 2.2658818960189824,
+     "nom": "Salle Pauline SAFRAN",
+     "ville": "Massy"
+    },
+    {
+     "adresse": "8 Rue Normandie Niemen, 91300 Massy, France",
+     "cp": "91300",
+     "creneaux": true,
+     "lat": 48.7295717,
+     "lng": 2.2746354,
+     "nom": "Studio Mudra Yoga LE CENTRE",
+     "ville": "Massy"
+    },
+    {
+     "adresse": "16 Av. Emile Baudot, 91120 Palaiseau, France",
+     "cp": "91120",
+     "creneaux": true,
+     "lat": 48.7189583,
+     "lng": 2.2634248,
+     "nom": "Studio Mudra Yoga & Pilates ATLANTIS",
+     "ville": "Palaiseau"
+    },
+    {
+     "adresse": "7 place pierre Semard, 91300 Massy, France",
+     "cp": "91300",
+     "creneaux": true,
+     "lat": 48.7250361,
+     "lng": 2.2558499,
+     "nom": "Studio Mudra Yoga - VILMORIN",
+     "ville": "Massy"
+    }
+   ],
+   "nb_lieux": 8,
+   "premier_vu": "2026-11-02",
+   "ville": "Massy"
+  },
+  {
+   "company_id": "4193",
+   "cp": "92600",
+   "creneaux": true,
+   "enseigne": "EHPAD Les Chenets- les Diaconesses de Reuilly - PR - Aulagnier",
+   "lieux": [
+    {
+     "adresse": "30 Rue Auguste Bailly, 92600 Asnières-sur-Seine, France",
+     "cp": "92600",
+     "creneaux": true,
+     "lat": 48.90602639999999,
+     "lng": 2.2769595,
+     "nom": "Asnières sur Seine - CAJ Les Lilas",
+     "ville": "Asnières-sur-Seine"
+    },
+    {
+     "adresse": "19 Rue de l'Assomption, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.853485,
+     "lng": 2.2730829,
+     "nom": "Assomption - APA QVT",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "38 Rue des Meuniers, 92220 Bagneux, France",
+     "cp": "92220",
+     "creneaux": true,
+     "lat": 48.7977531,
+     "lng": 2.3114821,
+     "nom": "Bagneux - Ehpad Le Clos des Meuniers",
+     "ville": "Bagneux"
+    },
+    {
+     "adresse": "17 Av. Albert Petit, 92220 Bagneux, France",
+     "cp": "92220",
+     "creneaux": false,
+     "lat": 48.7960139,
+     "lng": 2.3065241,
+     "nom": "Bagneux - Résidence du Clos Lapaume",
+     "ville": "Bagneux"
+    },
+    {
+     "adresse": "15 Rue Maurice Pelletier, 92270 Bois-Colombes, France",
+     "cp": "92270",
+     "creneaux": true,
+     "lat": 48.9108151,
+     "lng": 2.2650719,
+     "nom": "Bois Colombes - CAJ Les Camélias",
+     "ville": "Bois-Colombes"
+    },
+    {
+     "adresse": "49 Rue Saint-Denis, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": true,
+     "lat": 48.846629,
+     "lng": 2.2326761,
+     "nom": "Boulogne Billancourt - CAJ Abondances",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "117 Rue du Château, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": false,
+     "lat": 48.8421873,
+     "lng": 2.2401419,
+     "nom": "Boulogne Billancourt - Eglise réformée",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "55 Rue de Silly, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": true,
+     "lat": 48.8375476,
+     "lng": 2.2325225,
+     "nom": "Boulogne Billancourt - Espace Ozanam",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "30 Rue Carnot, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": true,
+     "lat": 48.83444249999999,
+     "lng": 2.240626,
+     "nom": "Boulogne Billancourt - Healthy Warrior",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "21 Pl. Paul Verlaine, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": true,
+     "lat": 48.82885,
+     "lng": 2.2397947,
+     "nom": "Boulogne Billancourt - Résidence Le Parc Boulogne",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "3 Rue des Victoires, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": false,
+     "lat": 48.85043450000001,
+     "lng": 2.2302444,
+     "nom": "Boulogne - Parc Edmond de Rothschild",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "68 Rue des Plantes, 75014 Paris, France",
+     "cp": "75014",
+     "creneaux": false,
+     "lat": 48.8272047,
+     "lng": 2.3191958,
+     "nom": "CAJ Notre Dame du Bon Secours",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "1 Pl. du 11 Novembre, 92240 Malakoff, France",
+     "cp": "92240",
+     "creneaux": true,
+     "lat": 48.82083429999999,
+     "lng": 2.3016463,
+     "nom": "CCAS Malakoff",
+     "ville": "Malakoff"
+    },
+    {
+     "adresse": "49 Rue Saint-Denis, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": true,
+     "lat": 48.846629,
+     "lng": 2.2326761,
+     "nom": "Centre Gérontologie - PR - Abondances",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "24 Bd Chastenet de Géry, 94800 Villejuif, France",
+     "cp": "94800",
+     "creneaux": true,
+     "lat": 48.8044805,
+     "lng": 2.3581565,
+     "nom": "Centre Guinot",
+     "ville": "Villejuif"
+    },
+    {
+     "adresse": "46-48 Rue Nicolo, 75116 Paris, France",
+     "cp": "75116",
+     "creneaux": true,
+     "lat": 48.8604365,
+     "lng": 2.2778385,
+     "nom": "Clinique de La Muette",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "76 Rue des Cerisiers, 92700 Colombes, France",
+     "cp": "92700",
+     "creneaux": false,
+     "lat": 48.9191971,
+     "lng": 2.2587507,
+     "nom": "Ehpad La Cerisaie - PR Aulagnier",
+     "ville": "Colombes"
+    },
+    {
+     "adresse": "51 bis Rue Victor Hugo, 92400 Courbevoie, France",
+     "cp": "92400",
+     "creneaux": false,
+     "lat": 48.8953782,
+     "lng": 2.2597589,
+     "nom": "EHPAD Les Chenets- les Diaconesses de Reuilly - PR - Aulagnier",
+     "ville": "Courbevoie"
+    },
+    {
+     "adresse": "51 Rue de Varsovie, 92700 Colombes, France",
+     "cp": "92700",
+     "creneaux": false,
+     "lat": 48.91615849999999,
+     "lng": 2.2498106,
+     "nom": "Ehpad Maison de Famille - PR Aulagnier",
+     "ville": "Colombes"
+    },
+    {
+     "adresse": "79 Rue Charles Duflos, 92270 Bois-Colombes, France",
+     "cp": "92270",
+     "creneaux": true,
+     "lat": 48.9154792,
+     "lng": 2.2641297,
+     "nom": "Espace Duflos - PR - Aulagnier",
+     "ville": "Bois-Colombes"
+    },
+    {
+     "adresse": "4 Rue des 3 Pavillons, 92110 Clichy, France",
+     "cp": "92110",
+     "creneaux": false,
+     "lat": 48.9109215,
+     "lng": 2.313790500000001,
+     "nom": "insatiable - 4 rue des 3 pavillons, Clichy",
+     "ville": "Clichy"
+    },
+    {
+     "adresse": "29 bis Rue des Meuniers, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": false,
+     "lat": 48.8345002,
+     "lng": 2.3968649,
+     "nom": "INSATIABLE-paris12",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "4 Rue du Général Leclerc, 92130 Issy-les-Moulineaux, France",
+     "cp": "92130",
+     "creneaux": false,
+     "lat": 48.8267355,
+     "lng": 2.2785795,
+     "nom": "Issy les Moulineaux - Espace Savary",
+     "ville": "Issy-les-Moulineaux"
+    },
+    {
+     "adresse": "3 Rue de Marseille, 78500 Sartrouville, France",
+     "cp": "78500",
+     "creneaux": false,
+     "lat": 48.94267749999999,
+     "lng": 2.1994736,
+     "nom": "Les insatiables - Sartrouville",
+     "ville": "Sartrouville"
+    },
+    {
+     "adresse": "18 Rue Antonin Raynaud, 92300 Levallois-Perret, France",
+     "cp": "92300",
+     "creneaux": true,
+     "lat": 48.8952515,
+     "lng": 2.2837812,
+     "nom": "Levallois Perret - CAJ Oasis",
+     "ville": "Levallois-Perret"
+    },
+    {
+     "adresse": "2 Rue de Lorraine, 92300 Levallois-Perret, France",
+     "cp": "92300",
+     "creneaux": false,
+     "lat": 48.891776,
+     "lng": 2.2947515,
+     "nom": "Levallois-Perret - Résidence Autonomie",
+     "ville": "Levallois-Perret"
+    },
+    {
+     "adresse": "Rue de Varize, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.8413359,
+     "lng": 2.2575935,
+     "nom": "LIEU A DEFINIR",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "2 Rue Cauchy, 75015 Paris, France",
+     "cp": "75015",
+     "creneaux": false,
+     "lat": 48.8410833,
+     "lng": 2.2746547,
+     "nom": "Parc 15e- André Citroën",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "41 Rue Mirabeau, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": false,
+     "lat": 48.8444425,
+     "lng": 2.269126,
+     "nom": "Parc 16 - Parc Sainte-Périne",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "10 Rue Santerre, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": true,
+     "lat": 48.842779,
+     "lng": 2.398597,
+     "nom": "Paris 12 - Club des aidants - PARA",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "21 Av. Claude Régaud, 75013 Paris, France",
+     "cp": "75013",
+     "creneaux": false,
+     "lat": 48.8210258,
+     "lng": 2.3726816,
+     "nom": "Paris 13",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "147 Rue Nationale, 75013 Paris, France",
+     "cp": "75013",
+     "creneaux": false,
+     "lat": 48.8312887,
+     "lng": 2.3634429,
+     "nom": "Paris 13 rue Nationale",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "6 Rue Maurice Bouchor, 75014 Paris, France",
+     "cp": "75014",
+     "creneaux": false,
+     "lat": 48.82605299999999,
+     "lng": 2.309708,
+     "nom": "Paris 14 - Accorderie",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "68 Rue des Plantes, 75014 Paris, France",
+     "cp": "75014",
+     "creneaux": true,
+     "lat": 48.8268648,
+     "lng": 2.3185291,
+     "nom": "Paris 14 - CAJ Notre Dame de Bon Secours",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "12 Rue du Moulin des Lapins, 75014 Paris, France",
+     "cp": "75014",
+     "creneaux": false,
+     "lat": 48.834266,
+     "lng": 2.320829,
+     "nom": "Paris 14 - Salle du Moulin",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "6 Pl. Jacques Marette, 75015 Paris, France",
+     "cp": "75015",
+     "creneaux": false,
+     "lat": 48.83242689999999,
+     "lng": 2.3008553,
+     "nom": "Paris 15 - Association du Parc Georges Brassens",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "31 Rue Blomet, 75015 Paris, France",
+     "cp": "75015",
+     "creneaux": true,
+     "lat": 48.84280889999999,
+     "lng": 2.3064244,
+     "nom": "Paris 15 - Blom'31",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "5 Rue de Varize, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": false,
+     "lat": 48.8405662,
+     "lng": 2.2577248,
+     "nom": "Paris 16 - Ehpad FIR",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "95 Rue Michel Ange, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.8401365,
+     "lng": 2.2584141,
+     "nom": "Paris 16ème - USLD Henry Dunant",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "61 bd de Beauséjour, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": false,
+     "lat": 48.8588747,
+     "lng": 2.2687763,
+     "nom": "Paris 16 - Jardin du Ranelagh",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "88 Rue de l'Assomption, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.8555259,
+     "lng": 2.267321,
+     "nom": "Paris 16 - Notre Dame de l'Assomption",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "78 Rue Jean de la Fontaine, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.8503,
+     "lng": 2.2695611,
+     "nom": "Paris 16 - Résidence La Fontaine",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "5 Vla Saint-Ange, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": false,
+     "lat": 48.896662,
+     "lng": 2.327799,
+     "nom": "Paris 17 - Club St Ange",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "35 Bd de Courcelles, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": false,
+     "lat": 48.8810048,
+     "lng": 2.3144272,
+     "nom": "Paris17 - Parc Monceau",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "19 Av. de Villiers, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": false,
+     "lat": 48.8818508,
+     "lng": 2.3130536,
+     "nom": "Paris 17- Studio Célène",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "77 Rue Cardinet, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": false,
+     "lat": 48.88429300000001,
+     "lng": 2.3090491,
+     "nom": "Paris 17 - YAY Cardinet",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "24 Av. de la Prte de Montmartre, 75018 Paris, France",
+     "cp": "75018",
+     "creneaux": false,
+     "lat": 48.8998626,
+     "lng": 2.3362229,
+     "nom": "Paris 18",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "72 Bd Mortier, 75020 Paris, France",
+     "cp": "75020",
+     "creneaux": true,
+     "lat": 48.8688959,
+     "lng": 2.4092802,
+     "nom": "Paris 20",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "26 Rue des Balkans, 75020 Paris, France",
+     "cp": "75020",
+     "creneaux": true,
+     "lat": 48.8613527,
+     "lng": 2.4066038,
+     "nom": "Paris 20 - CAJ les Balkans",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 49,
+   "premier_vu": "2026-11-02",
+   "ville": "Asnières-sur-Seine"
+  },
+  {
+   "company_id": "4192",
+   "cp": "93170",
+   "creneaux": true,
+   "enseigne": "PORT DE GRENELLE ( PILATES BOAT EVENT)",
+   "lieux": [
+    {
+     "adresse": "15 Rue Jules Ferry, 93170 Bagnolet, France",
+     "cp": "93170",
+     "creneaux": true,
+     "lat": 48.8568597,
+     "lng": 2.4177914,
+     "nom": "NOMEIA PILATES BAGNOLET",
+     "ville": "Bagnolet"
+    },
+    {
+     "adresse": "Port de Grenelle, 75015 Paris, France",
+     "cp": "75015",
+     "creneaux": false,
+     "lat": 48.8519539,
+     "lng": 2.2844541,
+     "nom": "PORT DE GRENELLE ( PILATES BOAT EVENT)",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-02",
+   "ville": "Bagnolet"
+  },
+  {
+   "company_id": "4190",
+   "cp": "75017",
+   "creneaux": true,
+   "enseigne": "Social Reformers Neuilly-Sur-Seine",
+   "lieux": [
+    {
+     "adresse": "41 Rue Brochant, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": true,
+     "lat": 48.8902111,
+     "lng": 2.3194368,
+     "nom": "Social Reformers Batignolles",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "126 Av. Achille Peretti, 92200 Neuilly-sur-Seine, France",
+     "cp": "92200",
+     "creneaux": true,
+     "lat": 48.88552670000001,
+     "lng": 2.2650415,
+     "nom": "Social Reformers Neuilly-Sur-Seine",
+     "ville": "Neuilly-sur-Seine"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-02",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "4167",
+   "cp": "92100",
+   "creneaux": true,
+   "enseigne": "Try Feat : FEAT CLUB Studio Boulogne - 102 Route de la Reine",
+   "lieux": [
+    {
+     "adresse": "102 Rte de la Reine, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": false,
+     "lat": 48.8401724,
+     "lng": 2.236833,
+     "nom": "Feat Run Club",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "102 Rte de la Reine, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": false,
+     "lat": 48.8401724,
+     "lng": 2.236833,
+     "nom": "Personal Training",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "102 Rte de la Reine, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": false,
+     "lat": 48.8401724,
+     "lng": 2.236833,
+     "nom": "Personal Training 2",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "102 Rte de la Reine, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": true,
+     "lat": 48.8401724,
+     "lng": 2.236833,
+     "nom": "Small Group Training",
+     "ville": "Boulogne-Billancourt"
+    },
+    {
+     "adresse": "102 Rte de la Reine, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": false,
+     "lat": 48.8401724,
+     "lng": 2.236833,
+     "nom": "Try Feat : FEAT CLUB Studio Boulogne - 102 Route de la Reine",
+     "ville": "Boulogne-Billancourt"
+    }
+   ],
+   "nb_lieux": 5,
+   "premier_vu": "2026-11-02",
+   "ville": "Boulogne-Billancourt"
+  },
+  {
+   "company_id": "4068",
+   "cp": "92150",
+   "creneaux": true,
+   "enseigne": "92 - SURESNES",
+   "lieux": [
+    {
+     "adresse": "5 rue Gardenat Lapostol (Bâtiment DOC CITY, centre de balnéo IMSS), 92150 Suresnes, France",
+     "cp": "92150",
+     "creneaux": true,
+     "lat": 48.872598,
+     "lng": 2.2226292,
+     "nom": "92 - SURESNES",
+     "ville": "Suresnes"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-02",
+   "ville": "Suresnes"
+  },
+  {
+   "company_id": "4051",
+   "cp": "92250",
+   "creneaux": true,
+   "enseigne": "Sensa studio",
+   "lieux": [
+    {
+     "adresse": "14 Ave. du Général de Gaulle, 92250 La Garenne-Colombes, France",
+     "cp": "92250",
+     "creneaux": true,
+     "lat": 48.912643,
+     "lng": 2.2536277,
+     "nom": "Sensa studio",
+     "ville": "La Garenne-Colombes"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-02",
+   "ville": "La Garenne-Colombes"
+  },
+  {
+   "company_id": "4039",
+   "cp": "78110",
+   "creneaux": true,
+   "enseigne": "STUDIO HALO",
+   "lieux": [
+    {
+     "adresse": "54 Rue Ernest André, 78110 Le Vésinet, France",
+     "cp": "78110",
+     "creneaux": true,
+     "lat": 48.8921047,
+     "lng": 2.1320228,
+     "nom": "STUDIO HALO",
+     "ville": "Le Vésinet"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-02",
+   "ville": "Le Vésinet"
+  },
+  {
    "company_id": "3920",
    "cp": "92120",
    "creneaux": true,
@@ -841,26 +1914,17 @@
   },
   {
    "company_id": "3667",
-   "cp": "75017",
+   "cp": "75006",
    "creneaux": true,
    "enseigne": "Cris et Chuchotements (Club)",
    "lieux": [
     {
-     "adresse": "9 Rue Truffaut, 75017 Paris, France",
-     "cp": "75017",
-     "creneaux": true,
-     "lat": 48.8846056,
-     "lng": 2.3228908,
-     "nom": "Cris et Chuchotements (Club)",
-     "ville": "Paris"
-    },
-    {
-     "adresse": ", 75000 Paris, France",
-     "cp": "75000",
-     "creneaux": true,
-     "lat": 48.8575475,
-     "lng": 2.3513765,
-     "nom": "Secret Location",
+     "adresse": ", 75006 Paris, France",
+     "cp": "75006",
+     "creneaux": false,
+     "lat": 48.8488576,
+     "lng": 2.3354223,
+     "nom": "The Sanctuary",
      "ville": "Paris"
     },
     {
@@ -873,12 +1937,21 @@
      "ville": "Paris"
     },
     {
-     "adresse": ", 75006 Paris, France",
-     "cp": "75006",
-     "creneaux": false,
-     "lat": 48.8488576,
-     "lng": 2.3354223,
-     "nom": "The Sanctuary",
+     "adresse": ", 75000 Paris, France",
+     "cp": "75000",
+     "creneaux": true,
+     "lat": 48.8575475,
+     "lng": 2.3513765,
+     "nom": "Secret Location",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "9 Rue Truffaut, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": true,
+     "lat": 48.8846056,
+     "lng": 2.3228908,
+     "nom": "Cris et Chuchotements (Club)",
      "ville": "Paris"
     }
    ],
@@ -945,6 +2018,15 @@
      "creneaux": true,
      "lat": 48.9043596,
      "lng": 2.3131017,
+     "nom": "Studio becoached",
+     "ville": "Clichy"
+    },
+    {
+     "adresse": "16 Rue du Général Roguet, 92110 Clichy, France",
+     "cp": "92110",
+     "creneaux": true,
+     "lat": 48.9043596,
+     "lng": 2.3131017,
      "nom": "Open Cardio",
      "ville": "Clichy"
     },
@@ -964,15 +2046,6 @@
      "lat": 48.9043943,
      "lng": 2.3131209,
      "nom": "Red Light Therapy",
-     "ville": "Clichy"
-    },
-    {
-     "adresse": "16 Rue du Général Roguet, 92110 Clichy, France",
-     "cp": "92110",
-     "creneaux": true,
-     "lat": 48.9043596,
-     "lng": 2.3131017,
-     "nom": "Studio becoached",
      "ville": "Clichy"
     }
    ],
@@ -1069,19 +2142,10 @@
   },
   {
    "company_id": "3604",
-   "cp": "75002",
+   "cp": "75011",
    "creneaux": true,
    "enseigne": "Richard Lenoir - Paris",
    "lieux": [
-    {
-     "adresse": "103 Rue Réaumur, 75002 Paris, France",
-     "cp": "75002",
-     "creneaux": true,
-     "lat": 48.8676366,
-     "lng": 2.3444981,
-     "nom": "Réaumur - Paris",
-     "ville": "Paris"
-    },
     {
      "adresse": "15 Bd Richard-Lenoir, 75011 Paris, France",
      "cp": "75011",
@@ -1089,6 +2153,15 @@
      "lat": 48.8563196,
      "lng": 2.3700138,
      "nom": "Richard Lenoir - Paris",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "103 Rue Réaumur, 75002 Paris, France",
+     "cp": "75002",
+     "creneaux": true,
+     "lat": 48.8676366,
+     "lng": 2.3444981,
+     "nom": "Réaumur - Paris",
      "ville": "Paris"
     }
    ],
@@ -9994,20 +11067,107 @@
    "ville": "Paris"
   },
   {
+   "company_id": "4230",
+   "cp": "95150",
+   "creneaux": false,
+   "enseigne": "Dacoury Gymnase  - Salle d'expression corporelle - TAVERNY",
+   "lieux": [
+    {
+     "adresse": "19 Rue Colette, 95150 Taverny, France",
+     "cp": "95150",
+     "creneaux": false,
+     "lat": 49.0209047,
+     "lng": 2.2103964,
+     "nom": "Dacoury Gymnase  - Salle d'expression corporelle - TAVERNY",
+     "ville": "Taverny"
+    },
+    {
+     "adresse": "Av. des Diablots, 95320 Saint-Leu-la-Forêt, France",
+     "cp": "95320",
+     "creneaux": false,
+     "lat": 49.0109724,
+     "lng": 2.2373999,
+     "nom": "DIABLOTS - ST LEU : Salle Multisports",
+     "ville": "Saint-Leu-la-Forêt"
+    },
+    {
+     "adresse": "5 Rue Pauline Kergomard, 95150 Taverny, France",
+     "cp": "95150",
+     "creneaux": false,
+     "lat": 49.0287354,
+     "lng": 2.2161571,
+     "nom": "Florence Arthaud - TAVERNY",
+     "ville": "Taverny"
+    },
+    {
+     "adresse": "Av. des Diablots, 95320 Saint-Leu-la-Forêt, France",
+     "cp": "95320",
+     "creneaux": false,
+     "lat": 49.0109724,
+     "lng": 2.2373999,
+     "nom": "Jean Moulin Gymnase - SAINT LEU LA FORET",
+     "ville": "Saint-Leu-la-Forêt"
+    },
+    {
+     "adresse": "13 Av. de Boissy, 95150 Taverny, France",
+     "cp": "95150",
+     "creneaux": false,
+     "lat": 49.0121507,
+     "lng": 2.2054259,
+     "nom": "Ladoumègue Gymnase  - TAVERNY",
+     "ville": "Taverny"
+    }
+   ],
+   "nb_lieux": 5,
+   "premier_vu": "2026-11-02",
+   "ville": "Taverny"
+  },
+  {
+   "company_id": "4191",
+   "cp": "92240",
+   "creneaux": false,
+   "enseigne": "NOMÉIA PILATES",
+   "lieux": [
+    {
+     "adresse": "43 Rue Pierre Valette, 92240 Malakoff, France",
+     "cp": "92240",
+     "creneaux": false,
+     "lat": 48.8168902,
+     "lng": 2.3014924,
+     "nom": "NOMÉIA PILATES",
+     "ville": "Malakoff"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-02",
+   "ville": "Malakoff"
+  },
+  {
+   "company_id": "4055",
+   "cp": "75009",
+   "creneaux": false,
+   "enseigne": "Upgrade Private Coaching",
+   "lieux": [
+    {
+     "adresse": "51 Rue Rodier, 75009 Paris, France",
+     "cp": "75009",
+     "creneaux": false,
+     "lat": 48.8806125,
+     "lng": 2.343744,
+     "nom": "Upgrade Private Coaching",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-02",
+   "ville": "Paris"
+  },
+  {
    "company_id": "3966",
-   "cp": "75012",
+   "cp": "75002",
    "creneaux": false,
    "enseigne": "SAN CARLO COFFEE CLUB",
    "lieux": [
-    {
-     "adresse": "67 Bd de la Bastille, 75012 Paris, France",
-     "cp": "75012",
-     "creneaux": false,
-     "lat": 48.8510746,
-     "lng": 2.3686765,
-     "nom": "CHEZ MYLENE",
-     "ville": "Paris"
-    },
     {
      "adresse": "6 Rue Daunou, 75002 Paris, France",
      "cp": "75002",
@@ -10015,6 +11175,15 @@
      "lat": 48.8695817,
      "lng": 2.3324581,
      "nom": "R2 VENDOME",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "67 Bd de la Bastille, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": false,
+     "lat": 48.8510746,
+     "lng": 2.3686765,
+     "nom": "CHEZ MYLENE",
      "ville": "Paris"
     },
     {
@@ -10081,6 +11250,33 @@
      "creneaux": false,
      "lat": 48.8681071,
      "lng": 2.2902412,
+     "nom": "Salle boisée",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "4 Rue Cimarosa, 75116 Paris, France",
+     "cp": "75116",
+     "creneaux": false,
+     "lat": 48.8681071,
+     "lng": 2.2902412,
+     "nom": "Salle Vasper",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "4 Rue Cimarosa, 75116 Paris, France",
+     "cp": "75116",
+     "creneaux": false,
+     "lat": 48.8681071,
+     "lng": 2.2902412,
+     "nom": "Salle Metrics",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "4 Rue Cimarosa, 75116 Paris, France",
+     "cp": "75116",
+     "creneaux": false,
+     "lat": 48.8681071,
+     "lng": 2.2902412,
      "nom": "Physiosulpt",
      "ville": "Paris"
     },
@@ -10099,7 +11295,7 @@
      "creneaux": false,
      "lat": 48.8681071,
      "lng": 2.2902412,
-     "nom": "Salle boisée",
+     "nom": "Salle IV",
      "ville": "Paris"
     },
     {
@@ -10118,33 +11314,6 @@
      "lat": 48.8681071,
      "lng": 2.2902412,
      "nom": "Salle du milieu",
-     "ville": "Paris"
-    },
-    {
-     "adresse": "4 Rue Cimarosa, 75116 Paris, France",
-     "cp": "75116",
-     "creneaux": false,
-     "lat": 48.8681071,
-     "lng": 2.2902412,
-     "nom": "Salle IV",
-     "ville": "Paris"
-    },
-    {
-     "adresse": "4 Rue Cimarosa, 75116 Paris, France",
-     "cp": "75116",
-     "creneaux": false,
-     "lat": 48.8681071,
-     "lng": 2.2902412,
-     "nom": "Salle Metrics",
-     "ville": "Paris"
-    },
-    {
-     "adresse": "4 Rue Cimarosa, 75116 Paris, France",
-     "cp": "75116",
-     "creneaux": false,
-     "lat": 48.8681071,
-     "lng": 2.2902412,
-     "nom": "Salle Vasper",
      "ville": "Paris"
     }
    ],
@@ -10174,10 +11343,37 @@
   },
   {
    "company_id": "3750",
-   "cp": "75008",
+   "cp": "75001",
    "creneaux": false,
    "enseigne": "Paris 1 - Les Halles - Suzanne Berlioux",
    "lieux": [
+    {
+     "adresse": "10 Place de la Rotonde, 75001 Paris, France",
+     "cp": "75001",
+     "creneaux": false,
+     "lat": 48.8628694,
+     "lng": 2.3432384,
+     "nom": "Paris 1 - Les Halles - Suzanne Berlioux",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "120 Bd Bessières, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": false,
+     "lat": 48.89539,
+     "lng": 2.315311,
+     "nom": "Paris 17 - Honoré de Balzac",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "119 Bd Charles de Gaulle, 92390 Villeneuve-la-Garenne, France",
+     "cp": "92390",
+     "creneaux": false,
+     "lat": 48.942418,
+     "lng": 2.3171161,
+     "nom": "Fosse UCPA Aqua 92",
+     "ville": "Villeneuve-la-Garenne"
+    },
     {
      "adresse": "76 Bd Malesherbes, 75008 Paris, France",
      "cp": "75008",
@@ -10195,33 +11391,6 @@
      "lng": 2.2866721,
      "nom": "Espace Plongée Antony",
      "ville": "Antony"
-    },
-    {
-     "adresse": "119 Bd Charles de Gaulle, 92390 Villeneuve-la-Garenne, France",
-     "cp": "92390",
-     "creneaux": false,
-     "lat": 48.942418,
-     "lng": 2.3171161,
-     "nom": "Fosse UCPA Aqua 92",
-     "ville": "Villeneuve-la-Garenne"
-    },
-    {
-     "adresse": "120 Bd Bessières, 75017 Paris, France",
-     "cp": "75017",
-     "creneaux": false,
-     "lat": 48.89539,
-     "lng": 2.315311,
-     "nom": "Paris 17 - Honoré de Balzac",
-     "ville": "Paris"
-    },
-    {
-     "adresse": "10 Place de la Rotonde, 75001 Paris, France",
-     "cp": "75001",
-     "creneaux": false,
-     "lat": 48.8628694,
-     "lng": 2.3432384,
-     "nom": "Paris 1 - Les Halles - Suzanne Berlioux",
-     "ville": "Paris"
     }
    ],
    "nb_lieux": 5,
@@ -17816,7 +18985,7 @@
    "ville": "Paris"
   }
  ],
- "enseignes_non_suivies": 451,
- "genere": "2026-10-26 11:11",
- "total_idf_recenses": 2064
+ "enseignes_non_suivies": 473,
+ "genere": "2026-11-02 13:35",
+ "total_idf_recenses": 2208
 }
