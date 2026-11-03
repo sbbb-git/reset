@@ -1454,7 +1454,7 @@
  {
   "slug": "doinsport-e8d7b54a-5872-4f38-81ec-e5355cd775fa",
   "source": "doinsport",
-  "name": "Castel Padel",
+  "name": "CASTEL PADEL",
   "cp": "18000",
   "city": "Bourges",
   "dept": "18",
@@ -1463,7 +1463,7 @@
   "lng": 2.4210106,
   "raw": {
    "id": "e8d7b54a-5872-4f38-81ec-e5355cd775fa",
-   "name": "Castel Padel",
+   "name": "CASTEL PADEL",
    "cp": "18000",
    "city": "Bourges",
    "dept": "18",
@@ -11267,6 +11267,27 @@
    "metro": "marseille",
    "lat": 43.9521929,
    "lng": 4.8713098
+  }
+ },
+ {
+  "slug": "urbanpadel-57",
+  "source": "urbanpadel",
+  "name": "Bordeaux-Carbon-Blanc",
+  "cp": "33560",
+  "city": null,
+  "dept": "33",
+  "metro": "bordeaux",
+  "lat": 44.91551,
+  "lng": -0.48642,
+  "raw": {
+   "id": 57,
+   "name": "Bordeaux-Carbon-Blanc",
+   "cp": "33560",
+   "address": "38 rue des frères lumières, 33560 Carbon-Blanc",
+   "dept": "33",
+   "metro": "bordeaux",
+   "lat": 44.91551,
+   "lng": -0.48642
   }
  },
  {
