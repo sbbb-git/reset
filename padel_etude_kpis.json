@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T20:53:06.331669",
+ "generated_at": "2026-11-04T01:09:13.425694",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,11 +9,11 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 87352,
-   "doinsport": 6078,
-   "urbanpadel": 7226
+   "anybuddy": 91474,
+   "doinsport": 6261,
+   "urbanpadel": 7594
   },
-  "n_sessions_live": 100656,
+  "n_sessions_live": 105329,
   "n_sessions_history": 946365,
   "pop_idf": 12258660
  },
@@ -484,28 +484,28 @@
  "weather_period": "2024-01-01 → 2026-05-31",
  "maturity": {
   "anybuddy": {
+   "days_elapsed": 158,
+   "target_days": 180,
+   "pct": 88,
+   "note": "158j sur 180j (6 mois)"
+  },
+  "urbanpadel": {
    "days_elapsed": 157,
    "target_days": 180,
    "pct": 87,
    "note": "157j sur 180j (6 mois)"
   },
-  "urbanpadel": {
-   "days_elapsed": 156,
-   "target_days": 180,
-   "pct": 87,
-   "note": "156j sur 180j (6 mois)"
-  },
   "doinsport": {
-   "days_elapsed": 1037,
+   "days_elapsed": 1038,
    "target_days": 180,
    "pct": 100,
    "note": "historique rétroactif disponible"
   },
   "playtomic": {
-   "days_elapsed": 156,
+   "days_elapsed": 157,
    "target_days": 180,
    "pct": 87,
-   "note": "156j sur 180j (6 mois)"
+   "note": "157j sur 180j (6 mois)"
   },
   "_global_pct": 92
  }
