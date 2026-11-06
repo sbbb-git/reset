@@ -1,15 +1,6 @@
 {
- "generated_at": "2026-11-06T13:59:40.580724",
- "idle_24h": [
-  {
-   "slug": "doinsport-f592228c-faee-4fd9-93a9-83a651a0703b",
-   "source": "doinsport",
-   "name": "Big Five & Padel",
-   "cp": "95350",
-   "last_seen": "2026-11-01 22:00",
-   "hours_idle": 112.0
-  }
- ],
+ "generated_at": "2026-11-06T20:22:21.992413",
+ "idle_24h": [],
  "price_shifts": [
   {
    "slug": "doinsport-af5c97a7-390f-4f23-afca-6d10c0d117cd",
@@ -1459,8 +1450,8 @@
   }
  ],
  "summary": {
-  "total_anomalies": 92,
-  "idle_24h": 1,
+  "total_anomalies": 91,
+  "idle_24h": 0,
   "price_shifts": 5,
   "volume_drops": 86,
   "new_clubs_14d": 88
