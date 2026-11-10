@@ -1,0 +1,426 @@
+date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
+2026-08-12,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-08-12,Mercredi,13:15,14:00,Summit Cycle,Summit - Cross,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-08-12,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-08-12,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-08-12,Mercredi,20:30,21:15,Summit Cycle,Summit - Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-08-13,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-08-13,Jeudi,12:15,13:00,Summit Cycle,Summit Endurance,David Mallegol,42,0,True,2026-11-10 17:25
+2026-08-13,Jeudi,13:15,14:00,Summit Cycle,Summit - Cross,Florie Chanoz,42,0,True,2026-11-10 17:25
+2026-08-13,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-08-13,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-08-13,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-08-14,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-08-14,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-08-14,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-08-14,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-08-15,Samedi,10:30,11:15,Summit Cycle,Summit Cross,Florie Chanoz,42,0,True,2026-11-10 17:25
+2026-08-15,Samedi,11:30,12:15,Summit Cycle,Summit Training,Florie Chanoz,42,0,True,2026-11-10 17:25
+2026-08-16,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-08-16,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-08-16,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-08-17,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,0,True,2026-11-10 17:25
+2026-08-17,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-08-17,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-08-17,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,0,True,2026-11-10 17:25
+2026-08-18,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-08-18,Mardi,13:15,14:00,Summit Cycle,Summit - Training,Florie Chanoz,42,0,True,2026-11-10 17:25
+2026-08-18,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,0,True,2026-11-10 17:25
+2026-08-18,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-08-18,Mardi,20:30,21:15,Summit Cycle,Summit - Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-08-19,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-08-19,Mercredi,13:15,14:00,Summit Cycle,Summit - Cross,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-08-19,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-08-19,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-08-19,Mercredi,20:30,21:15,Summit Cycle,Summit - Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-08-20,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-08-20,Jeudi,12:15,13:00,Summit Cycle,Summit Endurance,David Mallegol,42,0,True,2026-11-10 17:25
+2026-08-20,Jeudi,13:15,14:00,Summit Cycle,Summit - Cross,Florie Chanoz,42,0,True,2026-11-10 17:25
+2026-08-20,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-08-20,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-08-20,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-08-21,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-08-21,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-08-21,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-08-21,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-08-22,Samedi,10:30,11:15,Summit Cycle,Summit Cross,Florie Chanoz,42,0,True,2026-11-10 17:25
+2026-08-22,Samedi,11:30,12:15,Summit Cycle,Summit Training,Florie Chanoz,42,0,True,2026-11-10 17:25
+2026-08-23,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-08-23,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-08-23,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-08-24,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,0,True,2026-11-10 17:25
+2026-08-24,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,25,True,2026-11-10 17:25
+2026-08-24,Lundi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,18,True,2026-11-10 17:25
+2026-08-24,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,36,True,2026-11-10 17:25
+2026-08-24,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,19,True,2026-11-10 17:25
+2026-08-25,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-08-25,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Sebastien  Rajkowski,42,23,True,2026-11-10 17:25
+2026-08-25,Mardi,13:15,14:00,Summit Cycle,Summit - Training,Emeric Choisy,42,7,True,2026-11-10 17:25
+2026-08-25,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,22,True,2026-11-10 17:25
+2026-08-25,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,24,True,2026-11-10 17:25
+2026-08-25,Mardi,20:30,21:15,Summit Cycle,Summit - Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-08-26,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Florie Chanoz,42,6,True,2026-11-10 17:25
+2026-08-26,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,35,True,2026-11-10 17:25
+2026-08-26,Mercredi,13:15,14:00,Summit Cycle,Summit Climb,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-08-26,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,20,True,2026-11-10 17:25
+2026-08-26,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,34,True,2026-11-10 17:25
+2026-08-26,Mercredi,20:30,21:15,Summit Cycle,Summit - Cross,Sebastien  Rajkowski,42,0,True,2026-11-10 17:25
+2026-08-27,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Rozenn Jestin,42,8,True,2026-11-10 17:25
+2026-08-27,Jeudi,12:15,13:00,Summit Cycle,Summit Endurance,David Mallegol,42,35,True,2026-11-10 17:25
+2026-08-27,Jeudi,13:15,14:00,Summit Cycle,Summit - Cross,David Mallegol,42,8,True,2026-11-10 17:25
+2026-08-27,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Emeric Choisy,42,22,True,2026-11-10 17:25
+2026-08-27,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Emeric Choisy,42,19,True,2026-11-10 17:25
+2026-08-27,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-08-28,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-08-28,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,27,True,2026-11-10 17:25
+2026-08-28,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,9,True,2026-11-10 17:25
+2026-08-28,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,23,True,2026-11-10 17:25
+2026-08-29,Samedi,10:30,11:15,Summit Cycle,Summit Cross,Florie Chanoz,42,22,True,2026-11-10 17:25
+2026-08-29,Samedi,11:30,12:15,Summit Cycle,Summit Training,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-08-30,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,8,True,2026-11-10 17:25
+2026-08-30,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,20,True,2026-11-10 17:25
+2026-08-30,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-08-31,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,12,True,2026-11-10 17:25
+2026-08-31,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,40,True,2026-11-10 17:25
+2026-08-31,Lundi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,16,True,2026-11-10 17:25
+2026-08-31,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,40,True,2026-11-10 17:25
+2026-08-31,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,39,True,2026-11-10 17:25
+2026-09-01,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-09-01,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Quitterie Ribes,42,39,True,2026-11-10 17:25
+2026-09-01,Mardi,13:15,14:00,Summit Cycle,Summit - Training,Quitterie Ribes,42,13,True,2026-11-10 17:25
+2026-09-01,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,40,True,2026-11-10 17:25
+2026-09-01,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,40,True,2026-11-10 17:25
+2026-09-01,Mardi,20:30,21:15,Summit Cycle,Summit - Cross,David Mallegol,42,6,True,2026-11-10 17:25
+2026-09-02,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,13,True,2026-11-10 17:25
+2026-09-02,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,31,True,2026-11-10 17:25
+2026-09-02,Mercredi,13:15,14:00,Summit Cycle,Summit Climb,Emeric Choisy,42,7,True,2026-11-10 17:25
+2026-09-02,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,28,True,2026-11-10 17:25
+2026-09-02,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,26,True,2026-11-10 17:25
+2026-09-02,Mercredi,20:30,21:15,Summit Cycle,Summit - Cross,Yannick Zachee,42,6,True,2026-11-10 17:25
+2026-09-03,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,11,True,2026-11-10 17:25
+2026-09-03,Jeudi,12:15,13:00,Summit Cycle,Summit Endurance,David Mallegol,42,39,True,2026-11-10 17:25
+2026-09-03,Jeudi,13:15,14:00,Summit Cycle,Summit - Cross,David Mallegol,42,24,True,2026-11-10 17:25
+2026-09-03,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Quitterie Ribes,42,32,True,2026-11-10 17:25
+2026-09-03,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Quitterie Ribes,42,36,True,2026-11-10 17:25
+2026-09-03,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-09-04,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Yannick Zachee,42,15,True,2026-11-10 17:25
+2026-09-04,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,37,True,2026-11-10 17:25
+2026-09-04,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,16,True,2026-11-10 17:25
+2026-09-04,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,27,True,2026-11-10 17:25
+2026-09-05,Samedi,10:30,11:15,Summit Cycle,Summit Cross,Yannick Zachee,42,22,True,2026-11-10 17:25
+2026-09-05,Samedi,11:30,12:15,Summit Cycle,Summit Training,Yannick Zachee,42,6,True,2026-11-10 17:25
+2026-09-06,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,5,True,2026-11-10 17:25
+2026-09-06,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,17,True,2026-11-10 17:25
+2026-09-06,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Florie Chanoz,42,16,True,2026-11-10 17:25
+2026-09-07,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,5,True,2026-11-10 17:25
+2026-09-07,Lundi,12:30,13:15,Summit Cycle,Summit Cross,Yannick Zachee,42,40,True,2026-11-10 17:25
+2026-09-07,Lundi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,8,True,2026-11-10 17:25
+2026-09-07,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,40,True,2026-11-10 17:25
+2026-09-07,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,38,True,2026-11-10 17:25
+2026-09-08,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Victorine Chibois,42,11,True,2026-11-10 17:25
+2026-09-08,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Quitterie Ribes,42,38,True,2026-11-10 17:25
+2026-09-08,Mardi,13:15,14:00,Summit Cycle,Summit - Training,Quitterie Ribes,42,15,True,2026-11-10 17:25
+2026-09-08,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,24,True,2026-11-10 17:25
+2026-09-08,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,41,True,2026-11-10 17:25
+2026-09-08,Mardi,20:30,21:15,Summit Cycle,Summit - Cross,David Mallegol,42,14,True,2026-11-10 17:25
+2026-09-09,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,13,True,2026-11-10 17:25
+2026-09-09,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,39,True,2026-11-10 17:25
+2026-09-09,Mercredi,13:15,14:00,Summit Cycle,Summit - Cross,Emeric Choisy,42,11,True,2026-11-10 17:25
+2026-09-09,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,29,True,2026-11-10 17:25
+2026-09-09,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,39,True,2026-11-10 17:25
+2026-09-09,Mercredi,20:30,21:15,Summit Cycle,Summit - Cross,Reda Zrouri,42,7,True,2026-11-10 17:25
+2026-09-10,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,15,True,2026-11-10 17:25
+2026-09-10,Jeudi,12:15,13:00,Summit Cycle,Summit Climb,David Mallegol,42,38,True,2026-11-10 17:25
+2026-09-10,Jeudi,13:15,14:00,Summit Cycle,Summit - Cross,David Mallegol,42,17,True,2026-11-10 17:25
+2026-09-10,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,21,True,2026-11-10 17:25
+2026-09-10,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,22,True,2026-11-10 17:25
+2026-09-10,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-09-11,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Victorine Chibois,42,11,True,2026-11-10 17:25
+2026-09-11,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,34,True,2026-11-10 17:25
+2026-09-11,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,10,True,2026-11-10 17:25
+2026-09-11,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,16,True,2026-11-10 17:25
+2026-09-12,Samedi,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,14,True,2026-11-10 17:25
+2026-09-12,Samedi,11:30,12:15,Summit Cycle,Summit Training,Victorine Chibois,42,19,True,2026-11-10 17:25
+2026-09-13,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,9,True,2026-11-10 17:25
+2026-09-13,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,16,True,2026-11-10 17:25
+2026-09-13,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Sebastien  Rajkowski,42,13,True,2026-11-10 17:25
+2026-09-14,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,8,True,2026-11-10 17:25
+2026-09-14,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,36,True,2026-11-10 17:25
+2026-09-14,Lundi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,9,True,2026-11-10 17:25
+2026-09-14,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,38,True,2026-11-10 17:25
+2026-09-14,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,40,True,2026-11-10 17:25
+2026-09-15,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Victorine Chibois,42,12,True,2026-11-10 17:25
+2026-09-15,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Quitterie Ribes,42,35,True,2026-11-10 17:25
+2026-09-15,Mardi,13:15,14:00,Summit Cycle,Summit - Training,Quitterie Ribes,42,16,True,2026-11-10 17:25
+2026-09-15,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,40,True,2026-11-10 17:25
+2026-09-15,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,29,True,2026-11-10 17:25
+2026-09-15,Mardi,20:30,21:15,Summit Cycle,Summit - Cross,David Mallegol,42,16,True,2026-11-10 17:25
+2026-09-16,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,18,True,2026-11-10 17:25
+2026-09-16,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,38,True,2026-11-10 17:25
+2026-09-16,Mercredi,13:15,14:00,Summit Cycle,Summit - Cross,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-09-16,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,26,True,2026-11-10 17:25
+2026-09-16,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,38,True,2026-11-10 17:25
+2026-09-16,Mercredi,20:30,21:15,Summit Cycle,Summit - Cross,Yannick Zachee,42,13,True,2026-11-10 17:25
+2026-09-17,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,8,True,2026-11-10 17:25
+2026-09-17,Jeudi,12:15,13:00,Summit Cycle,Summit Endurance,David Mallegol,42,33,True,2026-11-10 17:25
+2026-09-17,Jeudi,13:15,14:00,Summit Cycle,Summit - Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-09-17,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Quitterie Ribes,42,25,True,2026-11-10 17:25
+2026-09-17,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Quitterie Ribes,42,17,True,2026-11-10 17:25
+2026-09-17,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-09-18,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Yannick Zachee,42,7,True,2026-11-10 17:25
+2026-09-18,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,36,True,2026-11-10 17:25
+2026-09-18,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,10,True,2026-11-10 17:25
+2026-09-18,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,13,True,2026-11-10 17:25
+2026-09-19,Samedi,10:30,11:15,Summit Cycle,Summit Cross,Yannick Zachee,42,10,True,2026-11-10 17:25
+2026-09-19,Samedi,11:30,12:15,Summit Cycle,Summit Training,Victorine Chibois,42,16,True,2026-11-10 17:25
+2026-09-20,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,8,True,2026-11-10 17:25
+2026-09-20,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,14,True,2026-11-10 17:25
+2026-09-20,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Sebastien  Rajkowski,42,14,True,2026-11-10 17:25
+2026-09-21,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,8,True,2026-11-10 17:25
+2026-09-21,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,42,True,2026-11-10 17:25
+2026-09-21,Lundi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,13,True,2026-11-10 17:25
+2026-09-21,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,40,True,2026-11-10 17:25
+2026-09-21,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,35,True,2026-11-10 17:25
+2026-09-22,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Victorine Chibois,42,7,True,2026-11-10 17:25
+2026-09-22,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Quitterie Ribes,42,39,True,2026-11-10 17:25
+2026-09-22,Mardi,13:15,14:00,Summit Cycle,Summit Training,Quitterie Ribes,42,12,True,2026-11-10 17:25
+2026-09-22,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,41,True,2026-11-10 17:25
+2026-09-22,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,42,True,2026-11-10 17:25
+2026-09-23,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,16,True,2026-11-10 17:25
+2026-09-23,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,31,True,2026-11-10 17:25
+2026-09-23,Mercredi,13:15,14:00,Summit Cycle,Summit Cross,Emeric Choisy,42,10,True,2026-11-10 17:25
+2026-09-23,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,22,True,2026-11-10 17:25
+2026-09-23,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,32,True,2026-11-10 17:25
+2026-09-23,Mercredi,20:30,21:15,Summit Cycle,Summit Cross,Yannick Zachee,42,10,True,2026-11-10 17:25
+2026-09-24,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Victorine Chibois,42,8,True,2026-11-10 17:25
+2026-09-24,Jeudi,12:15,13:00,Summit Cycle,Summit Endurance,David Mallegol,42,39,True,2026-11-10 17:25
+2026-09-24,Jeudi,13:15,14:00,Summit Cycle,Summit Cross,David Mallegol,42,9,True,2026-11-10 17:25
+2026-09-24,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Quitterie Ribes,42,20,True,2026-11-10 17:25
+2026-09-24,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Quitterie Ribes,42,30,True,2026-11-10 17:25
+2026-09-24,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-09-25,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Yannick Zachee,42,10,True,2026-11-10 17:25
+2026-09-25,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,36,True,2026-11-10 17:25
+2026-09-25,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,15,True,2026-11-10 17:25
+2026-09-25,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,10,True,2026-11-10 17:25
+2026-09-26,Samedi,10:30,11:15,Summit Cycle,Summit Cross,Yannick Zachee,42,16,True,2026-11-10 17:25
+2026-09-26,Samedi,11:30,12:15,Summit Cycle,Summit Training,Victorine Chibois,42,12,True,2026-11-10 17:25
+2026-09-27,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,15,True,2026-11-10 17:25
+2026-09-27,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,17,True,2026-11-10 17:25
+2026-09-27,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-09-28,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,12,True,2026-11-10 17:25
+2026-09-28,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,37,True,2026-11-10 17:25
+2026-09-28,Lundi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,17,True,2026-11-10 17:25
+2026-09-28,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,40,True,2026-11-10 17:25
+2026-09-28,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,40,True,2026-11-10 17:25
+2026-09-29,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Victorine Chibois,42,17,True,2026-11-10 17:25
+2026-09-29,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Quitterie Ribes,42,40,True,2026-11-10 17:25
+2026-09-29,Mardi,13:15,14:00,Summit Cycle,Summit Training,Quitterie Ribes,42,12,True,2026-11-10 17:25
+2026-09-29,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,33,True,2026-11-10 17:25
+2026-09-29,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,41,True,2026-11-10 17:25
+2026-09-29,Mardi,20:30,21:15,Summit Cycle,Summit Cross,David Mallegol,42,5,True,2026-11-10 17:25
+2026-09-30,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,17,True,2026-11-10 17:25
+2026-09-30,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,25,True,2026-11-10 17:25
+2026-09-30,Mercredi,13:15,14:00,Summit Cycle,Summit Climb,Emeric Choisy,42,18,True,2026-11-10 17:25
+2026-09-30,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,11,True,2026-11-10 17:25
+2026-09-30,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,29,True,2026-11-10 17:25
+2026-09-30,Mercredi,20:30,21:15,Summit Cycle,Summit Cross,Yannick Zachee,42,12,True,2026-11-10 17:25
+2026-10-01,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,16,True,2026-11-10 17:25
+2026-10-01,Jeudi,12:15,13:00,Summit Cycle,Summit Endurance,David Mallegol,42,39,True,2026-11-10 17:25
+2026-10-01,Jeudi,13:15,14:00,Summit Cycle,Summit Cross,David Mallegol,42,16,True,2026-11-10 17:25
+2026-10-01,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Quitterie Ribes,42,28,True,2026-11-10 17:25
+2026-10-01,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Quitterie Ribes,42,32,True,2026-11-10 17:25
+2026-10-01,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-10-02,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Yannick Zachee,42,11,True,2026-11-10 17:25
+2026-10-02,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,27,True,2026-11-10 17:25
+2026-10-02,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,7,True,2026-11-10 17:25
+2026-10-02,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,8,True,2026-11-10 17:25
+2026-10-03,Samedi,10:30,11:15,Summit Cycle,Summit Cross,David Mallegol,42,13,True,2026-11-10 17:25
+2026-10-03,Samedi,11:30,12:15,Summit Cycle,Summit Training,David Mallegol,42,18,True,2026-11-10 17:25
+2026-10-04,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,8,True,2026-11-10 17:25
+2026-10-04,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,11,True,2026-11-10 17:25
+2026-10-04,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Quitterie Ribes,42,14,True,2026-11-10 17:25
+2026-10-05,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,11,True,2026-11-10 17:25
+2026-10-05,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,42,True,2026-11-10 17:25
+2026-10-05,Lundi,18:00,18:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,13,True,2026-11-10 17:25
+2026-10-05,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,42,True,2026-11-10 17:25
+2026-10-05,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,40,True,2026-11-10 17:25
+2026-10-06,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Victorine Chibois,42,9,True,2026-11-10 17:25
+2026-10-06,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Quitterie Ribes,42,38,True,2026-11-10 17:25
+2026-10-06,Mardi,13:15,14:00,Summit Cycle,Summit Training,Quitterie Ribes,42,8,True,2026-11-10 17:25
+2026-10-06,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,40,True,2026-11-10 17:25
+2026-10-06,Mardi,19:30,20:15,Summit Cycle,Summit Cross,Victorine Chibois,42,35,True,2026-11-10 17:25
+2026-10-06,Mardi,20:30,21:15,Summit Cycle,Summit Cross,Victorine Chibois,42,20,True,2026-11-10 17:25
+2026-10-07,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,11,True,2026-11-10 17:25
+2026-10-07,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,42,True,2026-11-10 17:25
+2026-10-07,Mercredi,13:15,14:00,Summit Cycle,Summit Cross,Emeric Choisy,42,14,True,2026-11-10 17:25
+2026-10-07,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,26,True,2026-11-10 17:25
+2026-10-07,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,33,True,2026-11-10 17:25
+2026-10-07,Mercredi,20:30,21:15,Summit Cycle,Summit Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-10-08,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,23,True,2026-11-10 17:25
+2026-10-08,Jeudi,12:15,13:00,Summit Cycle,Summit Climb,David Mallegol,42,40,True,2026-11-10 17:25
+2026-10-08,Jeudi,13:15,14:00,Summit Cycle,Summit Cross,David Mallegol,42,10,True,2026-11-10 17:25
+2026-10-08,Jeudi,18:30,19:15,Summit Cycle,Summit Training,David Mallegol,42,12,True,2026-11-10 17:25
+2026-10-08,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,16,True,2026-11-10 17:25
+2026-10-08,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-10-09,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Victorine Chibois,42,14,True,2026-11-10 17:25
+2026-10-09,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,26,True,2026-11-10 17:25
+2026-10-09,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,19,True,2026-11-10 17:25
+2026-10-09,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,18,True,2026-11-10 17:25
+2026-10-10,Samedi,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,16,True,2026-11-10 17:25
+2026-10-10,Samedi,11:30,12:15,Summit Cycle,Summit Training,Victorine Chibois,42,12,True,2026-11-10 17:25
+2026-10-11,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,16,True,2026-11-10 17:25
+2026-10-11,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,12,True,2026-11-10 17:25
+2026-10-11,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Thomas Piquet,42,9,True,2026-11-10 17:25
+2026-10-12,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,7,True,2026-11-10 17:25
+2026-10-12,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,34,True,2026-11-10 17:25
+2026-10-12,Lundi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,19,True,2026-11-10 17:25
+2026-10-12,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,41,True,2026-11-10 17:25
+2026-10-12,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,38,True,2026-11-10 17:25
+2026-10-13,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Victorine Chibois,42,8,True,2026-11-10 17:25
+2026-10-13,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Quitterie Ribes,42,40,True,2026-11-10 17:25
+2026-10-13,Mardi,13:15,14:00,Summit Cycle,Summit Training,Quitterie Ribes,42,15,True,2026-11-10 17:25
+2026-10-13,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,36,True,2026-11-10 17:25
+2026-10-13,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,28,True,2026-11-10 17:25
+2026-10-13,Mardi,20:30,21:15,Summit Cycle,Summit Cross,David Mallegol,42,10,True,2026-11-10 17:25
+2026-10-14,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,11,True,2026-11-10 17:25
+2026-10-14,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,30,True,2026-11-10 17:25
+2026-10-14,Mercredi,13:15,14:00,Summit Cycle,Summit Cross,Emeric Choisy,42,7,True,2026-11-10 17:25
+2026-10-14,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-10-14,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,42,True,2026-11-10 17:25
+2026-10-14,Mercredi,20:30,21:15,Summit Cycle,Summit Cross,Yannick Zachee,42,11,True,2026-11-10 17:25
+2026-10-15,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,14,True,2026-11-10 17:25
+2026-10-15,Jeudi,12:15,13:00,Summit Cycle,Summit Endurance,David Mallegol,42,24,True,2026-11-10 17:25
+2026-10-15,Jeudi,13:15,14:00,Summit Cycle,Summit Cross,Thomas Piquet,42,9,True,2026-11-10 17:25
+2026-10-15,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Quitterie Ribes,42,21,True,2026-11-10 17:25
+2026-10-15,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Quitterie Ribes,42,42,True,2026-11-10 17:25
+2026-10-15,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-10-16,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Yannick Zachee,42,5,True,2026-11-10 17:25
+2026-10-16,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,31,True,2026-11-10 17:25
+2026-10-16,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,15,True,2026-11-10 17:25
+2026-10-16,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,11,True,2026-11-10 17:25
+2026-10-17,Samedi,10:30,11:15,Summit Cycle,Summit Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-10-17,Samedi,11:30,12:15,Summit Cycle,Summit Training,Victorine Chibois,42,25,True,2026-11-10 17:25
+2026-10-18,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,21,True,2026-11-10 17:25
+2026-10-18,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,18,True,2026-11-10 17:25
+2026-10-18,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-10-19,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,7,True,2026-11-10 17:25
+2026-10-19,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,38,True,2026-11-10 17:25
+2026-10-19,Lundi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,17,True,2026-11-10 17:25
+2026-10-19,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,22,True,2026-11-10 17:25
+2026-10-19,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,25,True,2026-11-10 17:25
+2026-10-20,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Victorine Chibois,42,9,True,2026-11-10 17:25
+2026-10-20,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Quitterie Ribes,42,34,True,2026-11-10 17:25
+2026-10-20,Mardi,13:15,14:00,Summit Cycle,Summit Training,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-10-20,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,37,True,2026-11-10 17:25
+2026-10-20,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,42,True,2026-11-10 17:25
+2026-10-20,Mardi,20:30,21:15,Summit Cycle,Summit Cross,David Mallegol,42,8,True,2026-11-10 17:25
+2026-10-21,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,20,True,2026-11-10 17:25
+2026-10-21,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,40,True,2026-11-10 17:25
+2026-10-21,Mercredi,13:15,14:00,Summit Cycle,Summit Cross,Emeric Choisy,42,6,True,2026-11-10 17:25
+2026-10-21,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,15,True,2026-11-10 17:25
+2026-10-21,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,32,True,2026-11-10 17:25
+2026-10-21,Mercredi,20:30,21:15,Summit Cycle,Summit Cross,Yannick Zachee,42,9,True,2026-11-10 17:25
+2026-10-22,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-10-22,Jeudi,12:15,13:00,Summit Cycle,Summit Endurance,David Mallegol,42,0,True,2026-11-10 17:25
+2026-10-22,Jeudi,13:15,14:00,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-10-22,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-10-22,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-10-22,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-10-23,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-10-23,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-10-23,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-10-23,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-10-24,Samedi,10:30,11:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-10-24,Samedi,11:30,12:15,Summit Cycle,Summit Training,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-10-25,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-10-25,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-10-25,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-10-25,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Nabil Taleb,42,0,True,2026-11-10 17:25
+2026-10-26,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,0,True,2026-11-10 17:25
+2026-10-26,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-10-26,Lundi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-10-26,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-10-26,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,0,True,2026-11-10 17:25
+2026-10-27,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-10-27,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-10-27,Mardi,13:15,14:00,Summit Cycle,Summit Training,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-10-27,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,0,True,2026-11-10 17:25
+2026-10-27,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-10-27,Mardi,20:30,21:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-10-28,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-10-28,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-10-28,Mercredi,13:15,14:00,Summit Cycle,Summit Climb,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-10-28,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-10-28,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-10-28,Mercredi,20:30,21:15,Summit Cycle,Summit Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-10-29,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-10-29,Jeudi,12:15,13:00,Summit Cycle,Summit Climb,David Mallegol,42,0,True,2026-11-10 17:25
+2026-10-29,Jeudi,13:15,14:00,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-10-29,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-10-29,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-10-29,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-10-30,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-10-30,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-10-30,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-10-30,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-10-31,Samedi,10:30,11:15,Summit Cycle,Summit Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-10-31,Samedi,11:30,12:15,Summit Cycle,Summit Training,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-11-01,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-11-01,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-11-01,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-11-01,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Sebastien  Rajkowski,42,0,True,2026-11-10 17:25
+2026-11-02,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,0,True,2026-11-10 17:25
+2026-11-02,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-11-02,Lundi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-11-02,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-11-02,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,0,True,2026-11-10 17:25
+2026-11-03,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-11-03,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-11-03,Mardi,13:15,14:00,Summit Cycle,Summit Training,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-11-03,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,0,True,2026-11-10 17:25
+2026-11-03,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-11-03,Mardi,20:30,21:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-11-04,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 17:25
+2026-11-04,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-11-04,Mercredi,13:15,14:00,Summit Cycle,Summit Cross,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-11-04,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-11-04,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-11-04,Mercredi,20:30,21:15,Summit Cycle,Summit Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-11-05,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-11-05,Jeudi,12:15,13:00,Summit Cycle,Summit Endurance,David Mallegol,42,0,True,2026-11-10 17:25
+2026-11-05,Jeudi,13:15,14:00,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 17:25
+2026-11-05,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-11-05,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Quitterie Ribes,42,0,True,2026-11-10 17:25
+2026-11-05,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,True,2026-11-10 17:25
+2026-11-06,Vendredi,07:45,08:30,Summit Cycle,Summit Cross,Yannick Zachee,42,0,True,2026-11-10 17:25
+2026-11-06,Vendredi,12:30,13:15,Summit Cycle,Summit Sprint,Emeric Choisy,42,0,True,2026-11-10 17:25
+2026-11-06,Vendredi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-11-06,Vendredi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 17:25
+2026-11-07,Samedi,10:30,11:15,Summit Cycle,Summit Cross,Yannick Zachee,42,0,True,2026-11-10 22:37
+2026-11-07,Samedi,11:30,12:15,Summit Cycle,Summit Training,Victorine Chibois,42,0,True,2026-11-10 22:37
+2026-11-08,Dimanche,10:30,11:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,True,2026-11-10 22:37
+2026-11-08,Dimanche,11:30,12:30,Summit Cycle,Summit Cross +,Reda Zrouri,42,0,True,2026-11-10 22:37
+2026-11-08,Dimanche,18:00,18:45,Summit Cycle,Summit Training,Reda Zrouri,42,0,True,2026-11-10 22:37
+2026-11-09,Lundi,07:30,08:15,Summit Cycle,Summit Training,Jean-Philippe Cazanova,42,0,True,2026-11-10 22:37
+2026-11-09,Lundi,12:30,13:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 22:37
+2026-11-09,Lundi,18:00,18:45,Summit Cycle,Summit Training,Rozenn Jestin,42,0,True,2026-11-10 22:37
+2026-11-09,Lundi,19:00,19:45,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,True,2026-11-10 22:37
+2026-11-09,Lundi,20:00,20:45,Summit Cycle,Summit Cross Extrême,David Mallegol,42,0,True,2026-11-10 22:37
+2026-11-10,Mardi,07:30,08:15,Summit Cycle,Summit Cross,Victorine Chibois,42,0,True,2026-11-10 22:37
+2026-11-10,Mardi,12:15,13:00,Summit Cycle,Summit Cross,Quitterie Ribes,42,0,True,2026-11-10 22:37
+2026-11-10,Mardi,13:15,14:00,Summit Cycle,Summit Training,Quitterie Ribes,42,0,True,2026-11-10 22:37
+2026-11-10,Mardi,18:30,19:15,Summit Cycle,Summit Cross,Jean-Philippe Cazanova,42,0,True,2026-11-10 22:37
+2026-11-10,Mardi,19:30,20:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 22:37
+2026-11-10,Mardi,20:30,21:15,Summit Cycle,Summit Cross,David Mallegol,42,0,True,2026-11-10 22:37
+2026-11-11,Mercredi,07:30,08:15,Summit Cycle,Summit Cross,Reda Zrouri,42,0,False,2026-11-10 22:37
+2026-11-11,Mercredi,12:15,13:00,Summit Cycle,Summit Cross,Emeric Choisy,42,0,False,2026-11-10 22:37
+2026-11-11,Mercredi,13:15,14:00,Summit Cycle,Summit Cross,Emeric Choisy,42,0,False,2026-11-10 22:37
+2026-11-11,Mercredi,18:30,19:15,Summit Cycle,Summit Training,Rozenn Jestin,42,0,False,2026-11-10 22:37
+2026-11-11,Mercredi,19:30,20:15,Summit Cycle,Summit Cross,Rozenn Jestin,42,0,False,2026-11-10 22:37
+2026-11-11,Mercredi,20:30,21:15,Summit Cycle,Summit Cross,Yannick Zachee,42,0,False,2026-11-10 22:37
+2026-11-12,Jeudi,07:30,08:30,Summit Cycle,Summit & Run,Quitterie Ribes,42,0,False,2026-11-10 22:37
+2026-11-12,Jeudi,12:15,13:00,Summit Cycle,Summit Endurance,David Mallegol,42,0,False,2026-11-10 22:37
+2026-11-12,Jeudi,13:15,14:00,Summit Cycle,Summit Cross,David Mallegol,42,0,False,2026-11-10 22:37
+2026-11-12,Jeudi,18:30,19:15,Summit Cycle,Summit Training,Quitterie Ribes,42,0,False,2026-11-10 22:37
+2026-11-12,Jeudi,19:30,20:15,Summit Cycle,Summit Cross,Quitterie Ribes,42,0,False,2026-11-10 22:37
+2026-11-12,Jeudi,20:30,21:15,Summit Cycle,Summit - Cross,Victorine Chibois,42,0,False,2026-11-10 22:37
