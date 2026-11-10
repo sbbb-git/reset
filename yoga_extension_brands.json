@@ -1708,5 +1708,71 @@
   "type": "Hatha/Méditation",
   "platform_guess": "unknown",
   "priorite": "moyenne"
+ },
+ "studio_hot_yoga_paris14": {
+  "label": "Studio Hot Yoga & Reformer Paris 14",
+  "url": "",
+  "cp": [
+   "75014"
+  ],
+  "type": "Hot yoga/Reformer",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "kind_yoga": {
+  "label": "Kind Yoga",
+  "url": "",
+  "cp": [
+   "75002"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "mama_yoga_sentier": {
+  "label": "Mama Yoga Sentier",
+  "url": "",
+  "cp": [
+   "75002"
+  ],
+  "type": "Hot yoga",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "mama_yoga_la_garenne": {
+  "label": "Mama Yoga La Garenne",
+  "url": "",
+  "cp": [
+   "92250"
+  ],
+  "type": "Hot yoga",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "mayashala": {
+  "label": "Mayashala",
+  "url": "",
+  "cp": [
+   "75011"
+  ],
+  "type": "Vinyasa",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "yoga_92": {
+  "label": "Yoga 92",
+  "url": "",
+  "cp": [
+   "92100"
+  ],
+  "type": "Hatha",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
  }
 }

@@ -29,7 +29,7 @@ def fetch_establishments(company):
 bsport_scrape.fetch_establishments = fetch_establishments
 
 CONFIG = {"key": "belly", "brand": "BELLY STUDIO",
-          "companies": [5424, 5458, 5466, 5675, 6049],
+          "companies": [5424, 5458, 5466, 5675, 6049, 6902],   # 6902 : Paris 16e (veille 11/2026)
           "host": "studiobelly.com", "store": "belly_data.json",
           "html": "belly.html", "csv": "belly_seances.csv", "price": 25,
           "accent": "#e0699b", "accent2": "#b07ff0",

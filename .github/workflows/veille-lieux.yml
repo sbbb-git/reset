@@ -22,7 +22,7 @@ concurrency:
 jobs:
   veille:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -32,9 +32,13 @@ jobs:
       - name: Balayage bsport (frontière + rattrapage)
         run: python3 veille_lieux_discover.py
 
+      - name: Classement par activité réelle (réservations 30 j)
+        run: python3 veille_activite.py
+        continue-on-error: true
+
       - name: Commit si changement
         run: |
-          ./ci_push.sh "Veille lieux IDF ($(date -u +%Y-%m-%dT%H:%M)Z)" veille_lieux_etat.json veille_nouveaux_lieux.json veille.html
+          ./ci_push.sh "Veille lieux IDF ($(date -u +%Y-%m-%dT%H:%M)Z)" veille_lieux_etat.json veille_nouveaux_lieux.json veille_activite.json veille.html
 
       - name: Healthcheck ping
         if: always()

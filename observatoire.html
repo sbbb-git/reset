@@ -217,6 +217,7 @@ h2.h{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;
     <nav class="tabs" role="tablist">
       <button class="tab" role="tab" data-tab="vue" aria-selected="true">Vue d'ensemble</button>
       <button class="tab" role="tab" data-tab="cmp">Comparer<span class="badge hidden" id="cmpCount">0</span></button>
+      <button class="tab" role="tab" data-tab="veille">Veille</button>
       <button class="tab" role="tab" data-tab="pages">Toutes les pages</button>
     </nav>
     <div class="spacer"></div>
@@ -287,6 +288,19 @@ h2.h{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;
         <div class="tbl-head"><span class="ch-title">Indicateurs sur la période</span><span class="spacer"></span><span class="ch-sub">▲ meilleure valeur</span></div>
         <div class="tbl-scroll"><table id="cmpTbl"><thead></thead><tbody></tbody></table></div>
       </div>
+    </div>
+  </section>
+
+  <!-- VEILLE -->
+  <section id="vVeille" class="hidden">
+    <div class="filters">
+      <div class="seg" id="wSecteur"></div>
+      <input class="search" id="wSearch" type="search" placeholder="Rechercher…" aria-label="Rechercher">
+      <span class="spacer"></span><span class="ch-sub" id="wSub"></span>
+    </div>
+    <div class="card tbl-card">
+      <div class="tbl-scroll"><table id="wTbl"><thead></thead><tbody></tbody></table></div>
+      <div class="foot"><span>Lieux bsport d'Île-de-France publiant des créneaux et <b>non suivis</b>, classés par réservations validées sur 30 jours. Mis à jour chaque lundi. CA ≈ réservations × 25 €.</span></div>
     </div>
   </section>
 
@@ -518,7 +532,8 @@ function renderFilters() {
 function render() {
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.tab === S.tab));
   $("#cmpCount").textContent = S.cmp.length; $("#cmpCount").classList.toggle("hidden", !S.cmp.length);
-  $("#filters").classList.toggle("hidden", S.tab === "pages");
+  $("#filters").classList.toggle("hidden", S.tab === "pages" || S.tab === "veille");
+  $("#vVeille").classList.toggle("hidden", S.tab !== "veille");
   $("#vVue").classList.toggle("hidden", S.tab !== "vue");
   $("#vCmp").classList.toggle("hidden", S.tab !== "cmp");
   $("#vPages").classList.toggle("hidden", S.tab !== "pages");
@@ -526,6 +541,7 @@ function render() {
   if (S.tab === "vue") renderVue();
   if (S.tab === "cmp") renderCmp();
   if (S.tab === "pages") renderPages();
+  if (S.tab === "veille") renderVeille();
   saveHash();
 }
 
@@ -864,6 +880,30 @@ function openDrawer(by, v) {
   drCharts.push(lineChart($("#drC2"), [{label: "Remplissage", pts: weekly(sites, d0, d1, "remplissage"), color: c1}], "remplissage"));
   $("#drawer").classList.add("open"); $("#scrim").classList.add("open"); $("#drawer").setAttribute("aria-hidden", "false");
   $("#drBody").scrollTop = 0;
+}
+
+/* ------------------------------------------------------------ veille */
+let W = null, wSec = "Tous", wQ = "";
+async function renderVeille() {
+  if (!W) {
+    $("#wTbl tbody").innerHTML = `<tr><td class="empty">Chargement…</td></tr>`;
+    try { W = await (await fetch("veille_activite.json", {cache: "no-store"})).json(); }
+    catch (e) { $("#wTbl tbody").innerHTML = `<tr><td class="empty">Veille indisponible (${esc(e.message)})</td></tr>`; return; }
+  }
+  const SECS = ["Tous", "Pilates", "Fitness", "Yoga", "Danse", "Hors périmètre"];
+  seg($("#wSecteur"), SECS.map(x => [x, x]), wSec, v => { wSec = v; renderVeille(); });
+  $("#wSearch").oninput = e => { wQ = e.target.value.trim().toLowerCase(); renderVeille(); };
+  const rows = W.candidats.filter(c => (wSec === "Tous" || c.secteur === wSec) &&
+    (!wQ || (c.enseigne + " " + c.salles.join(" ") + " " + c.ville + " " + c.activites.join(" ")).toLowerCase().includes(wQ)));
+  $("#wSub").textContent = `${rows.length} lieux · fenêtre ${W.fenetre} · généré le ${W.genere_le}`;
+  $("#wTbl thead").innerHTML = "<tr><th class='l' style='cursor:default'>#</th><th class='l' style='cursor:default'>Lieu</th><th class='l' style='cursor:default'>Secteur</th><th class='l' style='cursor:default'>Ville</th><th style='cursor:default'>Réservations 30 j</th><th style='cursor:default'>Séances</th><th style='cursor:default'>Remplissage</th><th style='cursor:default'>CA 30 j ≈</th><th class='l' style='cursor:default'>Repéré le</th></tr>";
+  $("#wTbl tbody").innerHTML = rows.slice(0, 150).map((c, i) => `<tr style="cursor:default">
+    <td class="l num">${i + 1}</td>
+    <td class="l name"><b>${esc(c.enseigne)}</b><div class="sub">${esc(c.salles.filter(x => x !== c.enseigne).slice(0, 4).join(" · ") || c.activites.slice(0, 3).join(" · "))}</div></td>
+    <td class="l">${esc(c.secteur)}</td><td class="l">${esc(c.ville || "")}</td>
+    <td class="num">${fmt.format(c.resa_30j)}</td><td class="num">${fmt.format(c.seances_30j)}</td>
+    <td class="num">${c.remplissage == null ? "—" : pct(Math.min(c.remplissage, 1))}</td>
+    <td class="num">${eur(c.ca_30j_estime)}</td><td class="l">${esc(c.premier_vu || "")}</td></tr>`).join("");
 }
 
 /* ------------------------------------------------------------ pages */

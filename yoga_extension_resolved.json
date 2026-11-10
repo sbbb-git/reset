@@ -8,11 +8,10 @@
  },
  "munnshala": {
   "platform": "bsport",
-  "company_id": null,
-  "note": "bsport detected mais ID introuvable",
-  "detected_via": "https://munnshalayoga.com/",
-  "checked_at": "2026-06-16 11:58",
-  "url": "https://munnshalayoga.com/"
+  "company_id": "735",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
  },
  "studio_kind": {
   "platform": "bsport",
@@ -1344,5 +1343,47 @@
   "url": "https://athayoga.fr/",
   "attempts": 3,
   "status": "gave_up"
+ },
+ "studio_hot_yoga_paris14": {
+  "platform": "bsport",
+  "company_id": "3045",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "kind_yoga": {
+  "platform": "bsport",
+  "company_id": "987",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "mama_yoga_sentier": {
+  "platform": "bsport",
+  "company_id": "3217",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "mama_yoga_la_garenne": {
+  "platform": "bsport",
+  "company_id": "825",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "mayashala": {
+  "platform": "bsport",
+  "company_id": "705",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "yoga_92": {
+  "platform": "bsport",
+  "company_id": "189",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
  }
 }

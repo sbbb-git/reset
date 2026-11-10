@@ -91,12 +91,11 @@
  },
  "corpoz": {
   "platform": "bsport",
-  "company_id": "TODO",
-  "status": "needs_playwright",
+  "company_id": "4629",
+  "status": "resolved",
   "booking_url": "https://www.corpoz.fit/book",
-  "note": "Next.js SPA — companyId injecté à l'hydratation React",
-  "needs_playwright": true,
-  "checked_at": "2026-06-14 23:30"
+  "note": "company 4629 trouvée par la veille lieux (11/2026)",
+  "checked_at": "2026-11-10 16:30"
  },
  "stripd": {
   "platform": "defunct",
@@ -228,11 +227,11 @@
   "checked_at": "2026-08-09 09:50"
  },
  "carbonne": {
-  "platform": "unknown",
-  "status": "url_invalide",
-  "note": "Le domaine du catalogue ne résout pas en DNS et aucune variante vérifiable n'a été trouvée. L'URL est en cause, pas nécessairement l'établissement : à retrouver à la main.",
-  "url": "https://carbonne.club/",
-  "checked_at": "2026-08-09 09:50"
+  "platform": "bsport",
+  "company_id": "3093",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
  },
  "slowe": {
   "platform": "unknown",
@@ -971,12 +970,10 @@
  },
  "social_reformers": {
   "platform": "bsport",
-  "company_id": null,
-  "note": "bsport detected mais ID introuvable",
-  "detected_via": "https://socialreformers.fr/",
-  "checked_at": "2026-08-06 06:17",
-  "url": "https://socialreformers.fr/",
-  "attempts": 1
+  "company_id": "4190",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
  },
  "sculpt_reformer_club": {
   "platform": "clubready",
@@ -1129,11 +1126,163 @@
  },
  "chez_simone": {
   "platform": "bsport",
-  "company_id": null,
-  "note": "bsport detected mais ID introuvable",
-  "detected_via": "https://chezsimone.fr/",
-  "checked_at": "2026-08-10 05:09",
-  "url": "https://chezsimone.fr/",
-  "attempts": 1
+  "company_id": "1596",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "ktrl_kah_studio": {
+  "platform": "bsport",
+  "company_id": "1380",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "babarista": {
+  "platform": "bsport",
+  "company_id": "2257",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "athletic_slow_paris20": {
+  "platform": "bsport",
+  "company_id": "995",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "culte": {
+  "platform": "bsport",
+  "company_id": "2514",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "goji": {
+  "platform": "bsport",
+  "company_id": "2636",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "studio_gloire": {
+  "platform": "bsport",
+  "company_id": "3167",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "la_reserve_versailles": {
+  "platform": "bsport",
+  "company_id": "3785",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "studio_asnieres_reformer": {
+  "platform": "bsport",
+  "company_id": "4753",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "nomeia_pilates": {
+  "platform": "bsport",
+  "company_id": "4192",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "un_air_de_famille": {
+  "platform": "bsport",
+  "company_id": "1229",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "reform_montrouge": {
+  "platform": "bsport",
+  "company_id": "3920",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "studio_pilates_paris14": {
+  "platform": "bsport",
+  "company_id": "1628",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "outcore": {
+  "platform": "bsport",
+  "company_id": "1387",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "bonnotte_club": {
+  "platform": "bsport",
+  "company_id": "2854",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "akka_reformer": {
+  "platform": "bsport",
+  "company_id": "2659",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "sensa_studio": {
+  "platform": "bsport",
+  "company_id": "4051",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "biopilates_paris": {
+  "platform": "bsport",
+  "company_id": "878",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "deeply_pilates": {
+  "platform": "bsport",
+  "company_id": "1943",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "redeem_reformer": {
+  "platform": "bsport",
+  "company_id": "4587",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "impact_studio_clamart": {
+  "platform": "bsport",
+  "company_id": "4567",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "imra_studio": {
+  "platform": "bsport",
+  "company_id": "4456",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
+ },
+ "au_lagree_club": {
+  "platform": "bsport",
+  "company_id": "4325",
+  "status": "resolved",
+  "note": "ajouté depuis la veille lieux (classement par réservations 30 j)",
+  "checked_at": "2026-11-10 16:18"
  }
 }

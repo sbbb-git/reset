@@ -5,7 +5,8 @@ Studio Reformer Paris 2 (103 rue Réaumur) + Paris 11 (15 bd Richard-Lenoir).
 12 reformers hybrides, classe 50 min, membership 2021. Ouverture 2023.
 """
 from bsport_scrape import run
-CONFIG = {"key":"kore","brand":"KORE STUDIO","company":2021,
+CONFIG = {"key":"kore","brand":"KORE STUDIO","companies":[2021, 3604],   # 3604 : Richard Lenoir + Réaumur (veille 11/2026)
+          
           "host":"kore-studio.com","store":"kore_data.json",
           "html":"kore.html","csv":"kore_seances.csv","price":28,
           "accent":"#7a6f5c","accent2":"#bfae8e",

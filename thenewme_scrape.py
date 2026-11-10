@@ -4,7 +4,7 @@ from bsport_scrape import run
 CONFIG = {"key":"thenewme","brand":"THE NEW ME",
           "companies":[4272,4273,4275,4276,4277,4278,4279,4283,4284,4285,4287,
                        4902,4903,4904,4905,4906,4907,4908,4909,4913,4915,4917,
-                       4919,4920,4921,4986,5699],
+                       4919,4920,4921,4986,5699, 6944],
           "host":"thenewmeparis.com","store":"thenewme_data.json",
           "html":"thenewme.html","csv":"thenewme_seances.csv","price":20,
           "accent":"#b8895e","accent2":"#d8b08a",

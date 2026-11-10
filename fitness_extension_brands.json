@@ -1342,5 +1342,247 @@
   "type": "Sauna + bains froids (contrast therapy)",
   "platform_guess": "bsport",
   "priorite": "moyenne"
+ },
+ "crossfit_bastille_vendome": {
+  "label": "CrossFit Bastille & Vendôme",
+  "url": "",
+  "cp": [
+   "75002"
+  ],
+  "type": "CrossFit",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "crossfit_cambronne": {
+  "label": "CrossFit Cambronne",
+  "url": "",
+  "cp": [
+   "75015"
+  ],
+  "type": "CrossFit",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "silva_crossfit": {
+  "label": "Silva CrossFit",
+  "url": "",
+  "cp": [
+   "75011"
+  ],
+  "type": "CrossFit",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "sore_paris": {
+  "label": "SORE",
+  "url": "",
+  "cp": [
+   "75005"
+  ],
+  "type": "Bootcamp/Pilates",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "scheffer_coaching": {
+  "label": "Studio Scheffer",
+  "url": "",
+  "cp": [
+   "75016"
+  ],
+  "type": "Cross training",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "apollo_sporting_club": {
+  "label": "Apollo Sporting Club",
+  "url": "",
+  "cp": [
+   "75011"
+  ],
+  "type": "Boxe",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "le_vestiaire_vincennes": {
+  "label": "Le Vestiaire",
+  "url": "",
+  "cp": [
+   "94300"
+  ],
+  "type": "Cross training/Yoga",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "athletic_studio_levallois": {
+  "label": "Athletic Studio",
+  "url": "",
+  "cp": [
+   "92300"
+  ],
+  "type": "Hyrox",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "crossfit_factory": {
+  "label": "CrossFit Factory",
+  "url": "",
+  "cp": [
+   "92800"
+  ],
+  "type": "CrossFit",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "le_loft_boxing": {
+  "label": "Le Loft Boxing",
+  "url": "",
+  "cp": [
+   "75011"
+  ],
+  "type": "Boxe",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "au_garage_club": {
+  "label": "Au Garage Club",
+  "url": "",
+  "cp": [
+   "94300"
+  ],
+  "type": "Cross training/Boxe",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "zones_rising": {
+  "label": "Zones · Rising",
+  "url": "",
+  "cp": [
+   "75011"
+  ],
+  "type": "Athletic",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "r_ecovery": {
+  "label": "R.Ecovery",
+  "url": "",
+  "cp": [
+   "75002"
+  ],
+  "type": "Sculpt",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "chang_noi_boxing": {
+  "label": "Chang Noï Boxing",
+  "url": "",
+  "cp": [
+   "75017"
+  ],
+  "type": "Muay thaï",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "vpunch_gym": {
+  "label": "VPunch Gym",
+  "url": "",
+  "cp": [
+   "75018"
+  ],
+  "type": "Boxe",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "hi_kick": {
+  "label": "Hi Kick",
+  "url": "",
+  "cp": [
+   "75015"
+  ],
+  "type": "Kickboxing",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "la_belle_equipe": {
+  "label": "La Belle Équipe",
+  "url": "",
+  "cp": [
+   "75010"
+  ],
+  "type": "Muay thaï",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "summit_cycle": {
+  "label": "Summit Cycle",
+  "url": "",
+  "cp": [
+   "75002"
+  ],
+  "type": "Cycling",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "ergo_saint_mande": {
+  "label": "Ergo",
+  "url": "",
+  "cp": [
+   "94160"
+  ],
+  "type": "Strength",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "la_suite_coaching": {
+  "label": "La Suite Coaching",
+  "url": "",
+  "cp": [
+   "75017"
+  ],
+  "type": "Small group",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "midtown": {
+  "label": "Midtown",
+  "url": "",
+  "cp": [
+   "75008"
+  ],
+  "type": "Strength",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
+ },
+ "on_mind_club": {
+  "label": "On Mind Club",
+  "url": "",
+  "cp": [
+   "75011"
+  ],
+  "type": "Sculpt",
+  "platform_guess": "bsport",
+  "priorite": "haute",
+  "source": "veille lieux 11/2026"
  }
 }

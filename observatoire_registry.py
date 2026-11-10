@@ -29,6 +29,7 @@ GROUPES = {
     "Monday Group": ["punch", "dynamo", "riise"],
     "Sanctuary Group": ["lecercle", "spacecycle", "poses", "driphiit",
                         "decibel", "aqua_by"],
+    "Mama Yoga": ["mama_yoga_batignolles", "mama_yoga_sentier", "mama_yoga_la_garenne"],
 }
 
 # ----------------------------------------------------------------- marques --

@@ -56,7 +56,8 @@ def scrape_bsport(key, label, company_id):
     cfg = {
         "key": key,
         "brand": label.upper(),
-        "companies": [int(company_id)],
+        # « 1499,1500,1507 » : une marque sur plusieurs companies bsport
+        "companies": [int(c) for c in str(company_id).replace(" ", "").split(",") if c],
         "host": "extension",
         "store": f"{key}_data.json",
         "html": f"{key}.html",
