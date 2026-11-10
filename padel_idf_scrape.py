@@ -22,6 +22,7 @@ import os
 import safestore
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -38,15 +39,34 @@ CLUBS_FILE = "padel_idf_clubs.json"
 MAX_WORKERS = 8  # parallélisme HTTP raisonnable
 
 
+class AccesRefuse(RuntimeError):
+    """Anybuddy refuse la requête (401/403/429) : inutile d'insister."""
+
+
+# Disjoncteur : dès que Anybuddy refuse l'accès, plus aucune requête n'part.
+# Depuis le 07/11, l'API répond 403 à toutes les requêtes : chaque appel était
+# retenté 4 fois, l'étape prenait 9 min, le job de 12 min était tué avant son
+# commit — et aucune plateforme padel IDF n'était plus enregistrée.
+REFUS = {"n": 0}
+
+
 def _get(url, retries=4):
     last = None
     for attempt in range(retries):
+        if REFUS["n"]:
+            raise AccesRefuse("accès refusé par Anybuddy (disjoncteur ouvert)")
         try:
             req = urllib.request.Request(url, headers={
                 "User-Agent": UA, "Accept": "application/json",
                 "Referer": f"{ORIGIN}/fr/club/"})
             with urllib.request.urlopen(req, timeout=40) as r:
                 return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code in (401, 403, 429):
+                REFUS["n"] += 1
+                raise AccesRefuse(f"HTTP {e.code} sur {url}") from e
+            last = e
+            time.sleep(1.5 ** attempt)
         except Exception as e:  # noqa: BLE001
             last = e
             time.sleep(1.5 ** attempt)
@@ -67,12 +87,16 @@ def fetch_club(slug):
     """Renvoie toutes les offres dispos sur l'horizon, pour padel."""
     today = dt.date.today()
     all_offers = []
+    echecs = 0
     for off in range(HORIZON_JOURS):
         d = today + dt.timedelta(days=off)
         try:
             data = fetch_day(slug, d, "padel")
+        except AccesRefuse:
+            raise
         except Exception as e:  # noqa: BLE001
             print(f"  ({slug} jour {d} indispo : {e})", file=sys.stderr)
+            echecs += 1
             continue
         for entry in data.get("data") or []:
             sdt = entry.get("startDateTime")
@@ -86,6 +110,11 @@ def fetch_club(slug):
                     "available": svc.get("availablePlaces") or svc.get("totalCapacity") or 4,
                     "capacity": svc.get("totalCapacity") or 4,
                 })
+    # Aucun jour lisible : on ne sait RIEN de ce club. Lever ici empêche
+    # capture_club de marquer ses créneaux à venir comme « disparus », donc
+    # réservés — un faux taux d'occupation de 100 %.
+    if echecs == HORIZON_JOURS:
+        raise RuntimeError(f"{slug} : aucun jour lisible sur {HORIZON_JOURS}")
     return all_offers
 
 
@@ -190,8 +219,15 @@ def main():
                     print(f"  ✅ {c['slug']:<55} {seen:>3} créneaux, {booked:>2} disparus (réservés)")
             except Exception as e:  # noqa: BLE001
                 print(f"  ❌ {c['slug']} : {e}", file=sys.stderr)
-    safestore.save(store, STORE)
     dur = time.time() - t0
+    if REFUS["n"]:
+        # Rien n'a été modifié pour les clubs refusés (capture_club sort avant
+        # de toucher leurs créneaux). On n'écrit pas le store : les autres
+        # plateformes du workflow l'enrichissent ensuite normalement.
+        print(f"::warning::Anybuddy refuse l'accès (HTTP 401/403/429) — {len(clubs)} clubs "
+              f"non relevés ce passage, données existantes intactes. ({dur:.0f}s)")
+        return
+    safestore.save(store, STORE)
     n_clubs = len(store)
     n_total_sessions = sum(len(v.get("sessions", {})) for v in store.values())
     n_finies = sum(1 for v in store.values() for s in v.get("sessions", {}).values() if s.get("finie"))

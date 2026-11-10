@@ -39,6 +39,7 @@ import safestore
 import sys
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 from zoneinfo import ZoneInfo
 
@@ -83,6 +84,11 @@ def _get(url, retries=4):
                 "Referer": f"{ORIGIN}/fr/club/"})
             with urllib.request.urlopen(req, timeout=40) as r:
                 return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code in (401, 403, 429):       # accès refusé : inutile d'insister
+                raise RuntimeError(f"accès refusé (HTTP {e.code}) {url}") from e
+            last = e
+            time.sleep(2 ** attempt)
         except Exception as e:  # noqa: BLE001
             last = e
             time.sleep(2 ** attempt)
@@ -122,6 +128,7 @@ def capture(cfg):
     # 1) Ensemble des offres VUES DISPONIBLES à ce relevé (clé = date|heure|terrain|duree)
     seen_now = set()
     seen = 0
+    lus = 0
     for activity in cfg["activities"]:
         for day in days:
             try:
@@ -129,6 +136,7 @@ def capture(cfg):
             except Exception as e:  # noqa: BLE001
                 print(f"  (jour {day} {activity} échoué : {e})", file=sys.stderr)
                 continue
+            lus += 1
             for ts in data:
                 iso = ts.get("startDateTime") or ""
                 if not iso:
@@ -162,6 +170,13 @@ def capture(cfg):
                         "releve": now.strftime("%Y-%m-%d %H:%M"),
                     }
                     seen += 1
+
+    # Aucun jour lisible (API en panne ou accès refusé) : on ne sait rien.
+    # Sans ce garde-fou, chaque créneau à venir « disparaissait » et passait
+    # en réservé — c'est arrivé du 07 au 10/11 (Anybuddy en 403).
+    if not lus:
+        print(f"::warning::[{cfg['key']}] Anybuddy illisible ce passage — store inchangé.")
+        return store
 
     # 2) Offres connues, déjà vues dispo, qui ne réapparaissent plus :
     #    - si le créneau n'est pas encore passé -> il a été RÉSERVÉ
