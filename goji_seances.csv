@@ -986,69 +986,85 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-11-07,Samedi,13:00,13:55,Salle Bambino,Zumba,Paola  RUZ MUNOZ ,15,6,True,2026-11-10 22:34
 2026-11-07,Samedi,15:30,16:25,Salle Gigi,Pilates,Nathalie Shaw,15,0,True,2026-11-10 22:34
 2026-11-07,Samedi,15:45,16:40,Salle Bambino,PILATES BALL,Stéphanie Viu Kessler,15,13,True,2026-11-10 22:34
-2026-11-08,Dimanche,11:00,11:55,Salle Gigi,Dance Fitness,Eva Rubichi,15,8,True,2026-11-10 22:34
-2026-11-08,Dimanche,16:00,16:55,Salle Bambino,Vinyasa Yoga,Stéphanie Viu Kessler,15,0,True,2026-11-10 22:34
-2026-11-08,Dimanche,17:15,18:10,Salle Bambino,Pilates,Stéphanie Viu Kessler,15,15,True,2026-11-10 22:34
-2026-11-09,Lundi,09:30,10:25,Salle Bambino,Pilates - Eveil musculaire,Christelle Godfroy,15,16,True,2026-11-10 22:34
-2026-11-09,Lundi,09:30,10:25,Salle de cours en ligne,VISIO - Pilates eveil musculaire en ligne,Christelle Godfroy,10,0,True,2026-11-10 22:34
-2026-11-09,Lundi,10:00,10:55,Salle Gigi,Gym Fit,Melike KABAKCI,15,15,True,2026-11-10 22:34
-2026-11-09,Lundi,10:30,11:25,Salle Bambino,Pilates,Christelle Godfroy,15,15,True,2026-11-10 22:34
-2026-11-09,Lundi,10:30,11:25,Salle de cours en ligne,VISIO - Pilates en ligne,Christelle Godfroy,10,0,True,2026-11-10 22:34
-2026-11-09,Lundi,11:00,11:45,Salle Gigi,Stretching - Mobilité & souplesse,Melike KABAKCI,15,15,True,2026-11-10 22:34
-2026-11-09,Lundi,11:30,12:25,Salle Bambino,Pilates  sur chaise,Christelle Godfroy,15,15,True,2026-11-10 22:34
-2026-11-09,Lundi,14:30,15:25,Salle Gigi,Zumba,Audrey Antoine,15,9,True,2026-11-10 22:34
-2026-11-09,Lundi,16:00,16:55,Salle Bambino,Pilates  sur chaise,Christelle Godfroy,15,15,True,2026-11-10 22:34
-2026-11-09,Lundi,16:00,16:55,Salle de cours en ligne,VISIO- Pilates sur chaise en ligne,Christelle Godfroy,5,0,True,2026-11-10 22:34
-2026-11-09,Lundi,18:00,18:55,Salle Gigi,Relaxation & Sophrologie,Françoise Maurel,15,4,True,2026-11-10 22:34
-2026-11-09,Lundi,19:00,19:55,Salle Bambino,Pilates  - BOOST,Christelle Godfroy,14,10,True,2026-11-10 22:34
-2026-11-09,Lundi,19:00,19:55,Salle Gigi,Danse Orientale,Lolie Vernet,15,6,True,2026-11-10 22:34
-2026-11-09,Lundi,19:00,19:55,Salle de cours en ligne,VISIO - Pilates  BOOST en ligne,Christelle Godfroy,15,2,True,2026-11-10 22:34
-2026-11-09,Lundi,20:00,20:55,Salle Bambino,Cuisses abdos fessiers  BOOST,Sophie Seferian,15,8,True,2026-11-10 22:34
-2026-11-10,Mardi,09:00,09:55,Salle Bambino,Pilates - Eveil musculaire,Arianne Leverrier,15,15,True,2026-11-10 22:34
-2026-11-10,Mardi,09:00,09:55,Salle de cours en ligne,VISIO - Pilates eveil musculaire en ligne,Arianne Leverrier,10,1,True,2026-11-10 22:34
-2026-11-10,Mardi,09:30,11:30,Accueil de Goji,Marche Nordique au Bois de Boulogne.,Alexis Le Merrer,15,6,True,2026-11-10 22:34
-2026-11-10,Mardi,10:00,10:55,Salle Bambino,Pilates,Arianne Leverrier,15,15,True,2026-11-10 22:34
-2026-11-10,Mardi,10:00,10:55,Salle de cours en ligne,VISIO - Pilates en ligne,Arianne Leverrier,10,0,True,2026-11-10 22:34
-2026-11-10,Mardi,10:30,11:25,Salle Gigi,Qi Gong,Sylvie  Naegellen ,15,12,True,2026-11-10 22:34
-2026-11-10,Mardi,11:00,11:55,Salle Bambino,Yoga doux,Fany Astorg,14,11,True,2026-11-10 22:34
-2026-11-10,Mardi,11:30,12:25,Salle Bambino,Gym Fit,Sylvie  Naegellen ,14,8,True,2026-11-10 22:34
-2026-11-10,Mardi,12:00,12:55,Salle Bambino,Feldenkrais,Fany Astorg,15,8,True,2026-11-10 22:34
-2026-11-10,Mardi,12:00,12:55,Salle de cours en ligne,VISIO - Feldenkrais en ligne,Fany Astorg,10,1,True,2026-11-10 22:34
-2026-11-10,Mardi,14:30,15:25,Salle Bambino,Yoga sur chaise,Pablo Mardones,15,4,True,2026-11-10 22:34
-2026-11-10,Mardi,14:30,15:25,Salle Gigi,Pilates - Eveil musculaire,Alexis Le Merrer,15,8,True,2026-11-10 22:34
-2026-11-10,Mardi,15:30,16:25,Salle Bambino,Circuit Renfo & Cardio,Pablo Mardones,15,5,True,2026-11-10 22:34
-2026-11-10,Mardi,15:30,16:25,Salle Gigi,Light Boxing,Alexis Le Merrer,10,2,True,2026-11-10 22:34
-2026-11-10,Mardi,16:30,17:25,Salle Gigi,Dance Fitness,Séverine Wolff,15,15,True,2026-11-10 22:34
-2026-11-10,Mardi,17:30,18:15,Salle Gigi,Stretching - Mobilité & souplesse,Séverine Wolff,15,9,True,2026-11-10 22:34
-2026-11-10,Mardi,18:30,19:25,Salle Bambino,Circuit Renfo & Cardio - BOOST,JEFF Attiogbe,15,6,True,2026-11-10 22:34
-2026-11-11,Mercredi,09:00,09:55,Salle Gigi,LIFT Force & tonus,Sophie Seferian,10,5,False,2026-11-10 22:34
-2026-11-11,Mercredi,09:30,10:25,Salle Bambino,Pilates,Estelle Tirot,15,15,False,2026-11-10 22:34
-2026-11-11,Mercredi,09:30,10:25,Salle de cours en ligne,VISIO - Pilates en ligne,Estelle Tirot,10,0,False,2026-11-10 22:34
-2026-11-11,Mercredi,10:15,11:10,Salle Gigi,Yoga doux,Rebecca Seror,15,10,False,2026-11-10 22:34
-2026-11-11,Mercredi,10:30,11:25,Salle Bambino,Pilates - Eveil musculaire,Estelle Tirot,15,15,False,2026-11-10 22:34
-2026-11-11,Mercredi,10:30,11:25,Salle de cours en ligne,VISIO - Pilates eveil musculaire en ligne,Estelle Tirot,10,1,False,2026-11-10 22:34
-2026-11-11,Mercredi,12:30,13:25,Salle Bambino,Pilates  - BOOST,Christelle Godfroy,15,8,False,2026-11-10 22:34
-2026-11-11,Mercredi,12:30,13:25,Salle de cours en ligne,VISIO - Pilates  BOOST en ligne,Christelle Godfroy,10,2,False,2026-11-10 22:34
-2026-11-11,Mercredi,12:45,13:45,Salle Gigi,Yoga Hatha - Boost,Rebecca Seror,15,0,False,2026-11-10 22:34
-2026-11-11,Mercredi,15:00,15:55,Salle Bambino,Circuit Renfo & Cardio,JEFF Attiogbe,15,13,False,2026-11-10 22:34
-2026-11-11,Mercredi,16:00,16:55,Salle Bambino,Stretching - Mobilité & souplesse,JEFF Attiogbe,15,9,False,2026-11-10 22:34
-2026-11-11,Mercredi,17:15,18:10,Salle Gigi,Pilates  sur chaise,Stéphanie Viu Kessler,15,6,False,2026-11-10 22:34
-2026-11-11,Mercredi,18:30,19:25,Salle Bambino,Yoga Iyengar - BOOST,Irène Baraké,15,6,False,2026-11-10 22:34
-2026-11-11,Mercredi,18:30,19:25,Salle Gigi,Pilates,Stéphanie Viu Kessler,15,5,False,2026-11-10 22:34
-2026-11-11,Mercredi,18:30,19:25,Salle de cours en ligne,VISIO - Pilates en ligne,Stéphanie Viu Kessler,10,0,False,2026-11-10 22:34
-2026-11-11,Mercredi,19:30,20:25,Salle Gigi,Pilates  - BOOST,Stéphanie Viu Kessler,15,7,False,2026-11-10 22:34
-2026-11-11,Mercredi,19:30,20:25,Salle de cours en ligne,VISIO - Pilates  BOOST en ligne,Stéphanie Viu Kessler,15,1,False,2026-11-10 22:34
-2026-11-12,Jeudi,09:30,10:25,Salle Bambino,PILATES BALL,Estelle Tirot,15,6,False,2026-11-10 22:34
-2026-11-12,Jeudi,10:30,12:00,Salle Bambino,Yoga Iyengar - avec support,Irène Baraké,15,11,False,2026-11-10 22:34
-2026-11-12,Jeudi,11:00,11:55,Salle Gigi,Pilates - Eveil musculaire,Christelle Godfroy,15,15,False,2026-11-10 22:34
-2026-11-12,Jeudi,11:00,11:55,Salle de cours en ligne,VISIO - Pilates eveil musculaire en ligne,Christelle Godfroy,10,0,False,2026-11-10 22:34
-2026-11-12,Jeudi,12:30,13:25,Salle Gigi,Pilates,Christelle Godfroy,15,13,False,2026-11-10 22:34
-2026-11-12,Jeudi,12:30,13:25,Salle de cours en ligne,VISIO - Pilates en ligne,Christelle Godfroy,10,0,False,2026-11-10 22:34
-2026-11-12,Jeudi,14:30,15:25,Salle Bambino,Pilates - Equilibre & mobilité,Nathalie Shaw,15,14,False,2026-11-10 22:34
-2026-11-12,Jeudi,15:30,16:25,Salle Bambino,Light Boxing,Alexis Le Merrer,10,9,False,2026-11-10 22:34
-2026-11-12,Jeudi,15:30,16:25,Salle Gigi,Pilates,Nathalie Shaw,15,12,False,2026-11-10 22:34
-2026-11-12,Jeudi,16:30,17:15,Salle Bambino,Stretching - Mobilité & souplesse,Alexis Le Merrer,15,2,False,2026-11-10 22:34
-2026-11-12,Jeudi,17:30,18:25,Salle Bambino,Barre au sol,Séverine Wolff,15,3,False,2026-11-10 22:34
-2026-11-12,Jeudi,18:30,19:25,Salle Bambino,Dance Fitness,Séverine Wolff,15,0,False,2026-11-10 22:34
-2026-11-12,Jeudi,19:00,19:55,Salle Bambino,Circuit Renfo & Cardio - BOOST,JEFF Attiogbe,15,0,False,2026-11-10 22:34
-2026-11-12,Jeudi,19:30,20:25,Salle Bambino,Circuit Renfo & Cardio,JEFF Attiogbe,15,4,False,2026-11-10 22:34
+2026-11-08,Dimanche,11:00,11:55,Salle Gigi,Dance Fitness,Eva Rubichi,15,8,True,2026-11-11 04:26
+2026-11-08,Dimanche,16:00,16:55,Salle Bambino,Vinyasa Yoga,Stéphanie Viu Kessler,15,0,True,2026-11-11 04:26
+2026-11-08,Dimanche,17:15,18:10,Salle Bambino,Pilates,Stéphanie Viu Kessler,15,15,True,2026-11-11 04:26
+2026-11-09,Lundi,09:30,10:25,Salle Bambino,Pilates - Eveil musculaire,Christelle Godfroy,15,16,True,2026-11-11 04:26
+2026-11-09,Lundi,09:30,10:25,Salle de cours en ligne,VISIO - Pilates eveil musculaire en ligne,Christelle Godfroy,10,0,True,2026-11-11 04:26
+2026-11-09,Lundi,10:00,10:55,Salle Gigi,Gym Fit,Melike KABAKCI,15,15,True,2026-11-11 04:26
+2026-11-09,Lundi,10:30,11:25,Salle Bambino,Pilates,Christelle Godfroy,15,15,True,2026-11-11 04:26
+2026-11-09,Lundi,10:30,11:25,Salle de cours en ligne,VISIO - Pilates en ligne,Christelle Godfroy,10,0,True,2026-11-11 04:26
+2026-11-09,Lundi,11:00,11:45,Salle Gigi,Stretching - Mobilité & souplesse,Melike KABAKCI,15,15,True,2026-11-11 04:26
+2026-11-09,Lundi,11:30,12:25,Salle Bambino,Pilates  sur chaise,Christelle Godfroy,15,15,True,2026-11-11 04:26
+2026-11-09,Lundi,14:30,15:25,Salle Gigi,Zumba,Audrey Antoine,15,9,True,2026-11-11 04:26
+2026-11-09,Lundi,16:00,16:55,Salle Bambino,Pilates  sur chaise,Christelle Godfroy,15,15,True,2026-11-11 04:26
+2026-11-09,Lundi,16:00,16:55,Salle de cours en ligne,VISIO- Pilates sur chaise en ligne,Christelle Godfroy,5,0,True,2026-11-11 04:26
+2026-11-09,Lundi,18:00,18:55,Salle Gigi,Relaxation & Sophrologie,Françoise Maurel,15,4,True,2026-11-11 04:26
+2026-11-09,Lundi,19:00,19:55,Salle Bambino,Pilates  - BOOST,Christelle Godfroy,14,10,True,2026-11-11 04:26
+2026-11-09,Lundi,19:00,19:55,Salle Gigi,Danse Orientale,Lolie Vernet,15,6,True,2026-11-11 04:26
+2026-11-09,Lundi,19:00,19:55,Salle de cours en ligne,VISIO - Pilates  BOOST en ligne,Christelle Godfroy,15,2,True,2026-11-11 04:26
+2026-11-09,Lundi,20:00,20:55,Salle Bambino,Cuisses abdos fessiers  BOOST,Sophie Seferian,15,8,True,2026-11-11 04:26
+2026-11-10,Mardi,09:00,09:55,Salle Bambino,Pilates - Eveil musculaire,Arianne Leverrier,15,15,True,2026-11-11 04:26
+2026-11-10,Mardi,09:00,09:55,Salle de cours en ligne,VISIO - Pilates eveil musculaire en ligne,Arianne Leverrier,10,1,True,2026-11-11 04:26
+2026-11-10,Mardi,09:30,11:30,Accueil de Goji,Marche Nordique au Bois de Boulogne.,Alexis Le Merrer,15,6,True,2026-11-11 04:26
+2026-11-10,Mardi,10:00,10:55,Salle Bambino,Pilates,Arianne Leverrier,15,15,True,2026-11-11 04:26
+2026-11-10,Mardi,10:00,10:55,Salle de cours en ligne,VISIO - Pilates en ligne,Arianne Leverrier,10,0,True,2026-11-11 04:26
+2026-11-10,Mardi,10:30,11:25,Salle Gigi,Qi Gong,Sylvie  Naegellen ,15,12,True,2026-11-11 04:26
+2026-11-10,Mardi,11:00,11:55,Salle Bambino,Yoga doux,Fany Astorg,14,11,True,2026-11-11 04:26
+2026-11-10,Mardi,11:30,12:25,Salle Bambino,Gym Fit,Sylvie  Naegellen ,14,8,True,2026-11-11 04:26
+2026-11-10,Mardi,12:00,12:55,Salle Bambino,Feldenkrais,Fany Astorg,15,8,True,2026-11-11 04:26
+2026-11-10,Mardi,12:00,12:55,Salle de cours en ligne,VISIO - Feldenkrais en ligne,Fany Astorg,10,1,True,2026-11-11 04:26
+2026-11-10,Mardi,14:30,15:25,Salle Bambino,Yoga sur chaise,Pablo Mardones,15,4,True,2026-11-11 04:26
+2026-11-10,Mardi,14:30,15:25,Salle Gigi,Pilates - Eveil musculaire,Alexis Le Merrer,15,8,True,2026-11-11 04:26
+2026-11-10,Mardi,15:30,16:25,Salle Bambino,Circuit Renfo & Cardio,Pablo Mardones,15,5,True,2026-11-11 04:26
+2026-11-10,Mardi,15:30,16:25,Salle Gigi,Light Boxing,Alexis Le Merrer,10,2,True,2026-11-11 04:26
+2026-11-10,Mardi,16:30,17:25,Salle Gigi,Dance Fitness,Séverine Wolff,15,15,True,2026-11-11 04:26
+2026-11-10,Mardi,17:30,18:15,Salle Gigi,Stretching - Mobilité & souplesse,Séverine Wolff,15,9,True,2026-11-11 04:26
+2026-11-10,Mardi,18:30,19:25,Salle Bambino,Circuit Renfo & Cardio - BOOST,JEFF Attiogbe,15,6,True,2026-11-11 04:26
+2026-11-11,Mercredi,09:00,09:55,Salle Gigi,LIFT Force & tonus,Sophie Seferian,10,5,False,2026-11-11 04:26
+2026-11-11,Mercredi,09:30,10:25,Salle Bambino,Pilates,Estelle Tirot,15,15,False,2026-11-11 04:26
+2026-11-11,Mercredi,09:30,10:25,Salle de cours en ligne,VISIO - Pilates en ligne,Estelle Tirot,10,0,False,2026-11-11 04:26
+2026-11-11,Mercredi,10:15,11:10,Salle Gigi,Yoga doux,Rebecca Seror,15,10,False,2026-11-11 04:26
+2026-11-11,Mercredi,10:30,11:25,Salle Bambino,Pilates - Eveil musculaire,Estelle Tirot,15,15,False,2026-11-11 04:26
+2026-11-11,Mercredi,10:30,11:25,Salle de cours en ligne,VISIO - Pilates eveil musculaire en ligne,Estelle Tirot,10,1,False,2026-11-11 04:26
+2026-11-11,Mercredi,12:30,13:25,Salle Bambino,Pilates  - BOOST,Christelle Godfroy,15,8,False,2026-11-11 04:26
+2026-11-11,Mercredi,12:30,13:25,Salle de cours en ligne,VISIO - Pilates  BOOST en ligne,Christelle Godfroy,10,2,False,2026-11-11 04:26
+2026-11-11,Mercredi,12:45,13:45,Salle Gigi,Yoga Hatha - Boost,Rebecca Seror,15,0,False,2026-11-11 04:26
+2026-11-11,Mercredi,15:00,15:55,Salle Bambino,Circuit Renfo & Cardio,JEFF Attiogbe,15,13,False,2026-11-11 04:26
+2026-11-11,Mercredi,16:00,16:55,Salle Bambino,Stretching - Mobilité & souplesse,JEFF Attiogbe,15,9,False,2026-11-11 04:26
+2026-11-11,Mercredi,17:15,18:10,Salle Gigi,Pilates  sur chaise,Stéphanie Viu Kessler,15,6,False,2026-11-11 04:26
+2026-11-11,Mercredi,18:30,19:25,Salle Bambino,Yoga Iyengar - BOOST,Irène Baraké,15,6,False,2026-11-11 04:26
+2026-11-11,Mercredi,18:30,19:25,Salle Gigi,Pilates,Stéphanie Viu Kessler,15,5,False,2026-11-11 04:26
+2026-11-11,Mercredi,18:30,19:25,Salle de cours en ligne,VISIO - Pilates en ligne,Stéphanie Viu Kessler,10,0,False,2026-11-11 04:26
+2026-11-11,Mercredi,19:30,20:25,Salle Gigi,Pilates  - BOOST,Stéphanie Viu Kessler,15,7,False,2026-11-11 04:26
+2026-11-11,Mercredi,19:30,20:25,Salle de cours en ligne,VISIO - Pilates  BOOST en ligne,Stéphanie Viu Kessler,15,1,False,2026-11-11 04:26
+2026-11-12,Jeudi,09:30,10:25,Salle Bambino,PILATES BALL,Estelle Tirot,15,6,False,2026-11-11 04:26
+2026-11-12,Jeudi,10:30,12:00,Salle Bambino,Yoga Iyengar - avec support,Irène Baraké,15,11,False,2026-11-11 04:26
+2026-11-12,Jeudi,11:00,11:55,Salle Gigi,Pilates - Eveil musculaire,Christelle Godfroy,15,15,False,2026-11-11 04:26
+2026-11-12,Jeudi,11:00,11:55,Salle de cours en ligne,VISIO - Pilates eveil musculaire en ligne,Christelle Godfroy,10,0,False,2026-11-11 04:26
+2026-11-12,Jeudi,12:30,13:25,Salle Gigi,Pilates,Christelle Godfroy,15,13,False,2026-11-11 04:26
+2026-11-12,Jeudi,12:30,13:25,Salle de cours en ligne,VISIO - Pilates en ligne,Christelle Godfroy,10,0,False,2026-11-11 04:26
+2026-11-12,Jeudi,14:30,15:25,Salle Bambino,Pilates - Equilibre & mobilité,Nathalie Shaw,15,14,False,2026-11-11 04:26
+2026-11-12,Jeudi,15:30,16:25,Salle Bambino,Light Boxing,Alexis Le Merrer,10,9,False,2026-11-11 04:26
+2026-11-12,Jeudi,15:30,16:25,Salle Gigi,Pilates,Nathalie Shaw,15,12,False,2026-11-11 04:26
+2026-11-12,Jeudi,16:30,17:15,Salle Bambino,Stretching - Mobilité & souplesse,Alexis Le Merrer,15,2,False,2026-11-11 04:26
+2026-11-12,Jeudi,17:30,18:25,Salle Bambino,Barre au sol,Séverine Wolff,15,3,False,2026-11-11 04:26
+2026-11-12,Jeudi,18:30,19:25,Salle Bambino,Dance Fitness,Séverine Wolff,15,0,False,2026-11-11 04:26
+2026-11-12,Jeudi,19:00,19:55,Salle Bambino,Circuit Renfo & Cardio - BOOST,JEFF Attiogbe,15,0,False,2026-11-11 04:26
+2026-11-12,Jeudi,19:30,20:25,Salle Bambino,Circuit Renfo & Cardio,JEFF Attiogbe,15,4,False,2026-11-11 04:26
+2026-11-13,Vendredi,09:00,09:55,Salle Bambino,Pilates - Eveil musculaire,Christelle Godfroy,15,15,False,2026-11-11 04:26
+2026-11-13,Vendredi,09:00,09:55,Salle de cours en ligne,VISIO - Pilates eveil musculaire en ligne,Christelle Godfroy,10,0,False,2026-11-11 04:26
+2026-11-13,Vendredi,09:15,10:10,Salle Gigi,Qi Gong,Virginie Avot,15,1,False,2026-11-11 04:26
+2026-11-13,Vendredi,10:00,10:55,Salle Bambino,Pilates,Christelle Godfroy,15,10,False,2026-11-11 04:26
+2026-11-13,Vendredi,10:00,10:55,Salle de cours en ligne,VISIO - Pilates en ligne,Christelle Godfroy,10,0,False,2026-11-11 04:26
+2026-11-13,Vendredi,10:30,11:15,Salle Gigi,Cuisses abdos fessiers,Sophie Seferian,15,9,False,2026-11-11 04:26
+2026-11-13,Vendredi,11:15,12:10,Salle Bambino,Pilates  sur chaise,Christelle Godfroy,15,15,False,2026-11-11 04:26
+2026-11-13,Vendredi,11:15,12:00,Salle Gigi,Stretching - Mobilité & souplesse,Sophie Seferian,15,12,False,2026-11-11 04:26
+2026-11-13,Vendredi,12:30,13:25,Salle Bambino,Pilates,Agnes Rince,15,4,False,2026-11-11 04:26
+2026-11-13,Vendredi,14:00,14:55,Salle Bambino,Yoga sur chaise,Pablo Mardones,15,7,False,2026-11-11 04:26
+2026-11-13,Vendredi,15:00,15:55,Salle Bambino,Circuit Renfo & Cardio,Pablo Mardones,15,3,False,2026-11-11 04:26
+2026-11-13,Vendredi,15:00,15:55,Salle Gigi,Dance Fitness,Eva Rubichi,15,7,False,2026-11-11 04:26
+2026-11-13,Vendredi,16:00,16:55,Salle Bambino,Stretching - Mobilité & souplesse,Pablo Mardones,15,4,False,2026-11-11 04:26
+2026-11-13,Vendredi,16:00,16:55,Salle de cours en ligne,VISIO - Stretching en ligne,Pablo Mardones,20,0,False,2026-11-11 04:26
+2026-11-13,Vendredi,18:00,18:55,Salle Gigi,LIFT Force & tonus,Sophie Seferian,10,7,False,2026-11-11 04:26
+2026-11-13,Vendredi,18:30,19:25,Salle Gigi,Zumba - BOOST,Audrey Antoine,15,7,False,2026-11-11 04:26

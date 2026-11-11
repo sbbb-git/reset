@@ -783,74 +783,89 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-11-07,Samedi,13:15,14:05,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Mélissa Bacilly,10,2,True,2026-11-10 22:34
 2026-11-07,Samedi,13:30,14:20,Social Reformers Batignolles,Pilates reformer,Marine Leclerc,9,6,True,2026-11-10 22:34
 2026-11-07,Samedi,14:30,15:20,Social Reformers Batignolles,Pilates reformer,Marine Leclerc,9,7,True,2026-11-10 22:34
-2026-11-08,Dimanche,10:15,11:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,6,True,2026-11-10 22:34
-2026-11-08,Dimanche,10:15,11:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Margaux Campo,10,5,True,2026-11-10 22:34
-2026-11-08,Dimanche,11:15,12:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,4,True,2026-11-10 22:34
-2026-11-08,Dimanche,11:15,12:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Margaux Campo,10,0,True,2026-11-10 22:34
-2026-11-08,Dimanche,12:15,13:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,8,True,2026-11-10 22:34
-2026-11-08,Dimanche,12:15,13:05,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Mélissa Bacilly,10,8,True,2026-11-10 22:34
-2026-11-08,Dimanche,12:30,13:20,Social Reformers Neuilly-Sur-Seine,Pilates mat,Margaux Campo,18,0,True,2026-11-10 22:34
-2026-11-08,Dimanche,13:30,14:20,Social Reformers Batignolles,Intense - Pilates reformer,Mélissa Bacilly,9,8,True,2026-11-10 22:34
-2026-11-08,Dimanche,14:30,15:20,Social Reformers Batignolles,Intense - Pilates reformer,Mélissa Bacilly,9,0,True,2026-11-10 22:34
-2026-11-08,Dimanche,15:15,16:05,Social Reformers Batignolles,Pilates reformer,Marine Leclerc,9,0,True,2026-11-10 22:34
-2026-11-09,Lundi,09:15,10:05,Social Reformers Batignolles,Intense - Pilates reformer,Mélissa Bacilly,9,7,True,2026-11-10 22:34
-2026-11-09,Lundi,09:15,10:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Camille Tykoczinsky,10,4,True,2026-11-10 22:34
-2026-11-09,Lundi,11:15,12:05,Social Reformers Batignolles,Pilates reformer,Linda Machfar,9,8,True,2026-11-10 22:34
-2026-11-09,Lundi,12:15,13:05,Social Reformers Batignolles,Fondamentaux - Pilates reformer,Linda Machfar,9,9,True,2026-11-10 22:34
-2026-11-09,Lundi,12:15,13:05,Social Reformers Neuilly-Sur-Seine,Power Pilates,Camille Tykoczinsky,18,5,True,2026-11-10 22:34
-2026-11-09,Lundi,12:30,13:20,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Arthur Gambardella,10,0,True,2026-11-10 22:34
-2026-11-09,Lundi,17:30,18:20,Social Reformers Batignolles,Intense - Pilates reformer,Zoé Bondu,9,0,True,2026-11-10 22:34
-2026-11-09,Lundi,18:00,18:50,Social Reformers Neuilly-Sur-Seine,Power Pilates,Emma Gibon,18,5,True,2026-11-10 22:34
-2026-11-09,Lundi,18:30,19:20,Social Reformers Batignolles,Intense - Pilates reformer,Zoé Bondu,9,8,True,2026-11-10 22:34
-2026-11-09,Lundi,19:15,20:00,Social Reformers Neuilly-Sur-Seine,PILATES X BAIN SONORE,Cécile Gueye,18,0,True,2026-11-10 22:34
-2026-11-09,Lundi,19:30,20:20,Social Reformers Batignolles,Intense - Pilates reformer,Zoé Bondu,9,0,True,2026-11-10 22:34
-2026-11-10,Mardi,08:15,09:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,0,True,2026-11-10 22:34
-2026-11-10,Mardi,09:15,10:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,7,True,2026-11-10 22:34
-2026-11-10,Mardi,09:15,10:05,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Clarissa Ls,10,0,True,2026-11-10 22:34
-2026-11-10,Mardi,11:15,12:05,Social Reformers Batignolles,Intense - Pilates reformer,Alexia Vitali,9,9,True,2026-11-10 22:34
-2026-11-10,Mardi,11:15,12:05,Social Reformers Neuilly-Sur-Seine,Barre Pilates,Hajar Ksikes,18,0,True,2026-11-10 22:34
-2026-11-10,Mardi,12:15,13:05,Social Reformers Batignolles,Intense - Pilates reformer,Alexia Vitali,9,7,True,2026-11-10 22:34
-2026-11-10,Mardi,12:30,13:20,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Mélissa Bacilly,10,4,True,2026-11-10 22:34
-2026-11-10,Mardi,17:15,18:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,8,True,2026-11-10 22:34
-2026-11-10,Mardi,18:15,19:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,0,True,2026-11-10 22:34
-2026-11-10,Mardi,19:00,19:50,Social Reformers Neuilly-Sur-Seine,Pilates mat,Margaux Campo,18,5,True,2026-11-10 22:34
-2026-11-10,Mardi,19:15,20:05,Social Reformers Batignolles,Fondamentaux - Pilates reformer,Alejandra Bautista,9,0,True,2026-11-10 22:34
-2026-11-10,Mardi,19:15,20:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Mohammad Hosso,10,2,True,2026-11-10 22:34
-2026-11-10,Mardi,20:00,20:50,Social Reformers Neuilly-Sur-Seine,Pilates mat,Margaux Campo,18,0,True,2026-11-10 22:34
-2026-11-10,Mardi,20:15,21:05,Social Reformers Batignolles,Fondamentaux - Pilates reformer,Alejandra Bautista,9,5,True,2026-11-10 22:34
-2026-11-10,Mardi,20:15,21:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Mohammad Hosso,10,0,True,2026-11-10 22:34
-2026-11-11,Mercredi,08:15,09:05,Social Reformers Batignolles,Fondamentaux - Pilates reformer,Linda Machfar,9,0,False,2026-11-10 22:34
-2026-11-11,Mercredi,09:00,09:50,Social Reformers Neuilly-Sur-Seine,Body Sculpt,Mélissa Bacilly,18,4,False,2026-11-10 22:34
-2026-11-11,Mercredi,09:15,10:05,Social Reformers Batignolles,Pilates reformer,Linda Machfar,9,8,False,2026-11-10 22:34
-2026-11-11,Mercredi,09:15,10:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Camille Tykoczinsky,10,6,False,2026-11-10 22:34
-2026-11-11,Mercredi,10:00,10:50,Social Reformers Neuilly-Sur-Seine,(Pré)MAMA PILATES-BÉBÉS BIENVENUS,Hajar Ksikes,10,0,False,2026-11-10 22:34
-2026-11-11,Mercredi,10:15,11:05,Social Reformers Batignolles,Pilates reformer,Linda Machfar,9,7,False,2026-11-10 22:34
-2026-11-11,Mercredi,11:15,12:05,Social Reformers Batignolles,Pilates reformer,Linda Machfar,9,9,False,2026-11-10 22:34
-2026-11-11,Mercredi,11:30,12:20,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Alexia Vitali,10,5,False,2026-11-10 22:34
-2026-11-11,Mercredi,12:15,13:05,Social Reformers Batignolles,Pilates reformer,Linda Machfar,9,8,False,2026-11-10 22:34
-2026-11-11,Mercredi,12:15,13:05,Social Reformers Neuilly-Sur-Seine,Power Pilates,Camille Tykoczinsky,18,8,False,2026-11-10 22:34
-2026-11-11,Mercredi,12:30,13:20,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Alexia Vitali,10,0,False,2026-11-10 22:34
-2026-11-11,Mercredi,14:30,15:20,Social Reformers Neuilly-Sur-Seine,Danse - enfants 4-8 ans,Tiffany W,10,2,False,2026-11-10 22:34
-2026-11-11,Mercredi,18:15,19:05,Social Reformers Batignolles,Pilates reformer,Hajar Ksikes,9,7,False,2026-11-10 22:34
-2026-11-11,Mercredi,18:15,19:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Marine Leclerc,10,0,False,2026-11-10 22:34
-2026-11-11,Mercredi,18:30,19:20,Social Reformers Neuilly-Sur-Seine,Power Pilates,Tiffany W,18,0,False,2026-11-10 22:34
-2026-11-11,Mercredi,19:15,20:05,Social Reformers Batignolles,Pilates reformer,Hajar Ksikes,9,4,False,2026-11-10 22:34
-2026-11-11,Mercredi,19:15,20:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Marine Leclerc,10,0,False,2026-11-10 22:34
-2026-11-11,Mercredi,19:30,20:20,Social Reformers Neuilly-Sur-Seine,Barre Pilates,Tiffany W,18,0,False,2026-11-10 22:34
-2026-11-11,Mercredi,20:15,21:05,Social Reformers Batignolles,Pilates reformer,Hajar Ksikes,9,0,False,2026-11-10 22:34
-2026-11-12,Jeudi,08:00,08:50,Social Reformers Neuilly-Sur-Seine,Body Sculpt,Mélissa Bacilly,18,1,False,2026-11-10 22:34
-2026-11-12,Jeudi,08:15,09:05,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Alexia Vitali,10,0,False,2026-11-10 22:34
-2026-11-12,Jeudi,09:00,09:50,Social Reformers Neuilly-Sur-Seine,CAF - Cuisses abdos fessiers,Mélissa Bacilly,18,0,False,2026-11-10 22:34
-2026-11-12,Jeudi,09:15,10:05,Social Reformers Batignolles,Fondamentaux - Pilates reformer,Hajar Ksikes,9,1,False,2026-11-10 22:34
-2026-11-12,Jeudi,09:15,10:05,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Alexia Vitali,10,1,False,2026-11-10 22:34
-2026-11-12,Jeudi,11:15,12:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,4,False,2026-11-10 22:34
-2026-11-12,Jeudi,11:15,12:05,Social Reformers Neuilly-Sur-Seine,CAF - Cuisses abdos fessiers,Mélissa Bacilly,18,1,False,2026-11-10 22:34
-2026-11-12,Jeudi,11:30,12:20,Social Reformers Neuilly-Sur-Seine,Fondamentaux - Pilates reformer,Linda Machfar,10,1,False,2026-11-10 22:34
-2026-11-12,Jeudi,12:15,13:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,4,False,2026-11-10 22:34
-2026-11-12,Jeudi,12:15,13:05,Social Reformers Neuilly-Sur-Seine,Body Sculpt,joelle berckmans,18,4,False,2026-11-10 22:34
-2026-11-12,Jeudi,12:30,13:20,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Linda Machfar,10,3,False,2026-11-10 22:34
-2026-11-12,Jeudi,17:00,17:50,Social Reformers Neuilly-Sur-Seine,Power Pilates,Emma Gibon,18,0,False,2026-11-10 22:34
-2026-11-12,Jeudi,18:30,19:20,Social Reformers Batignolles,Intense - Pilates reformer,Clarissa Ls,9,5,False,2026-11-10 22:34
-2026-11-12,Jeudi,18:30,19:20,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Alejandra Bautista,10,0,False,2026-11-10 22:34
-2026-11-12,Jeudi,19:30,20:20,Social Reformers Batignolles,Intense - Pilates reformer,Clarissa Ls,9,2,False,2026-11-10 22:34
-2026-11-12,Jeudi,19:30,20:20,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Alejandra Bautista,10,2,False,2026-11-10 22:34
+2026-11-08,Dimanche,10:15,11:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,6,True,2026-11-11 04:25
+2026-11-08,Dimanche,10:15,11:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Margaux Campo,10,5,True,2026-11-11 04:25
+2026-11-08,Dimanche,11:15,12:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,4,True,2026-11-11 04:25
+2026-11-08,Dimanche,11:15,12:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Margaux Campo,10,0,True,2026-11-11 04:25
+2026-11-08,Dimanche,12:15,13:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,8,True,2026-11-11 04:25
+2026-11-08,Dimanche,12:15,13:05,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Mélissa Bacilly,10,8,True,2026-11-11 04:25
+2026-11-08,Dimanche,12:30,13:20,Social Reformers Neuilly-Sur-Seine,Pilates mat,Margaux Campo,18,0,True,2026-11-11 04:25
+2026-11-08,Dimanche,13:30,14:20,Social Reformers Batignolles,Intense - Pilates reformer,Mélissa Bacilly,9,8,True,2026-11-11 04:25
+2026-11-08,Dimanche,14:30,15:20,Social Reformers Batignolles,Intense - Pilates reformer,Mélissa Bacilly,9,0,True,2026-11-11 04:25
+2026-11-08,Dimanche,15:15,16:05,Social Reformers Batignolles,Pilates reformer,Marine Leclerc,9,0,True,2026-11-11 04:25
+2026-11-09,Lundi,09:15,10:05,Social Reformers Batignolles,Intense - Pilates reformer,Mélissa Bacilly,9,7,True,2026-11-11 04:25
+2026-11-09,Lundi,09:15,10:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Camille Tykoczinsky,10,4,True,2026-11-11 04:25
+2026-11-09,Lundi,11:15,12:05,Social Reformers Batignolles,Pilates reformer,Linda Machfar,9,8,True,2026-11-11 04:25
+2026-11-09,Lundi,12:15,13:05,Social Reformers Batignolles,Fondamentaux - Pilates reformer,Linda Machfar,9,9,True,2026-11-11 04:25
+2026-11-09,Lundi,12:15,13:05,Social Reformers Neuilly-Sur-Seine,Power Pilates,Camille Tykoczinsky,18,5,True,2026-11-11 04:25
+2026-11-09,Lundi,12:30,13:20,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Arthur Gambardella,10,0,True,2026-11-11 04:25
+2026-11-09,Lundi,17:30,18:20,Social Reformers Batignolles,Intense - Pilates reformer,Zoé Bondu,9,0,True,2026-11-11 04:25
+2026-11-09,Lundi,18:00,18:50,Social Reformers Neuilly-Sur-Seine,Power Pilates,Emma Gibon,18,5,True,2026-11-11 04:25
+2026-11-09,Lundi,18:30,19:20,Social Reformers Batignolles,Intense - Pilates reformer,Zoé Bondu,9,8,True,2026-11-11 04:25
+2026-11-09,Lundi,19:15,20:00,Social Reformers Neuilly-Sur-Seine,PILATES X BAIN SONORE,Cécile Gueye,18,0,True,2026-11-11 04:25
+2026-11-09,Lundi,19:30,20:20,Social Reformers Batignolles,Intense - Pilates reformer,Zoé Bondu,9,0,True,2026-11-11 04:25
+2026-11-10,Mardi,08:15,09:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,0,True,2026-11-11 04:25
+2026-11-10,Mardi,09:15,10:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,7,True,2026-11-11 04:25
+2026-11-10,Mardi,09:15,10:05,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Clarissa Ls,10,0,True,2026-11-11 04:25
+2026-11-10,Mardi,11:15,12:05,Social Reformers Batignolles,Intense - Pilates reformer,Alexia Vitali,9,9,True,2026-11-11 04:25
+2026-11-10,Mardi,11:15,12:05,Social Reformers Neuilly-Sur-Seine,Barre Pilates,Hajar Ksikes,18,0,True,2026-11-11 04:25
+2026-11-10,Mardi,12:15,13:05,Social Reformers Batignolles,Intense - Pilates reformer,Alexia Vitali,9,7,True,2026-11-11 04:25
+2026-11-10,Mardi,12:30,13:20,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Mélissa Bacilly,10,4,True,2026-11-11 04:25
+2026-11-10,Mardi,17:15,18:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,8,True,2026-11-11 04:25
+2026-11-10,Mardi,18:15,19:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,0,True,2026-11-11 04:25
+2026-11-10,Mardi,19:00,19:50,Social Reformers Neuilly-Sur-Seine,Pilates mat,Margaux Campo,18,5,True,2026-11-11 04:25
+2026-11-10,Mardi,19:15,20:05,Social Reformers Batignolles,Fondamentaux - Pilates reformer,Alejandra Bautista,9,0,True,2026-11-11 04:25
+2026-11-10,Mardi,19:15,20:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Mohammad Hosso,10,2,True,2026-11-11 04:25
+2026-11-10,Mardi,20:00,20:50,Social Reformers Neuilly-Sur-Seine,Pilates mat,Margaux Campo,18,0,True,2026-11-11 04:25
+2026-11-10,Mardi,20:15,21:05,Social Reformers Batignolles,Fondamentaux - Pilates reformer,Alejandra Bautista,9,5,True,2026-11-11 04:25
+2026-11-10,Mardi,20:15,21:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Mohammad Hosso,10,0,True,2026-11-11 04:25
+2026-11-11,Mercredi,08:15,09:05,Social Reformers Batignolles,Fondamentaux - Pilates reformer,Linda Machfar,9,0,False,2026-11-11 04:25
+2026-11-11,Mercredi,09:00,09:50,Social Reformers Neuilly-Sur-Seine,Body Sculpt,Mélissa Bacilly,18,4,False,2026-11-11 04:25
+2026-11-11,Mercredi,09:15,10:05,Social Reformers Batignolles,Pilates reformer,Linda Machfar,9,9,False,2026-11-11 04:25
+2026-11-11,Mercredi,09:15,10:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Camille Tykoczinsky,10,7,False,2026-11-11 04:25
+2026-11-11,Mercredi,10:00,10:50,Social Reformers Neuilly-Sur-Seine,(Pré)MAMA PILATES-BÉBÉS BIENVENUS,Hajar Ksikes,10,0,False,2026-11-11 04:25
+2026-11-11,Mercredi,10:15,11:05,Social Reformers Batignolles,Pilates reformer,Linda Machfar,9,9,False,2026-11-11 04:25
+2026-11-11,Mercredi,11:15,12:05,Social Reformers Batignolles,Pilates reformer,Linda Machfar,9,9,False,2026-11-11 04:25
+2026-11-11,Mercredi,11:30,12:20,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Alexia Vitali,10,5,False,2026-11-11 04:25
+2026-11-11,Mercredi,12:15,13:05,Social Reformers Batignolles,Pilates reformer,Linda Machfar,9,8,False,2026-11-11 04:25
+2026-11-11,Mercredi,12:15,13:05,Social Reformers Neuilly-Sur-Seine,Power Pilates,Camille Tykoczinsky,18,8,False,2026-11-11 04:25
+2026-11-11,Mercredi,12:30,13:20,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Alexia Vitali,10,0,False,2026-11-11 04:25
+2026-11-11,Mercredi,14:30,15:20,Social Reformers Neuilly-Sur-Seine,Danse - enfants 4-8 ans,Tiffany W,10,2,False,2026-11-11 04:25
+2026-11-11,Mercredi,18:15,19:05,Social Reformers Batignolles,Pilates reformer,Hajar Ksikes,9,6,False,2026-11-11 04:25
+2026-11-11,Mercredi,18:15,19:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Marine Leclerc,10,0,False,2026-11-11 04:25
+2026-11-11,Mercredi,18:30,19:20,Social Reformers Neuilly-Sur-Seine,Power Pilates,Tiffany W,18,0,False,2026-11-11 04:25
+2026-11-11,Mercredi,19:15,20:05,Social Reformers Batignolles,Pilates reformer,Hajar Ksikes,9,5,False,2026-11-11 04:25
+2026-11-11,Mercredi,19:15,20:05,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Marine Leclerc,10,0,False,2026-11-11 04:25
+2026-11-11,Mercredi,19:30,20:20,Social Reformers Neuilly-Sur-Seine,Barre Pilates,Tiffany W,18,0,False,2026-11-11 04:25
+2026-11-11,Mercredi,20:15,21:05,Social Reformers Batignolles,Pilates reformer,Hajar Ksikes,9,0,False,2026-11-11 04:25
+2026-11-12,Jeudi,08:00,08:50,Social Reformers Neuilly-Sur-Seine,Body Sculpt,Mélissa Bacilly,18,1,False,2026-11-11 04:25
+2026-11-12,Jeudi,08:15,09:05,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Alexia Vitali,10,0,False,2026-11-11 04:25
+2026-11-12,Jeudi,09:00,09:50,Social Reformers Neuilly-Sur-Seine,CAF - Cuisses abdos fessiers,Mélissa Bacilly,18,0,False,2026-11-11 04:25
+2026-11-12,Jeudi,09:15,10:05,Social Reformers Batignolles,Fondamentaux - Pilates reformer,Hajar Ksikes,9,1,False,2026-11-11 04:25
+2026-11-12,Jeudi,09:15,10:05,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Alexia Vitali,10,1,False,2026-11-11 04:25
+2026-11-12,Jeudi,11:15,12:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,4,False,2026-11-11 04:25
+2026-11-12,Jeudi,11:15,12:05,Social Reformers Neuilly-Sur-Seine,CAF - Cuisses abdos fessiers,Mélissa Bacilly,18,1,False,2026-11-11 04:25
+2026-11-12,Jeudi,11:30,12:20,Social Reformers Neuilly-Sur-Seine,Fondamentaux - Pilates reformer,Linda Machfar,10,1,False,2026-11-11 04:25
+2026-11-12,Jeudi,12:15,13:05,Social Reformers Batignolles,Pilates reformer,Camille Tykoczinsky,9,5,False,2026-11-11 04:25
+2026-11-12,Jeudi,12:15,13:05,Social Reformers Neuilly-Sur-Seine,Body Sculpt,joelle berckmans,18,4,False,2026-11-11 04:25
+2026-11-12,Jeudi,12:30,13:20,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Linda Machfar,10,3,False,2026-11-11 04:25
+2026-11-12,Jeudi,17:00,17:50,Social Reformers Neuilly-Sur-Seine,Power Pilates,Emma Gibon,18,0,False,2026-11-11 04:25
+2026-11-12,Jeudi,18:30,19:20,Social Reformers Batignolles,Intense - Pilates reformer,Clarissa Ls,9,5,False,2026-11-11 04:25
+2026-11-12,Jeudi,18:30,19:20,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Alejandra Bautista,10,0,False,2026-11-11 04:25
+2026-11-12,Jeudi,19:30,20:20,Social Reformers Batignolles,Intense - Pilates reformer,Clarissa Ls,9,2,False,2026-11-11 04:25
+2026-11-12,Jeudi,19:30,20:20,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Alejandra Bautista,10,2,False,2026-11-11 04:25
+2026-11-13,Vendredi,08:15,09:05,Social Reformers Batignolles,Intense - Pilates reformer,Zoé Bondu,9,4,False,2026-11-11 04:25
+2026-11-13,Vendredi,08:15,09:05,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Alexia Vitali,10,0,False,2026-11-11 04:25
+2026-11-13,Vendredi,09:15,10:05,Social Reformers Batignolles,Intense - Pilates reformer,Zoé Bondu,9,6,False,2026-11-11 04:25
+2026-11-13,Vendredi,09:15,10:05,Social Reformers Neuilly-Sur-Seine,Intense - Pilates reformer,Alexia Vitali,10,2,False,2026-11-11 04:25
+2026-11-13,Vendredi,11:15,12:05,Social Reformers Batignolles,Intense - Pilates reformer,Alexia Vitali,9,3,False,2026-11-11 04:25
+2026-11-13,Vendredi,11:15,12:05,Social Reformers Neuilly-Sur-Seine,Pilates mat,Linda Machfar,18,0,False,2026-11-11 04:25
+2026-11-13,Vendredi,11:30,12:20,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Sarah Bellagamba,10,0,False,2026-11-11 04:25
+2026-11-13,Vendredi,12:15,13:05,Social Reformers Batignolles,Intense - Pilates reformer,Alexia Vitali,9,4,False,2026-11-11 04:25
+2026-11-13,Vendredi,12:15,13:05,Social Reformers Neuilly-Sur-Seine,Yoga - Adultes,Linda Machfar,18,0,False,2026-11-11 04:25
+2026-11-13,Vendredi,12:30,13:20,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Sarah Bellagamba,10,3,False,2026-11-11 04:25
+2026-11-13,Vendredi,13:15,14:05,Social Reformers Batignolles,Intense - Pilates reformer,Alexia Vitali,9,4,False,2026-11-11 04:25
+2026-11-13,Vendredi,16:15,17:05,Social Reformers Neuilly-Sur-Seine,Power Pilates,Tiffany W,18,0,False,2026-11-11 04:25
+2026-11-13,Vendredi,17:15,18:05,Social Reformers Neuilly-Sur-Seine,Barre Pilates,Tiffany W,18,0,False,2026-11-11 04:25
+2026-11-13,Vendredi,18:00,18:50,Social Reformers Neuilly-Sur-Seine,Pilates reformer,Mohammad Hosso,10,1,False,2026-11-11 04:25
+2026-11-13,Vendredi,18:15,19:15,Social Reformers Neuilly-Sur-Seine,Yoga - Adultes,Laura Yoga,18,1,False,2026-11-11 04:25
