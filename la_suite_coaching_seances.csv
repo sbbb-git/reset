@@ -2017,120 +2017,141 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-11-09,Lundi,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
 2026-11-09,Lundi,20:00,20:50,La Suite Coaching Paris 17,Hyrox,Sacha Levi,16,16,True,2026-11-12 20:26
 2026-11-09,Lundi,20:00,21:00,La Suite Coaching Paris 17,Coaching 3 personnes,Joe Ibrahim,3,1,True,2026-11-10 17:25
-2026-11-10,Mardi,07:00,07:50,La Suite Coaching Paris 12,Full body,Enya Beaumet,16,4,True,2026-11-12 20:26
-2026-11-10,Mardi,07:00,08:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-10,Mardi,07:15,08:05,La Suite Coaching Paris 17,Upper,LILI LURQUIN,14,5,True,2026-11-12 20:26
-2026-11-10,Mardi,08:00,08:50,La Suite Coaching Paris 12,Lower,Lucas Chir,14,2,True,2026-11-12 20:26
-2026-11-10,Mardi,08:00,09:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-12 20:26
-2026-11-10,Mardi,08:15,09:05,La Suite Coaching Paris 17,Full body,LILI LURQUIN,16,3,True,2026-11-12 20:26
-2026-11-10,Mardi,09:00,10:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,2,True,2026-11-12 20:26
-2026-11-10,Mardi,09:00,10:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-10,Mardi,10:00,11:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,0,True,2026-11-12 20:26
-2026-11-10,Mardi,10:00,11:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-12 20:26
-2026-11-10,Mardi,11:00,12:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,3,True,2026-11-12 20:26
-2026-11-10,Mardi,12:00,12:45,La Suite Coaching Paris 12,Upper,Enya Beaumet,12,0,True,2026-11-12 20:26
-2026-11-10,Mardi,12:00,13:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-12 20:26
-2026-11-10,Mardi,12:30,13:20,La Suite Coaching Paris 12,Upper,Enya Beaumet,14,7,True,2026-11-12 20:26
-2026-11-10,Mardi,12:30,13:30,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,3,0,True,2026-11-12 20:26
-2026-11-10,Mardi,12:30,13:20,La Suite Coaching Paris 17,Upper,Lucas Chir,14,10,True,2026-11-12 20:26
-2026-11-10,Mardi,18:00,18:50,La Suite Coaching Paris 17,Upper,Sacha Levi,14,9,True,2026-11-12 20:26
-2026-11-10,Mardi,19:00,19:50,La Suite Coaching Paris 12,Full body,Santana Sahraoui,16,4,True,2026-11-12 20:26
-2026-11-10,Mardi,19:00,20:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-10,Mardi,19:00,19:50,La Suite Coaching Paris 17,Full body,Sacha Levi,16,7,True,2026-11-12 20:26
-2026-11-10,Mardi,20:00,20:50,La Suite Coaching Paris 12,Lower,Santana Sahraoui,14,1,True,2026-11-12 20:26
-2026-11-10,Mardi,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-10,Mardi,20:00,20:50,La Suite Coaching Paris 17,Lower,Sacha Levi,14,6,True,2026-11-12 20:26
-2026-11-11,Mercredi,07:00,07:45,La Suite Coaching Paris 12,STRONG - FULL BODY,Enya Beaumet,12,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,07:00,07:50,La Suite Coaching Paris 12,Upper,Enya Beaumet,14,3,True,2026-11-12 20:26
-2026-11-11,Mercredi,07:00,08:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-12 20:26
-2026-11-11,Mercredi,07:30,08:20,La Suite Coaching Paris 17,Full body,Joe Ibrahim,16,1,True,2026-11-12 20:26
-2026-11-11,Mercredi,08:00,09:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,08:00,09:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,08:30,09:20,La Suite Coaching Paris 17,Lower,Joe Ibrahim,14,7,True,2026-11-12 20:26
-2026-11-11,Mercredi,09:00,10:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,09:30,10:20,La Suite Coaching Paris 17,Full body,Joe Ibrahim,16,7,True,2026-11-12 20:26
-2026-11-11,Mercredi,10:00,11:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,10:00,11:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,10:00,11:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,11:00,12:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,11:00,12:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-12 20:26
-2026-11-11,Mercredi,11:00,12:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,4,True,2026-11-12 20:26
-2026-11-11,Mercredi,12:00,12:45,La Suite Coaching Paris 12,Full body,Enya Beaumet,12,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,12:00,13:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-12 20:26
-2026-11-11,Mercredi,12:00,13:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,3,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,12:30,13:20,La Suite Coaching Paris 12,Full body,Enya Beaumet,16,12,True,2026-11-12 20:26
-2026-11-11,Mercredi,12:30,13:20,La Suite Coaching Paris 17,Hyrox,Sacha Levi,16,7,True,2026-11-12 20:26
-2026-11-11,Mercredi,15:00,16:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,16:00,17:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,17:00,18:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,18:00,19:00,La Suite Coaching Paris 12,STRONG - FULL BODY,Enya Beaumet,12,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,18:00,18:50,La Suite Coaching Paris 12,Upper,Lucas Chir,16,5,True,2026-11-12 20:26
-2026-11-11,Mercredi,18:00,19:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,1,True,2026-11-12 20:26
-2026-11-11,Mercredi,19:00,19:50,La Suite Coaching Paris 12,Full body,Lucas Chir,16,4,True,2026-11-12 20:26
-2026-11-11,Mercredi,19:00,20:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,19:00,19:50,La Suite Coaching Paris 17,Lower,Santana Sahraoui,14,6,True,2026-11-12 20:26
-2026-11-11,Mercredi,20:00,20:50,La Suite Coaching Paris 12,Lower,Lucas Chir,14,3,True,2026-11-12 20:26
-2026-11-11,Mercredi,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-11,Mercredi,20:00,20:50,La Suite Coaching Paris 17,Full body,Santana Sahraoui,16,6,True,2026-11-12 20:26
-2026-11-12,Jeudi,07:00,07:50,La Suite Coaching Paris 12,Full body,Lucas Chir,16,0,True,2026-11-12 20:26
-2026-11-12,Jeudi,07:00,08:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-12,Jeudi,07:15,08:05,La Suite Coaching Paris 17,Lower,LILI LURQUIN,14,2,True,2026-11-12 20:26
-2026-11-12,Jeudi,07:30,08:30,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,1,0,True,2026-11-12 20:26
-2026-11-12,Jeudi,08:00,08:50,La Suite Coaching Paris 12,Upper,Lucas Chir,14,2,True,2026-11-12 20:26
-2026-11-12,Jeudi,08:00,09:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-12 20:26
-2026-11-12,Jeudi,08:15,09:05,La Suite Coaching Paris 17,Full body,LILI LURQUIN,16,9,True,2026-11-12 20:26
-2026-11-12,Jeudi,09:00,10:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,1,True,2026-11-12 20:26
-2026-11-12,Jeudi,09:00,10:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-12,Jeudi,09:15,10:05,La Suite Coaching Paris 17,Upper,LILI LURQUIN,14,0,True,2026-11-12 20:26
-2026-11-12,Jeudi,10:00,11:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,2,True,2026-11-12 20:26
-2026-11-12,Jeudi,10:00,11:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-12 20:26
-2026-11-12,Jeudi,11:00,12:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-12 20:26
-2026-11-12,Jeudi,12:00,13:00,La Suite Coaching Paris 12,Lower,Enya Beaumet,12,0,True,2026-11-12 20:26
-2026-11-12,Jeudi,12:00,13:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,2,True,2026-11-12 20:26
-2026-11-12,Jeudi,12:30,13:20,La Suite Coaching Paris 12,Lower,Enya Beaumet,14,4,True,2026-11-12 20:26
-2026-11-12,Jeudi,12:30,13:20,La Suite Coaching Paris 17,Lower,Santana Sahraoui,14,6,True,2026-11-12 20:26
-2026-11-12,Jeudi,12:30,13:30,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,3,0,True,2026-11-12 20:26
-2026-11-12,Jeudi,17:00,18:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,0,True,2026-11-12 20:26
-2026-11-12,Jeudi,18:00,19:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,0,True,2026-11-12 20:26
-2026-11-12,Jeudi,18:00,18:50,La Suite Coaching Paris 17,Full body,Joe Ibrahim,16,5,True,2026-11-12 20:26
-2026-11-12,Jeudi,19:00,19:50,La Suite Coaching Paris 12,Full body,Lucas Chir,16,2,True,2026-11-12 20:26
-2026-11-12,Jeudi,19:00,20:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-12 20:26
-2026-11-12,Jeudi,19:00,19:50,La Suite Coaching Paris 17,Hyrox,Santana Sahraoui,16,5,True,2026-11-12 20:26
-2026-11-12,Jeudi,20:00,20:50,La Suite Coaching Paris 12,Hyrox,Lucas Chir,16,2,False,2026-11-12 20:26
-2026-11-12,Jeudi,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-12,Jeudi,20:00,20:50,La Suite Coaching Paris 17,Full body,Santana Sahraoui,14,5,False,2026-11-12 20:26
-2026-11-13,Vendredi,07:00,07:50,La Suite Coaching Paris 12,Core - mat,Sacha Levi,16,0,False,2026-11-12 20:26
-2026-11-13,Vendredi,07:30,08:20,La Suite Coaching Paris 17,Lower,Joe Ibrahim,14,5,False,2026-11-12 20:26
-2026-11-13,Vendredi,08:00,09:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-13,Vendredi,08:30,09:20,La Suite Coaching Paris 17,Full body,Joe Ibrahim,16,4,False,2026-11-12 20:26
-2026-11-13,Vendredi,09:00,10:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-13,Vendredi,09:30,10:20,La Suite Coaching Paris 17,Upper,Joe Ibrahim,14,0,False,2026-11-12 20:26
-2026-11-13,Vendredi,10:00,11:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,3,False,2026-11-12 20:26
-2026-11-13,Vendredi,10:00,11:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-13,Vendredi,11:00,12:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,2,False,2026-11-12 20:26
-2026-11-13,Vendredi,11:00,12:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,False,2026-11-12 20:26
-2026-11-13,Vendredi,12:00,13:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-13,Vendredi,12:30,13:20,La Suite Coaching Paris 12,Upper,Sacha Levi,14,3,False,2026-11-12 20:26
-2026-11-13,Vendredi,12:30,13:20,La Suite Coaching Paris 17,Full body,Santana Sahraoui,16,14,False,2026-11-12 20:26
-2026-11-13,Vendredi,18:00,18:50,La Suite Coaching Paris 12,Full body,Enya Beaumet,16,2,False,2026-11-12 20:26
-2026-11-13,Vendredi,18:00,19:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-13,Vendredi,18:00,18:50,La Suite Coaching Paris 17,Full body,LILI LURQUIN,16,2,False,2026-11-12 20:26
-2026-11-13,Vendredi,19:00,20:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-13,Vendredi,19:00,19:50,La Suite Coaching Paris 17,Upper,LILI LURQUIN,14,3,False,2026-11-12 20:26
-2026-11-13,Vendredi,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-14,Samedi,09:00,10:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,False,2026-11-12 20:26
-2026-11-14,Samedi,09:00,09:50,La Suite Coaching Paris 12,Lower,Lucas Chir,14,4,False,2026-11-12 20:26
-2026-11-14,Samedi,09:00,10:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-14,Samedi,09:00,09:50,La Suite Coaching Paris 17,Full body,Santana Sahraoui,16,4,False,2026-11-12 20:26
-2026-11-14,Samedi,10:00,11:00,La Suite Coaching Paris 12,Hyrox,Enya Beaumet,12,0,False,2026-11-12 20:26
-2026-11-14,Samedi,10:00,11:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,False,2026-11-12 20:26
-2026-11-14,Samedi,10:00,11:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-14,Samedi,10:00,10:50,La Suite Coaching Paris 17,Hyrox,Santana Sahraoui,16,5,False,2026-11-12 20:26
-2026-11-14,Samedi,11:00,12:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,False,2026-11-12 20:26
-2026-11-14,Samedi,11:00,11:50,La Suite Coaching Paris 12,Full body,Lucas Chir,16,1,False,2026-11-12 20:26
-2026-11-14,Samedi,11:00,12:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-14,Samedi,11:00,11:50,La Suite Coaching Paris 17,Upper,Santana Sahraoui,14,3,False,2026-11-12 20:26
-2026-11-14,Samedi,12:00,12:45,La Suite Coaching Paris 12,Upper,Enya Beaumet,12,0,False,2026-11-12 20:26
-2026-11-14,Samedi,12:00,12:50,La Suite Coaching Paris 12,Upper,Lucas Chir,14,1,False,2026-11-12 20:26
-2026-11-14,Samedi,19:00,20:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
-2026-11-14,Samedi,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-12 20:26
+2026-11-10,Mardi,07:00,07:50,La Suite Coaching Paris 12,Full body,Enya Beaumet,16,4,True,2026-11-13 01:54
+2026-11-10,Mardi,07:00,08:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-10,Mardi,07:15,08:05,La Suite Coaching Paris 17,Upper,LILI LURQUIN,14,5,True,2026-11-13 01:54
+2026-11-10,Mardi,08:00,08:50,La Suite Coaching Paris 12,Lower,Lucas Chir,14,2,True,2026-11-13 01:54
+2026-11-10,Mardi,08:00,09:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-13 01:54
+2026-11-10,Mardi,08:15,09:05,La Suite Coaching Paris 17,Full body,LILI LURQUIN,16,3,True,2026-11-13 01:54
+2026-11-10,Mardi,09:00,10:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,2,True,2026-11-13 01:54
+2026-11-10,Mardi,09:00,10:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-10,Mardi,10:00,11:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,0,True,2026-11-13 01:54
+2026-11-10,Mardi,10:00,11:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-13 01:54
+2026-11-10,Mardi,11:00,12:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,3,True,2026-11-13 01:54
+2026-11-10,Mardi,12:00,12:45,La Suite Coaching Paris 12,Upper,Enya Beaumet,12,0,True,2026-11-13 01:54
+2026-11-10,Mardi,12:00,13:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-13 01:54
+2026-11-10,Mardi,12:30,13:20,La Suite Coaching Paris 12,Upper,Enya Beaumet,14,7,True,2026-11-13 01:54
+2026-11-10,Mardi,12:30,13:30,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,3,0,True,2026-11-13 01:54
+2026-11-10,Mardi,12:30,13:20,La Suite Coaching Paris 17,Upper,Lucas Chir,14,10,True,2026-11-13 01:54
+2026-11-10,Mardi,18:00,18:50,La Suite Coaching Paris 17,Upper,Sacha Levi,14,9,True,2026-11-13 01:54
+2026-11-10,Mardi,19:00,19:50,La Suite Coaching Paris 12,Full body,Santana Sahraoui,16,4,True,2026-11-13 01:54
+2026-11-10,Mardi,19:00,20:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-10,Mardi,19:00,19:50,La Suite Coaching Paris 17,Full body,Sacha Levi,16,7,True,2026-11-13 01:54
+2026-11-10,Mardi,20:00,20:50,La Suite Coaching Paris 12,Lower,Santana Sahraoui,14,1,True,2026-11-13 01:54
+2026-11-10,Mardi,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-10,Mardi,20:00,20:50,La Suite Coaching Paris 17,Lower,Sacha Levi,14,6,True,2026-11-13 01:54
+2026-11-11,Mercredi,07:00,07:45,La Suite Coaching Paris 12,STRONG - FULL BODY,Enya Beaumet,12,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,07:00,07:50,La Suite Coaching Paris 12,Upper,Enya Beaumet,14,3,True,2026-11-13 01:54
+2026-11-11,Mercredi,07:00,08:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-13 01:54
+2026-11-11,Mercredi,07:30,08:20,La Suite Coaching Paris 17,Full body,Joe Ibrahim,16,1,True,2026-11-13 01:54
+2026-11-11,Mercredi,08:00,09:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,08:00,09:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,08:30,09:20,La Suite Coaching Paris 17,Lower,Joe Ibrahim,14,7,True,2026-11-13 01:54
+2026-11-11,Mercredi,09:00,10:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,09:30,10:20,La Suite Coaching Paris 17,Full body,Joe Ibrahim,16,7,True,2026-11-13 01:54
+2026-11-11,Mercredi,10:00,11:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,10:00,11:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,10:00,11:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,11:00,12:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,11:00,12:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-13 01:54
+2026-11-11,Mercredi,11:00,12:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,4,True,2026-11-13 01:54
+2026-11-11,Mercredi,12:00,12:45,La Suite Coaching Paris 12,Full body,Enya Beaumet,12,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,12:00,13:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-13 01:54
+2026-11-11,Mercredi,12:00,13:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,3,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,12:30,13:20,La Suite Coaching Paris 12,Full body,Enya Beaumet,16,12,True,2026-11-13 01:54
+2026-11-11,Mercredi,12:30,13:20,La Suite Coaching Paris 17,Hyrox,Sacha Levi,16,7,True,2026-11-13 01:54
+2026-11-11,Mercredi,15:00,16:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,16:00,17:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,17:00,18:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,18:00,19:00,La Suite Coaching Paris 12,STRONG - FULL BODY,Enya Beaumet,12,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,18:00,18:50,La Suite Coaching Paris 12,Upper,Lucas Chir,16,5,True,2026-11-13 01:54
+2026-11-11,Mercredi,18:00,19:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,6,1,True,2026-11-13 01:54
+2026-11-11,Mercredi,19:00,19:50,La Suite Coaching Paris 12,Full body,Lucas Chir,16,4,True,2026-11-13 01:54
+2026-11-11,Mercredi,19:00,20:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,19:00,19:50,La Suite Coaching Paris 17,Lower,Santana Sahraoui,14,6,True,2026-11-13 01:54
+2026-11-11,Mercredi,20:00,20:50,La Suite Coaching Paris 12,Lower,Lucas Chir,14,3,True,2026-11-13 01:54
+2026-11-11,Mercredi,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-11,Mercredi,20:00,20:50,La Suite Coaching Paris 17,Full body,Santana Sahraoui,16,6,True,2026-11-13 01:54
+2026-11-12,Jeudi,07:00,07:50,La Suite Coaching Paris 12,Full body,Lucas Chir,16,0,True,2026-11-13 01:54
+2026-11-12,Jeudi,07:00,08:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-12,Jeudi,07:15,08:05,La Suite Coaching Paris 17,Lower,LILI LURQUIN,14,2,True,2026-11-13 01:54
+2026-11-12,Jeudi,07:30,08:30,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,1,0,True,2026-11-13 01:54
+2026-11-12,Jeudi,08:00,08:50,La Suite Coaching Paris 12,Upper,Lucas Chir,14,2,True,2026-11-13 01:54
+2026-11-12,Jeudi,08:00,09:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-13 01:54
+2026-11-12,Jeudi,08:15,09:05,La Suite Coaching Paris 17,Full body,LILI LURQUIN,16,9,True,2026-11-13 01:54
+2026-11-12,Jeudi,09:00,10:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,1,True,2026-11-13 01:54
+2026-11-12,Jeudi,09:00,10:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-12,Jeudi,09:15,10:05,La Suite Coaching Paris 17,Upper,LILI LURQUIN,14,0,True,2026-11-13 01:54
+2026-11-12,Jeudi,10:00,11:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,2,True,2026-11-13 01:54
+2026-11-12,Jeudi,10:00,11:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-13 01:54
+2026-11-12,Jeudi,11:00,12:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,True,2026-11-13 01:54
+2026-11-12,Jeudi,12:00,13:00,La Suite Coaching Paris 12,Lower,Enya Beaumet,12,0,True,2026-11-13 01:54
+2026-11-12,Jeudi,12:00,13:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,2,True,2026-11-13 01:54
+2026-11-12,Jeudi,12:30,13:20,La Suite Coaching Paris 12,Lower,Enya Beaumet,14,4,True,2026-11-13 01:54
+2026-11-12,Jeudi,12:30,13:20,La Suite Coaching Paris 17,Lower,Santana Sahraoui,14,6,True,2026-11-13 01:54
+2026-11-12,Jeudi,12:30,13:30,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,3,0,True,2026-11-13 01:54
+2026-11-12,Jeudi,17:00,18:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,0,True,2026-11-13 01:54
+2026-11-12,Jeudi,18:00,19:00,La Suite Coaching Paris 12,Coaching 3 personnes,Lucas Chir,3,0,True,2026-11-13 01:54
+2026-11-12,Jeudi,18:00,18:50,La Suite Coaching Paris 17,Full body,Joe Ibrahim,16,5,True,2026-11-13 01:54
+2026-11-12,Jeudi,19:00,19:50,La Suite Coaching Paris 12,Full body,Lucas Chir,16,2,True,2026-11-13 01:54
+2026-11-12,Jeudi,19:00,20:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-12,Jeudi,19:00,19:50,La Suite Coaching Paris 17,Hyrox,Santana Sahraoui,16,5,True,2026-11-13 01:54
+2026-11-12,Jeudi,20:00,20:50,La Suite Coaching Paris 12,Hyrox,Lucas Chir,16,2,True,2026-11-13 01:54
+2026-11-12,Jeudi,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,True,2026-11-13 01:54
+2026-11-12,Jeudi,20:00,20:50,La Suite Coaching Paris 17,Full body,Santana Sahraoui,14,5,True,2026-11-13 01:54
+2026-11-13,Vendredi,07:00,07:50,La Suite Coaching Paris 12,Core - mat,Sacha Levi,16,0,False,2026-11-13 01:54
+2026-11-13,Vendredi,07:30,08:20,La Suite Coaching Paris 17,Lower,Joe Ibrahim,14,4,False,2026-11-13 01:54
+2026-11-13,Vendredi,08:00,09:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-13,Vendredi,08:30,09:20,La Suite Coaching Paris 17,Full body,Joe Ibrahim,16,5,False,2026-11-13 01:54
+2026-11-13,Vendredi,09:00,10:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-13,Vendredi,09:30,10:20,La Suite Coaching Paris 17,Upper,Joe Ibrahim,14,0,False,2026-11-13 01:54
+2026-11-13,Vendredi,10:00,11:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,3,False,2026-11-13 01:54
+2026-11-13,Vendredi,10:00,11:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-13,Vendredi,11:00,12:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,2,False,2026-11-13 01:54
+2026-11-13,Vendredi,11:00,12:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,1,False,2026-11-13 01:54
+2026-11-13,Vendredi,12:00,13:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-13,Vendredi,12:30,13:20,La Suite Coaching Paris 12,Upper,Sacha Levi,14,4,False,2026-11-13 01:54
+2026-11-13,Vendredi,12:30,13:20,La Suite Coaching Paris 17,Full body,Santana Sahraoui,16,13,False,2026-11-13 01:54
+2026-11-13,Vendredi,18:00,18:50,La Suite Coaching Paris 12,Full body,Enya Beaumet,16,2,False,2026-11-13 01:54
+2026-11-13,Vendredi,18:00,19:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-13,Vendredi,18:00,18:50,La Suite Coaching Paris 17,Full body,LILI LURQUIN,16,2,False,2026-11-13 01:54
+2026-11-13,Vendredi,19:00,20:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-13,Vendredi,19:00,19:50,La Suite Coaching Paris 17,Upper,LILI LURQUIN,14,3,False,2026-11-13 01:54
+2026-11-13,Vendredi,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-14,Samedi,09:00,10:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,False,2026-11-13 01:54
+2026-11-14,Samedi,09:00,09:50,La Suite Coaching Paris 12,Lower,Lucas Chir,14,4,False,2026-11-13 01:54
+2026-11-14,Samedi,09:00,10:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-14,Samedi,09:00,09:50,La Suite Coaching Paris 17,Full body,Santana Sahraoui,16,4,False,2026-11-13 01:54
+2026-11-14,Samedi,10:00,11:00,La Suite Coaching Paris 12,Hyrox,Enya Beaumet,12,0,False,2026-11-13 01:54
+2026-11-14,Samedi,10:00,11:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,False,2026-11-13 01:54
+2026-11-14,Samedi,10:00,11:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-14,Samedi,10:00,10:50,La Suite Coaching Paris 17,Hyrox,Santana Sahraoui,16,5,False,2026-11-13 01:54
+2026-11-14,Samedi,11:00,12:00,La Suite Coaching Paris 12,Coaching 3 personnes,Enya Beaumet,3,0,False,2026-11-13 01:54
+2026-11-14,Samedi,11:00,11:50,La Suite Coaching Paris 12,Full body,Lucas Chir,16,1,False,2026-11-13 01:54
+2026-11-14,Samedi,11:00,12:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-14,Samedi,11:00,11:50,La Suite Coaching Paris 17,Upper,Santana Sahraoui,14,4,False,2026-11-13 01:54
+2026-11-14,Samedi,12:00,12:45,La Suite Coaching Paris 12,Upper,Enya Beaumet,12,0,False,2026-11-13 01:54
+2026-11-14,Samedi,12:00,12:50,La Suite Coaching Paris 12,Upper,Lucas Chir,14,1,False,2026-11-13 01:54
+2026-11-14,Samedi,19:00,20:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-14,Samedi,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,09:00,09:50,La Suite Coaching Paris 12,Upper,Enya Beaumet,14,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,09:00,09:50,La Suite Coaching Paris 12,Upper,Joe Ibrahim,14,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,09:00,10:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,09:00,10:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,3,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,09:00,09:50,La Suite Coaching Paris 17,Upper,Sacha Levi,14,3,False,2026-11-13 01:54
+2026-11-15,Dimanche,10:00,11:00,La Suite Coaching Paris 12,SWEAT - Cardio,Julie PAROBECK,12,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,10:00,11:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,10:00,10:50,La Suite Coaching Paris 12,Lower,Enya Beaumet,14,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,10:00,10:50,La Suite Coaching Paris 17,Full body,Sacha Levi,16,3,False,2026-11-13 01:54
+2026-11-15,Dimanche,10:00,11:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,3,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,11:00,11:50,La Suite Coaching Paris 12,Full body,   ,16,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,11:00,12:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,11:00,11:50,La Suite Coaching Paris 12,Full body,Enya Beaumet,16,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,11:00,12:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,3,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,11:00,11:50,La Suite Coaching Paris 17,Full body,Sacha Levi,16,5,False,2026-11-13 01:54
+2026-11-15,Dimanche,12:00,12:50,La Suite Coaching Paris 12,Lower,   ,14,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,12:00,12:50,La Suite Coaching Paris 12,Lower,Joe Ibrahim,14,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,12:00,13:00,La Suite Coaching Paris 17,Entraînement libre,Accès Libre,3,1,False,2026-11-13 01:54
+2026-11-15,Dimanche,12:00,12:50,La Suite Coaching Paris 17,Lower,Sacha Levi,14,2,False,2026-11-13 01:54
+2026-11-15,Dimanche,19:00,20:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
+2026-11-15,Dimanche,20:00,21:00,La Suite Coaching Paris 12,Entraînement libre,   ,5,0,False,2026-11-13 01:54
