@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13T22:49:20.316498",
+ "generated_at": "2026-11-14T02:59:55.469510",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,11 +9,11 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 43736,
-   "doinsport": 5817,
-   "urbanpadel": 6508
+   "anybuddy": 75258,
+   "doinsport": 5977,
+   "urbanpadel": 6990
   },
-  "n_sessions_live": 56061,
+  "n_sessions_live": 88225,
   "n_sessions_history": 1026831,
   "pop_idf": 12258660
  },
@@ -36,7 +36,7 @@
    "revenu_median_uc": 24820,
    "clubs_padel": 22,
    "hab_par_club": 66017,
-   "prix_median_90min": 56.0
+   "prix_median_90min": 54.0
   },
   "78": {
    "nom": "Yvelines",
@@ -56,7 +56,7 @@
    "revenu_median_uc": 24370,
    "clubs_padel": 13,
    "hab_par_club": 101303,
-   "prix_median_90min": 66.0
+   "prix_median_90min": 68.0
   },
   "92": {
    "nom": "Hauts-de-Seine",
@@ -66,7 +66,7 @@
    "revenu_median_uc": 29710,
    "clubs_padel": 12,
    "hab_par_club": 134553,
-   "prix_median_90min": 75
+   "prix_median_90min": 75.0
   },
   "93": {
    "nom": "Seine-Saint-Denis",
@@ -488,29 +488,29 @@
  "weather_period": "2024-01-01 → 2026-05-31",
  "maturity": {
   "anybuddy": {
+   "days_elapsed": 168,
+   "target_days": 180,
+   "pct": 93,
+   "note": "168j sur 180j (6 mois)"
+  },
+  "urbanpadel": {
    "days_elapsed": 167,
    "target_days": 180,
    "pct": 93,
    "note": "167j sur 180j (6 mois)"
   },
-  "urbanpadel": {
-   "days_elapsed": 166,
-   "target_days": 180,
-   "pct": 92,
-   "note": "166j sur 180j (6 mois)"
-  },
   "doinsport": {
-   "days_elapsed": 1047,
+   "days_elapsed": 1048,
    "target_days": 180,
    "pct": 100,
    "note": "historique rétroactif disponible"
   },
   "playtomic": {
-   "days_elapsed": 166,
+   "days_elapsed": 167,
    "target_days": 180,
-   "pct": 92,
-   "note": "166j sur 180j (6 mois)"
+   "pct": 93,
+   "note": "167j sur 180j (6 mois)"
   },
-  "_global_pct": 95
+  "_global_pct": 96
  }
 }
