@@ -1222,74 +1222,95 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-11-10,Mardi,20:00,21:00,Crossfit Factory 92,Crossfit,Elennick Johnson,16,12,True,2026-11-13 20:02
 2026-11-10,Mardi,20:00,21:00,Salle 1 (1er salle),HYROX,Mikael Ducrot,14,9,True,2026-11-13 20:02
 2026-11-10,Mardi,20:00,21:00,Salle 2 (salle du fond),HYROX,Sebastien Tardy,12,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,07:00,08:00,Crossfit Factory 92,Gymnastics,Seb Ladoul,16,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,07:00,08:00,Salle 2 (salle du fond),CROSSFIT Matin,Mikael Ducrot,12,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,08:00,09:00,Crossfit Factory 92,Hyrox,Seb Ladoul,18,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,08:00,09:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,09:00,10:00,Crossfit Factory 92,Crossfit,Salma Mahdoub,16,12,True,2026-11-13 20:02
-2026-11-11,Mercredi,10:00,11:00,CrossFit Factory Boulogne Billancourt,CROSSFIT,Celia  Longeagne ,12,11,True,2026-11-13 20:02
-2026-11-11,Mercredi,10:00,11:00,Crossfit Factory 92,Crossfit,Salma Mahdoub,16,13,True,2026-11-13 20:02
-2026-11-11,Mercredi,10:00,11:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,6,True,2026-11-13 20:02
-2026-11-11,Mercredi,11:00,12:00,CrossFit Factory Boulogne Billancourt,CROSSFIT,Celia  Longeagne ,12,10,True,2026-11-13 20:02
-2026-11-11,Mercredi,11:00,12:00,Crossfit Factory 92,Crossfit,Salma Mahdoub,16,11,True,2026-11-13 20:02
-2026-11-11,Mercredi,11:00,12:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,6,True,2026-11-13 20:02
-2026-11-11,Mercredi,12:00,13:00,CrossFit Factory Boulogne Billancourt,CROSSFIT,Celia  Longeagne ,12,7,True,2026-11-13 20:02
-2026-11-11,Mercredi,12:00,13:00,Crossfit Factory 92,Weightlifting,Seb Ladoul,14,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,12:15,13:15,Salle 1 (1er salle),HYROX,Mikael Ducrot,14,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,12:30,13:30,Salle 2 (salle du fond),CROSSFIT,Marie Bach,12,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,13:00,14:00,Crossfit Factory 92,Crossfit,Patrick Kim,16,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,17:30,19:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,17:30,19:00,Crossfit factory Boulogne-Billancourt,OPEN GYM,Accueil Factory Boulogne,6,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,18:00,19:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,18:00,19:00,Salle 1 (1er salle),CROSSFIT,Seb Ladoul,12,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,19:00,20:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,19:00,20:00,Salle 1 (1er salle),HYROX,Marie Bach,14,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,19:00,20:00,Salle 2 (salle du fond),CROSSFIT,Hanaé Vallet,12,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,20:00,21:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,20:00,21:00,Salle 1 (1er salle),HYROX,Marie Bach,14,0,True,2026-11-13 20:02
-2026-11-11,Mercredi,20:00,21:00,Salle 2 (salle du fond),CROSSFIT,Hanaé Vallet,12,0,True,2026-11-13 20:02
-2026-11-12,Jeudi,07:00,08:00,Crossfit Factory 92,Crossfit,Antoine !,16,15,True,2026-11-13 20:02
-2026-11-12,Jeudi,07:00,08:00,Salle 1 (1er salle),HYROX Matin,Patrick Kim,14,11,True,2026-11-13 20:02
-2026-11-12,Jeudi,08:00,09:00,Crossfit Factory 92,Crossfit,Antoine !,16,13,True,2026-11-13 20:02
-2026-11-12,Jeudi,08:00,09:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-13 20:02
-2026-11-12,Jeudi,10:00,11:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-13 20:02
-2026-11-12,Jeudi,11:00,12:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-13 20:02
-2026-11-12,Jeudi,12:00,13:00,Crossfit Factory 92,Crossfit,Seb Ladoul,16,15,True,2026-11-13 20:02
-2026-11-12,Jeudi,12:15,13:15,Salle 2 (salle du fond),CROSSFIT,Patrick Kim,12,12,True,2026-11-13 20:02
-2026-11-12,Jeudi,13:00,14:00,Crossfit Factory 92,Hyrox,Seb Ladoul,16,14,True,2026-11-13 20:02
-2026-11-12,Jeudi,17:00,18:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,4,True,2026-11-13 20:02
-2026-11-12,Jeudi,17:30,19:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-13 20:02
-2026-11-12,Jeudi,17:30,19:00,Crossfit factory Boulogne-Billancourt,OPEN GYM,Accueil Factory Boulogne,6,4,True,2026-11-13 20:02
-2026-11-12,Jeudi,18:00,19:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,11,True,2026-11-13 20:02
-2026-11-12,Jeudi,18:00,19:00,Salle 2 (salle du fond),CROSSFIT,Hanaé Vallet,12,9,True,2026-11-13 20:02
-2026-11-12,Jeudi,19:00,20:00,Crossfit Factory 92,Hyrox,Celia  Longeagne ,18,14,True,2026-11-13 20:02
-2026-11-12,Jeudi,19:00,20:00,Extérieur,RUNNING,Jerome FROGER,20,0,True,2026-11-13 20:02
-2026-11-12,Jeudi,19:00,19:45,Salle 2 (salle du fond),BURN,Hanaé Vallet,14,13,True,2026-11-13 20:02
-2026-11-12,Jeudi,20:00,21:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,13,True,2026-11-13 20:02
-2026-11-12,Jeudi,20:00,21:00,Salle 2 (salle du fond),CROSSFIT,Hanaé Vallet,12,9,True,2026-11-13 20:02
-2026-11-13,Vendredi,07:00,08:00,Crossfit Factory 92,Weightlifting,Elennick Johnson,14,11,True,2026-11-13 20:02
-2026-11-13,Vendredi,07:00,08:00,Salle 1 (1er salle),CROSSFIT Matin,Seb Ladoul,12,8,True,2026-11-13 20:02
-2026-11-13,Vendredi,08:00,09:00,Crossfit Factory 92,Weightlifting,Elennick Johnson,16,16,True,2026-11-13 20:02
-2026-11-13,Vendredi,08:00,09:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,1,True,2026-11-13 20:02
-2026-11-13,Vendredi,10:00,11:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,1,True,2026-11-13 20:02
-2026-11-13,Vendredi,11:00,12:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,2,True,2026-11-13 20:02
-2026-11-13,Vendredi,12:00,13:00,Crossfit Factory 92,Crossfit,Elennick Johnson,16,12,True,2026-11-13 20:02
-2026-11-13,Vendredi,12:00,13:00,Salle 2 (salle du fond),CROSSFIT,Celia  Longeagne ,12,0,True,2026-11-13 20:02
-2026-11-13,Vendredi,12:15,13:00,Salle 1 (1er salle),HYROX,Seb Ladoul,14,11,True,2026-11-13 20:02
-2026-11-13,Vendredi,13:00,14:00,Crossfit Factory 92,Hyrox,Elennick Johnson,16,14,True,2026-11-13 20:02
-2026-11-13,Vendredi,13:00,14:00,Salle 1 (1er salle),HYROX,Seb Ladoul,14,8,True,2026-11-13 20:02
-2026-11-13,Vendredi,17:00,18:00,Crossfit Factory 92,Crossfit,Sebastien Tardy,16,6,True,2026-11-13 20:02
-2026-11-13,Vendredi,17:30,19:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-13 20:02
-2026-11-13,Vendredi,18:00,19:00,Crossfit Factory 92,Weightlifting,Sebastien Tardy,16,9,True,2026-11-13 20:02
-2026-11-13,Vendredi,18:00,19:00,Salle 1 (1er salle),HALTERO,Hanaé Vallet,12,12,True,2026-11-13 20:02
-2026-11-13,Vendredi,19:00,20:00,Crossfit Factory 92,Crossfit,Sebastien Tardy,16,13,True,2026-11-13 20:02
-2026-11-13,Vendredi,19:00,20:00,Salle 2 (salle du fond),CROSSFIT,Hanaé Vallet,12,11,True,2026-11-13 20:02
-2026-11-14,Samedi,09:00,10:00,Crossfit Factory 92,Team of 2,Patrick Kim,14,14,False,2026-11-13 20:02
-2026-11-14,Samedi,09:00,10:00,Salle 2 (salle du fond),CROSSFIT TEAM,Romain Landais,12,10,False,2026-11-13 20:02
-2026-11-14,Samedi,10:00,11:00,Crossfit Factory 92,Team of 2,Patrick Kim,16,14,False,2026-11-13 20:02
-2026-11-14,Samedi,10:00,11:00,Salle 2 (salle du fond),CROSSFIT TEAM,Romain Landais,12,9,False,2026-11-13 20:02
-2026-11-14,Samedi,11:00,12:00,Crossfit Factory 92,Hyrox,Patrick Kim,16,16,False,2026-11-13 20:02
-2026-11-14,Samedi,11:00,12:00,Salle 2 (salle du fond),CROSSFIT TEAM,Romain Landais,12,7,False,2026-11-13 20:02
-2026-11-14,Samedi,12:00,13:00,Crossfit Factory 92,Team of 2,Patrick Kim,18,18,False,2026-11-13 20:02
-2026-11-14,Samedi,12:00,13:00,Salle 1 (1er salle),HYROX,Romain Landais,14,7,False,2026-11-13 20:02
-2026-11-14,Samedi,13:30,14:30,Crossfit Factory 92,Yoga Vinyasa,lindsay moro,16,5,False,2026-11-13 20:02
+2026-11-11,Mercredi,07:00,08:00,Crossfit Factory 92,Gymnastics,Seb Ladoul,16,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,07:00,08:00,Salle 2 (salle du fond),CROSSFIT Matin,Mikael Ducrot,12,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,08:00,09:00,Crossfit Factory 92,Hyrox,Seb Ladoul,18,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,08:00,09:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,09:00,10:00,Crossfit Factory 92,Crossfit,Salma Mahdoub,16,12,True,2026-11-14 01:38
+2026-11-11,Mercredi,10:00,11:00,CrossFit Factory Boulogne Billancourt,CROSSFIT,Celia  Longeagne ,12,11,True,2026-11-14 01:38
+2026-11-11,Mercredi,10:00,11:00,Crossfit Factory 92,Crossfit,Salma Mahdoub,16,13,True,2026-11-14 01:38
+2026-11-11,Mercredi,10:00,11:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,6,True,2026-11-14 01:38
+2026-11-11,Mercredi,11:00,12:00,CrossFit Factory Boulogne Billancourt,CROSSFIT,Celia  Longeagne ,12,10,True,2026-11-14 01:38
+2026-11-11,Mercredi,11:00,12:00,Crossfit Factory 92,Crossfit,Salma Mahdoub,16,11,True,2026-11-14 01:38
+2026-11-11,Mercredi,11:00,12:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,6,True,2026-11-14 01:38
+2026-11-11,Mercredi,12:00,13:00,CrossFit Factory Boulogne Billancourt,CROSSFIT,Celia  Longeagne ,12,7,True,2026-11-14 01:38
+2026-11-11,Mercredi,12:00,13:00,Crossfit Factory 92,Weightlifting,Seb Ladoul,14,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,12:15,13:15,Salle 1 (1er salle),HYROX,Mikael Ducrot,14,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,12:30,13:30,Salle 2 (salle du fond),CROSSFIT,Marie Bach,12,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,13:00,14:00,Crossfit Factory 92,Crossfit,Patrick Kim,16,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,17:30,19:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,17:30,19:00,Crossfit factory Boulogne-Billancourt,OPEN GYM,Accueil Factory Boulogne,6,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,18:00,19:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,18:00,19:00,Salle 1 (1er salle),CROSSFIT,Seb Ladoul,12,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,19:00,20:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,19:00,20:00,Salle 1 (1er salle),HYROX,Marie Bach,14,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,19:00,20:00,Salle 2 (salle du fond),CROSSFIT,Hanaé Vallet,12,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,20:00,21:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,20:00,21:00,Salle 1 (1er salle),HYROX,Marie Bach,14,0,True,2026-11-14 01:38
+2026-11-11,Mercredi,20:00,21:00,Salle 2 (salle du fond),CROSSFIT,Hanaé Vallet,12,0,True,2026-11-14 01:38
+2026-11-12,Jeudi,07:00,08:00,Crossfit Factory 92,Crossfit,Antoine !,16,15,True,2026-11-14 01:38
+2026-11-12,Jeudi,07:00,08:00,Salle 1 (1er salle),HYROX Matin,Patrick Kim,14,11,True,2026-11-14 01:38
+2026-11-12,Jeudi,08:00,09:00,Crossfit Factory 92,Crossfit,Antoine !,16,13,True,2026-11-14 01:38
+2026-11-12,Jeudi,08:00,09:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-14 01:38
+2026-11-12,Jeudi,10:00,11:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-14 01:38
+2026-11-12,Jeudi,11:00,12:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-14 01:38
+2026-11-12,Jeudi,12:00,13:00,Crossfit Factory 92,Crossfit,Seb Ladoul,16,15,True,2026-11-14 01:38
+2026-11-12,Jeudi,12:15,13:15,Salle 2 (salle du fond),CROSSFIT,Patrick Kim,12,12,True,2026-11-14 01:38
+2026-11-12,Jeudi,13:00,14:00,Crossfit Factory 92,Hyrox,Seb Ladoul,16,14,True,2026-11-14 01:38
+2026-11-12,Jeudi,17:00,18:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,4,True,2026-11-14 01:38
+2026-11-12,Jeudi,17:30,19:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-14 01:38
+2026-11-12,Jeudi,17:30,19:00,Crossfit factory Boulogne-Billancourt,OPEN GYM,Accueil Factory Boulogne,6,4,True,2026-11-14 01:38
+2026-11-12,Jeudi,18:00,19:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,11,True,2026-11-14 01:38
+2026-11-12,Jeudi,18:00,19:00,Salle 2 (salle du fond),CROSSFIT,Hanaé Vallet,12,9,True,2026-11-14 01:38
+2026-11-12,Jeudi,19:00,20:00,Crossfit Factory 92,Hyrox,Celia  Longeagne ,18,14,True,2026-11-14 01:38
+2026-11-12,Jeudi,19:00,20:00,Extérieur,RUNNING,Jerome FROGER,20,0,True,2026-11-14 01:38
+2026-11-12,Jeudi,19:00,19:45,Salle 2 (salle du fond),BURN,Hanaé Vallet,14,13,True,2026-11-14 01:38
+2026-11-12,Jeudi,20:00,21:00,Crossfit Factory 92,Crossfit,Celia  Longeagne ,16,13,True,2026-11-14 01:38
+2026-11-12,Jeudi,20:00,21:00,Salle 2 (salle du fond),CROSSFIT,Hanaé Vallet,12,9,True,2026-11-14 01:38
+2026-11-13,Vendredi,07:00,08:00,Crossfit Factory 92,Weightlifting,Elennick Johnson,14,11,True,2026-11-14 01:38
+2026-11-13,Vendredi,07:00,08:00,Salle 1 (1er salle),CROSSFIT Matin,Seb Ladoul,12,8,True,2026-11-14 01:38
+2026-11-13,Vendredi,08:00,09:00,Crossfit Factory 92,Weightlifting,Elennick Johnson,16,16,True,2026-11-14 01:38
+2026-11-13,Vendredi,08:00,09:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,1,True,2026-11-14 01:38
+2026-11-13,Vendredi,10:00,11:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,1,True,2026-11-14 01:38
+2026-11-13,Vendredi,11:00,12:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,2,True,2026-11-14 01:38
+2026-11-13,Vendredi,12:00,13:00,Crossfit Factory 92,Crossfit,Elennick Johnson,16,12,True,2026-11-14 01:38
+2026-11-13,Vendredi,12:00,13:00,Salle 2 (salle du fond),CROSSFIT,Celia  Longeagne ,12,0,True,2026-11-14 01:38
+2026-11-13,Vendredi,12:15,13:00,Salle 1 (1er salle),HYROX,Seb Ladoul,14,11,True,2026-11-14 01:38
+2026-11-13,Vendredi,13:00,14:00,Crossfit Factory 92,Hyrox,Elennick Johnson,16,14,True,2026-11-14 01:38
+2026-11-13,Vendredi,13:00,14:00,Salle 1 (1er salle),HYROX,Seb Ladoul,14,8,True,2026-11-14 01:38
+2026-11-13,Vendredi,17:00,18:00,Crossfit Factory 92,Crossfit,Sebastien Tardy,16,6,True,2026-11-14 01:38
+2026-11-13,Vendredi,17:30,19:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,True,2026-11-14 01:38
+2026-11-13,Vendredi,18:00,19:00,Crossfit Factory 92,Weightlifting,Sebastien Tardy,16,9,True,2026-11-14 01:38
+2026-11-13,Vendredi,18:00,19:00,Salle 1 (1er salle),HALTERO,Hanaé Vallet,12,12,True,2026-11-14 01:38
+2026-11-13,Vendredi,19:00,20:00,Crossfit Factory 92,Crossfit,Sebastien Tardy,16,13,True,2026-11-14 01:38
+2026-11-13,Vendredi,19:00,20:00,Salle 2 (salle du fond),CROSSFIT,Hanaé Vallet,12,11,True,2026-11-14 01:38
+2026-11-14,Samedi,09:00,10:00,Crossfit Factory 92,Team of 2,Patrick Kim,14,11,False,2026-11-14 01:38
+2026-11-14,Samedi,09:00,10:00,Salle 2 (salle du fond),CROSSFIT TEAM,Romain Landais,12,11,False,2026-11-14 01:38
+2026-11-14,Samedi,10:00,11:00,Crossfit Factory 92,Team of 2,Patrick Kim,16,13,False,2026-11-14 01:38
+2026-11-14,Samedi,10:00,11:00,Salle 2 (salle du fond),CROSSFIT TEAM,Romain Landais,12,10,False,2026-11-14 01:38
+2026-11-14,Samedi,11:00,12:00,Crossfit Factory 92,Hyrox,Patrick Kim,16,16,False,2026-11-14 01:38
+2026-11-14,Samedi,11:00,12:00,Salle 2 (salle du fond),CROSSFIT TEAM,Romain Landais,12,9,False,2026-11-14 01:38
+2026-11-14,Samedi,12:00,13:00,Crossfit Factory 92,Team of 2,Patrick Kim,18,15,False,2026-11-14 01:38
+2026-11-14,Samedi,12:00,13:00,Salle 1 (1er salle),HYROX,Romain Landais,14,6,False,2026-11-14 01:38
+2026-11-14,Samedi,13:30,14:30,Crossfit Factory 92,Yoga Vinyasa,lindsay moro,16,5,False,2026-11-14 01:38
+2026-11-16,Lundi,07:00,08:00,Crossfit Factory 92,Crossfit,Patrick Kim,16,15,False,2026-11-14 01:38
+2026-11-16,Lundi,07:00,08:00,Salle 1 (1er salle),CROSSFIT Matin,Celia  Longeagne ,12,5,False,2026-11-14 01:38
+2026-11-16,Lundi,08:00,09:00,Crossfit Factory 92,Gymnastics,Patrick Kim,16,7,False,2026-11-14 01:38
+2026-11-16,Lundi,08:00,09:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,False,2026-11-14 01:38
+2026-11-16,Lundi,10:00,11:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,False,2026-11-14 01:38
+2026-11-16,Lundi,11:00,12:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,False,2026-11-14 01:38
+2026-11-16,Lundi,12:00,13:00,Crossfit Factory 92,Gymnastics,Elennick Johnson,16,9,False,2026-11-14 01:38
+2026-11-16,Lundi,12:15,13:15,Salle 1 (1er salle),HYROX,Celia  Longeagne ,14,11,False,2026-11-14 01:38
+2026-11-16,Lundi,12:15,13:15,Salle 2 (salle du fond),CROSSFIT,Patrick Kim,12,12,False,2026-11-14 01:38
+2026-11-16,Lundi,13:00,14:00,Crossfit Factory 92,Crossfit,Elennick Johnson,16,7,False,2026-11-14 01:38
+2026-11-16,Lundi,17:00,18:00,Crossfit Factory 92,Crossfit,Seb Ladoul,16,3,False,2026-11-14 01:38
+2026-11-16,Lundi,17:30,19:00,Crossfit factory Boulogne-Billancourt,Open Gym,Accueil Factory Boulogne,6,0,False,2026-11-14 01:38
+2026-11-16,Lundi,17:30,19:00,Crossfit factory Boulogne-Billancourt,OPEN GYM,Accueil Factory Boulogne,6,6,False,2026-11-14 01:38
+2026-11-16,Lundi,18:00,19:00,Crossfit Factory 92,Gymnastics,Seb Ladoul,16,9,False,2026-11-14 01:38
+2026-11-16,Lundi,18:00,18:45,Salle 2 (salle du fond),BURN,Patrick Kim,14,5,False,2026-11-14 01:38
+2026-11-16,Lundi,19:00,20:00,Crossfit Factory 92,Crossfit,Seb Ladoul,18,18,False,2026-11-14 01:38
+2026-11-16,Lundi,19:00,20:00,Extérieur,RUNNING,Jerome FROGER,20,0,False,2026-11-14 01:38
+2026-11-16,Lundi,19:00,20:00,Salle 2 (salle du fond),CROSSFIT,Patrick Kim,12,12,False,2026-11-14 01:38
+2026-11-16,Lundi,20:00,21:00,Crossfit Factory 92,Hyrox,Seb Ladoul,18,14,False,2026-11-14 01:38
+2026-11-16,Lundi,20:00,21:00,Salle 1 (1er salle),HYROX,Celia  Longeagne ,14,12,False,2026-11-14 01:38
+2026-11-16,Lundi,20:00,21:00,Salle 2 (salle du fond),GYMASTIQUE,Patrick Kim,12,6,False,2026-11-14 01:38
