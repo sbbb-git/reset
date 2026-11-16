@@ -1,7 +1,27 @@
 {
- "avec_creneaux": 276,
- "couverture": "companies bsport 1 → 4800 (sur 8000), tour 0",
+ "avec_creneaux": 294,
+ "couverture": "companies bsport 1 → 5200 (sur 8000), tour 0",
  "enseignes": [
+  {
+   "company_id": "7100",
+   "cp": "93400",
+   "creneaux": true,
+   "enseigne": "Pilates Studio 82",
+   "lieux": [
+    {
+     "adresse": "12 Rue Kléber, 93400 Saint-Ouen-sur-Seine, France",
+     "cp": "93400",
+     "creneaux": true,
+     "lat": 48.9056574,
+     "lng": 2.333271,
+     "nom": "Pilates Studio 82",
+     "ville": "Saint-Ouen-sur-Seine"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-09",
+   "ville": "Saint-Ouen-sur-Seine"
+  },
   {
    "company_id": "7021",
    "cp": "92100",
@@ -818,6 +838,472 @@
    "ville": "Paris"
   },
   {
+   "company_id": "5181",
+   "cp": "75009",
+   "creneaux": true,
+   "enseigne": "Re-Set",
+   "lieux": [
+    {
+     "adresse": "5 Rue Laffitte, 75009 Paris, France",
+     "cp": "75009",
+     "creneaux": true,
+     "lat": 48.8722415,
+     "lng": 2.3372735,
+     "nom": "Re-Set",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5173",
+   "cp": "75017",
+   "creneaux": true,
+   "enseigne": "ALLURE Studio",
+   "lieux": [
+    {
+     "adresse": "22 Rue de Chazelles, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": true,
+     "lat": 48.8804498,
+     "lng": 2.3058013,
+     "nom": "ALLURE Studio",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5124",
+   "cp": "75012",
+   "creneaux": true,
+   "enseigne": "Studio Swell - Terre",
+   "lieux": [
+    {
+     "adresse": "15 Rue Saint-Nicolas, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": true,
+     "lat": 48.8511985,
+     "lng": 2.3742573,
+     "nom": "Studio Swell - Ciel",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "15 Rue Saint-Nicolas, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": true,
+     "lat": 48.8511985,
+     "lng": 2.3742573,
+     "nom": "Studio Swell - Terre",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5108",
+   "cp": "75015",
+   "creneaux": true,
+   "enseigne": "Pulse Studio",
+   "lieux": [
+    {
+     "adresse": "11 Rue Leriche, 75015 Paris, France",
+     "cp": "75015",
+     "creneaux": true,
+     "lat": 48.8355125,
+     "lng": 2.294772,
+     "nom": "Pulse Studio",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5090",
+   "cp": "75116",
+   "creneaux": true,
+   "enseigne": "Jumpman",
+   "lieux": [
+    {
+     "adresse": "2 Av. Alphand, 75116 Paris, France",
+     "cp": "75116",
+     "creneaux": true,
+     "lat": 48.8751002,
+     "lng": 2.2856926,
+     "nom": "Jumpman",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5052",
+   "cp": "75009",
+   "creneaux": true,
+   "enseigne": "Salle reformer",
+   "lieux": [
+    {
+     "adresse": "11 rue de Châteaudun , 75009 Paris, France",
+     "cp": "75009",
+     "creneaux": true,
+     "lat": 48.876471,
+     "lng": 2.3153815,
+     "nom": "Salle reformer",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "11 rue de Châteaudun , 75009 Paris, France",
+     "cp": "75009",
+     "creneaux": true,
+     "lat": 48.876471,
+     "lng": 2.3153815,
+     "nom": "Salle tapis",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "11 rue de Châteaudun , 75009 Paris, France",
+     "cp": "75009",
+     "creneaux": false,
+     "lat": 48.876471,
+     "lng": 2.3153815,
+     "nom": "Salle wellness",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 3,
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5051",
+   "cp": "94320",
+   "creneaux": true,
+   "enseigne": "Salle Lili Boréa",
+   "lieux": [
+    {
+     "adresse": "7 Rue Robert Laporte, 94320 Thiais, France",
+     "cp": "94320",
+     "creneaux": true,
+     "lat": 48.764574,
+     "lng": 2.3898283,
+     "nom": "Salle Bharani",
+     "ville": "Thiais"
+    },
+    {
+     "adresse": "7 Rue Robert Laporte, 94320 Thiais, France",
+     "cp": "94320",
+     "creneaux": true,
+     "lat": 48.764574,
+     "lng": 2.3898283,
+     "nom": "Salle Lili Boréa",
+     "ville": "Thiais"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-16",
+   "ville": "Thiais"
+  },
+  {
+   "company_id": "5040",
+   "cp": "75015",
+   "creneaux": true,
+   "enseigne": "Carré Montparnasse - 15ème 🟡",
+   "lieux": [
+    {
+     "adresse": "36 Rue du Départ, 75015 Paris, France",
+     "cp": "75015",
+     "creneaux": false,
+     "lat": 48.84163299999999,
+     "lng": 2.3219188,
+     "nom": "Carré Montparnasse - 15ème 🟡",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "23 Rue Taitbout, 75009 Paris, France",
+     "cp": "75009",
+     "creneaux": true,
+     "lat": 48.8731002,
+     "lng": 2.3350981,
+     "nom": "Club Haussmann- 9ème 🟣",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5032",
+   "cp": "75010",
+   "creneaux": true,
+   "enseigne": "Salle C - collective",
+   "lieux": [
+    {
+     "adresse": "53 Rue Albert Thomas, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": true,
+     "lat": 48.870575,
+     "lng": 2.361663,
+     "nom": "Salle A",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "53 Rue Albert Thomas, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": true,
+     "lat": 48.870575,
+     "lng": 2.361663,
+     "nom": "Salle B",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "53 Rue Albert Thomas, 75010 Paris, France",
+     "cp": "75010",
+     "creneaux": true,
+     "lat": 48.870575,
+     "lng": 2.361663,
+     "nom": "Salle C - collective",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 3,
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5022",
+   "cp": "94300",
+   "creneaux": true,
+   "enseigne": "Salle Machines Privé",
+   "lieux": [
+    {
+     "adresse": "9 Rue Georges Huchon, 94300 Vincennes, France",
+     "cp": "94300",
+     "creneaux": false,
+     "lat": 48.8476589,
+     "lng": 2.4214785,
+     "nom": "Portes ouvertes",
+     "ville": "Vincennes"
+    },
+    {
+     "adresse": "9 Rue Georges Huchon, 94300 Vincennes, France",
+     "cp": "94300",
+     "creneaux": true,
+     "lat": 48.84762,
+     "lng": 2.42158,
+     "nom": "Salle Machines",
+     "ville": "Vincennes"
+    },
+    {
+     "adresse": "9 Rue Georges Huchon, 94300 Vincennes, France",
+     "cp": "94300",
+     "creneaux": true,
+     "lat": 48.847521,
+     "lng": 2.421387,
+     "nom": "Salle Machines Privé",
+     "ville": "Vincennes"
+    },
+    {
+     "adresse": "9 Rue Georges Huchon, 94300 Vincennes, France",
+     "cp": "94300",
+     "creneaux": true,
+     "lat": 48.84762,
+     "lng": 2.42158,
+     "nom": "Salle Mats",
+     "ville": "Vincennes"
+    }
+   ],
+   "nb_lieux": 4,
+   "premier_vu": "2026-11-16",
+   "ville": "Vincennes"
+  },
+  {
+   "company_id": "5001",
+   "cp": "93290",
+   "creneaux": true,
+   "enseigne": "DIME PILATES TREMBLAY EN FRANCE",
+   "lieux": [
+    {
+     "adresse": "7 Rue de Flandre, 93290 Tremblay-en-France, France",
+     "cp": "93290",
+     "creneaux": true,
+     "lat": 48.94299480000001,
+     "lng": 2.571811,
+     "nom": "DIME PILATES TREMBLAY EN FRANCE",
+     "ville": "Tremblay-en-France"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-16",
+   "ville": "Tremblay-en-France"
+  },
+  {
+   "company_id": "4968",
+   "cp": "77550",
+   "creneaux": true,
+   "enseigne": "Formy Studio",
+   "lieux": [
+    {
+     "adresse": "33 Pl. du Souvenir, 77550 Moissy-Cramayel, France",
+     "cp": "77550",
+     "creneaux": true,
+     "lat": 48.6276064,
+     "lng": 2.5935505,
+     "nom": "Formy Studio",
+     "ville": "Moissy-Cramayel"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-16",
+   "ville": "Moissy-Cramayel"
+  },
+  {
+   "company_id": "4939",
+   "cp": "75011",
+   "creneaux": true,
+   "enseigne": "SALLE 1",
+   "lieux": [
+    {
+     "adresse": "4 bis Rue du Dahomey, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": true,
+     "lat": 48.8510657,
+     "lng": 2.3823511,
+     "nom": "SALLE 1",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "4 bis Rue du Dahomey, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": true,
+     "lat": 48.8510657,
+     "lng": 2.3823511,
+     "nom": "SALLE 2",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "4930",
+   "cp": "75004",
+   "creneaux": true,
+   "enseigne": "SALLE 2 MEZZANINE",
+   "lieux": [
+    {
+     "adresse": "11 Rue Pavée, 75004 Paris, France",
+     "cp": "75004",
+     "creneaux": true,
+     "lat": 48.856041,
+     "lng": 2.360367,
+     "nom": "SALLE 1 PRESTIGE",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "11 Rue Pavée, 75004 Paris, France",
+     "cp": "75004",
+     "creneaux": true,
+     "lat": 48.856041,
+     "lng": 2.360367,
+     "nom": "SALLE 2 MEZZANINE",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "4902",
+   "cp": "78100",
+   "creneaux": true,
+   "enseigne": "The New Me Studio SAINT-GERMAIN-EN-LAYE",
+   "lieux": [
+    {
+     "adresse": "4 Pl. du Marché Neuf, 78100 Saint-Germain-en-Laye, France",
+     "cp": "78100",
+     "creneaux": true,
+     "lat": 48.8981005,
+     "lng": 2.0888872,
+     "nom": "The New Me Studio SAINT-GERMAIN-EN-LAYE",
+     "ville": "Saint-Germain-en-Laye"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-16",
+   "ville": "Saint-Germain-en-Laye"
+  },
+  {
+   "company_id": "4870",
+   "cp": "94300",
+   "creneaux": true,
+   "enseigne": "Nava Pilates Studio",
+   "lieux": [
+    {
+     "adresse": "35 Rue Jean Moulin étage 2, 94300 Vincennes, France",
+     "cp": "94300",
+     "creneaux": true,
+     "lat": 48.8458774,
+     "lng": 2.4301326,
+     "nom": "Nava Pilates Studio",
+     "ville": "Vincennes"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-16",
+   "ville": "Vincennes"
+  },
+  {
+   "company_id": "4822",
+   "cp": "95230",
+   "creneaux": true,
+   "enseigne": "Reformer Corner",
+   "lieux": [
+    {
+     "adresse": "27 Av. du Général Leclerc, 95230 Soisy-sous-Montmorency, France",
+     "cp": "95230",
+     "creneaux": false,
+     "lat": 48.9802046,
+     "lng": 2.3029173,
+     "nom": "Private Corner",
+     "ville": "Soisy-sous-Montmorency"
+    },
+    {
+     "adresse": "27 Av. du Général Leclerc, 95230 Soisy-sous-Montmorency, France",
+     "cp": "95230",
+     "creneaux": true,
+     "lat": 48.9802046,
+     "lng": 2.3029173,
+     "nom": "Reformer Corner",
+     "ville": "Soisy-sous-Montmorency"
+    },
+    {
+     "adresse": "27 Av. du Général Leclerc, 95230 Soisy-sous-Montmorency, France",
+     "cp": "95230",
+     "creneaux": true,
+     "lat": 48.9802046,
+     "lng": 2.3029173,
+     "nom": "Team Corner",
+     "ville": "Soisy-sous-Montmorency"
+    }
+   ],
+   "nb_lieux": 3,
+   "premier_vu": "2026-11-16",
+   "ville": "Soisy-sous-Montmorency"
+  },
+  {
    "company_id": "4753",
    "cp": "92600",
    "creneaux": true,
@@ -829,7 +1315,25 @@
      "creneaux": true,
      "lat": 48.9085927,
      "lng": 2.285079,
-     "nom": "Asnières - cours privé",
+     "nom": "Asnières - Salle Reformer",
+     "ville": "Asnières-sur-Seine"
+    },
+    {
+     "adresse": "54 Av. de la Marne, 92600 Asnières-sur-Seine, France",
+     "cp": "92600",
+     "creneaux": true,
+     "lat": 48.9085927,
+     "lng": 2.285079,
+     "nom": "Asnières - Salle Mat",
+     "ville": "Asnières-sur-Seine"
+    },
+    {
+     "adresse": "54 Av. de la Marne, 92600 Asnières-sur-Seine, France",
+     "cp": "92600",
+     "creneaux": false,
+     "lat": 48.9085927,
+     "lng": 2.285079,
+     "nom": "Asnières - Salle de massage",
      "ville": "Asnières-sur-Seine"
     },
     {
@@ -847,34 +1351,25 @@
      "creneaux": false,
      "lat": 48.9085927,
      "lng": 2.285079,
-     "nom": "Asnières - Salle de massage",
-     "ville": "Asnières-sur-Seine"
-    },
-    {
-     "adresse": "54 Av. de la Marne, 92600 Asnières-sur-Seine, France",
-     "cp": "92600",
-     "creneaux": true,
-     "lat": 48.9085927,
-     "lng": 2.285079,
-     "nom": "Asnières - Salle Mat",
-     "ville": "Asnières-sur-Seine"
-    },
-    {
-     "adresse": "54 Av. de la Marne, 92600 Asnières-sur-Seine, France",
-     "cp": "92600",
-     "creneaux": true,
-     "lat": 48.9085927,
-     "lng": 2.285079,
-     "nom": "Asnières - Salle Reformer",
-     "ville": "Asnières-sur-Seine"
-    },
-    {
-     "adresse": "54 Av. de la Marne, 92600 Asnières-sur-Seine, France",
-     "cp": "92600",
-     "creneaux": false,
-     "lat": 48.9085927,
-     "lng": 2.285079,
      "nom": "Asnières - Sauna infrarouge",
+     "ville": "Asnières-sur-Seine"
+    },
+    {
+     "adresse": "54 Av. de la Marne, 92600 Asnières-sur-Seine, France",
+     "cp": "92600",
+     "creneaux": true,
+     "lat": 48.9085927,
+     "lng": 2.285079,
+     "nom": "Vybes - ateliers événementiels",
+     "ville": "Asnières-sur-Seine"
+    },
+    {
+     "adresse": "54 Av. de la Marne, 92600 Asnières-sur-Seine, France",
+     "cp": "92600",
+     "creneaux": true,
+     "lat": 48.9085927,
+     "lng": 2.285079,
+     "nom": "Asnières - cours privé",
      "ville": "Asnières-sur-Seine"
     },
     {
@@ -885,15 +1380,6 @@
      "lng": 2.2374067,
      "nom": "Puteaux - Reformer",
      "ville": "Puteaux"
-    },
-    {
-     "adresse": "54 Av. de la Marne, 92600 Asnières-sur-Seine, France",
-     "cp": "92600",
-     "creneaux": true,
-     "lat": 48.9085927,
-     "lng": 2.285079,
-     "nom": "Vybes - ateliers événementiels",
-     "ville": "Asnières-sur-Seine"
     }
    ],
    "nb_lieux": 8,
@@ -947,6 +1433,15 @@
     {
      "adresse": "128 Av. Mozart, 75016 Paris, France",
      "cp": "75016",
+     "creneaux": false,
+     "lat": 48.8494295,
+     "lng": 2.266291,
+     "nom": "Springboard et privés",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "128 Av. Mozart, 75016 Paris, France",
+     "cp": "75016",
      "creneaux": true,
      "lat": 48.8494295,
      "lng": 2.266291,
@@ -960,15 +1455,6 @@
      "lat": 48.8494295,
      "lng": 2.266291,
      "nom": "Salle de soins",
-     "ville": "Paris"
-    },
-    {
-     "adresse": "128 Av. Mozart, 75016 Paris, France",
-     "cp": "75016",
-     "creneaux": false,
-     "lat": 48.8494295,
-     "lng": 2.266291,
-     "nom": "Springboard et privés",
      "ville": "Paris"
     }
    ],
@@ -1152,6 +1638,15 @@
     {
      "adresse": "12 Rue Baudin, 92400 Courbevoie, France",
      "cp": "92400",
+     "creneaux": true,
+     "lat": 48.89609369999999,
+     "lng": 2.2527015,
+     "nom": "Respire Club - Salle 2",
+     "ville": "Courbevoie"
+    },
+    {
+     "adresse": "12 Rue Baudin, 92400 Courbevoie, France",
+     "cp": "92400",
      "creneaux": false,
      "lat": 48.89529700000001,
      "lng": 2.251941,
@@ -1166,15 +1661,6 @@
      "lng": 2.2527015,
      "nom": "Respire Club - Fauteuil 2",
      "ville": "Courbevoie"
-    },
-    {
-     "adresse": "12 Rue Baudin, 92400 Courbevoie, France",
-     "cp": "92400",
-     "creneaux": true,
-     "lat": 48.89609369999999,
-     "lng": 2.2527015,
-     "nom": "Respire Club - Salle 2",
-     "ville": "Courbevoie"
     }
    ],
    "nb_lieux": 4,
@@ -1183,18 +1669,18 @@
   },
   {
    "company_id": "4608",
-   "cp": "91080",
+   "cp": "91280",
    "creneaux": true,
    "enseigne": "The Club (salle Reformer)",
    "lieux": [
     {
-     "adresse": "4 Av. du Bois de l'Épine, 91080 Évry-Courcouronnes, France",
-     "cp": "91080",
-     "creneaux": false,
-     "lat": 48.6269376,
-     "lng": 2.4067973,
-     "nom": "ACE PADEL",
-     "ville": "Évry-Courcouronnes"
+     "adresse": "30 rue Clément Ader, 91280 Saint-Pierre-du-Perray, France",
+     "cp": "91280",
+     "creneaux": true,
+     "lat": 48.6265361,
+     "lng": 2.5151457,
+     "nom": "The Club (Salle Tapis)",
+     "ville": "Saint-Pierre-du-Perray"
     },
     {
      "adresse": "30 rue Clément Ader, 91280 Saint-Pierre-du-Perray, France",
@@ -1208,41 +1694,32 @@
     {
      "adresse": "30 rue Clément Ader, 91280 Saint-Pierre-du-Perray, France",
      "cp": "91280",
-     "creneaux": true,
-     "lat": 48.6265361,
-     "lng": 2.5151457,
-     "nom": "The Club (Salle Tapis)",
-     "ville": "Saint-Pierre-du-Perray"
-    },
-    {
-     "adresse": "30 rue Clément Ader, 91280 Saint-Pierre-du-Perray, France",
-     "cp": "91280",
      "creneaux": false,
      "lat": 48.6265361,
      "lng": 2.5151457,
      "nom": "The Club (Sunday Flow)",
      "ville": "Saint-Pierre-du-Perray"
+    },
+    {
+     "adresse": "4 Av. du Bois de l'Épine, 91080 Évry-Courcouronnes, France",
+     "cp": "91080",
+     "creneaux": false,
+     "lat": 48.6269376,
+     "lng": 2.4067973,
+     "nom": "ACE PADEL",
+     "ville": "Évry-Courcouronnes"
     }
    ],
    "nb_lieux": 4,
    "premier_vu": "2026-11-09",
-   "ville": "Évry-Courcouronnes"
+   "ville": "Saint-Pierre-du-Perray"
   },
   {
    "company_id": "4587",
-   "cp": "78230",
+   "cp": "95320",
    "creneaux": true,
-   "enseigne": "Redeem Reformer – Le Pecq",
+   "enseigne": "Redeem Saint-Leu-la-Forêt",
    "lieux": [
-    {
-     "adresse": "62 Bis Av. du Général Leclerc, 78230 Le Pecq, France",
-     "cp": "78230",
-     "creneaux": true,
-     "lat": 48.8921444,
-     "lng": 2.1002012,
-     "nom": "Redeem Reformer – Le Pecq",
-     "ville": "Le Pecq"
-    },
     {
      "adresse": "6 Rue Jules Verne, 95320 Saint-Leu-la-Forêt, France",
      "cp": "95320",
@@ -1251,18 +1728,36 @@
      "lng": 2.2506345,
      "nom": "Redeem Saint-Leu-la-Forêt",
      "ville": "Saint-Leu-la-Forêt"
+    },
+    {
+     "adresse": "62 Bis Av. du Général Leclerc, 78230 Le Pecq, France",
+     "cp": "78230",
+     "creneaux": true,
+     "lat": 48.8921444,
+     "lng": 2.1002012,
+     "nom": "Redeem Reformer – Le Pecq",
+     "ville": "Le Pecq"
     }
    ],
    "nb_lieux": 2,
    "premier_vu": "2026-11-09",
-   "ville": "Le Pecq"
+   "ville": "Saint-Leu-la-Forêt"
   },
   {
    "company_id": "4576",
-   "cp": "75014",
+   "cp": "92330",
    "creneaux": true,
    "enseigne": "STUDIO MLM PILATES",
    "lieux": [
+    {
+     "adresse": "10 Av. de Camberwell, 92330 Sceaux, France",
+     "cp": "92330",
+     "creneaux": true,
+     "lat": 48.7787073,
+     "lng": 2.2935552,
+     "nom": "STUDIO MLM PILATES",
+     "ville": "Sceaux"
+    },
     {
      "adresse": "59 Rue Sarrette, 75014 Paris, France",
      "cp": "75014",
@@ -1280,20 +1775,11 @@
      "lng": 2.33986,
      "nom": "Parc MONTSOURIS",
      "ville": "Paris"
-    },
-    {
-     "adresse": "10 Av. de Camberwell, 92330 Sceaux, France",
-     "cp": "92330",
-     "creneaux": true,
-     "lat": 48.7787073,
-     "lng": 2.2935552,
-     "nom": "STUDIO MLM PILATES",
-     "ville": "Sceaux"
     }
    ],
    "nb_lieux": 3,
    "premier_vu": "2026-11-09",
-   "ville": "Paris"
+   "ville": "Sceaux"
   },
   {
    "company_id": "4567",
@@ -1347,24 +1833,6 @@
      "creneaux": false,
      "lat": 48.85174929999999,
      "lng": 2.4022639,
-     "nom": "Cabinet Bien-Être",
-     "ville": "Paris"
-    },
-    {
-     "adresse": "42 Rue d'Avron, 75020 Paris, France",
-     "cp": "75020",
-     "creneaux": false,
-     "lat": 48.85174929999999,
-     "lng": 2.4022639,
-     "nom": "MBO: POLE DANCE PARIS",
-     "ville": "Paris"
-    },
-    {
-     "adresse": "42 Rue d'Avron, 75020 Paris, France",
-     "cp": "75020",
-     "creneaux": false,
-     "lat": 48.85174929999999,
-     "lng": 2.4022639,
      "nom": "Pole Dance Paris",
      "ville": "Paris"
     },
@@ -1394,6 +1862,24 @@
      "lng": 2.4022639,
      "nom": "Salle 3 Fawnia",
      "ville": "Paris"
+    },
+    {
+     "adresse": "42 Rue d'Avron, 75020 Paris, France",
+     "cp": "75020",
+     "creneaux": false,
+     "lat": 48.85174929999999,
+     "lng": 2.4022639,
+     "nom": "MBO: POLE DANCE PARIS",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "42 Rue d'Avron, 75020 Paris, France",
+     "cp": "75020",
+     "creneaux": false,
+     "lat": 48.85174929999999,
+     "lng": 2.4022639,
+     "nom": "Cabinet Bien-Être",
+     "ville": "Paris"
     }
    ],
    "nb_lieux": 6,
@@ -1421,7 +1907,7 @@
      "creneaux": true,
      "lat": 48.84654159999999,
      "lng": 2.2347757,
-     "nom": "LABO",
+     "nom": "LUNA",
      "ville": "Boulogne-Billancourt"
     },
     {
@@ -1430,7 +1916,7 @@
      "creneaux": true,
      "lat": 48.84654159999999,
      "lng": 2.2347757,
-     "nom": "LUNA",
+     "nom": "LABO",
      "ville": "Boulogne-Billancourt"
     }
    ],
@@ -1440,19 +1926,10 @@
   },
   {
    "company_id": "4515",
-   "cp": "92600",
+   "cp": "92770",
    "creneaux": true,
    "enseigne": "Core Society - Salle Reformer",
    "lieux": [
-    {
-     "adresse": "23 Rue des Bourguignons, 92600 Bois-Colombes, France",
-     "cp": "92600",
-     "creneaux": false,
-     "lat": 48.9124722,
-     "lng": 2.2721354,
-     "nom": "Core Society - Lounge",
-     "ville": "Bois-Colombes"
-    },
     {
      "adresse": "23 Rue des Bourguignons, 92770 Bois-Colombes, France",
      "cp": "92770",
@@ -1460,6 +1937,15 @@
      "lat": 48.9124807,
      "lng": 2.2721819,
      "nom": "Core Society - Salle Reformer",
+     "ville": "Bois-Colombes"
+    },
+    {
+     "adresse": "23 Rue des Bourguignons, 92600 Bois-Colombes, France",
+     "cp": "92600",
+     "creneaux": false,
+     "lat": 48.9124722,
+     "lng": 2.2721354,
+     "nom": "Core Society - Lounge",
      "ville": "Bois-Colombes"
     },
     {
@@ -1485,19 +1971,19 @@
     {
      "adresse": "23 Rue de Cléry, 75002 Paris, France",
      "cp": "75002",
-     "creneaux": false,
+     "creneaux": true,
      "lat": 48.8682394,
      "lng": 2.3466174,
-     "nom": "R.ECOVERY Room",
+     "nom": "R.EVE",
      "ville": "Paris"
     },
     {
      "adresse": "23 Rue de Cléry, 75002 Paris, France",
      "cp": "75002",
-     "creneaux": true,
+     "creneaux": false,
      "lat": 48.8682394,
      "lng": 2.3466174,
-     "nom": "R.EVE",
+     "nom": "R.ECOVERY Room",
      "ville": "Paris"
     }
    ],
@@ -11463,24 +11949,44 @@
    "ville": "A domicile"
   },
   {
-   "company_id": "7100",
-   "cp": "93400",
+   "company_id": "7124",
+   "cp": "75015",
    "creneaux": false,
-   "enseigne": "Pilates Studio 82",
+   "enseigne": "Studio Polina",
    "lieux": [
     {
-     "adresse": "12 Rue Kléber, 93400 Saint-Ouen-sur-Seine, France",
-     "cp": "93400",
+     "adresse": "177 Rue Lecourbe, 75015 Paris, France",
+     "cp": "75015",
      "creneaux": false,
-     "lat": 48.9056574,
-     "lng": 2.333271,
-     "nom": "Pilates Studio 82",
-     "ville": "Saint-Ouen-sur-Seine"
+     "lat": 48.8406573,
+     "lng": 2.297252,
+     "nom": "Studio Polina",
+     "ville": "Paris"
     }
    ],
    "nb_lieux": 1,
-   "premier_vu": "2026-11-09",
-   "ville": "Saint-Ouen-sur-Seine"
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "7118",
+   "cp": "78990",
+   "creneaux": false,
+   "enseigne": "Elancourt 78",
+   "lieux": [
+    {
+     "adresse": "Rue du Chemin aux Bœufs, 78990 Élancourt, France",
+     "cp": "78990",
+     "creneaux": false,
+     "lat": 48.766833,
+     "lng": 1.948435,
+     "nom": "Elancourt 78",
+     "ville": "Élancourt"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-16",
+   "ville": "Élancourt"
   },
   {
    "company_id": "6962",
@@ -11893,6 +12399,55 @@
    "ville": "Paris"
   },
   {
+   "company_id": "4992",
+   "cp": "75012",
+   "creneaux": false,
+   "enseigne": "Station Forme",
+   "lieux": [
+    {
+     "adresse": "34B Rue de Wattignies, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": false,
+     "lat": 48.83576980000001,
+     "lng": 2.3956453,
+     "nom": "Station Forme",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-16",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "4832",
+   "cp": "93100",
+   "creneaux": false,
+   "enseigne": "Studio 1",
+   "lieux": [
+    {
+     "adresse": "19 Rue Garibaldi, 93100 Montreuil, France",
+     "cp": "93100",
+     "creneaux": false,
+     "lat": 48.8554232,
+     "lng": 2.427043,
+     "nom": "Studio 1",
+     "ville": "Montreuil"
+    },
+    {
+     "adresse": "19 Rue Garibaldi, 93100 Montreuil, France",
+     "cp": "93100",
+     "creneaux": false,
+     "lat": 48.8554232,
+     "lng": 2.427043,
+     "nom": "Studio 2",
+     "ville": "Montreuil"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-16",
+   "ville": "Montreuil"
+  },
+  {
    "company_id": "4661",
    "cp": "78121",
    "creneaux": false,
@@ -11917,21 +12472,21 @@
      "ville": "Thiverval-Grignon"
     },
     {
-     "adresse": "38 Rue de la Martinière, 78000 Versailles, France",
-     "cp": "78000",
-     "creneaux": false,
-     "lat": 48.78152840000001,
-     "lng": 2.1151759,
-     "nom": "78 - Satory Camps Militaire",
-     "ville": "Versailles"
-    },
-    {
      "adresse": "7 Rue Léon Gatin, 78000 Versailles, France",
      "cp": "78000",
      "creneaux": false,
      "lat": 48.8029666,
      "lng": 2.1405666,
      "nom": "Montberon",
+     "ville": "Versailles"
+    },
+    {
+     "adresse": "38 Rue de la Martinière, 78000 Versailles, France",
+     "cp": "78000",
+     "creneaux": false,
+     "lat": 48.78152840000001,
+     "lng": 2.1151759,
+     "nom": "78 - Satory Camps Militaire",
      "ville": "Versailles"
     }
    ],
@@ -12021,10 +12576,19 @@
   },
   {
    "company_id": "4459",
-   "cp": "75014",
+   "cp": "92330",
    "creneaux": false,
    "enseigne": "STUDIO MLM PILATES",
    "lieux": [
+    {
+     "adresse": "10 Av. de Camberwell, 92330 Sceaux, France",
+     "cp": "92330",
+     "creneaux": false,
+     "lat": 48.7787073,
+     "lng": 2.2935552,
+     "nom": "STUDIO MLM PILATES",
+     "ville": "Sceaux"
+    },
     {
      "adresse": "59 rue Sarrette, 75014 Paris, France",
      "cp": "75014",
@@ -12042,45 +12606,18 @@
      "lng": 2.3748072,
      "nom": "DTM",
      "ville": "Paris"
-    },
-    {
-     "adresse": "10 Av. de Camberwell, 92330 Sceaux, France",
-     "cp": "92330",
-     "creneaux": false,
-     "lat": 48.7787073,
-     "lng": 2.2935552,
-     "nom": "STUDIO MLM PILATES",
-     "ville": "Sceaux"
     }
    ],
    "nb_lieux": 3,
    "premier_vu": "2026-11-09",
-   "ville": "Paris"
+   "ville": "Sceaux"
   },
   {
    "company_id": "4447",
-   "cp": "75012",
+   "cp": "75013",
    "creneaux": false,
    "enseigne": "Paris 12 - Ledru-Rollin",
    "lieux": [
-    {
-     "adresse": "8 R. de Prague, 75012 Paris, France",
-     "cp": "75012",
-     "creneaux": false,
-     "lat": 48.8496918,
-     "lng": 2.3761462,
-     "nom": "Paris 12 - Ledru-Rollin",
-     "ville": "Paris"
-    },
-    {
-     "adresse": "16 A Bd de Reuilly, 75012 Paris, France",
-     "cp": "75012",
-     "creneaux": false,
-     "lat": 48.8385427,
-     "lng": 2.3917753,
-     "nom": "Paris 12 - Re-Corps",
-     "ville": "Paris"
-    },
     {
      "adresse": "20 Rue Charles Fourier, 75013 Paris, France",
      "cp": "75013",
@@ -12091,12 +12628,30 @@
      "ville": "Paris"
     },
     {
+     "adresse": "8 R. de Prague, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": false,
+     "lat": 48.8496918,
+     "lng": 2.3761462,
+     "nom": "Paris 12 - Ledru-Rollin",
+     "ville": "Paris"
+    },
+    {
      "adresse": "23 Rue de la Sourdière, 75001 Paris, France",
      "cp": "75001",
      "creneaux": false,
      "lat": 48.8664821,
      "lng": 2.3324351,
      "nom": "Paris 1er - Pyramide",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "16 A Bd de Reuilly, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": false,
+     "lat": 48.8385427,
+     "lng": 2.3917753,
+     "nom": "Paris 12 - Re-Corps",
      "ville": "Paris"
     }
    ],
@@ -20023,7 +20578,7 @@
    "ville": "Paris"
   }
  ],
- "enseignes_non_suivies": 506,
- "genere": "2026-11-09 13:59",
- "total_idf_recenses": 2291
+ "enseignes_non_suivies": 527,
+ "genere": "2026-11-16 13:44",
+ "total_idf_recenses": 2340
 }
