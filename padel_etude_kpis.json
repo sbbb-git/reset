@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T07:47:55.785467",
+ "generated_at": "2026-11-16T18:09:23.562174",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,11 +9,11 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 69708,
-   "doinsport": 5837,
-   "urbanpadel": 6504
+   "anybuddy": 75477,
+   "doinsport": 6095,
+   "urbanpadel": 6568
   },
-  "n_sessions_live": 82049,
+  "n_sessions_live": 88140,
   "n_sessions_history": 1049371,
   "pop_idf": 12258660
  },
@@ -26,7 +26,7 @@
    "revenu_median_uc": 30750,
    "clubs_padel": 30,
    "hab_par_club": 70088,
-   "prix_median_90min": 81.0
+   "prix_median_90min": 80.0
   },
   "77": {
    "nom": "Seine-et-Marne",
@@ -66,7 +66,7 @@
    "revenu_median_uc": 29710,
    "clubs_padel": 12,
    "hab_par_club": 134553,
-   "prix_median_90min": 72
+   "prix_median_90min": 75.0
   },
   "93": {
    "nom": "Seine-Saint-Denis",
