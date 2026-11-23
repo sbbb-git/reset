@@ -1,7 +1,27 @@
 {
- "avec_creneaux": 294,
- "couverture": "companies bsport 1 → 5200 (sur 8000), tour 0",
+ "avec_creneaux": 318,
+ "couverture": "companies bsport 1 → 5600 (sur 8000), tour 0",
  "enseignes": [
+  {
+   "company_id": "7118",
+   "cp": "78990",
+   "creneaux": true,
+   "enseigne": "Elancourt 78",
+   "lieux": [
+    {
+     "adresse": "Rue du Chemin aux Bœufs, 78990 Élancourt, France",
+     "cp": "78990",
+     "creneaux": true,
+     "lat": 48.766833,
+     "lng": 1.948435,
+     "nom": "Elancourt 78",
+     "ville": "Élancourt"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-16",
+   "ville": "Élancourt"
+  },
   {
    "company_id": "7100",
    "cp": "93400",
@@ -838,6 +858,637 @@
    "ville": "Paris"
   },
   {
+   "company_id": "5600",
+   "cp": "75012",
+   "creneaux": true,
+   "enseigne": "GAIA CLUB BASTILLE",
+   "lieux": [
+    {
+     "adresse": "79 Av. Ledru Rollin, 75012 Paris, France",
+     "cp": "75012",
+     "creneaux": true,
+     "lat": 48.8505538,
+     "lng": 2.3750281,
+     "nom": "GAIA CLUB BASTILLE",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5593",
+   "cp": "95340",
+   "creneaux": true,
+   "enseigne": "L'Atelier Puls'Action",
+   "lieux": [
+    {
+     "adresse": "20 Rue Abel Gance, 95340 Bernes-sur-Oise, France",
+     "cp": "95340",
+     "creneaux": true,
+     "lat": 49.163203,
+     "lng": 2.2957725,
+     "nom": "L'Atelier Puls'Action",
+     "ville": "Bernes-sur-Oise"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Bernes-sur-Oise"
+  },
+  {
+   "company_id": "5587",
+   "cp": "75002",
+   "creneaux": true,
+   "enseigne": "Recovery Room",
+   "lieux": [
+    {
+     "adresse": "8 Rue d'Uzès, 75002 Paris, France",
+     "cp": "75002",
+     "creneaux": true,
+     "lat": 48.8706784,
+     "lng": 2.3445068,
+     "nom": "Hot Room",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "8 Rue d'Uzès, 75002 Paris, France",
+     "cp": "75002",
+     "creneaux": false,
+     "lat": 48.8706784,
+     "lng": 2.3445068,
+     "nom": "Recovery Room",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5569",
+   "cp": "75017",
+   "creneaux": true,
+   "enseigne": "HELLVEN",
+   "lieux": [
+    {
+     "adresse": "17 Rue Lebon, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": true,
+     "lat": 48.88123119999999,
+     "lng": 2.2915293,
+     "nom": "HELLVEN",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5560",
+   "cp": "92500",
+   "creneaux": true,
+   "enseigne": "PILATES AU SOL/YOGA",
+   "lieux": [
+    {
+     "adresse": "124 Av. Paul Doumer, 92500 Rueil-Malmaison, France",
+     "cp": "92500",
+     "creneaux": false,
+     "lat": 48.8811617,
+     "lng": 2.1835726,
+     "nom": "INFRABIKE",
+     "ville": "Rueil-Malmaison"
+    },
+    {
+     "adresse": "124 Av. Paul Doumer, 92500 Rueil-Malmaison, France",
+     "cp": "92500",
+     "creneaux": true,
+     "lat": 48.8811617,
+     "lng": 2.1835726,
+     "nom": "PILATES AU SOL/YOGA",
+     "ville": "Rueil-Malmaison"
+    },
+    {
+     "adresse": "124 Av. Paul Doumer, 92500 Rueil-Malmaison, France",
+     "cp": "92500",
+     "creneaux": false,
+     "lat": 48.8811617,
+     "lng": 2.1835726,
+     "nom": "PILATES REFORMER",
+     "ville": "Rueil-Malmaison"
+    }
+   ],
+   "nb_lieux": 3,
+   "premier_vu": "2026-11-23",
+   "ville": "Rueil-Malmaison"
+  },
+  {
+   "company_id": "5527",
+   "cp": "94100",
+   "creneaux": true,
+   "enseigne": "Studio Madame Pilates",
+   "lieux": [
+    {
+     "adresse": "1 Imp. Malaquais, 94100 Saint-Maur-des-Fossés, France",
+     "cp": "94100",
+     "creneaux": true,
+     "lat": 48.8120036,
+     "lng": 2.4722621,
+     "nom": "Studio Madame Pilates",
+     "ville": "Saint-Maur-des-Fossés"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Saint-Maur-des-Fossés"
+  },
+  {
+   "company_id": "5518",
+   "cp": "75116",
+   "creneaux": true,
+   "enseigne": "PULSE CLUB PARIS",
+   "lieux": [
+    {
+     "adresse": "104 Rue Lauriston, 75116 Paris, France",
+     "cp": "75116",
+     "creneaux": true,
+     "lat": 48.8666305,
+     "lng": 2.2868117,
+     "nom": "PULSE CLUB PARIS",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5482",
+   "cp": "92140",
+   "creneaux": true,
+   "enseigne": "Flemme",
+   "lieux": [
+    {
+     "adresse": "35 avenue Jean Jaurès, 92140 Clamart, France",
+     "cp": "92140",
+     "creneaux": true,
+     "lat": 48.8023371,
+     "lng": 2.2648393,
+     "nom": "Flemme",
+     "ville": "Clamart"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Clamart"
+  },
+  {
+   "company_id": "5481",
+   "cp": "92700",
+   "creneaux": true,
+   "enseigne": "Selini Reformer",
+   "lieux": [
+    {
+     "adresse": "43 Rue Felix Faure, 92700 Colombes, France",
+     "cp": "92700",
+     "creneaux": true,
+     "lat": 48.87194853405826,
+     "lng": 2.258377075195313,
+     "nom": "Selini Reformer",
+     "ville": "Colombes"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Colombes"
+  },
+  {
+   "company_id": "5466",
+   "cp": "92100",
+   "creneaux": true,
+   "enseigne": "BELLY STUDIO - BOULOGNE",
+   "lieux": [
+    {
+     "adresse": "1 Rue des Princes, 92100 Boulogne-Billancourt, France",
+     "cp": "92100",
+     "creneaux": true,
+     "lat": 48.8391695,
+     "lng": 2.2508838,
+     "nom": "BELLY STUDIO - BOULOGNE",
+     "ville": "Boulogne-Billancourt"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Boulogne-Billancourt"
+  },
+  {
+   "company_id": "5463",
+   "cp": "94210",
+   "creneaux": true,
+   "enseigne": "STUDIO ON-OFF",
+   "lieux": [
+    {
+     "adresse": "13 Rue Saint-Hilaire, 94210 Saint-Maur-des-Fossés, France",
+     "cp": "94210",
+     "creneaux": true,
+     "lat": 48.7923754,
+     "lng": 2.5141196,
+     "nom": "STUDIO ON-OFF",
+     "ville": "Saint-Maur-des-Fossés"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Saint-Maur-des-Fossés"
+  },
+  {
+   "company_id": "5458",
+   "cp": "75017",
+   "creneaux": true,
+   "enseigne": "BELLY STUDIO - PARIS 17e",
+   "lieux": [
+    {
+     "adresse": "11 Av. Stéphane Mallarmé, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": true,
+     "lat": 48.8864883,
+     "lng": 2.2933199,
+     "nom": "BELLY STUDIO - PARIS 17e",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5450",
+   "cp": "92350",
+   "creneaux": true,
+   "enseigne": "Espace BIEN-ÊTRE PRIVATIF",
+   "lieux": [
+    {
+     "adresse": "18 Rue des Sources, 92350 Le Plessis-Robinson, France",
+     "cp": "92350",
+     "creneaux": false,
+     "lat": 48.7844384,
+     "lng": 2.2781587,
+     "nom": "Espace BIEN-ÊTRE PRIVATIF",
+     "ville": "Le Plessis-Robinson"
+    },
+    {
+     "adresse": "18 Rue des Sources, 92350 Le Plessis-Robinson, France",
+     "cp": "92350",
+     "creneaux": false,
+     "lat": 48.7844384,
+     "lng": 2.2781587,
+     "nom": "Espace PADEL",
+     "ville": "Le Plessis-Robinson"
+    },
+    {
+     "adresse": "18 Rue des Sources, 92350 Le Plessis-Robinson, France",
+     "cp": "92350",
+     "creneaux": false,
+     "lat": 48.7844384,
+     "lng": 2.2781587,
+     "nom": "Espace PILATES MAT",
+     "ville": "Le Plessis-Robinson"
+    },
+    {
+     "adresse": "18 Rue des Sources, 92350 Le Plessis-Robinson, France",
+     "cp": "92350",
+     "creneaux": true,
+     "lat": 48.7844384,
+     "lng": 2.2781587,
+     "nom": "Espace REFORMER",
+     "ville": "Le Plessis-Robinson"
+    },
+    {
+     "adresse": "18 Rue des Sources, 92350 Le Plessis-Robinson, France",
+     "cp": "92350",
+     "creneaux": false,
+     "lat": 48.7844384,
+     "lng": 2.2781587,
+     "nom": "Espace TRAINING",
+     "ville": "Le Plessis-Robinson"
+    }
+   ],
+   "nb_lieux": 5,
+   "premier_vu": "2026-11-23",
+   "ville": "Le Plessis-Robinson"
+  },
+  {
+   "company_id": "5434",
+   "cp": "75011",
+   "creneaux": true,
+   "enseigne": "ATHLETX REBEL REPUBLIQUE",
+   "lieux": [
+    {
+     "adresse": "8 Rue Édouard-Lockroy, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": true,
+     "lat": 48.8659338,
+     "lng": 2.3749207,
+     "nom": "ATHLETX REBEL REPUBLIQUE",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "8 Rue Édouard-Lockroy, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": false,
+     "lat": 48.8659338,
+     "lng": 2.3749207,
+     "nom": "ATHLETX X RE-SET",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "8 rue Édouard-Lockroy, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": true,
+     "lat": 48.888656313750616,
+     "lng": 2.3785400390625004,
+     "nom": "STUDIO BOOTCAMP",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "8 Rue Édouard-Lockroy, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": true,
+     "lat": 48.8659338,
+     "lng": 2.3749207,
+     "nom": "STUDIO REFORMER",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "8 Rue Édouard-Lockroy, 75011 Paris, France",
+     "cp": "75011",
+     "creneaux": true,
+     "lat": 48.8659338,
+     "lng": 2.3749207,
+     "nom": "STUDIO TOTAL HYROX",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 5,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5424",
+   "cp": "75008",
+   "creneaux": true,
+   "enseigne": "BELLY STUDIO - PARIS 8e",
+   "lieux": [
+    {
+     "adresse": "9 Rue Clapeyron, 75008 Paris, France",
+     "cp": "75008",
+     "creneaux": true,
+     "lat": 48.88155099999999,
+     "lng": 2.3239979,
+     "nom": "BELLY STUDIO - PARIS 8e",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5409",
+   "cp": "75008",
+   "creneaux": true,
+   "enseigne": "SHOW YOU",
+   "lieux": [
+    {
+     "adresse": "67 Rue Pierre Charron, 75008 Paris, France",
+     "cp": "75008",
+     "creneaux": true,
+     "lat": 48.8701941,
+     "lng": 2.3044008,
+     "nom": "SHOW YOU",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5350",
+   "cp": "75008",
+   "creneaux": true,
+   "enseigne": "75 - Paris Monceau",
+   "lieux": [
+    {
+     "adresse": "76 Bd Malesherbes, 75008 Paris, France",
+     "cp": "75008",
+     "creneaux": true,
+     "lat": 48.8793891,
+     "lng": 2.3148738,
+     "nom": "75 - Paris Monceau",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5330",
+   "cp": "94140",
+   "creneaux": true,
+   "enseigne": "Plateau Collectif",
+   "lieux": [
+    {
+     "adresse": "20 Rue Paul Vaillant Couturier, 94140 Alfortville, France",
+     "cp": "94140",
+     "creneaux": true,
+     "lat": 48.8143592,
+     "lng": 2.4152614,
+     "nom": "Coaching privé",
+     "ville": "Alfortville"
+    },
+    {
+     "adresse": "20 Rue Paul Vaillant Couturier, 94140 Alfortville, France",
+     "cp": "94140",
+     "creneaux": true,
+     "lat": 48.8143592,
+     "lng": 2.4152614,
+     "nom": "Plateau Collectif",
+     "ville": "Alfortville"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-23",
+   "ville": "Alfortville"
+  },
+  {
+   "company_id": "5324",
+   "cp": "78600",
+   "creneaux": true,
+   "enseigne": "YOGA EN PLEIN AIR",
+   "lieux": [
+    {
+     "adresse": "3 Bis Rue de Solférino, 78600 Maisons-Laffitte, France",
+     "cp": "78600",
+     "creneaux": true,
+     "lat": 48.946329,
+     "lng": 2.148556,
+     "nom": "Taraka yoga",
+     "ville": "Maisons-Laffitte"
+    },
+    {
+     "adresse": "10 Pl. Marine, 78600 Maisons-Laffitte, France",
+     "cp": "78600",
+     "creneaux": false,
+     "lat": 48.95281199999999,
+     "lng": 2.143647,
+     "nom": "YOGA EN PLEIN AIR",
+     "ville": "Maisons-Laffitte"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-23",
+   "ville": "Maisons-Laffitte"
+  },
+  {
+   "company_id": "5321",
+   "cp": "75015",
+   "creneaux": true,
+   "enseigne": "Oh My Pilates - Bien être",
+   "lieux": [
+    {
+     "adresse": "11 Rue Cambronne, 75015 Paris, France",
+     "cp": "75015",
+     "creneaux": false,
+     "lat": 48.846849,
+     "lng": 2.3019401,
+     "nom": "Oh My Pilates - Bien être",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "11 Rue Cambronne, 75015 Paris, France",
+     "cp": "75015",
+     "creneaux": true,
+     "lat": 48.846849,
+     "lng": 2.3019401,
+     "nom": "OH MY PILATES - PARIS",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5264",
+   "cp": "75016",
+   "creneaux": true,
+   "enseigne": "osmo studio - Wellness room - Paris 16",
+   "lieux": [
+    {
+     "adresse": "6 Rue du Dr Blanche, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": true,
+     "lat": 48.8553554,
+     "lng": 2.2657901,
+     "nom": "osmo studio - Lagree room - Paris 16",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "6 Rue du Dr Blanche, 75016 Paris, France",
+     "cp": "75016",
+     "creneaux": false,
+     "lat": 48.8553554,
+     "lng": 2.2657901,
+     "nom": "osmo studio - Wellness room - Paris 16",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5236",
+   "cp": "75003",
+   "creneaux": true,
+   "enseigne": "Espace peinture & dessin",
+   "lieux": [
+    {
+     "adresse": "93 Bd Beaumarchais, 75003 Paris, France",
+     "cp": "75003",
+     "creneaux": false,
+     "lat": 48.8595835,
+     "lng": 2.367276,
+     "nom": "Art café",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "93 Bd Beaumarchais, 75003 Paris, France",
+     "cp": "75003",
+     "creneaux": true,
+     "lat": 48.8595835,
+     "lng": 2.367276,
+     "nom": "Espace céramique",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "93 Bd Beaumarchais, 75003 Paris, France",
+     "cp": "75003",
+     "creneaux": true,
+     "lat": 48.8595835,
+     "lng": 2.367276,
+     "nom": "Espace peinture & dessin",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "93 Bd Beaumarchais, 75003 Paris, France",
+     "cp": "75003",
+     "creneaux": true,
+     "lat": 48.8595835,
+     "lng": 2.367276,
+     "nom": "Espace textile",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 4,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5214",
+   "cp": "92200",
+   "creneaux": true,
+   "enseigne": "Boutique Studio Kanda Health",
+   "lieux": [
+    {
+     "adresse": "67 Rue Pauline Borghese, 92200 Neuilly-sur-Seine, France",
+     "cp": "92200",
+     "creneaux": true,
+     "lat": 48.88783979999999,
+     "lng": 2.2719494,
+     "nom": "Boutique Studio Kanda Health",
+     "ville": "Neuilly-sur-Seine"
+    },
+    {
+     "adresse": "67 Rue Pauline Borghese, 92200 Neuilly-sur-Seine, France",
+     "cp": "92200",
+     "creneaux": false,
+     "lat": 48.88783979999999,
+     "lng": 2.2719494,
+     "nom": "Salle soins du corps_massage",
+     "ville": "Neuilly-sur-Seine"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-23",
+   "ville": "Neuilly-sur-Seine"
+  },
+  {
    "company_id": "5181",
    "cp": "75009",
    "creneaux": true,
@@ -889,7 +1540,7 @@
      "creneaux": true,
      "lat": 48.8511985,
      "lng": 2.3742573,
-     "nom": "Studio Swell - Ciel",
+     "nom": "Studio Swell - Terre",
      "ville": "Paris"
     },
     {
@@ -898,7 +1549,7 @@
      "creneaux": true,
      "lat": 48.8511985,
      "lng": 2.3742573,
-     "nom": "Studio Swell - Terre",
+     "nom": "Studio Swell - Ciel",
      "ville": "Paris"
     }
    ],
@@ -958,7 +1609,7 @@
      "creneaux": true,
      "lat": 48.876471,
      "lng": 2.3153815,
-     "nom": "Salle reformer",
+     "nom": "Salle tapis",
      "ville": "Paris"
     },
     {
@@ -967,7 +1618,7 @@
      "creneaux": true,
      "lat": 48.876471,
      "lng": 2.3153815,
-     "nom": "Salle tapis",
+     "nom": "Salle reformer",
      "ville": "Paris"
     },
     {
@@ -1089,10 +1740,10 @@
     {
      "adresse": "9 Rue Georges Huchon, 94300 Vincennes, France",
      "cp": "94300",
-     "creneaux": false,
-     "lat": 48.8476589,
-     "lng": 2.4214785,
-     "nom": "Portes ouvertes",
+     "creneaux": true,
+     "lat": 48.84762,
+     "lng": 2.42158,
+     "nom": "Salle Mats",
      "ville": "Vincennes"
     },
     {
@@ -1116,10 +1767,10 @@
     {
      "adresse": "9 Rue Georges Huchon, 94300 Vincennes, France",
      "cp": "94300",
-     "creneaux": true,
-     "lat": 48.84762,
-     "lng": 2.42158,
-     "nom": "Salle Mats",
+     "creneaux": false,
+     "lat": 48.8476589,
+     "lng": 2.4214785,
+     "nom": "Portes ouvertes",
      "ville": "Vincennes"
     }
    ],
@@ -1274,15 +1925,6 @@
     {
      "adresse": "27 Av. du Général Leclerc, 95230 Soisy-sous-Montmorency, France",
      "cp": "95230",
-     "creneaux": false,
-     "lat": 48.9802046,
-     "lng": 2.3029173,
-     "nom": "Private Corner",
-     "ville": "Soisy-sous-Montmorency"
-    },
-    {
-     "adresse": "27 Av. du Général Leclerc, 95230 Soisy-sous-Montmorency, France",
-     "cp": "95230",
      "creneaux": true,
      "lat": 48.9802046,
      "lng": 2.3029173,
@@ -1296,6 +1938,15 @@
      "lat": 48.9802046,
      "lng": 2.3029173,
      "nom": "Team Corner",
+     "ville": "Soisy-sous-Montmorency"
+    },
+    {
+     "adresse": "27 Av. du Général Leclerc, 95230 Soisy-sous-Montmorency, France",
+     "cp": "95230",
+     "creneaux": false,
+     "lat": 48.9802046,
+     "lng": 2.3029173,
+     "nom": "Private Corner",
      "ville": "Soisy-sous-Montmorency"
     }
    ],
@@ -11969,26 +12620,6 @@
    "ville": "Paris"
   },
   {
-   "company_id": "7118",
-   "cp": "78990",
-   "creneaux": false,
-   "enseigne": "Elancourt 78",
-   "lieux": [
-    {
-     "adresse": "Rue du Chemin aux Bœufs, 78990 Élancourt, France",
-     "cp": "78990",
-     "creneaux": false,
-     "lat": 48.766833,
-     "lng": 1.948435,
-     "nom": "Elancourt 78",
-     "ville": "Élancourt"
-    }
-   ],
-   "nb_lieux": 1,
-   "premier_vu": "2026-11-16",
-   "ville": "Élancourt"
-  },
-  {
    "company_id": "6962",
    "cp": "92100",
    "creneaux": false,
@@ -12397,6 +13028,155 @@
    "nb_lieux": 2,
    "premier_vu": "2026-08-26",
    "ville": "Paris"
+  },
+  {
+   "company_id": "5576",
+   "cp": "92290",
+   "creneaux": false,
+   "enseigne": "92 - CHÂTENAY - MALABRY",
+   "lieux": [
+    {
+     "adresse": "380 Av. de la Division Leclerc, 92290 Châtenay-Malabry, France",
+     "cp": "92290",
+     "creneaux": false,
+     "lat": 48.7663623,
+     "lng": 2.2562307,
+     "nom": "92 - CHÂTENAY - MALABRY",
+     "ville": "Châtenay-Malabry"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Châtenay-Malabry"
+  },
+  {
+   "company_id": "5563",
+   "cp": "75017",
+   "creneaux": false,
+   "enseigne": "Hot Pilates Reformer",
+   "lieux": [
+    {
+     "adresse": "98 Av. Niel, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": false,
+     "lat": 48.884149,
+     "lng": 2.2973113,
+     "nom": "Hot Pilates Reformer",
+     "ville": "Paris"
+    },
+    {
+     "adresse": "98 Av. Niel, 75017 Paris, France",
+     "cp": "75017",
+     "creneaux": false,
+     "lat": 48.884149,
+     "lng": 2.2973113,
+     "nom": "Me Time Reformer",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 2,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5523",
+   "cp": "77700",
+   "creneaux": false,
+   "enseigne": "Only Me Pilates",
+   "lieux": [
+    {
+     "adresse": "18 Av. Hergé, 77700 Chessy, France",
+     "cp": "77700",
+     "creneaux": false,
+     "lat": 48.8580529,
+     "lng": 2.7729689,
+     "nom": "Only Me Pilates",
+     "ville": "Chessy"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Chessy"
+  },
+  {
+   "company_id": "5399",
+   "cp": "77700",
+   "creneaux": false,
+   "enseigne": "77 - Serris",
+   "lieux": [
+    {
+     "adresse": "4 Av. Johannes Gutenberg, 77700 Serris, France",
+     "cp": "77700",
+     "creneaux": false,
+     "lat": 48.8375098,
+     "lng": 2.7959172,
+     "nom": "77 - Serris",
+     "ville": "Serris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Serris"
+  },
+  {
+   "company_id": "5376",
+   "cp": "75007",
+   "creneaux": false,
+   "enseigne": "Studio 23",
+   "lieux": [
+    {
+     "adresse": "7 Rue du Pré aux Clercs, 75007 Paris, France",
+     "cp": "75007",
+     "creneaux": false,
+     "lat": 48.856352,
+     "lng": 2.3303211,
+     "nom": "Studio 23",
+     "ville": "Paris"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Paris"
+  },
+  {
+   "company_id": "5343",
+   "cp": "77410",
+   "creneaux": false,
+   "enseigne": "Studio Elevate Annet",
+   "lieux": [
+    {
+     "adresse": "45 Rue du Général de Gaulle, 77410 Annet-sur-Marne, France",
+     "cp": "77410",
+     "creneaux": false,
+     "lat": 48.9258931,
+     "lng": 2.7194571,
+     "nom": "Studio Elevate Annet",
+     "ville": "Annet-sur-Marne"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Annet-sur-Marne"
+  },
+  {
+   "company_id": "5325",
+   "cp": "93700",
+   "creneaux": false,
+   "enseigne": "COREVA",
+   "lieux": [
+    {
+     "adresse": "47 Av. Henri Barbusse, 93700 Drancy, France",
+     "cp": "93700",
+     "creneaux": false,
+     "lat": 48.9166326,
+     "lng": 2.4442665,
+     "nom": "COREVA",
+     "ville": "Drancy"
+    }
+   ],
+   "nb_lieux": 1,
+   "premier_vu": "2026-11-23",
+   "ville": "Drancy"
   },
   {
    "company_id": "4992",
@@ -20578,7 +21358,7 @@
    "ville": "Paris"
   }
  ],
- "enseignes_non_suivies": 527,
- "genere": "2026-11-16 13:44",
- "total_idf_recenses": 2340
+ "enseignes_non_suivies": 557,
+ "genere": "2026-11-23 16:04",
+ "total_idf_recenses": 2399
 }
