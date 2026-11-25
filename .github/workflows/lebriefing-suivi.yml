@@ -1,0 +1,36 @@
+name: Suivi · Le Briefing (hors scrap principal)
+
+# Relève toutes les 2 h l'état des événements de Le Briefing (lebriefing.co,
+# billetterie Eventbrite) : ouverture des ventes, passage en complet, prix.
+# Ni fréquentation ni CA ne sont publics : la vitesse à laquelle les soirées
+# se remplissent est le meilleur indicateur de demande disponible.
+# Volontairement isolé : pas dans l'Observatoire, pas dans Supabase.
+
+on:
+  schedule:
+    - cron: "41 */2 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lebriefing-suivi
+  cancel-in-progress: false
+
+jobs:
+  suivi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Relevé Le Briefing
+        run: python3 lebriefing_suivi.py
+
+      - name: Commit si changement
+        run: |
+          ./ci_push.sh "Suivi Le Briefing ($(date -u +%Y-%m-%dT%H:%M)Z)" lebriefing_suivi.json lebriefing_suivi.csv
