@@ -1,5 +1,5 @@
 {
- "releves": 2,
+ "releves": 3,
  "events": {
   "2003856354298": {
    "url": "https://www.eventbrite.com/e/2003856354298",
@@ -52,12 +52,13 @@
    "ville": "Paris",
    "prix_min": "20.0",
    "prix_max": "20.0",
-   "statut": "sold_out",
+   "statut": "passé",
    "disponibilite": "SoldOut",
    "dernier_releve": "2026-11-25 17:05",
    "complet_le": null,
    "complet_des_1er_releve": true,
-   "a_ete_complet": true
+   "a_ete_complet": true,
+   "statut_final": "sold_out"
   },
   "2003856356304": {
    "url": "https://www.eventbrite.com/e/2003856356304",
@@ -84,7 +85,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-10-24T17:58:15",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2004077945082": {
    "url": "https://www.eventbrite.fr/e/2004077945082",
@@ -137,10 +138,11 @@
    "ville": "Paris",
    "prix_min": "20.38",
    "prix_max": "20.38",
-   "statut": "on_sale",
+   "statut": "passé",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-13T14:00:00",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-25 17:05",
+   "statut_final": "on_sale"
   },
   "2005222370088": {
    "url": "https://www.eventbrite.fr/e/can-money-buy-football-tickets-2005222370088",
@@ -167,7 +169,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:19",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222373097": {
    "url": "https://www.eventbrite.fr/e/comment-negocier-avec-un-preneur-dotages-tickets-2005222373097",
@@ -194,7 +196,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:19",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222376106": {
    "url": "https://www.eventbrite.fr/e/comment-sait-on-ce-que-lon-sait-tickets-2005222376106",
@@ -221,7 +223,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:27",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222369085": {
    "url": "https://www.eventbrite.fr/e/dans-les-coulisses-dhollywood-comment-fabrique-t-on-une-star-tickets-2005222369085",
@@ -248,7 +250,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:19",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222362064": {
    "url": "https://www.eventbrite.fr/e/faut-il-passer-a-une-vie-republique-tickets-2005222362064",
@@ -275,7 +277,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:27:40",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222372094": {
    "url": "https://www.eventbrite.fr/e/gainsbourg-genie-ou-imposteur-tickets-2005222372094",
@@ -302,7 +304,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:19",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222375103": {
    "url": "https://www.eventbrite.fr/e/ia-allons-nous-devenir-des-esclaves-heureux-tickets-2005222375103",
@@ -329,7 +331,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:28",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222379115": {
    "url": "https://www.eventbrite.fr/e/memoire-dune-survivante-dauschwitz-birkenau-tickets-2005222379115",
@@ -356,7 +358,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:29",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222381121": {
    "url": "https://www.eventbrite.fr/e/peut-on-encore-partir-a-laventure-aujourdhui-tickets-2005222381121",
@@ -383,7 +385,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:31",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222374100": {
    "url": "https://www.eventbrite.fr/e/pourquoi-sommes-nous-notre-pire-adversaire-tickets-2005222374100",
@@ -410,7 +412,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:20",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222377109": {
    "url": "https://www.eventbrite.fr/e/que-fait-vraiment-un-espion-francais-tickets-2005222377109",
@@ -437,7 +439,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:28",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222378112": {
    "url": "https://www.eventbrite.fr/e/reseaux-sociaux-pourquoi-narrive-t-on-plus-a-decrocher-tickets-2005222378112",
@@ -464,7 +466,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:29",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2005222371091": {
    "url": "https://www.eventbrite.fr/e/societe-quel-changement-ne-voyons-nous-pas-venir-tickets-2005222371091",
@@ -491,7 +493,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:20",
-   "dernier_releve": "2026-11-25 17:05"
+   "dernier_releve": "2026-11-26 01:39"
   },
   "2004660035129": {
    "url": "https://www.eventbrite.fr/e/2004660035129",
@@ -515,13 +517,14 @@
    "prix_min": "11.68",
    "prix_max": "16.92",
    "adresse": "16 Place Canteloup, 33800 Bordeaux",
-   "statut": "sold_out",
+   "statut": "passé",
    "disponibilite": "SoldOut",
    "dernier_releve": "2026-11-25 17:05",
    "complet_le": null,
    "complet_des_1er_releve": true,
-   "a_ete_complet": true
+   "a_ete_complet": true,
+   "statut_final": "sold_out"
   }
  },
- "dernier_releve": "2026-11-25 17:05"
+ "dernier_releve": "2026-11-26 01:39"
 }
