@@ -1,5 +1,5 @@
 {
- "releves": 5,
+ "releves": 6,
  "events": {
   "2003856354298": {
    "url": "https://www.eventbrite.com/e/2003856354298",
@@ -87,10 +87,11 @@
    "ville": "Paris",
    "prix_min": "20.0",
    "prix_max": "20.0",
-   "statut": "sales_ended",
+   "statut": "passé",
    "disponibilite": "SoldOut",
    "ventes_ouvertes": "2026-10-24T17:58:15",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-26 20:48",
+   "statut_final": "sales_ended"
   },
   "2004077945082": {
    "url": "https://www.eventbrite.fr/e/2004077945082",
@@ -174,7 +175,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:19",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15"
   },
   "2005222373097": {
    "url": "https://www.eventbrite.fr/e/comment-negocier-avec-un-preneur-dotages-tickets-2005222373097",
@@ -206,7 +207,7 @@
    "statut": "sold_out",
    "disponibilite": "SoldOut",
    "ventes_ouvertes": "2026-11-22T17:28:19",
-   "dernier_releve": "2026-11-26 20:48",
+   "dernier_releve": "2026-11-27 04:15",
    "complet_le": "2026-11-26 20:48",
    "complet_des_1er_releve": false,
    "a_ete_complet": true
@@ -236,7 +237,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:27",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15"
   },
   "2005222369085": {
    "url": "https://www.eventbrite.fr/e/dans-les-coulisses-dhollywood-comment-fabrique-t-on-une-star-tickets-2005222369085",
@@ -263,7 +264,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:19",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15"
   },
   "2005222362064": {
    "url": "https://www.eventbrite.fr/e/faut-il-passer-a-une-vie-republique-tickets-2005222362064",
@@ -290,7 +291,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:27:40",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15"
   },
   "2005222372094": {
    "url": "https://www.eventbrite.fr/e/gainsbourg-genie-ou-imposteur-tickets-2005222372094",
@@ -317,7 +318,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:19",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15"
   },
   "2005222375103": {
    "url": "https://www.eventbrite.fr/e/ia-allons-nous-devenir-des-esclaves-heureux-tickets-2005222375103",
@@ -344,7 +345,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:28",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15"
   },
   "2005222379115": {
    "url": "https://www.eventbrite.fr/e/memoire-dune-survivante-dauschwitz-birkenau-tickets-2005222379115",
@@ -371,7 +372,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:29",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15"
   },
   "2005222381121": {
    "url": "https://www.eventbrite.fr/e/peut-on-encore-partir-a-laventure-aujourdhui-tickets-2005222381121",
@@ -398,7 +399,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:31",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15"
   },
   "2005222374100": {
    "url": "https://www.eventbrite.fr/e/pourquoi-sommes-nous-notre-pire-adversaire-tickets-2005222374100",
@@ -425,7 +426,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:20",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15"
   },
   "2005222377109": {
    "url": "https://www.eventbrite.fr/e/que-fait-vraiment-un-espion-francais-tickets-2005222377109",
@@ -440,6 +441,11 @@
      "t": "2026-11-25 17:04",
      "statut": "on_sale",
      "prix_max": "22.51"
+    },
+    {
+     "t": "2026-11-27 04:15",
+     "statut": "sold_out",
+     "prix_max": "22.51"
     }
    ],
    "titre": "Que fait vraiment un espion français ?",
@@ -449,10 +455,13 @@
    "ville": "Paris",
    "prix_min": "22.51",
    "prix_max": "22.51",
-   "statut": "on_sale",
-   "disponibilite": "InStock",
+   "statut": "sold_out",
+   "disponibilite": "SoldOut",
    "ventes_ouvertes": "2026-11-22T17:28:28",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15",
+   "complet_le": "2026-11-27 04:15",
+   "complet_des_1er_releve": false,
+   "a_ete_complet": true
   },
   "2005222378112": {
    "url": "https://www.eventbrite.fr/e/reseaux-sociaux-pourquoi-narrive-t-on-plus-a-decrocher-tickets-2005222378112",
@@ -479,7 +488,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:29",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15"
   },
   "2005222371091": {
    "url": "https://www.eventbrite.fr/e/societe-quel-changement-ne-voyons-nous-pas-venir-tickets-2005222371091",
@@ -506,7 +515,7 @@
    "statut": "on_sale",
    "disponibilite": "InStock",
    "ventes_ouvertes": "2026-11-22T17:28:20",
-   "dernier_releve": "2026-11-26 20:48"
+   "dernier_releve": "2026-11-27 04:15"
   },
   "2004660035129": {
    "url": "https://www.eventbrite.fr/e/2004660035129",
@@ -537,7 +546,51 @@
    "complet_des_1er_releve": true,
    "a_ete_complet": true,
    "statut_final": "sold_out"
+  },
+  "2005513516916": {
+   "url": "https://www.eventbrite.com/e/2005513516916",
+   "premier_vu": "2026-11-27 04:15",
+   "historique": [
+    {
+     "t": "2026-11-27 04:15",
+     "statut": "on_sale",
+     "prix_max": "14.83"
+    }
+   ],
+   "titre": "Addictions : qu’est-ce qui nous rend accros ?",
+   "debut": "2026-12-09T19:00:00+01:00",
+   "lieu": "Bien Public",
+   "adresse": "68 Quai Deschamps, 33100 Bordeaux",
+   "ville": "Bordeaux",
+   "prix_min": "9.59",
+   "prix_max": "14.83",
+   "statut": "on_sale",
+   "disponibilite": "InStock",
+   "ventes_ouvertes": "2026-11-12T16:35:13",
+   "dernier_releve": "2026-11-27 04:15"
+  },
+  "2005513518922": {
+   "url": "https://www.eventbrite.com/e/2005513518922",
+   "premier_vu": "2026-11-27 04:15",
+   "historique": [
+    {
+     "t": "2026-11-27 04:15",
+     "statut": "on_sale",
+     "prix_max": "14.83"
+    }
+   ],
+   "titre": "Pourquoi prend-on toujours les mauvaises décisions ?",
+   "debut": "2026-12-16T19:30:00+01:00",
+   "lieu": "Les Broc's",
+   "adresse": "16 Place Canteloup, 33800 Bordeaux",
+   "ville": "Bordeaux",
+   "prix_min": "9.59",
+   "prix_max": "14.83",
+   "statut": "on_sale",
+   "disponibilite": "InStock",
+   "ventes_ouvertes": "2026-11-19T17:05:13",
+   "dernier_releve": "2026-11-27 04:15"
   }
  },
- "dernier_releve": "2026-11-26 20:48"
+ "dernier_releve": "2026-11-27 04:15"
 }
