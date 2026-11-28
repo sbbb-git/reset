@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T18:50:35.168878",
+ "generated_at": "2026-11-28T01:51:51.395713",
  "global": {
   "n_clubs": 143,
   "n_clubs_par_source": {
@@ -9,11 +9,11 @@
    "urbanpadel": 4
   },
   "n_sessions_live_par_source": {
-   "anybuddy": 74287,
-   "doinsport": 5931,
-   "urbanpadel": 6704
+   "anybuddy": 93385,
+   "doinsport": 6171,
+   "urbanpadel": 7167
   },
-  "n_sessions_live": 86922,
+  "n_sessions_live": 106723,
   "n_sessions_history": 1121256,
   "pop_idf": 12258660
  },
@@ -26,7 +26,7 @@
    "revenu_median_uc": 30750,
    "clubs_padel": 30,
    "hab_par_club": 70088,
-   "prix_median_90min": 81.0
+   "prix_median_90min": 72.0
   },
   "77": {
    "nom": "Seine-et-Marne",
@@ -66,7 +66,7 @@
    "revenu_median_uc": 29710,
    "clubs_padel": 12,
    "hab_par_club": 134553,
-   "prix_median_90min": 75.0
+   "prix_median_90min": 72.0
   },
   "93": {
    "nom": "Seine-Saint-Denis",
@@ -488,28 +488,28 @@
  "weather_period": "2024-01-01 → 2026-05-31",
  "maturity": {
   "anybuddy": {
+   "days_elapsed": 182,
+   "target_days": 180,
+   "pct": 100,
+   "note": "182j sur 180j (6 mois)"
+  },
+  "urbanpadel": {
    "days_elapsed": 181,
    "target_days": 180,
    "pct": 100,
    "note": "181j sur 180j (6 mois)"
   },
-  "urbanpadel": {
-   "days_elapsed": 180,
-   "target_days": 180,
-   "pct": 100,
-   "note": "180j sur 180j (6 mois)"
-  },
   "doinsport": {
-   "days_elapsed": 1061,
+   "days_elapsed": 1062,
    "target_days": 180,
    "pct": 100,
    "note": "historique rétroactif disponible"
   },
   "playtomic": {
-   "days_elapsed": 180,
+   "days_elapsed": 181,
    "target_days": 180,
    "pct": 100,
-   "note": "180j sur 180j (6 mois)"
+   "note": "181j sur 180j (6 mois)"
   },
   "_global_pct": 100
  }
