@@ -1545,75 +1545,89 @@ date,jour,heure,fin,lieu,cours,coach,capacite,presents,finie,releve
 2026-11-24,Mardi,20:00,20:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Thomas  ,10,8,True,2026-11-27 14:20
 2026-11-24,Mardi,20:10,21:10,Studio SLOW,Yoga Yinyasa 🧘,Indra  ,9,9,True,2026-11-27 14:20
 2026-11-24,Mardi,21:00,21:45,Studio ATHLETIC,Body Burn 💣,Thomas  ,10,0,True,2026-11-27 14:20
-2026-11-25,Mercredi,09:00,09:50,Studio SLOW,Pilates 🍃,Magda  ,10,8,True,2026-11-27 14:20
-2026-11-25,Mercredi,10:00,10:50,Studio SLOW,Pilates Senior 🍃,Magda  ,10,9,True,2026-11-27 14:20
-2026-11-25,Mercredi,11:00,11:50,Studio ATHLETIC,Body Sculpt 🔥,Emma  ,8,9,True,2026-11-27 14:20
-2026-11-25,Mercredi,11:00,11:50,Studio SLOW,Pilates Senior 🍃,Magda  ,10,10,True,2026-11-27 14:20
-2026-11-25,Mercredi,12:00,12:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Emma  ,10,10,True,2026-11-27 14:20
-2026-11-25,Mercredi,12:00,12:50,Studio SLOW,Balance 🌿,Joséphine  ,9,0,True,2026-11-27 14:20
-2026-11-25,Mercredi,13:00,13:50,Studio ATHLETIC,Circuit Boxing 🥊🔥,Meriem  ,10,0,True,2026-11-27 14:20
-2026-11-25,Mercredi,13:00,13:50,Studio SLOW,Pilates 🍃,Joséphine  ,10,9,True,2026-11-27 14:20
-2026-11-25,Mercredi,17:00,17:50,Studio SLOW,Pilates Sculpt ⚡,Alizee  ,10,8,True,2026-11-27 14:20
-2026-11-25,Mercredi,18:00,18:50,Studio ATHLETIC,Power Sculpt 🧨,Brahim  ,8,7,True,2026-11-27 14:20
-2026-11-25,Mercredi,18:00,18:50,Studio SLOW,Pilates 🍃,Alizee  ,10,10,True,2026-11-27 14:20
-2026-11-25,Mercredi,19:00,19:50,Studio ATHLETIC,Body Burn 💣,Brahim  ,10,6,True,2026-11-27 14:20
-2026-11-25,Mercredi,19:00,19:50,Studio SLOW,Pilates 🍃,Alizee  ,10,9,True,2026-11-27 14:20
-2026-11-25,Mercredi,20:00,20:50,Studio ATHLETIC,Pump 🏋️‍♀️,Brahim  ,8,7,True,2026-11-27 14:20
-2026-11-25,Mercredi,20:00,20:50,Studio SLOW,Pilates Postural 🧘‍♂️,Alizee  ,10,8,True,2026-11-27 14:20
-2026-11-26,Jeudi,10:00,10:50,Studio SLOW,Stretching Mobility 🧎‍♀️,Alizee  ,10,10,True,2026-11-27 14:20
-2026-11-26,Jeudi,11:00,11:50,Studio ATHLETIC,Lagree x Full body 🌶️,Philippine  ,10,6,True,2026-11-27 14:20
-2026-11-26,Jeudi,11:00,11:50,Studio SLOW,Pilates 🍃,Alizee  ,10,5,True,2026-11-27 14:20
-2026-11-26,Jeudi,12:00,12:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Philippine  ,10,7,True,2026-11-27 14:20
-2026-11-26,Jeudi,12:00,12:50,Studio SLOW,Pilates Sculpt ⚡,Alizee  ,10,7,True,2026-11-27 14:20
-2026-11-26,Jeudi,13:00,13:50,Studio ATHLETIC,Body Sculpt 🔥,Philippine  ,8,7,True,2026-11-27 14:20
-2026-11-26,Jeudi,13:00,13:50,Studio SLOW,Pilates 🍃,Alizee  ,10,5,True,2026-11-27 14:20
-2026-11-26,Jeudi,18:00,18:50,Studio ATHLETIC,Body Sculpt 🔥,Jordan  ,8,6,True,2026-11-27 14:20
-2026-11-26,Jeudi,18:00,18:50,Studio SLOW,Pilates 🍃,Milena  ,10,0,True,2026-11-27 14:20
-2026-11-26,Jeudi,19:00,19:50,Studio ATHLETIC,Lagree x Full body 🌶️,Jordan  ,10,10,True,2026-11-27 14:20
-2026-11-26,Jeudi,19:00,20:00,Studio SLOW,Yoga Vinyasa 💫,Milena  ,9,9,True,2026-11-27 14:20
-2026-11-26,Jeudi,20:00,20:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Jordan  ,10,4,True,2026-11-27 14:20
-2026-11-26,Jeudi,20:05,21:05,Studio SLOW,Yoga Yin 🧘,Milena  ,9,9,True,2026-11-27 14:20
-2026-11-27,Vendredi,07:45,08:30,Studio SLOW,Pilates Sculpt ⚡,Alizee  ,10,5,True,2026-11-27 14:20
-2026-11-27,Vendredi,09:00,09:50,Studio SLOW,Pilates 🍃,Alix  ,10,8,True,2026-11-27 14:20
-2026-11-27,Vendredi,10:00,10:50,Studio ATHLETIC,TRX Senior 💥,Mégane  ,8,0,True,2026-11-27 14:20
-2026-11-27,Vendredi,10:00,10:50,Studio SLOW,Pilates Sculpt ⚡,Alix  ,10,9,True,2026-11-27 14:20
-2026-11-27,Vendredi,11:00,11:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Mégane  ,10,0,True,2026-11-27 14:20
-2026-11-27,Vendredi,11:00,11:50,Studio SLOW,Stretching Mobility 🧎‍♀️,Alix  ,10,2,True,2026-11-27 14:20
-2026-11-27,Vendredi,12:00,12:50,Studio ATHLETIC,Pump 🏋️‍♀️,Mégane  ,8,0,True,2026-11-27 14:20
-2026-11-27,Vendredi,12:00,12:50,Studio SLOW,Yoga Vinyasa 💫,Marine  ,9,8,True,2026-11-27 14:20
-2026-11-27,Vendredi,13:00,13:50,Studio ATHLETIC,Pilates Sculpt ⚡ (Studio Athletic),Mégane  ,10,0,True,2026-11-27 14:20
-2026-11-27,Vendredi,13:00,13:50,Studio SLOW,Power Yoga [Vinyasa] 🧘‍♂️🔥,Marine  ,9,9,True,2026-11-27 14:20
-2026-11-27,Vendredi,17:00,17:50,Studio SLOW,Pilates 🍃,Eli  ,10,4,False,2026-11-27 14:20
-2026-11-27,Vendredi,18:00,18:50,Studio ATHLETIC,Body Sculpt 🔥,Brahim  ,8,8,False,2026-11-27 14:20
-2026-11-27,Vendredi,18:00,18:50,Studio SLOW,Pilates Sculpt ⚡,Eli  ,10,10,False,2026-11-27 14:20
-2026-11-27,Vendredi,19:00,19:50,Studio ATHLETIC,Pump 🏋️‍♀️,Brahim  ,8,8,False,2026-11-27 14:20
-2026-11-27,Vendredi,19:00,19:50,Studio SLOW,Pilates Barre 🩰,Eli  ,9,0,False,2026-11-27 14:20
-2026-11-28,Samedi,09:00,09:50,Studio ATHLETIC,Pilates Sculpt ⚡ (Studio Athletic),Mira  ,10,0,False,2026-11-27 14:20
-2026-11-28,Samedi,09:00,09:50,Studio SLOW,Pilates 🍃,Magda  ,10,10,False,2026-11-27 14:20
-2026-11-28,Samedi,10:00,10:50,Studio ATHLETIC,Body Sculpt 🔥,Mira  ,8,0,False,2026-11-27 14:20
-2026-11-28,Samedi,10:00,10:50,Studio SLOW,Pilates 🍃,Magda  ,10,10,False,2026-11-27 14:20
-2026-11-28,Samedi,11:00,11:50,Studio ATHLETIC,Body Sculpt 🔥,Mira  ,8,0,False,2026-11-27 14:20
-2026-11-28,Samedi,11:00,11:50,Studio SLOW,Pilates Sculpt ⚡,Magda  ,10,8,False,2026-11-27 14:20
-2026-11-28,Samedi,12:00,12:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Mira  ,10,0,False,2026-11-27 14:20
-2026-11-28,Samedi,12:00,12:50,Studio SLOW,Pilates Postural 🧘‍♂️,Magda  ,10,9,False,2026-11-27 14:20
-2026-11-28,Samedi,13:00,13:50,Studio ATHLETIC,Circuit Boxing 🥊🔥,Jordan  ,10,0,False,2026-11-27 14:20
-2026-11-28,Samedi,13:00,13:50,Studio SLOW,Stretching Mobility 🧎‍♀️,Magda  ,10,10,False,2026-11-27 14:20
-2026-11-28,Samedi,14:00,14:50,Studio SLOW,Pilates 🍃,Marie Pietmontesi,10,5,False,2026-11-27 14:20
-2026-11-28,Samedi,15:00,15:50,Studio SLOW,Pilates Barre 🩰,Marie Pietmontesi,10,4,False,2026-11-27 14:20
-2026-11-28,Samedi,16:30,17:30,Studio SLOW,Animation SOPHROLOGIE KIDS : A la découverte des émotions 🌈 (5-8 ANS),Stéphanie  ,9,8,False,2026-11-27 14:20
-2026-11-28,Samedi,17:30,18:30,Studio SLOW,Animation Candlelight Slow Flow Yoga 🪔,Charlotte  ,9,9,False,2026-11-27 14:20
-2026-11-29,Dimanche,09:00,09:50,Studio SLOW,Pilates 🍃,Charlotte  ,10,4,False,2026-11-27 14:20
-2026-11-29,Dimanche,10:00,10:50,Studio ATHLETIC,Body Sculpt 🔥,Paloma  ,8,0,False,2026-11-27 14:20
-2026-11-29,Dimanche,10:00,10:50,Studio SLOW,Pilates 🍃,Charlotte  ,10,10,False,2026-11-27 14:20
-2026-11-29,Dimanche,11:00,11:50,Studio ATHLETIC,Body Burn 💣,Paloma  ,10,0,False,2026-11-27 14:20
-2026-11-29,Dimanche,11:00,12:00,Studio SLOW,Yoga Vinyasa 💫,Charlotte  ,9,9,False,2026-11-27 14:20
-2026-11-29,Dimanche,12:00,12:50,Studio ATHLETIC,Abs & Booty 🍑,Brahim  ,8,0,False,2026-11-27 14:20
-2026-11-29,Dimanche,12:10,13:00,Studio SLOW,Pilates Sculpt ⚡,Eli  ,10,10,False,2026-11-27 14:20
-2026-11-29,Dimanche,13:00,13:50,Studio ATHLETIC,Pump 🏋️‍♀️,Brahim  ,8,0,False,2026-11-27 14:20
-2026-11-29,Dimanche,13:10,14:00,Studio SLOW,Pilates Barre 🩰,Eli  ,9,5,False,2026-11-27 14:20
-2026-11-29,Dimanche,14:00,14:50,Studio ATHLETIC,Body Sculpt 🔥,Brahim  ,8,0,False,2026-11-27 14:20
-2026-11-29,Dimanche,14:10,15:00,Studio SLOW,Pilates 🍃,Eli  ,10,0,False,2026-11-27 14:20
-2026-11-29,Dimanche,15:00,15:50,Studio ATHLETIC,Lagree x Pilates ⚡,Brahim  ,10,0,False,2026-11-27 14:20
-2026-11-29,Dimanche,16:10,17:00,Studio SLOW,Stretching Mobility 🧎‍♀️,Indra  ,10,8,False,2026-11-27 14:20
-2026-11-29,Dimanche,17:10,18:25,Studio SLOW,Yoga Flow ✨,Indra  ,9,8,False,2026-11-27 14:20
-2026-11-29,Dimanche,18:30,19:30,Studio SLOW,Yoga Yinyasa 🧘,Indra  ,9,4,False,2026-11-27 14:20
+2026-11-25,Mercredi,09:00,09:50,Studio SLOW,Pilates 🍃,Magda  ,10,8,True,2026-11-28 00:54
+2026-11-25,Mercredi,10:00,10:50,Studio SLOW,Pilates Senior 🍃,Magda  ,10,9,True,2026-11-28 00:54
+2026-11-25,Mercredi,11:00,11:50,Studio ATHLETIC,Body Sculpt 🔥,Emma  ,8,9,True,2026-11-28 00:54
+2026-11-25,Mercredi,11:00,11:50,Studio SLOW,Pilates Senior 🍃,Magda  ,10,10,True,2026-11-28 00:54
+2026-11-25,Mercredi,12:00,12:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Emma  ,10,10,True,2026-11-28 00:54
+2026-11-25,Mercredi,12:00,12:50,Studio SLOW,Balance 🌿,Joséphine  ,9,0,True,2026-11-28 00:54
+2026-11-25,Mercredi,13:00,13:50,Studio ATHLETIC,Circuit Boxing 🥊🔥,Meriem  ,10,0,True,2026-11-28 00:54
+2026-11-25,Mercredi,13:00,13:50,Studio SLOW,Pilates 🍃,Joséphine  ,10,9,True,2026-11-28 00:54
+2026-11-25,Mercredi,17:00,17:50,Studio SLOW,Pilates Sculpt ⚡,Alizee  ,10,8,True,2026-11-28 00:54
+2026-11-25,Mercredi,18:00,18:50,Studio ATHLETIC,Power Sculpt 🧨,Brahim  ,8,7,True,2026-11-28 00:54
+2026-11-25,Mercredi,18:00,18:50,Studio SLOW,Pilates 🍃,Alizee  ,10,10,True,2026-11-28 00:54
+2026-11-25,Mercredi,19:00,19:50,Studio ATHLETIC,Body Burn 💣,Brahim  ,10,6,True,2026-11-28 00:54
+2026-11-25,Mercredi,19:00,19:50,Studio SLOW,Pilates 🍃,Alizee  ,10,9,True,2026-11-28 00:54
+2026-11-25,Mercredi,20:00,20:50,Studio ATHLETIC,Pump 🏋️‍♀️,Brahim  ,8,7,True,2026-11-28 00:54
+2026-11-25,Mercredi,20:00,20:50,Studio SLOW,Pilates Postural 🧘‍♂️,Alizee  ,10,8,True,2026-11-28 00:54
+2026-11-26,Jeudi,10:00,10:50,Studio SLOW,Stretching Mobility 🧎‍♀️,Alizee  ,10,10,True,2026-11-28 00:54
+2026-11-26,Jeudi,11:00,11:50,Studio ATHLETIC,Lagree x Full body 🌶️,Philippine  ,10,6,True,2026-11-28 00:54
+2026-11-26,Jeudi,11:00,11:50,Studio SLOW,Pilates 🍃,Alizee  ,10,5,True,2026-11-28 00:54
+2026-11-26,Jeudi,12:00,12:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Philippine  ,10,7,True,2026-11-28 00:54
+2026-11-26,Jeudi,12:00,12:50,Studio SLOW,Pilates Sculpt ⚡,Alizee  ,10,7,True,2026-11-28 00:54
+2026-11-26,Jeudi,13:00,13:50,Studio ATHLETIC,Body Sculpt 🔥,Philippine  ,8,7,True,2026-11-28 00:54
+2026-11-26,Jeudi,13:00,13:50,Studio SLOW,Pilates 🍃,Alizee  ,10,5,True,2026-11-28 00:54
+2026-11-26,Jeudi,18:00,18:50,Studio ATHLETIC,Body Sculpt 🔥,Jordan  ,8,6,True,2026-11-28 00:54
+2026-11-26,Jeudi,18:00,18:50,Studio SLOW,Pilates 🍃,Milena  ,10,0,True,2026-11-28 00:54
+2026-11-26,Jeudi,19:00,19:50,Studio ATHLETIC,Lagree x Full body 🌶️,Jordan  ,10,10,True,2026-11-28 00:54
+2026-11-26,Jeudi,19:00,20:00,Studio SLOW,Yoga Vinyasa 💫,Milena  ,9,9,True,2026-11-28 00:54
+2026-11-26,Jeudi,20:00,20:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Jordan  ,10,4,True,2026-11-28 00:54
+2026-11-26,Jeudi,20:05,21:05,Studio SLOW,Yoga Yin 🧘,Milena  ,9,9,True,2026-11-28 00:54
+2026-11-27,Vendredi,07:45,08:30,Studio SLOW,Pilates Sculpt ⚡,Alizee  ,10,5,True,2026-11-28 00:54
+2026-11-27,Vendredi,09:00,09:50,Studio SLOW,Pilates 🍃,Alix  ,10,8,True,2026-11-28 00:54
+2026-11-27,Vendredi,10:00,10:50,Studio ATHLETIC,TRX Senior 💥,Mégane  ,8,0,True,2026-11-28 00:54
+2026-11-27,Vendredi,10:00,10:50,Studio SLOW,Pilates Sculpt ⚡,Alix  ,10,9,True,2026-11-28 00:54
+2026-11-27,Vendredi,11:00,11:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Mégane  ,10,0,True,2026-11-28 00:54
+2026-11-27,Vendredi,11:00,11:50,Studio SLOW,Stretching Mobility 🧎‍♀️,Alix  ,10,2,True,2026-11-28 00:54
+2026-11-27,Vendredi,12:00,12:50,Studio ATHLETIC,Pump 🏋️‍♀️,Mégane  ,8,0,True,2026-11-28 00:54
+2026-11-27,Vendredi,12:00,12:50,Studio SLOW,Yoga Vinyasa 💫,Marine  ,9,8,True,2026-11-28 00:54
+2026-11-27,Vendredi,13:00,13:50,Studio ATHLETIC,Pilates Sculpt ⚡ (Studio Athletic),Mégane  ,10,0,True,2026-11-28 00:54
+2026-11-27,Vendredi,13:00,13:50,Studio SLOW,Power Yoga [Vinyasa] 🧘‍♂️🔥,Marine  ,9,9,True,2026-11-28 00:54
+2026-11-27,Vendredi,17:00,17:50,Studio SLOW,Pilates 🍃,Eli  ,10,4,True,2026-11-28 00:54
+2026-11-27,Vendredi,18:00,18:50,Studio ATHLETIC,Body Sculpt 🔥,Brahim  ,8,8,True,2026-11-28 00:54
+2026-11-27,Vendredi,18:00,18:50,Studio SLOW,Pilates Sculpt ⚡,Eli  ,10,10,True,2026-11-28 00:54
+2026-11-27,Vendredi,19:00,19:50,Studio ATHLETIC,Pump 🏋️‍♀️,Brahim  ,8,7,True,2026-11-28 00:54
+2026-11-27,Vendredi,19:00,19:50,Studio SLOW,Pilates Barre 🩰,Eli  ,9,0,True,2026-11-28 00:54
+2026-11-28,Samedi,09:00,09:50,Studio ATHLETIC,Pilates Sculpt ⚡ (Studio Athletic),Mira  ,10,0,False,2026-11-28 00:54
+2026-11-28,Samedi,09:00,09:50,Studio SLOW,Pilates 🍃,Magda  ,10,10,False,2026-11-28 00:54
+2026-11-28,Samedi,10:00,10:50,Studio ATHLETIC,Body Sculpt 🔥,Mira  ,8,0,False,2026-11-28 00:54
+2026-11-28,Samedi,10:00,10:50,Studio SLOW,Pilates 🍃,Magda  ,10,10,False,2026-11-28 00:54
+2026-11-28,Samedi,11:00,11:50,Studio ATHLETIC,Body Sculpt 🔥,Mira  ,8,0,False,2026-11-28 00:54
+2026-11-28,Samedi,11:00,11:50,Studio SLOW,Pilates Sculpt ⚡,Magda  ,10,9,False,2026-11-28 00:54
+2026-11-28,Samedi,12:00,12:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Mira  ,10,0,False,2026-11-28 00:54
+2026-11-28,Samedi,12:00,12:50,Studio SLOW,Pilates Postural 🧘‍♂️,Magda  ,10,8,False,2026-11-28 00:54
+2026-11-28,Samedi,13:00,13:50,Studio ATHLETIC,Circuit Boxing 🥊🔥,Jordan  ,10,0,False,2026-11-28 00:54
+2026-11-28,Samedi,13:00,13:50,Studio SLOW,Stretching Mobility 🧎‍♀️,Magda  ,10,9,False,2026-11-28 00:54
+2026-11-28,Samedi,14:00,14:50,Studio SLOW,Pilates 🍃,Marie Pietmontesi,10,5,False,2026-11-28 00:54
+2026-11-28,Samedi,15:00,15:50,Studio SLOW,Pilates Barre 🩰,Marie Pietmontesi,10,4,False,2026-11-28 00:54
+2026-11-28,Samedi,16:30,17:30,Studio SLOW,Animation SOPHROLOGIE KIDS : A la découverte des émotions 🌈 (5-8 ANS),Stéphanie  ,9,6,False,2026-11-28 00:54
+2026-11-28,Samedi,17:30,18:30,Studio SLOW,Animation Candlelight Slow Flow Yoga 🪔,Charlotte  ,9,9,False,2026-11-28 00:54
+2026-11-29,Dimanche,09:00,09:50,Studio SLOW,Pilates 🍃,Charlotte  ,10,4,False,2026-11-28 00:54
+2026-11-29,Dimanche,10:00,10:50,Studio ATHLETIC,Body Sculpt 🔥,Paloma  ,8,0,False,2026-11-28 00:54
+2026-11-29,Dimanche,10:00,10:50,Studio SLOW,Pilates 🍃,Charlotte  ,10,10,False,2026-11-28 00:54
+2026-11-29,Dimanche,11:00,11:50,Studio ATHLETIC,Body Burn 💣,Paloma  ,10,0,False,2026-11-28 00:54
+2026-11-29,Dimanche,11:00,12:00,Studio SLOW,Yoga Vinyasa 💫,Charlotte  ,9,9,False,2026-11-28 00:54
+2026-11-29,Dimanche,12:00,12:50,Studio ATHLETIC,Abs & Booty 🍑,Brahim  ,8,0,False,2026-11-28 00:54
+2026-11-29,Dimanche,12:10,13:00,Studio SLOW,Pilates Sculpt ⚡,Eli  ,10,10,False,2026-11-28 00:54
+2026-11-29,Dimanche,13:00,13:50,Studio ATHLETIC,Pump 🏋️‍♀️,Brahim  ,8,0,False,2026-11-28 00:54
+2026-11-29,Dimanche,13:10,14:00,Studio SLOW,Pilates Barre 🩰,Eli  ,9,5,False,2026-11-28 00:54
+2026-11-29,Dimanche,14:00,14:50,Studio ATHLETIC,Body Sculpt 🔥,Brahim  ,8,0,False,2026-11-28 00:54
+2026-11-29,Dimanche,14:10,15:00,Studio SLOW,Pilates 🍃,Eli  ,10,0,False,2026-11-28 00:54
+2026-11-29,Dimanche,15:00,15:50,Studio ATHLETIC,Lagree x Pilates ⚡,Brahim  ,10,0,False,2026-11-28 00:54
+2026-11-29,Dimanche,16:10,17:00,Studio SLOW,Stretching Mobility 🧎‍♀️,Indra  ,10,9,False,2026-11-28 00:54
+2026-11-29,Dimanche,17:10,18:25,Studio SLOW,Yoga Flow ✨,Indra  ,9,8,False,2026-11-28 00:54
+2026-11-29,Dimanche,18:30,19:30,Studio SLOW,Yoga Yinyasa 🧘,Indra  ,9,6,False,2026-11-28 00:54
+2026-11-30,Lundi,09:00,09:50,Studio SLOW,Pilates 🍃,Mégane  ,10,10,False,2026-11-28 00:54
+2026-11-30,Lundi,10:00,10:50,Studio SLOW,Pilates Senior 🍃,Mégane  ,10,10,False,2026-11-28 00:54
+2026-11-30,Lundi,11:00,11:50,Studio ATHLETIC,Circuit Training 🤸‍♀️,Philippine  ,10,10,False,2026-11-28 00:54
+2026-11-30,Lundi,11:00,11:50,Studio SLOW,Body Sculpt Senior 🔥,Mégane  ,9,9,False,2026-11-28 00:54
+2026-11-30,Lundi,12:00,12:50,Studio ATHLETIC,Body Sculpt 🔥,Philippine  ,8,8,False,2026-11-28 00:54
+2026-11-30,Lundi,12:00,12:50,Studio SLOW,Pilates Sculpt ⚡,Mégane  ,10,10,False,2026-11-28 00:54
+2026-11-30,Lundi,17:00,17:50,Studio SLOW,Pilates Sculpt ⚡,Alexandre  ,10,10,False,2026-11-28 00:54
+2026-11-30,Lundi,18:00,18:50,Studio ATHLETIC,Pilates TRX ⚡🔥,Philippine  ,8,8,False,2026-11-28 00:54
+2026-11-30,Lundi,18:00,18:50,Studio SLOW,Pilates 🍃,Alexandre  ,10,10,False,2026-11-28 00:54
+2026-11-30,Lundi,19:00,19:50,Studio ATHLETIC,Lagree x Full body 🌶️,Philippine  ,10,10,False,2026-11-28 00:54
+2026-11-30,Lundi,19:00,19:50,Studio SLOW,Balance 🌿,Alexandre  ,9,9,False,2026-11-28 00:54
+2026-11-30,Lundi,20:00,20:50,Studio ATHLETIC,Circuit Boxing 🥊🔥,Meriem  ,10,6,False,2026-11-28 00:54
+2026-11-30,Lundi,20:00,20:50,Studio SLOW,Pilates Sculpt ⚡,Alexandre  ,10,10,False,2026-11-28 00:54
+2026-11-30,Lundi,21:00,21:45,Studio SLOW,Stretching Mobility 🧎‍♀️,Alexandre  ,10,3,False,2026-11-28 00:54
